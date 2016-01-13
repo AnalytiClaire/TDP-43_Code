@@ -1,0 +1,26 @@
+---
+title: 'Lab Book: 1/11/15-6/11/15'
+author: "Claire Green"
+output: pdf_document
+---
+
+###Monday
+Mostly admin work. Was away from Wednesday to Friday the previous week so had things to catch up on. Attended a seminar about academic career paths after lunch. Met with Win to discuss how to approach my data. An overview of the meeting was:
+
+- Discard attempts at making the exon array data work. It's going to be too difficult to convert into a compatible format and crossing platforms can introduce extraneous variables. 
+- Get to know my data: currently I don't really know what each data set contains and how it contributes to the overall picture. I need to play around with different combinations of data sets and see how each set and tissue type affects the outcome. I also need to get to grips with the kind of gene expression occuring in each data set, particularly how genes are differentially expressed in particular pathways, and across different data sets. Once I know my data better, I will be able to understand how I can clean up my mechanistic signature for TDP-43. 
+
+- Find new data sets: once I have a cleaner signal, I can use pathprint to attempt to find other expression files that match my own. This may not work, but currently I am really struggling to find the right data. Hopefully more will become available - I have had a talk with Paul Heath about getting my hands on some astrocyte data which could be useful. 
+
+###Tuesday
+
+Spent the morning trying to organise what I had discussed with Win the day before, and then had programming club with David. He taught me how to use the Jupyter notebook platform to code python, and we went through some simple commands including list comprehension, importing modules, creating a random list and defining a function
+
+In the afternoon I collected more metadata about my datasets - how the tissue had been harvested and how quickly etc as this could be pertinant to the quality of the RNA being analysed. I then worked on my e-Portfolio and began including these lab book entries. Finally, I did some reading on target prioritisation and pathway analysis. Important things to note were:
+
+Fan-Minogue et al 2015:
+- the idea of combining disease-related SNPs with high differential expression to identify potential targets
+
+###Thursday
+
+Finished writing up my plan for the coming week (see Lab Meeting 4/11/15). Began doing some analysis of the pathway sets for the various combinations of data.

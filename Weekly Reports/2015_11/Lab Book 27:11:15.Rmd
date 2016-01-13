@@ -1,0 +1,58 @@
+---
+title: "Lab Book 27_11_15"
+author: "Claire Green"
+date: "24 November 2015"
+output: pdf_document
+---
+
+##Monday
+On monday I continued conducting GSEA analysis and getting to grips with Cytoscape. I've decided that the best methodology is to use the R script to generate the files I need for GSEA analysis and then use the Java platform to run the actual analysis. This is because it is much faster and the output is compatible with Cytoscape. 
+
+I was able to generate a list of DE pathways for C9orf72, and imported the top 50 and top 100 pathways into cytoscape. This produced the following diagrams:
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/C9 top 50.pdf)
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/C9 top 100.pdf)
+
+##Tuesday
+
+On Tuesday I spent some time on my EdX course and then ran the GSEA for CHMP2B and sALS.
+
+##Wednesday
+
+On Wednesday, I imported the CHMP2B and sALS data in to Cytoscape to visualise the networks.
+
+###CHMP2B top 50
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/CHMP2B top 50.pdf)
+
+###CHMP2B top 100
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/CHMP2B top 100.pdf)
+
+###sALS top 50
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/sALS top 50.pdf)
+
+###sALS top 100
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/sALS top 100.pdf)
+
+
+##Thursday
+
+As well as GSEA, on Thursday I talked with John about the samples and he suggested I try hierarchical clustering based on the pathprint results rather than raw expression values. This was interesting because it showed how the data seems to cluster more by tissue than disease (which is expected as there is a larger signal for 'tissue type' in a cell than disease). However, within each tissue it was promising to see that the disease samples often clustered together with spread of controls
+
+![](/Users/clairegreen/Desktop/Screen Shot 2015-11-26 at 15.48.01 (2).png)
+
+
+##Friday
+By the end of the week I had finished the GSEA for FTLD and VCP, and the networks were thus:
+
+###FTLD top 50
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/FTLD top 50.pdf)
+
+###FTLD top 100
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/FTLD top 100.pdf)
+
+###VCP top 50
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/VCP top 50.pdf)
+
+###VCP top 100
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/VCP top 100.pdf)
+

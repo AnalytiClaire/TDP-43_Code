@@ -1,0 +1,131 @@
+##Differential Expression of Genes##
+
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/DE Genes/VCP/")
+library(affy)
+library(Biobase)
+library(tkWidgets)
+
+#run program to choose .CEL files from directory
+celfiles <- fileBrowser(textToShow = "Choose CEL files", testFun = hasSuffix("[cC][eE][lL]"))
+#celfiles<-basename(celfiles)
+Data<-ReadAffy(filenames=celfiles) #read in files
+rmaEset<-rma(Data) #normalise using RMA
+analysis.name<-"VCP" #Label analysis
+dataMatrixAll<-exprs(rmaEset) #takes expression from normalised expression set
+
+
+#mas5call generates presence/absence calls for each probeset
+mas5call<-mas5calls(Data)
+callMatrixAll<-exprs(mas5call)
+colnames(callMatrixAll)<-sub(".CEL", ".mas5-Detection", colnames(callMatrixAll),fixed=TRUE)
+colnames(callMatrixAll)<-sub(".cel", ".mas5-Detection", colnames(callMatrixAll),fixed=TRUE)
+callMatrixAll<-as.data.frame(callMatrixAll)
+callMatrixAll$ProbeSetID<-rownames(callMatrixAll)
+countPf<-function(x){
+  sum(x=="P")
+}
+
+#count how many samples have presence calls
+countPl<-apply(callMatrixAll, 1, countPf)
+callMatrixAll$ProbeSetID<-rownames(callMatrixAll)
+countPdf<-data.frame(ProbeSetID=names(countPl), countP=countPl) 
+
+#read annotation file
+
+# ##USING BIOMART
+# library (biomaRt)
+# mart <- useMart("ENSEMBL_MART_ENSEMBL",dataset="hsapiens_gene_ensembl", host="www.ensembl.org") 
+# x <- rownames(dataMatrixAll) #create vector containing probe IDs
+# mart_attribute <- listAttributes(mart)
+# annotation <- getBM(attributes=c("affy_hg_u133a_2", "hgnc_symbol", "description"), 
+#                    filters = "affy_hg_u133a_2", values = x, mart = mart)
+# annotation<-subset(annotation, subset=(hgnc_symbol !="")) #if no gene symbol, discount
+
+#USING ANNOTATION FILE (if .csv, convert to .txt using excel)
+annotation.file<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/HG-U133A_2.na35.annot.csv/HG-U133A_2.na35.annot.txt"
+annotation<-read.table(annotation.file, header = TRUE, row.names=NULL, sep="\t", skip=0, stringsAsFactors=F, quote = "", comment.char="!", fill = TRUE )
+dim(annotation)
+nrow(annotation)
+#[1] 39699
+annotation<-subset( annotation, subset=(Gene.Symbol !="---")) #if no gene symbol, discount
+nrow(annotation)
+
+expressionMatrix<-exprs(rmaEset)
+colnames(expressionMatrix)
+
+#this is for matched samples
+#tonsil<-factor(c("T101","T101","T102","T102","T103","T103"))
+Treat<-factor(rep(c("Control", "Patient"),c(3,7)), levels=c("Control", "Patient"))
+design<-model.matrix(~Treat)
+rownames(design)<-colnames(expressionMatrix)
+design
+
+#Conduct statistical analysis of expression
+library(limma)
+fit<-lmFit(expressionMatrix, design) #linear model fit
+fit<-eBayes(fit) 
+result<-topTable(fit, coef="TreatPatient", adjust="BH", number=nrow(expressionMatrix)) #"BH" adjust for multiple hypothesis testing
+#toptable normally takes top number but this takes all
+
+
+result$"ProbeSetID"<-rownames(result)
+head(result$"ProbeSetID")
+result$"Fold Change"<-2^result$logFC
+result$"Fold Change"[result$"Fold Change"<1]<-(-1)/result$"Fold Change"[result$"Fold Change"<1] #converts log fold change into a linear value above or below 0
+expressionLinear<-as.data.frame(2^expressionMatrix)
+expressionLinear$ProbeSetID<-rownames(expressionLinear)
+result<-merge(result, expressionLinear, by.x="ProbeSetID", by.y="ProbeSetID") #merge values into one array
+result<-merge(annotation, result, by.x="Probe.Set.ID", by.y="ProbeSetID")
+#result<-merge(result, callMatrixAll, by.x="Probe_Set_ID", by.y="ProbeSetID")
+result<-merge(result, countPdf, by.x="Probe.Set.ID", by.y="ProbeSetID")
+write.table(result, file=paste(analysis.name, "anno RMA limma na35.txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+
+result<-subset(result, Gene.Symbol!="")
+result<-subset(result, subset=(countP>2))
+nrow(result)
+foldchange<-1.5
+pvalue<-0.05
+#adj_P_Val<-0.05
+siggenes<-subset(result, subset=(P.Value < pvalue) & abs(logFC) > log2(foldchange))
+#siggenes<-subset(result, subset=(adj.P.Val < 0.05))
+nrow(siggenes)
+siggenesup<-subset(siggenes, subset= logFC > 0)
+siggenesdown<-subset(siggenes, subset=logFC < 0)
+colnames(siggenesup)
+nrow(siggenesup)
+nrow(siggenesdown)
+UpandDown<-intersect(siggenesup$"Gene.Symbol", siggenesdown$"Gene.Symbol")
+length(UpandDown)
+
+UporDown<-subset(siggenes, subset=(!siggenes$"Gene.Symbol"%in% UpandDown))
+upsiggenes<-subset(siggenesup, subset=(!siggenesup$"Gene.Symbol"%in% UpandDown))
+downsiggenes<-subset(siggenesdown, subset=(!siggenesdown$"Gene.Symbol"%in% UpandDown))
+length(unique(siggenes$"Gene.Symbol"))
+uniquesiggenes <- unique(siggenes$Gene.Symbol)
+length(unique(upsiggenes$"Gene.Symbol"))
+length(unique(downsiggenes$"Gene.Symbol"))
+length(unique(UporDown$"Gene.Symbol"))
+
+#setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/DE Genes/test2/")
+#Take results, remove duplicate rows for genes, order by adjusted p value and take top X number of genes
+uniqueresult <- result[!duplicated(result[,15]),]
+genesort <- uniqueresult[order(uniqueresult$adj.P.Val),]
+topgene <- genesort[1:1000,]
+write.csv(x = topgene, file = "FTLD_anno_1000")
+topgene <- genesort[1:2000,]
+write.csv(x = topgene, file = "FTLD_anno_2000")
+topgene <- genesort[1:3000,]
+write.csv(x = topgene, file = "FTLD_anno_3000")
+topgene <- genesort[1:4000,]
+write.csv(x = topgene, file = "FTLD_anno_4000")
+topgene <- genesort[1:5000,]
+write.csv(x = topgene, file = "FTLD_anno_5000")
+
+# dir.create(paste("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/DE Genes/CHMP2B/unique"))
+# setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/DE Genes/CHMP2B/unique")
+# 
+# write.table(siggenes, file=paste(analysis.name," RMA limma siggenes biomart p_", pvalue, "_fold change_", foldchange, ".txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+# write.table(upsiggenes, file=paste(analysis.name," RMA limma upsiggenes biomart p_", pvalue, "_fold change_", foldchange, ".txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+# write.table(downsiggenes, file=paste(analysis.name," RMA limma downsiggenes biomart p_", pvalue, "_fold change_", foldchange, ".txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+# write.table(uniquesiggenes, file=paste(analysis.name,"unique RMA limma siggenes biomart p_", pvalue, "_fold change_", foldchange, ".txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+
