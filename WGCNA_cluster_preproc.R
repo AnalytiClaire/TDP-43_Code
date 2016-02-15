@@ -5,7 +5,7 @@ library(WGCNA)
 
 ### C9orf72 ###
 # Display the current working directory
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/C9orf72_LCM")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM/")
 options(stringsAsFactors = FALSE);
 
 #Read in data set
@@ -27,7 +27,7 @@ C9_sampleTree = hclust(dist(exp_C9.LCM), method = "average");
 
 
 ### CHMP2B ###
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/CHMP2B/")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/CHMP2B/")
 options(stringsAsFactors = FALSE);
 
 exp_CHMP2B <- read.csv ("eset_CHMP2B_250615_exprs.csv", header=TRUE)
@@ -46,7 +46,7 @@ CHMP2B_sampleTree = hclust(dist(exp_CHMP2B), method = "average");
 
 
 ### sALS ###
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/FUS_SALS_LCM_CELfiles/")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/FUS_SALS_LCM_CELfiles/")
 options(stringsAsFactors = FALSE);
 
 exp_sALS <- read.csv ("eset_SALS_LCM_260615_exprs.csv", header=TRUE)
@@ -64,7 +64,7 @@ sALS_sampleTree = hclust(dist(exp_sALS), method = "average");
 
 
 ### FTLD ###
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/FTD-U.brain/")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/FTD-U.brain/")
 options(stringsAsFactors = FALSE);
 
 FTLD <- read.csv ("eset_FTD.U.brain_170715_exprs.csv", header=TRUE)
@@ -87,7 +87,7 @@ FTLD_sampleTree = hclust(dist(FTLD_combo), method = "average");
 
 
 ### VCP ###
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/VCP.myopathy/")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/VCP.myopathy/")
 options(stringsAsFactors = FALSE);
 
 VCP <- read.csv ("eset_VCP.Myopathy_170715_exprs.csv", header=TRUE)
@@ -125,7 +125,7 @@ plot(VCP_sampleTree, main = "VCP", sub="", xlab="", cex.lab = 1.5,
 
 ##Pheno data - disease vs control
 #####
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/C9orf72_LCM")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM")
 C9_pheno <- read.csv("WGCNA_pheno.csv") #contains vector identifying if sample is disease (1) or control (0)
 C9samples <- rownames(exp_C9.LCM) #take rownames of data set
 row.names (C9_pheno) <- C9samples #assign to rownames of pheno set
@@ -140,7 +140,7 @@ plotDendroAndColors(C9_sampleTree2, traitColors,
                     groupLabels = names(C9_pheno),
                     main = "Sample dendrogram and trait heatmap")
 
-save(exp_C9.LCM, C9_pheno, file = "WGCNA_C9_dataInput.RData")
+# save(exp_C9.LCM, C9_pheno, file = "WGCNA_C9_dataInput.RData")
 
 
 
