@@ -1,0 +1,82 @@
+---
+title: "Common Differentially Expressed Genes in Cases of TDP-43 Pathology"
+author: "Claire Green"
+date: "15 February 2016"
+output: pdf_document
+---
+
+| Gene Symbol         | Gene Names                                                                                           |
+|----------------|------------------------------------------------------------------------------------------------------|
+| ACAT1          | acetyl-CoA acetyltransferase 1                                                                       |
+| BPTF           | bromodomain PHD finger transcription factor                                                          |
+| C14orf1        | chromosome 14 open reading frame 1                                                                   |
+| RPL17-C18orf32 | chromosome 18 open reading frame 32                                                                  |
+| CAPN2          | calpain 2, (m/II) large subunit                                                                      |
+| CCT2           | chaperonin containing TCP1, subunit 2 (beta)                                                         |
+| CDK16          | cyclin-dependent kinase 16                                                                           |
+| CDK5R1         | cyclin-dependent kinase 5, regulatory subunit 1 (p35)                                                |
+| CREB1          | cAMP responsive element binding protein 1                                                            |
+| CSRP1          | cysteine and glycine-rich protein 1                                                                  |
+| CST3           | cystatin C                                                                                           |
+| DCN            | decorin                                                                                              |
+| DDX39A         | DEAD (Asp-Glu-Ala-Asp) box polypeptide 39A                                                           |
+| DDX39B         | DEAD (Asp-Glu-Ala-Asp) box polypeptide 39B                                                           |
+| DDX5           | DEAD (Asp-Glu-Ala-Asp) box helicase 5                                                                |
+| DMD            | dystrophin                                                                                           |
+| DYNLT1         | dynein, light chain, Tctex-type 1                                                                    |
+| ETS2           | v-ets erythroblastosis virus E26 oncogene homolog 2 (avian)                                          |
+| FBXL14         | F-box and leucine-rich repeat protein 14                                                             |
+| FBXO9          | F-box protein 9                                                                                      |
+| GNPAT          | glyceronephosphate O-acyltransferase                                                                 |
+| GSTO1          | glutathione S-transferase omega 1                                                                    |
+| GTF2I          | general transcription factor IIi                                                                     |
+| GTF3C2         | general transcription factor IIIC, polypeptide 2, beta 110kDa                                        |
+| HSD17B4        | hydroxysteroid (17-beta) dehydrogenase 4                                                             |
+| ICMT           | isoprenylcysteine carboxyl methyltransferase                                                         |
+| ITM2A          | integral membrane protein 2A                                                                         |
+| LBR            | lamin B receptor                                                                                     |
+| LDLRAD4        | Low Density Lipoprotein Receptor Class A Domain Containing 4                                         |
+| LSM5           | LSM5 homolog, U6 small nuclear RNA associated (S. cerevisiae)                                        |
+| MAP3K13        | mitogen-activated protein kinase kinase kinase 13                                                    |
+| MAP4K4         | mitogen-activated protein kinase kinase kinase kinase 4                                              |
+| MARS           | Methionyl-TRNA Synthetase                                                                            |
+| MPHOSPH9       | M-phase phosphoprotein 9                                                                             |
+| MSL3           | male-specific lethal 3 homolog (Drosophila)                                                          |
+| MTR            | 5-methyltetrahydrofolate-homocysteine methyltransferase                                              |
+| NAGA           | N-acetylgalactosaminidase, alpha-                                                                    |
+| NKTR           | natural killer-tumor recognition sequence                                                            |
+| NUTF2          | nuclear transport factor 2                                                                           |
+| PAICS          | phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase |
+| PCNA           | proliferating cell nuclear antigen                                                                   |
+| PFDN1          | prefoldin subunit 1                                                                                  |
+| PRKD1          | protein kinase D1                                                                                    |
+| PSAP           | prosaposin                                                                                           |
+| PSMD1          | proteasome (prosome, macropain) 26S subunit, non-ATPase, 1                                           |
+| PTEN           | phosphatase and tensin homolog                                                                       |
+| RNF13          | ring finger protein 13                                                                               |
+| RNF130         | ring finger protein 130                                                                              |
+| RPL6           | ribosomal protein L6                                                                                 |
+| RPLP2          | ribosomal protein, large, P2                                                                         |
+| RPS6           | ribosomal protein S6                                                                                 |
+| RSRC2          | arginine/serine-rich coiled-coil 2                                                                   |
+| RTN1           | reticulon 1                                                                                          |
+| SMPD4          | sphingomyelin phosphodiesterase 4, neutral membrane (neutral sphingomyelinase-3)                     |
+| STOM           | stomatin                                                                                             |
+| SUPT7L         | suppressor of Ty 7 (S. cerevisiae)-like                                                              |
+| TAF5L          | TAF5-like RNA polymerase II, p300/CBP-associated factor (PCAF)-associated factor, 65kDa              |
+| TANK           | TRAF family member-associated NFKB activator                                                         |
+| TARDBP         | TAR DNA binding protein                                                                              |
+| TARS           | threonyl-tRNA synthetase                                                                             |
+| TCF4           | transcription factor 4                                                                               |
+| TMEM59         | transmembrane protein 59                                                                             |
+| TNFAIP1        | tumor necrosis factor, alpha-induced protein 1 (endothelial)                                         |
+| TRO            | trophinin                                                                                            |
+| TUBB3          | tubulin, beta 3 class III                                                                            |
+| UNC119B        | unc-119 homolog B (C. elegans)                                                                       |
+| UPF3A          | UPF3 regulator of nonsense transcripts homolog A (yeast)                                             |
+| USP11          | ubiquitin specific peptidase 11                                                                      |
+| WASL           | Wiskott-Aldrich syndrome-like                                                                        |
+| WBSCR22        | Williams Beuren syndrome chromosome region 22                                                        |
+| WDR78          | WD repeat domain 78                                                                                  |
+| ZFP36          | zinc finger protein 36, C3H type, homolog (mouse)                                                    |
+| ZIC1           | Zic family member 1                                                                                  |

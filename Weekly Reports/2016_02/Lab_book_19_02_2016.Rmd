@@ -1,0 +1,237 @@
+---
+title: "LabBook_19_02_2016"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60))
+```
+
+#Monday
+
+At the Friday lab meeting, Gabriel mentioned that the gene pool that I sample from for my random permutation test is not quite identical to my test sample because I was not removing the genes that did not have enough presence calls (at least 3). What I did was take the results table which was ranked to find my top X genes and sample from all HGNC symbols in that list. This means that both my random pool and experimental pool contain genes that are 1) not blank 2) not duplicates 3) not antisense matching 4) no less than 3 presence calls. 
+
+This essentially halved my sample pools, meaning that I was taking random genes from between 8 and 12 thousand genes. Consequently my p values became much larger, with my value of 16 from top 3000 reaching a value of 0.02 (still significant), and 50 from top 4000 0.07 (not significant). I feel confident that my list is still important because it's highly enriched for genes that are known to be either associated with neurological diseases or processes known to be dysfunctional in neurodegeneration. My next step is to take smaller increments between 3000 and 4000 to see where the genes lie and where it no longer becomes significant. I will take incremenets of 100 genes.
+
+###Change of Plan###
+
+I noticed that the section of code that I took from Wenbin to take out any genes with negative matching strand probes was not working (I had not seen the error) because the name for the column annotation notes was slightly different in my output. When I fixed this, it changed my results. 
+
+```{r, eval=FALSE}
+# Remove rows in which genes are noted to have negative strand matching probes
+idxNegativeStrand<-grep("Negative Strand Matching Probes", annotation$Annotation.Notes)
+if(length(idxNegativeStrand)>0)
+{
+  annotation<-annotation[-idxNegativeStrand,]
+}
+```
+
+
+Interestingly, my output table now looks like this:
+
+| Top 1000 | Top 2000 | Top 3000 | Top 4000 |
+|----------|----------|----------|----------|
+| 0        | CSRP1    | STOM     | STOM     |
+|          | RNF13    | CSRP1    | UPF3A    |
+|          |          | RNF13    | FBXO9    |
+|          |          | TUBB3    | DYNLT1   |
+|          |          | PSAP     | CSRP1    |
+|          |          | RPL6     | ETS2     |
+|          |          | CCT2     | RNF13    |
+|          |          | NKTR     | WASL     |
+|          |          | MAP3K13  | CST3     |
+|          |          | NUTF2    | MAP4K4   |
+|          |          | RPS6     | TUBB3    |
+|          |          | NAGA     | PSAP     |
+|          |          | PFDN1    | RPL6     |
+|          |          | TARDBP   | CCT2     |
+|          |          | TARS     | PCNA     |
+|          |          | PTEN     | SMPD4    |
+|          |          | RNF130   | DMD      |
+|          |          | HSD17B4  | ICMT     |
+|          |          | DDX5     | SUPT7L   |
+|          |          | GTF2I    | NKTR     |
+|          |          |          | MAP3K13  |
+|          |          |          | NUTF2    |
+|          |          |          | RPS6     |
+|          |          |          | MTR      |
+|          |          |          | CREB1    |
+|          |          |          | ACAT1    |
+|          |          |          | CDK5R1   |
+|          |          |          | BPTF     |
+|          |          |          | PRKD1    |
+|          |          |          | NAGA     |
+|          |          |          | GSTO1    |
+|          |          |          | PFDN1    |
+|          |          |          | DDX39B   |
+|          |          |          | TARDBP   |
+|          |          |          | TARS     |
+|          |          |          | PTEN     |
+|          |          |          | USP11    |
+|          |          |          | PAICS    |
+|          |          |          | UNC119B  |
+|          |          |          | RNF130   |
+|          |          |          | HSD17B4  |
+|          |          |          | TMEM59   |
+|          |          |          | RTN1     |
+|          |          |          | TRO      |
+|          |          |          | DDX5     |
+|          |          |          | GNPAT    |
+|          |          |          | CDK16    |
+|          |          |          | RSRC2    |
+|          |          |          | GTF2I    |
+|          |          |          | WBSCR22  |
+|          |          |          | MARS     |
+|          |          |          | GTF3C2   |
+|          |          |          | C14orf1  |
+|          |          |          | TAF5L    |
+|          |          |          | TCF4     |
+|          |          |          | WDR78    |
+|          |          |          | LBR      |
+|          |          |          | ZIC1     |
+|          |          |          | ZFP36    |
+|          |          |          | FBXL14   |
+|          |          |          | DDX39A   |
+|          |          |          | C18orf32 |
+|          |          |          | DCN      |
+|          |          |          | CAPN2    |
+|          |          |          | RPLP2    |
+|          |          |          | LDLRAD4  |
+|          |          |          | PSMD1    |
+|          |          |          | MPHOSPH9 |
+|          |          |          | ITM2A    |
+|          |          |          | MSL3     |
+|          |          |          | TANK     |
+|          |          |          | TNFAIP1  |
+|          |          |          | LSM5     |
+
+The genes look largely the same, there is only loss of the genes BRD3, EEF1A1, and RECQL. TARDBP is now commonly DE in the top 3000 genes which is promising.  
+
+Next I ran the random permutations test, again using the same table from the results (_uniqueresult.csv). This was a sample pool of 8050 for C9orf72, 10,065 for CHMP2B, 9506 for FTLD, 10405 for sALS, and 11935 for VCP. 
+
+For 73 genes from sampling top 4000, the p value was 0.0015
+For 20 genes from sampling top 3000, the p value was 0.0158
+For 2 genes from sampling top 2000, the p value was not significant at 0.2301
+
+I find it surprising that the p values are getting more significant the more genes I include in the consensus. It could be that there are a large number of common genes that are less differentially expressed than the very top genes. 
+
+##List of genes and names
+
+| Gene     | Gene Names                                                                                           |
+|----------|------------------------------------------------------------------------------------------------------|
+| ACAT1    | acetyl-CoA acetyltransferase 1                                                                       |
+| BPTF     | bromodomain PHD finger transcription factor                                                          |
+| C14orf1  | chromosome 14 open reading frame 1                                                                   |
+| C18orf32 | chromosome 18 open reading frame 32                                                                  |
+| CAPN2    | calpain 2, (m/II) large subunit                                                                      |
+| CCT2     | chaperonin containing TCP1, subunit 2 (beta)                                                         |
+| CDK16    | cyclin-dependent kinase 16                                                                           |
+| CDK5R1   | cyclin-dependent kinase 5, regulatory subunit 1 (p35)                                                |
+| CREB1    | cAMP responsive element binding protein 1                                                            |
+| CSRP1    | cysteine and glycine-rich protein 1                                                                  |
+| CST3     | cystatin C                                                                                           |
+| DCN      | decorin                                                                                              |
+| DDX39A   | DEAD (Asp-Glu-Ala-Asp) box polypeptide 39A                                                           |
+| DDX39B   | DEAD (Asp-Glu-Ala-Asp) box polypeptide 39B                                                           |
+| DDX5     | DEAD (Asp-Glu-Ala-Asp) box helicase 5                                                                |
+| DMD      | dystrophin                                                                                           |
+| DYNLT1   | dynein, light chain, Tctex-type 1                                                                    |
+| ETS2     | v-ets erythroblastosis virus E26 oncogene homolog 2 (avian)                                          |
+| FBXL14   | F-box and leucine-rich repeat protein 14                                                             |
+| FBXO9    | F-box protein 9                                                                                      |
+| GNPAT    | glyceronephosphate O-acyltransferase                                                                 |
+| GSTO1    | glutathione S-transferase omega 1                                                                    |
+| GTF2I    | general transcription factor IIi                                                                     |
+| GTF3C2   | general transcription factor IIIC, polypeptide 2, beta 110kDa                                        |
+| HSD17B4  | hydroxysteroid (17-beta) dehydrogenase 4                                                             |
+| ICMT     | isoprenylcysteine carboxyl methyltransferase                                                         |
+| ITM2A    | integral membrane protein 2A                                                                         |
+| LBR      | lamin B receptor                                                                                     |
+| LDLRAD4  | Low Density Lipoprotein Receptor Class A Domain Containing 4                                         |
+| LSM5     | LSM5 homolog, U6 small nuclear RNA associated (S. cerevisiae)                                        |
+| MAP3K13  | mitogen-activated protein kinase kinase kinase 13                                                    |
+| MAP4K4   | mitogen-activated protein kinase kinase kinase kinase 4                                              |
+| MARS     | Methionyl-TRNA Synthetase                                                                            |
+| MPHOSPH9 | M-phase phosphoprotein 9                                                                             |
+| MSL3     | male-specific lethal 3 homolog (Drosophila)                                                          |
+| MTR      | 5-methyltetrahydrofolate-homocysteine methyltransferase                                              |
+| NAGA     | N-acetylgalactosaminidase, alpha-                                                                    |
+| NKTR     | natural killer-tumor recognition sequence                                                            |
+| NUTF2    | nuclear transport factor 2                                                                           |
+| PAICS    | phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase |
+| PCNA     | proliferating cell nuclear antigen                                                                   |
+| PFDN1    | prefoldin subunit 1                                                                                  |
+| PRKD1    | protein kinase D1                                                                                    |
+| PSAP     | prosaposin                                                                                           |
+| PSMD1    | proteasome (prosome, macropain) 26S subunit, non-ATPase, 1                                           |
+| PTEN     | phosphatase and tensin homolog                                                                       |
+| RNF13    | ring finger protein 13                                                                               |
+| RNF130   | ring finger protein 130                                                                              |
+| RPL6     | ribosomal protein L6                                                                                 |
+| RPLP2    | ribosomal protein, large, P2                                                                         |
+| RPS6     | ribosomal protein S6                                                                                 |
+| RSRC2    | arginine/serine-rich coiled-coil 2                                                                   |
+| RTN1     | reticulon 1                                                                                          |
+| SMPD4    | sphingomyelin phosphodiesterase 4, neutral membrane (neutral sphingomyelinase-3)                     |
+| STOM     | stomatin                                                                                             |
+| SUPT7L   | suppressor of Ty 7 (S. cerevisiae)-like                                                              |
+| TAF5L    | TAF5-like RNA polymerase II, p300/CBP-associated factor (PCAF)-associated factor, 65kDa              |
+| TANK     | TRAF family member-associated NFKB activator                                                         |
+| TARDBP   | TAR DNA binding protein                                                                              |
+| TARS     | threonyl-tRNA synthetase                                                                             |
+| TCF4     | transcription factor 4                                                                               |
+| TMEM59   | transmembrane protein 59                                                                             |
+| TNFAIP1  | tumor necrosis factor, alpha-induced protein 1 (endothelial)                                         |
+| TRO      | trophinin                                                                                            |
+| TUBB3    | tubulin, beta 3 class III                                                                            |
+| UNC119B  | unc-119 homolog B (C. elegans)                                                                       |
+| UPF3A    | UPF3 regulator of nonsense transcripts homolog A (yeast)                                             |
+| USP11    | ubiquitin specific peptidase 11                                                                      |
+| WASL     | Wiskott-Aldrich syndrome-like                                                                        |
+| WBSCR22  | Williams Beuren syndrome chromosome region 22                                                        |
+| WDR78    | WD repeat domain 78                                                                                  |
+| ZFP36    | zinc finger protein 36, C3H type, homolog (mouse)                                                    |
+| ZIC1     | Zic family member 1                                                                                  |
+
+
+Like before, I inputted the gene list into WebGestalt to identify associated GO terms and diseases
+
+#Biological Process
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 10.46.11.png)
+
+#Cellular Component
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 10.46.19.png)
+
+#Molecular Function
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 10.46.26.png)
+
+
+#WebGestalt Associated Diseases
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 17.05.39.png)
+
+---------------
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 17.06.01.png)
+
+--------------
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 17.06.16.png)
+
+
+#CTTV gene-disease associations
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/CTTV/Screen Shot 2016-02-17 at 10.28.08.png)
+
+
+
+
+
+
+
+
+
+
