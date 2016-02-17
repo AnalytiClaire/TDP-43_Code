@@ -198,18 +198,21 @@ I find it surprising that the p values are getting more significant the more gen
 
 Like before, I inputted the gene list into WebGestalt to identify associated GO terms and diseases
 
-#Biological Process
+##Biological Process
 
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 10.46.11.png)
 
-#Cellular Component
+##Cellular Component
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 10.46.19.png)
 
-#Molecular Function
+##Molecular Function
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 10.46.26.png)
 
+#Tuesday
 
-#WebGestalt Associated Diseases
+Next, I ran the gene list through WebGestalt and CTTV to see which genes have been associated with TDP-43 diseases. 
+
+##WebGestalt Associated Diseases
 
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 17.05.39.png)
 
@@ -222,12 +225,14 @@ Like before, I inputted the gene list into WebGestalt to identify associated GO 
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/WebGestalt/Screen Shot 2016-02-15 at 17.06.16.png)
 
 
-#CTTV gene-disease associations
+##CTTV gene-disease associations
 
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/CTTV/Screen Shot 2016-02-17 at 10.28.08.png)
 
 
+Clearly a large number of genes within my gene list have been associated with TDP-43 diseases, mostly through RNA expression experiments. For some of the genes, such as CAPN2 and many of the ribosomal proteins, very similar genes have been associated with these diseases. For example, both CAPN1 and CAPN3 were implicated by CTTV. So even if not explicitly associated, the processes they contibute to are likely the same. 
 
+Now that I have a list of genes that looks, at a first glance, , there are two large steps I need to take. Firstly, although I have validated the *number* of genes
 
 
 

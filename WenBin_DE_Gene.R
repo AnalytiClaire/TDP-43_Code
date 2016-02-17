@@ -1,6 +1,6 @@
 ##Differential Expression of Genes##
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/VCP/")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/FTLD/")
 library(affy)
 library(Biobase)
 library(tkWidgets)
@@ -10,7 +10,7 @@ celfiles <- fileBrowser(textToShow = "Choose CEL files", testFun = hasSuffix("[c
 #celfiles<-basename(celfiles)
 Data<-ReadAffy(filenames=celfiles) #read in files
 rmaEset<-rma(Data) #normalise using RMA
-analysis.name<-"VCP" #Label analysis
+analysis.name<-"FTLD" #Label analysis
 dataMatrixAll<-exprs(rmaEset) #takes expression from normalised expression set
 
 
@@ -63,7 +63,7 @@ colnames(expressionMatrix)
 
 #this is for matched samples
 #tonsil<-factor(c("T101","T101","T102","T102","T103","T103"))
-Treat<-factor(rep(c("Control", "Patient"),c(3,7)), levels=c("Control", "Patient"))
+Treat<-factor(rep(c("Control", "Patient"),c(8,16)), levels=c("Control", "Patient"))
 design<-model.matrix(~Treat)
 rownames(design)<-colnames(expressionMatrix)
 design
@@ -86,8 +86,8 @@ result<-merge(result, expressionLinear, by.x="ProbeSetID", by.y="ProbeSetID") #m
 result<-merge(annotation, result, by.x="Probe.Set.ID", by.y="ProbeSetID")
 result<-merge(result, countPdf, by.x="Probe.Set.ID", by.y="ProbeSetID")
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenesb_2016-02-12/")
-write.table(result, file=paste(analysis.name, "result.txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/")
+# write.csv(result, file=paste(analysis.name, "result.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
 
 result<-subset(result, Gene.Symbol!="") #removes any probes for which there are no gene symbols
 result<-subset(result, subset=(countP>2)) #only takes results that have at least 2 samples with a presence call for a probe
@@ -120,26 +120,26 @@ result<-subset(result, subset=(countP>2)) #only takes results that have at least
 
 
 ###Write results to CSV files for consensus analysis
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/")
-dir.create(paste("TopGenesb", Sys.Date(), sep = "_")) #create directory using the day's date
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15")
+#dir.create(paste("TopGenes", Sys.Date(), sep = "_")) #create directory using the day's date
 #Take results, remove duplicate rows for genes, order by adjusted p value and take top X number of genes
 uniqueresult <- result[!duplicated(result[,15]),]
 
 #For ordering by adjusted p value
 
 genesort <- uniqueresult[order(uniqueresult$adj.P.Val),]
-write.table(genesort, file=paste(analysis.name, "rankeduniqueresult.txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
-
-topgene <- genesort[1:1000,]
-write.csv(x = topgene, file = "FTLD_ap_1000")
-topgene <- genesort[1:2000,]
-write.csv(x = topgene, file = "FTLD_ap_2000")
-topgene <- genesort[1:3000,]
-write.csv(x = topgene, file = "FTLD_ap_3000")
-topgene <- genesort[1:4000,]
-write.csv(x = topgene, file = "FTLD_ap_4000")
-topgene <- genesort[1:5000,]
-write.csv(x = topgene, file = "FTLD_ap_5000")
+# write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+# 
+# topgene <- genesort[1:1000,]
+# write.csv(x = topgene, file = paste(analysis.name,"_ap_1000"))
+# topgene <- genesort[1:2000,]
+# write.csv(x = topgene, file = paste(analysis.name,"_ap_2000"))
+# topgene <- genesort[1:3000,]
+# write.csv(x = topgene, file = paste(analysis.name,"_ap_3000"))
+# topgene <- genesort[1:4000,]
+# write.csv(x = topgene, file = paste(analysis.name,"_ap_4000"))
+# topgene <- genesort[1:5000,]
+# write.csv(x = topgene, file = paste(analysis.name,"_ap_5000"))
 
 # #For ordering by fold change
 # genesort <- uniqueresult[order(uniqueresult$`Fold Change`),]

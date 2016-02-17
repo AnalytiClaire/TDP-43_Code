@@ -1,11 +1,11 @@
 ###Random permutations for Differential Expression##
 
 #load the total number of unique genes for each data set
-C9orf72 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-12/C9orf72rankeduniqueresult.csv")
-CHMP2B <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-12/CHMP2Brankeduniqueresult.csv")
-sALS <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-12/SALSrankeduniqueresult.csv")
-FTLD <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-12/FTLDrankeduniqueresult.csv")
-VCP <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-12/VCPrankeduniqueresult.csv")
+C9orf72 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/C9rankeduniqueresult.csv")
+CHMP2B <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/CHrankeduniqueresult.csv")
+sALS <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/SALSrankeduniqueresult.csv")
+FTLD <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/FTLDrankeduniqueresult.csv")
+VCP <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/VCPrankeduniqueresult.csv")
 
 # ## Save annotation file locations to variable
 # annotation.U133plus2<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133_Plus_2.na35.annot.csv/HG-U133_Plus_2.na35.annot.txt"
@@ -43,18 +43,18 @@ VCP <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpress
 
 
 #indicate the number of overlapping genes identified by DE analysis
-test <- 
+test <- 213
 
 m=10000 #number of repetitions 
 r <- c(1:m) #store repetition numbers in vector "r"
 
 for (j in 1:m)
 {
-  random1 <- sample (C9orf72$Gene.Symbol, size=4000, replace=F)
-  random2 <- sample (CHMP2B$Gene.Symbol, size=4000, replace=F)
-  random3 <- sample (FTLD$Gene.Symbol, size=4000, replace=F)
-  random4 <- sample (sALS$Gene.Symbol, size=4000, replace=F)
-  random5 <- sample (VCP$Gene.Symbol, size=4000, replace=F)
+  random1 <- sample (C9orf72$Gene.Symbol, size=5000, replace=F)
+  random2 <- sample (CHMP2B$Gene.Symbol, size=5000, replace=F)
+  random3 <- sample (FTLD$Gene.Symbol, size=5000, replace=F)
+  random4 <- sample (sALS$Gene.Symbol, size=5000, replace=F)
+  random5 <- sample (VCP$Gene.Symbol, size=5000, replace=F)
   random <- Reduce(intersect, list(random1, random2, random3, random4, random5))
   r[j] <- length(random)
 }

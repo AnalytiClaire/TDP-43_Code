@@ -1,16 +1,16 @@
 #####DIFFERENTIAL GENE EXPRESSION INTERSECT
 #takes csv files of top X DE genes and identifies any consensus genes 
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-12/")
-C9orf72 <- read.csv(file = "C9_ap_4000")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15")
+C9orf72 <- read.csv(file = "C9_ap_5000")
  
-CHMP2B <- read.csv(file = "CH_ap_4000")
+CHMP2B <- read.csv(file = "CH_ap_5000")
  
-sALS<- read.csv(file = "sALS_ap_4000")
+sALS<- read.csv(file = "sALS_ap_5000")
 
-FTLD<- read.csv(file = "FTLD_ap_4000")
+FTLD<- read.csv(file = "FTLD_ap_5000")
 
-VCP<- read.csv(file = "VCP_ap_4000")
+VCP<- read.csv(file = "VCP_ap_5000")
 
 
 C9_DE<- C9orf72$Gene.Symbol
