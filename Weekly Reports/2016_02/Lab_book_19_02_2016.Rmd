@@ -232,11 +232,256 @@ Next, I ran the gene list through WebGestalt and CTTV to see which genes have be
 
 Clearly a large number of genes within my gene list have been associated with TDP-43 diseases, mostly through RNA expression experiments. For some of the genes, such as CAPN2 and many of the ribosomal proteins, very similar genes have been associated with these diseases. For example, both CAPN1 and CAPN3 were implicated by CTTV. So even if not explicitly associated, the processes they contibute to are likely the same. 
 
-Now that I have a list of genes that looks, at a first glance, , there are two large steps I need to take. Firstly, although I have validated the *number* of genes
+Now that I have a list of genes that looks, at a first glance, , there are two large steps I need to take. Firstly, although I have validated the *number* of genes, I also need to validate the particular selection itself. One way I can do this is to perform the same analysis on another dataset, preferably RNA seq. RNA seq would be good for two reasons; firstly by showing that a similar list is produced on a completely different technology, this provides extremely good validation (although it is extremely rare to get even a remotely similar list). Secondly, it would allow me to learn how to perform expression analysis on RNA seq data which I have not done yet. 
 
+The other step I need to take, probably after validation, is to extract as much meaning from my list as possible. By examining the relationships between the genes in my gene set, as well as with other unseeded genes, I can perhaps decipher 1) the hub genes that might be of more interest 2) certain biological processes that are enriched in this list. This is easier said than done, and I think I'm going to need some advice on the best way of doing this. I know that WGCNA is a good idea, as building a coexpression network and looking for enrichment of GO terms in the modules may be useful- but I don't know what my input should be. The whole expression table? Just the genes left after filtering? Or only the genes in my list? I'm not sure. I'm trying to get WGCNA to work in the meantime, and this is what I have so far:
 
+```{r, eval=FALSE}
+#### Creating Co-expression Network using WGCNA ####
 
+library(WGCNA)
+### C9orf72 ###
+# Display the current working directory
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/")
 
+#Read in desired genes
+C9Results <- read.csv ("C9rankeduniqueresult.csv", header=TRUE) #Taking only the genes we deemed acceptable through criteria. See details on
+#gene expression analysis to find criteria
 
+C9ID <- cbind(C9Results$Probe.Set.ID)
 
+#Read in raw expression values
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM/")
+C9RawExp <- read.csv("eset_NineP_150612_exprs.csv")
 
+C9Exp <-merge(C9ID, C9RawExp, by.x="V1", by.y="X") #merge raw expression data with accepted genes
+rownames(C9Exp) <- C9Exp[,1] #make probeset IDs row names
+colnames(C9Exp) <- colnames(C9RawExp) #make file names column names
+C9Exp <- cbind(C9Exp[,2:12]) #remove ID column
+
+C9Exp <- t(C9Exp) #transpose for WGCNA analysis
+
+###Choosing soft threshold
+# Choose a set of soft-thresholding powers
+powers = c(c(1:10), seq(from = 12, to=20, by=2))
+# Call the network topology analysis function
+sft = pickSoftThreshold(C9Exp, powerVector = powers, verbose = 5)
+# Plot the results:
+sizeGrWindow(9, 5)
+par(mfrow = c(1,2));
+cex1 = 0.9;
+# Scale-free topology fit index as a function of the soft-thresholding power
+plot(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+     xlab="Soft Threshold (power)",ylab="Scale Free Topology Model Fit,signed R^2",type="n",
+     main = paste("Scale independence"));
+text(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+     labels=powers,cex=cex1,col="red");
+# this line corresponds to using an R^2 cut-off of h
+abline(h=0.70,col="red")
+# Mean connectivity as a function of the soft-thresholding power
+plot(sft$fitIndices[,1], sft$fitIndices[,5],
+     xlab="Soft Threshold (power)",ylab="Mean Connectivity", type="n",
+     main = paste("Mean connectivity"))
+text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
+
+##SOFT THRESHOLD VALUE OF 6 SELECTED##
+
+C9Exp <- data.matrix(C9Exp) #csv files contain character matrices, the following code requires numeric
+
+##One-step network construction and module detection
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/C9orf72/")
+net = blockwiseModules(C9Exp, power = 6,
+                       TOMType = "unsigned", minModuleSize = 30,
+                       reassignThreshold = 0, mergeCutHeight = 0.25,
+                       numericLabels = TRUE, pamRespectsDendro = FALSE,
+                       saveTOMs = TRUE,
+                       saveTOMFileBase = "C9TOM",
+                       verbose = 3)
+table(net$colors)
+
+# open a graphics window
+sizeGrWindow(12, 9)
+# Convert labels to colors for plotting
+mergedColors = labels2colors(net$colors)
+# Plot the dendrogram and the module colors underneath
+plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],
+                    "Module colors",
+                    dendroLabels = FALSE, hang = 0.03,
+                    addGuide = TRUE, guideHang = 0.05)
+
+moduleLabels = net$colors
+moduleColors = labels2colors(net$colors)
+MEs = net$MEs;
+geneTree = net$dendrograms[[1]];
+save(MEs, moduleLabels, moduleColors, geneTree
+
+##Looking for enrichment of GO terms in modules
+library(S4Vectors)
+library(IRanges)
+library(AnnotationDbi)
+library(GO.db)
+library(org.Hs.eg.db)
+
+EntrezIds <- cbind(C9Results$Entrez.Gene)
+
+GOenr = GOenrichmentAnalysis(moduleColors, EntrezIds, organism = "human", nBestP = 10);
+```
+
+#Thursday
+
+When I generate this table it's a little confusing. In fact the WGCNA website itself says not to use these results as published enrichment analysis. So I'm not really sure what to do. I took my list of genes and looked for online tools for enrichment. I found a resource called EnrichNet and put my 73 genes through GO molecular function enrichment analysis, however none of the results were significant.
+
+I decided to look at some other enrichment software. I looked at EnrichNet, using four different lists:
+
+| Conditions                         |
+|------------------------------------|
+| 73 Genes generated by top 4000     |
+| 73 Genes plus GeneMANIA additions  |
+| 211 Genes generated by top 5000    |
+| 211 Genes plus GeneMANIA additions |
+
+I looked at Enrichment for GO Biological Process terms. Results were only significant if I used the additional genes contributed by GeneMANIA. 
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/EnrichNet/Screen Shot 2016-02-18 at 14.52.33.png)
+
+--------------
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/EnrichNet/Screen Shot 2016-02-18 at 14.54.38.png)
+
+From this it is clear again that the ribosome-associated genes seem to have the highest functional enrichment. Both transcription and translation are represented, as well as the ribosomal structures themselves. 
+
+I then had a go at inputting the 211 genes+GM into PATHER. Below is the table of significant results (p<.05)
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+| GO biological process complete                                                   | Fold Enrichment | P value  |
+|--------------------------------------------------------|-----------|----------|
+| nuclear-transcribed mRNA catabolic process, nonsense-mediated decay (GO:0000184) | > 5             | 1.12E-21 |
+| nuclear-transcribed mRNA catabolic process (GO:0000956)                          | > 5             | 8.26E-21 |
+| mRNA catabolic process (GO:0006402)                                              | > 5             | 4.76E-20 |
+| SRP-dependent cotranslational protein targeting to membrane (GO:0006614)         | > 5             | 1.64E-18 |
+| RNA catabolic process (GO:0006401)                                               | > 5             | 2.11E-18 |
+| viral transcription (GO:0019083)                                                 | > 5             | 2.45E-18 |
+| cotranslational protein targeting to membrane (GO:0006613)                       | > 5             | 2.98E-18 |
+| protein targeting to ER (GO:0045047)                                             | > 5             | 3.62E-18 |
+| establishment of protein localization to endoplasmic reticulum (GO:0072599)      | > 5             | 7.76E-18 |
+| viral gene expression (GO:0019080)                                               | > 5             | 1.62E-17 |
+| multi-organism metabolic process (GO:0044033)                                    | > 5             | 4.66E-17 |
+| protein localization to endoplasmic reticulum (GO:0070972)                       | > 5             | 2.07E-16 |
+| organonitrogen compound biosynthetic process (GO:1901566)                        | 4.66            | 2.16E-16 |
+| interspecies interaction between organisms (GO:0044419)                          | > 5             | 5.54E-16 |
+| symbiosis, encompassing mutualism through parasitism (GO:0044403)                | > 5             | 5.54E-16 |
+| mRNA metabolic process (GO:0016071)                                              | > 5             | 2.93E-15 |
+| viral process (GO:0016032)                                                       | > 5             | 3.56E-15 |
+| multi-organism cellular process (GO:0044764)                                     | > 5             | 4.38E-15 |
+| protein targeting to membrane (GO:0006612)                                       | > 5             | 1.32E-14 |
+| translational termination (GO:0006415)                                           | > 5             | 2.89E-14 |
+| viral life cycle (GO:0019058)                                                    | > 5             | 3.35E-14 |
+| translational elongation (GO:0006414)                                            | > 5             | 6.60E-14 |
+| nucleobase-containing compound catabolic process (GO:0034655)                    | > 5             | 2.24E-13 |
+| establishment of protein localization to membrane (GO:0090150)                   | > 5             | 6.36E-13 |
+| cellular protein complex disassembly (GO:0043624)                                | > 5             | 8.07E-13 |
+| aromatic compound catabolic process (GO:0019439)                                 | > 5             | 1.04E-12 |
+| macromolecular complex disassembly (GO:0032984)                                  | > 5             | 1.30E-12 |
+| translational initiation (GO:0006413)                                            | > 5             | 1.72E-12 |
+| amide biosynthetic process (GO:0043604)                                          | > 5             | 3.25E-12 |
+| peptide metabolic process (GO:0006518)                                           | > 5             | 3.71E-12 |
+| cellular nitrogen compound catabolic process (GO:0044270)                        | > 5             | 4.29E-12 |
+| heterocycle catabolic process (GO:0046700)                                       | > 5             | 4.29E-12 |
+| peptide biosynthetic process (GO:0043043)                                        | > 5             | 4.87E-12 |
+| protein complex disassembly (GO:0043241)                                         | > 5             | 5.99E-12 |
+| cellular metabolic process (GO:0044237)                                          | 1.64            | 6.27E-12 |
+| translation (GO:0006412)                                                         | > 5             | 8.75E-12 |
+| cellular macromolecule catabolic process (GO:0044265)                            | 4.7             | 8.94E-12 |
+| macromolecule catabolic process (GO:0009057)                                     | 4.3             | 1.26E-11 |
+| establishment of protein localization to organelle (GO:0072594)                  | > 5             | 2.18E-11 |
+| cellular amide metabolic process (GO:0043603)                                    | 4.98            | 2.34E-11 |
+| cytoplasmic transport (GO:0016482)                                               | 4.78            | 3.21E-11 |
+| organic cyclic compound catabolic process (GO:1901361)                           | > 5             | 5.48E-11 |
+| cellular catabolic process (GO:0044248)                                          | 3.31            | 1.28E-10 |
+| organonitrogen compound metabolic process (GO:1901564)                           | 3.04            | 1.82E-10 |
+| metabolic process (GO:0008152)                                                   | 1.52            | 2.15E-10 |
+| protein localization to membrane (GO:0072657)                                    | > 5             | 2.83E-10 |
+| protein targeting (GO:0006605)                                                   | > 5             | 3.07E-10 |
+| organic substance metabolic process (GO:0071704)                                 | 1.57            | 3.25E-10 |
+| establishment of localization in cell (GO:0051649)                               | 2.95            | 3.72E-10 |
+| primary metabolic process (GO:0044238)                                           | 1.59            | 6.31E-10 |
+| biological_process (GO:0008150)                                                  | 1.21            | 7.54E-10 |
+| macromolecular complex subunit organization (GO:0043933)                         | 2.75            | 8.02E-10 |
+| intracellular protein transport (GO:0006886)                                     | 4.43            | 1.65E-09 |
+| cellular localization (GO:0051641)                                               | 2.67            | 1.90E-09 |
+| single-organism intracellular transport (GO:1902582)                             | 3.47            | 4.10E-09 |
+| cellular macromolecule metabolic process (GO:0044260)                            | 1.7             | 9.83E-09 |
+| intracellular transport (GO:0046907)                                             | 3.2             | 9.93E-09 |
+| protein localization to organelle (GO:0033365)                                   | > 5             | 1.01E-08 |
+| cellular component disassembly (GO:0022411)                                      | > 5             | 1.17E-08 |
+| cellular protein metabolic process (GO:0044267)                                  | 2.14            | 1.39E-08 |
+| catabolic process (GO:0009056)                                                   | 2.82            | 2.01E-08 |
+| single-organism cellular localization (GO:1902580)                               | 3.92            | 2.40E-08 |
+| nitrogen compound metabolic process (GO:0006807)                                 | 1.82            | 3.04E-08 |
+| organic substance catabolic process (GO:1901575)                                 | 2.99            | 3.36E-08 |
+| cellular macromolecule localization (GO:0070727)                                 | 3.38            | 3.65E-08 |
+| protein complex subunit organization (GO:0071822)                                | 3.08            | 3.76E-08 |
+| cellular process (GO:0009987)                                                    | 1.29            | 4.66E-08 |
+| multi-organism process (GO:0051704)                                              | 2.55            | 5.95E-08 |
+| protein transport (GO:0015031)                                                   | 3.24            | 7.56E-08 |
+| organic substance biosynthetic process (GO:1901576)                              | 1.91            | 1.12E-07 |
+| cellular protein localization (GO:0034613)                                       | 3.32            | 1.16E-07 |
+| single-organism membrane organization (GO:0044802)                               | 4.12            | 1.28E-07 |
+| biosynthetic process (GO:0009058)                                                | 1.89            | 1.29E-07 |
+| membrane organization (GO:0061024)                                               | 3.68            | 2.95E-07 |
+| organic substance transport (GO:0071702)                                         | 2.62            | 3.29E-07 |
+| macromolecule metabolic process (GO:0043170)                                     | 1.6             | 4.14E-07 |
+| establishment of protein localization (GO:0045184)                               | 3.03            | 5.99E-07 |
+| cellular nitrogen compound metabolic process (GO:0034641)                        | 1.8             | 6.67E-07 |
+| macromolecule localization (GO:0033036)                                          | 2.52            | 9.23E-07 |
+| cellular biosynthetic process (GO:0044249)                                       | 1.87            | 1.44E-06 |
+| cellular component organization or biogenesis (GO:0071840)                       | 1.78            | 1.60E-06 |
+| protein localization (GO:0008104)                                                | 2.67            | 1.68E-06 |
+| single-organism localization (GO:1902578)                                        | 2.07            | 2.02E-06 |
+| cellular component organization (GO:0016043)                                     | 1.78            | 2.33E-06 |
+| protein metabolic process (GO:0019538)                                           | 1.89            | 2.50E-06 |
+| ribonucleoprotein complex biogenesis (GO:0022613)                                | > 5             | 2.62E-06 |
+| single-organism process (GO:0044699)                                             | 1.31            | 2.92E-06 |
+| cellular nitrogen compound biosynthetic process (GO:0044271)                     | 2.03            | 3.58E-06 |
+| localization (GO:0051179)                                                        | 1.81            | 5.61E-06 |
+| single-organism transport (GO:0044765)                                           | 2.08            | 6.45E-06 |
+| transport (GO:0006810)                                                           | 1.94            | 7.06E-06 |
+| gene expression (GO:0010467)                                                     | 1.93            | 8.12E-06 |
+| cellular aromatic compound metabolic process (GO:0006725)                        | 1.81            | 9.25E-06 |
+| organic cyclic compound biosynthetic process (GO:1901362)                        | 2.03            | 1.66E-05 |
+| organic cyclic compound metabolic process (GO:1901360)                           | 1.76            | 2.55E-05 |
+| ribosome biogenesis (GO:0042254)                                                 | > 5             | 2.64E-05 |
+| establishment of localization (GO:0051234)                                       | 1.89            | 2.72E-05 |
+| nucleobase-containing compound metabolic process (GO:0006139)                    | 1.81            | 2.84E-05 |
+| RNA metabolic process (GO:0016070)                                               | 1.97            | 3.65E-05 |
+| aromatic compound biosynthetic process (GO:0019438)                              | 2.03            | 4.73E-05 |
+| heterocycle metabolic process (GO:0046483)                                       | 1.77            | 4.96E-05 |
+| nucleic acid metabolic process (GO:0090304)                                      | 1.85            | 8.50E-05 |
+| nucleobase-containing compound biosynthetic process (GO:0034654)                 | 2.02            | 9.91E-05 |
+| cellular component biogenesis (GO:0044085)                                       | 2.33            | 1.04E-04 |
+| heterocycle biosynthetic process (GO:0018130)                                    | 2               | 1.16E-04 |
+| macromolecular complex assembly (GO:0065003)                                     | 2.74            | 5.41E-04 |
+| single-organism cellular process (GO:0044763)                                    | 1.32            | 5.45E-04 |
+| cellular macromolecular complex assembly (GO:0034622)                            | 3.64            | 5.47E-04 |
+| ribonucleoprotein complex subunit organization (GO:0071826)                      | > 5             | 1.99E-03 |
+| RNA biosynthetic process (GO:0032774)                                            | 1.96            | 3.07E-03 |
+| ribonucleoprotein complex assembly (GO:0022618)                                  | > 5             | 7.63E-03 |
+| macromolecule biosynthetic process (GO:0009059)                                  | 1.74            | 1.02E-02 |
+| ribosome assembly (GO:0042255)                                                   | > 5             | 1.40E-02 |
+| negative regulation of biological process (GO:0048519)                           | 1.64            | 1.45E-02 |
+| negative regulation of cellular process (GO:0048523)                             | 1.67            | 2.04E-02 |
+| cellular macromolecule biosynthetic process (GO:0034645)                         | 1.73            | 2.12E-02 |
+| ribosomal large subunit assembly (GO:0000027)                                    | > 5             | 3.17E-02 |
+| ribosomal large subunit biogenesis (GO:0042273)                                  | > 5             | 4.10E-02 |
+| cellular component assembly (GO:0022607)                                         | 2.09            | 4.35E-02 |

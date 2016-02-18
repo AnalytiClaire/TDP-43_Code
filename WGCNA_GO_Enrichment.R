@@ -73,7 +73,7 @@ moduleLabels = net$colors
 moduleColors = labels2colors(net$colors)
 MEs = net$MEs;
 geneTree = net$dendrograms[[1]];
-save(MEs, moduleLabels, moduleColors, geneTree
+
 
 ##Looking for enrichment of GO terms in modules
 library(S4Vectors)
