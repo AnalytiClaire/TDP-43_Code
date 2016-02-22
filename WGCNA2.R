@@ -1,14 +1,14 @@
-#### Creating Co-expression Network using WGCNA ####
-
 library(WGCNA)
 ### C9orf72 ###
 # Display the current working directory
 setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/")
 
 #Read in desired genes
-C9Results <- read.csv ("C9rankeduniqueresult.csv", header=TRUE) #Taking only the genes we deemed acceptable through criteria. See details on #gene expression analysis to find criteria
+C9Results <- read.csv ("C9rankeduniqueresult.csv", header=TRUE) #Taking only the genes we deemed acceptable through criteria. See details on
+#gene expression analysis to find criteria
 
-C9ID <- cbind(C9Results$Probe.Set.ID)
+C9ID <- C9Results[,1]
+C9ID <- data.matrix(C9ID)
 
 #Read in raw expression values
 setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM/")
@@ -19,13 +19,19 @@ rownames(C9Exp) <- C9Exp[,1] #make probeset IDs row names
 colnames(C9Exp) <- colnames(C9RawExp) #make file names column names
 C9Exp <- cbind(C9Exp[,2:12]) #remove ID column
 
-C9Exp <- t(C9Exp) #transpose for WGCNA analysis
+C9Pat <- C9Exp[,1:8]
+C9Con <- C9Exp[,9:11]
+
+C9Pat <- t(C9Exp)
+C9Con <- t(C9Exp)
+
+###PATIENT ANALYSIS###
 
 # ###Choosing soft threshold
 # # Choose a set of soft-thresholding powers
 # powers = c(c(1:10), seq(from = 12, to=20, by=2))
 # # Call the network topology analysis function
-# sft = pickSoftThreshold(C9Exp, powerVector = powers, verbose = 5)
+# sft = pickSoftThreshold(C9Pat, powerVector = powers, verbose = 5)
 # # Plot the results:
 # sizeGrWindow(9, 5)
 # par(mfrow = c(1,2));
@@ -46,11 +52,11 @@ C9Exp <- t(C9Exp) #transpose for WGCNA analysis
 
 ##SOFT THRESHOLD VALUE OF 6 SELECTED##
 
-C9Exp <- data.matrix(C9Exp) #csv files contain character matrices, the following code requires numeric
+# C9Exp <- data.matrix(C9Exp) #csv files contain character matrices, the following code requires numeric
 
 ##One-step network construction and module detection
 setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/C9orf72/")
-net = blockwiseModules(C9Exp, power = 6,
+net = blockwiseModules(C9Pat, power = 6,
                        TOMType = "unsigned", minModuleSize = 30,
                        reassignThreshold = 0, mergeCutHeight = 0.25,
                        numericLabels = TRUE, pamRespectsDendro = FALSE,
@@ -73,16 +79,27 @@ moduleColors = labels2colors(net$colors)
 MEs = net$MEs;
 geneTree = net$dendrograms[[1]];
 
+# Calculate topological overlap anew: this could be done more efficiently by saving the TOM
+# calculated during module detection, but let us do it again here.
+dissTOM = 1-TOMsimilarityFromExpr(C9Pat, power = 6);
+# Transform dissTOM with a power to make moderately strong connections more visible in the heatmap
+plotTOM = dissTOM^7;
+# Set diagonal to NA for a nicer plot
+diag(plotTOM) = NA;
 
-##Looking for enrichment of GO terms in modules
-library(S4Vectors)
-library(IRanges)
-library(AnnotationDbi)
-library(GO.db)
-library(org.Hs.eg.db)
+# Call the plot function
+sizeGrWindow(9,9)
+TOMplot(plotTOM, moduleColors, main = "Network heatmap plot, all genes")
 
-EntrezIds <- cbind(C9Results$Entrez.Gene)
-
-GOenr = GOenrichmentAnalysis(moduleColors, EntrezIds, organism = "human", nBestP = 10);
-
-tab = GOenr$bestPTerms[[4]]$enrichment
+# Recalculate module eigengenes
+MEs = moduleEigengenes(datExpr, moduleColors)$eigengenes
+# Isolate weight from the clinical traits
+weight = as.data.frame(datTraits$weight_g);
+names(weight) = "weight"
+# Add the weight to existing module eigengenes
+MET = orderMEs(cbind(MEs, weight))
+# Plot the relationships among the eigengenes and the trait
+sizeGrWindow(5,7.5);
+par(cex = 0.9)
+plotEigengeneNetworks(MET, "", marDendro = c(0,4,1,2), marHeatmap = c(3,4,1,2), cex.lab = 0.8, xLabelsAngle
+                      = 90)

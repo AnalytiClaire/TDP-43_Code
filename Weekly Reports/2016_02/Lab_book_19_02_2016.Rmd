@@ -485,3 +485,7 @@ I then had a go at inputting the 211 genes+GM into PATHER. Below is the table of
 | ribosomal large subunit assembly (GO:0000027)                                    | > 5             | 3.17E-02 |
 | ribosomal large subunit biogenesis (GO:0042273)                                  | > 5             | 4.10E-02 |
 | cellular component assembly (GO:0022607)                                         | 2.09            | 4.35E-02 |
+
+#Friday - Lab Meeting
+
+At the lab meeting, I explained that I now have a slightly different list of genes, but my numbers are significant. I said that there seems to be particular emphasis on the ribosomal proteins, but Win said to be wary because it could just be a literature bias. I explained that I'm not really sure what to do next, but one thing I definitely thought I should do is try and do some GEA on the RNA seq data I have found. Win said this was a good idea, but he also wants both me and John to talk to Jiantao about how the package EdgeRun could help us build co-expression networks that correlate with the gene lists we have generated. 
