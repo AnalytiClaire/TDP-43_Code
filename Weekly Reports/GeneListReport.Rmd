@@ -1,0 +1,36 @@
+---
+title: "Plan for TDP-43 Gene List Analysis"
+author: "Claire Green"
+date: "23 February 2016"
+output: word_document
+---
+
+The overall aim of my project is to identify functional mechanisms that are commonly dysregulated in diseases presenting with TDP-43 pathology. These mechanisms will hopefully reveal the contributions of TDP-43 pathology to neurodegenerative disease, and also pose as possible targets for therapeutic intervention. 
+
+My current aim has been to produce a list of genes that are commonly differentially expressed in samples known to exhibit TDP-43 pathology. So far, I have utilised 5 datasets of RNA microarray data to produce this consensus list of genes. I now face two steps of investigation: validation and functional analysis. 
+
+##Validation
+
+I aim to validate my list of consensus genes by attempting to recreate it using two available RNA-seq data sets. The data sets are summarised below.
+
+| Cell Type| Variant| Pat| Con | Platform  | GEO Ref| Contributors                  |
+|--------|---------|-----|-----|-----------|--------|---------------------------------|
+| Frontal Cortex (Homogenised) | C9orf72 & sALS | 8 C9 & 10 sALS | 9 | Illumina HiSeq 2000 | GSE67196 | Prudencio M, Belzil VV, Batra R, Ross CA et al. Distinct brain transcriptome profiles in C9orf72-associated and sporadic ALS. Nat Neurosci 2015 Aug;18(8):1175-82. PMID: 26192745 |
+|--------|---------|-----|-----|-----------|--------|---------------------------------|
+| Spinal Chord Motor Neurons (LCM) | sALS         | 13           | 9        | Illumina Genome Analyzer II (Homo sapiens) | GSE76220 | Gene Expression Signatures of Sporadic ALS Motor Neuron Populations Ranjan Batra, Kasey Hutt, Anthony Vu, Stuart J Rabin, Michael W Baughn, Ryan T Libby, Shawn Hoon, JohnRavits, Gene W Yeo (Under review) |
+
+I can analyse this data in two ways. First, I can analyse the counts table already provided by each lab. Additionally, I can analyse raw FastQ files. For the latter, I will have to get aquainted with using the bash shell to a) download the files, and b) use bcbio to conduct alignment, variant calling, transcriptome reconstruction and post-alignment quantitation on my samples. For either method, the results are tables of expression values.
+
+To keep my methodology as similar to my microarray analysis as possible, I can use limma to conduct the differential expression analysis. Once you have a table of expression values, limma treats RNA-seq and microarray data largely the same. Normalisation is conducted using the TMM normalisation method and with transformation handled by voom. Past this point, the fitting is identical. I can then use the results and analyse consensus in the same way I analysed the microarray data. Obviously, only having two data sets rather than five is an immediate confounding factor, however I am constrained by appropriate, available RNA seq data. Also, I am aware that the concordance between microarray and RNA-seq data is relatively low, however if I am able to find any commonalities between the two this could prove great help in validating my list. 
+
+##Prioritisation and Function
+
+After validation, the next step in analysing my gene list is to try and identify how tightly related my genes are, whether clusters of genes in that list may represent cellular functions, and which genes in those clusters may be hub genes. Preliminary analysis using GeneMANIA suggests there is a high level of intra-connectivity, but this could be better validated using a more comprehensive approach
+
+To achieve both proof of inter-relatedness of genes and functional enrichment, a possible method could be one developed by Jiantao Shi. Firstly, I would take my list of genes and build a co-expression network. Co-expression values could come from a global gene expression database, but a superior method would be to use tissue specific databases. COXPRESdb is a database for microarray co-expression values and contains both global and tissue specific co-expression databases. I would, however, have to bear in mind that one of my five data sets is muscle tissue, not neuronal.  
+
+Once I have built a co-expression network, the first thing I can do is validate its connectedness. By using Jiantao's method, combination of the COEXPRSdb network and GRAIL allows the identification of genes that are tightly co-expressed in relation to disease. GRAIL is a tool that allows the evaluation of relationships between genes based on disease-associated loci such as SNPs from GWAS or genomic regions from linkage analysis. Subsequently, you are able to not only evaluate gene relationships by co-expression, but also by their association with disease. This will highlight genes that are more functionally relevent to disease, and by examining the functions in which they partake, could indicate the mechanisms that are actively contibuting to disease. This information could then be used to support findings at the pathway level during investigations with Pathprint - if there is consensus at both the gene and pathway level, this could provide substantial support for the implicated mechanisms. In addition, if any genes are identified as tightly connected 'hub' genes, these could be prioritised as the most effective therapeutic targets.
+
+
+
+

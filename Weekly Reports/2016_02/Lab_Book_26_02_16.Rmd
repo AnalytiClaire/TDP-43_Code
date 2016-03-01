@@ -1,0 +1,33 @@
+---
+title: "LabBook_26_02_16"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60))
+```
+
+#Monday
+
+Since the meeting with Jiantao about EdgeRun is not until tomorrow, I decided to spend today trying to run gene expression analysis on the RNA seq data that I have found. Below are the details:
+
+| Cell Type| Variant| Pat| Con | Platform  | GEO Ref| Contributors                  |
+|--------|---------|-----|-----|-----------|--------|---------------------------------|
+| Frontal Cortex (Homogenised) | C9orf72 & sALS | 8 C9 & 10 sALS | 9 | Illumina HiSeq 2000 | GSE67196 | Prudencio M, Belzil VV, Batra R, Ross CA et al. Distinct brain transcriptome profiles in C9orf72-associated and sporadic ALS. Nat Neurosci 2015 Aug;18(8):1175-82. PMID: 26192745 |
+|--------|---------|-----|-----|-----------|--------|---------------------------------|
+| Spinal Chord Motor Neurons (LCM) | sALS         | 13           | 9        | Illumina Genome Analyzer II (Homo sapiens) | GSE76220 | Gene Expression Signatures of Sporadic ALS Motor Neuron Populations Ranjan Batra, Kasey Hutt, Anthony Vu, Stuart J Rabin, Michael W Baughn, Ryan T Libby, Shawn Hoon, JohnRavits, Gene W Yeo (Under review) |
+
+
+The data for these two data sets comes in both an unprocessed RAW format and as a pre-processed count matrix text file. Each of the samples has two reads, totalling about 6GB of data per sample. Downloading this kind of data over the uni wifi was nigh on impossible. Talking to Sandeep, he said the best way is to use Iceberg - Sheffield's HPC. I am not really familiar with how to use the bash shell to use this and BCBio to do the analysis, so I will need Sandeep to run through with me how to do this. I couldn't do anything until I had an Iceberg account and it took a while since I am not allowed to request my own account, but eventually I got one. Since I am on holiday at the end of this week, I will probably leave the raw data stuff until next week. In the mean time, Win said that I should use the pre-processed stuff as I can get quick answers through this (and our sources are trustworthy enough that we believe they have proceseed their data properly).
+
+#Tuesday
+
+In the morning I worked on the limma code for the RNA-seq GEA. I had a problem in that I couldn't find a way of removing the rows with a lot of low or zero values. I tried looking online but the suggestions people were giving were not working. I tried the matrix as both a table and a csv file but it did not work. In the end I tried converting all the zeroes to NA values, but I think the line I used caused the entire row of any row containing at least 1 zero to NA. So potentially I have lost rows with just one zero value. I think I'll need to work on this as it seems a little too strict. Generally though, any rows with a zero are very low values anyway, so it might be alright. 
+
+In the afternoon we had a meeting with Jiantao to talk about his method of combining COEXPRSdb with GRAIL to identify correlated genes based on co-expression and linked disease loci. He gave us a brief explanation of his methods, but he has yet to send me more information. 
+
+#Wednesday
+
+On Wednesday I finished writing up my report for what I'm going to do in the coming weeks. This is the file GeneListReport which can be found in my weekly report folder.
