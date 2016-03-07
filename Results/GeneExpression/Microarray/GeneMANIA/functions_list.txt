@@ -1,0 +1,47 @@
+Feature	FDR	Genes in network	Genes in genome
+nuclear-transcribed mRNA catabolic process	2.715223E-16	19	179
+mRNA catabolic process	4.296334E-16	19	190
+nuclear-transcribed mRNA catabolic process, nonsense-mediated decay	1.632337E-15	16	116
+RNA catabolic process	2.294076E-15	19	215
+cytosolic ribosome	2.797573E-14	14	90
+translational termination	2.797573E-14	14	89
+viral gene expression	4.553121E-14	14	94
+viral life cycle	1.094185E-13	16	159
+translational elongation	1.171683E-13	14	102
+multi-organism metabolic process	1.399452E-13	14	104
+SRP-dependent cotranslational protein targeting to membrane	1.862993E-13	14	107
+protein targeting to ER	1.862993E-13	14	108
+cotranslational protein targeting to membrane	1.862993E-13	14	108
+establishment of protein localization to endoplasmic reticulum	1.977256E-13	14	109
+cytosolic part	6.92488E-13	15	151
+protein localization to endoplasmic reticulum	6.92488E-13	14	120
+ribosomal subunit	7.342056E-13	14	121
+protein targeting to membrane	1.095196E-12	15	157
+viral transcription	1.256188E-12	15	159
+cellular protein complex disassembly	2.978757E-12	14	135
+translational initiation	1.148652E-11	14	150
+single-organism cellular localization	1.148652E-11	17	272
+single-organism localization	1.148652E-11	17	272
+ribosome	1.744873E-11	14	155
+protein complex disassembly	1.833168E-11	14	156
+macromolecular complex disassembly	3.257633E-11	14	163
+establishment of protein localization to membrane	5.157745E-11	16	253
+protein localization to membrane	1.690359E-10	15	227
+structural constituent of ribosome	8.253809E-10	11	97
+protein targeting	8.381559E-9	15	299
+cytosolic large ribosomal subunit	7.100462E-8	8	51
+large ribosomal subunit	6.617476E-7	8	67
+cytosolic small ribosomal subunit	1.072192E-5	6	36
+small ribosomal subunit	1.439246E-4	6	55
+rRNA processing	4.026395E-3	5	56
+rRNA metabolic process	5.982242E-3	5	61
+ribosome biogenesis	1.93669E-2	5	78
+ncRNA metabolic process	2.146023E-2	7	194
+regulation of neurogenesis	5.465614E-2	7	227
+ribosomal small subunit biogenesis	5.465614E-2	3	20
+ribonucleoprotein complex biogenesis	5.465614E-2	6	158
+acid-amino acid ligase activity	5.808733E-2	7	231
+ncRNA processing	8.930463E-2	5	111
+acetyltransferase activity	9.731708E-2	4	62
+ligase activity, forming carbon-nitrogen bonds	9.731708E-2	7	254
+regulation of nervous system development	9.736068E-2	7	255

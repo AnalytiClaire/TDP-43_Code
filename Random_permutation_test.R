@@ -1,11 +1,11 @@
 ###Random permutations for Differential Expression##
 
 #load the total number of unique genes for each data set
-C9orf72 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/C9rankeduniqueresult.csv")
-CHMP2B <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/CHrankeduniqueresult.csv")
-sALS <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/SALSrankeduniqueresult.csv")
-FTLD <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/FTLDrankeduniqueresult.csv")
-VCP <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/VCPrankeduniqueresult.csv")
+A <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_2a/PETrankeduniqueresult.csv")
+B <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_2a/RAVrankeduniqueresult.csv")
+# sALS <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/SALSrankeduniqueresult.csv")
+# FTLD <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/FTLDrankeduniqueresult.csv")
+# VCP <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/VCPrankeduniqueresult.csv")
 
 # ## Save annotation file locations to variable
 # annotation.U133plus2<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133_Plus_2.na35.annot.csv/HG-U133_Plus_2.na35.annot.txt"
@@ -43,22 +43,22 @@ VCP <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpress
 
 
 #indicate the number of overlapping genes identified by DE analysis
-test <- 213
+test <- 158
 
 m=10000 #number of repetitions 
 r <- c(1:m) #store repetition numbers in vector "r"
 
 for (j in 1:m)
 {
-  random1 <- sample (C9orf72$Gene.Symbol, size=5000, replace=F)
-  random2 <- sample (CHMP2B$Gene.Symbol, size=5000, replace=F)
-  random3 <- sample (FTLD$Gene.Symbol, size=5000, replace=F)
-  random4 <- sample (sALS$Gene.Symbol, size=5000, replace=F)
-  random5 <- sample (VCP$Gene.Symbol, size=5000, replace=F)
-  random <- Reduce(intersect, list(random1, random2, random3, random4, random5))
+  random1 <- sample (A$GeneID, size=2000, replace=F)
+  random2 <- sample (B$Gene_symbol, size=2000, replace=F)
+  # random3 <- sample (FTLD$Gene.Symbol, size=5000, replace=F)
+  # random4 <- sample (sALS$Gene.Symbol, size=5000, replace=F)
+  # random5 <- sample (VCP$Gene.Symbol, size=5000, replace=F)
+  random <- Reduce(intersect, list(random1, random2))
   r[j] <- length(random)
 }
 
 test1 <- which(r > test)  # count number of times r is larger than test value
 result <- (length(test1)/m) # calculate P value
-
+mean(r)
