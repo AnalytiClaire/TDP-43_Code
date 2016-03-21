@@ -1,0 +1,288 @@
+yaml
+[mdp15cmg@node212 config]$ nano bcbio.yaml 
+[mdp15cmg@node212 config]$ cd ..
+[mdp15cmg@node212 TDP-43]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43
+[mdp15cmg@node212 TDP-43]$ ls
+config  final  input  work
+[mdp15cmg@node212 TDP-43]$ cd work
+[mdp15cmg@node212 work]$ bcbio_nextgen.py ../config/bcbio.yaml -n 8
+-bash: bcbio_nextgen.py: command not found
+[mdp15cmg@node212 work]$ cd /shared/hidelab2
+[mdp15cmg@node212 hidelab2]$ ls
+shared  user
+[mdp15cmg@node212 hidelab2]$ cd user
+[mdp15cmg@node212 user]$ ls 
+md1wah  md1wwxx  md1xdrj  md4ga  md4zsa  mdp15cmg
+[mdp15cmg@node212 user]$ cd md4zsa
+-bash: cd: md4zsa: Permission denied
+[mdp15cmg@node212 user]$ cd mdp15cmg
+[mdp15cmg@node212 mdp15cmg]$ ls
+TDP-43
+[mdp15cmg@node212 mdp15cmg]$ cd TDP-43
+[mdp15cmg@node212 TDP-43]$ ls
+config  final  input  work
+[mdp15cmg@node212 TDP-43]$ cd input
+[mdp15cmg@node212 input]$ ls
+Read1  Read2
+[mdp15cmg@node212 input]$ cd Read1
+[mdp15cmg@node212 Read1]$ ls
+dlfastq                SRR1927022_1.fastq.gz  SRR1927030_1.fastq.gz  SRR1927038_1.fastq.gz  SRR1927046_1.fastq.gz  SRR1927054_1.fastq.gz  SRR1927062_1.fastq.gz  SRR1927070_1.fastq.gz
+index.html             SRR1927024_1.fastq.gz  SRR1927032_1.fastq.gz  SRR1927040_1.fastq.gz  SRR1927048_1.fastq.gz  SRR1927056_1.fastq.gz  SRR1927064_1.fastq.gz  SRR1927071_1.fastq.gz
+pathnames              SRR1927026_1.fastq.gz  SRR1927034_1.fastq.gz  SRR1927042_1.fastq.gz  SRR1927050_1.fastq.gz  SRR1927058_1.fastq.gz  SRR1927066_1.fastq.gz  wget-log
+SRR1927020_1.fastq.gz  SRR1927028_1.fastq.gz  SRR1927036_1.fastq.gz  SRR1927044_1.fastq.gz  SRR1927052_1.fastq.gz  SRR1927060_1.fastq.gz  SRR1927068_1.fastq.gz
+[mdp15cmg@node212 Read1]$ rm dlfastq
+[mdp15cmg@node212 Read1]$ rm index.html pathnames
+[mdp15cmg@node212 Read1]$ ls
+SRR1927020_1.fastq.gz  SRR1927028_1.fastq.gz  SRR1927036_1.fastq.gz  SRR1927044_1.fastq.gz  SRR1927052_1.fastq.gz  SRR1927060_1.fastq.gz  SRR1927068_1.fastq.gz
+SRR1927022_1.fastq.gz  SRR1927030_1.fastq.gz  SRR1927038_1.fastq.gz  SRR1927046_1.fastq.gz  SRR1927054_1.fastq.gz  SRR1927062_1.fastq.gz  SRR1927070_1.fastq.gz
+SRR1927024_1.fastq.gz  SRR1927032_1.fastq.gz  SRR1927040_1.fastq.gz  SRR1927048_1.fastq.gz  SRR1927056_1.fastq.gz  SRR1927064_1.fastq.gz  SRR1927071_1.fastq.gz
+SRR1927026_1.fastq.gz  SRR1927034_1.fastq.gz  SRR1927042_1.fastq.gz  SRR1927050_1.fastq.gz  SRR1927058_1.fastq.gz  SRR1927066_1.fastq.gz  wget-log
+[mdp15cmg@node212 Read1]$ rm wget-log
+[mdp15cmg@node212 Read1]$ ls
+SRR1927020_1.fastq.gz  SRR1927026_1.fastq.gz  SRR1927032_1.fastq.gz  SRR1927038_1.fastq.gz  SRR1927044_1.fastq.gz  SRR1927050_1.fastq.gz  SRR1927056_1.fastq.gz  SRR1927062_1.fastq.gz  SRR1927068_1.fastq.gz
+SRR1927022_1.fastq.gz  SRR1927028_1.fastq.gz  SRR1927034_1.fastq.gz  SRR1927040_1.fastq.gz  SRR1927046_1.fastq.gz  SRR1927052_1.fastq.gz  SRR1927058_1.fastq.gz  SRR1927064_1.fastq.gz  SRR1927070_1.fastq.gz
+SRR1927024_1.fastq.gz  SRR1927030_1.fastq.gz  SRR1927036_1.fastq.gz  SRR1927042_1.fastq.gz  SRR1927048_1.fastq.gz  SRR1927054_1.fastq.gz  SRR1927060_1.fastq.gz  SRR1927066_1.fastq.gz  SRR1927071_1.fastq.gz
+[mdp15cmg@node212 Read1]$ cd ..
+[mdp15cmg@node212 input]$ cd Read2
+[mdp15cmg@node212 Read2]$ ls
+index.html             SRR1927026_2.fastq.gz  SRR1927034_2.fastq.gz  SRR1927042_2.fastq.gz  SRR1927050_2.fastq.gz  SRR1927058_2.fastq.gz  SRR1927066_2.fastq.gz
+SRR1927020_2.fastq.gz  SRR1927028_2.fastq.gz  SRR1927036_2.fastq.gz  SRR1927044_2.fastq.gz  SRR1927052_2.fastq.gz  SRR1927060_2.fastq.gz  SRR1927068_2.fastq.gz
+SRR1927022_2.fastq.gz  SRR1927030_2.fastq.gz  SRR1927038_2.fastq.gz  SRR1927046_2.fastq.gz  SRR1927054_2.fastq.gz  SRR1927062_2.fastq.gz  SRR1927070_2.fastq.gz
+SRR1927024_2.fastq.gz  SRR1927032_2.fastq.gz  SRR1927040_2.fastq.gz  SRR1927048_2.fastq.gz  SRR1927056_2.fastq.gz  SRR1927064_2.fastq.gz  SRR1927071_2.fastq.gz
+[mdp15cmg@node212 Read2]$ rm index.html
+[mdp15cmg@node212 Read2]$ ls
+SRR1927020_2.fastq.gz  SRR1927026_2.fastq.gz  SRR1927032_2.fastq.gz  SRR1927038_2.fastq.gz  SRR1927044_2.fastq.gz  SRR1927050_2.fastq.gz  SRR1927056_2.fastq.gz  SRR1927062_2.fastq.gz  SRR1927068_2.fastq.gz
+SRR1927022_2.fastq.gz  SRR1927028_2.fastq.gz  SRR1927034_2.fastq.gz  SRR1927040_2.fastq.gz  SRR1927046_2.fastq.gz  SRR1927052_2.fastq.gz  SRR1927058_2.fastq.gz  SRR1927064_2.fastq.gz  SRR1927070_2.fastq.gz
+SRR1927024_2.fastq.gz  SRR1927030_2.fastq.gz  SRR1927036_2.fastq.gz  SRR1927042_2.fastq.gz  SRR1927048_2.fastq.gz  SRR1927054_2.fastq.gz  SRR1927060_2.fastq.gz  SRR1927066_2.fastq.gz  SRR1927071_2.fastq.gz
+[mdp15cmg@node212 Read2]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43/input/Read2
+[mdp15cmg@node212 Read2]$ ls
+SRR1927020_2.fastq.gz  SRR1927026_2.fastq.gz  SRR1927032_2.fastq.gz  SRR1927038_2.fastq.gz  SRR1927044_2.fastq.gz  SRR1927050_2.fastq.gz  SRR1927056_2.fastq.gz  SRR1927062_2.fastq.gz  SRR1927068_2.fastq.gz
+SRR1927022_2.fastq.gz  SRR1927028_2.fastq.gz  SRR1927034_2.fastq.gz  SRR1927040_2.fastq.gz  SRR1927046_2.fastq.gz  SRR1927052_2.fastq.gz  SRR1927058_2.fastq.gz  SRR1927064_2.fastq.gz  SRR1927070_2.fastq.gz
+SRR1927024_2.fastq.gz  SRR1927030_2.fastq.gz  SRR1927036_2.fastq.gz  SRR1927042_2.fastq.gz  SRR1927048_2.fastq.gz  SRR1927054_2.fastq.gz  SRR1927060_2.fastq.gz  SRR1927066_2.fastq.gz  SRR1927071_2.fastq.gz
+[mdp15cmg@node212 Read2]$ find . -type f -name "*.gz"|cut -d_ -f1
+./SRR1927020
+./SRR1927022
+./SRR1927024
+./SRR1927026
+./SRR1927028
+./SRR1927030
+./SRR1927032
+./SRR1927034
+./SRR1927036
+./SRR1927038
+./SRR1927040
+./SRR1927042
+./SRR1927044
+./SRR1927046
+./SRR1927048
+./SRR1927050
+./SRR1927052
+./SRR1927054
+./SRR1927056
+./SRR1927058
+./SRR1927060
+./SRR1927062
+./SRR1927064
+./SRR1927066
+./SRR1927068
+./SRR1927070
+./SRR1927071
+[mdp15cmg@node212 Read2]$ find . -type f -name "*.gz"|cut -d/ -f2|cut -d_ -f1
+SRR1927020
+SRR1927022
+SRR1927024
+SRR1927026
+SRR1927028
+SRR1927030
+SRR1927032
+SRR1927034
+SRR1927036
+SRR1927038
+SRR1927040
+SRR1927042
+SRR1927044
+SRR1927046
+SRR1927048
+SRR1927050
+SRR1927052
+SRR1927054
+SRR1927056
+SRR1927058
+SRR1927060
+SRR1927062
+SRR1927064
+SRR1927066
+SRR1927068
+SRR1927070
+SRR1927071
+[mdp15cmg@node212 Read2]$ find ../Read1 -type f -name "*.gz"|cut -d/ -f2|cut -d_ -f1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+[mdp15cmg@node212 Read2]$ find ../Read1/ -type f -name "*.gz"|cut -d/ -f2|cut -d_ -f1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+Read1
+[mdp15cmg@node212 Read2]$ cd ../Read1
+[mdp15cmg@node212 Read1]$ find . -type f -name "*.gz"|cut -d/ -f2|cut -d_ -f1
+SRR1927020
+SRR1927022
+SRR1927024
+SRR1927026
+SRR1927028
+SRR1927030
+SRR1927032
+SRR1927034
+SRR1927036
+SRR1927038
+SRR1927040
+SRR1927042
+SRR1927044
+SRR1927046
+SRR1927048
+SRR1927050
+SRR1927052
+SRR1927054
+SRR1927056
+SRR1927058
+SRR1927060
+SRR1927062
+SRR1927064
+SRR1927066
+SRR1927068
+SRR1927070
+SRR1927071
+[mdp15cmg@node212 Read1]$ find . -type f -name "*.gz"|cut -d/ -f2|cut -d_ -f1^C
+[mdp15cmg@node212 Read1]$ cd ..
+[mdp15cmg@node212 input]$ ls
+Read1  Read2
+[mdp15cmg@node212 input]$ cd ..
+[mdp15cmg@node212 TDP-43]$ ls
+config  final  input  work
+[mdp15cmg@node212 TDP-43]$ cd ../
+.DS_Store  TDP-43/    
+[mdp15cmg@node212 TDP-43]$ cd ../
+.DS_Store  TDP-43/    
+[mdp15cmg@node212 TDP-43]$ cp ../
+.DS_Store  TDP-43/    
+[mdp15cmg@node212 TDP-43]$ cp ../../md
+md1wah/   md1wwxx/  md1xdrj/  md4ga/    md4zsa/   mdp15cmg/ 
+[mdp15cmg@node212 TDP-43]$ ls                
+config  final  input  work
+[mdp15cmg@node212 TDP-43]$ module load apps/gcc/5.2/bcbio/0.9.6a
+[mdp15cmg@node212 TDP-43]$ ls
+config  final  input  work
+[mdp15cmg@node212 TDP-43]$ rm -rf config
+[mdp15cmg@node212 TDP-43]$ rm -rf work/ 
+[mdp15cmg@node212 TDP-43]$ rm -rf final/
+[mdp15cmg@node212 TDP-43]$ ls
+input
+[mdp15cmg@node212 TDP-43]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43
+[mdp15cmg@node212 TDP-43]$ module load apps/gcc/5.2/bcbio/0.9.6a^C
+[mdp15cmg@node212 TDP-43]$ work_dir='/shared/hidelab2/user/mdp15cmg/TDP-43'
+[mdp15cmg@node212 TDP-43]$ wcho $work_dir 
+-bash: wcho: command not found
+[mdp15cmg@node212 TDP-43]$ echo $work_dir 
+/shared/hidelab2/user/mdp15cmg/TDP-43
+[mdp15cmg@node212 TDP-43]$ tdp43_r1_files=/shared/hidelab2/user/mdp15cmg/TDP-43/input/Read1 
+[mdp15cmg@node212 TDP-43]$ tdp43_r2_files=/shared/hidelab2/user/mdp15cmg/TDP-43/input/Read2 
+[mdp15cmg@node212 TDP-43]$ tdp43_r1=($(find $tdp43_r1_files -type f -name "*.gz"|sort -n))
+[mdp15cmg@node212 TDP-43]$ tdp43_r2=($(find $tdp43_r2_files -type f -name "*.gz"|sort -n))
+[mdp15cmg@node212 TDP-43]$ echo ${tdp43_r1[0]}
+/shared/hidelab2/user/mdp15cmg/TDP-43/input/Read1/SRR1927020_1.fastq.gz
+[mdp15cmg@node212 TDP-43]$ echo ${tdp43_r2[0]}
+/shared/hidelab2/user/mdp15cmg/TDP-43/input/Read2/SRR1927020_2.fastq.gz
+[mdp15cmg@node212 TDP-43]$ echo ${tdp43_r2[-1]}
+-bash: tdp43_r2: bad array subscript
+
+[mdp15cmg@node212 TDP-43]$ echo ${tdp43_r2[27]}
+
+[mdp15cmg@node212 TDP-43]$ echo ${tdp43_r2[26]}
+/shared/hidelab2/user/mdp15cmg/TDP-43/input/Read2/SRR1927071_2.fastq.gz
+[mdp15cmg@node212 TDP-43]$ echo ${tdp43_r1[26]}
+/shared/hidelab2/user/mdp15cmg/TDP-43/input/Read1/SRR1927071_1.fastq.gz
+[mdp15cmg@node212 TDP-43]$ bcbio_nextgen.py -w template illumina-rnaseq tdp43_project
+/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/anaconda/lib/python2.7/site-packages/matplotlib/font_manager.py:273: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  warnings.warn('Matplotlib is building the font cache using fc-list. This may take a moment.')
+
+Template configuration file created at: /shared/hidelab2/user/mdp15cmg/TDP-43/tdp43_project/config/tdp43_project-template.yaml
+Edit to finalize custom options, then prepare full sample config with:
+  bcbio_nextgen.py -w template /shared/hidelab2/user/mdp15cmg/TDP-43/tdp43_project/config/tdp43_project-template.yaml tdp43_project sample1.bam sample2.fq
+[mdp15cmg@node212 TDP-43]$ ls tdp43_project/
+config/ work/   
+[mdp15cmg@node212 TDP-43]$ less tdp43_project/config/tdp43_project-template.yaml 
+[mdp15cmg@node212 TDP-43]$ less tdp43_project/config/tdp43_project-template.yaml 
+[mdp15cmg@node212 TDP-43]$ sed -i 's/tophat2/hisat2/g' $work_dir/tdp43_project/config/tdp43_project-template.yaml
+[mdp15cmg@node212 TDP-43]$ less tdp43_project/config/tdp43_project-template.yaml 
+[mdp15cmg@node212 TDP-43]$ sed -i 's/hisat2/star/g' $work_dir/tdp43_project/config/tdp43_project-template.yaml
+[mdp15cmg@node212 TDP-43]$ less tdp43_project/config/tdp43_project-template.yaml 
+[mdp15cmg@node212 TDP-43]$ less tdp43_project/config/tdp43_project-template.yaml 
+[mdp15cmg@node212 TDP-43]$ bcbio_nextgen.py -w template $work_dir/tdp43_project/config/tdp43_project-template.yaml $work_dir/tdp43_project.csv ${tdp43_r1[@]} ${tdp43_r2[@]}
+Traceback (most recent call last):
+  File "/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a//tools/bin/bcbio_nextgen.py", line 4, in <module>
+    __import__('pkg_resources').run_script('bcbio-nextgen==0.9.6', 'bcbio_nextgen.py')
+  File "/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/anaconda/lib/python2.7/site-packages/setuptools-19.6.2-py2.7.egg/pkg_resources/__init__.py", line 724, in run_script
+    
+  File "/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/anaconda/lib/python2.7/site-packages/setuptools-19.6.2-py2.7.egg/pkg_resources/__init__.py", line 1649, in run_script
+    
+  File "/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/anaconda/lib/python2.7/site-packages/bcbio_nextgen-0.9.6-py2.7.egg-info/scripts/bcbio_nextgen.py", line 220, in <module>
+    setup_info = workflow.setup(kwargs["workflow"], kwargs.pop("inputs"))
+  File "/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/anaconda/lib/python2.7/site-packages/bcbio/workflow/__init__.py", line 12, in setup
+    return workflow.setup(args)
+  File "/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/anaconda/lib/python2.7/site-packages/bcbio/workflow/template.py", line 392, in setup
+    project_name, metadata, global_vars, md_file = _pname_and_metadata(args.metadata)
+  File "/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/anaconda/lib/python2.7/site-packages/bcbio/workflow/template.py", line 269, in _pname_and_metadata
+    raise ValueError("Did not find input metadata file: %s" % in_file)
+ValueError: Did not find input metadata file: /shared/hidelab2/user/mdp15cmg/TDP-43/tdp43_project.csv
+[mdp15cmg@node212 TDP-43]$ 

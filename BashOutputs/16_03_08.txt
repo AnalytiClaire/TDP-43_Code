@@ -1,0 +1,810 @@
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd ..
+[mdp15cmg@iceberg-login1 TDP-43]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43
+[mdp15cmg@iceberg-login1 TDP-43]$ ;s
+-bash: syntax error near unexpected token `;'
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ sratoolkit.2.5.7-mac64/
+-bash: sratoolkit.2.5.7-mac64/: is a directory
+[mdp15cmg@iceberg-login1 TDP-43]$ cd sratoolkit.2.5.7-mac64/
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ l
+-bash: l: command not found
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ ls
+bin  example  README  README-blastn  README-vdb-config  schema
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ less README-vdb-config 
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd bin
+[mdp15cmg@iceberg-login1 bin]$ ls
+abi-dump          bam-load.2               cg-load.2.5.7       illumina-dump        kdbmeta.2        rcexplain.2      sff-load.2.5.7    sra-sort        tblastn_vdb.2             vdb-copy.2.5.7     vdb-lock          vdb-validate.2
+abi-dump.2        bam-load.2.5.7           fastq-dump          illumina-dump.2      kdbmeta.2.5.7    rcexplain.2.5.7  sra-kar           sra-sort.2      tblastn_vdb.2.2.32-2.5.7  vdb-decrypt        vdb-lock.2        vdb-validate.2.5.7
+abi-dump.2.5.7    blastn_vdb               fastq-dump.2        illumina-dump.2.5.7  latf-load        sam-dump         sra-kar.2         sra-sort.2.5.7  test-sra                  vdb-decrypt.2      vdb-lock.2.5.7
+abi-load          blastn_vdb.2             fastq-dump.2.5.7    illumina-load        latf-load.2      sam-dump.2       sra-kar.2.5.7     sra-stat        test-sra.2                vdb-decrypt.2.5.7  vdb-passwd
+abi-load.2        blastn_vdb.2.2.32-2.5.7  fastq-load          illumina-load.2      latf-load.2.5.7  sam-dump.2.5.7   srapath           sra-stat.2      test-sra.2.5.7            vdb-dump           vdb-passwd.2
+abi-load.2.5.7    cache-mgr                fastq-load.2        illumina-load.2.5.7  ncbi             sff-dump         srapath.2         sra-stat.2.5.7  vdb-config                vdb-dump.2         vdb-passwd.2.5.7
+align-info        cache-mgr.2              fastq-load.2.5.7    kar                  prefetch         sff-dump.2       srapath.2.5.7     srf-load        vdb-config.2              vdb-dump.2.5.7     vdb-unlock
+align-info.2      cache-mgr.2.5.7          helicos-load        kar.2                prefetch.2       sff-dump.2.5.7   sra-pileup        srf-load.2      vdb-config.2.5.7          vdb-encrypt        vdb-unlock.2
+align-info.2.5.7  cg-load                  helicos-load.2      kar.2.5.7            prefetch.2.5.7   sff-load         sra-pileup.2      srf-load.2.5.7  vdb-copy                  vdb-encrypt.2      vdb-unlock.2.5.7
+bam-load          cg-load.2                helicos-load.2.5.7  kdbmeta              rcexplain        sff-load.2       sra-pileup.2.5.7  tblastn_vdb     vdb-copy.2                vdb-encrypt.2.5.7  vdb-validate
+[mdp15cmg@iceberg-login1 bin]$ cd ..
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ ;s
+-bash: syntax error near unexpected token `;'
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ less README-vdb-config 
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd bin
+[mdp15cmg@iceberg-login1 bin]$ vdb-config -i
+-bash: vdb-config: command not found
+[mdp15cmg@iceberg-login1 bin]$ ./ vdb-config -i
+-bash: ./: is a directory
+[mdp15cmg@iceberg-login1 bin]$ ./vdb-config -i
+./vdb-config: line 1: XSym: command not found
+./vdb-config: line 2: 0012: command not found
+./vdb-config: line 3: 572f080a00e21b7aa317273935336eb9: command not found
+./vdb-config: line 4: vdb-config.2: command not found
+[mdp15cmg@iceberg-login1 bin]$ cd ..
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ ls
+bin  example  README  README-blastn  README-vdb-config  schema
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd ..
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd ravitsinput/
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump --split-files --aligned -Q 64 SRR30382**.sra
+-bash: fastq-dump: command not found
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd ..
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd sratoolkit.2.5.7-mac64/
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd bin
+[mdp15cmg@iceberg-login1 bin]$ ls
+abi-dump          bam-load.2               cg-load.2.5.7       illumina-dump        kdbmeta.2        rcexplain.2      sff-load.2.5.7    sra-sort        tblastn_vdb.2             vdb-copy.2.5.7     vdb-lock          vdb-validate.2
+abi-dump.2        bam-load.2.5.7           fastq-dump          illumina-dump.2      kdbmeta.2.5.7    rcexplain.2.5.7  sra-kar           sra-sort.2      tblastn_vdb.2.2.32-2.5.7  vdb-decrypt        vdb-lock.2        vdb-validate.2.5.7
+abi-dump.2.5.7    blastn_vdb               fastq-dump.2        illumina-dump.2.5.7  latf-load        sam-dump         sra-kar.2         sra-sort.2.5.7  test-sra                  vdb-decrypt.2      vdb-lock.2.5.7
+abi-load          blastn_vdb.2             fastq-dump.2.5.7    illumina-load        latf-load.2      sam-dump.2       sra-kar.2.5.7     sra-stat        test-sra.2                vdb-decrypt.2.5.7  vdb-passwd
+abi-load.2        blastn_vdb.2.2.32-2.5.7  fastq-load          illumina-load.2      latf-load.2.5.7  sam-dump.2.5.7   srapath           sra-stat.2      test-sra.2.5.7            vdb-dump           vdb-passwd.2
+abi-load.2.5.7    cache-mgr                fastq-load.2        illumina-load.2.5.7  ncbi             sff-dump         srapath.2         sra-stat.2.5.7  vdb-config                vdb-dump.2         vdb-passwd.2.5.7
+align-info        cache-mgr.2              fastq-load.2.5.7    kar                  prefetch         sff-dump.2       srapath.2.5.7     srf-load        vdb-config.2              vdb-dump.2.5.7     vdb-unlock
+align-info.2      cache-mgr.2.5.7          helicos-load        kar.2                prefetch.2       sff-dump.2.5.7   sra-pileup        srf-load.2      vdb-config.2.5.7          vdb-encrypt        vdb-unlock.2
+align-info.2.5.7  cg-load                  helicos-load.2      kar.2.5.7            prefetch.2.5.7   sff-load         sra-pileup.2      srf-load.2.5.7  vdb-copy                  vdb-encrypt.2      vdb-unlock.2.5.7
+bam-load          cg-load.2                helicos-load.2.5.7  kdbmeta              rcexplain        sff-load.2       sra-pileup.2.5.7  tblastn_vdb     vdb-copy.2                vdb-encrypt.2.5.7  vdb-validate
+[mdp15cmg@iceberg-login1 bin]$ fastq-dump --split-files --aligned --outdir /shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput 64 /shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput/SRR30382*.sra
+-bash: fastq-dump: command not found
+[mdp15cmg@iceberg-login1 bin]$ ./fastq-dump --split-files --aligned --outdir /shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput 64 /shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput/SRR30382*.sra
+./fastq-dump: line 1: XSym: command not found
+./fastq-dump: line 2: 0012: command not found
+./fastq-dump: line 3: 35fc7eb5fd38f1ac2785cca2d853673a: command not found
+./fastq-dump: line 4: fastq-dump.2: command not found
+[mdp15cmg@iceberg-login1 bin]$ cp fast-dump shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput
+cp: cannot stat `fast-dump': No such file or directory
+[mdp15cmg@iceberg-login1 bin]$ cp fastq-dump shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput
+cp: cannot create regular file `shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput': No such file or directory
+[mdp15cmg@iceberg-login1 bin]$ cp fastq-dump /shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput
+[mdp15cmg@iceberg-login1 bin]$ cd /shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+fastq-dump      SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ fast-qdump --split-files SRR3038254.sra
+-bash: fast-qdump: command not found
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump --split-files SRR3038254.sra
+-bash: fastq-dump: command not found
+[mdp15cmg@iceberg-login1 ravitsinput]$ ./fastq-dump --split-files SRR3038254.sra
+./fastq-dump: line 1: XSym: command not found
+./fastq-dump: line 2: 0012: command not found
+./fastq-dump: line 3: 35fc7eb5fd38f1ac2785cca2d853673a: command not found
+./fastq-dump: line 4: fastq-dump.2: command not found
+[mdp15cmg@iceberg-login1 ravitsinput]$ ./fastq-dump.sj --split-files SRR3038254.sra
+-bash: ./fastq-dump.sj: No such file or directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ ./fastq-dump.sh --split-files SRR3038254.sra
+-bash: ./fastq-dump.sh: No such file or directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ less fastq-dump 
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls -la
+total 16652812
+drwxrwxrwx 2 mdp15cmg md       4096 Mar  9 14:25 .
+drwxrwxrwx 6 mdp15cmg md       4096 Mar  9 11:39 ..
+-rwxrwxrwx 1 mdp15cmg md       1067 Mar  9 14:25 fastq-dump
+-rwxrwxrwx 1 mdp15cmg md  536070217 Mar  9 11:41 SRR3038253.sra
+-rwxrwxrwx 1 mdp15cmg md  803554674 Mar  9 11:45 SRR3038254.sra
+-rwxrwxrwx 1 mdp15cmg md  556880754 Mar  9 11:48 SRR3038255.sra
+-rwxrwxrwx 1 mdp15cmg md 1069538337 Mar  9 11:57 SRR3038256.sra
+-rwxrwxrwx 1 mdp15cmg md 1078607650 Mar  9 12:06 SRR3038257.sra
+-rwxrwxrwx 1 mdp15cmg md 1135345981 Mar  9 12:12 SRR3038258.sra
+-rwxrwxrwx 1 mdp15cmg md  903120912 Mar  9 13:34 SRR3038259.sra
+-rwxrwxrwx 1 mdp15cmg md  556880754 Mar  9 13:35 SRR3038260.sra
+-rwxrwxrwx 1 mdp15cmg md  815043402 Mar  9 13:37 SRR3038261.sra
+-rwxrwxrwx 1 mdp15cmg md  868485339 Mar  9 13:39 SRR3038262.sra
+-rwxrwxrwx 1 mdp15cmg md  788015401 Mar  9 13:41 SRR3038263.sra
+-rwxrwxrwx 1 mdp15cmg md  253180603 Mar  9 13:42 SRR3038264.sra
+-rwxrwxrwx 1 mdp15cmg md  494603106 Mar  9 13:43 SRR3038265.sra
+-rwxrwxrwx 1 mdp15cmg md 1035503126 Mar  9 13:45 SRR3038266.sra
+-rwxrwxrwx 1 mdp15cmg md  975993413 Mar  9 13:47 SRR3038267.sra
+-rwxrwxrwx 1 mdp15cmg md 1094075464 Mar  9 13:48 SRR3038268.sra
+-rwxrwxrwx 1 mdp15cmg md 1029252644 Mar  9 13:51 SRR3038269.sra
+-rwxrwxrwx 1 mdp15cmg md  927922813 Mar  9 13:54 SRR3038270.sra
+-rwxrwxrwx 1 mdp15cmg md  757237855 Mar  9 13:55 SRR3038271.sra
+-rwxrwxrwx 1 mdp15cmg md  313905020 Mar  9 13:56 SRR3038272.sra
+-rwxrwxrwx 1 mdp15cmg md  992244819 Mar  9 13:57 SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ ./shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump SRR3038253.sra
+-bash: ./shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump: No such file or directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin
+[mdp15cmg@iceberg-login1 bin]$ ls
+abi-dump          bam-load.2               cg-load.2.5.7       illumina-dump        kdbmeta.2        rcexplain.2      sff-load.2.5.7    sra-sort        tblastn_vdb.2             vdb-copy.2.5.7     vdb-lock          vdb-validate.2
+abi-dump.2        bam-load.2.5.7           fastq-dump          illumina-dump.2      kdbmeta.2.5.7    rcexplain.2.5.7  sra-kar           sra-sort.2      tblastn_vdb.2.2.32-2.5.7  vdb-decrypt        vdb-lock.2        vdb-validate.2.5.7
+abi-dump.2.5.7    blastn_vdb               fastq-dump.2        illumina-dump.2.5.7  latf-load        sam-dump         sra-kar.2         sra-sort.2.5.7  test-sra                  vdb-decrypt.2      vdb-lock.2.5.7
+abi-load          blastn_vdb.2             fastq-dump.2.5.7    illumina-load        latf-load.2      sam-dump.2       sra-kar.2.5.7     sra-stat        test-sra.2                vdb-decrypt.2.5.7  vdb-passwd
+abi-load.2        blastn_vdb.2.2.32-2.5.7  fastq-load          illumina-load.2      latf-load.2.5.7  sam-dump.2.5.7   srapath           sra-stat.2      test-sra.2.5.7            vdb-dump           vdb-passwd.2
+abi-load.2.5.7    cache-mgr                fastq-load.2        illumina-load.2.5.7  ncbi             sff-dump         srapath.2         sra-stat.2.5.7  vdb-config                vdb-dump.2         vdb-passwd.2.5.7
+align-info        cache-mgr.2              fastq-load.2.5.7    kar                  prefetch         sff-dump.2       srapath.2.5.7     srf-load        vdb-config.2              vdb-dump.2.5.7     vdb-unlock
+align-info.2      cache-mgr.2.5.7          helicos-load        kar.2                prefetch.2       sff-dump.2.5.7   sra-pileup        srf-load.2      vdb-config.2.5.7          vdb-encrypt        vdb-unlock.2
+align-info.2.5.7  cg-load                  helicos-load.2      kar.2.5.7            prefetch.2.5.7   sff-load         sra-pileup.2      srf-load.2.5.7  vdb-copy                  vdb-encrypt.2      vdb-unlock.2.5.7
+bam-load          cg-load.2                helicos-load.2.5.7  kdbmeta              rcexplain        sff-load.2       sra-pileup.2.5.7  tblastn_vdb     vdb-copy.2                vdb-encrypt.2.5.7  vdb-validate
+[mdp15cmg@iceberg-login1 bin]$ cd /shared/hidelab2/user/mdp15cmg/TDP-43/
+.DS_Store                    ravitsinput/                 tdp43_analysis.SGE           tdp43_analysis.SGE.o9993500  tdp43_project.csv            
+input/                       sratoolkit.2.5.7-mac64/      tdp43_analysis.SGE.e9993500  tdp43_project/               
+[mdp15cmg@iceberg-login1 bin]$ cd /shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput/
+[mdp15cmg@iceberg-login1 ravitsinput]$ ./shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2 SRR3038253.sra
+-bash: ./shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: No such file or directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+fastq-dump      SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump *.sra
+-bash: fastq-dump: command not found
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls -la
+total 16652812
+drwxrwxrwx 2 mdp15cmg md       4096 Mar  9 14:25 .
+drwxrwxrwx 6 mdp15cmg md       4096 Mar  9 11:39 ..
+-rwxrwxrwx 1 mdp15cmg md       1067 Mar  9 14:25 fastq-dump
+-rwxrwxrwx 1 mdp15cmg md  536070217 Mar  9 11:41 SRR3038253.sra
+-rwxrwxrwx 1 mdp15cmg md  803554674 Mar  9 11:45 SRR3038254.sra
+-rwxrwxrwx 1 mdp15cmg md  556880754 Mar  9 11:48 SRR3038255.sra
+-rwxrwxrwx 1 mdp15cmg md 1069538337 Mar  9 11:57 SRR3038256.sra
+-rwxrwxrwx 1 mdp15cmg md 1078607650 Mar  9 12:06 SRR3038257.sra
+-rwxrwxrwx 1 mdp15cmg md 1135345981 Mar  9 12:12 SRR3038258.sra
+-rwxrwxrwx 1 mdp15cmg md  903120912 Mar  9 13:34 SRR3038259.sra
+-rwxrwxrwx 1 mdp15cmg md  556880754 Mar  9 13:35 SRR3038260.sra
+-rwxrwxrwx 1 mdp15cmg md  815043402 Mar  9 13:37 SRR3038261.sra
+-rwxrwxrwx 1 mdp15cmg md  868485339 Mar  9 13:39 SRR3038262.sra
+-rwxrwxrwx 1 mdp15cmg md  788015401 Mar  9 13:41 SRR3038263.sra
+-rwxrwxrwx 1 mdp15cmg md  253180603 Mar  9 13:42 SRR3038264.sra
+-rwxrwxrwx 1 mdp15cmg md  494603106 Mar  9 13:43 SRR3038265.sra
+-rwxrwxrwx 1 mdp15cmg md 1035503126 Mar  9 13:45 SRR3038266.sra
+-rwxrwxrwx 1 mdp15cmg md  975993413 Mar  9 13:47 SRR3038267.sra
+-rwxrwxrwx 1 mdp15cmg md 1094075464 Mar  9 13:48 SRR3038268.sra
+-rwxrwxrwx 1 mdp15cmg md 1029252644 Mar  9 13:51 SRR3038269.sra
+-rwxrwxrwx 1 mdp15cmg md  927922813 Mar  9 13:54 SRR3038270.sra
+-rwxrwxrwx 1 mdp15cmg md  757237855 Mar  9 13:55 SRR3038271.sra
+-rwxrwxrwx 1 mdp15cmg md  313905020 Mar  9 13:56 SRR3038272.sra
+-rwxrwxrwx 1 mdp15cmg md  992244819 Mar  9 13:57 SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ which bcbio
+/usr/bin/which: no bcbio in (/usr/local/bin/:/usr/lib64/qt-3.3/bin:/usr/local/sge/live/bin/lx-amd64:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/mdp15cmg/bin)
+[mdp15cmg@iceberg-login1 ravitsinput]$ module load compiler/gcc/5.2
+[mdp15cmg@iceberg-login1 ravitsinput]$ which gcc
+/usr/bin/gcc
+[mdp15cmg@iceberg-login1 ravitsinput]$ which fastq-dump
+/usr/bin/which: no fastq-dump in (/usr/local/bin/:/usr/lib64/qt-3.3/bin:/usr/local/sge/live/bin/lx-amd64:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/mdp15cmg/bin)
+[mdp15cmg@iceberg-login1 ravitsinput]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43/ravitsinput
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd ../
+.DS_Store                    ravitsinput/                 tdp43_analysis.SGE           tdp43_analysis.SGE.o9993500  tdp43_project.csv            
+input/                       sratoolkit.2.5.7-mac64/      tdp43_analysis.SGE.e9993500  tdp43_project/               
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd ../sratoolkit.2.5.7-mac64/
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ ls
+bin  example  README  README-blastn  README-vdb-config  schema
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd bin
+[mdp15cmg@iceberg-login1 bin]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin
+[mdp15cmg@iceberg-login1 bin]$ vim ~/.bashrc
+[mdp15cmg@iceberg-login1 bin]$ source  ~/.bashrc
+[mdp15cmg@iceberg-login1 bin]$ which fastq-dump
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump
+[mdp15cmg@iceberg-login1 bin]$ cd ../../
+.DS_Store                    ravitsinput/                 tdp43_analysis.SGE           tdp43_analysis.SGE.o9993500  tdp43_project.csv            
+input/                       sratoolkit.2.5.7-mac64/      tdp43_analysis.SGE.e9993500  tdp43_project/               
+[mdp15cmg@iceberg-login1 bin]$ cd ../../
+.DS_Store                    ravitsinput/                 tdp43_analysis.SGE           tdp43_analysis.SGE.o9993500  tdp43_project.csv            
+input/                       sratoolkit.2.5.7-mac64/      tdp43_analysis.SGE.e9993500  tdp43_project/               
+[mdp15cmg@iceberg-login1 bin]$ cd ../../ravitsinput/
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+fastq-dump      SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ fast
+fastjar           fastq-dump        fastq-dump.2      fastq-dump.2.5.7  fastq-load        fastq-load.2      fastq-load.2.5.7  
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump SRR3038254.sra
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump: line 1: XSym: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump: line 2: 0012: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump: line 3: 35fc7eb5fd38f1ac2785cca2d853673a: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: line 1: XSym: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: line 2: 0016: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: line 3: e1a4c50430ea718d2d1b369ff537f5e3: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: line 4: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd ../sratoolkit.2.5.7-mac64/
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ ls
+bin  example  README  README-blastn  README-vdb-config  schema
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd bin
+[mdp15cmg@iceberg-login1 bin]$ ls
+abi-dump          bam-load.2               cg-load.2.5.7       illumina-dump        kdbmeta.2        rcexplain.2      sff-load.2.5.7    sra-sort        tblastn_vdb.2             vdb-copy.2.5.7     vdb-lock          vdb-validate.2
+abi-dump.2        bam-load.2.5.7           fastq-dump          illumina-dump.2      kdbmeta.2.5.7    rcexplain.2.5.7  sra-kar           sra-sort.2      tblastn_vdb.2.2.32-2.5.7  vdb-decrypt        vdb-lock.2        vdb-validate.2.5.7
+abi-dump.2.5.7    blastn_vdb               fastq-dump.2        illumina-dump.2.5.7  latf-load        sam-dump         sra-kar.2         sra-sort.2.5.7  test-sra                  vdb-decrypt.2      vdb-lock.2.5.7
+abi-load          blastn_vdb.2             fastq-dump.2.5.7    illumina-load        latf-load.2      sam-dump.2       sra-kar.2.5.7     sra-stat        test-sra.2                vdb-decrypt.2.5.7  vdb-passwd
+abi-load.2        blastn_vdb.2.2.32-2.5.7  fastq-load          illumina-load.2      latf-load.2.5.7  sam-dump.2.5.7   srapath           sra-stat.2      test-sra.2.5.7            vdb-dump           vdb-passwd.2
+abi-load.2.5.7    cache-mgr                fastq-load.2        illumina-load.2.5.7  ncbi             sff-dump         srapath.2         sra-stat.2.5.7  vdb-config                vdb-dump.2         vdb-passwd.2.5.7
+align-info        cache-mgr.2              fastq-load.2.5.7    kar                  prefetch         sff-dump.2       srapath.2.5.7     srf-load        vdb-config.2              vdb-dump.2.5.7     vdb-unlock
+align-info.2      cache-mgr.2.5.7          helicos-load        kar.2                prefetch.2       sff-dump.2.5.7   sra-pileup        srf-load.2      vdb-config.2.5.7          vdb-encrypt        vdb-unlock.2
+align-info.2.5.7  cg-load                  helicos-load.2      kar.2.5.7            prefetch.2.5.7   sff-load         sra-pileup.2      srf-load.2.5.7  vdb-copy                  vdb-encrypt.2      vdb-unlock.2.5.7
+bam-load          cg-load.2                helicos-load.2.5.7  kdbmeta              rcexplain        sff-load.2       sra-pileup.2.5.7  tblastn_vdb     vdb-copy.2                vdb-encrypt.2.5.7  vdb-validate
+[mdp15cmg@iceberg-login1 bin]$ ./fastq-dump
+./fastq-dump: line 1: XSym: command not found
+./fastq-dump: line 2: 0012: command not found
+./fastq-dump: line 3: 35fc7eb5fd38f1ac2785cca2d853673a: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: line 1: XSym: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: line 2: 0016: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: line 3: e1a4c50430ea718d2d1b369ff537f5e3: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: line 4: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 bin]$ ./fastq-dump.2
+./fastq-dump.2: line 1: XSym: command not found
+./fastq-dump.2: line 2: 0016: command not found
+./fastq-dump.2: line 3: e1a4c50430ea718d2d1b369ff537f5e3: command not found
+./fastq-dump.2: line 4: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 bin]$ ./fastq-dump.2
+fastq-dump.2      fastq-dump.2.5.7  
+[mdp15cmg@iceberg-login1 bin]$ ./fastq-dump.2.5.7 
+-bash: ./fastq-dump.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 bin]$ cd ../../
+.DS_Store                    ravitsinput/                 tdp43_analysis.SGE           tdp43_analysis.SGE.o9993500  tdp43_project.csv            
+input/                       sratoolkit.2.5.7-mac64/      tdp43_analysis.SGE.e9993500  tdp43_project/               
+[mdp15cmg@iceberg-login1 bin]$ cd ../../ravitsinput/
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+fastq-dump      SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ fast
+fastjar           fastq-dump        fastq-dump.2      fastq-dump.2.5.7  fastq-load        fastq-load.2      fastq-load.2.5.7  
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-
+fastq-dump        fastq-dump.2      fastq-dump.2.5.7  fastq-load        fastq-load.2      fastq-load.2.5.7  
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-
+fastq-dump        fastq-dump.2      fastq-dump.2.5.7  fastq-load        fastq-load.2      fastq-load.2.5.7  
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump.2.5.7 -X 5 -Z SRR3038254.sra 
+-bash: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump.2.5.7 -X 5 -Z SRR3038254
+-bash: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump.2.5.7 -X 5 -Z SRR390728
+-bash: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd ../sratoolkit.2.5.7-mac64/
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ ls
+bin  example  README  README-blastn  README-vdb-config  schema
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd bin
+[mdp15cmg@iceberg-login1 bin]$ ls
+abi-dump          bam-load.2               cg-load.2.5.7       illumina-dump        kdbmeta.2        rcexplain.2      sff-load.2.5.7    sra-sort        tblastn_vdb.2             vdb-copy.2.5.7     vdb-lock          vdb-validate.2
+abi-dump.2        bam-load.2.5.7           fastq-dump          illumina-dump.2      kdbmeta.2.5.7    rcexplain.2.5.7  sra-kar           sra-sort.2      tblastn_vdb.2.2.32-2.5.7  vdb-decrypt        vdb-lock.2        vdb-validate.2.5.7
+abi-dump.2.5.7    blastn_vdb               fastq-dump.2        illumina-dump.2.5.7  latf-load        sam-dump         sra-kar.2         sra-sort.2.5.7  test-sra                  vdb-decrypt.2      vdb-lock.2.5.7
+abi-load          blastn_vdb.2             fastq-dump.2.5.7    illumina-load        latf-load.2      sam-dump.2       sra-kar.2.5.7     sra-stat        test-sra.2                vdb-decrypt.2.5.7  vdb-passwd
+abi-load.2        blastn_vdb.2.2.32-2.5.7  fastq-load          illumina-load.2      latf-load.2.5.7  sam-dump.2.5.7   srapath           sra-stat.2      test-sra.2.5.7            vdb-dump           vdb-passwd.2
+abi-load.2.5.7    cache-mgr                fastq-load.2        illumina-load.2.5.7  ncbi             sff-dump         srapath.2         sra-stat.2.5.7  vdb-config                vdb-dump.2         vdb-passwd.2.5.7
+align-info        cache-mgr.2              fastq-load.2.5.7    kar                  prefetch         sff-dump.2       srapath.2.5.7     srf-load        vdb-config.2              vdb-dump.2.5.7     vdb-unlock
+align-info.2      cache-mgr.2.5.7          helicos-load        kar.2                prefetch.2       sff-dump.2.5.7   sra-pileup        srf-load.2      vdb-config.2.5.7          vdb-encrypt        vdb-unlock.2
+align-info.2.5.7  cg-load                  helicos-load.2      kar.2.5.7            prefetch.2.5.7   sff-load         sra-pileup.2      srf-load.2.5.7  vdb-copy                  vdb-encrypt.2      vdb-unlock.2.5.7
+bam-load          cg-load.2                helicos-load.2.5.7  kdbmeta              rcexplain        sff-load.2       sra-pileup.2.5.7  tblastn_vdb     vdb-copy.2                vdb-encrypt.2.5.7  vdb-validate
+[mdp15cmg@iceberg-login1 bin]$ ./vdb-config
+./vdb-config: line 1: XSym: command not found
+./vdb-config: line 2: 0012: command not found
+./vdb-config: line 3: 572f080a00e21b7aa317273935336eb9: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2: line 1: XSym: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2: line 2: 0016: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2: line 3: ca2c7da3a4b6224cf8bd4115e0c022ec: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2: line 4: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 bin]$ ./vdb-config -i
+./vdb-config: line 1: XSym: command not found
+./vdb-config: line 2: 0012: command not found
+./vdb-config: line 3: 572f080a00e21b7aa317273935336eb9: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2: line 1: XSym: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2: line 2: 0016: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2: line 3: ca2c7da3a4b6224cf8bd4115e0c022ec: command not found
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2: line 4: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/vdb-config.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 bin]$ cd ..
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ ls
+bin  example  README  README-blastn  README-vdb-config  schema
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd ..
+[mdp15cmg@iceberg-login1 TDP-43]$ rm -rf sratoolkit.2.5.7-mac64/
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ wget MacOS 64 bit architecture
+--2016-03-09 14:51:44--  http://macos/
+Resolving macos... failed: Name or service not known.
+wget: unable to resolve host address `macos'
+--2016-03-09 14:51:44--  http://64/
+Resolving 64... 0.0.0.64
+Connecting to 64|0.0.0.64|:80... failed: Invalid argument.
+--2016-03-09 14:51:44--  http://bit/
+Resolving bit... failed: Name or service not known.
+wget: unable to resolve host address `bit'
+--2016-03-09 14:51:44--  http://architecture/
+Resolving architecture... failed: Name or service not known.
+wget: unable to resolve host address `architecture'
+[mdp15cmg@iceberg-login1 TDP-43]$ wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.7/sratoolkit.2.5.7-mac64.tar.gz
+--2016-03-09 14:51:54--  http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.7/sratoolkit.2.5.7-mac64.tar.gz
+Resolving ftp-trace.ncbi.nlm.nih.gov... 130.14.250.11, 2607:f220:41e:250::10
+Connecting to ftp-trace.ncbi.nlm.nih.gov|130.14.250.11|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 51491984 (49M) [application/x-gzip]
+Saving to: `sratoolkit.2.5.7-mac64.tar.gz'
+
+72% [=============================================================================================================================================>                                                       ] 37,209,712  9.06M/s  eta 3s      ^100%[====================================================================================================================================================================================================>] 51,491,984  10.7M/s   in 6.2s    
+
+2016-03-09 14:52:01 (7.86 MB/s) - `sratoolkit.2.5.7-mac64.tar.gz' saved [51491984/51491984]
+
+[mdp15cmg@iceberg-login1 TDP-43]$ tar xvzf sratoolkit.2.5.7-mac64.tar.gz 
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ ls
+bin  example  README  README-blastn  README-vdb-config  schema
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd bin/
+[mdp15cmg@iceberg-login1 bin]$ ls
+abi-dump          bam-load.2               cg-load.2.5.7       illumina-dump        kdbmeta.2        rcexplain.2      sff-load.2.5.7    sra-sort        tblastn_vdb.2             vdb-copy.2.5.7     vdb-lock          vdb-validate.2
+abi-dump.2        bam-load.2.5.7           fastq-dump          illumina-dump.2      kdbmeta.2.5.7    rcexplain.2.5.7  sra-kar           sra-sort.2      tblastn_vdb.2.2.32-2.5.7  vdb-decrypt        vdb-lock.2        vdb-validate.2.5.7
+abi-dump.2.5.7    blastn_vdb               fastq-dump.2        illumina-dump.2.5.7  latf-load        sam-dump         sra-kar.2         sra-sort.2.5.7  test-sra                  vdb-decrypt.2      vdb-lock.2.5.7
+abi-load          blastn_vdb.2             fastq-dump.2.5.7    illumina-load        latf-load.2      sam-dump.2       sra-kar.2.5.7     sra-stat        test-sra.2                vdb-decrypt.2.5.7  vdb-passwd
+abi-load.2        blastn_vdb.2.2.32-2.5.7  fastq-load          illumina-load.2      latf-load.2.5.7  sam-dump.2.5.7   srapath           sra-stat.2      test-sra.2.5.7            vdb-dump           vdb-passwd.2
+abi-load.2.5.7    cache-mgr                fastq-load.2        illumina-load.2.5.7  ncbi             sff-dump         srapath.2         sra-stat.2.5.7  vdb-config                vdb-dump.2         vdb-passwd.2.5.7
+align-info        cache-mgr.2              fastq-load.2.5.7    kar                  prefetch         sff-dump.2       srapath.2.5.7     srf-load        vdb-config.2              vdb-dump.2.5.7     vdb-unlock
+align-info.2      cache-mgr.2.5.7          helicos-load        kar.2                prefetch.2       sff-dump.2.5.7   sra-pileup        srf-load.2      vdb-config.2.5.7          vdb-encrypt        vdb-unlock.2
+align-info.2.5.7  cg-load                  helicos-load.2      kar.2.5.7            prefetch.2.5.7   sff-load         sra-pileup.2      srf-load.2.5.7  vdb-copy                  vdb-encrypt.2      vdb-unlock.2.5.7
+bam-load          cg-load.2                helicos-load.2.5.7  kdbmeta              rcexplain        sff-load.2       sra-pileup.2.5.7  tblastn_vdb     vdb-copy.2                vdb-encrypt.2.5.7  vdb-validate
+[mdp15cmg@iceberg-login1 bin]$ ./fastq-dump
+-bash: ./fastq-dump: cannot execute binary file
+[mdp15cmg@iceberg-login1 bin]$ chmod a+x fastq-dump*
+[mdp15cmg@iceberg-login1 bin]$ ./fastq-dump
+-bash: ./fastq-dump: cannot execute binary file
+[mdp15cmg@iceberg-login1 bin]$ ./fastq-dump.2
+fastq-dump.2      fastq-dump.2.5.7  
+[mdp15cmg@iceberg-login1 bin]$ ./fastq-dump.2.5.7 
+-bash: ./fastq-dump.2.5.7: cannot execute binary file
+[mdp15cmg@iceberg-login1 bin]$ cd ..
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-mac64]$ cd ..
+[mdp15cmg@iceberg-login1 TDP-43]$ rm -rf sratoolkit.2.5.7-mac64
+[mdp15cmg@iceberg-login1 TDP-43]$ git clone https://github.com/ncbi/sra-tools.git
+Initialized empty Git repository in /shared/hidelab2/user/mdp15cmg/TDP-43/sra-tools/.git/
+remote: Counting objects: 10519, done.
+remote: Compressing objects: 100% (213/213), done.
+remote: Total 10519 (delta 117), reused 0 (delta 0), pack-reused 10304
+Receiving objects: 100% (10519/10519), 21.15 MiB | 9.50 MiB/s, done.
+Resolving deltas: 100% (6950/6950), done.
+[mdp15cmg@iceberg-login1 TDP-43]$ cd sra-tools/
+[mdp15cmg@iceberg-login1 sra-tools]$ ls
+build  CHANGES  configure  LICENSE  Makefile  README  README-blastn  README.md  README-vdb-config  setup  test  tools
+[mdp15cmg@iceberg-login1 sra-tools]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43/sra-tools
+[mdp15cmg@iceberg-login1 sra-tools]$ ./configure --prefix="/shared/hidelab2/user/mdp15cmg/TDP-43/sra-tools"
+Configuring SRA-TOOLS package
+checking system type... Linux
+checking machine architecture... x86_64
+checking SRA-TOOLS version... 2.5.8
+checking for supported architecture... x86_64 (64 bits) is supported
+checking for supported OS... Linux (linux) is supported
+checking for supported tool chain... gcc tool chain is supported
+checking for g++... yes
+checking whether gcc accepts -Wno-array-bounds... yes
+checking for fuse library... no
+checking for hdf5 library... no
+checking for magic library... no
+checking for xml2 library... yes
+checking for ngs-sdk package...
+configure: error: required ngs-sdk package not found.
+[mdp15cmg@iceberg-login1 sra-tools]$ ls
+build  CHANGES  configure  LICENSE  Makefile  README  README-blastn  README.md  README-vdb-config  setup  test  tools
+[mdp15cmg@iceberg-login1 sra-tools]$ cd ..
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ ls -lrth ravitsinput/
+total 16G
+-rwxrwxrwx 1 mdp15cmg md  512M Mar  9 11:41 SRR3038253.sra
+-rwxrwxrwx 1 mdp15cmg md  767M Mar  9 11:45 SRR3038254.sra
+-rwxrwxrwx 1 mdp15cmg md  532M Mar  9 11:48 SRR3038255.sra
+-rwxrwxrwx 1 mdp15cmg md 1020M Mar  9 11:57 SRR3038256.sra
+-rwxrwxrwx 1 mdp15cmg md  1.1G Mar  9 12:06 SRR3038257.sra
+-rwxrwxrwx 1 mdp15cmg md  1.1G Mar  9 12:12 SRR3038258.sra
+-rwxrwxrwx 1 mdp15cmg md  862M Mar  9 13:34 SRR3038259.sra
+-rwxrwxrwx 1 mdp15cmg md  532M Mar  9 13:35 SRR3038260.sra
+-rwxrwxrwx 1 mdp15cmg md  778M Mar  9 13:37 SRR3038261.sra
+-rwxrwxrwx 1 mdp15cmg md  829M Mar  9 13:39 SRR3038262.sra
+-rwxrwxrwx 1 mdp15cmg md  752M Mar  9 13:41 SRR3038263.sra
+-rwxrwxrwx 1 mdp15cmg md  242M Mar  9 13:42 SRR3038264.sra
+-rwxrwxrwx 1 mdp15cmg md  472M Mar  9 13:43 SRR3038265.sra
+-rwxrwxrwx 1 mdp15cmg md  988M Mar  9 13:45 SRR3038266.sra
+-rwxrwxrwx 1 mdp15cmg md  931M Mar  9 13:47 SRR3038267.sra
+-rwxrwxrwx 1 mdp15cmg md  1.1G Mar  9 13:48 SRR3038268.sra
+-rwxrwxrwx 1 mdp15cmg md  982M Mar  9 13:51 SRR3038269.sra
+-rwxrwxrwx 1 mdp15cmg md  885M Mar  9 13:54 SRR3038270.sra
+-rwxrwxrwx 1 mdp15cmg md  723M Mar  9 13:55 SRR3038271.sra
+-rwxrwxrwx 1 mdp15cmg md  300M Mar  9 13:56 SRR3038272.sra
+-rwxrwxrwx 1 mdp15cmg md  947M Mar  9 13:57 SRR3038273.sra
+-rwxrwxrwx 1 mdp15cmg md  1.1K Mar  9 14:25 fastq-dump
+[mdp15cmg@iceberg-login1 TDP-43]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd sra
+-bash: cd: sra: No such file or directory
+[mdp15cmg@iceberg-login1 TDP-43]$ cd sra
+sratoolkit.2.5.7-mac64.tar.gz  sra-tools/                     
+[mdp15cmg@iceberg-login1 TDP-43]$ cd ..
+[mdp15cmg@iceberg-login1 mdp15cmg]$ ls
+TDP-43
+[mdp15cmg@iceberg-login1 mdp15cmg]$ cd TDP-43/
+[mdp15cmg@iceberg-login1 TDP-43]$ cd sra-tools/
+[mdp15cmg@iceberg-login1 sra-tools]$ ls
+build  CHANGES  configure  LICENSE  Makefile  README  README-blastn  README.md  README-vdb-config  setup  test  tools
+[mdp15cmg@iceberg-login1 sra-tools]$ cd setup/
+[mdp15cmg@iceberg-login1 setup]$ ls
+install  install.perl  install.prl  konfigure.perl  os-arch.perl  os-arch.prl  package.prl  s
+[mdp15cmg@iceberg-login1 setup]$ which sratoolkit.2.5.7-mac64
+/usr/bin/which: no sratoolkit.2.5.7-mac64 in (/usr/local/bin/:/usr/lib64/qt-3.3/bin:/usr/local/sge/live/bin/lx-amd64:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/mdp15cmg/bin:/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin)
+[mdp15cmg@iceberg-login1 setup]$ which bcbio
+/usr/bin/which: no bcbio in (/usr/local/bin/:/usr/lib64/qt-3.3/bin:/usr/local/sge/live/bin/lx-amd64:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/mdp15cmg/bin:/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin)
+[mdp15cmg@iceberg-login1 setup]$ ls
+install  install.perl  install.prl  konfigure.perl  os-arch.perl  os-arch.prl  package.prl  s
+[mdp15cmg@iceberg-login1 setup]$ cd ../..
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.7/sratoolkit.2.5.7-mac64.tar.gz
+--2016-03-09 15:00:04--  http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.7/sratoolkit.2.5.7-mac64.tar.gz
+Resolving ftp-trace.ncbi.nlm.nih.gov... 130.14.250.13, 2607:f220:41e:250::12
+Connecting to ftp-trace.ncbi.nlm.nih.gov|130.14.250.13|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 51491984 (49M) [application/x-gzip]
+Saving to: `sratoolkit.2.5.7-mac64.tar.gz.1'
+
+100%[====================================================================================================================================================================================================>] 51,491,984  9.76M/s   in 6.5s    
+
+2016-03-09 15:00:11 (7.54 MB/s) - `sratoolkit.2.5.7-mac64.tar.gz.1' saved [51491984/51491984]
+
+[mdp15cmg@iceberg-login1 TDP-43]$ tar -xzf sratoolkit.current-centos_linux64.tar.gz
+tar (child): sratoolkit.current-centos_linux64.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+[mdp15cmg@iceberg-login1 TDP-43]$ tar -xzf sratoolkit.2.5.7-mac64.tar.gz
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  sratoolkit.2.5.7-mac64.tar.gz  sratoolkit.2.5.7-mac64.tar.gz.1  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ rm -rf sratoolkit.2.5.7-mac64.tar.gz.1
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd sra-tools/
+[mdp15cmg@iceberg-login1 sra-tools]$ ls
+build  CHANGES  configure  LICENSE  Makefile  README  README-blastn  README.md  README-vdb-config  setup  test  tools
+[mdp15cmg@iceberg-login1 sra-tools]$ cd tools
+[mdp15cmg@iceberg-login1 tools]$ ls
+agp-load     bam-loader  cg-load      fastq-dump    general-loader  kget      nenctool    pacbio-load   prefetch           refseq-load    sra-dump  sra-pileup     sra-sort       util        vdb-copy     vdb-dump
+align-cache  cache-mgr   copycat      fastq-loader  kar             kqsh      nencvalid   pileup-stats  qual-recalib-stat  ref-variation  sra-load  sra-seq-count  sra-stat       vcf-loader  vdb-decrypt  vdb-validate
+align-info   ccextract   dbgap-mount  fuse          keyring-srv     Makefile  ngs-pileup  pore-load     rd-filter-redact   sra            srapath   sra-shell      update-schema  vdb-config  vdb-diff
+[mdp15cmg@iceberg-login1 tools]$ vim ~/.bashrc
+[mdp15cmg@iceberg-login1 tools]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43/sra-tools/tools
+[mdp15cmg@iceberg-login1 tools]$ vim ~/.bashrc
+[mdp15cmg@iceberg-login1 tools]$ vim ~/.bashrc
+[mdp15cmg@iceberg-login1 tools]$ vim ~/.bashrc
+[mdp15cmg@iceberg-login1 tools]$ source ~/.bashrc
+[mdp15cmg@iceberg-login1 tools]$ which sra-toolkit
+/usr/bin/which: no sra-toolkit in (/usr/local/bin/:/usr/lib64/qt-3.3/bin:/usr/local/sge/live/bin/lx-amd64:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/mdp15cmg/bin:/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin:/shared/hidelab2/user/mdp15cmg/TDP-43/sra-tools/tools)
+[mdp15cmg@iceberg-login1 tools]$ which fastq-dumo
+/usr/bin/which: no fastq-dumo in (/usr/local/bin/:/usr/lib64/qt-3.3/bin:/usr/local/sge/live/bin/lx-amd64:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/mdp15cmg/bin:/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin:/shared/hidelab2/user/mdp15cmg/TDP-43/sra-tools/tools)
+[mdp15cmg@iceberg-login1 tools]$ which fastq-dump
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump
+[mdp15cmg@iceberg-login1 tools]$ vim ~/.bashrc
+[mdp15cmg@iceberg-login1 tools]$ which fastq-dump
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump
+[mdp15cmg@iceberg-login1 tools]$ vim ~/.bashrc
+[mdp15cmg@iceberg-login1 tools]$ which fastq-dump
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump
+[mdp15cmg@iceberg-login1 tools]$ ls
+agp-load     bam-loader  cg-load      fastq-dump    general-loader  kget      nenctool    pacbio-load   prefetch           refseq-load    sra-dump  sra-pileup     sra-sort       util        vdb-copy     vdb-dump
+align-cache  cache-mgr   copycat      fastq-loader  kar             kqsh      nencvalid   pileup-stats  qual-recalib-stat  ref-variation  sra-load  sra-seq-count  sra-stat       vcf-loader  vdb-decrypt  vdb-validate
+align-info   ccextract   dbgap-mount  fuse          keyring-srv     Makefile  ngs-pileup  pore-load     rd-filter-redact   sra            srapath   sra-shell      update-schema  vdb-config  vdb-diff
+[mdp15cmg@iceberg-login1 tools]$ cd fastq-dump
+[mdp15cmg@iceberg-login1 fastq-dump]$ ls
+args.cpp  args.hpp  fastq-dump.cpp  fastq-dump.vers  filters.cpp  filters.hpp  koutstream  Makefile
+[mdp15cmg@iceberg-login1 fastq-dump]$ cd ..
+[mdp15cmg@iceberg-login1 tools]$ ls
+agp-load     bam-loader  cg-load      fastq-dump    general-loader  kget      nenctool    pacbio-load   prefetch           refseq-load    sra-dump  sra-pileup     sra-sort       util        vdb-copy     vdb-dump
+align-cache  cache-mgr   copycat      fastq-loader  kar             kqsh      nencvalid   pileup-stats  qual-recalib-stat  ref-variation  sra-load  sra-seq-count  sra-stat       vcf-loader  vdb-decrypt  vdb-validate
+align-info   ccextract   dbgap-mount  fuse          keyring-srv     Makefile  ngs-pileup  pore-load     rd-filter-redact   sra            srapath   sra-shell      update-schema  vdb-config  vdb-diff
+[mdp15cmg@iceberg-login1 tools]$ cd ..
+[mdp15cmg@iceberg-login1 sra-tools]$ ls
+build  CHANGES  configure  LICENSE  Makefile  README  README-blastn  README.md  README-vdb-config  setup  test  tools
+[mdp15cmg@iceberg-login1 sra-tools]$ cd ..
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd ravitsinput/
+[mdp15cmg@iceberg-login1 ravitsinput]$ fast
+fastjar           fastq-dump        fastq-dump.2      fastq-dump.2.5.7  fastq-load        fastq-load.2      fastq-load.2.5.7  
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+fastq-dump      SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump SRR3038254.sra
+-bash: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump: cannot execute binary file
+[mdp15cmg@iceberg-login1 ravitsinput]$ /
+-bash: /: is a directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ ../
+.DS_Store                      ravitsinput/                   sratoolkit.2.5.7-mac64.tar.gz  tdp43_analysis.SGE             tdp43_analysis.SGE.o9993500    tdp43_project.csv              
+input/                         sratoolkit.2.5.7-mac64/        sra-tools/                     tdp43_analysis.SGE.e9993500    tdp43_project/                 
+[mdp15cmg@iceberg-login1 ravitsinput]$ ../sra-tools/
+build/             configure          .gitignore         Makefile           README-blastn      README-vdb-config  test/              
+CHANGES            .git/              LICENSE            README             README.md          setup/             tools/             
+[mdp15cmg@iceberg-login1 ravitsinput]$ ../sra-tools/tools/fastq-dump
+-bash: ../sra-tools/tools/fastq-dump: is a directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd ../sra-tools/tools/fastq-dump
+[mdp15cmg@iceberg-login1 fastq-dump]$ ls
+args.cpp  args.hpp  fastq-dump.cpp  fastq-dump.vers  filters.cpp  filters.hpp  koutstream  Makefile
+[mdp15cmg@iceberg-login1 fastq-dump]$ ls -la
+total 84
+drwxrwxrwx  2 mdp15cmg md  4096 Mar  9 14:53 .
+drwxrwxrwx 48 mdp15cmg md  4096 Mar  9 14:53 ..
+-rwxrwxrwx  1 mdp15cmg md 14675 Mar  9 14:53 args.cpp
+-rwxrwxrwx  1 mdp15cmg md  8894 Mar  9 14:53 args.hpp
+-rwxrwxrwx  1 mdp15cmg md 16514 Mar  9 14:53 fastq-dump.cpp
+-rwxrwxrwx  1 mdp15cmg md     6 Mar  9 14:53 fastq-dump.vers
+-rwxrwxrwx  1 mdp15cmg md  7098 Mar  9 14:53 filters.cpp
+-rwxrwxrwx  1 mdp15cmg md  2964 Mar  9 14:53 filters.hpp
+-rwxrwxrwx  1 mdp15cmg md  9095 Mar  9 14:53 koutstream
+-rwxrwxrwx  1 mdp15cmg md  2637 Mar  9 14:53 Makefile
+[mdp15cmg@iceberg-login1 fastq-dump]$ cd ..
+[mdp15cmg@iceberg-login1 tools]$ ls
+agp-load     bam-loader  cg-load      fastq-dump    general-loader  kget      nenctool    pacbio-load   prefetch           refseq-load    sra-dump  sra-pileup     sra-sort       util        vdb-copy     vdb-dump
+align-cache  cache-mgr   copycat      fastq-loader  kar             kqsh      nencvalid   pileup-stats  qual-recalib-stat  ref-variation  sra-load  sra-seq-count  sra-stat       vcf-loader  vdb-decrypt  vdb-validate
+align-info   ccextract   dbgap-mount  fuse          keyring-srv     Makefile  ngs-pileup  pore-load     rd-filter-redact   sra            srapath   sra-shell      update-schema  vdb-config  vdb-diff
+[mdp15cmg@iceberg-login1 tools]$ cd ..
+[mdp15cmg@iceberg-login1 sra-tools]$ ls
+build  CHANGES  configure  LICENSE  Makefile  README  README-blastn  README.md  README-vdb-config  setup  test  tools
+[mdp15cmg@iceberg-login1 sra-tools]$ cd setupt
+-bash: cd: setupt: No such file or directory
+[mdp15cmg@iceberg-login1 sra-tools]$ cd setup
+[mdp15cmg@iceberg-login1 setup]$ ls
+install  install.perl  install.prl  konfigure.perl  os-arch.perl  os-arch.prl  package.prl  s
+[mdp15cmg@iceberg-login1 setup]$ ./install
+Can't locate File/Copy/Recursive.pm in @INC (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at ./install.perl line 10.
+BEGIN failed--compilation aborted at ./install.perl line 10.
+[mdp15cmg@iceberg-login1 setup]$ cd ..
+[mdp15cmg@iceberg-login1 sra-tools]$ ;s
+-bash: syntax error near unexpected token `;'
+[mdp15cmg@iceberg-login1 sra-tools]$ ls
+build  CHANGES  configure  LICENSE  Makefile  README  README-blastn  README.md  README-vdb-config  setup  test  tools
+[mdp15cmg@iceberg-login1 sra-tools]$ cd test
+[mdp15cmg@iceberg-login1 test]$ ls
+align-info  fastq-loader  general-loader  kget  Makefile  network-test  ngs-pileup  only-remote-repository.kfg  ref-variation  samline  tarballs  vcf-loader  vdb-dump  vschema
+[mdp15cmg@iceberg-login1 test]$ cd ..
+[mdp15cmg@iceberg-login1 sra-tools]$ ls
+build  CHANGES  configure  LICENSE  Makefile  README  README-blastn  README.md  README-vdb-config  setup  test  tools
+[mdp15cmg@iceberg-login1 sra-tools]$ cd build
+[mdp15cmg@iceberg-login1 build]$ ls
+abspath.sh            ld.linux.dlib.sh  ld.mac.clang.sh  ld.mac.slib.sh   ld.sh           ld.sun.slib.sh   ld.win.slib.sh  make-defs-xf.pl  Makefile.install  Makefile.sun      make-vers-inc.sh  sra-dflt-schema.sh  Xcode
+cc.sh                 ld.linux.exe.sh   ld.mac.cmn.sh    ld.rwin.dlib.sh  ld.sun.cc.sh    ld.unix.cmn.sh   ld.win.stub.sh  Makefile.cc      Makefile.linux    Makefile.sun.cc   MSVC              sun-cc.sh
+cp.sh                 ld.linux.gcc.sh   ld.mac.dlib.sh   ld.rwin.exe.sh   ld.sun.cmn.sh   ld.unix.slib.sh  ld.win.vc++.sh  Makefile.clang   Makefile.mac      Makefile.sun.gcc  run_remotely.sh   sun-c++.sh
+gprof2dot.py          ld.linux.icc.sh   ld.mac.exe.sh    ld.rwin.slib.sh  ld.sun.dlib.sh  ld.win.cmn.sh    libexists.sh    Makefile.env     Makefile.rules    Makefile.targets  scm-collect.sh    tag-module.sh
+increment-release.sh  ld.linux.ln.sh    ld.mac.gcc.sh    ld.rwin.stub.sh  ld.sun.exe.sh   ld.win.dlib.sh   mac.arch.sh     Makefile.gcc     Makefile.scm      Makefile.vc++     scm.sh            wait_for_file.sh
+ld.linux.cmn.sh       ld.linux.slib.sh  ld.mac.ln.sh     ld.rwin.vc++.sh  ld.sun.ln.sh    ld.win.exe.sh    make-defs.pl    Makefile.icc     Makefile.shell    Makefile.win      scm.txt           win-cc.sh
+[mdp15cmg@iceberg-login1 build]$ ls
+abspath.sh            ld.linux.dlib.sh  ld.mac.clang.sh  ld.mac.slib.sh   ld.sh           ld.sun.slib.sh   ld.win.slib.sh  make-defs-xf.pl  Makefile.install  Makefile.sun      make-vers-inc.sh  sra-dflt-schema.sh  Xcode
+cc.sh                 ld.linux.exe.sh   ld.mac.cmn.sh    ld.rwin.dlib.sh  ld.sun.cc.sh    ld.unix.cmn.sh   ld.win.stub.sh  Makefile.cc      Makefile.linux    Makefile.sun.cc   MSVC              sun-cc.sh
+cp.sh                 ld.linux.gcc.sh   ld.mac.dlib.sh   ld.rwin.exe.sh   ld.sun.cmn.sh   ld.unix.slib.sh  ld.win.vc++.sh  Makefile.clang   Makefile.mac      Makefile.sun.gcc  run_remotely.sh   sun-c++.sh
+gprof2dot.py          ld.linux.icc.sh   ld.mac.exe.sh    ld.rwin.slib.sh  ld.sun.dlib.sh  ld.win.cmn.sh    libexists.sh    Makefile.env     Makefile.rules    Makefile.targets  scm-collect.sh    tag-module.sh
+increment-release.sh  ld.linux.ln.sh    ld.mac.gcc.sh    ld.rwin.stub.sh  ld.sun.exe.sh   ld.win.dlib.sh   mac.arch.sh     Makefile.gcc     Makefile.scm      Makefile.vc++     scm.sh            wait_for_file.sh
+ld.linux.cmn.sh       ld.linux.slib.sh  ld.mac.ln.sh     ld.rwin.vc++.sh  ld.sun.ln.sh    ld.win.exe.sh    make-defs.pl    Makefile.icc     Makefile.shell    Makefile.win      scm.txt           win-cc.sh
+[mdp15cmg@iceberg-login1 build]$ cd ../..
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd ravitsinput/
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+fastq-dump      SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump SRR3038254.sra
+-bash: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump: cannot execute binary file
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd /usr/bin
+[mdp15cmg@iceberg-login1 bin]$ which fastq-dump
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump
+[mdp15cmg@iceberg-login1 bin]$ cd /shared/hidelab2/user/mdp15cmg/TDP-43
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd ravitsinput
+[mdp15cmg@iceberg-login1 ravitsinput]$ ./fastq-dump SRR3038254
+./fastq-dump: line 1: XSym: command not found
+./fastq-dump: line 2: 0012: command not found
+./fastq-dump: line 3: 35fc7eb5fd38f1ac2785cca2d853673a: command not found
+./fastq-dump: line 4: /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-mac64/bin/fastq-dump.2: cannot execute binary file
+[mdp15cmg@iceberg-login1 ravitsinput]$ cd ..
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd ..
+[mdp15cmg@iceberg-login1 mdp15cmg]$ 0666 chmod ravitsinput
+-bash: 0666: command not found
+[mdp15cmg@iceberg-login1 mdp15cmg]$ chmod 0666 ravitsinput
+chmod: cannot access `ravitsinput': No such file or directory
+[mdp15cmg@iceberg-login1 mdp15cmg]$ ls
+TDP-43
+[mdp15cmg@iceberg-login1 mdp15cmg]$ cd TDP-43
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ chmod 0666 ravitsinput
+chmod: changing permissions of `ravitsinput': Permission denied
+[mdp15cmg@iceberg-login1 TDP-43]$ chmod 666 ravitsinput
+chmod: changing permissions of `ravitsinput': Permission denied
+[mdp15cmg@iceberg-login1 TDP-43]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43
+[mdp15cmg@iceberg-login1 TDP-43]$ cd ../../
+[mdp15cmg@iceberg-login1 user]$ ls
+md1wah  md1wwxx  md1xdrj  md4ga  md4zsa  mdp15cmg
+[mdp15cmg@iceberg-login1 user]$ cd ..
+[mdp15cmg@iceberg-login1 hidelab2]$ ls
+shared  user
+[mdp15cmg@iceberg-login1 hidelab2]$ cd shared/
+[mdp15cmg@iceberg-login1 shared]$ ls
+[mdp15cmg@iceberg-login1 shared]$ ln -s ../user/mdp15cmg/
+.DS_Store  TDP-43/    
+[mdp15cmg@iceberg-login1 shared]$ ln -s ../user/mdp15cmg/TDP-43/
+.DS_Store                      ravitsinput/                   sratoolkit.2.5.7-mac64.tar.gz  tdp43_analysis.SGE             tdp43_analysis.SGE.o9993500    tdp43_project.csv              
+input/                         sratoolkit.2.5.7-mac64/        sra-tools/                     tdp43_analysis.SGE.e9993500    tdp43_project/                 
+[mdp15cmg@iceberg-login1 shared]$ ln -s ../user/mdp15cmg/TDP-43/ravitsinput/* .
+[mdp15cmg@iceberg-login1 shared]$ ls
+fastq-dump      SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+[mdp15cmg@iceberg-login1 shared]$ cd ..
+[mdp15cmg@iceberg-login1 hidelab2]$ ls
+shared  user
+[mdp15cmg@iceberg-login1 hidelab2]$ cd user/mdp15cmg/TDP-43
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-mac64  sratoolkit.2.5.7-mac64.tar.gz  sra-tools  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ rm -rf sratoolkit.2.5.7-mac64.tar.gz
+[mdp15cmg@iceberg-login1 TDP-43]$ rm -rf sratoolkit.2.5.7-mac64
+[mdp15cmg@iceberg-login1 TDP-43]$ rm -rf sra-tools
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.7/sratoolkit.2.5.7-centos_linux64.tar.gz
+--2016-03-09 15:33:31--  http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.7/sratoolkit.2.5.7-centos_linux64.tar.gz
+Resolving ftp-trace.ncbi.nlm.nih.gov... 130.14.250.11, 2607:f220:41e:250::12
+Connecting to ftp-trace.ncbi.nlm.nih.gov|130.14.250.11|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 62167088 (59M) [application/x-gzip]
+Saving to: `sratoolkit.2.5.7-centos_linux64.tar.gz'
+
+100%[====================================================================================================================================================================================================>] 62,167,088  13.8M/s   in 13s     
+
+2016-03-09 15:33:44 (4.72 MB/s) - `sratoolkit.2.5.7-centos_linux64.tar.gz' saved [62167088/62167088]
+
+[mdp15cmg@iceberg-login1 TDP-43]$ tar -xzf sratoolkit.2.5.7-centos_linux64.tar.gz
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-centos_linux64  sratoolkit.2.5.7-centos_linux64.tar.gz  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd sra
+-bash: cd: sra: No such file or directory
+[mdp15cmg@iceberg-login1 TDP-43]$ cd sratoolkit.2.5.7-centos_linux64
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-centos_linux64]$ ls
+bin  example  README  README-blastn  README-vdb-config  schema
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-centos_linux64]$ vim ~/. bashrc
+2 files to edit
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-centos_linux64]$ nano ~/.bash_profile
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-centos_linux64]$ pwd
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-centos_linux64
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-centos_linux64]$ nano ~/.bash_profile
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-centos_linux64]$ cd bind
+-bash: cd: bind: No such file or directory
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-centos_linux64]$ ls
+bin  example  README  README-blastn  README-vdb-config  schema
+[mdp15cmg@iceberg-login1 sratoolkit.2.5.7-centos_linux64]$ cd bin
+[mdp15cmg@iceberg-login1 bin]$ ls
+abi-dump          bam-load.2.5.7           fastq-dump.2         illumina-load        latf-load.2.5.7    remote-fuser        sff-load.2.5.7    sra-sort.2                test-sra          vdb-decrypt.2.5.7  vdb-passwd.2
+abi-dump.2        blastn_vdb               fastq-dump.2.5.7     illumina-load.2      ncbi               remote-fuser.2      sra-kar           sra-sort.2.5.7            test-sra.2        vdb-dump           vdb-passwd.2.5.7
+abi-dump.2.5.7    blastn_vdb.2             fastq-load           illumina-load.2.5.7  pacbio-load        remote-fuser.2.5.7  sra-kar.2         sra-stat                  test-sra.2.5.7    vdb-dump.2         vdb-unlock
+abi-load          blastn_vdb.2.2.32-2.5.7  fastq-load.2         kar                  pacbio-load.2      sam-dump            sra-kar.2.5.7     sra-stat.2                vdb-config        vdb-dump.2.5.7     vdb-unlock.2
+abi-load.2        cache-mgr                fastq-load.2.5.7     kar.2                pacbio-load.2.5.7  sam-dump.2          srapath           sra-stat.2.5.7            vdb-config.2      vdb-encrypt        vdb-unlock.2.5.7
+abi-load.2.5.7    cache-mgr.2              helicos-load         kar.2.5.7            prefetch           sam-dump.2.5.7      srapath.2         srf-load                  vdb-config.2.5.7  vdb-encrypt.2      vdb-validate
+align-info        cache-mgr.2.5.7          helicos-load.2       kdbmeta              prefetch.2         sff-dump            srapath.2.5.7     srf-load.2                vdb-copy          vdb-encrypt.2.5.7  vdb-validate.2
+align-info.2      cg-load                  helicos-load.2.5.7   kdbmeta.2            prefetch.2.5.7     sff-dump.2          sra-pileup        srf-load.2.5.7            vdb-copy.2        vdb-lock           vdb-validate.2.5.7
+align-info.2.5.7  cg-load.2                illumina-dump        kdbmeta.2.5.7        rcexplain          sff-dump.2.5.7      sra-pileup.2      tblastn_vdb               vdb-copy.2.5.7    vdb-lock.2
+bam-load          cg-load.2.5.7            illumina-dump.2      latf-load            rcexplain.2        sff-load            sra-pileup.2.5.7  tblastn_vdb.2             vdb-decrypt       vdb-lock.2.5.7
+bam-load.2        fastq-dump               illumina-dump.2.5.7  latf-load.2          rcexplain.2.5.7    sff-load.2          sra-sort          tblastn_vdb.2.2.32-2.5.7  vdb-decrypt.2     vdb-passwd
+[mdp15cmg@iceberg-login1 bin]$ cd ../..
+[mdp15cmg@iceberg-login1 TDP-43]$ ls
+input  ravitsinput  sratoolkit.2.5.7-centos_linux64  sratoolkit.2.5.7-centos_linux64.tar.gz  tdp43_analysis.SGE  tdp43_analysis.SGE.e9993500  tdp43_analysis.SGE.o9993500  tdp43_project  tdp43_project.csv
+[mdp15cmg@iceberg-login1 TDP-43]$ cd ravitsinput/
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+fastq-dump      SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ rm fastq-dump 
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ ./fastq-dump SRR3038243.sra
+-bash: ./fastq-dump: No such file or directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ ..//shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-centos_linux64/bin/fastq-dump SRR3038243.sra
+-bash: ..//shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-centos_linux64/bin/fastq-dump: No such file or directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ ../shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-centos_linux64/bin/fastq-dump SRR3038243.sra
+-bash: ../shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-centos_linux64/bin/fastq-dump: No such file or directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ /shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-centos_linux64/bin/fastq-dump SRR3038243.sra
+2016-03-09T15:41:34 fastq-dump.2.5.7 err: item not found while constructing within virtual database module - the path 'SRR3038243.sra' cannot be opened as database or table
+[mdp15cmg@iceberg-login1 ravitsinput]$ vim ~/.bashrc
+[mdp15cmg@iceberg-login1 ravitsinput]$ source ~/.bashrc
+[mdp15cmg@iceberg-login1 ravitsinput]$ which fastq-dump
+/shared/hidelab2/user/mdp15cmg/TDP-43/sratoolkit.2.5.7-centos_linux64/bin/fastq-dump
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump SRR3038253.sra
+^C2016-03-09T15:43:54 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038253.sra
+ls
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+SRR3038253.fastq  SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+SRR3038253.sra    SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump SRR30382*.sra
+^C2016-03-09T15:47:20 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038253.sra
+2016-03-09T15:47:20 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038254.sra
+2016-03-09T15:47:20 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038255.sra
+2016-03-09T15:47:21 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038256.sra
+2016-03-09T15:47:21 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038257.sra
+2016-03-09T15:47:21 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038258.sra
+2016-03-09T15:47:21 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038259.sra
+2016-03-09T15:47:21 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038260.sra
+2016-03-09T15:47:21 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038261.sra
+2016-03-09T15:47:21 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038262.sra
+2016-03-09T15:47:21 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038263.sra
+2016-03-09T15:47:21 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038264.sra
+2016-03-09T15:47:22 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038265.sra
+2016-03-09T15:47:22 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038266.sra
+2016-03-09T15:47:22 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038267.sra
+2016-03-09T15:47:22 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038268.sra
+2016-03-09T15:47:22 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038269.sra
+2016-03-09T15:47:22 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038270.sra
+2016-03-09T15:47:22 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038271.sra
+2016-03-09T15:47:22 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038272.sra
+2016-03-09T15:47:23 fastq-dump.2.5.7 err: process canceled while executing process - failed SRR3038273.sra
+ls
+Read 0 spots total
+Written 0 spots total
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+SRR3038253.fastq  SRR3038255.fastq  SRR3038257.fastq  SRR3038259.fastq  SRR3038261.fastq  SRR3038263.fastq  SRR3038265.fastq  SRR3038267.fastq  SRR3038269.fastq  SRR3038271.fastq  SRR3038273.fastq
+SRR3038253.sra    SRR3038255.sra    SRR3038257.sra    SRR3038259.sra    SRR3038261.sra    SRR3038263.sra    SRR3038265.sra    SRR3038267.sra    SRR3038269.sra    SRR3038271.sra    SRR3038273.sra
+SRR3038254.fastq  SRR3038256.fastq  SRR3038258.fastq  SRR3038260.fastq  SRR3038262.fastq  SRR3038264.fastq  SRR3038266.fastq  SRR3038268.fastq  SRR3038270.fastq  SRR3038272.fastq
+SRR3038254.sra    SRR3038256.sra    SRR3038258.sra    SRR3038260.sra    SRR3038262.sra    SRR3038264.sra    SRR3038266.sra    SRR3038268.sra    SRR3038270.sra    SRR3038272.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ rm *.fastq
+[mdp15cmg@iceberg-login1 ravitsinput]$ ls
+SRR3038253.sra  SRR3038255.sra  SRR3038257.sra  SRR3038259.sra  SRR3038261.sra  SRR3038263.sra  SRR3038265.sra  SRR3038267.sra  SRR3038269.sra  SRR3038271.sra  SRR3038273.sra
+SRR3038254.sra  SRR3038256.sra  SRR3038258.sra  SRR3038260.sra  SRR3038262.sra  SRR3038264.sra  SRR3038266.sra  SRR3038268.sra  SRR3038270.sra  SRR3038272.sra
+[mdp15cmg@iceberg-login1 ravitsinput]$ ./run32
+-bash: ./run32: No such file or directory
+[mdp15cmg@iceberg-login1 ravitsinput]$ fastq-dump SRR30382*.sra
+Read 21117915 spots for SRR3038253.sra
+Written 21117915 spots for SRR3038253.sra
+Read 30222648 spots for SRR3038254.sra
+Written 30222648 spots for SRR3038254.sra
+Read 22359173 spots for SRR3038255.sra
+Written 22359173 spots for SRR3038255.sra
+Read 35390202 spots for SRR3038256.sra
+Written 35390202 spots for SRR3038256.sra
+Read 35702384 spots for SRR3038257.sra
+Written 35702384 spots for SRR3038257.sra
+Read 36089192 spots for SRR3038258.sra
+Written 36089192 spots for SRR3038258.sra
+Read 30616734 spots for SRR3038259.sra
+Written 30616734 spots for SRR3038259.sra
+Read 22359173 spots for SRR3038260.sra
+Written 22359173 spots for SRR3038260.sra
+Read 30508179 spots for SRR3038261.sra
+Written 30508179 spots for SRR3038261.sra
+Read 31944963 spots for SRR3038262.sra
+Written 31944963 spots for SRR3038262.sra
+Read 29643723 spots for SRR3038263.sra
+Written 29643723 spots for SRR3038263.sra
+Read 11331121 spots for SRR3038264.sra
+Written 11331121 spots for SRR3038264.sra
+Read 19885546 spots for SRR3038265.sra
+Written 19885546 spots for SRR3038265.sra
+Read 34754975 spots for SRR3038266.sra
+Written 34754975 spots for SRR3038266.sra
+Read 32978331 spots for SRR3038267.sra
+Written 32978331 spots for SRR3038267.sra
+Read 36101437 spots for SRR3038268.sra
+Written 36101437 spots for SRR3038268.sra
+Read 34575411 spots for SRR3038269.sra
+Written 34575411 spots for SRR3038269.sra
+Read 30899786 spots for SRR3038270.sra
+Written 30899786 spots for SRR3038270.sra
+Read 26241715 spots for SRR3038271.sra
+Written 26241715 spots for SRR3038271.sra
+Read 11632246 spots for SRR3038272.sra
+Written 11632246 spots for SRR3038272.sra
+Read 32710741 spots for SRR3038273.sra
+Written 32710741 spots for SRR3038273.sra
+Read 597065595 spots total
+Written 597065595 spots total

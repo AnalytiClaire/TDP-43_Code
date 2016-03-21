@@ -6,7 +6,7 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionA
 # 
 # write.csv(x = Counts, file = "counts_petrucelli.csv")
 
-Counts <- read.csv(file = "FCX_Petrucelli.csv", header = TRUE)
+Counts <- read.csv(file = "ravitsannotated_combined.counts.csv", header = TRUE)
 
 Counts[Counts == 0] <- NA
 # Counts[Counts<30] <- NA
@@ -20,11 +20,12 @@ Counts <- na.omit(Counts)
 library(limma)
 library(edgeR)
 
-# rownames(Counts)<-Counts[,1]
-
-# Counts[,1] <- NULL
-Countnum <- Counts[,2:28]
+Countnum <- Counts[,1:22]
 # Counts <- data.matrix(Counts)
+
+Countnum <- read.csv(file = "pet.counts.clean.csv")
+rownames(Countnum)<-Countnum[,1]
+Countnum[,1] <- NULL
 
 #DGElist
 dge <- DGEList(counts=Countnum)
@@ -44,13 +45,25 @@ fit <- lmFit(v,design)
 fit <- eBayes(fit)
 result<-topTable(fit, coef="TreatPatient", adjust="BH", number=nrow(Countnum)) #"BH" adjust for multiple hypothesis testing
 result <- merge(result, Counts, by="row.names", all=TRUE)
-result <- result[,2:8]
+result <- result[,1:7]
 
-uniqueresult <- result[!duplicated(result[,7]),]
+#Count tables from bcbio have ensembl gene IDs. This must be annotated with HGNC symbols
+
+#Download the HGNC symbols and gene IDs using a vector containing the IDs from results
+library(biomaRt)
+genes <- as.vector(result[,1])
+mart <- useMart("ENSEMBL_MART_ENSEMBL",dataset="hsapiens_gene_ensembl", host="www.ensembl.org") 
+mart_back <- getBM(attributes =c("ensembl_gene_id", "hgnc_symbol"), filters="ensembl_gene_id", values=genes,  mart=mart)
+
+#Merge the tables using ensembl ID
+result <- merge(result, mart_back, by.x = "Row.names", by.y = "ensembl_gene_id")
+result[,1] <- NULL
+uniqueresult <- result[!duplicated(result$hgnc_symbol),]
+rownames(uniqueresult) <- uniqueresult$hgnc_symbol
 genesort <- uniqueresult[order(uniqueresult$adj.P.Val),]
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_2a/")
-write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=TRUE, quote = FALSE)
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/")
+write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep="16_3_17"), sep="\t", row.names=TRUE, quote = FALSE)
 
 topgene <- genesort[1:1000,]
 write.csv(x = topgene, file = paste(analysis.name,"_ap_1000", sep = ""))

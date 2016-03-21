@@ -1,11 +1,13 @@
 ###Random permutations for Differential Expression##
 
 #load the total number of unique genes for each data set
-A <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_2a/PETrankeduniqueresult.csv")
-B <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_2a/RAVrankeduniqueresult.csv")
-# sALS <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/SALSrankeduniqueresult.csv")
-# FTLD <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/FTLDrankeduniqueresult.csv")
-# VCP <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/TopGenes_2016-02-15/VCPrankeduniqueresult.csv")
+A <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15/C9rankeduniqueresult.csv")
+B <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15/CHrankeduniqueresult.csv")
+C <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15/sALSrankeduniqueresult.csv")
+D <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15/FTLDrankeduniqueresult.csv")
+E <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15/VCPrankeduniqueresult.csv")
+F <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_17/PET16_3_17rankeduniqueresult.csv")
+G <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_17/RAV16_3_17rankeduniqueresult.csv")
 
 # ## Save annotation file locations to variable
 # annotation.U133plus2<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133_Plus_2.na35.annot.csv/HG-U133_Plus_2.na35.annot.txt"
@@ -50,7 +52,7 @@ r <- c(1:m) #store repetition numbers in vector "r"
 
 for (j in 1:m)
 {
-  random1 <- sample (A$GeneID, size=2000, replace=F)
+  random1 <- sample (A$Gene.Symbol, size=3000, replace=F)
   random2 <- sample (B$Gene_symbol, size=2000, replace=F)
   # random3 <- sample (FTLD$Gene.Symbol, size=5000, replace=F)
   # random4 <- sample (sALS$Gene.Symbol, size=5000, replace=F)

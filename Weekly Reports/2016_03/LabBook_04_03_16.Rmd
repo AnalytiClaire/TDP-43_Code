@@ -364,7 +364,7 @@ I then decided to compared the overlap of these lists with the list generated fr
 
 Below is a table showing the consensus genes at different threshold combinations. As you increase the microarray threshold, new genes are coloured blue. As you increase the RNA seq threshold, new genes are in red. New genes to both are in purple. Black shows genes previously identified in both, and thus are genes that appear as consensus soonest. 
 
-![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/ResultTables/GeneExpression/RNA-seq_Microarray_Consensus.png)
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/RNA-Seq/RNA-seq_Microarray_Consensus.png)
 
 The first thing to note is that TARDBP is in this list. 
 
@@ -393,6 +393,11 @@ Before I get too far with analysis, I need to perform random permutation tests t
 | pValue     | 0.12     | 0.0062   | <.001    | <.001    | <.001    |
 
 Top 1000 is not significant however top 2000 and upwards are very significant. The middle row shows the average random consensus as a comparison. 
+Running the genes through GeneMANIA shows that they are somewhat tightly co-expressed, and this co-expression is increased with the addition of 20 other genes.
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/RNA-Seq/genemania_network.png)
+
+
 A problem I feel I have is that the two RNA data sets were not quite analysed the same way as the two groups provided slightly different pre-processed information. The Petrucelli data came as a count matrix however the Ravits data was a matrix of expression values (like in microarrays). This meant that I'm not entirely sure what their criterion were for analysis. I believe that I should generate the count matrix and remove all values below a certain threshold. At the moment I have just removed zero values but since counts can go into the thousands, taking values below 50 seems suspect.I will need to ask what others recommend. 
 
 This problem can only be answered by downloading the FastQ files for both and doing the analysis myself. This requires getting familiar with using a bash shell to download the files.

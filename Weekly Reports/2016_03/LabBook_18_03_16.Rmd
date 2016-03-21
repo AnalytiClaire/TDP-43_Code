@@ -1,0 +1,259 @@
+---
+title: "LabBook_18_03_16"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=50))
+```
+
+#Monday
+
+After admin, I had to think about how I was going to approach the next stage of my analysis. In my monday meeting with Win, we talked about how we need to understand the context of the consensus genes I generated with MA and RNAseq data. What I need to work out how to do is to generate a kind of network in which the nodes are not co-expression values, but the presence of coexpression in multiple data sets. See the image below:
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/Cytoscape/Networkexample.png)
+
+Using this I can investigate how consistently genes are coexpressed in different disease contexts. 
+
+\newpage
+
+Also, I managed to get Jiantao's GRAIL analysis to work. The seed genes are a list of genes known to be associated with the disease or that represent some kind of disease signature. The query genes are those that you have found via your own analysis. I managed to generate this table:
+
+| ID        | tmBestGene | tmBestPv    | coBestGene | coBestPv    | Flag  |
+|-----------|------------|-------------|------------|-------------|-------|
+| CST3      | CST3       | 0.052951201 | CST3       | 0.001231177 | TRUE  |
+| ATXN2     | ATXN2      | 0.000718823 | ATXN2      | 0.003215914 | FALSE |
+| SPG11     | SPG11      | 0.468656424 | SPG11      | 0.006591873 | FALSE |
+| TARDBP    | TARDBP     | 0.021439303 | TARDBP     | 0.007150317 | TRUE  |
+| FIG4      | FIG4       | 1           | FIG4       | 0.010119741 | FALSE |
+| VCP       | VCP        | 0.003218942 | VCP        | 0.010514627 | FALSE |
+| ALS2      | ALS2       | 5.48E-08    | ALS2       | 0.020922795 | FALSE |
+| PFN1      | PFN1       | 0.206251512 | PFN1       | 0.024407396 | FALSE |
+| ACTN1     | ACTN1      | 0.201768694 | ACTN1      | 0.048444135 | TRUE  |
+| UBQLN2    | UBQLN2     | 0.015915903 | UBQLN2     | 0.052282078 | FALSE |
+| SIGMAR1   | SIGMAR1    | 0.218781207 | SIGMAR1    | 0.061560365 | FALSE |
+| HNRNPA1   | HNRNPA1    | 0.001313368 | HNRNPA1    | 0.064107491 | FALSE |
+| RPLP2     | RPLP2      | 0.793242641 | RPLP2      | 0.076818327 | TRUE  |
+| GRN       | GRN        | 0.179913159 | GRN        | 0.083107837 | FALSE |
+| RGS2      | RGS2       | 0.443510298 | RGS2       | 0.086157508 | TRUE  |
+| SERBP1    | SERBP1     | 0.304169308 | SERBP1     | 0.093179592 | TRUE  |
+| SETX      | SETX       | 1.35E-07    | SETX       | 0.110166356 | FALSE |
+| OPTN      | OPTN       | 0.009115922 | OPTN       | 0.111098532 | FALSE |
+| HNRNPA2B1 | HNRNPA2B1  | 0.00048968  | HNRNPA2B1  | 0.123012254 | FALSE |
+| C9orf72   | C9orf72    | 1           | C9orf72    | 0.126143766 | FALSE |
+| ANXA1     | ANXA1      | 0.114425196 | ANXA1      | 0.140357244 | TRUE  |
+| TARS      | TARS       | 1           | TARS       | 0.150617296 | TRUE  |
+| KCTD12    | KCTD12     | 0.781257367 | KCTD12     | 0.156459409 | TRUE  |
+| JAG1      | JAG1       | 0.202839734 | JAG1       | 0.170970564 | TRUE  |
+| ETS2      | ETS2       | 0.184360756 | ETS2       | 0.173973587 | TRUE  |
+| TCF4      | TCF4       | 0.277906629 | TCF4       | 0.217432273 | TRUE  |
+| PLEKHB1   | PLEKHB1    | 0.303471505 | PLEKHB1    | 0.224219972 | TRUE  |
+| VAPB      | VAPB       | 0.009797937 | VAPB       | 0.341290234 | FALSE |
+| NIPA1     | NIPA1      | 0.000181018 | NIPA1      | 0.371141516 | FALSE |
+| SYNM      | SYNM       | 0.053162771 | SYNM       | 0.399472304 | TRUE  |
+| GBAS      | GBAS       | 0.497238086 | GBAS       | 0.438578165 | TRUE  |
+| CHMP2B    | CHMP2B     | 0.010602707 | CHMP2B     | 0.542451571 | FALSE |
+| SQSTM1    | SQSTM1     | 1.17E-05    | SQSTM1     | 0.582233211 | FALSE |
+| COX6A1    | COX6A1     | 0.813982412 | COX6A1     | 0.597855078 | TRUE  |
+| SPARC     | SPARC      | 0.027254148 | SPARC      | 0.640741503 | TRUE  |
+| RAB40B    | RAB40B     | 0.789049901 | RAB40B     | 0.67444711  | TRUE  |
+| PFDN1     | PFDN1      | 0.457723279 | PFDN1      | 0.679673863 | TRUE  |
+| ANG       | ANG        | 0.110533633 | ANG        | 0.685218181 | FALSE |
+| BGN       | BGN        | 0.211052052 | BGN        | 0.797808694 | TRUE  |
+| DCN       | DCN        | 0.212907252 | DCN        | 0.836665496 | TRUE  |
+| GFAP      | GFAP       | 0.21162059  | GFAP       | 1           | FALSE |
+| HBB       | HBB        | 0.307807658 | HBB        | 1           | TRUE  |
+
+I believe this performs some kind of prioritisation, but I may need to talk to Jiantao more about how to interpret this. 
+
+#Tuesday
+
+I spent a lot of time today reading about building networks. I read a paper by Lee et al 2015 (Topological Network Analysis of Differentially Expressed Genes in Cancer Cells with Acquired Gefitinib Resistance) and although the experimental design wasn't fantastic, it gave me an idea that you can merge your data sets by "meta-analysis". I'm not sure how easy that is when I'm using multiple platforms, but on a single platform that could work.
+
+I also read another paper in which they stated that ensuring the direction of expression is the same across samples for DEGs is important. I may have a problem here as very few of my DEGs are all upregulated, and none are all downregulated. I didn't think that was necessarily a problem as we're talking about dysregulated mechanisms (could be dysregulated in different ways...?) but Win said it was important. So I'm not sure how to tackle that.
+
+#Wednesday
+
+In order to stars
+
+Today I spent most of the day writing a script to conduct pairwise correlation on a matrix of expression values. It goes:
+
+```{r, eval=FALSE}
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15")
+
+#load dataset
+exprsC9 <- read.csv("C9rankeduniqueresult.csv")
+
+#Load list of interesting genes
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/")
+Genelist <- read.csv("MADEGs.csv")
+
+#Make gene symbol row names
+rownames(exprsC9) <- exprsC9$Gene.Symbol
+exprsC9pat <- exprsC9[,52:59]
+
+#Make gene symbol a column
+exprsC9pat <- cbind(exprsC9pat, exprsC9$Gene.Symbol)
+colnames(exprsC9pat)[9] <- "Gene.Symbol"
+
+#Merge by interesting gene names with expression to form matrix
+C9patgene <- merge(Genelist, exprsC9pat, by.x = "Gene", by.y = "Gene.Symbol")
+rownames(C9patgene) <- C9patgene$Gene
+C9patgene[,1] <- NULL
+
+
+##PSYCH METHOD###
+library(psych)
+
+#Generate matrix of correlation and p values
+#cortest <- corr.test(t(C9patgene), use = "pairwise", method = "pearson", adjust = "BH") #if genes are rownames, the t is important
+
+#Extract results table
+cortestoutput <- cortest$ci
+
+#Select significant results
+sigoutput <- subset(cortestoutput, cortestoutput$p < 0.05)
+write.csv(sigoutput, file = "C9allsigcoexpr.csv")
+```
+
+I have a few questions about it, mainly whether the pearson statistic and Benjamin-Hochberg statistic are the right choices, and what I can do about small sample sizes. Win said to contact Yered as this kind of this is basically his whole PhD.
+
+#Thursday
+
+After receiving a response from Yered, he recommended that I calculate the correlation thus:
+
+```{r, eval=FAlSE}
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15")
+
+#load dataset
+exprsC9 <- read.csv("C9rankeduniqueresult.csv")
+
+#Load list of interesting genes
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/")
+Genelist <- read.csv("MADEGs.csv")
+
+#Make gene symbol row names
+rownames(exprsC9) <- exprsC9$Gene.Symbol
+exprsC9pat <- exprsC9[,52:59]
+
+#Make gene symbol a column
+exprsC9pat <- cbind(exprsC9pat, exprsC9$Gene.Symbol)
+colnames(exprsC9pat)[9] <- "Gene.Symbol"
+
+#Merge by interesting gene names with expression to form matrix
+C9patgene <- merge(Genelist, exprsC9pat, by.x = "Gene", by.y = "Gene.Symbol")
+rownames(C9patgene) <- C9patgene$Gene
+C9patgene[,1] <- NULL
+
+
+##For loop for generating regression values and p values
+C9patgene <- t(C9patgene)
+
+reg <- matrix(0, ncol(C9patgene), ncol(C9patgene))
+p.value <- matrix(0, ncol(C9patgene), ncol(C9patgene))
+
+for (i in 1:ncol(C9patgene)){
+  for (j in 1:ncol(C9patgene)){
+    reg[i,j] <- cor.test(C9patgene[,i], C9patgene[,j], method = "kendall")$estimate
+    rownames(reg) <- colnames(reg) <- colnames(C9patgene)
+  }}
+
+for (i in 1:ncol(C9patgene)){
+  for (j in 1:ncol(C9patgene)){
+    p.value[i,j] <- cor.test(C9patgene[,i], C9patgene[,j], method = "kendall")$p.value
+  rownames(p.value) <- colnames(p.value) <- colnames(C9patgene)
+}}
+
+##Only take upper triangle without diagonal (all comparisons are currently doubled)
+ptri <- p.value
+ptri[lower.tri(ptri, diag = TRUE)] <- NA
+
+#Turn into vector
+library(gdata)
+p.vec <- unmatrix(ptri)
+#Remove NA values
+p.vec <- na.omit(p.vec)
+#Multiple hypothesis testing correction 
+p.adj <- p.adjust(p.vec, method = "fdr", n = length(p.vec))
+
+#Create results table
+reg.mat <- unmatrix(reg)
+reg.mat <- as.data.frame(reg.mat)
+p.adj <- as.data.frame(p.adj)
+p.mat <- as.data.frame(p.vec)
+
+pvals <- merge(p.adj, p.mat, by.x = "row.names", by.y = "row.names")
+rownames(pvals)<- pvals$Row.names
+pvals[,1] <- NULL
+results <- merge(pvals, reg.mat, by.x = "row.names", by.y = "row.names")
+rownames(results)<- results$Row.names
+results[,1] <- NULL
+results <- results[order(results$p.vec),]
+```
+
+After comparing this with the psych method, it seems that the psych method wasn't putting the adjusted p values in the p value table. Consequently it may be much quicker to use the psych method but I think I need to discuss this with everyone else as we should really standardise this process. Also, I need to ask them about whether pearsons or spearmans is more appropriate. Although spearman's is orientated towards ordinal data, it is nonparametric so might be more appropriate for my small sample numbers. However, Yered did give me some information on how to do the meta-analysis that I mentioned before, which would allow me larger numbers.
+
+#Friday
+
+Today the RNA seq data has finished processing so my aim was to calculate the differetial expression and look at the consensus genes. It turned out to be a little trickier than expected because the gene names provided by BCbio were awful, so I had to reannotate them using the ensembl IDs. To do this I used biomart but Sandeep didn't think this was the best method to use (though I'm not exactly sure why not). 
+
+```{r, eval=FALSE}
+Count tables from bcbio have ensembl gene IDs. This must be annotated with HGNC symbols
+
+#Download the HGNC symbols and gene IDs using a vector containing the IDs from results
+library(biomaRt)
+genes <- as.vector(result[,1])
+mart <- useMart("ENSEMBL_MART_ENSEMBL",dataset="hsapiens_gene_ensembl", host="www.ensembl.org")
+mart_back <- getBM(attributes =c("ensembl_gene_id", "hgnc_symbol"), filters="ensembl_gene_id", values=genes,  mart=mart)
+
+```
+
+It worked fine so I'm not sure what the problem is. I conducted the consensus and these were the results:
+
+| Top 3000 | Top 4000 | Top 5000 |
+|----------|----------|----------|
+| PFDN1    | NKTR     | TUG1     |
+|          | PFDN1    | CSRP1    |
+|          | TCF4     | PLOD2    |
+|          | DCN      | SPARC    |
+|          |          | CST3     |
+|          |          | TUBB4B   |
+|          |          | JAG1     |
+|          |          | BGN      |
+|          |          | KCTD12   |
+|          |          | NKTR     |
+|          |          | ACTN1    |
+|          |          | BPTF     |
+|          |          | PFDN1    |
+|          |          | TARDBP   |
+|          |          | PLEKHB1  |
+|          |          | SERBP1   |
+|          |          | PRPF3    |
+|          |          | TCF4     |
+|          |          | ZFYVE26  |
+|          |          | ZFP36    |
+|          |          | KPNA6    |
+|          |          | DCN      |
+|          |          | SCN1B    |
+|          |          | MPHOSPH9 |
+|          |          | ZNF518A  |
+|          |          | PTPN13   |
+|          |          | RAB40B   |
+|          |          | PPP1R7   |
+|          |          | GBAS     |
+|          |          | ANXA1    |
+
+| .       | Top 3000 | Top 4000 | Top 5000 |
+|---------|----------|----------|----------|
+| P value | 0.1016   | 0.3612   | 0.0073   |
+| Mean    | 0.5303   | 3.969    | 19       |
+
+
+It's nice to see that the genes remained largely similar to before, and also we gained 8 more genes than we had otherwise. 
+
+The next problem I came across was that the ensembl ids for the microarray data are annotated in the style for the annotation file, which includes all the possible genes that match to each probeset. This means the format is ensemblID /// someotherID which means that it will not match even though it's the same ID. So, there might be some genes being missed out because the IDs are not matching. Consequently I ended up having to manually adapt the column in excel to split the column using / as a deliminator and thus only the ensembl ID was left. This would mean intersecting by ensembl ID and then converting back afterwards.
+
+In lab meeting, suggestions for correlation analysis were to consider weighting the experiments by number of samples, to use robust linear regression (rlm function in R), and to consider a 'leave one out' system to see how each dataset contributes to the overall output of consensus genes.

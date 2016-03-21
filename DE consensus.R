@@ -1,24 +1,33 @@
 #####DIFFERENTIAL GENE EXPRESSION INTERSECT
 #takes csv files of top X DE genes and identifies any consensus genes 
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_4_1/")
-A <- read.csv(file = "PetMar1_ap_2000")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_ensemblID/")
+A <- read.csv(file =   "C9b_ap_5000.csv")
+
+B <- read.csv(file =   "CHb_ap_5000.csv")
  
-B <- read.csv(file = "RavMar1_ap_2000")
+C <- read.csv(file = "sALSb_ap_5000.csv")
  
-C <- read.csv(file = "sALS_ap_5000")
+D <- read.csv(file = "FTLDb_ap_5000.csv")
 
-D <- read.csv(file = "FTLD_ap_5000")
+E <- read.csv(file =  "VCPb_ap_5000.csv")
 
-E <- read.csv(file = "VCP_ap_5000")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_21/")
+
+F <- read.csv(file =  "PETb_ap_5000")
+
+G <- read.csv(file =  "RAVb_ap_5000")
 
 
-A_DE <- A$X
-B_DE <- B$X
-C_DE <- C$Gene.Symbol
-D_DE <- D$Gene.Symbol
-E_DE <- E$Gene.Symbol
-overlap <- Reduce(intersect, list(A_DE, B_DE, C_DE, D_DE, E_DE))
+A_DE <- A$Ensembl
+B_DE <- B$Ensembl
+C_DE <- C$Ensembl
+D_DE <- D$Ensembl
+E_DE <- E$Ensembl
+F_DE <- F$Row.names
+G_DE <- G$Row.names
+
+overlap <- Reduce(intersect, list(A_DE, B_DE, C_DE, D_DE, E_DE, F_DE, G_DE))
 print(overlap)
 
 write.csv(overlap, file = "overlap.csv")

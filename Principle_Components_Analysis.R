@@ -1,8 +1,9 @@
 
 ### 2D Principle Component Analysis ###
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets")
-load("TDP-43 Analysis Environment.RData")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/Ravits/")
+pet <- read.csv("counts_petrucelli.csv")
+rav <- read.csv("GSE76220_ALS_LCM_RPKM.csv")
 
 library(ggplot2)
 library(gridExtra)
