@@ -45,19 +45,21 @@ G <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressio
 
 
 #indicate the number of overlapping genes identified by DE analysis
-test <- 158
+test <- 3
 
 m=10000 #number of repetitions 
 r <- c(1:m) #store repetition numbers in vector "r"
 
 for (j in 1:m)
 {
-  random1 <- sample (A$Gene.Symbol, size=3000, replace=F)
-  random2 <- sample (B$Gene_symbol, size=2000, replace=F)
-  # random3 <- sample (FTLD$Gene.Symbol, size=5000, replace=F)
-  # random4 <- sample (sALS$Gene.Symbol, size=5000, replace=F)
-  # random5 <- sample (VCP$Gene.Symbol, size=5000, replace=F)
-  random <- Reduce(intersect, list(random1, random2))
+  random1 <- sample (A$Gene.Symbol, size=3000, replace=FALSE)
+  random2 <- sample (B$Gene.Symbol, size=3000, replace=FALSE)
+  random3 <- sample (C$Gene.Symbol, size=3000, replace=FALSE)
+  random4 <- sample (D$Gene.Symbol, size=3000, replace=FALSE)
+  random5 <- sample (E$Gene.Symbol, size=3000, replace=FALSE)
+  random6 <- sample (F$X,           size=3000, replace=FALSE)
+  random7 <- sample (G$X,           size=3000, replace=FALSE)
+  random <- Reduce(intersect, list(random1, random2, random3, random4, random5, random6, random7))
   r[j] <- length(random)
 }
 

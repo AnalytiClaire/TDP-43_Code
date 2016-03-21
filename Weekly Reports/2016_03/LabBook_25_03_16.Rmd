@@ -67,6 +67,8 @@ When combined with the HGNC generated genes, I now have an intersect list of 45 
 
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Screen Shot 2016-03-21 at 11.47.05.png)
 
-This is the geneMANIA output. It is clear that there is a high level of coexpression according to current literature.
+This is the geneMANIA output. It is clear that there is a high level of coexpression according to current literature. It is important to note that TUG1 was not recognised potentially because it is a non-protein coding RNA. 
 
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Screen Shot 2016-03-21 at 11.27.43.png)
+
+
