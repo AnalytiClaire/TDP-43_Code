@@ -71,12 +71,12 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionA
 write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult_ensID.csv", sep="16_3_21"), sep="\t", row.names=TRUE, quote = FALSE)
 
 topgene <- genesort[1:1000,]
-write.csv(x = topgene, file = paste(analysis.name,"_ap_1000.csv", sep = "b"))
+write.csv(x = topgene, file = paste(analysis.name,"_ap_1000.csv", sep = ""))
 topgene <- genesort[1:2000,]
-write.csv(x = topgene, file = paste(analysis.name,"_ap_2000.csv", sep = "b"))
+write.csv(x = topgene, file = paste(analysis.name,"_ap_2000.csv", sep = ""))
 topgene <- genesort[1:3000,]
-write.csv(x = topgene, file = paste(analysis.name,"_ap_3000.csv", sep = "b"))
+write.csv(x = topgene, file = paste(analysis.name,"_ap_3000.csv", sep = ""))
 topgene <- genesort[1:4000,]
-write.csv(x = topgene, file = paste(analysis.name,"_ap_4000.csv", sep = "b"))
+write.csv(x = topgene, file = paste(analysis.name,"_ap_4000.csv", sep = ""))
 topgene <- genesort[1:5000,]
-write.csv(x = topgene, file = paste(analysis.name,"_ap_5000.csv", sep = "b"))
+write.csv(x = topgene, file = paste(analysis.name,"_ap_5000.csv", sep = ""))

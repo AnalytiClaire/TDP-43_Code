@@ -72,3 +72,27 @@ This is the geneMANIA output. It is clear that there is a high level of coexpres
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Screen Shot 2016-03-21 at 11.27.43.png)
 
 
+#Tuesday
+
+Since doing the intersect experiment left me with genes generated from using Ensembl IDs rather than HGNC symbols, I wanted to go through the files I had used to generate the consensus from HGNC symbols to check the extra genes were present but were just suffering from naming issues. As it turned out, 10 of the genes that were present in all of the ensembl ID lists were not present in all of the HGNC lists. It appears that the CHMP2B data set seems to be the most common culprit, potentially because there are only 3 patients. 
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Screen Shot 2016-03-22 at 11.32.39.png)
+
+To understand if any of these genes were important, I put the remaining 35 geens into geneMANIA, and asked it to add the 100 most co-expressed genes. Of the added genes, none of which corresponded to the 10 genes identified. However, when I compared the geneMANIA results with and without those 10 genes, the network score was 10% higher with those genes than without. So I may consider keeping them depending on what the others say.
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Screen Shot 2016-03-22 at 15.24.49.png)
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Screen Shot 2016-03-22 at 15.26.15.png)
+
+The genes clearly coexpress with multiple other genes in the list, and technically they were just as validly generated as the rest, I just don't know quite how this happened. I'm really starting to learn how delicate data is...
+
+\newpage
+
+Today I also worked on my abstract for the presentation I have to do on the 13th April. 
+
+**Identification of a Molecular Signature for TDP-43 Pathology** 
+   
+*Green, C., Cooper-Knock, J. & Hide, W.*
+   
+TDP-43 pathology is a histological hallmark for many neurodegenerative conditions, including amyotrophic lateral sclerosis and Alzheimer’s disease. In affected individuals, TDP-43 protein is exported from the nucleus and aggregated into toxic cytoplasmic inclusions. These inclusions are believed to contribute to the neurodegenerative process, but the nature of this contribution is currently unclear, largely due to the variability in disease phenotypes. Consequently, this project has two aims; firstly, to identify cellular functions that are consistently dysregulated across all instances of TDP-43 pathology (thus generating a molecular signature), and secondly to identify specific components of that signature which drive the disease process, and are thus potential therapeutic targets. To generate the molecular signature, differential gene expression analysis was performed using the R limma package on 7 independent data sets: 5 from microarray experiments and 2 from RNA-Seq. The most differentially expressed genes from each data set were intersected, leaving a consensus of 45. Initial analysis of global co-expression indicates these genes are tightly co-expressed, and enrich for functions involved in cellular structure and RNA stability. High levels of co-expression suggest a functional relationship between the genes, and this function appears to relate to processes known to be associated with TDP-43 protein and neurodegeneration. Future investigations will involve validation of this signature in a separate cohort to ensure its robustness, as well as generation of disease-specific co-expression networks - including the incorporation of associated disease loci – as a data-driven approach to identifying both functional dysregulation and key drivers of disease.
+
+
