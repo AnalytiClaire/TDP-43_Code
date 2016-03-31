@@ -87,6 +87,39 @@ The genes clearly coexpress with multiple other genes in the list, and technical
 
 \newpage
 
+*Functions*
+
+DEGS alone:
+
+| Feature                               | FDR      | Genes in network | Genes in genome |
+|---------------------------------------|----------|------------------|----------|
+| extracellular matrix organization     | 3.03E-01 | 6                | 290             |
+| regulation of RNA stability           | 3.03E-01 | 3                | 34              |
+| extracellular structure organization  | 3.03E-01 | 6                | 291             |
+| regulation of mRNA stability          | 3.03E-01 | 3                | 33              |
+| 3'-UTR-mediated mRNA stabilization    | 8.71E-01 | 2                | 10              |
+| dermatan sulfate metabolic process    | 9.40E-01 | 2                | 13              |
+| chondroitin sulfate catabolic process | 9.40E-01 | 2                | 13              |
+| dermatan sulfate biosynthetic process | 9.40E-01 | 2                | 12              |
+
+DEGS with 10 coexpressed genes
+
+| Feature                               | FDR      | Genes in network | Genes in genome |
+|---------------------------------------|----------|------------------|----------|
+|extracellular matrix organization	|4.94E-02|	7|	290|
+|'de novo' posttranslational protein folding|	4.94E-02	|4	|38|
+|'de novo' protein folding|	4.94E-02	|4	|43|
+|nuclear-transcribed mRNA catabolic process, nonsense-mediated decay|	4.94E-02|	5|	116|
+|extracellular structure organization	|4.94E-02|	7	|291|
+|mRNA catabolic process	|4.94E-02|	6	|190|
+|nuclear-transcribed mRNA catabolic process	|4.94E-02	|6	|179|
+|RNA catabolic process|	7.07E-02	|6	|215|
+|cellular protein complex disassembly	|7.97E-02|	5|	135|
+|mRNA binding |	1.22E-01|	4|	77|
+
+
+\newpage
+
 Today I also worked on my abstract for the presentation I have to do on the 13th April. 
 
 **Identification of a Molecular Signature for TDP-43 Pathology** 
@@ -94,5 +127,17 @@ Today I also worked on my abstract for the presentation I have to do on the 13th
 *Green, C., Cooper-Knock, J. & Hide, W.*
    
 TDP-43 pathology is a histological hallmark for many neurodegenerative conditions, including amyotrophic lateral sclerosis and Alzheimer’s disease. In affected individuals, TDP-43 protein is exported from the nucleus and aggregated into toxic cytoplasmic inclusions. These inclusions are believed to contribute to the neurodegenerative process, but the nature of this contribution is currently unclear, largely due to the variability in disease phenotypes. Consequently, this project has two aims; firstly, to identify cellular functions that are consistently dysregulated across all instances of TDP-43 pathology (thus generating a molecular signature), and secondly to identify specific components of that signature which drive the disease process, and are thus potential therapeutic targets. To generate the molecular signature, differential gene expression analysis was performed using the R limma package on 7 independent data sets: 5 from microarray experiments and 2 from RNA-Seq. The most differentially expressed genes from each data set were intersected, leaving a consensus of 45. Initial analysis of global co-expression indicates these genes are tightly co-expressed, and enrich for functions involved in cellular structure and RNA stability. High levels of co-expression suggest a functional relationship between the genes, and this function appears to relate to processes known to be associated with TDP-43 protein and neurodegeneration. Future investigations will involve validation of this signature in a separate cohort to ensure its robustness, as well as generation of disease-specific co-expression networks - including the incorporation of associated disease loci – as a data-driven approach to identifying both functional dysregulation and key drivers of disease.
+
+#Wednesday & Thursday
+
+As I was writing my abstract, I realised that I was misisng something. Although I had run the pathprint experiment and idenitifed the DEGs, I had to tie them back to oneanother somehow. The obvious way to do that would be to show that the genes which are DE are enriched in the list of genes associated with the pathways idenitified by pathprint. Unfortunately, only two genes were shown to be present in one of the pathways, and I'm not sure of the statistics but I don't believe that will be of any significance. Alternatively, it would have been nice if the pathways from pathprint matched the pathways enriched in the gene set, but that's not quite true. So, what I did was this - I took the list of genes from each pathway, and I inputted them into geneMANIA. This allowed for idenitfication of any significantly enriched funcitons within each pathway gene set. From this I found extracellular matrix organization enriched in two pathways ({F2,46} (Static Module), and Complement and coagulation cascades (KEGG)). There was no mention of any RNA-related functions. 
+
+My next idea was to look at the coexpression of my gene set with the pathway gene sets. If the genes in my gene set do not appear in the pathways, perhaps they at least coexpress. Below is an example, and the full collection of images can be found in the powerpoint "PPvsDEGs" in the reuslts folder. 
+
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/pathwaysvsDEGs/Prion diseases (KEGG)/Prion diseases (KEGG).png)
+*Prion diseases (KEGG)*
+
+
 
 

@@ -6,7 +6,7 @@ options(stringsAsFactors = FALSE)
 thres <-200
 
 ####C9_LCM ######
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/C9orf72_LCM") #set working directory to location of data
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM") #set working directory to location of data
 exp_C9.LCM <- read.csv ("eset_NineP_150612_exprs.csv", header=TRUE) #assign the .csv file to a variable, column headers are true
 row.names (exp_C9.LCM) <- exp_C9.LCM[,1] #specify that first column contains gene names
 exp_C9.LCM<- exp_C9.LCM[,2:12] #specify that all other columns are gene expression data
@@ -23,7 +23,7 @@ c9.lcm <- (names(t1))[1:thres] #take top 'thres' values
 
 
 ####CHMP2B_LCM ######
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/CHMP2B")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/CHMP2B")
 exp_CHMP2B.LCM <- read.csv ("eset_CHMP2B_250615_exprs nooutlier.csv", header=TRUE)
 row.names (exp_CHMP2B.LCM) <- exp_CHMP2B.LCM[,1]
 exp_CHMP2B.LCM<- exp_CHMP2B.LCM[,2:10]
@@ -42,7 +42,7 @@ CHMP2B.lcm <- (names(t1))[1:thres]
 
 ####sals_lcm###
 
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/FUS_SALS_LCM_CELfiles")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/FUS_SALS_LCM_CELfiles")
 exp_SALS.LCM <- read.csv ("eset_SALS_LCM_260615_exprs.csv", header=TRUE)
 row.names (exp_SALS.LCM) <- exp_SALS.LCM[,1]
 exp_SALS.LCM<- exp_SALS.LCM[,2:11]
@@ -57,7 +57,7 @@ SALS.lcm <- (names(t1))[1:thres]
 
 ####FTLD###
 
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/FTD-U.brain")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/FTD-U.brain")
 FTLD <- read.csv ("FTLD_expr_tdp43.csv", header=TRUE)
 row.names (FTLD) <- FTLD[,1]
 FTLD <- FTLD[,2:25]
@@ -93,7 +93,7 @@ FTLD_FCx <- (names(t1))[1:thres]
 
 ####VCP###
 
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/VCP.myopathy")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/VCP.myopathy")
 VCP <- read.csv ("eset_VCP.myopathy_170715_exprs.csv", header=TRUE)
 row.names (VCP) <- VCP[,1]
 VCP <- VCP[,2:11]
@@ -125,7 +125,5 @@ VCP.m <- (names(t1))[1:thres]
 overlap <- Reduce(intersect, list(c9.lcm, CHMP2B.lcm, SALS.lcm, FTLD_FCx,VCP.m)) #selects pathways that are present in all data sets listed
 print(overlap)
 
-#####
-C9_disease <- C9.LCM_pathprint[,1:]
 
 
