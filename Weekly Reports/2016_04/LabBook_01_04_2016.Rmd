@@ -1,0 +1,66 @@
+---
+title: "LabBook_01_04_16"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=50))
+```
+
+#Tuesday
+
+Today I put my abstract in, though it needed some changes. I realised later in the day that there was a bug in my pathprint code that meant in one of the data sets, the patients and controls were switched round. This means that the pathways that came out in the end were slightly different to the ones I had based my abstract on, which is annoying. 
+
+Here is the new list:
+
+Fructose and mannose metabolism (KEGG)   
+Ascorbate and aldarate metabolism (KEGG)   
+Starch and sucrose metabolism (KEGG)   
+Complement and coagulation cascades (KEGG)   
+{ESR1,24} (Static Module)  
+{HSPA8,34} (Static Module)   
+Biogenic Amine Synthesis (Wikipathways)   
+Signaling by Insulin receptor (Reactome)   
+Phototransduction (KEGG)   
+Cytokines and Inflammatory Response (Wikipathways)   
+Jak-STAT signaling pathway (KEGG)   
+Pentose and glucuronate interconversions (KEGG)   
+Nitrogen metabolism (KEGG)   
+Oxidative phosphorylation (KEGG)   
+Alanine, aspartate and glutamate metabolism (KEGG)   
+Prion diseases (KEGG)   
+Collecting duct acid secretion (KEGG)   
+Pantothenate and CoA biosynthesis (KEGG)   
+Valine, leucine and isoleucine biosynthesis (KEGG)   
+Valine, leucine and isoleucine degradation (KEGG)   
+Lysine degradation (KEGG)   
+Steroid hormone biosynthesis (KEGG)   
+Fat digestion and absorption (KEGG)   
+{LRP1,11} (Static Module)   
+Citrate cycle (TCA cycle) (KEGG)   
+Pentose phosphate pathway (KEGG)   
+Galactose metabolism (KEGG)   
+Cytokine-cytokine receptor interaction (KEGG)   
+Fatty acid metabolism (KEGG)   
+
+It's interesting because there is a lot of metabolic stuff, and a lot to do with immunity and inflammation. This list actually makes more sense than the previous results (which you would expect) as there is a stronger signal of metabolism and immunity. Unforunately the enrichment of DEGs isn't great, there is only two (NDUFS7 in oxidative phosphorylation and PLOD2 in lysine degredation)
+
+#Wednesday
+
+I worked a lot on my powerpoint presentation today. It's difficult to know what the right stuff to put in is, but I'm starting with putting everything down and then I can cut the stuff I don't need. 
+
+I redid some of the gene coexpression stuff with the DEGs and pathways, but I didn't do everything like last time because it was too much. I just took a couple and put them in the slides. I also added in physical interaction because some interesting stuff came out of that si U thought it was work adding. 
+
+#Thursday
+Still working on powerpoint. It's difficult to save time when you have to explain the concepts as well as the methodologies. 
+
+#Friday
+
+I gave the powerpoint stuff a rest and looked at the GWAS lists that John sent me. There were two lists, a GWAS central list for ALS SNPs and a top secret list called NeuroX generated in collaboration with some other group. 4 of my genes were present in the GWAS central lists, and none in the neuroX list. However, I looked at co-expression between my genes and the neuroX genes and this is the resulting image. 
+
+My genes are on the left, and the NeuroX genes are on the right
+Blue is co-expression, purple physical interaction and orange genetic interaction
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/J+CGenemania.png)

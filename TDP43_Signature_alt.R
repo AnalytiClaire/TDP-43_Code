@@ -3,7 +3,7 @@
 library (pathprint)
 options(stringsAsFactors = FALSE)
 
-thres <-225
+thres <-200
 
 ####C9_LCM ######
 setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM") #set working directory to location of data
@@ -16,9 +16,8 @@ C9.LCM_pathprint <- exprs2fingerprint(exp_C9.LCM, platform = "GPL570", species="
 d <- apply (C9.LCM_pathprint[,1:8], 1,mean ) #d = disease, average score of each gene across all samples
 c <-  apply (C9.LCM_pathprint[,9:11], 1,mean ) #c = control, average score of each gene across all samples
 t <- d-c #subtract mean disease score from mean control score to find difference
-t1<- t[order(abs(t), decreasing=T)] #order differential expression in decreasing order
+t1 <- t[order(abs(t), decreasing=T)] #order differential expression in decreasing order
 c9.lcm <- (names(t1))[1:thres] #take top 'thres' values
-
 
 
 
@@ -38,8 +37,6 @@ CHMP2B.lcm <- (names(t1))[1:thres]
 
 
 
-
-
 ####sals_lcm###
 
 setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/FUS_SALS_LCM_CELfiles")
@@ -49,11 +46,13 @@ exp_SALS.LCM<- exp_SALS.LCM[,2:11]
 
 SALS.LCM_pathprint <- exprs2fingerprint (exp_SALS.LCM, platform = "GPL570", species="human", progressBar=T)
 
-c <- apply (SALS.LCM_pathprint[,1:3], 1,median )
-d <-  apply (SALS.LCM_pathprint[,4:10], 1,median )
+c <- apply (SALS.LCM_pathprint[,1:3], 1,mean )
+d <-  apply (SALS.LCM_pathprint[,4:10], 1,mean )
 t <- d-c
 t1 <- t[order(abs(t), decreasing=T)]
 SALS.lcm <- (names(t1))[1:thres]
+
+
 
 ####FTLD###
 
@@ -70,6 +69,7 @@ d <-  apply (FTLD_pathprint[,1:16], 1,mean )
 t <- d-c
 t1 <- t[order(abs(t), decreasing=T)]
 FTLD_FCx <- (names(t1))[1:thres]
+
 
 
 
@@ -106,6 +106,9 @@ t <- d-c
 t1 <- t[order(abs(t), decreasing=T)]
 VCP.m <- (names(t1))[1:thres]
 
+
+
+
 #### intersect
 
 # i1 <- intersect (c9.lcm, CHMP2B.lcm)
@@ -122,10 +125,24 @@ VCP.m <- (names(t1))[1:thres]
 # 
 # print (overlap_lcm)
 
+##RUN pathprints first
+vec = c(1,1,1,1,1,1,1,1,0,0,0)
+C9PP <- diffPathways(C9.LCM_pathprint, vec, thres)
+
+vec = c(1,1,1,0,0,0,0,0,0)
+CHPP <- diffPathways(CHMP2B.LCM_pathprint, vec, thres)
+
+vec = c(0,0,0,1,1,1,1,1,1,1)
+sALSPP <- diffPathways(SALS.LCM_pathprint, vec, thres)
+
+vec = c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0)
+FTLDPP <- diffPathways(FTLD_pathprint, vec, thres)
+
+vec = c(0,0,0,1,1,1,1,1,1,1)
+VCPPP <- diffPathways(VCP_pathprint, vec, thres)
+
 overlap <- Reduce(intersect, list(c9.lcm, CHMP2B.lcm, SALS.lcm, FTLD_FCx, VCP.m)) #selects pathways that are present in all data sets listed
 print(overlap)
 
-setwd ("/Users/clairegreen/Desktop/")
 
-write.csv(overlap, file = "overlap.csv")
 

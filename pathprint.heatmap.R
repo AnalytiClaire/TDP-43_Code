@@ -16,9 +16,8 @@ C9.LCM_pathprint <- exprs2fingerprint(exp_C9.LCM, platform = "GPL570", species="
 d <- apply (C9.LCM_pathprint[,1:8], 1,mean ) #d = disease, average score of each gene across all samples
 c <-  apply (C9.LCM_pathprint[,9:11], 1,mean ) #c = control, average score of each gene across all samples
 t <- d-c #subtract mean disease score from mean control score to find difference
-t1<- t[order(abs(t), decreasing=T)] #order differential expression in decreasing order
+C9t1<- t[order(abs(t), decreasing=T)] #order differential expression in decreasing order
 c9.lcm <- (names(t1))[1:thres] #take top 'thres' values
-
 
 
 
@@ -33,12 +32,8 @@ CHMP2B.LCM_pathprint <- exprs2fingerprint (exp_CHMP2B.LCM, platform = "GPL570", 
 c <- apply (CHMP2B.LCM_pathprint[,4:9], 1,mean )
 d <-  apply (CHMP2B.LCM_pathprint[,1:3], 1,mean )
 t <- d-c
-t1 <- t[order(abs(t), decreasing=T)]
+CHt1 <- t[order(abs(t), decreasing=T)]
 CHMP2B.lcm <- (names(t1))[1:thres]
-
-
-
-
 
 ####sals_lcm###
 
@@ -49,10 +44,10 @@ exp_SALS.LCM<- exp_SALS.LCM[,2:11]
 
 SALS.LCM_pathprint <- exprs2fingerprint (exp_SALS.LCM, platform = "GPL570", species="human", progressBar=T)
 
-c <- apply (SALS.LCM_pathprint[,1:3], 1,median )
-d <-  apply (SALS.LCM_pathprint[,4:10], 1,median )
+c <- apply (SALS.LCM_pathprint[,1:3], 1,mean )
+d <-  apply (SALS.LCM_pathprint[,4:10], 1,mean )
 t <- d-c
-t1 <- t[order(abs(t), decreasing=T)]
+sALSt1 <- t[order(abs(t), decreasing=T)]
 SALS.lcm <- (names(t1))[1:thres]
 
 ####FTLD###
@@ -68,28 +63,10 @@ FTLD_pathprint <- exprs2fingerprint (FTLD, platform = "GPL571", species="human",
 c <- apply (FTLD_pathprint[,17:24], 1,mean )
 d <-  apply (FTLD_pathprint[,1:16], 1,mean )
 t <- d-c
-t1 <- t[order(abs(t), decreasing=T)]
+FTLDt1 <- t[order(abs(t), decreasing=T)]
 FTLD_FCx <- (names(t1))[1:thres]
 
 
-
-# setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/FTD-U.brain")
-# FTLD <- read.csv ("eset_FTD.U.brain_170715_exprs.csv", header=TRUE)
-# row.names (FTLD) <- FTLD[,1]
-# FTLD <- FTLD[,2:57]
-# 
-# FCx.Con <- c(1,4,5,7,8,11,13,15)
-# FCx.PRGN <- c(18,20,22,24,27,30)
-# FCx.SFTD <- c(33,35,38,41,44,45,48,50,52,55)
-# 
-# #GPL571 = Affymetrix Human Genome U113A 2.0 array
-# FTLD_pathprint <- exprs2fingerprint (FTLD, platform = "GPL571", species="human", progressBar=T)
-# 
-# c <- apply (FTLD_pathprint[,c(FCx.Con)], 1,mean )
-# d <-  apply (FTLD_pathprint[,c(FCx.PRGN, FCx.SFTD)], 1,mean )
-# t <- d-c
-# t1 <- t[order(abs(t), decreasing=T)]
-# FTLD_FCx <- (names(t1))[1:thres]
 
 ####VCP###
 
@@ -103,29 +80,68 @@ VCP_pathprint <- exprs2fingerprint (VCP, platform = "GPL570", species="human", p
 c <- apply (VCP_pathprint[,1:3], 1,mean )
 d <-  apply (VCP_pathprint[,4:10], 1,mean )
 t <- d-c
-t1 <- t[order(abs(t), decreasing=T)]
+VCPt1 <- t[order(abs(t), decreasing=T)]
 VCP.m <- (names(t1))[1:thres]
 
-#### intersect
 
-# i1 <- intersect (c9.lcm, CHMP2B.lcm)
-# print (i1)
-# 
-# i2 <- intersect (CHMP2B.lcm, SALS.lcm)
-# print (i2)
-# 
-# overlap_lcm <- intersect (i1, i2)
-# 
-# i3 <- intersect (FTLD_FCx, overlap_lcm)
-# 
-# i4 <- intersect (i3,VCP)
-# 
-# print (overlap_lcm)
+#Using diffPathways
+C9fac <- c(1,1,1,1,1,1,1,1,0,0,0)
+C9DP <- diffPathways(C9.LCM_pathprint, C9fac, 0.1)
 
-overlap <- Reduce(intersect, list(c9.lcm, CHMP2B.lcm, SALS.lcm, FTLD_FCx, VCP.m)) #selects pathways that are present in all data sets listed
+CHfac <- c(1,1,1,0,0,0,0,0,0)
+CHDP <- diffPathways(CHMP2B.LCM_pathprint, CHfac, 0.1)
+
+sALSfac <- c(0,0,0,1,1,1,1,1,1,1)
+sALSDP <- diffPathways(SALS.LCM_pathprint, sALSfac, 0.1)
+
+FTLDfac <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0)
+FTLDDP <- diffPathways(FTLD_pathprint, FTLDfac, 0.1)
+
+VCPfac <- c(0,0,0,1,1,1,1,1,1,1)
+VCPDP <- diffPathways(VCP_pathprint, VCPfac, 0.1)
+
+
+#Intersect
+overlap <- Reduce(intersect, list(C9DP, CHDP, sALSDP, FTLDDP, VCPDP)) #selects pathways that are present in all data sets listed
 print(overlap)
 
 setwd ("/Users/clairegreen/Desktop/")
 
 write.csv(overlap, file = "overlap.csv")
 
+#Heatmap
+
+overlap <- as.data.frame(overlap)
+
+C9t1 <- as.data.frame(C9t1)
+CHt1 <- as.data.frame(CHt1)
+sALSt1 <- as.data.frame(sALSt1)
+FTLDt1 <- as.data.frame(FTLDt1)
+VCPt1 <- as.data.frame(VCPt1)
+
+colnames(C9t1) <- "C9Expression"
+colnames(CHt1) <- "CHExpression"
+colnames(sALSt1) <- "sALSExpression"
+colnames(FTLDt1) <- "FTLDExpression"
+colnames(VCPt1) <- "VCPExpression"
+
+C9t1[,2] <- rownames(C9t1)
+CHt1[,2] <- rownames(CHt1)
+sALSt1[,2] <- rownames(sALSt1)
+FTLDt1[,2] <- rownames(FTLDt1)
+VCPt1[,2] <- rownames(VCPt1)
+
+all.fingerprints <- merge(x = C9t1, y = CHt1, by.x= "V2", by.y="V2")
+all.fingerprints <- merge(x = all.fingerprints, y = sALSt1, by.x= "V2", by.y="V2")
+all.fingerprints <- merge(x = all.fingerprints, y = FTLDt1, by.x= "V2", by.y="V2")
+all.fingerprints <- merge(x = all.fingerprints, y = VCPt1, by.x= "V2", by.y="V2")
+
+sig.names <- read.delim(file = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/DEPathways.txt")
+sig.fingerprints <- merge(overlap, all.fingerprints, by.x = "overlap", by.y = "V2" )
+
+rownames(sig.fingerprints) <- sig.fingerprints[,1]
+sig.fingerprints[,1] <- NULL
+
+sig.fingerprints <- as.matrix(sig.fingerprints)
+
+heatmap(sig.fingerprints)
