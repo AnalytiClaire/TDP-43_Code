@@ -3,7 +3,7 @@
 library (pathprint)
 options(stringsAsFactors = FALSE)
 
-thres <-225
+thres <-200
 
 ####C9_LCM ######
 setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM") #set working directory to location of data

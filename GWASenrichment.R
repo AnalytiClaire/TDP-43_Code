@@ -1,24 +1,30 @@
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/")
 
-GWAScen <- read.table(file = "signif.snp.GWAScentral.txt")
+GWAScen <- read.table(file = "signif.snp.GWAScentral.p0.0001.1.txt")
 GWAScen <- GWAScen$V1
 
 neuroX <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
 neuroX <- neuroX$V1
 
-pthresh <- 1.000e-05
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/")
+pathprint <- read.table(file = "Pathprintgenes.txt")
+pathprint <- pathprint$V1
 
-gwasthresh <- subset(GWAScen, p.value <= pthresh)
+pathprintunique <- pathprint[!duplicated(pathprint)]
 
-overlap <- Reduce(intersect, list(x, GWAScen))
+
+
+# pthresh <- 1.000e-05
+# 
+# gwasthresh <- subset(GWAScen, p.value <= pthresh)
+# 
+overlap <- Reduce(intersect, list(pathprint, neuroX))
 print(overlap)
 
 
 
 
-
-
-x <- read.table(file = "DEG+50.txt")
+x <- read.table(file = "DEGs.txt")
 x <- x$V1
 
 library(hgu133plus2.db)
@@ -29,9 +35,9 @@ sym3 <- data.frame (sym2)
 sym.probes <- names (sym2)
 sym.genes <- sym3[1,]
 
-x.in <- length (which(x %in% GWAScen))
-x.out <- length(x) - x.in
-tot.in <- length (GWAScen)
+x.in <- length (which(pathprintunique %in% neuroX))
+x.out <- length(pathprintunique) - x.in
+tot.in <- length (neuroX)
 tot.out <- length (sym.genes)
 
 counts <- matrix (nrow=2, ncol=2)
@@ -39,4 +45,4 @@ counts [1,] <- c(x.in, tot.in)
 counts [2,] <- c(x.out, tot.out)
 
 a5 <-fisher.test (counts)
-lists.enrich[4,i] <- a5$p
+enrich <- a5$p
