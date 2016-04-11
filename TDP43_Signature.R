@@ -13,8 +13,8 @@ exp_C9.LCM<- exp_C9.LCM[,2:12] #specify that all other columns are gene expressi
 
 C9.LCM_pathprint <- exprs2fingerprint(exp_C9.LCM, platform = "GPL570", species="human", progressBar=T) #takes the gene expression values and converts into ternary score (-1,0,1) #platform = microarray platform GEO ID
 
-d <- apply (C9.LCM_pathprint[,1:8], 1,mean ) #d = disease, average score of each gene across all samples
-c <-  apply (C9.LCM_pathprint[,9:11], 1,mean ) #c = control, average score of each gene across all samples
+d <- apply (C9.LCM_pathprint[,1:8], 1,sum) #d = disease, average score of each gene across all samples
+c <-  apply (C9.LCM_pathprint[,9:11], 1,sum) #c = control, average score of each gene across all samples
 t <- d-c #subtract mean disease score from mean control score to find difference
 t1<- t[order(abs(t), decreasing=T)] #order differential expression in decreasing order
 c9.lcm <- (names(t1))[1:thres] #take top 'thres' values
@@ -30,8 +30,8 @@ exp_CHMP2B.LCM<- exp_CHMP2B.LCM[,2:10]
 
 CHMP2B.LCM_pathprint <- exprs2fingerprint (exp_CHMP2B.LCM, platform = "GPL570", species="human", progressBar=T)
 
-c <- apply (CHMP2B.LCM_pathprint[,4:9], 1,mean )
-d <-  apply (CHMP2B.LCM_pathprint[,1:3], 1,mean )
+c <- apply (CHMP2B.LCM_pathprint[,4:9], 1, sum)
+d <-  apply (CHMP2B.LCM_pathprint[,1:3], 1, sum)
 t <- d-c
 t1 <- t[order(abs(t), decreasing=T)]
 CHMP2B.lcm <- (names(t1))[1:thres]
@@ -49,8 +49,8 @@ exp_SALS.LCM<- exp_SALS.LCM[,2:11]
 
 SALS.LCM_pathprint <- exprs2fingerprint (exp_SALS.LCM, platform = "GPL570", species="human", progressBar=T)
 
-c <- apply (SALS.LCM_pathprint[,1:3], 1,median )
-d <-  apply (SALS.LCM_pathprint[,4:10], 1,median )
+c <- apply (SALS.LCM_pathprint[,1:3], 1,sum )
+d <-  apply (SALS.LCM_pathprint[,4:10], 1,sum )
 t <- d-c
 t1 <- t[order(abs(t), decreasing=T)]
 SALS.lcm <- (names(t1))[1:thres]
@@ -65,8 +65,8 @@ FTLD <- FTLD[,2:25]
 #GPL571 = Affymetrix Human Genome U113A 2.0 array
 FTLD_pathprint <- exprs2fingerprint (FTLD, platform = "GPL571", species="human", progressBar=T)
 
-c <- apply (FTLD_pathprint[,17:24], 1,mean )
-d <-  apply (FTLD_pathprint[,1:16], 1,mean )
+c <- apply (FTLD_pathprint[,17:24], 1,sum )
+d <-  apply (FTLD_pathprint[,1:16], 1,sum )
 t <- d-c
 t1 <- t[order(abs(t), decreasing=T)]
 FTLD_FCx <- (names(t1))[1:thres]
@@ -100,8 +100,8 @@ VCP <- VCP[,2:11]
 
 VCP_pathprint <- exprs2fingerprint (VCP, platform = "GPL570", species="human", progressBar=T)
 
-c <- apply (VCP_pathprint[,1:3], 1,mean )
-d <-  apply (VCP_pathprint[,4:10], 1,mean )
+c <- apply (VCP_pathprint[,1:3], 1,sum )
+d <-  apply (VCP_pathprint[,4:10], 1,sum )
 t <- d-c
 t1 <- t[order(abs(t), decreasing=T)]
 VCP.m <- (names(t1))[1:thres]

@@ -85,7 +85,7 @@ VCP.m <- (names(t1))[1:thres]
 
 
 #Using diffPathways
-C9fac <- c(1,1,1,1,1,1,1,1,0,0,0)
+C9fac <- c(1,1,1,1,1,1,1,1,0,0,0) #create vector assigning columns to disease or control
 C9DP <- diffPathways(C9.LCM_pathprint, C9fac, 0.1)
 
 CHfac <- c(1,1,1,0,0,0,0,0,0)
@@ -111,9 +111,8 @@ write.csv(overlap, file = "overlap.csv")
 
 #Heatmap
 
-overlap <- as.data.frame(overlap)
-
-C9t1 <- as.data.frame(C9t1)
+#After running pathprint
+C9t1 <- as.data.frame(C9t1) 
 CHt1 <- as.data.frame(CHt1)
 sALSt1 <- as.data.frame(sALSt1)
 FTLDt1 <- as.data.frame(FTLDt1)
@@ -136,12 +135,21 @@ all.fingerprints <- merge(x = all.fingerprints, y = sALSt1, by.x= "V2", by.y="V2
 all.fingerprints <- merge(x = all.fingerprints, y = FTLDt1, by.x= "V2", by.y="V2")
 all.fingerprints <- merge(x = all.fingerprints, y = VCPt1, by.x= "V2", by.y="V2")
 
+
+all <- C9.LCM_pathprint
+
+
+library(data.table)
+setDT(all, keep.rownames = TRUE)[]
+
+overlap <- as.data.frame(overlap) #conver to data frame
+
 sig.names <- read.delim(file = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/DEPathways.txt")
-sig.fingerprints <- merge(overlap, all.fingerprints, by.x = "overlap", by.y = "V2" )
+sig.fingerprints <- merge(overlap, C9all, by.x = "overlap", by.y = "rn" ) #take only pathways implicated by intersection
 
 rownames(sig.fingerprints) <- sig.fingerprints[,1]
 sig.fingerprints[,1] <- NULL
 
-sig.fingerprints <- as.matrix(sig.fingerprints)
+sig.fingerprints <- as.matrix(sig.fingerprints) #must be converted to numeric data frame for heatmap to work
 
 heatmap(sig.fingerprints)

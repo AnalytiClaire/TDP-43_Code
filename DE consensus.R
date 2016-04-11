@@ -44,4 +44,5 @@ write.csv(overlap, file = "overlap.csv")
 RNA <- overlap
 Micro <- overlap
 
-overlap <- Reduce(intersect, list(RNA, Micro))
+snpenrich <- Reduce(intersect, list(overlap, gwas3))
+print(snpenrich)
