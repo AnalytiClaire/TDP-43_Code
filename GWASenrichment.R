@@ -6,6 +6,9 @@ GWAScen <- GWAScen$V1
 neuroX <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
 neuroX <- neuroX$V1
 
+GWAScatALS <- read.table(file = "ALSGWAScatalog.txt")
+GWAScatALS <- GWAScatALS$V1
+
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/")
 pathprint <- read.table(file = "Pathprintgenes.txt")
 pathprint <- pathprint$V1
@@ -18,7 +21,7 @@ pathprintunique <- pathprint[!duplicated(pathprint)]
 # 
 # gwasthresh <- subset(GWAScen, p.value <= pthresh)
 # 
-overlap <- Reduce(intersect, list(pathprint, neuroX))
+overlap <- Reduce(intersect, list(pathprint, GWAScatALS))
 print(overlap)
 
 

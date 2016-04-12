@@ -80,14 +80,14 @@ It appears that complemet and coagulation cascades seems to be the pathway that 
 
 Next, I downloaded all the SNPs identified by GWAS catalog and added them in. Now the pathways are this:
 
-| Pathways|     GWAS Central   | NeuroX|     GWAS catalog     |  DEGS        |
+| Pathways                                    |GWAS Central|       NeuroX     |GWAS catalog  |  DEGS        |
 |-----------------------------|--------|--------------|----------|-----------|
 | Lysine degradation (KEGG)                   | x          | x                | HADH         | PLOD2         |
 | ABC transporters (KEGG)                     | x          | x                | ABCG1 ABCC12 | x             |
 | Complement and coagulation cascades (KEGG)  | x          | x                | MASP1        | x             |
 | Prion diseases (KEGG)                       | x          | NOTCH1 SOD1      | x            | x             |
 | Biogenic Amine Synthesis (Wikipathways)     | x          | COMT             | x            | x             |
-| SIDS Susceptibility Pathways (Wikipathways) | CHRNA4     | KCNQ1 PPARGC1A   | x            | x             |
+| SIDS Susceptibility Pathways (Wikipathways) |KCNQ1 PPARGC1A|  CHRNA4        | x            | x             |
 | Signaling by Insulin receptor (Reactome)    | x          | FGFR3 STK11 TSC2 | x            | x             |
 | Opioid Signalling (Reactome)                | GNG7 ITPR2 |                  |              | PPP2CA PPP2CB |
 | {RAN,17} (Static Module)                    | x          | x                | x            | NUTF2 KPNA6   |
@@ -95,3 +95,266 @@ Next, I downloaded all the SNPs identified by GWAS catalog and added them in. No
 Now we can confirm the inclusion of complement and coagulation cascades.
 
 ![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/Enrichedpathways/EPcat.png)
+
+#Tuesday
+
+Since I was able to download all the SNPs from GWAS catalog for ALS, I thought I would try to do the same for Alzheimer's disease. What I did was downlaod the table of all associations, extract the column marked MAPPED GENES, and separate each gene into a cell after which I remove any duplicates. This meant that some genes were duplicated due to different names, but it allowed me to identify genes in my pathways that perhaps had alternative names. I wouldn't do stats analysis on this, it's just for identification purposes. I intersected the two lists and identified 23 genes containing AD SNPS.
+
+ "SORD"   "FUK"    "CPS1"   "ABCA1"  "ABCC9"  "ABCA7"  "CR1"    "F13A1"  "CREBBP" "IL6R"   "JAK2"  
+ "IL19"   "IL21"   "NCAM1"  "KCNQ1"  "RORA"   "FGF1"   "IRS1"   "STK11" "ADCY5"  "ADCY8"  "CAMK4"  "PDE1A" 
+ 
+ And I did the same for the DEG list:
+ 
+ "PFDN1"
+ 
+ I'm not sure the second list (of one) will be significant, but the first could.
+
+
+######
+
+#PCxN analysis
+
+Win asked me to conduct GSEA on an ALS data set, take the enriched pathways, run them through PCxN, add pathways using PCxN, and then look for enrichment of ALS disease-associated loci. 
+
+##GSEA
+
+I talked to Gabriel and we decided that using the GSEA java platform is probably the best to use instead of the R script, as most people are going to use this method and the R script isn't supported any more. 
+
+I used the following settings:
+
+Expression Dataset - C9 [35647x11, chip, na]
+Gene Sets Database - gseaftp.broadinstitute.org://pub/gsea/gene_sets/c5.bp.v5.1.symbols.gmt
+Number of permutations - 1000
+Phenotype labels - /Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/C9orf72 with outlier/C9_pheno.cls#PAT_versus_CON
+Collapse dataset to gene symbols - true
+Permutation type - phenotype
+Chip platform(s) - gseaftp.broadinstitute.org://pub/gsea/annotations/HG_U133_Plus_2.chip
+
+Basic and Advanced fields were left unchanged.
+
+I also conducted an identical analysis using a permutation type of permytating gene sets, as it was recommended that for small data sets this is a better way of calculating significance. 
+
+###Pheno-perm results
+
+80 / 274 gene sets are upregulated in phenotype PAT
+0 gene sets are significant at FDR < 25%
+1 gene sets are significantly enriched at nominal pvalue < 1%
+5 gene sets are significantly enriched at nominal pvalue < 5%
+
+Those 5 gene sets are:
+
+Protein import
+Protein targeting
+Nucleocytoplasmic Transport
+Protein import into nucleus
+Nuclear transport
+
+###Gene-perm results
+
+80 / 274 gene sets are upregulated in phenotype PAT
+0 gene sets are significant at FDR < 25%
+1 gene sets are significantly enriched at nominal pvalue < 1%
+7 gene sets are significantly enriched at nominal pvalue < 5%
+
+Those 7 gene sets are:
+Protein targeting
+Nucleocytoplasmic Transport
+Intracellular protein transport
+Protein import
+Nuclear transport
+Nuclear import
+Protein import into nucleus
+
+##PCxN 
+
+Here are the 7 gene sets in PCxN
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/pxcn.png)
+
+And adding the 10 most correlated gene sets
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/pcxn+10.png)
+
+It concerns me a little that the added gene sets are so generic. Looking at the sizes of them as well - some of them are enormous. I'm not sure exactly how this is going to affect the p values later down the line in terms of enrichment.
+
+## GWAS enrichment
+
+For this I used 4 different ALS SNP Databases. GWAS central (all) included about 4000 genes. GWAS central (p<0.0001) contained around 2700 genes. NeuroX contained 122 genes, and NeuroX (p<5x10-8) contained 54. I used the following script to calculate the intersect and enrichment significance. 
+
+```{r, eval=FALSE}
+#Load database of associations
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
+
+a <- read.table(file = "signif.snp.GWAScentral.txt")
+a <- a$V1
+
+b <- read.table(file = "signif.snp.GWAScentral.p0.0001.1.txt")
+b <- b$V1
+
+c <- read.table(file = "signif.snp.NeuroX.txt")
+c <- c$V1
+
+d <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
+d <- d$V1
+
+#load test file
+
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/")
+y <- read.table(file = "GSEAgenes.txt")
+y <- y$V1
+
+#remove any duplicates
+y <- y[!duplicated(y)]
+
+#Intersect
+overlap <- Reduce(intersect, list(y, a))
+print(overlap)
+
+#Load file with all genes
+library(hgu133plus2.db)
+sym <- hgu133plus2SYMBOL
+sym1 <- mappedkeys(sym)
+sym2 <- as.list (sym[c(sym1)])
+sym3 <- data.frame (sym2)
+sym.probes <- names (sym2)
+sym.genes <- sym3[1,]
+
+#calculate counts
+
+x.in <- length (which(y %in% a))
+x.out <- length(y) - x.in
+tot.in <- length (a)
+tot.out <- length (sym.genes)
+
+counts <- matrix (nrow=2, ncol=2)
+counts [1,] <- c(x.in, tot.in)
+counts [2,] <- c(x.out, tot.out)
+
+#Conduct fisher's exact test for count data
+
+a5 <-fisher.test (counts)
+enrich <- a5$p
+print(enrich)
+
+```
+
+I compared results depending on whether I removed duplicates or not, as I wasn't sure which was statistically the right representation. Often pathways contain the same genes but it's not always clear that this is because the pathways are too overlapping or the gene just has multiple roles. 
+
+| GSEA only             | Dup.Gene | Dup.pvalue | noDup.Gene | noDup.pvalue |
+|-----------------------|----------|------------|------------|--------------|
+| GWAS Central          | 89       | 0.316      | 64         | 0.387        |
+| GWAS Cental (p<0.001) | 17       | 0.6        | 13         | 0.537        |
+| NeuroX                | 11       | 0.01       | 11         | 9.5x10-4     |
+| NeuroX (p<5x10-8)     | 4        | 0.166      | 4          | 0.07         |
+
+
+| GSEA +10              | Dup.Gene | Dup.pvalue | noDup.Gene | noDup.pvalue |
+|-----------------------|----------|------------|------------|--------------|
+| GWAS Central          | 225      | 0.0037     | 96         | 0.19         |
+| GWAS Cental (p<0.001) | 57       | 0.03       | 19         | 0.6          |
+| NeuroX                | 47       | 9.85x10-12 | 17         | 5x10-5       |
+| NeuroX (p<5x10-8)     | 23       | 4.55x10-7  | 9          | 9x10-4       |
+
+
+Then I realised I wasn't sure if I was going about it in the right way. This method is looking for overall enrichmet of all the pathways AS A WHOLE, but what about individual enrichment of each pathway individually?
+
+Results:
+
+| PROTEIN_TARGETING                                                 | Num.Gene | p value     |
+|-------------------------------------------------------------------|----------|-------------|
+| GWAS Central                                                      | 6        | 0.830545    |
+| GWAS Cental (p<0.0001)                                            | 0        |             |
+| NeuroX                                                            | 0        |             |
+| NeuroX (p<5x10-8)                                                 | 0        |             |
+|                                                                   |          |             |
+| INTRACELLULAR_PROTEIN_TRANSPORT                                   | Num.Gene | p value     |
+| GWAS Central                                                      | 7        | 1           |
+| GWAS Cental (p<0.0001)                                            | 1        | 1           |
+| NeuroX                                                            | 1        | 0.3096771   |
+| NeuroX (p<5x10-8)                                                 | 1        | 0.1528235   |
+|                                                                   |          |             |
+| RNA_PROCESSING                                                    | Num.Gene | p value     |
+| GWAS Central                                                      | 7        | 0.7247023   |
+| GWAS Cental (p<0.0001)                                            | 2        | 0.3847241   |
+| NeuroX                                                            | 0        |             |
+| NeuroX (p<5x10-8)                                                 | 0        |             |
+|                                                                   |          |             |
+| NUCLEAR_TRANSPORT                                                 | Num.Gene | p value     |
+| GWAS Central                                                      | 4        | 0.8187496   |
+| GWAS Cental (p<0.0001)                                            | 1        | 0.5335001   |
+| NeuroX                                                            | 0        |             |
+| NeuroX (p<5x10-8)                                                 | 0        |             |
+|                                                                   |          |             |
+| NUCLEOCYTOPLASMIC_TRANSPORT                                       | Num.Gene | p value     |
+| GWAS Central                                                      | 4        | 1           |
+| GWAS Cental (p<0.0001)                                            | 1        | 0.5290921   |
+| NeuroX                                                            | 0        |             |
+| NeuroX (p<5x10-8)                                                 | 0        |             |
+|                                                                   |          |             |
+| PROTEIN_IMPORT                                                    | Num.Gene | p value     |
+| GWAS Central                                                      | 2        | 0.772775    |
+| GWAS Cental (p<0.0001)                                            | 0        |             |
+| NeuroX                                                            | 0        |             |
+| NeuroX (p<5x10-8)                                                 | 0        |             |
+|                                                                   |          |             |
+| NUCLEOBASENUCLEODISENUCLEOTIDE_AND_NUCLEIC_ACID_METABOLIC_PROCESS | Num.Gene | p value     |
+| GWAS Central                                                      | 59       | 0.5573632   |
+| GWAS Cental (p<0.0001)                                            | 12       | 0.5144716   |
+| NeuroX                                                            | 10       | 0.001431483 |
+| NeuroX (p<5x10-8)                                                 | 3        | 0.1596508   |
+|                                                                   |          |             |
+| NUCLEOLUS                                                         | Num.Gene | p value     |
+| GWAS Central                                                      | 2        | 0.1288987   |
+| GWAS Cental (p<0.0001)                                            | 1        | 0.5832784   |
+| NeuroX                                                            | 0        |             |
+| NeuroX (p<5x10-8)                                                 | 0        |             |
+|                                                                   |          |             |
+| NUCLEOPLASM                                                       | Num.Gene | p value     |
+| GWAS Central                                                      | 12       | 0.6788591   |
+| GWAS Cental (p<0.0001)                                            | 5        | 0.06558967  |
+| NeuroX                                                            | 3        | 0.02965732  |
+| NeuroX (p<5x10-8)                                                 | 1        | 0.2555179   |
+|                                                                   |          |             |
+| ORGANELLE_LUMEN                                                   | Num.Gene | p value     |
+| GWAS Central                                                      | 17       | 0.4285241   |
+| GWAS Cental (p<0.0001)                                            | 5        | 0.2609977   |
+| NeuroX                                                            | 4        | 0.01888027  |
+| NeuroX (p<5x10-8)                                                 | 2        | 0.07448125  |
+|                                                                   |          |             |
+| DNA_DEPENDENT_DNA_REPLICATION                                     | Num.Gene | p value     |
+| GWAS Central                                                      | 3        | 1           |
+| GWAS Cental (p<0.0001)                                            | 0        |             |
+| NeuroX                                                            | 3        | 0.000465554 |
+| NeuroX (p<5x10-8)                                                 | 1        | 0.06399953  |
+|                                                                   |          |             |
+| DNA_METABOLIC_PROCESS                                             | Num.Gene | p value     |
+| GWAS Central                                                      | 6        | 0.03371346  |
+| GWAS Cental (p<0.0001)                                            | 4        | 0.1593601   |
+| NeuroX                                                            | 4        | 0.004409087 |
+| NeuroX (p<5x10-8)                                                 | 2        | 0.03486408  |
+|                                                                   |          |             |
+| PROTEIN_COMPLEX                                                   | Num.Gene | p value     |
+| GWAS Central                                                      | 39       | 0.6327851   |
+| GWAS Cental (p<0.0001)                                            | 8        | 0.5491147   |
+| NeuroX                                                            | 7        | 0.005208413 |
+| NeuroX (p<5x10-8)                                                 | 4        | 0.01464163  |
+|                                                                   |          |             |
+| NUCLEAR_LUMEN                                                     | Num.Gene | p value     |
+| GWAS Central                                                      | 14       | 0.3348017   |
+| GWAS Cental (p<0.0001)                                            | 5        | 0.215146    |
+| NeuroX                                                            | 3        | 0.05954921  |
+| NeuroX (p<5x10-8)                                                 | 2        | 0.06013008  |
+|                                                                   |          |             |
+| NUCLEAR_PART                                                      | Num.Gene | p value     |
+| GWAS Central                                                      | 22       | 0.2093596   |
+| GWAS Cental (p<0.0001)                                            | 6        | 0.4645757   |
+| NeuroX                                                            | 5        | 0.01370797  |
+| NeuroX (p<5x10-8)                                                 | 3        | 0.0254177   |
+|                                                                   |          |             |
+| MEMBRANE_ENCLOSED_LUMEN                                           | Num.Gene | p value     |
+| GWAS Central                                                      | 17       | 0.4285241   |
+| GWAS Cental (p<0.0001)                                            | 5        | 0.2609977   |
+| NeuroX                                                            | 4        | 0.01888027  |
+| NeuroX (p<5x10-8)                                                 | 2        | 0.07448125  |
+
+Essentially in terms of GWAS central, the list isn't great. Only one pathway reaches significance. Quite a few are significantly enriched by the NeuroX dataset but that is not publically available. I have a feeling it's to do with the fact that the pathways are so broad. They have hundreds of genes and I think that might be messing with the significance. Plus it doesn't really tell us much biologically. 
