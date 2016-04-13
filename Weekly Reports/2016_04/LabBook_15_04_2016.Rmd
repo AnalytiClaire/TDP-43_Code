@@ -358,3 +358,16 @@ Results:
 | NeuroX (p<5x10-8)                                                 | 2        | 0.07448125  |
 
 Essentially in terms of GWAS central, the list isn't great. Only one pathway reaches significance. Quite a few are significantly enriched by the NeuroX dataset but that is not publically available. I have a feeling it's to do with the fact that the pathways are so broad. They have hundreds of genes and I think that might be messing with the significance. Plus it doesn't really tell us much biologically. 
+
+
+When writing up the methodology I used on GSEA, I realised I was asking it to collapse the probesets into genes, when actually the data I was inputting already had genes assigned. When I corrected this value to false, I generated a different and more specific list of GO terms:
+
+REGULATION_OF_I_KAPPAB_KINASE_NF_KAPPAB_CASCADE
+POSITIVE_REGULATION_OF_I_KAPPAB_KINASE_NF_KAPPAB_CASCADE
+I_KAPPAB_KINASE_NF_KAPPAB_CASCADE
+POSITIVE_REGULATION_OF_SIGNAL_TRANSDUCTION
+REGULATION_OF_SIGNAL_TRANSDUCTION
+RHO_PROTEIN_SIGNAL_TRANSDUCTION
+RNA_CATABOLIC_PROCESS
+
+
