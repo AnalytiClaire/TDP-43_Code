@@ -399,3 +399,144 @@ a5 <-fisher.test (counts)
 enrich <- a5$p
 print(enrich)
 ```
+
+Results are
+
+| Pathway                                                  | Number of genes | p value     |
+|----------------------------------------------------------|-----------------|-------------|
+| APOPTOSIS_GO                                             | Num. Genes      | p value     |
+| GWAS Central                                             | 30              | 0.2057827   |
+| GWAS Central (p<0.001)                                   | 8               | 0.03498549  |
+| GWAS Central (p<=0.0001)                                 | 8               | 0.003350762 |
+| GWAS Central (p<=0.00001)                                | 3               | 0.06050156  |
+| NeuroX                                                   | 6               | 0.001226943 |
+| NeuroX (p<5x10-8)                                        | 3               | 0.01569232  |
+|                                                          |                 |             |
+| PROGRAMMED_CELL_DEATH                                    | Num. Genes      | p value     |
+| GWAS Central                                             | 30              | 0.2069169   |
+| GWAS Central (p<0.001)                                   | 8               | 0.03542377  |
+| GWAS Central (p<=0.0001)                                 | 8               | 0.003401741 |
+| GWAS Central (p<=0.00001)                                | 3               | 0.06086485  |
+| NeuroX                                                   | 6               | 0.001242724 |
+| NeuroX (p<5x10-8)                                        | 3               | 0.01579676  |
+|                                                          |                 |             |
+| REGULATION_OF_DEVELOPMENTAL_PROCESS                      | Num. Genes      | p value     |
+| GWAS Central                                             | 38              | 0.008366304 |
+| GWAS Central (p<0.001)                                   | 10              | 0.005225167 |
+| GWAS Central (p<=0.0001)                                 | 10              | 0.000225879 |
+| GWAS Central (p<=0.00001)                                | 5               | 0.01109208  |
+| NeuroX                                                   | 6               | 0.001307402 |
+| NeuroX (p<5x10-8)                                        | 4               | 0.002120531 |
+|                                                          |                 |             |
+| NEGATIVE_REGULATION_OF_BIOLOGICAL_PROCESS                | Num. Genes      | p value     |
+| GWAS Central                                             | 49              | 0.02349015  |
+| GWAS Central (p<0.001)                                   | 10              | 0.07674949  |
+| GWAS Central (p<=0.0001)                                 | 10              | 0.003620057 |
+| GWAS Central (p<=0.00001)                                | 5               | 0.01109208  |
+| NeuroX                                                   | 10              | 1.31E-05    |
+| NeuroX (p<5x10-8)                                        | 4               | 0.007828118 |
+|                                                          |                 |             |
+| NEGATIVE_REGULATION_OF_CELLULAR_PROCESS                  | Num. Genes      | p value     |
+| GWAS Central                                             | 46              | 0.04017667  |
+| GWAS Central (p<0.001)                                   | 10              | 0.04508462  |
+| GWAS Central (p<=0.0001)                                 | 10              | 0.002663813 |
+| GWAS Central (p<=0.00001)                                | 5               | 0.009318791 |
+| NeuroX                                                   | 10              | 8.98E-06    |
+| NeuroX (p<5x10-8)                                        | 4               | 0.006738169 |
+|                                                          |                 |             |
+| CELLULAR_MACROMOLECULE_METABOLIC_PROCESS                 | Num. Genes      | p value     |
+| GWAS Central                                             | 49              | 0.2713207   |
+| GWAS Central (p<0.001)                                   | 12              | 0.3028955   |
+| GWAS Central (p<=0.0001)                                 | 12              | 0.01838366  |
+| GWAS Central (p<=0.00001)                                | 6               | 0.02238923  |
+| NeuroX                                                   | 11              | 0.000167425 |
+| NeuroX (p<5x10-8)                                        | 3               | 0.1281163   |
+|                                                          |                 |             |
+| CELLULAR_PROTEIN_METABOLIC_PROCESS                       | Num. Genes      | p value     |
+| GWAS Central                                             | 49              | 0.2998959   |
+| GWAS Central (p<0.001)                                   | 12              | 0.2992898   |
+| GWAS Central (p<=0.0001)                                 | 12              | 0.02076942  |
+| GWAS Central (p<=0.00001)                                | 6               | 0.0211189   |
+| NeuroX                                                   | 10              | 0.000591962 |
+| NeuroX (p<5x10-8)                                        | 3               | 0.1244103   |
+|                                                          |                 |             |
+| PROTEIN_METABOLIC_PROCESS                                | Num. Genes      | p value     |
+| GWAS Central                                             | 56              | 0.3927611   |
+| GWAS Central (p<0.001)                                   | 17              | 0.03259739  |
+| GWAS Central (p<=0.0001)                                 | 17              | 0.000347367 |
+| GWAS Central (p<=0.00001)                                | 9               | 0.000806991 |
+| NeuroX                                                   | 13              | 2.19E-05    |
+| NeuroX (p<5x10-8)                                        | 5               | 0.01317718  |
+|                                                          |                 |             |
+|                                                          |                 |             |
+| RESPONSE_TO_BIOTIC_STIMULUS                              | Num. Genes      | p value     |
+| GWAS Central                                             | 3               | 0.2882781   |
+| GWAS Central (p<0.001)                                   | 0               |             |
+| GWAS Central (p<=0.0001)                                 | 0               |             |
+| GWAS Central (p<=0.00001)                                | 0               |             |
+| NeuroX                                                   | 1               | 0.2471111   |
+| NeuroX (p<5x10-8)                                        | 0               |             |
+|                                                          |                 |             |
+| INTERLEUKIN_RECEPTOR_ACTIVITY                            | Num. Genes      | p value     |
+| GWAS Central                                             | 2               | 0.3706886   |
+| GWAS Central (p<0.001)                                   | 0               |             |
+| GWAS Central (p<=0.0001)                                 | 0               |             |
+| GWAS Central (p<=0.00001)                                | 0               |             |
+| NeuroX                                                   | 0               |             |
+| NeuroX (p<5x10-8)                                        | 0               |             |
+|                                                          |                 |             |
+| RNA_CATABOLIC_PROCESS                                    | Num. Genes      | p value     |
+| GWAS Central                                             | 0               |             |
+| GWAS Central (p<0.001)                                   | 0               |             |
+| GWAS Central (p<=0.0001)                                 | 0               |             |
+| GWAS Central (p<=0.00001)                                | 0               |             |
+| NeuroX                                                   | 0               |             |
+| NeuroX (p<5x10-8)                                        | 0               |             |
+|                                                          |                 |             |
+| I_KAPPAB_KINASE_NF_KAPPAB_CASCADE                        | Num. Genes      | p value     |
+| GWAS Central                                             | 2               | 0.130654    |
+| GWAS Central (p<0.001)                                   | 1               | 0.5948678   |
+| GWAS Central (p<=0.0001)                                 | 1               | 0.4550463   |
+| GWAS Central (p<=0.00001)                                | 0               |             |
+| NeuroX                                                   | 2               | 0.03211631  |
+| NeuroX (p<5x10-8)                                        | 1               | 0.1170013   |
+|                                                          |                 |             |
+| REGULATION_OF_I_KAPPAB_KINASE_NF_KAPPAB_CASCADE          | Num. Genes      | p value     |
+| GWAS Central                                             | 0               |             |
+| GWAS Central (p<0.001)                                   | 0               |             |
+| GWAS Central (p<=0.0001)                                 | 0               |             |
+| GWAS Central (p<=0.00001)                                | 0               |             |
+| NeuroX                                                   | 2               | 0.02189372  |
+| NeuroX (p<5x10-8)                                        | 1               | 0.09617728  |
+|                                                          |                 |             |
+| POSITIVE_REGULATION_OF_I_KAPPAB_KINASE_NF_KAPPAB_CASCADE | Num. Genes      | p value     |
+| GWAS Central                                             | 0               |             |
+| GWAS Central (p<0.001)                                   | 0               |             |
+| GWAS Central (p<=0.0001)                                 | 0               |             |
+| GWAS Central (p<=0.00001)                                | 0               |             |
+| NeuroX                                                   | 2               | 0.01885136  |
+| NeuroX (p<5x10-8)                                        | 1               | 0.08912539  |
+|                                                          |                 |             |
+| POSITIVE_REGULATION_OF_SIGNAL_TRANSDUCTION               | Num. Genes      | p value     |
+| GWAS Central                                             | 4               | 0.4182946   |
+| GWAS Central (p<0.001)                                   | 1               | 1           |
+| GWAS Central (p<=0.0001)                                 | 1               | 0.4818719   |
+| GWAS Central (p<=0.00001)                                | 0               |             |
+| NeuroX                                                   | 2               | 0.039772    |
+| NeuroX (p<5x10-8)                                        | 1               | 0.1306119   |
+|                                                          |                 |             |
+| REGULATION_OF_SIGNAL_TRANSDUCTION                        | Num. Genes      | p value     |
+| GWAS Central                                             | 4               | 0.4182946   |
+| GWAS Central (p<0.001)                                   | 1               | 1           |
+| GWAS Central (p<=0.0001)                                 | 1               | 0.02984808  |
+| GWAS Central (p<=0.00001)                                | 1               | 0.3460385   |
+| NeuroX                                                   | 2               | 0.039772    |
+| NeuroX (p<5x10-8)                                        | 1               | 0.1306119   |
+|                                                          |                 |             |
+| RHO_PROTEIN_SIGNAL_TRANSDUCTION                          | Num. Genes      | p value     |
+| GWAS Central                                             | 2               | 1           |
+| GWAS Central (p<0.001)                                   | 2               | 0.04053105  |
+| GWAS Central (p<=0.0001)                                 | 2               | 0.01826738  |
+| GWAS Central (p<=0.00001)                                | 1               | 0.07331333  |
+| NeuroX                                                   | 2               | 0.004453631 |
+| NeuroX (p<5x10-8)                                        | 1               | 0.04314336  |

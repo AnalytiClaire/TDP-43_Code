@@ -1,15 +1,15 @@
 
 ###START HERE #####
 
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/FTD-U.brain/") #set working directory
-FTLD_exp <- read.csv("FTLD_expr_tdp43.csv") #import expression file
-row.names(FTLD_exp) <- FTLD_exp[,1] #make Probe IDs row names if not already done
-FTLD_exp[,1] <- NULL #remove column containing probe IDs
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM/") #set working directory
+exp <- read.csv("eset_NineP_150612_exprs.csv") #import expression file
+row.names(exp) <- exp[,1] #make Probe IDs row names if not already done
+exp[,1] <- NULL #remove column containing probe IDs
 
 library (WGCNA)
 options(stringsAsFactors = FALSE)
 
-DATA <- FTLD_exp 
+DATA <- exp 
 DATA <- t(DATA) #transpose data (this is required for Biomart)
 
 
@@ -26,15 +26,11 @@ x <- colnames(DATA) #create vector containing probe IDs
 mart_attribute <- listAttributes(mart)
 # mart_filter <- listFilters(mart)
 
-mart_back <- getBM(attributes =c("hgnc_symbol", "entrezgene", "ensembl_transcript_id"), 
-                   filters="ensembl_transcript_id", values=x,  mart=mart)
-
-
 
 
 ### Create array of attributes required for your data set ### MAKE SURE YOU GET THE INFO OF YOUR PROBE IDs
-mart_back <- getBM(attributes=c("hgnc_symbol", "entrezgene", "ensembl_transcript_id","affy_hg_u133a_2"), 
-                   filters = "affy_hg_u133a_2", values = x, mart = mart)
+mart_back <- getBM(attributes=c("hgnc_symbol","affy_hg_u133_plus_2"), 
+                   filters = "affy_hg_u133_plus_2", values = x, mart = mart)
 
 e2 <- mart_back$hgnc_symbol #take gene label column
 e3 <- e2[!is.na(e2)]
@@ -62,23 +58,33 @@ mart_back1 <- mart_back[c(e3),] #apply to data frame
 
 
 ### Assign hgnc symbol as column names of expression data ###
-#This looks at the ID probes from the expression file and corresponds them to the list
-#ensembl_transcript_ID. The expression file column names are then changed to the corresponding 
+#This looks at the ID probes from the expression file and links them to the corresponding 
 #hgnc symbol
 
 #This will take a decent amount of time, so don't worry if it runs for 30 minutes+
 
-DATA1 <- DATA
+DATA1 <- t(DATA)
 
-for (i in 1:length(mart_back1[,4])) 
+for (i in 1:length(mart_back1$hgnc_symbol)) 
 {
-c1 <- which (x %in% mart_back1[i,4])
-c1 <- c1[1]
-#colnames (DATA1)[c(c1)] <- mart_back1[i,2]
-colnames (DATA1)[c(c1)] <- mart_back1[i,1]
+  c1 <- which (x %in% mart_back1$hgnc_symbol)
+  c1 <- c1[1]
+  #colnames (DATA1)[c(c1)] <- mart_back1[i,2]
+  colnames (DATA1)[c(c1)] <- mart_back1[i,1]
 }
 
-#t <- array (dim =c(length(DATA[,1]), length (DATA[1,]), d))
+# DATA1 <- cbind(Row.Names = rownames(DATA1), DATA1)
+# 
+# DATA1 <- merge(mart_back1, DATA1, by.x = "affy_hg_u133_plus_2", by.y = "Row.Names" )
+# DATA1[,1] <- NULL
+
+#agg.data <- aggregate(DATA1,by=list(DATA1$hgnc_symbol),mean)
+
+#rownames(DATA1) <- DATA1[,1]
+
+t <- array (dim =c(length(DATA[,1]), length (DATA[1,]), d))
+
+
 ####I highly recommend saving the environment as you don't want to have to run this twice ####
 
 
@@ -127,7 +133,7 @@ colnames (DATA1)[c(c1)] <- mart_back1[i,1]
 
 ###create gct file###
 
-t2 <- DATA1 #t2 needs samples as row names and gene IDs as column names
+t2 <- t(DATA1) #t2 needs samples as row names and gene IDs as column names
 
 # t1 <- grep("ENST", colnames(t)) #This is for when you are using data with ensembl transcript IDs
 # t2 <- t [,-c(t1)]

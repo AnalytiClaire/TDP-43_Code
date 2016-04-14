@@ -8,28 +8,30 @@ a <- A$V1
 B <- read.table(file = "signif.snp.GWAScentral.p0.0001.1.txt")
 b <- B$V1
 
-C <- read.table(file = "signif.snp.NeuroX.txt")
-c <- C$V1
+C <- read.table(file = "GWAScentral_<=0.0001.txt")
+c <- c$x
 
-D <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
-d <- D$V1
+D <- read.table(file = "GWAScentral_<=0.00001.txt")
+d <- D$x
 
-E <- read.table(file = "GWAScentral_<=0.0001.txt")
-e <- E$x
+E <- read.table(file = "signif.snp.NeuroX.txt")
+e <- E$V1
 
-F <- read.table(file = "GWAScentral_<=0.00001.txt")
-f <- F$x
+F <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
+f <- F$V1
+
+
 #load test file
 
 setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/")
-Z <- read.csv(file = "allgenes2.csv")
-y <- Z$RHO_PROTEIN_SIGNAL_TRANSDUCTION
+Z <- read.csv(file = "C9pcxngenes.csv")
+y <- Z$NEGATIVE_REGULATION_OF
 
 #remove any duplicates
 y <- y[!duplicated(y)]
 
 #Intersect
-overlap <- Reduce(intersect, list(y, e))
+overlap <- Reduce(intersect, list(o2, o3))
 print(overlap)
 
 
@@ -56,7 +58,7 @@ sym.genes <- sym3[1,]
 # for (i in x[,1:4]) {
 
 #How many PCxN genes contain snps
-x.in <- length (which(y %in% e)) 
+x.in <- length (which(y %in% c)) 
 #how many do not
 x.out <- length(y) - x.in
 #total number of snps
