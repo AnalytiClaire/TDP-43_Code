@@ -2,18 +2,23 @@
 #Load database of associations
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
 
-a <- read.table(file = "signif.snp.GWAScentral.txt")
-a <- a$V1
+A <- read.table(file = "signif.snp.GWAScentral.txt")
+a <- A$V1
 
-b <- read.table(file = "signif.snp.GWAScentral.p0.0001.1.txt")
-b <- b$V1
+B <- read.table(file = "signif.snp.GWAScentral.p0.0001.1.txt")
+b <- B$V1
 
-c <- read.table(file = "signif.snp.NeuroX.txt")
-c <- c$V1
+C <- read.table(file = "signif.snp.NeuroX.txt")
+c <- C$V1
 
-d <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
-d <- d$V1
+D <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
+d <- D$V1
 
+E <- read.table(file = "GWAScentral_<=0.0001.txt")
+e <- E$x
+
+F <- read.table(file = "GWAScentral_<=0.00001.txt")
+f <- F$x
 #load test file
 
 setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/")
@@ -24,7 +29,7 @@ y <- Z$RHO_PROTEIN_SIGNAL_TRANSDUCTION
 y <- y[!duplicated(y)]
 
 #Intersect
-overlap <- Reduce(intersect, list(y, a))
+overlap <- Reduce(intersect, list(y, e))
 print(overlap)
 
 
@@ -50,17 +55,21 @@ sym.genes <- sym3[1,]
 # 
 # for (i in x[,1:4]) {
 
-x.in <- length (which(y %in% d))
+#How many PCxN genes contain snps
+x.in <- length (which(y %in% e)) 
+#how many do not
 x.out <- length(y) - x.in
-tot.in <- length (d)
+#total number of snps
+tot.in <- length (GC.04$HGNC.Gene.Symbol)
+#total number of all genes
 tot.out <- length (sym.genes)
 
+#create count matrix
 counts <- matrix (nrow=2, ncol=2)
 counts [1,] <- c(x.in, tot.in)
 counts [2,] <- c(x.out, tot.out)
 
 #Conduct fisher's exact test for count data
-
 a5 <-fisher.test (counts)
 enrich <- a5$p
 print(enrich)

@@ -359,6 +359,7 @@ Results:
 
 Essentially in terms of GWAS central, the list isn't great. Only one pathway reaches significance. Quite a few are significantly enriched by the NeuroX dataset but that is not publically available. I have a feeling it's to do with the fact that the pathways are so broad. They have hundreds of genes and I think that might be messing with the significance. Plus it doesn't really tell us much biologically. 
 
+#Wednesday
 
 When writing up the methodology I used on GSEA, I realised I was asking it to collapse the probesets into genes, when actually the data I was inputting already had genes assigned. When I corrected this value to false, I generated a different and more specific list of GO terms:
 
@@ -370,4 +371,31 @@ REGULATION_OF_SIGNAL_TRANSDUCTION
 RHO_PROTEIN_SIGNAL_TRANSDUCTION
 RNA_CATABOLIC_PROCESS
 
+I extracted all the genes from these and the 10 additional pathways from PCxN and began calculating enrichment. 
 
+#Thursday
+
+I realised looking at the spreadsheet that actually the GWAS central list John sent me was taking values <0.001. I decided to calculate enrichment with 10 fold increases in threshold each time to see if the values changed. 
+
+Because I was separating some identifiers (i.e. SNPs with two associated gene names) I had to make sure I was using the original length list instead of the longer one. So my script was thus - 
+
+```{r, eval=FALSE}
+#How many PCxN genes contain snps
+x.in <- length (which(y %in% f)) 
+#how many do not
+x.out <- length(y) - x.in
+#total number of snps
+tot.in <- length (GC.05$HGNC.Gene.Symbol)
+#total number of all genes
+tot.out <- length (sym.genes)
+
+#create count matrix
+counts <- matrix (nrow=2, ncol=2)
+counts [1,] <- c(x.in, tot.in)
+counts [2,] <- c(x.out, tot.out)
+
+#Conduct fisher's exact test for count data
+a5 <-fisher.test (counts)
+enrich <- a5$p
+print(enrich)
+```
