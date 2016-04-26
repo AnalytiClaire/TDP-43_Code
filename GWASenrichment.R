@@ -14,17 +14,32 @@ c <- c$x
 D <- read.table(file = "GWAScentral_<=0.00001.txt")
 d <- D$x
 
-E <- read.table(file = "signif.snp.NeuroX.txt")
+E <- read.table(file = "GWAScentral_<=0.000001.txt")
 e <- E$V1
 
-F <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
-f <- F$V1
+
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/probesets")
+aa <- read.csv(file = "ALS.gwascentral.martquery_0301121419_683.csv")
+bb <- 
+cc <- read.csv(file = "genesless_1e-6.csv")
+dd
+ee
+
+
+
+
+# E <- read.table(file = "signif.snp.NeuroX.txt")
+# e <- E$V1
+# 
+# F <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
+# f <- F$V1
 
 
 #load test file
 
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/")
-Z <- read.csv(file = "C9pcxngenes.csv")
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/probesets/")
+Z <- read.csv(file = "Genetable.csv")
 y <- Z$NEGATIVE_REGULATION_OF
 
 #remove any duplicates
@@ -62,9 +77,13 @@ x.in <- length (which(y %in% c))
 #how many do not
 x.out <- length(y) - x.in
 #total number of snps
-tot.in <- length (GC.04$HGNC.Gene.Symbol)
+tot.in <- length(GC.04$HGNC.Gene.Symbol)
 #total number of all genes
-tot.out <- length (sym.genes)
+tot.out <- length(sym.genes)-length(tot.in)
+
+
+geo <- dhyper(x.in, tot.in, tot.out, length(y), log = FALSE)
+
 
 #create count matrix
 counts <- matrix (nrow=2, ncol=2)

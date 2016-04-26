@@ -3,7 +3,6 @@
 library (pathprint)
 options(stringsAsFactors = FALSE)
 
-thres <-200
 
 ####C9_LCM ######
 setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM") #set working directory to location of data
@@ -12,14 +11,7 @@ row.names (exp_C9.LCM) <- exp_C9.LCM[,1] #specify that first column contains gen
 exp_C9.LCM<- exp_C9.LCM[,2:12] #specify that all other columns are gene expression data
 
 C9.LCM_pathprint <- exprs2fingerprint(exp_C9.LCM, platform = "GPL570", species="human", progressBar=T) #takes the gene expression values and converts into ternary score (-1,0,1) #platform = microarray platform GEO ID
-
-d <- apply (C9.LCM_pathprint[,1:8], 1,mean) #d = disease, average score of each gene across all samples
-c <-  apply (C9.LCM_pathprint[,9:11], 1,mean) #c = control, average score of each gene across all samples
-t <- d-c #subtract mean disease score from mean control score to find difference
-t1<- t[order(abs(t), decreasing=T)] #order differential expression in decreasing order
-c9.lcm <- (names(t1))[1:thres] #take top 'thres' values
-
-
+vec.c9 <- c(1,1,1,1,1,1,1,1,0,0,0)
 
 
 ####CHMP2B_LCM ######
@@ -29,15 +21,7 @@ row.names (exp_CHMP2B.LCM) <- exp_CHMP2B.LCM[,1]
 exp_CHMP2B.LCM<- exp_CHMP2B.LCM[,2:10]
 
 CHMP2B.LCM_pathprint <- exprs2fingerprint (exp_CHMP2B.LCM, platform = "GPL570", species="human", progressBar=T)
-
-c <- apply (CHMP2B.LCM_pathprint[,4:9], 1, mean)
-d <-  apply (CHMP2B.LCM_pathprint[,1:3], 1, mean)
-t <- d-c
-t1 <- t[order(abs(t), decreasing=T)]
-CHMP2B.lcm <- (names(t1))[1:thres]
-
-
-
+vec.ch <- c(1,1,1,0,0,0,0,0,0)
 
 
 ####sals_lcm###
@@ -48,12 +32,8 @@ row.names (exp_SALS.LCM) <- exp_SALS.LCM[,1]
 exp_SALS.LCM<- exp_SALS.LCM[,2:11]
 
 SALS.LCM_pathprint <- exprs2fingerprint (exp_SALS.LCM, platform = "GPL570", species="human", progressBar=T)
+vec.sals <- c(0,0,0,1,1,1,1,1,1,1)
 
-c <- apply (SALS.LCM_pathprint[,1:3], 1,mean )
-d <-  apply (SALS.LCM_pathprint[,4:10], 1,mean )
-t <- d-c
-t1 <- t[order(abs(t), decreasing=T)]
-SALS.lcm <- (names(t1))[1:thres]
 
 ####FTLD###
 
@@ -64,32 +44,8 @@ FTLD <- FTLD[,2:25]
 
 #GPL571 = Affymetrix Human Genome U113A 2.0 array
 FTLD_pathprint <- exprs2fingerprint (FTLD, platform = "GPL571", species="human", progressBar=T)
+vec.FTLD <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0)
 
-c <- apply (FTLD_pathprint[,17:24], 1,mean )
-d <-  apply (FTLD_pathprint[,1:16], 1,mean )
-t <- d-c
-t1 <- t[order(abs(t), decreasing=T)]
-FTLD_FCx <- (names(t1))[1:thres]
-
-
-
-# setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/FTD-U.brain")
-# FTLD <- read.csv ("eset_FTD.U.brain_170715_exprs.csv", header=TRUE)
-# row.names (FTLD) <- FTLD[,1]
-# FTLD <- FTLD[,2:57]
-# 
-# FCx.Con <- c(1,4,5,7,8,11,13,15)
-# FCx.PRGN <- c(18,20,22,24,27,30)
-# FCx.SFTD <- c(33,35,38,41,44,45,48,50,52,55)
-# 
-# #GPL571 = Affymetrix Human Genome U113A 2.0 array
-# FTLD_pathprint <- exprs2fingerprint (FTLD, platform = "GPL571", species="human", progressBar=T)
-# 
-# c <- apply (FTLD_pathprint[,c(FCx.Con)], 1,mean )
-# d <-  apply (FTLD_pathprint[,c(FCx.PRGN, FCx.SFTD)], 1,mean )
-# t <- d-c
-# t1 <- t[order(abs(t), decreasing=T)]
-# FTLD_FCx <- (names(t1))[1:thres]
 
 ####VCP###
 
@@ -99,28 +55,21 @@ row.names (VCP) <- VCP[,1]
 VCP <- VCP[,2:11]
 
 VCP_pathprint <- exprs2fingerprint (VCP, platform = "GPL570", species="human", progressBar=T)
+vec.vcp <- c(0,0,0,1,1,1,1,1,1,1)
 
-c <- apply (VCP_pathprint[,1:3], 1,mean )
-d <-  apply (VCP_pathprint[,4:10], 1,mean )
-t <- d-c
-t1 <- t[order(abs(t), decreasing=T)]
-VCP.m <- (names(t1))[1:thres]
 
-#### intersect
+##DiffPathways##
 
-# i1 <- intersect (c9.lcm, CHMP2B.lcm)
-# print (i1)
-# 
-# i2 <- intersect (CHMP2B.lcm, SALS.lcm)
-# print (i2)
-# 
-# overlap_lcm <- intersect (i1, i2)
-# 
-# i3 <- intersect (FTLD_FCx, overlap_lcm)
-# 
-# i4 <- intersect (i3,VCP)
-# 
-# print (overlap_lcm)
+thres <- 0.1
+
+c9.lcm <- diffPathways(C9.LCM_pathprint, vec.c9, thres)
+CHMP2B.lcm <- diffPathways(CHMP2B.LCM_pathprint, vec.ch, thres)
+SALS.lcm <- diffPathways(SALS.LCM_pathprint, vec.sals, thres)
+FTLD_FCx <- diffPathways(FTLD_pathprint, vec.FTLD, thres)
+VCP.m <- diffPathways(VCP_pathprint, vec.vcp, thres)
+
+
+###INTERSECT###
 
 overlap <- Reduce(intersect, list(c9.lcm, CHMP2B.lcm, SALS.lcm, FTLD_FCx, VCP.m)) #selects pathways that are present in all data sets listed
 print(overlap)
