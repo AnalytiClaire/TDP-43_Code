@@ -1,5 +1,5 @@
 "","ID","P-value","BHadjP-value","nGenes","nPathway","Name"
-"Pentose.and.glucuronate.interconversions..KEGG.",1,1,1,0,27,"Pentose.and.glucuronate.interconversions..KEGG."
+"Pentose.and.glucuronate.interconversions..KEGG.",1,1,1,0,23,"Pentose.and.glucuronate.interconversions..KEGG."
 "Fructose.and.mannose.metabolism..KEGG.",2,1,1,0,36,"Fructose.and.mannose.metabolism..KEGG."
 "Lysine.degradation..KEGG.",3,0.00308441400560983,0.0144635239188173,2,49,"Lysine.degradation..KEGG."
 "Starch.and.sucrose.metabolism..KEGG.",4,0.026952725485976,0.0868476710103671,1,43,"Starch.and.sucrose.metabolism..KEGG."

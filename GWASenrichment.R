@@ -1,49 +1,62 @@
+# set working directory
+# set working directory
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/probesets/")
 
-#Load database of associations
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
-
-A <- read.table(file = "signif.snp.GWAScentral.txt")
+#Load individual gene names for each significance threshold
+A <- read.table(file = "threegenes.txt")
 a <- A$V1
 
-B <- read.table(file = "signif.snp.GWAScentral.p0.0001.1.txt")
+B <- read.table(file = "fourgenes.txt")
 b <- B$V1
 
-C <- read.table(file = "GWAScentral_<=0.0001.txt")
-c <- c$x
+C <- read.table(file = "fivegenes.txt")
+c <- C$V1
 
-D <- read.table(file = "GWAScentral_<=0.00001.txt")
-d <- D$x
+D <- read.table(file = "sixgenes")
+d <- D$V1
 
-E <- read.table(file = "GWAScentral_<=0.000001.txt")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS")
+
+E <- read.table(file = "signif.snp.NeuroX.txt")
 e <- E$V1
 
+F <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
+f <- F$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis")
+
+G <- read.table(file = "allgenes.txt")
+g <- G$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS")
+H <- read.table(file = "signif.snp.AD.GWASCentralp5E08.txt")
+h <- H$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+K <- read.table(file = "subnet.28.GM.txt")
+k <- K$V1
+
+####Load full gwas datasets ####
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
+
+GCEN <- read.csv("ALS.gwascentral.martquery_0301121419_683.csv")
+
+three <- GCEN[(GCEN$p.value <= 0.001),]
+
+four <- GCEN[(GCEN$p.value <= 0.0001),]
+
+five <- GCEN[(GCEN$p.value <= 0.00001),]
+
+six <- GCEN[(GCEN$p.value <= 0.00001),]
 
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/probesets")
-aa <- read.csv(file = "ALS.gwascentral.martquery_0301121419_683.csv")
-bb <- 
-cc <- read.csv(file = "genesless_1e-6.csv")
-dd
-ee
 
 
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example")
 
+Z <- read.csv(file = "Pathprint/PP+20.csv", na.strings = c("", "NA)"))
+Z <- as.list(Z)
 
-# E <- read.table(file = "signif.snp.NeuroX.txt")
-# e <- E$V1
-# 
-# F <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
-# f <- F$V1
-
-
-#load test file
-
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/probesets/")
-Z <- read.csv(file = "Genetable.csv")
-y <- Z$NEGATIVE_REGULATION_OF
-
-#remove any duplicates
-y <- y[!duplicated(y)]
 
 #Intersect
 overlap <- Reduce(intersect, list(o2, o3))
@@ -59,7 +72,9 @@ sym2 <- as.list (sym[c(sym1)])
 sym3 <- data.frame (sym2)
 sym.probes <- names (sym2)
 sym.genes <- sym3[1,]
+sym.genes <- t(sym.genes)
 
+allgenes <- sym.genes[!duplicated(sym.genes),]
 #calculate counts
 
 # n <- max(length(a), length(b), length(c), length(d))
@@ -72,17 +87,16 @@ sym.genes <- sym3[1,]
 # 
 # for (i in x[,1:4]) {
 
+y <- Z$ABC.transporters..KEGG.
+
 #How many PCxN genes contain snps
-x.in <- length (which(y %in% c)) 
+x.in <- length (which(k %in% y)) 
 #how many do not
 x.out <- length(y) - x.in
 #total number of snps
-tot.in <- length(GC.04$HGNC.Gene.Symbol)
+tot.in <- length(k)
 #total number of all genes
-tot.out <- length(sym.genes)-length(tot.in)
-
-
-geo <- dhyper(x.in, tot.in, tot.out, length(y), log = FALSE)
+tot.out <- length(allgenes)-length(tot.in)
 
 
 #create count matrix

@@ -1,0 +1,26 @@
+---
+title: "LabBook_06_05_2016"
+author: "Claire Green"
+date: "4 May 2016"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60))
+```
+
+#Tuesday
+
+I spent the morning reading about eQTLs, particularly how they are used in research pertaining to disease. I also read the FANTOM 5 paper.
+
+
+#Wednesday
+I worked on creating an illustrative example of using Genome Translation Commons. The keynote file can be found in the GTX Example folder. David and I also spotted a lot of bugs 
+I also began looking at Win's suggestion about the bidirectional promotor of C9orf72. I used the ZENBU platform to identify the non-coding RNA it's linked to and wrote down some notes on how you would investigate its role in C9orf72's activity. Obviously, as C9orf72 mutations cause TDP-43 pathology, this is interesting as the expansion mutation is in the promotor region. This means the mutation would also affect this ncRNA. 
+
+#Thursday
+
+I spent the morning talking with Wenbin about PCxN improvements. I undertand at the moment that its functionality is most important as the reviewers will not care about usability, but I do believe that at some point these issues must be addressed. This is likely something the junior programmer would do. 
+
+In the afternoon.

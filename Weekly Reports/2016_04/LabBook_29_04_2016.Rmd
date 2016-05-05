@@ -178,12 +178,12 @@ write.csv(pathwayEnrichment, file = "GPnd.P<.000001.csv")
 
 \newpage
 
-Enrichment is not very good with the GWAS central SNPs, but is much better with the neuroX list 
+Enrichment is not very good with the GWAS central SNPs, but is much better with the neuroX list (all)
 
 *GWAS Central (All)*
 
 | Pathway                                                  | ID | P-value     | BHadjP-value | nGenes | nPathway |
-|----------------------------------------------------------|----|-------------|--------------|--------|----------|
+|------------------------------------------------|----|----------|-----------|---|---|
 | Pentose.and.glucuronate.interconversions..KEGG.          | 1  | 0.431819002 | 0.736632416  | 2      | 27       |
 | Fructose.and.mannose.metabolism..KEGG.                   | 2  | 0.395690918 | 0.736632416  | 3      | 36       |
 | Lysine.degradation..KEGG.                                | 3  | 1           | 1            | 0      | 49       |
@@ -214,9 +214,11 @@ Enrichment is not very good with the GWAS central SNPs, but is much better with 
 | X.SPTAN1.10...Static.Module.                             | 28 | 0.219497193 | 0.578674418  | 1      | 10       |
 | X.SREBF1.11...Static.Module.                             | 29 | 0.066506094 | 0.482169181  | 2      | 11       |
 
+\newpage
 *NeuroX (All)*
+
 |Pathway                                                 | ID      | P-value      | BHadjP-value| nGenes   | nPathway|
-|--------------------------------------------------------|---------|--------------|-------------|----------|-----|
+|------------------------------------------------|----|----------|-----------|---|---|
 | Pentose.and.glucuronate.interconversionsKEGG.          | 1       | 1            | 1           | 0        | 27  |
 | Fructose.and.mannose.metabolismKEGG.                   | 2       | 1            | 1           | 0        | 36  |
 | Lysine.degradationKEGG.                                | 3       | 0.003084414  | 0.014463524 | 2        | 49  |
@@ -256,7 +258,11 @@ Ganglio Sphingolipid Metabolism (Wikipathways)
 Biogenic Amine Synthesis (Wikipathways)   
 Signaling by Insulin receptor (Reactome)   
 {ESR1,24} (Static Module)   
-{SPTAN1,10} (Static Module)   
+{SPTAN1,10} (Static Module)  
+
+N.B.For neuroX p<5e-8 only 2 pathways (prion diseases and signaling by insulin receptor) were significant.
+
+\newpage
 
 I took these pathways and added them into PCxN. I added the 10 most correlated pathways, which were:
 
@@ -274,7 +280,7 @@ IL-4 up reg. targets (Netpath)
 I acquired the genes in these pathways and re-conducted the enrichment analysis. For GWAS central (p<.001)
 
 | Pathway                                        | ID | P-value     | BHadjP-value | nGenes | nPathway |
-|------------------------------------------------|----|-------------|--------------|--------|----------|
+|------------------------------------------------|----|----------|-----------|---|---|
 | Lysine.degradation..KEGG.                      | 1  | 1           | 1            | 0      | 49       |
 | ABC.transporters..KEGG.                        | 2  | 0.330701101 | 0.457893832  | 4      | 43       |
 | Prion.diseases..KEGG.                          | 3  | 0.193312545 | 0.359177225  | 4      | 35       |
@@ -296,10 +302,11 @@ I acquired the genes in these pathways and re-conducted the enrichment analysis.
 
 here we can see that 2 pathways are now significant -  leukocyte transendothelial migration and IL 4 up reg. targets. This does not continue to p<.0001.
 
+\newpage
 For NeuroX, the results are thus:
 
 | Pathway                                        | ID | P-value     | BHadjP-value | nGenes | nPathway |
-|------------------------------------------------|----|-------------|--------------|--------|----------|
+|------------------------------------------------|----|----------|-----------|---|---|
 | Lysine.degradation..KEGG.                      | 1  | 0.003084414 | 0.00785519   | 2      | 49       |
 | ABC.transporters..KEGG.                        | 2  | 0.002120118 | 0.006360354  | 2      | 43       |
 | Prion.diseases..KEGG.                          | 3  | 0.001163881 | 0.005492045  | 2      | 35       |
@@ -324,7 +331,7 @@ Other than the original 8, 3 other pathways are significant, with 2 reaching sig
 At p<.5e-8 four pathways are significant - prion diseases, Biogenic amine synthesis, signalling by insulin receptor, and TGF beta receptor down reg.targets.
 
 | Pathway                                        | ID | P-value     | BHadjP-value | nGenes | nPathway |
-|------------------------------------------------|----|-------------|--------------|--------|----------|
+|------------------------------------------------|----|----------|-----------|---|---|
 | Lysine.degradation..KEGG.                      | 1  | 1           | 1            | 0      | 49       |
 | ABC.transporters..KEGG.                        | 2  | 1           | 1            | 0      | 43       |
 | Prion.diseases..KEGG.                          | 3  | 0.000105843 | 0.001678927  | 2      | 35       |
@@ -343,3 +350,49 @@ At p<.5e-8 four pathways are significant - prion diseases, Biogenic amine synthe
 | Malaria..KEGG.                                 | 16 | 1           | 1            | 0      | 50       |
 | X.GRB2.414...Static.Module.                    | 17 | 0.276474406 | 0.829423219  | 1      | 393      |
 | IL.4.up.reg..targets..Netpath.                 | 18 | 0.019187682 | 0.069075657  | 2      | 216      |
+
+
+The SNP genes are as follows:
+
+Prion diseases - NOTCH1, SOD1   
+Biogenic emine synthesis - COMT   
+Signaling by insulin receptor - TSC2, FGFR3, STK11   
+TGF beta receptor down reg. targets - GRN, EPHA2, FGFR3, APOE, APOC1, SOD1   
+
+#Wednesday
+
+In the morning I wrote up my feedback on PCxN. This can be found on the basecamp project Hide Laboratory of Computational Biology as a text document. 
+
+In the afternoon, I turned back to looking at the pathprint pathways. I have established that four pathways are significaltly enriched with NeuroX SNP genes at genome wide significance. What I went on to do is look for enrichment of my DEGs in that list, using the hyperPathway function. 
+
+| Pathway                                        | ID | P-value     | BHadjP-value | nGenes | nPathway |
+|------------------------------------------------|----|----------|-----------|---|---|
+| Lysine.degradation..KEGG.                      | 1  | 0.005167366 | 0.023253148  | 1      | 49       |
+| ABC.transporters..KEGG.                        | 2  | 1           | 1            | 0      | 43       |
+| Prion.diseases..KEGG.                          | 3  | 1           | 1            | 0      | 35       |
+| Ganglio.Sphingolipid.Metabolism..Wikipathways. | 4  | 1           | 1            | 0      | 10       |
+| Biogenic.Amine.Synthesis..Wikipathways.        | 5  | 1           | 1            | 0      | 15       |
+| Signaling.by.Insulin.receptor..Reactome.       | 6  | 1           | 1            | 0      | 108      |
+| X.ESR1.24...Static.Module.                     | 7  | 1           | 1            | 0      | 24       |
+| X.SPTAN1.10...Static.Module.                   | 8  | 1           | 1            | 0      | 10       |
+| IL.3.down.reg..targets..Netpath.               | 9  | 1           | 1            | 0      | 10       |
+| TGF.beta.receptor.down.reg..targets..Netpath.  | 10 | 0.005095754 | 0.023253148  | 5      | 735      |
+| IL.4.down.reg..targets..Netpath.               | 11 | 1           | 1            | 0      | 90       |
+| IL.6.up.reg..targets..Netpath.                 | 12 | 0.000593837 | 0.010689063  | 2      | 75       |
+| Leishmaniasis..KEGG.                           | 13 | 1           | 1            | 0      | 69       |
+| Phagosome..KEGG.                               | 14 | 0.041198018 | 0.123594055  | 1      | 147      |
+| Leukocyte.transendothelial.migration..KEGG.    | 15 | 0.025453406 | 0.091632262  | 1      | 113      |
+| Malaria..KEGG.                                 | 16 | 1           | 1            | 0      | 50       |
+| X.GRB2.414...Static.Module.                    | 17 | 0.2126385   | 0.546784714  | 1      | 393      |
+| IL.4.up.reg..targets..Netpath.                 | 18 | 0.001263182 | 0.011368634  | 3      | 216      |
+
+This shows that with an adjusted p value, 4 pathways are significantly enriched with DEGs. Lysine degredation, TGF beta receptor down reg targets, IL 6 up reg. targets, and IL 4 up reg targets.
+
+#Thursday
+
+On Thursday I did some more analysis for Win, as he mentioned using another methodology. This time round I attempted to use Pathprint instead of GSEA as well as attempting to use my fisher's exact test method (by attempting to modify Gabriel's hyperPathways code). I'm not entirely convinced it works, but it's hard to tell. Either way, diffPathways works sufficiently enough.
+
+I spent the rest of the day curating my results into a slide show (results.key). What it shows is that quite a few of the PCxN added pathways are enriched with ALS genes as well as DEGs.
+
+#Friday
+

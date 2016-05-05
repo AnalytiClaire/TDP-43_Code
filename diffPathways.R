@@ -60,7 +60,7 @@ vec.vcp <- c(0,0,0,1,1,1,1,1,1,1)
 
 ##DiffPathways##
 
-thres <- 0.1
+thres <- 0.7
 
 c9.lcm <- diffPathways(C9.LCM_pathprint, vec.c9, thres)
 CHMP2B.lcm <- diffPathways(CHMP2B.LCM_pathprint, vec.ch, thres)
@@ -78,3 +78,6 @@ setwd ("/Users/clairegreen/Desktop/")
 
 write.csv(overlap, file = "overlap.csv")
 
+C9 <- as.numeric(C9.LCM_pathprint['TGF beta receptor down reg. targets (Netpath)',])
+C9
+CH <- CHMP2B.lcm
