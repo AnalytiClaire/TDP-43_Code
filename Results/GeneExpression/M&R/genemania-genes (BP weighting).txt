@@ -1,0 +1,90 @@
+Symbol	Description	Score	Functions	Links
+NDUFS5		0.9374873134659061		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=4725
+PLEKHB1		0.9276560791083299		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=58473
+BBIP1		0.9220543210416603		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=92482
+DCN		0.9187579352084019	extracellular matrix organization, extracellular structure organization	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=1634
+RPL35A		0.9186990592590182	mRNA catabolic process, nuclear-transcribed mRNA catabolic process, RNA catabolic process, viral life cycle	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=6165
+RAB40B		0.9135697452759237		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=10966
+VPS13B		0.9104395873556708		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=157680
+JAG1		0.8961620930033982	cell surface receptor signaling pathway involved in heart development, endocardial cushion development, Notch receptor processing	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=182
+KPNA6		0.8960081645896576	nuclear transport, nucleocytoplasmic transport	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=23633
+MPHOSPH9		0.8954470906129308		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=10198
+NKTR		0.8911949445379406		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=4820
+ZNF518A		0.8873880200786216		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=9849
+ZFYVE26		0.88361570195481		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=23503
+CDH11		0.8822672838686347		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=1009
+PTPN13		0.8762880283250558		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5783
+PPP1R7		0.874860660735724		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5510
+STMN1		0.8733397579598869		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=3925
+SERBP1		0.8720416479080818		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=26135
+POGZ		0.8718976256263985		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=23126
+PFDN1		0.8701682050927675	'de novo' posttranslational protein folding, 'de novo' protein folding	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5201
+SCN1B		0.86849274805476	regulation of sodium ion transmembrane transporter activity	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=6324
+CST3		0.8671751956238919	extracellular matrix organization, extracellular structure organization	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=1471
+BPTF		0.8659305531715431		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=2186
+CREG1		0.861952895942776		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=8804
+RPL37		0.860340164405323	mRNA catabolic process, nuclear-transcribed mRNA catabolic process, RNA catabolic process, viral life cycle	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=6167
+PLOD2		0.8558222369008714	extracellular matrix organization, extracellular structure organization	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5352
+OTUB1		0.8553340404392222		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=101927673
+BGN		0.8552351509033856	extracellular matrix organization, extracellular structure organization	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=633
+CSRP1		0.8544235230562294		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=1465
+NUTF2		0.8536051446702548	nuclear transport, nucleocytoplasmic transport	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=10204
+ANXA1		0.8491174656190295		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=301
+TCF4		0.8485386831809294		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=6925
+MXI1		0.8478857448839647	nuclear transport, nucleocytoplasmic transport	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=4601
+GBAS		0.8475480826897405		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=2631
+KCTD12		0.8432175873324608		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=115207
+PPP2CB		0.8409084268725415	protein phosphatase type 2A complex, protein serine/threonine phosphatase complex	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5516
+TUBB4B		0.8362846979789429	'de novo' posttranslational protein folding, 'de novo' protein folding	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=10383
+PRPF3		0.8344243759998872	mRNA processing, mRNA splicing, via spliceosome, RNA splicing, RNA splicing, via transesterification reactions, RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=9129
+ACTN1		0.8292501694137236	extracellular matrix organization, extracellular structure organization	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=87
+SPARC		0.8263050720060972	extracellular matrix organization, extracellular structure organization	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=6678
+ZFP36		0.8253232674255746	mRNA catabolic process, mRNA processing, nuclear-transcribed mRNA catabolic process, RNA catabolic process	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=7538
+SF3B1		0.8202989948154387	mRNA processing, mRNA splicing, via spliceosome, RNA splicing, RNA splicing, via transesterification reactions, RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=23451
+PPP2CA		0.7919471351822147	mRNA catabolic process, nuclear-transcribed mRNA catabolic process, protein phosphatase type 2A complex, protein serine/threonine phosphatase complex, RNA catabolic process, RNA splicing	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5515
+TARDBP		0.7803862300269389	RNA splicing	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=23435
+SF3B14		0.0083787288490636	mRNA processing, mRNA splicing, via spliceosome, RNA splicing, RNA splicing, via transesterification reactions, RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=51639
+COL3A1		0.007301951647557314	extracellular matrix organization, extracellular structure organization	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=1281
+NELFE		0.006781588137474481		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=100302242
+MAZ		0.006681385888634039		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=4150
+PPP2R1A		0.006569118167173482	mRNA catabolic process, nuclear-transcribed mRNA catabolic process, protein phosphatase type 2A complex, protein serine/threonine phosphatase complex, RNA catabolic process, RNA splicing	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5518
+UBC		0.006263307754744651	intracellular transport of virus, multi-organism intracellular transport, multi-organism transport, Notch receptor processing, transport of virus, viral life cycle	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=7316
+MAX		0.006188719850098889		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=4149
+OTUD6B		0.006052306548267661		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=51633
+ATXN2		0.00561114828046555		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=6311
+SH2D3A		0.0054826840121937614		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=10045
+RAN		0.0054194984786199996	intracellular transport of virus, multi-organism intracellular transport, multi-organism transport, nuclear transport, nucleocytoplasmic transport, transport of virus, viral life cycle	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5901
+AGO4		0.0048503791158450715	mRNA catabolic process, RNA catabolic process	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=192670
+PPP1CA		0.004788235515511996	protein serine/threonine phosphatase complex	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5499
+MACF1		0.004439091820309438		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=23499
+NOTCH1		0.004395429136199558	cell surface receptor signaling pathway involved in heart development, endocardial cushion development, extracellular matrix organization, extracellular structure organization, Notch receptor processing	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=4851
+CALD1		0.004003426925621556		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=800
+RBM17		0.003954953843532394		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=84991
+UHMK1		0.003949397728198134	nuclear transport, nucleocytoplasmic transport	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=127933
+PLRG1		0.0039452132364093395	mRNA processing, mRNA splicing, via spliceosome, RNA splicing, RNA splicing, via transesterification reactions, RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5356
+ACTN4		0.003927017885215378	regulation of sodium ion transmembrane transporter activity	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=81
+SCN2B		0.0038509760172450447	regulation of sodium ion transmembrane transporter activity	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=6327
+DDX17		0.0037765956065275996		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=10521
+ANXA4		0.0037532080488502095		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=307
+KPNB1		0.003543260066609877	intracellular transport of virus, multi-organism intracellular transport, multi-organism transport, nuclear transport, nucleocytoplasmic transport, transport of virus, viral life cycle	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=3837
+PFDN5		0.0035314694590309337	'de novo' posttranslational protein folding, 'de novo' protein folding	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5204
+TMEM189-UBE2V1		0.003509249559671024		http://www.ensembl.org/Homo_sapiens/geneview?gene=ENSG00000124208
+C4A		0.003484501228565917		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=720
+SMNDC1		0.0034361460224723306	RNA splicing, RNA splicing, via transesterification reactions	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=10285
+TLX1		0.003432424729697847		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=3195
+BMP4		0.003427013526256406	cell surface receptor signaling pathway involved in heart development, endocardial cushion development, extracellular matrix organization, extracellular structure organization, nuclear transport, nucleocytoplasmic transport	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=652
+MFAP1		0.00335257821086804	extracellular matrix organization, extracellular structure organization	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=4236
+TUBB		0.0033448806170911505		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=203068
+COL14A1		0.0033263263132787824	extracellular matrix organization, extracellular structure organization	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=7373
+THOC2		0.0033182327961278624	intracellular transport of virus, multi-organism intracellular transport, multi-organism transport, nuclear transport, nucleocytoplasmic transport, transport of virus, viral life cycle	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=57187
+PCBP1		0.0032960327317256843	mRNA processing, mRNA splicing, via spliceosome, RNA splicing, RNA splicing, via transesterification reactions, RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5093
+SET		0.0032822971671412904	nuclear transport, nucleocytoplasmic transport	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=6418
+SF3A2		0.003281890808072674	mRNA processing, mRNA splicing, via spliceosome, RNA splicing, RNA splicing, via transesterification reactions, RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=8175
+TUBA1B		0.0032344583658747705	'de novo' posttranslational protein folding, 'de novo' protein folding	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=10376
+GNGT1		0.0031951628495592854		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=2792
+PPP2R1B		0.0031575045327616458		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5519
+S100A11		0.003155949434854477		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=6282
+RNPS1		0.0031549974832040806	mRNA catabolic process, mRNA processing, mRNA splicing, via spliceosome, nuclear transport, nuclear-transcribed mRNA catabolic process, nucleocytoplasmic transport, RNA catabolic process, RNA splicing, RNA splicing, via transesterification reactions, RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=10921
+PAN2		0.003148842154946041	mRNA catabolic process, mRNA processing, nuclear-transcribed mRNA catabolic process, RNA catabolic process	http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=9924
+PRKAR2A		0.003118715551327811		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=5576
+NEURL		0.0030903619909335434		http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=search&term=9148

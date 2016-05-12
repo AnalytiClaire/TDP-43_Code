@@ -12,7 +12,7 @@ rownames(C9.disease) <- C9.disease[,1]
 C9.disease[,1] <- NULL
 tC9.disease <- t(C9.disease)
 
-C9.cor <- cor(tC9.disease)
+C9.cor <- corr.test(tC9.disease, y= NULL, use = "pairwise", method = "pearson", adjust = "fdr")
 
 DEG <- C9.cor[c("ACTN1", "ANXA1", "BBIP1", "BGN", "BPTF", "CDH11", "CREG1", "CSRP1", "CST3", "DCN", "GBAS", "JAG1",
                     "KCTD12", "KPNA6", "MPHOSPH9", "MXI1", "NDUFS5 /// RPL10", "NKTR", "NUTF2 /// NUTF2P4", "LOC101927673 /// OTUB1", 

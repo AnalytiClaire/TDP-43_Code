@@ -1,0 +1,215 @@
+---
+title: "LabBook_13_05_2016"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60))
+```
+
+#Monday
+
+On Monday I spent most of the day sorting out stuff for seattle, and also preparing the presentation for the meeting with the GTC developer group
+
+#Tuesday
+
+In the morning I looked at performing enrichment on my genes, and also on an expanded list from Genemania. Unfortunately there was no enrichment for ALS and AD genes or John's subnetwork 28, no matter if the list was expanded or not. 
+
+In the afternoon I called in on the developer's meeting and gave my presentation. Everyone was very welcoming and I think they took my suggestions into consideration. Afterwards, I contacted John about Win and my conversation about using mutation frequency as a measure of how important a gene is in disease. John and I ended up having a long discussion and he suggested I do the following
+
+Download the ExAC data from the Broad Institute. This data measures the constraint of a gene i.e. how resistant it is to mutation. The theory is that if the gene is less likely to mutate, it means it is more important biologically as life would not be viable without it. 
+
+First of all, I looked for enrichment of all my genes in the total list. The list is approximately 18,000 genes. Using a fisher's excact test, 42 of my 45 genes are present:
+
+```{r, eval=TRUE}
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis")
+
+G <- read.table(file = "allgenes.txt")
+g <- G$V1
+
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+#Load ExAC Data
+Exac.All <- read.table(file = "fordist_cleaned_exac_r03_march16_z_pli_rec_null_data.txt", header = TRUE)
+exacgenes <- Exac.All$gene
+
+#Load file with all genes
+library(hgu133plus2.db)
+sym <- hgu133plus2SYMBOL
+sym1 <- mappedkeys(sym)
+sym2 <- as.list (sym[c(sym1)])
+sym3 <- data.frame (sym2)
+sym.probes <- names (sym2)
+sym.genes <- sym3[1,]
+sym.genes <- t(sym.genes)
+
+allgenes <- sym.genes[!duplicated(sym.genes),]
+
+y <- g
+snp <- exacgenes
+
+#How many test geneset genes contain snps
+x.in <- length (which(y %in% snp)) 
+#how many do not
+x.out <- length(y) - x.in
+#total number of snp genes
+tot.in <- length(snp)
+#total number of all genes
+tot.out <- length(allgenes)-length(tot.in)
+
+
+#create count matrix
+counts <- matrix (nrow=2, ncol=2)
+counts [1,] <- c(x.in, tot.in)
+counts [2,] <- c(x.out, tot.out)
+
+#Conduct fisher's exact test for count data
+a5 <-fisher.test (counts)
+enrich <- a5$p
+print(enrich)
+
+```
+
+This shows that my DEGs are highly enriched however this list is essentially the whole genome which doesn't tell me much. I then looked for enrichment of the list John had generated which was all genes with PLI>=0.95 which indicates they are the top 5% of constrained genes. This list was approximately 2500 in length. 
+
+```{r, eval=TRUE}
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+L <- read.table(file = "exac.pli.0.95.txt")
+l <- L$V1
+
+y <- g
+snp <- l
+
+#How many test geneset genes contain snps
+x.in <- length (which(y %in% snp)) 
+#how many do not
+x.out <- length(y) - x.in
+#total number of snp genes
+tot.in <- length(snp)
+#total number of all genes
+tot.out <- length(allgenes)-length(tot.in)
+
+
+#create count matrix
+counts <- matrix (nrow=2, ncol=2)
+counts [1,] <- c(x.in, tot.in)
+counts [2,] <- c(x.out, tot.out)
+
+#Conduct fisher's exact test for count data
+a5 <-fisher.test (counts)
+enrich <- a5$p
+print(enrich)
+```
+
+The 13 genes are:
+
+SF3B1   
+PPP2CA   
+TCF4   
+BPTF   
+TARDBP   
+JAG1   
+PRPF3   
+ACTN1   
+KPNA6   
+POGZ   
+SERBP1   
+CDH11  
+NKTR   
+
+
+#Wednesday
+
+I then moved on to looking at whether the overall values of these 13 genes are more than you would expect by chance. John suggested I try the pLI score (which is a measure of the probability of being loss-of-function intolerant) and the corrected missense Z score. I conducted a random permutation test in which I took 13 random values and summed them, then compared to the score for my genes. 
+
+```{r, eval=FALSE}
+
+test <- DEGtotal.mis_Z
+m=10000 #number of repetitions 
+r <- c(1:m) #store repetition numbers in vector "r"
+
+for (j in 1:m)
+{
+  random <- sample (Exac.All$mis_z, size=13, replace=FALSE)
+  r[j] <- sum(random)
+}
+
+test1 <- which(r > test)  # count number of times r is larger than test value
+result <- (length(test1)/m) # calculate P value
+mean(r)
+
+```
+
+The total for my genes was 49.68491, the mean for the random samples was 31.92782, and the p value was 0.0032. This suggest that my genes overall are significantly more constrained than you would expect from a random sample of the same size in this top 5% list. The gene with the highest missense Z score was SF3B1 by some margin. This has not yet been linked to ALS or tdp-43 proteinopathy, and John thinks it's worth looking for mutations in the ALS samples we have.  
+
+I also submitted these 13 genes into endeavour and it also prioritised SF3B1 as well as SERBP1 and BPTF. 
+
+#Thursday
+
+This morning I included the added 45 genes to my gene list from genemania, and conducted the same enrichment analysis. Of the 89 genes (TUG1 is not recognised by genemania), 26 were found to be intersected with the top 5% of ExAC genes. This was significant at 5.69218e-06. These genes were:
+
+"NKTR"   "JAG1"   "KPNA6"  "BPTF"   "SERBP1" "CDH11"  "POGZ"   "SF3B1"  "TCF4"   "ACTN1"  "PRPF3"  "PPP2CA" "TARDBP" "NIPBL"  "DDX21"  "MAP7D1" "VDAC3"  "COL3A1" "MAZ"  "CSNK1E"
+"MACF1"  "ITFG1"  "RPS18"  "SHOC2"  "RPL7"   "PKN2"  
+
+The sum missense Z score was significantly higher than you would expect by chance with a score of 82.98 as compared to a mean of 64.00. p value was 
+0.0172. The sum pLI score was not significantly higher than expected by chance, with a score of 25.72 as compared to a mean of 25.74. p value was .6671.
+
+This suggests that although the addition of the 45 genes produces a more enriched list of 26, these extra genes are likely to be towards the bottom end of the Exac table. 
+
+
+I also looked again at my pathway lists. I found that of my original 29 pathways, 4 are significantly enriched with genes from John's subnetwork 28. These are:
+
+Complement.and.Coagulation.Cascades..Wikipathways.
+Complement.and.coagulation.cascades..KEGG.
+Complement.Activation..Classical.Pathway..Wikipathways.
+Prion.diseases..KEGG.
+
+Considering the first two of these pathways are nearly identical and the 3rd is a subnetwork of the first, it's more like 2 pathways overall. The genes intersecting are 
+
+Complement and Coagulation Cascades (Wikipathways and Kegg)
+"C1QA"  "C1QB"  "C3AR1" "THBD" 
+
+Complement Activation, Classical Pathway (Wikipathways)
+"C1QA" "C1QB"
+
+Prion Diseases (Kegg)
+"C1QA" "C1QB"
+
+
+I then looked for enrichment of the Exac 5% list. These are the results:
+
+| ID                                                      | P-value | BHadjP-value | nGenes      | nPathway |     |
+|---------------------------------------------------------|---------|--------------|-------------|----------|-----|
+| Signaling by Insulin receptor  Reactome                 | 20      | 3.12E-47     | 9.06E-46    | 30       | 108 |
+| Jak STAT signaling pathway  KEGG                        | 9       | 8.74E-46     | 9.48E-45    | 32       | 152 |
+| Opioid Signalling  Reactome                             | 21      | 9.81E-46     | 9.48E-45    | 27       | 79  |
+| SIDS Susceptibility Pathways  Wikipathways              | 19      | 1.57E-31     | 1.14E-30    | 19       | 65  |
+| Lysine degradation  KEGG                                | 3       | 5.89E-30     | 3.42E-29    | 17       | 49  |
+| RAN 17   Static Module                                  | 27      | 9.52E-22     | 4.60E-21    | 10       | 16  |
+| ESR1 24   Static Module                                 | 22      | 7.26E-15     | 3.01E-14    | 8        | 24  |
+| Prion diseases  KEGG                                    | 11      | 1.92E-11     | 6.95E-11    | 7        | 35  |
+| SPTAN1 10   Static Module                               | 28      | 7.17E-11     | 2.31E-10    | 5        | 10  |
+| HSPA8 34   Static Module                                | 24      | 5.20E-10     | 1.51E-09    | 6        | 30  |
+| Complement and coagulation cascades  KEGG               | 8       | 2.51E-09     | 6.62E-09    | 7        | 68  |
+| Complement and Coagulation Cascades  Wikipathways       | 17      | 1.32E-08     | 3.18E-08    | 6        | 50  |
+| F2 46   Static Module                                   | 23      | 3.54E-07     | 7.90E-07    | 5        | 46  |
+| NRP1 11   Static Module                                 | 25      | 2.37E-06     | 4.90E-06    | 3        | 9   |
+| SREBF1 11   Static Module                               | 29      | 4.63E-06     | 8.94E-06    | 3        | 11  |
+| ABC transporters  KEGG                                  | 7       | 1.01E-05     | 1.82E-05    | 4        | 43  |
+| Biogenic Amine Synthesis  Wikipathways                  | 16      | 0.000940227  | 0.001603916 | 2        | 15  |
+| Urea cycle and metabolism of amino groups  Wikipathways | 14      | 0.001857321  | 0.00299235  | 2        | 21  |
+| Nitrogen metabolism  KEGG                               | 6       | 0.002228427  | 0.003401283 | 2        | 23  |
+| Phototransduction  KEGG                                 | 10      | 0.003066258  | 0.004446073 | 2        | 27  |
+| Fructose and mannose metabolism  KEGG                   | 2       | 0.005402701  | 0.007460873 | 2        | 36  |
+| Complement Activation  Classical Pathway  Wikipathways  | 15      | 0.047053316  | 0.062024825 | 1        | 16  |
+| Glucuronidation  Wikipathways                           | 18      | 0.049918348  | 0.062940526 | 1        | 17  |
+| Pentose and glucuronate interconversions  KEGG          | 1       | 1            | 1           | 0        | 23  |
+| Starch and sucrose metabolism  KEGG                     | 4       | 1            | 1           | 0        | 43  |
+| Pantothenate and CoA biosynthesis  KEGG                 | 5       | 1            | 1           | 0        | 17  |
+| Phase I  non P450  Wikipathways                         | 12      | 1            | 1           | 0        | 7   |
+| Ganglio Sphingolipid Metabolism  Wikipathways           | 13      | 1            | 1           | 0        | 10  |
+| POR 15   Static Module                                  | 26      | 1            | 1           | 0        | 15  |
+
+These look good but I think you would expect pathways like this to be enriched with genes that are important, so I'm not sure it's particularly interesting. 

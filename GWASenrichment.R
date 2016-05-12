@@ -36,8 +36,12 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExp
 K <- read.table(file = "subnet.28.GM.txt")
 k <- K$V1
 
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+L <- read.table(file = "exac.pli.0.95.txt")
+l <- L$V1
+
 ####Load full gwas datasets ####
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
+setwd(dir = "/Users/clairegreen/Downloads/PCxN example")
 
 GCEN <- read.csv("ALS.gwascentral.martquery_0301121419_683.csv")
 
@@ -52,9 +56,11 @@ six <- GCEN[(GCEN$p.value <= 0.00001),]
 
 
 
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example")
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+x <- read.table(file = "45+45(BP).txt")
+x <- x$V1
 
-Z <- read.csv(file = "Pathprint/PP+20.csv", na.strings = c("", "NA)"))
+Z <- read.csv(file = "LeaveOneOutDEGs.csv", na.strings = c("", "NA)"))
 Z <- as.list(Z)
 
 
@@ -75,6 +81,8 @@ sym.genes <- sym3[1,]
 sym.genes <- t(sym.genes)
 
 allgenes <- sym.genes[!duplicated(sym.genes),]
+
+
 #calculate counts
 
 # n <- max(length(a), length(b), length(c), length(d))
@@ -87,14 +95,15 @@ allgenes <- sym.genes[!duplicated(sym.genes),]
 # 
 # for (i in x[,1:4]) {
 
-y <- Z$ABC.transporters..KEGG.
+y <- x
+snp <- l
 
-#How many PCxN genes contain snps
-x.in <- length (which(k %in% y)) 
+#How many test geneset genes contain snps
+x.in <- length (which(y %in% snp)) 
 #how many do not
 x.out <- length(y) - x.in
-#total number of snps
-tot.in <- length(k)
+#total number of snp genes
+tot.in <- length(snp)
 #total number of all genes
 tot.out <- length(allgenes)-length(tot.in)
 
@@ -108,4 +117,11 @@ counts [2,] <- c(x.out, tot.out)
 a5 <-fisher.test (counts)
 enrich <- a5$p
 print(enrich)
+
+
+
+o1 <- Reduce(intersect, list(y,snp))
+print(o1)
+o2 <- Reduce(intersect, list(c, Z$TGF.beta.receptor.down.reg..targets..Netpath.))
+print(o2)
 

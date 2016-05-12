@@ -1,7 +1,8 @@
 # set working directory
+# set working directory
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/probesets/")
 
-#Load individual gene names for each GWAS database
+#Load individual gene names for each significance threshold
 A <- read.table(file = "threegenes.txt")
 a <- A$V1
 
@@ -27,8 +28,21 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionA
 G <- read.table(file = "allgenes.txt")
 g <- G$V1
 
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS")
+H <- read.table(file = "signif.snp.AD.GWASCentralp5E08.txt")
+h <- H$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+K <- read.table(file = "subnet.28.GM.txt")
+k <- K$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/ExAC/")
+L <- read.table(file = "exac.pli.0.95.txt")
+l <- L$V1
+
+
 ####Load full gwas datasets ####
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
 
 GCEN <- read.csv("ALS.gwascentral.martquery_0301121419_683.csv")
 
@@ -47,15 +61,15 @@ six <- GCEN[(GCEN$p.value <= 0.00001),]
 
 
 
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/Pathprint 25.04.16/FishersExact/FE.Enriched.Pathways/Fe.EP+10/")
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/Pathprint 25.04.16/FishersExact/FE.All.Pathways/FE.PathprintPathways(29)/")
 
 #Read in geneset
-Z <- read.csv(file = "FE+pcxn10.csv", na.strings = c("", "NA)"))
+Z <- read.csv(file = "FE.pathprintgenes.csv", na.strings = c("", "NA)"))
 Z <- as.list(Z)
 Z<- lapply(Z, function(x) x[!is.na(x)])
 
 geneset <- Z
-genelist <- h
+genelist <- k
 genelist.length <- length(h)
 
 hyper <- as.data.frame(matrix(nrow = length(geneset), ncol = 1))
@@ -108,4 +122,8 @@ hyper <- cbind((1:length(hyper[, 1])), hyper)
 colnames(hyper) <- c("ID", "P-value", "BHadjP-value", "nGenes", 
                      "nPathway", "Name")
 
-write.csv(hyper, file = "FE.EP10.GWAScentral_e-6.csv")
+write.csv(hyper, file = "FE.EP20.subnetwork28.csv")
+
+
+o1 <- Reduce(intersect, list(k, Z$Prion.diseases..KEGG.))
+print(o1)

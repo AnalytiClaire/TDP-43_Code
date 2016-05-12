@@ -1,6 +1,10 @@
 ##Differential Expression of Genes##
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/FTLD/")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSE53808_RAW/")
+library(widgetTools)
+library(tcltk)
+library(DynDoc)
+library(tools)
 library(affy)
 library(Biobase)
 library(tkWidgets)
@@ -10,11 +14,22 @@ celfiles <- fileBrowser(textToShow = "Choose CEL files", testFun = hasSuffix("[c
 #celfiles<-basename(celfiles)
 Data<-ReadAffy(filenames=celfiles) #read in files
 rmaEset<-rma(Data) #normalise using RMA
-analysis.name<-"FTLD" #Label analysis
+analysis.name<-"ChAlc" #Label analysis
 dataMatrixAll<-exprs(rmaEset) #takes expression from normalised expression set
 
 
 #mas5call generates presence/absence calls for each probeset
+mas5call<-mas5calls(Data)
+callMatrixAll<-exprs(mas5call)
+colnames(callMatrixAll)<-sub(".CEL", ".mas5-Detection", colnames(callMatrixAll),fixed=TRUE)
+colnames(callMatrixAll)<-sub(".cel", ".mas5-Detection", colnames(callMatrixAll),fixed=TRUE)
+callMatrixAll<-as.data.frame(callMatrixAll)
+callMatrixAll$ProbeSetID<-rownames(callMatrixAll)
+countPf<-function(x){
+  sum(x=="P")
+}
+
+#mas5call if above doesn't work --> "Error in FUN(X[[i]], ...) : NA/NaN/Inf in foreign function call (arg 2)"
 mas5call<-mas5calls(Data)
 callMatrixAll<-exprs(mas5call)
 colnames(callMatrixAll)<-sub(".CEL", ".mas5-Detection", colnames(callMatrixAll),fixed=TRUE)
