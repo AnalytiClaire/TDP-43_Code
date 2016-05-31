@@ -27,10 +27,9 @@ E_DE <- E$Gene.Symbol
 F_DE <- F$X
 G_DE <- G$X
 
-overlap <- Reduce(intersect, list(A_DE, B_DE, C_DE, D_DE, E_DE, F_DE))
+overlap <- Reduce(intersect, list(A_DE, B_DE, C_DE, D_DE, E_DE, F_DE, G_DE))
 print(overlap)
 
-setwd(dir = "/Users/clairegreen/Desktop/")
 write.csv(overlap, file = "overlap.csv")
 
 # c9setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/Pathprint/")
@@ -47,4 +46,3 @@ Micro <- overlap
 
 snpenrich <- Reduce(intersect, list(overlap, gwas3))
 print(snpenrich)
-

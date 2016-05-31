@@ -1,12 +1,12 @@
 ##RNA-Seq Gene Expression Analysis using Limma##
 
-analysis.name<-"RAV" #Label analysis
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/Ravits/")
+analysis.name<-"PET" #Label analysis
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/Petrucelli/")
 # Counts <- read.table(file = 'GSE67196_Petrucelli2015_ALS_genes.rawcount.txt', header = TRUE)
 # 
 # write.csv(x = Counts, file = "counts_petrucelli.csv")
 
-Counts <- read.csv(file = "ravitsannotated_combined.counts.csv", header = TRUE)
+Counts <- read.csv(file = "Pet.annotated_combined.counts.csv", header = TRUE)
 
 Counts[Counts == 0] <- NA
 # Counts[Counts<30] <- NA
@@ -23,7 +23,7 @@ Counts[,1] <- NULL
 library(limma)
 library(edgeR)
 
-Countnum <- Counts[,1:21]
+Countnum <- Counts[,1:27]
 # Counts <- data.matrix(Counts)
 
 # Countnum <- read.csv(file = "pet.counts.clean.csv")
@@ -33,7 +33,7 @@ dge <- DGEList(counts=Countnum)
 dge <- calcNormFactors(dge)
 
 #Design
-Treat<-factor(rep(c("Control", "Patient"),c(8,13)), levels=c("Control", "Patient"))
+Treat<-factor(rep(c("Patient", "Control"),c(18,9)), levels=c("Patient", "Control"))
 design<-model.matrix(~Treat)
 rownames(design)<-colnames(Countnum)
 design
@@ -44,7 +44,7 @@ v <- voom(dge,design,plot=FALSE)
 #Limma fitting
 fit <- lmFit(v,design)
 fit <- eBayes(fit)
-result<-topTable(fit, coef="TreatPatient", adjust="BH", number=nrow(Countnum)) #"BH" adjust for multiple hypothesis testing
+result<-topTable(fit, coef="TreatControl", adjust="BH", number=nrow(Countnum)) #"BH" adjust for multiple hypothesis testing
 result <- merge(result, Counts, by="row.names", all=TRUE)
 result <- result[,1:7]
 
@@ -67,16 +67,16 @@ uniqueresult <- result[!duplicated(result$hgnc_symbol),]
 rownames(uniqueresult) <- uniqueresult$hgnc_symbol
 genesort <- uniqueresult[order(uniqueresult$adj.P.Val),]
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_ensemblID/")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/")
 write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=TRUE, quote = FALSE)
 
-# topgene <- genesort[1:1000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_1000.csv", sep = ""))
-# topgene <- genesort[1:2000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_2000.csv", sep = ""))
-# topgene <- genesort[1:3000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_3000.csv", sep = ""))
-# topgene <- genesort[1:4000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_4000.csv", sep = ""))
-# topgene <- genesort[1:5000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_5000.csv", sep = ""))
+topgene <- genesort[1:1000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_1000.csv", sep = ""))
+topgene <- genesort[1:2000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_2000.csv", sep = ""))
+topgene <- genesort[1:3000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_3000.csv", sep = ""))
+topgene <- genesort[1:4000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_4000.csv", sep = ""))
+topgene <- genesort[1:5000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_5000.csv", sep = ""))

@@ -32,13 +32,26 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS")
 H <- read.table(file = "signif.snp.AD.GWASCentralp5E08.txt")
 h <- H$V1
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
 K <- read.table(file = "subnet.28.GM.txt")
 k <- K$V1
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/ExAC/")
 L <- read.table(file = "exac.pli.0.95.txt")
 l <- L$V1
+
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+M <- read.table(file = "Carulli_List.txt")
+m <- M$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+N <- read.table(file = "GeneCardsAD.txt")
+n <- N$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+O <- read.table(file = "GeneCardsALS.txt")
+o <- O$V1
 
 ####Load full gwas datasets ####
 setwd(dir = "/Users/clairegreen/Downloads/PCxN example")
@@ -95,8 +108,8 @@ allgenes <- sym.genes[!duplicated(sym.genes),]
 # 
 # for (i in x[,1:4]) {
 
-y <- x
-snp <- l
+y <- p
+snp <- n
 
 #How many test geneset genes contain snps
 x.in <- length (which(y %in% snp)) 
@@ -120,7 +133,7 @@ print(enrich)
 
 
 
-o1 <- Reduce(intersect, list(y,snp))
+o1 <- Reduce(intersect, list(n, Z$X7500))
 print(o1)
 o2 <- Reduce(intersect, list(c, Z$TGF.beta.receptor.down.reg..targets..Netpath.))
 print(o2)

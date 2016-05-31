@@ -1,5 +1,4 @@
 # set working directory
-# set working directory
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/probesets/")
 
 #Load individual gene names for each significance threshold
@@ -23,10 +22,10 @@ e <- E$V1
 F <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
 f <- F$V1
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/")
 
-G <- read.table(file = "allgenes.txt")
-g <- G$V1
+G <- read.csv(file = "Allgenes.csv")
+g <- G$X6000
 
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS")
 H <- read.table(file = "signif.snp.AD.GWASCentralp5E08.txt")
@@ -41,36 +40,71 @@ L <- read.table(file = "exac.pli.0.95.txt")
 l <- L$V1
 
 
-####Load full gwas datasets ####
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+M <- read.table(file = "Carulli_List.txt")
+m <- M$V1
 
-GCEN <- read.csv("ALS.gwascentral.martquery_0301121419_683.csv")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+N <- read.table(file = "GeneCardsAD.txt")
+n <- N$V1
 
-three <- GCEN[(GCEN$p.value <= 0.001),]
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+O <- read.table(file = "GeneCardsALS.txt")
+o <- O$V1
 
-four <- GCEN[(GCEN$p.value <= 0.0001),]
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/QQ/Test3/")
+P <- read.table(file = "genemania-genes.txt")
+p <- P$V1
 
-five <- GCEN[(GCEN$p.value <= 0.00001),]
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+Q <- read.table(file = "Pasterkamp_TDP43.txt")
+q <- Q$V1
 
-six <- GCEN[(GCEN$p.value <= 0.00001),]
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+R <- read.table(file = "Taylor_TDP43.txt")
+r <- R$V1
+
+# ####Load full gwas datasets ####
+# setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+# 
+# GCEN <- read.csv("ALS.gwascentral.martquery_0301121419_683.csv")
+# 
+# three <- GCEN[(GCEN$p.value <= 0.001),]
+# 
+# four <- GCEN[(GCEN$p.value <= 0.0001),]
+# 
+# five <- GCEN[(GCEN$p.value <= 0.00001),]
+# 
+# six <- GCEN[(GCEN$p.value <= 0.00001),]
+
+
+
+#Load file with all genes
+library(hgu133plus2.db)
+sym <- hgu133plus2SYMBOL
+sym1 <- mappedkeys(sym)
+sym2 <- as.list (sym[c(sym1)])
+sym3 <- data.frame (sym2)
+sym.probes <- names (sym2)
+sym.genes <- sym3[1,]
+
+sym.genes <- t(sym.genes)
+
+allgenes <- sym.genes[!duplicated(sym.genes),]
 
 
 
 
-
-
-
-
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/Pathprint 25.04.16/FishersExact/FE.All.Pathways/FE.PathprintPathways(29)/")
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/")
 
 #Read in geneset
-Z <- read.csv(file = "FE.pathprintgenes.csv", na.strings = c("", "NA)"))
+Z <- read.csv(file = "C9WGCNA.csv", na.strings = c("", "NA)"))
 Z <- as.list(Z)
 Z<- lapply(Z, function(x) x[!is.na(x)])
 
 geneset <- Z
-genelist <- k
-genelist.length <- length(h)
+genelist <- q
+genelist.length <- length(genelist)
 
 hyper <- as.data.frame(matrix(nrow = length(geneset), ncol = 1))
 rownames(hyper) <- names(geneset)
@@ -122,8 +156,8 @@ hyper <- cbind((1:length(hyper[, 1])), hyper)
 colnames(hyper) <- c("ID", "P-value", "BHadjP-value", "nGenes", 
                      "nPathway", "Name")
 
-write.csv(hyper, file = "FE.EP20.subnetwork28.csv")
-
-
-o1 <- Reduce(intersect, list(k, Z$Prion.diseases..KEGG.))
+# write.csv(hyper, file = "FE.EP20.subnetwork28.csv")
+# 
+# 
+o1 <- Reduce(intersect, list(k, Z$X7000))
 print(o1)

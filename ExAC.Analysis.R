@@ -1,8 +1,9 @@
 #enrichment permutation#
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/ExAC/")
 #Load ExAC Data
 Exac.All <- read.table(file = "fordist_cleaned_exac_r03_march16_z_pli_rec_null_data.txt", header = TRUE)
+Exac.95 <- read.table(file = "exac.pli.0.95.txt", header = TRUE)
 Exac <- Exac.All[c("gene", "pLI", "mis_z")]
 rownames(Exac) <- Exac$gene
 Exac[,1] <- NULL
