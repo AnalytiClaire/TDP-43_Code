@@ -13,13 +13,15 @@ library(Hmisc)
 
 C9Expr <- read.csv(file = "C9rankeduniqueresult.csv")
 rownames(C9Expr) <- C9Expr$Probe.Set.ID
-datExprA1 <- C9Expr[,52:59] #C9 patients
-datExprA2 <- C9Expr[,49:51] #C9 controls
-
+datExprA1 <- C9Expr[,49:59] 
 CHExpr <- read.csv(file = "CHrankeduniqueresult.csv")
 rownames(CHExpr) <- CHExpr$Probe.Set.ID
-datExprB1 <- CHExpr[,55:57] #C9 patients
-datExprB2 <- CHExpr[,49:54] #C9 controls
+datExprA2 <- CHExpr[,49:57] 
+
+# CHExpr <- read.csv(file = "CHrankeduniqueresult.csv")
+# rownames(CHExpr) <- CHExpr$Probe.Set.ID
+# datExprB1 <- CHExpr[,55:57] #C9 patients
+# datExprB2 <- CHExpr[,49:54] #C9 controls
 
 IDs <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/C9orf72/C9ID geneIDs.csv")
 IDs <- C9Expr[,c("Probe.Set.ID", "Gene.Symbol")]
@@ -37,9 +39,9 @@ commonProbesA = intersect (rownames(datExprA1),rownames(datExprA2))
 datExprA1p = datExprA1[commonProbesA,]
 datExprA2p = datExprA2[commonProbesA,]
 
-commonGenesB = intersect (rownames(datExprB1g),rownames(datExprB2g))
-datExprB1g = datExprB1g[commonGenesB,]
-datExprB2g = datExprB2g[commonGenesB,]
+# commonGenesB = intersect (rownames(datExprB1g),rownames(datExprB2g))
+# datExprB1g = datExprB1g[commonGenesB,]
+# datExprB2g = datExprB2g[commonGenesB,]
 
 Exp <- t(datExprA2p)
 
@@ -75,11 +77,11 @@ random5000= sample(commonProbesA,5000)
 rankConnA1= rank(softConnectivity(t(datExprA1p[random5000,]),type="signed",power=softPower, minNSamples = 3))
 rankConnA2= rank(softConnectivity(t(datExprA2p[random5000,]),type="signed",power=softPower, minNSamples = 3))
 
-rankExprB1= rank(rowMeans(datExprB1g))
-rankExprB2= rank(rowMeans(datExprB2g))
-random5000= sample(commonGenesB,5000)
-rankConnB1= rank(softConnectivity(t(datExprB1g[random5000,]),type="signed",power=softPower, minNSamples = 3))
-rankConnB2= rank(softConnectivity(t(datExprB2g[random5000,]),type="signed",power=softPower, minNSamples = 3))
+# rankExprB1= rank(rowMeans(datExprB1g))
+# rankExprB2= rank(rowMeans(datExprB2g))
+# random5000= sample(commonGenesB,5000)
+# rankConnB1= rank(softConnectivity(t(datExprB1g[random5000,]),type="signed",power=softPower, minNSamples = 3))
+# rankConnB2= rank(softConnectivity(t(datExprB2g[random5000,]),type="signed",power=softPower, minNSamples = 3))
 
 pdf("generalNetworkProperties.pdf", height=10, width=9)
 par(mfrow=c(2,2))
@@ -87,11 +89,16 @@ verboseScatterplot(rankExprA1,rankExprA2, xlab="Ranked Expression (A1)",
                    ylab="Ranked Expression (A2)")
 verboseScatterplot(rankConnA1,rankConnA2, xlab="Ranked Connectivity (A1)", 
                    ylab="Ranked Connectivity (A2)")
-verboseScatterplot(rankExprB1,rankExprB2, xlab="Ranked Expression (B1)", 
-                   ylab="Ranked Expression (B2)")
-verboseScatterplot(rankConnB1,rankConnB2, xlab="Ranked Connectivity (B1)", 
-                   ylab="Ranked Connectivity (B2)")
+# verboseScatterplot(rankExprB1,rankExprB2, xlab="Ranked Expression (B1)", 
+#                    ylab="Ranked Expression (B2)")
+# verboseScatterplot(rankConnB1,rankConnB2, xlab="Ranked Connectivity (B1)", 
+#                    ylab="Ranked Connectivity (B2)")
 dev.off()
+
+keepGenesDups = (collapseRows(datExprA1p,genes,probeID))[[2]]
+datExprA1g    = datExprA1p[keepGenesDups[,2],]
+datExprA2g    = datExprA2p[keepGenesDups[,2],]
+rownames(datExprA1g)<-rownames(datExprA2g)<-keepGenesDups[,1]
 
 #calculate all of the necessary values to run WGCNA
 #(this will take around 10 minutes)
@@ -105,15 +112,15 @@ diag(adjacencyA2)=0
 dissTOMA2   = 1-TOMsimilarity(adjacencyA2, TOMType="signed")
 geneTreeA2  = flashClust(as.dist(dissTOMA2), method="average")
 
-adjacencyB1 = adjacency(t(datExprB1g),power=softPower,type="signed");
-diag(adjacencyB1)=0
-dissTOMB1   = 1-TOMsimilarity(adjacencyB1, TOMType="signed")
-geneTreeB1  = flashClust(as.dist(dissTOMB1), method="average")
-
-adjacencyB2 = adjacency(t(datExprB2g),power=softPower,type="signed");
-diag(adjacencyB2)=0
-dissTOMB2   = 1-TOMsimilarity(adjacencyB2, TOMType="signed")
-geneTreeB2  = flashClust(as.dist(dissTOMB2), method="average")
+# adjacencyB1 = adjacency(t(datExprB1g),power=softPower,type="signed");
+# diag(adjacencyB1)=0
+# dissTOMB1   = 1-TOMsimilarity(adjacencyB1, TOMType="signed")
+# geneTreeB1  = flashClust(as.dist(dissTOMB1), method="average")
+# 
+# adjacencyB2 = adjacency(t(datExprB2g),power=softPower,type="signed");
+# diag(adjacencyB2)=0
+# dissTOMB2   = 1-TOMsimilarity(adjacencyB2, TOMType="signed")
+# geneTreeB2  = flashClust(as.dist(dissTOMB2), method="average")
 
 # save.image("tutorial.RData")  #  (Section will take ~5-15 minutes to run)
 
@@ -121,27 +128,27 @@ pdf("dendrogram.pdf",height=6,width=16)
 par(mfrow=c(1,2))
 plot(geneTreeA1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A1)", labels=FALSE,hang=0.04);
 plot(geneTreeA2,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A2)", labels=FALSE,hang=0.04); 
-plot(geneTreeB1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (B1)", labels=FALSE,hang=0.04);
-plot(geneTreeB2,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (B2)", labels=FALSE,hang=0.04); 
+# plot(geneTreeB1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (B1)", labels=FALSE,hang=0.04);
+# plot(geneTreeB2,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (B2)", labels=FALSE,hang=0.04); 
 dev.off()
 
 #determine modules based on control data set
 
 mColorh=NULL
 for (ds in 0:3){
-  tree = cutreeHybrid(dendro = geneTreeB2, pamStage=FALSE,
+  tree = cutreeHybrid(dendro = geneTreeA1, pamStage=FALSE,
                       minClusterSize = (30-3*ds), cutHeight = 0.99, 
-                      deepSplit = ds, distM = dissTOMB2)
+                      deepSplit = ds, distM = dissTOMA1)
   mColorh=cbind(mColorh,labels2colors(tree$labels));
 }
 pdf("Module_choices.pdf", height=10,width=25); 
-plotDendroAndColors(geneTreeB2, mColorh, paste("dpSplt =",0:3), main = "",dendroLabels=FALSE);
+plotDendroAndColors(geneTreeA1, mColorh, paste("dpSplt =",0:3), main = "",dendroLabels=FALSE);
 dev.off()
 
 modulesA1 =  mColorh[,4] #choose based on deepslit values in plot
 
 #calculate the principle components for visualizations 
-PCs1A    = moduleEigengenes(t(datExprB2g),  colors=modulesA1) 
+PCs1A    = moduleEigengenes(t(datExprA1p),  colors=modulesA1) 
 ME_1A    = PCs1A$eigengenes
 distPC1A = 1-abs(cor(ME_1A,use="p"))
 distPC1A = ifelse(is.na(distPC1A), 0, distPC1A)
@@ -155,8 +162,8 @@ plot(pcTree1A, xlab="",ylab="",main="",sub="")
 
 plot(MDS_1A, col= colorsA1,  main="MDS plot", cex=2, pch=19)
 
-ordergenes = geneTreeB2$order
-plotMat(scale(log(datExprB2g[ordergenes,])) , rlabels= modulesA1[ordergenes], clabels= colnames(datExprB2g), rcols=modulesA1[ordergenes])
+ordergenes = geneTreeA1$order
+plotMat(scale(log(datExprA1p[ordergenes,])) , rlabels= modulesA1[ordergenes], clabels= colnames(datExprA1p), rcols=modulesA1[ordergenes])
 
 for (which.module in names(table(modulesA1))){
   ME = ME_1A[, paste("ME",which.module, sep="")] 
@@ -174,9 +181,107 @@ plotDendroAndColors(geneTreeA1, modulesA1, "Modules", dendroLabels=FALSE, hang=0
                     guideHang=0.05, main="Gene dendrogram and module colors (A1)") 
 plotDendroAndColors(geneTreeA2, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
                     guideHang=0.05, main="Gene dendrogram and module colors (A2)") 
-plotDendroAndColors(geneTreeB1, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
-                    guideHang=0.05, main="Gene dendrogram and module colors (A1)") 
-plotDendroAndColors(geneTreeB2, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
-                    guideHang=0.05, main="Gene dendrogram and module colors (A2)") 
-dev.off()
+# plotDendroAndColors(geneTreeB1, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
+#                     guideHang=0.05, main="Gene dendrogram and module colors (A1)") 
+# plotDendroAndColors(geneTreeB2, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
+#                     guideHang=0.05, main="Gene dendrogram and module colors (A2)") 
+# dev.off()
 
+#assess how well a module in one study is preserved in another study
+# (This step will take ~10 minutes)
+multiExpr  = list(A1=list(data=t(datExprA1g)),A2=list(data=t(datExprA2g)))
+multiColor = list(A1 = modulesA1)
+mp=modulePreservation(multiExpr,multiColor,referenceNetworks=1,verbose=3,networkType="signed",
+                      nPermutations=30,maxGoldModuleSize=100,maxModuleSize=400)
+stats = mp$preservation$Z$ref.A1$inColumnsAlsoPresentIn.A2
+stats[order(-stats[,2]),c(1:2)]
+
+#get the kME values
+geneModuleMembership1 = signedKME(t(datExprA1g), ME_1A)
+colnames(geneModuleMembership1)=paste("PC",colorsA1,".cor",sep=""); 
+
+MMPvalue1=corPvalueStudent(as.matrix(geneModuleMembership1),dim(datExprA1g)[[2]]); 
+colnames(MMPvalue1)=paste("PC",colorsA1,".pval",sep="");
+
+Gene       = rownames(datExprA1g)
+kMEtable1  = cbind(Gene,Gene,modulesA1)
+for (i in 1:length(colorsA1))
+  kMEtable1 = cbind(kMEtable1, geneModuleMembership1[,i], MMPvalue1[,i])
+colnames(kMEtable1)=c("PSID","Gene","Module",sort(c(colnames(geneModuleMembership1), colnames(MMPvalue1))))
+
+write.csv(kMEtable1,"kMEtable1.csv",row.names=FALSE)
+
+# First calculate MEs for A2, since we haven't done that yet
+PCs2A = moduleEigengenes(t(datExprA2g),  colors=modulesA1) 
+ME_2A = PCs2A$eigengenes
+
+geneModuleMembership2 = signedKME(t(datExprA2g), ME_2A)
+colnames(geneModuleMembership1)=paste("PC",colorsA1,".cor",sep=""); 
+
+MMPvalue2=corPvalueStudent(as.matrix(geneModuleMembership2),dim(datExprA2g)[[2]]); 
+colnames(MMPvalue2)=paste("PC",colorsA1,".pval",sep="");
+
+kMEtable2  = cbind(Gene,Gene,modulesA1)
+for (i in 1:length(colorsA1))
+  kMEtable2 = cbind(kMEtable2, geneModuleMembership2[,i], MMPvalue2[,i])
+colnames(kMEtable2)=colnames(kMEtable1)
+
+write.csv(kMEtable2,"kMEtable2.csv",row.names=FALSE)
+
+#plot the kME values 
+pdf("all_kMEtable2_vs_kMEtable1.pdf",height=8,width=8)
+for (c in 1:length(colorsA1)){
+  verboseScatterplot(geneModuleMembership2[,c],geneModuleMembership1[,c],main=colorsA1[c],
+                     xlab="kME in A2",ylab="kME in A1")
+}; dev.off()
+
+pdf("inModule_kMEtable2_vs_kMEtable1.pdf",height=8,width=8)
+for (c in 1:length(colorsA1)){
+  inMod = modulesA1== colorsA1[c]
+  verboseScatterplot(geneModuleMembership2[inMod,c],geneModuleMembership1[inMod,c],main=colorsA1[c],
+                     xlab="kME in A2",ylab="kME in A1")
+}; dev.off()
+
+#determine which genes are hubs in both networks 
+topGenesKME = NULL
+for (c in 1:length(colorsA1)){
+  kMErank1    = rank(-geneModuleMembership1[,c])
+  kMErank2    = rank(-geneModuleMembership2[,c])
+  maxKMErank  = rank(apply(cbind(kMErank1,kMErank2+.00001),1,max))
+  topGenesKME = cbind(topGenesKME,Gene[maxKMErank<=10])
+}; colnames(topGenesKME) = colorsA1
+topGenesKME
+
+# ##Comparing networks and annotating modules using programs outside of R##
+# 
+# #output data from our network for import into VisANT
+# source("tutorialFunctions.R")  
+# #Dataset 1
+# for (co in colorsA1[colorsA1!="grey"])
+#   visantPrepOverall(modulesA1, co, t(datExprA1g), rownames(datExprA1g), 500, softPower, TRUE)
+# #Dataset 2
+# for (co in colorsA1[colorsA1!="grey"])
+#   visantPrepOverall(modulesA1, co, t(datExprA2g), rownames(datExprA2g), 500, softPower, TRUE)
+
+
+# #annotate modules based enrichment for user-defined lists
+# 
+# enrichments = userListEnrichment(Gene, modulesA1, c("TDP43Enrichment.csv","kMEtable1.csv"), 
+#                                  c("enrichmentlist","humanModules"), "enrichment.csv")
+# write.csv(x = enrichments$pValues, file = "allenrichments.csv")
+# 
+# #compare how a gene or module relates to phenotype across data sets 
+# group <- c("Control","Control","Control","Patient","Patient","Patient","Patient","Patient","Patient","Patient","Patient")
+# var <- list(group=="Control", group=="Patient")
+# datgroupM = t(apply(t(ME_1A),1,t.test.l))
+# colnames(datgroupM)=c("MeanCon","MeanPat","SD_Con","SD_Pat","PvalGroup")
+# datgroupM[datgroupM[,5]<0.05,]
+# 
+# group2 <- c("Control","Control","Control","Control","Control","Control","Patient","Patient","Patient")
+# var <- list(group2=="Control", group2=="Patient")
+# datgroup2 = t(apply(t(datExprA2g),1,t.test.l))
+# colnames(datgroup2)=c("MeanCon","MeanPat","SD_Con","SD_Pat","PvalGroup")
+# datgroupM2 = t(apply(t(ME_2A),1,t.test.l))
+# colnames(datgroupM2)=c("MeanCon","MeanPat","SD_Con","SD_Pat","PvalGroup")
+# 
+# datgroupM2[datgroupM2[,5]<0.05,]
