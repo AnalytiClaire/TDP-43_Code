@@ -9,7 +9,7 @@ library(knitr)
 opts_chunk$set(tidy.opts=list(width.cutoff=60))
 ```
 
-#Monday
+#Tuesday
 
 Today I got started on working on the example of conducting a meta-analysis of data from multiple microarray data sets as written by Jeremy Miller of UCLA. Link - https://labs.genetics.ucla.edu/horvath/CoexpressionNetwork/JMiller/
 
@@ -334,4 +334,5 @@ To load R, input
 module load apps/R
 
 
+#Wednesday
 
