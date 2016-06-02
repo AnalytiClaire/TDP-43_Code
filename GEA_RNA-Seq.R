@@ -67,8 +67,8 @@ uniqueresult <- result[!duplicated(result$hgnc_symbol),]
 rownames(uniqueresult) <- uniqueresult$hgnc_symbol
 genesort <- uniqueresult[order(uniqueresult$adj.P.Val),]
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_ensemblID/")
-write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=TRUE, quote = FALSE)
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/")
+write.csv(genesort, file=paste(analysis.name, "EXPRSrankeduniqueresult.csv", sep=""), sep="\t", row.names=TRUE, quote = FALSE)
 
 # topgene <- genesort[1:1000,]
 # write.csv(x = topgene, file = paste(analysis.name,"_ap_1000.csv", sep = ""))

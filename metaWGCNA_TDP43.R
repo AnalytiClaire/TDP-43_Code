@@ -237,25 +237,37 @@ dev.off()
 
 #calculate all of the necessary values to run WGCNA
 #(this will take around 10 minutes)
-adjacencyA1 = adjacency(t(datExprA1g),power=6,type="signed");
+adjacencyA1 = adjacency(t(datExprA1g),power=softPower,type="signed");
 diag(adjacencyA1)=0
 dissTOMA1   = 1-TOMsimilarity(adjacencyA1, TOMType="signed")
 geneTreeA1  = flashClust(as.dist(dissTOMA1), method="average")
 
-adjacencyA2 = adjacency(t(datExprA2g),power=12,type="signed");
+adjacencyA2 = adjacency(t(datExprA2g),power=softPower,type="signed");
 diag(adjacencyA2)=0
 dissTOMA2   = 1-TOMsimilarity(adjacencyA2, TOMType="signed")
 geneTreeA2  = flashClust(as.dist(dissTOMA2), method="average")
 
-adjacencyA3 = adjacency(t(datExprA3g),power=12,type="signed");
+adjacencyA3 = adjacency(t(datExprA3g),power=softPower,type="signed");
 diag(adjacencyA3)=0
 dissTOMA3   = 1-TOMsimilarity(adjacencyA3, TOMType="signed")
 geneTreeA3  = flashClust(as.dist(dissTOMA3), method="average")
 
-adjacencyA4 = adjacency(t(datExprA4g),power=9,type="signed");
+adjacencyA4 = adjacency(t(datExprA4g),power=softPower,type="signed");
 diag(adjacencyA4)=0
 dissTOMA4   = 1-TOMsimilarity(adjacencyA4, TOMType="signed")
 geneTreeA4  = flashClust(as.dist(dissTOMA4), method="average")
+
+datExprA5gnum <- as.double(datExprA5gnum)
+
+adjacencyA5 = adjacency(t(datExprA5gnum),power=softPower,type="signed");
+diag(adjacencyA5)=0
+dissTOMA5   = 1-TOMsimilarity(adjacencyA5, TOMType="signed")
+geneTreeA5  = flashClust(as.dist(dissTOMA5), method="average")
+
+adjacencyA6 = adjacency(t(datExprA6g),power=softPower,type="signed");
+diag(adjacencyA6)=0
+dissTOMA6   = 1-TOMsimilarity(adjacencyA6, TOMType="signed")
+geneTreeA6  = flashClust(as.dist(dissTOMA6), method="average")
 
 # adjacencyB1 = adjacency(t(datExprB1g),power=softPower,type="signed");
 # diag(adjacencyB1)=0
@@ -275,6 +287,8 @@ plot(geneTreeA1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity 
 plot(geneTreeA2,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A2)", labels=FALSE,hang=0.04); 
 plot(geneTreeA3,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A3)", labels=FALSE,hang=0.04);
 plot(geneTreeA4,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A4)", labels=FALSE,hang=0.04); 
+plot(geneTreeA5,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A5)", labels=FALSE,hang=0.04);
+plot(geneTreeA6,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A6)", labels=FALSE,hang=0.04); 
 dev.off()
 
 # plot(geneTreeB1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (B1)", labels=FALSE,hang=0.04);
