@@ -60,7 +60,7 @@ datExprA4p = datExprA4[commonProbesA,]
 # datExprB1g = datExprB1g[commonGenesB,]
 # datExprB2g = datExprB2g[commonGenesB,]
 
-Exp <- t(datExprA4p)
+Exp <- t(datExprA2p)
 
 ###Choosing soft threshold
 # Choose a set of soft-thresholding powers
@@ -149,19 +149,32 @@ dev.off()
 keepGenesDups = (collapseRows(datExprA1p,genes,probeID))[[2]]
 datExprA1g    = datExprA1p[keepGenesDups[,2],]
 datExprA2g    = datExprA2p[keepGenesDups[,2],]
-rownames(datExprA1g)<-rownames(datExprA2g)<-keepGenesDups[,1]
+datExprA3g    = datExprA3p[keepGenesDups[,2],]
+datExprA4g    = datExprA4p[keepGenesDups[,2],]
+
+rownames(datExprA1g)<-rownames(datExprA2g)<-rownames(datExprA3g)<-rownames(datExprA4g)<-keepGenesDups[,1]
 
 #calculate all of the necessary values to run WGCNA
 #(this will take around 10 minutes)
-adjacencyA1 = adjacency(t(datExprA1p),power=softPower,type="signed");
+adjacencyA1 = adjacency(t(datExprA1g),power=6,type="signed");
 diag(adjacencyA1)=0
 dissTOMA1   = 1-TOMsimilarity(adjacencyA1, TOMType="signed")
 geneTreeA1  = flashClust(as.dist(dissTOMA1), method="average")
 
-adjacencyA2 = adjacency(t(datExprA2p),power=softPower,type="signed");
+adjacencyA2 = adjacency(t(datExprA2g),power=12,type="signed");
 diag(adjacencyA2)=0
 dissTOMA2   = 1-TOMsimilarity(adjacencyA2, TOMType="signed")
 geneTreeA2  = flashClust(as.dist(dissTOMA2), method="average")
+
+adjacencyA3 = adjacency(t(datExprA3g),power=12,type="signed");
+diag(adjacencyA3)=0
+dissTOMA3   = 1-TOMsimilarity(adjacencyA3, TOMType="signed")
+geneTreeA3  = flashClust(as.dist(dissTOMA3), method="average")
+
+adjacencyA4 = adjacency(t(datExprA4g),power=9,type="signed");
+diag(adjacencyA4)=0
+dissTOMA4   = 1-TOMsimilarity(adjacencyA4, TOMType="signed")
+geneTreeA4  = flashClust(as.dist(dissTOMA4), method="average")
 
 # adjacencyB1 = adjacency(t(datExprB1g),power=softPower,type="signed");
 # diag(adjacencyB1)=0
@@ -179,9 +192,13 @@ pdf("dendrogram.pdf",height=6,width=16)
 par(mfrow=c(1,2))
 plot(geneTreeA1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A1)", labels=FALSE,hang=0.04);
 plot(geneTreeA2,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A2)", labels=FALSE,hang=0.04); 
+plot(geneTreeA3,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A3)", labels=FALSE,hang=0.04);
+plot(geneTreeA4,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A4)", labels=FALSE,hang=0.04); 
+dev.off()
+
 # plot(geneTreeB1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (B1)", labels=FALSE,hang=0.04);
 # plot(geneTreeB2,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (B2)", labels=FALSE,hang=0.04); 
-dev.off()
+
 
 #determine modules based on control data set
 
@@ -199,7 +216,7 @@ dev.off()
 modulesA1 =  mColorh[,4] #choose based on deepslit values in plot
 
 #calculate the principle components for visualizations 
-PCs1A    = moduleEigengenes(t(datExprA1p),  colors=modulesA1) 
+PCs1A    = moduleEigengenes(t(datExprA1g),  colors=modulesA1) 
 ME_1A    = PCs1A$eigengenes
 distPC1A = 1-abs(cor(ME_1A,use="p"))
 distPC1A = ifelse(is.na(distPC1A), 0, distPC1A)
@@ -214,7 +231,7 @@ plot(pcTree1A, xlab="",ylab="",main="",sub="")
 plot(MDS_1A, col= colorsA1,  main="MDS plot", cex=2, pch=19)
 
 ordergenes = geneTreeA1$order
-plotMat(scale(log(datExprA1p[ordergenes,])) , rlabels= modulesA1[ordergenes], clabels= colnames(datExprA1p), rcols=modulesA1[ordergenes])
+plotMat(scale(log(datExpr14g[ordergenes,])) , rlabels= modulesA1[ordergenes], clabels= colnames(datExprA1g), rcols=modulesA1[ordergenes])
 
 for (which.module in names(table(modulesA1))){
   ME = ME_1A[, paste("ME",which.module, sep="")] 
@@ -229,23 +246,39 @@ dev.off()
 #assess how well modules in network 1 are preserved in network 2
 pdf("Final_modules.pdf",height=8,width=12)
 plotDendroAndColors(geneTreeA1, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
-                    guideHang=0.05, main="Gene dendrogram and module colors (A1)") 
+                    guideHang=0.05, main="Gene dendrogram and module colors (C9orf72)") 
 plotDendroAndColors(geneTreeA2, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
-                    guideHang=0.05, main="Gene dendrogram and module colors (A2)") 
+                    guideHang=0.05, main="Gene dendrogram and module colors (CHMP2B)") 
+plotDendroAndColors(geneTreeA3, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
+                    guideHang=0.05, main="Gene dendrogram and module colors (sALS)") 
+plotDendroAndColors(geneTreeA4, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
+                    guideHang=0.05, main="Gene dendrogram and module colors (VCP)") 
+
+dev.off()
+
+
 # plotDendroAndColors(geneTreeB1, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
 #                     guideHang=0.05, main="Gene dendrogram and module colors (A1)") 
 # plotDendroAndColors(geneTreeB2, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
 #                     guideHang=0.05, main="Gene dendrogram and module colors (A2)") 
-# dev.off()
+
+
+
 
 #assess how well a module in one study is preserved in another study
 # (This step will take ~10 minutes)
-multiExpr  = list(A1=list(data=t(datExprA1g)),A2=list(data=t(datExprA2g)))
+multiExpr  = list(A1=list(data=t(datExprA1g)),A3=list(data=t(datExprA3g)),A4=list(data=t(datExprA4g)))
 multiColor = list(A1 = modulesA1)
 mp=modulePreservation(multiExpr,multiColor,referenceNetworks=1,verbose=3,networkType="signed",
                       nPermutations=30,maxGoldModuleSize=100,maxModuleSize=400)
-stats = mp$preservation$Z$ref.A1$inColumnsAlsoPresentIn.A2
-stats[order(-stats[,2]),c(1:2)]
+stats1 = mp$preservation$Z$ref.A4$inColumnsAlsoPresentIn.A3
+stats2 = mp$preservation$Z$ref.A4$inColumnsAlsoPresentIn.A4
+
+stats1[order(-stats1[,2]),c(1:2)]
+stats2[order(-stats2[,2]),c(1:2)]
+statslist <- stats[order(-stats[,2]),c(1:2)]
+
+write.csv(statslist, file = "statslistA1A3A4.csv")
 
 #get the kME values
 geneModuleMembership1 = signedKME(t(datExprA1g), ME_1A)
