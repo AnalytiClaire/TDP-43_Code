@@ -266,9 +266,11 @@ topGenesKME
 
 # #annotate modules based enrichment for user-defined lists
 # 
-# enrichments = userListEnrichment(Gene, modulesA1, c("TDP43Enrichment.csv","kMEtable1.csv"), 
-#                                  c("enrichmentlist","humanModules"), "enrichment.csv")
-# write.csv(x = enrichments$pValues, file = "allenrichments.csv")
+enrichments = userListEnrichment(Gene, modulesA1, c("TDP43Enrichment.csv","kMEtable1.csv"),
+                                 c("enrichmentlist","humanModules"), "enrichment.csv")
+write.csv(x = enrichments$pValues, file = "allenrichments.csv")
+
+splitgroups <- split(genemod, genemod[,2])
 # 
 # #compare how a gene or module relates to phenotype across data sets 
 # group <- c("Control","Control","Control","Patient","Patient","Patient","Patient","Patient","Patient","Patient","Patient")
