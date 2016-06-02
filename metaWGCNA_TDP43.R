@@ -13,10 +13,22 @@ library(Hmisc)
 
 C9Expr <- read.csv(file = "C9rankeduniqueresult.csv")
 rownames(C9Expr) <- C9Expr$Probe.Set.ID
-datExprA1 <- C9Expr[,49:59] 
+datExprA1 <- C9Expr[,52:59] 
+
 CHExpr <- read.csv(file = "CHrankeduniqueresult.csv")
 rownames(CHExpr) <- CHExpr$Probe.Set.ID
-datExprA2 <- CHExpr[,49:57] 
+datExprA2 <- CHExpr[,55:57] 
+
+sALSExpr <- read.csv(file = "sALSrankeduniqueresult.csv")
+rownames(sALSExpr) <- sALSExpr$Probe.Set.ID
+datExprA3 <- sALSExpr[,52:58]
+
+VCPExpr <- read.csv(file = "VCPrankeduniqueresult.csv")
+rownames(VCPExpr) <- VCPExpr$Probe.Set.ID
+datExprA4 <- VCPExpr[,52:58]
+
+
+
 
 # CHExpr <- read.csv(file = "CHrankeduniqueresult.csv")
 # rownames(CHExpr) <- CHExpr$Probe.Set.ID
@@ -36,14 +48,19 @@ datExprB2g = (collapseRows(datExprB2,genes,probeID))[[1]]
 
 #Limit analysis to common probes
 commonProbesA = intersect (rownames(datExprA1),rownames(datExprA2))
+commonProbesA = intersect (commonProbesA, rownames(datExprA3))
+commonProbesA = intersect (commonProbesA, rownames(datExprA4))
+
 datExprA1p = datExprA1[commonProbesA,]
 datExprA2p = datExprA2[commonProbesA,]
+datExprA3p = datExprA3[commonProbesA,]
+datExprA4p = datExprA4[commonProbesA,]
 
 # commonGenesB = intersect (rownames(datExprB1g),rownames(datExprB2g))
 # datExprB1g = datExprB1g[commonGenesB,]
 # datExprB2g = datExprB2g[commonGenesB,]
 
-Exp <- t(datExprA2p)
+Exp <- t(datExprA4p)
 
 ###Choosing soft threshold
 # Choose a set of soft-thresholding powers
@@ -68,14 +85,25 @@ plot(sft$fitIndices[,1], sft$fitIndices[,5],
      main = paste("Mean connectivity"))
 text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/")
+#A1 = 6
+#A2 = 10
+#A3 = 12
+#A4 = 9
+
+
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/PatientsOnly")
 #Correlating general network properties
-softPower = 6 # (Read WGCNA tutorial to learn how to pick your power)
+softPower = 9 # (Read WGCNA tutorial to learn how to pick your power)
 rankExprA1= rank(rowMeans(datExprA1p))
 rankExprA2= rank(rowMeans(datExprA2p))
-random5000= sample(commonProbesA,5000)
-rankConnA1= rank(softConnectivity(t(datExprA1p[random5000,]),type="signed",power=softPower, minNSamples = 3))
-rankConnA2= rank(softConnectivity(t(datExprA2p[random5000,]),type="signed",power=softPower, minNSamples = 3))
+rankExprA3= rank(rowMeans(datExprA3p))
+rankExprA4= rank(rowMeans(datExprA4p))
+
+random4000= sample(commonProbesA,4667)
+rankConnA1= rank(softConnectivity(t(datExprA1p[random4000,]),type="signed",power=softPower, minNSamples = 3))
+rankConnA2= rank(softConnectivity(t(datExprA2p[random4000,]),type="signed",power=softPower, minNSamples = 3))
+rankConnA3= rank(softConnectivity(t(datExprA3p[random4000,]),type="signed",power=softPower, minNSamples = 3))
+rankConnA4= rank(softConnectivity(t(datExprA4p[random4000,]),type="signed",power=softPower, minNSamples = 3))
 
 # rankExprB1= rank(rowMeans(datExprB1g))
 # rankExprB2= rank(rowMeans(datExprB2g))
@@ -85,15 +113,38 @@ rankConnA2= rank(softConnectivity(t(datExprA2p[random5000,]),type="signed",power
 
 pdf("generalNetworkProperties.pdf", height=10, width=9)
 par(mfrow=c(2,2))
-verboseScatterplot(rankExprA1,rankExprA2, xlab="Ranked Expression (A1)", 
-                   ylab="Ranked Expression (A2)")
-verboseScatterplot(rankConnA1,rankConnA2, xlab="Ranked Connectivity (A1)", 
-                   ylab="Ranked Connectivity (A2)")
+verboseScatterplot(rankExprA1,rankExprA2, xlab="Ranked Expression (C9orf72)", 
+                   ylab="Ranked Expression (CHMP2B)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA1,rankConnA2, xlab="Ranked Connectivity (C9orf72)", 
+                   ylab="Ranked Connectivity (CHMP2B)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankExprA1,rankExprA3, xlab="Ranked Expression (C9orf72)", 
+                   ylab="Ranked Expression (sALS)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA1,rankConnA3, xlab="Ranked Connectivity (C9orf72)", 
+                   ylab="Ranked Connectivity (sALS)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankExprA1,rankExprA4, xlab="Ranked Expression (C9orf72)", 
+                   ylab="Ranked Expression (VCP)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA1,rankConnA4, xlab="Ranked Connectivity (C9orf72)", 
+                   ylab="Ranked Connectivity (VCP)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankExprA2,rankExprA3, xlab="Ranked Expression (CHMP2B)", 
+                   ylab="Ranked Expression (sALS)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA2,rankConnA3, xlab="Ranked Connectivity (CHMP2B)", 
+                   ylab="Ranked Connectivity (sALS)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankExprA2,rankExprA4, xlab="Ranked Expression (CHMP2B)", 
+                   ylab="Ranked Expression (VCP)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA2,rankConnA4, xlab="Ranked Connectivity (CHMP2B)", 
+                   ylab="Ranked Connectivity (VCP)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankExprA3,rankExprA4, xlab="Ranked Expression (sALS)", 
+                   ylab="Ranked Expression (VCP)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA3,rankConnA4, xlab="Ranked Connectivity (sALS)", 
+                   ylab="Ranked Connectivity (VCP)", abline = TRUE, abline.color = "red")
+
+dev.off()
+
 # verboseScatterplot(rankExprB1,rankExprB2, xlab="Ranked Expression (B1)", 
 #                    ylab="Ranked Expression (B2)")
 # verboseScatterplot(rankConnB1,rankConnB2, xlab="Ranked Connectivity (B1)", 
 #                    ylab="Ranked Connectivity (B2)")
-dev.off()
+
 
 keepGenesDups = (collapseRows(datExprA1p,genes,probeID))[[2]]
 datExprA1g    = datExprA1p[keepGenesDups[,2],]

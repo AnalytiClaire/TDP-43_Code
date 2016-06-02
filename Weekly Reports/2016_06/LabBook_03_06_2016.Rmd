@@ -634,5 +634,19 @@ Also - do I need patients included or not? I'm not looking for differential expr
 
 #Thursday
 
+I have emailed Gabriel but I thought I would go ahead and add the other two u133 plus 2 data sets just to see what I can make. I decided to just use the patient samples as it makes most sense to me, but it wouldn't be hard to change if Gabriel says otherwise. 
 
+Interestingly, all data set ranked expression correlates, but one pair does not correlated in ranked connectivity (C9orf72 and VCP). Not really sure what that means - does it mean that C9 is not a good one to choose as the base for creating modules?
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/PatientsOnly/C9_CH.png)
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/PatientsOnly/C9_sALS.png)
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/PatientsOnly/C9_VCP.png)
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/PatientsOnly/CH_sALS.png)
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/PatientsOnly/CH_VCP.png)
+
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/PatientsOnly/sALS_VCP.png)
 
