@@ -23,8 +23,8 @@ sALSExpr <- read.csv(file = "sALSrankeduniqueresult.csv")
 rownames(sALSExpr) <- sALSExpr$Probe.Set.ID
 datExprA3 <- sALSExpr[,52:58]
 
-FTLDExpr <- read.csv(file = "FTLDrankeduniqueresult.csv")
-rownames(FTLDExpr) <- FTLDExpr$Probe.Set.ID
+VCPExpr <- read.csv(file = "VCPrankeduniqueresult.csv")
+rownames(VCPExpr) <- VCPExpr$Probe.Set.ID
 datExprA4 <- VCPExpr[,52:58]
 
 PETExpr <- read.csv(file = "PETEXPRSrankeduniqueresult.csv")
@@ -35,10 +35,9 @@ RAVExpr <- read.csv(file = "RAVEXPRSrankeduniqueresult.csv")
 rownames(RAVExpr) <- RAVExpr$hgnc_symbol
 datExprA6g <- RAVExpr[,17:28]
 
-VCPExpr <- read.csv(file = "VCPrankeduniqueresult.csv")
-rownames(VCPExpr) <- VCPExpr$Probe.Set.ID
-datExprA7 <- VCPExpr[,52:58]
-
+FTLDExpr <- read.csv(file = "FTLDrankeduniqueresult.csv")
+rownames(FTLDExpr) <- FTLDExpr$Probe.Set.ID
+datExprA7 <- FTLDExpr[,57:72]
 
 
 
@@ -62,11 +61,13 @@ probeID <- IDs$Probe.Set.ID
 commonProbesA = intersect (rownames(datExprA1),rownames(datExprA2))
 commonProbesA = intersect (commonProbesA, rownames(datExprA3))
 commonProbesA = intersect (commonProbesA, rownames(datExprA4))
+commonProbesA = intersect (commonProbesA, rownames(datExprA7))
 
 datExprA1p = datExprA1[commonProbesA,]
 datExprA2p = datExprA2[commonProbesA,]
 datExprA3p = datExprA3[commonProbesA,]
 datExprA4p = datExprA4[commonProbesA,]
+datExprA7p = datExprA7[commonProbesA,]
 
 #Convert probes into gene symbols
 keepGenesDups = (collapseRows(datExprA1p,genes,probeID))[[2]]
@@ -74,8 +75,9 @@ datExprA1g    = datExprA1p[keepGenesDups[,2],]
 datExprA2g    = datExprA2p[keepGenesDups[,2],]
 datExprA3g    = datExprA3p[keepGenesDups[,2],]
 datExprA4g    = datExprA4p[keepGenesDups[,2],]
+datExprA7g    = datExprA7p[keepGenesDups[,2],]
 
-rownames(datExprA1g)<-rownames(datExprA2g)<-rownames(datExprA3g)<-rownames(datExprA4g)<-keepGenesDups[,1]
+rownames(datExprA1g)<-rownames(datExprA2g)<-rownames(datExprA3g)<-rownames(datExprA4g)<-rownames(datExprA7g)<-keepGenesDups[,1]
 
 #Find common genes to all
 commonGenesA = intersect (rownames(datExprA1g),rownames(datExprA2g))
@@ -83,6 +85,7 @@ commonGenesA = intersect (commonGenesA, rownames(datExprA3g))
 commonGenesA = intersect (commonGenesA, rownames(datExprA4g))
 commonGenesA = intersect (commonGenesA, rownames(datExprA5g))
 commonGenesA = intersect (commonGenesA, rownames(datExprA6g))
+commonGenesA = intersect (commonGenesA, rownames(datExprA7g))
 
 #Restrict data set to common genes
 datExprA1g    = datExprA1g[commonGenesA,]
@@ -91,6 +94,7 @@ datExprA3g    = datExprA3g[commonGenesA,]
 datExprA4g    = datExprA4g[commonGenesA,]
 datExprA5g    = datExprA5g[commonGenesA,]
 datExprA6g    = datExprA6g[commonGenesA,]
+datExprA7g    = datExprA7g[commonGenesA,]
 
 # commonGenesB = intersect (rownames(datExprB1g),rownames(datExprB2g))
 # datExprB1g = datExprB1g[commonGenesB,]
@@ -138,14 +142,16 @@ rankExprA3= rank(rowMeans(datExprA3g))
 rankExprA4= rank(rowMeans(datExprA4g))
 rankExprA5= rank(rowMeans(datExprA5g))
 rankExprA6= rank(rowMeans(datExprA6g))
+rankExprA7= rank(rowMeans(datExprA7g))
 
-random4000= sample(commonGenesA,4000)
+random4000= sample(commonGenesA,2800)
 rankConnA1= rank(softConnectivity(t(datExprA1g[random4000,]),type="signed",power=softPower, minNSamples = 3))
 rankConnA2= rank(softConnectivity(t(datExprA2g[random4000,]),type="signed",power=softPower, minNSamples = 3))
 rankConnA3= rank(softConnectivity(t(datExprA3g[random4000,]),type="signed",power=softPower, minNSamples = 3))
 rankConnA4= rank(softConnectivity(t(datExprA4g[random4000,]),type="signed",power=softPower, minNSamples = 3))
 rankConnA5= rank(softConnectivity(t(datExprA5g[random4000,]),type="signed",power=softPower, minNSamples = 3))
 rankConnA6= rank(softConnectivity(t(datExprA6g[random4000,]),type="signed",power=softPower, minNSamples = 3))
+rankConnA7= rank(softConnectivity(t(datExprA7g[random4000,]),type="signed",power=softPower, minNSamples = 3))
 
 # rankExprB1= rank(rowMeans(datExprB1g))
 # rankExprB2= rank(rowMeans(datExprB2g))
@@ -180,6 +186,11 @@ verboseScatterplot(rankExprA1,rankExprA6, xlab="Ranked Expression (C9orf72)",
 verboseScatterplot(rankConnA1,rankConnA6, xlab="Ranked Connectivity (C9orf72)", 
                    ylab="Ranked Connectivity (RAV)", abline = TRUE, abline.color = "red")
 
+verboseScatterplot(rankExprA1,rankExprA7, xlab="Ranked Expression (C9orf72)", 
+                   ylab="Ranked Expression (FTLD)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA1,rankConnA7, xlab="Ranked Connectivity (C9orf72)", 
+                   ylab="Ranked Connectivity (FTLD)", abline = TRUE, abline.color = "red")
+
 verboseScatterplot(rankExprA2,rankExprA3, xlab="Ranked Expression (CHMP2B)", 
                    ylab="Ranked Expression (sALS)", abline = TRUE, abline.color = "red")
 verboseScatterplot(rankConnA2,rankConnA3, xlab="Ranked Connectivity (CHMP2B)", 
@@ -200,6 +211,11 @@ verboseScatterplot(rankExprA2,rankExprA6, xlab="Ranked Expression (CHMP2B)",
 verboseScatterplot(rankConnA2,rankConnA6, xlab="Ranked Connectivity (CHMP2B)", 
                    ylab="Ranked Connectivity (RAV)", abline = TRUE, abline.color = "red")
 
+verboseScatterplot(rankExprA2,rankExprA7, xlab="Ranked Expression (CHMP2B)", 
+                   ylab="Ranked Expression (FTLD)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA2,rankConnA7, xlab="Ranked Connectivity (CHMP2B)", 
+                   ylab="Ranked Connectivity (FTLD)", abline = TRUE, abline.color = "red")
+
 verboseScatterplot(rankExprA3,rankExprA4, xlab="Ranked Expression (sALS)", 
                    ylab="Ranked Expression (VCP)", abline = TRUE, abline.color = "red")
 verboseScatterplot(rankConnA3,rankConnA4, xlab="Ranked Connectivity (sALS)", 
@@ -215,6 +231,11 @@ verboseScatterplot(rankExprA3,rankExprA6, xlab="Ranked Expression (sALS)",
 verboseScatterplot(rankConnA3,rankConnA6, xlab="Ranked Connectivity (sALS)", 
                    ylab="Ranked Connectivity (RAV)", abline = TRUE, abline.color = "red")
 
+verboseScatterplot(rankExprA3,rankExprA7, xlab="Ranked Expression (sALS)", 
+                   ylab="Ranked Expression (FTLD)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA3,rankConnA7, xlab="Ranked Connectivity (sALS)", 
+                   ylab="Ranked Connectivity (FTLD)", abline = TRUE, abline.color = "red")
+
 verboseScatterplot(rankExprA4,rankExprA5, xlab="Ranked Expression (VCP)", 
                    ylab="Ranked Expression (PET)", abline = TRUE, abline.color = "red")
 verboseScatterplot(rankConnA4,rankConnA5, xlab="Ranked Connectivity (VCP)", 
@@ -225,10 +246,25 @@ verboseScatterplot(rankExprA4,rankExprA6, xlab="Ranked Expression (VCP)",
 verboseScatterplot(rankConnA4,rankConnA6, xlab="Ranked Connectivity (VCP)", 
                    ylab="Ranked Connectivity (RAV)", abline = TRUE, abline.color = "red")
 
+verboseScatterplot(rankExprA4,rankExprA7, xlab="Ranked Expression (VCP)", 
+                   ylab="Ranked Expression (FTLD)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA4,rankConnA7, xlab="Ranked Connectivity (VCP)", 
+                   ylab="Ranked Connectivity (FTLD)", abline = TRUE, abline.color = "red")
+
 verboseScatterplot(rankExprA5,rankExprA6, xlab="Ranked Expression (PET)", 
                    ylab="Ranked Expression (RAV)", abline = TRUE, abline.color = "red")
 verboseScatterplot(rankConnA5,rankConnA6, xlab="Ranked Connectivity (PET)", 
                    ylab="Ranked Connectivity (RAV)", abline = TRUE, abline.color = "red")
+
+verboseScatterplot(rankExprA5,rankExprA7, xlab="Ranked Expression (PET)", 
+                   ylab="Ranked Expression (FTLD)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA5,rankConnA7, xlab="Ranked Connectivity (PET)", 
+                   ylab="Ranked Connectivity (FTLD)", abline = TRUE, abline.color = "red")
+
+verboseScatterplot(rankExprA6,rankExprA7, xlab="Ranked Expression (RAV)", 
+                   ylab="Ranked Expression (FTLD)", abline = TRUE, abline.color = "red")
+verboseScatterplot(rankConnA6,rankConnA7, xlab="Ranked Connectivity (RAV)", 
+                   ylab="Ranked Connectivity (FTLD)", abline = TRUE, abline.color = "red")
 
 dev.off()
 
@@ -261,6 +297,13 @@ diag(adjacencyA4)=0
 dissTOMA4   = 1-TOMsimilarity(adjacencyA4, TOMType="signed")
 geneTreeA4  = flashClust(as.dist(dissTOMA4), method="average")
 
+adjacencyA7 = adjacency(t(datExprA7g),power=9,type="signed");
+diag(adjacencyA7)=0
+dissTOMA7   = 1-TOMsimilarity(adjacencyA7, TOMType="signed")
+geneTreeA7  = flashClust(as.dist(dissTOMA7), method="average")
+
+
+
 #For RNA seq data, save as a csv file, open in excel and change to "number". Save as txt file and reload
 
 adjacencyA5 = adjacency(t(datExprA5g),power=9,type="signed");
@@ -292,7 +335,8 @@ plot(geneTreeA2,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity 
 plot(geneTreeA3,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (sALS)", labels=FALSE,hang=0.04);
 plot(geneTreeA4,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (VCP)", labels=FALSE,hang=0.04); 
 plot(geneTreeA5,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (PET)", labels=FALSE,hang=0.04);
-plot(geneTreeA6,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (RAV)", labels=FALSE,hang=0.04); 
+plot(geneTreeA6,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (RAV)", labels=FALSE,hang=0.04);
+plot(geneTreeA7,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (FTLD)", labels=FALSE,hang=0.04);
 dev.off()
 
 # plot(geneTreeB1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (B1)", labels=FALSE,hang=0.04);
@@ -387,7 +431,7 @@ stats4[order(-stats4[,2]),c(1:2)]
 
 statslist <- stats[order(-stats[,2]),c(1:2)]
 
-write.csv(statslist, file = "statslistA1A3A4.csv")
+write.csv(stats4, file = "stats4list.csv")
 
 #get the kME values
 geneModuleMembership1 = signedKME(t(datExprA1g), ME_1A)
