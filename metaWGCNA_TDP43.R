@@ -23,8 +23,8 @@ sALSExpr <- read.csv(file = "sALSrankeduniqueresult.csv")
 rownames(sALSExpr) <- sALSExpr$Probe.Set.ID
 datExprA3 <- sALSExpr[,52:58]
 
-VCPExpr <- read.csv(file = "VCPrankeduniqueresult.csv")
-rownames(VCPExpr) <- VCPExpr$Probe.Set.ID
+FTLDExpr <- read.csv(file = "FTLDrankeduniqueresult.csv")
+rownames(FTLDExpr) <- FTLDExpr$Probe.Set.ID
 datExprA4 <- VCPExpr[,52:58]
 
 PETExpr <- read.csv(file = "PETEXPRSrankeduniqueresult.csv")
@@ -34,6 +34,10 @@ datExprA5g <- PETExpr[,9:26]
 RAVExpr <- read.csv(file = "RAVEXPRSrankeduniqueresult.csv")
 rownames(RAVExpr) <- RAVExpr$hgnc_symbol
 datExprA6g <- RAVExpr[,17:28]
+
+VCPExpr <- read.csv(file = "VCPrankeduniqueresult.csv")
+rownames(VCPExpr) <- VCPExpr$Probe.Set.ID
+datExprA7 <- VCPExpr[,52:58]
 
 
 
@@ -237,34 +241,34 @@ dev.off()
 
 #calculate all of the necessary values to run WGCNA
 #(this will take around 10 minutes)
-adjacencyA1 = adjacency(t(datExprA1g),power=softPower,type="signed");
+adjacencyA1 = adjacency(t(datExprA1g),power=7,type="signed");
 diag(adjacencyA1)=0
 dissTOMA1   = 1-TOMsimilarity(adjacencyA1, TOMType="signed")
 geneTreeA1  = flashClust(as.dist(dissTOMA1), method="average")
 
-adjacencyA2 = adjacency(t(datExprA2g),power=softPower,type="signed");
+adjacencyA2 = adjacency(t(datExprA2g),power=9,type="signed");
 diag(adjacencyA2)=0
 dissTOMA2   = 1-TOMsimilarity(adjacencyA2, TOMType="signed")
 geneTreeA2  = flashClust(as.dist(dissTOMA2), method="average")
 
-adjacencyA3 = adjacency(t(datExprA3g),power=softPower,type="signed");
+adjacencyA3 = adjacency(t(datExprA3g),power=14,type="signed");
 diag(adjacencyA3)=0
 dissTOMA3   = 1-TOMsimilarity(adjacencyA3, TOMType="signed")
 geneTreeA3  = flashClust(as.dist(dissTOMA3), method="average")
 
-adjacencyA4 = adjacency(t(datExprA4g),power=softPower,type="signed");
+adjacencyA4 = adjacency(t(datExprA4g),power=9,type="signed");
 diag(adjacencyA4)=0
 dissTOMA4   = 1-TOMsimilarity(adjacencyA4, TOMType="signed")
 geneTreeA4  = flashClust(as.dist(dissTOMA4), method="average")
 
-datExprA5gnum <- as.double(datExprA5gnum)
+#For RNA seq data, save as a csv file, open in excel and change to "number". Save as txt file and reload
 
-adjacencyA5 = adjacency(t(datExprA5gnum),power=softPower,type="signed");
+adjacencyA5 = adjacency(t(datExprA5g),power=9,type="signed");
 diag(adjacencyA5)=0
 dissTOMA5   = 1-TOMsimilarity(adjacencyA5, TOMType="signed")
 geneTreeA5  = flashClust(as.dist(dissTOMA5), method="average")
 
-adjacencyA6 = adjacency(t(datExprA6g),power=softPower,type="signed");
+adjacencyA6 = adjacency(t(datExprA6g),power=9,type="signed");
 diag(adjacencyA6)=0
 dissTOMA6   = 1-TOMsimilarity(adjacencyA6, TOMType="signed")
 geneTreeA6  = flashClust(as.dist(dissTOMA6), method="average")
@@ -283,12 +287,12 @@ geneTreeA6  = flashClust(as.dist(dissTOMA6), method="average")
 
 pdf("dendrogram.pdf",height=6,width=16)
 par(mfrow=c(1,2))
-plot(geneTreeA1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A1)", labels=FALSE,hang=0.04);
-plot(geneTreeA2,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A2)", labels=FALSE,hang=0.04); 
-plot(geneTreeA3,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A3)", labels=FALSE,hang=0.04);
-plot(geneTreeA4,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A4)", labels=FALSE,hang=0.04); 
-plot(geneTreeA5,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A5)", labels=FALSE,hang=0.04);
-plot(geneTreeA6,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (A6)", labels=FALSE,hang=0.04); 
+plot(geneTreeA1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (C9orf72)", labels=FALSE,hang=0.04);
+plot(geneTreeA2,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (CHMP2B)", labels=FALSE,hang=0.04); 
+plot(geneTreeA3,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (sALS)", labels=FALSE,hang=0.04);
+plot(geneTreeA4,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (VCP)", labels=FALSE,hang=0.04); 
+plot(geneTreeA5,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (PET)", labels=FALSE,hang=0.04);
+plot(geneTreeA6,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (RAV)", labels=FALSE,hang=0.04); 
 dev.off()
 
 # plot(geneTreeB1,xlab="",sub="",main="Gene clustering on TOM-based dissimilarity (B1)", labels=FALSE,hang=0.04);
@@ -308,7 +312,7 @@ pdf("Module_choices.pdf", height=10,width=25);
 plotDendroAndColors(geneTreeA1, mColorh, paste("dpSplt =",0:3), main = "",dendroLabels=FALSE);
 dev.off()
 
-modulesA1 =  mColorh[,4] #choose based on deepslit values in plot
+modulesA1 =  mColorh[,3] #choose based on deepslit values in plot
 
 #calculate the principle components for visualizations 
 PCs1A    = moduleEigengenes(t(datExprA1g),  colors=modulesA1) 
@@ -326,7 +330,7 @@ plot(pcTree1A, xlab="",ylab="",main="",sub="")
 plot(MDS_1A, col= colorsA1,  main="MDS plot", cex=2, pch=19)
 
 ordergenes = geneTreeA1$order
-plotMat(scale(log(datExpr14g[ordergenes,])) , rlabels= modulesA1[ordergenes], clabels= colnames(datExprA1g), rcols=modulesA1[ordergenes])
+plotMat(scale(log(datExprA1g[ordergenes,])) , rlabels= modulesA1[ordergenes], clabels= colnames(datExprA1g), rcols=modulesA1[ordergenes])
 
 for (which.module in names(table(modulesA1))){
   ME = ME_1A[, paste("ME",which.module, sep="")] 
@@ -348,6 +352,10 @@ plotDendroAndColors(geneTreeA3, modulesA1, "Modules", dendroLabels=FALSE, hang=0
                     guideHang=0.05, main="Gene dendrogram and module colors (sALS)") 
 plotDendroAndColors(geneTreeA4, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
                     guideHang=0.05, main="Gene dendrogram and module colors (VCP)") 
+plotDendroAndColors(geneTreeA5, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
+                    guideHang=0.05, main="Gene dendrogram and module colors (PET)") 
+plotDendroAndColors(geneTreeA6, modulesA1, "Modules", dendroLabels=FALSE, hang=0.03, addGuide=TRUE, 
+                    guideHang=0.05, main="Gene dendrogram and module colors (RAV)") 
 
 dev.off()
 
@@ -362,15 +370,21 @@ dev.off()
 
 #assess how well a module in one study is preserved in another study
 # (This step will take ~10 minutes)
-multiExpr  = list(A1=list(data=t(datExprA1g)),A3=list(data=t(datExprA3g)),A4=list(data=t(datExprA4g)))
+multiExpr  = list(A1=list(data=t(datExprA1g)),A3=list(data=t(datExprA3g)),A4=list(data=t(datExprA4g)),
+                  A5=list(data=t(datExprA5g)),A6=list(data=t(datExprA6g)))
 multiColor = list(A1 = modulesA1)
 mp=modulePreservation(multiExpr,multiColor,referenceNetworks=1,verbose=3,networkType="signed",
                       nPermutations=30,maxGoldModuleSize=100,maxModuleSize=400)
-stats1 = mp$preservation$Z$ref.A4$inColumnsAlsoPresentIn.A3
-stats2 = mp$preservation$Z$ref.A4$inColumnsAlsoPresentIn.A4
+stats1 = mp$preservation$Z$ref.A1$inColumnsAlsoPresentIn.A3
+stats2 = mp$preservation$Z$ref.A1$inColumnsAlsoPresentIn.A4
+stats3 = mp$preservation$Z$ref.A1$inColumnsAlsoPresentIn.A5
+stats4 = mp$preservation$Z$ref.A1$inColumnsAlsoPresentIn.A6
 
 stats1[order(-stats1[,2]),c(1:2)]
 stats2[order(-stats2[,2]),c(1:2)]
+stats3[order(-stats3[,2]),c(1:2)]
+stats4[order(-stats4[,2]),c(1:2)]
+
 statslist <- stats[order(-stats[,2]),c(1:2)]
 
 write.csv(statslist, file = "statslistA1A3A4.csv")
