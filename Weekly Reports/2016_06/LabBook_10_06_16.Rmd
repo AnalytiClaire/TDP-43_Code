@@ -11,3 +11,177 @@ opts_chunk$set(tidy.opts=list(width.cutoff=60))
 
 #Monday
 
+I'm trying to conduct the same experiment again but just with the 2 RNA-seq data sets and the FTLD data set. Unfortunately the trick I used on friday to turn the RNA-seq matrices into numeric data frames didn't work (and I have no idea why). In my monday meeting with Win we talked about it and decided that it wasn't worth torturing the data to try and extract something that might not be that useful. Particularly as Pathprint does something very similar.
+
+#Tuesday
+
+Today I worked on my Mini Thesis plan. I have written it up and so far it goes:
+
+##MINI THESIS PLAN - DEVELOPMENT OF AN IN SILICO MOLECULAR MODEL FOR TDP-43 PATHOLOGY
+
+###INTRODUCTION (MAJORITY FROM LIT REVIEW)
+-	TDP-43 structure and function
+-	TDP-43 associated diseases
+o	ALS
+o	FTLD
+o	MSP
+o	Alexander’s disease
+o	AD and Lewy body dementia
+o	CTE
+-	TDP-43 dysfunction
+-	Project rationale
+o	What is a model? Explain combination of ‘omics and pathways → structure combined with function
+o	Why a model? – multiple muts/tiss/disease etc. In silico is more dynamic.
+o	How have other models of disease been used beneficially?
+o	What new information can a model of TDP-43 pathology provide? I.e. new upstream mechanisms, drivers, targets for therapeutics
+o	Brief overview of achievements?
+
+###MATERIALS AND METHODS
+-	Data – describe criteria for selection and provide table of information for each data set
+-	Normalisation and Quality Control – explain normalisation procedures for both microarray (rma) and RNA-seq (bcbio). Describe QC process for microarray (PCA, hierarchical clustering, boxplots) and RNA-seq (bcbio)
+-	Pathprinting – explain process as depicted by the code. Describe all parameters used and justifications. Explain use of microarray and not RNA-seq.
+-	Differential Expression Analysis – same as above. Limma, thresholds etc.
+-	Enrichment – Provide table of gene lists and sources (full list in appendix). Describe hyperpathway code and parameters.
+
+###RESULTS
+-	Quality Control – produce examples of PCA plots, dendrograms and box plots. Explain why CHMP2B control was removed
+-	Pathprint – briefly introduce the concept of Pathprinting. Show table containing list of pathways. Show PCxN diagram of interaction. Do I need to show it’s more inter-correlated than expected by chance? Would have to work out how to access PCxN data and run random permutation tests
+-	Differential Expression Analysis – Show results at differing thresholds, as well as results of random permutation tests. Explain why the threshold of 5500 was chosen. Show Genemania results of correlation and physical interaction. Again, does this need RPTs? Discuss presence of TARDBP and other associations with TDP-43 Path. Diseases. 
+-	Enrichment Analysis – Describe concept of what enrichment suggests, e.g. enrichment of SNP containing genes suggests upstream processes, direct association with known pathogenic contributors, etc. Present results of enrichment in DEG lists and pathways. 
+
+###DISCUSSION
+-	Brief overview of project aim
+-	Brief overview of main results
+-	Explain significance of common pathways – discuss the fact that pathways that you would expect are present (e.g. prion diseases) and new ones might be implicated - discuss the enrichment results and how that relates certain pathways to disease (particularly lysine degradation)
+-	Explain why DEGs did not enrich as well (biological bias towards certain genes/processes, still unknown variants, could be detecting downstream etc) but discuss enrichment of TDP-43 interactors. 
+-	Discuss pitfalls – low sample sizes, no TARDBP mutations. Explain need for properly controlled sampling from in vitro/vivo experiments
+-	Future plans – cross-validate in external data set. 
+
+I also did a small adjustment on the DEG consensus to make the method the same as before (take top X and find consensus). It didn't make a huge difference but I felt more confident in the method. 
+
+For each *rankeduniqueresult.csv I ran 
+```{r, eval=F}
+
+topgene <- genesort[1:500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_500.csv"))
+topgene <- genesort[1:1000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_1000.csv"))
+topgene <- genesort[1:1500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_1500.csv"))
+topgene <- genesort[1:2000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_2000.csv"))
+topgene <- genesort[1:2500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_2500.csv"))
+topgene <- genesort[1:3000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_3000.csv"))
+topgene <- genesort[1:3500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_3500.csv"))
+topgene <- genesort[1:4000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_4000.csv"))
+topgene <- genesort[1:4500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_4500.csv"))
+topgene <- genesort[1:5000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_5000.csv"))
+topgene <- genesort[1:5500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_5500.csv"))
+topgene <- genesort[1:6000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_6000.csv"))
+topgene <- genesort[1:6500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_6500.csv"))
+topgene <- genesort[1:7000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_7000.csv"))
+topgene <- genesort[1:7500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_7500.csv"))
+topgene <- genesort[1:8000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_8000.csv"))
+```
+This produced cut off files for each threshold. 
+
+I then ran 
+
+```{r, eval=F}
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/Thresholds/")
+A <- read.csv(file =   "C9 _ap_8000.csv")
+
+B <- read.csv(file =   "CH _ap_8000.csv")
+ 
+C <- read.csv(file =   "sALS _ap_8000.csv")
+ 
+D <- read.csv(file =   "FTLD _ap_8000.csv")
+
+E <- read.csv(file =   "VCP _ap_8000.csv")
+
+# setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_17/")
+
+F <- read.csv(file =   "PET _ap_8000.csv")
+
+G <- read.csv(file =   "RAV _ap_8000.csv")
+
+
+A_DE <- A$Gene.Symbol
+B_DE <- B$Gene.Symbol
+C_DE <- C$Gene.Symbol
+D_DE <- D$Gene.Symbol
+E_DE <- E$Gene.Symbol
+F_DE <- F$hgnc_symbol
+G_DE <- G$hgnc_symbol
+
+overlap <- Reduce(intersect, list(A_DE, B_DE, C_DE, D_DE, E_DE, F_DE, G_DE))
+print(overlap)
+
+setwd("/Users/clairegreen/Desktop/")
+write.csv(overlap, file = "overlap.csv")
+```
+
+For both the gene symbol and the ensembl ID. The ensembl ids were saved as 'overlap' and used in the following code to retrieve the HGNC symbols
+
+```{r, eval=F}
+library (biomaRt)
+mart <- useMart("ENSEMBL_MART_ENSEMBL",dataset="hsapiens_gene_ensembl", host="www.ensembl.org")
+
+analysis.name <- "overlap"
+
+genes <- overlap
+# genes <- genes$Probe.Set.ID
+mart_attribute <- listAttributes(mart)
+mart_filter <- listFilters(mart)
+annotation <- getBM(attributes=c("ensembl_gene_id", "hgnc_symbol"),
+                   filters = "ensembl_gene_id", values = genes, mart = mart)
+
+
+annotation
+setwd("/Users/clairegreen/Desktop/")
+write.csv(annotation, file = "overlap.csv")
+```
+
+Then I combined the lists for each threshold in excel and removed duplicates. The final file is allgenes_manual. I spent the rest of the day first averaging the expression values for the 65 or so DEGs for Win.
+
+```{r, eval = F}
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/")
+
+A1 <- read.csv("C9rankeduniqueresult.csv")
+A2 <- read.csv("CHrankeduniqueresult.csv")
+A3 <- read.csv("sALSrankeduniqueresult.csv")
+A4 <- read.csv("FTLDrankeduniqueresult.csv")
+A5 <- read.csv("VCPrankeduniqueresult.csv")
+
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/")
+names <- read.table("5500genes.txt")
+names <- names$V1
+
+subsetC9 <- subset(A5, A5$Gene.Symbol %in% names, drop = TRUE)
+subsetC9 <-subsetC9[!duplicated(subsetC9[,15]),]
+rownames(subsetC9) <- subsetC9$Gene.Symbol
+subsetC9 <- subsetC9[,52:58]
+subsetC9[,(ncol(subsetC9)+1)] <- rowMeans(subsetC9) 
+subsetC9[,(ncol(subsetC9)-1)] <- rownames(subsetC9)
+subsetC9 <- subsetC9[,(ncol(subsetC9)-1):ncol(subsetC9)]
+
+setwd("/Users/clairegreen/Desktop/")
+write.csv(subsetC9, file = "subset.csv")
+```
+
+and then I spent the rest of the afternoon accumulating information on all ALS/TDP-43 related expression datasets on GEO.
+
+#Thursday
+
