@@ -103,7 +103,7 @@ Z <- as.list(Z)
 Z<- lapply(Z, function(x) x[!is.na(x)])
 
 geneset <- Z
-genelist <- q
+genelist <- g
 genelist.length <- length(genelist)
 
 hyper <- as.data.frame(matrix(nrow = length(geneset), ncol = 1))

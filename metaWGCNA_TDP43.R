@@ -133,7 +133,7 @@ datExprA7g    = datExprA7g[commonGenesA,]
 # #A6 = 9
 
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/PO+RNAseq/")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/")
 #Correlating general network properties
 softPower = 10 # (Read WGCNA tutorial to learn how to pick your power)
 rankExprA1= rank(rowMeans(datExprA1g))
@@ -348,11 +348,11 @@ dev.off()
 mColorh=NULL
 for (ds in 0:3){
   tree = cutreeHybrid(dendro = geneTreeA1, pamStage=FALSE,
-                      minClusterSize = (30-3*ds), cutHeight = 0.99, 
+                      minClusterSize = (30-3*ds), cutHeight = 0.5, 
                       deepSplit = ds, distM = dissTOMA1)
   mColorh=cbind(mColorh,labels2colors(tree$labels));
 }
-pdf("Module_choices.pdf", height=10,width=25); 
+pdf("Module_choices5.pdf", height=10,width=25); 
 plotDendroAndColors(geneTreeA1, mColorh, paste("dpSplt =",0:3), main = "",dendroLabels=FALSE);
 dev.off()
 

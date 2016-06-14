@@ -1,6 +1,6 @@
 #QQplot for p Values#
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/")
 C9DEgene <- read.csv("C9rankeduniqueresult.csv")
 CHDEgene <- read.csv("CHrankeduniqueresult.csv")
 sALSDEgene <- read.csv("sALSrankeduniqueresult.csv")

@@ -1,5 +1,4 @@
 # set working directory
-# set working directory
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GSEA/PCxN Example/probesets/")
 
 #Load individual gene names for each significance threshold
@@ -23,9 +22,9 @@ e <- E$V1
 F <- read.table(file = "signif.snp.NeuroX.p5E08.txt")
 f <- F$V1
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis")
+setwd(dir = "/Users/clairegreen/Desktop/")
 
-G <- read.table(file = "allgenes.txt")
+G <- read.table(file = "Claire_intersect.txt")
 g <- G$V1
 
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS")
@@ -53,27 +52,24 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExp
 O <- read.table(file = "GeneCardsALS.txt")
 o <- O$V1
 
-####Load full gwas datasets ####
-setwd(dir = "/Users/clairegreen/Downloads/PCxN example")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/QQ/Test3/")
+P <- read.table(file = "genemania-genes.txt")
+p <- P$V1
 
-GCEN <- read.csv("ALS.gwascentral.martquery_0301121419_683.csv")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+Q <- read.table(file = "Pasterkamp_TDP43.txt")
+q <- Q$V1
 
-three <- GCEN[(GCEN$p.value <= 0.001),]
-
-four <- GCEN[(GCEN$p.value <= 0.0001),]
-
-five <- GCEN[(GCEN$p.value <= 0.00001),]
-
-six <- GCEN[(GCEN$p.value <= 0.00001),]
-
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
+R <- read.table(file = "Taylor_TDP43.txt")
+r <- R$V1
 
 
-
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
-x <- read.table(file = "45+45(BP).txt")
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/Pathprint 25.04.16/FishersExact/FE.All.Pathways/FE.PathprintPathways(29)/")
+x <- read.table(file = "FE.pathprintgenes.csv")
 x <- x$V1
 
-Z <- read.csv(file = "LeaveOneOutDEGs.csv", na.strings = c("", "NA)"))
+Z <- read.csv(file = "FE.pathprintgenes.csv", na.strings = c("", "NA)"))
 Z <- as.list(Z)
 
 
@@ -108,15 +104,17 @@ allgenes <- sym.genes[!duplicated(sym.genes),]
 # 
 # for (i in x[,1:4]) {
 
-y <- p
-snp <- n
+x <- read.table("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HoffmanMuscle/SigGenes.01.txt")
+ur.list <- x$V1
+y <- read.table("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HoffmanMuscle/CongenitalMDGenes.txt")
+int.list <- y$V1
 
 #How many test geneset genes contain snps
-x.in <- length (which(y %in% snp)) 
+x.in <- length (which(ur.list %in% int.list)) 
 #how many do not
-x.out <- length(y) - x.in
+x.out <- length(ur.list) - x.in
 #total number of snp genes
-tot.in <- length(snp)
+tot.in <- length(int.list)
 #total number of all genes
 tot.out <- length(allgenes)-length(tot.in)
 
@@ -133,8 +131,9 @@ print(enrich)
 
 
 
-o1 <- Reduce(intersect, list(n, Z$X7500))
+o1 <- Reduce(intersect, list(ur.list, int.list))
 print(o1)
-o2 <- Reduce(intersect, list(c, Z$TGF.beta.receptor.down.reg..targets..Netpath.))
+
+o2 <- Reduce(intersect, list(f, Z$Signaling.by.Insulin.receptor..Reactome.))
 print(o2)
 

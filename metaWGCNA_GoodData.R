@@ -25,6 +25,7 @@ rownames(FTLDExpr) <- FTLDExpr$Probe.Set.ID
 datExprFTLD <- FTLDExpr[,57:72]
 annotation <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/WGCNA/GoodData/FTLDID geneIDs.csv")
 datExprFTLD <- merge(datExprFTLD, annotation, by.x = "row.names", by.y = "affy_hg_u133_plus_2")
+datExprFTLD$ensembl_gene_id <- NULL
 datExprFTLD <- datExprFTLD[!duplicated(datExprFTLD[,18]),]
 row.names(datExprFTLD) <- datExprFTLD$hgnc_symbol
 datExprFTLD$Row.names <- NULL
@@ -104,9 +105,10 @@ dev.off()
 #For RNA seq data, save as a csv file, open in excel and change to "number". Save as txt file and reload
 #May have to give rowname column a name
 
-write.csv(datExprPET, file = "datExprPET.csv")
-write.csv(datExprRAV, file = "datExprRAV.csv")
+write.table(datExprPET, file = "datExprPET.txt")
+write.table(datExprRAV, file = "datExprRAV.txt")
 datExprPET <- read.table("datExprPET.txt", header = TRUE)
+rownames(datExprPET) <- datExprPET$Gene
 datExprRAV <- read.table("datExprRAV.txt", header = TRUE)
 
 

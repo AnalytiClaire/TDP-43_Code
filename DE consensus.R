@@ -1,35 +1,39 @@
 #####DIFFERENTIAL GENE EXPRESSION INTERSECT
 #takes csv files of top X DE genes and identifies any consensus genes 
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15/")
-A <- read.csv(file =   "C9_ap_5000")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/non-TDP-43 Data Sets/JK2011_SOD1/")
+A <- read.csv(file =   "JKSOD1 _ap_500.csv")
 
-B <- read.csv(file =   "CH_ap_5000")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/non-TDP-43 Data Sets/J-Y_FUS/")
+B <- read.csv(file =   "FUS _ap_500.csv")
  
-C <- read.csv(file = "sALS_ap_5000")
- 
-D <- read.csv(file = "FTLD_ap_5000")
-
-E <- read.csv(file =  "VCP_ap_5000")
-
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_17/")
-
-F <- read.csv(file =  "PET_ap_5000")
-
-G <- read.csv(file =  "RAV_ap_5000")
-
+# C <- read.csv(file =   "sALS _ap_6500.csv")
+#  
+# D <- read.csv(file =   "FTLD _ap_6500.csv")
+# 
+# E <- read.csv(file =   "VCP _ap_6500.csv")
+# 
+# # setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/16_3_17/")
+# 
+# F <- read.csv(file =   "PET _ap_6500.csv")
+# 
+# G <- read.csv(file =   "RAV _ap_6500.csv")
+# 
+# H <- read.csv(file =   "FSHD _ap_6500.csv")
 
 A_DE <- A$Gene.Symbol
 B_DE <- B$Gene.Symbol
 C_DE <- C$Gene.Symbol
 D_DE <- D$Gene.Symbol
 E_DE <- E$Gene.Symbol
-F_DE <- F$X
-G_DE <- G$X
+F_DE <- F$hgnc_symbol
+G_DE <- G$hgnc_symbol
+H_DE <- H$Gene.Symbol
 
-overlap <- Reduce(intersect, list(A_DE, B_DE, C_DE, D_DE, E_DE, F_DE, G_DE))
+overlap <- Reduce(intersect, list(A_DE, B_DE))
 print(overlap)
 
+setwd("/Users/clairegreen/Desktop/")
 write.csv(overlap, file = "overlap.csv")
 
 # c9setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/Pathprint/")

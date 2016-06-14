@@ -1,11 +1,11 @@
 ##Differential Expression of Genes##
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/VCP/")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/non-TDP-43 Data Sets/J-Y_FUS/")
+library(affy)
 library(widgetTools)
 library(tcltk)
 library(DynDoc)
 library(tools)
-library(affy)
 library(Biobase)
 library(tkWidgets)
 
@@ -14,9 +14,10 @@ celfiles <- fileBrowser(textToShow = "Choose CEL files", testFun = hasSuffix("[c
 #celfiles<-basename(celfiles)
 Data<-ReadAffy(filenames=celfiles) #read in files
 rmaEset<-rma(Data) #normalise using RMA
-analysis.name<-"VCP" #Label analysis
+analysis.name<-"FUS" #Label analysis
 dataMatrixAll<-exprs(rmaEset) #takes expression from normalised expression set
 
+write.csv(dataMatrixAll, file = "eset.hoffman.csv")
 
 #mas5call generates presence/absence calls for each probeset
 mas5call<-mas5calls(Data)
@@ -48,10 +49,10 @@ countPdf<-data.frame(ProbeSetID=names(countPl), countP=countPl)
 # USING ANNOTATION FILE (if .csv, convert to .txt using excel)
 annotation.file<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133_Plus_2.na35.annot.csv/HG-U133_Plus_2.na35.annot.txt"
 #annotation.file<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133A_2.na35.annot.csv/HG-U133A_2.na35.annot.txt"
-#annotation<-read.table(annotation.file, header = TRUE, row.names=NULL, sep="\t", skip=0, stringsAsFactors=F, quote = "", comment.char="!", fill = TRUE, as.is = TRUE)
+#annotation.file<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133A.na35.annot.csv/HG-U133A.na35.annot.txt"
+annotation<-read.table(annotation.file, header = TRUE, row.names=NULL, sep="\t", skip=0, stringsAsFactors=F, quote = "", comment.char="!", fill = TRUE, as.is = TRUE)
 dim(annotation)
 nrow(annotation)
-#[1] 39699
 annotation<-subset( annotation, subset=(Gene.Symbol !="---")) #if no gene symbol, discount
 
 # Remove rows in which genes are noted to have negative strand matching probes
@@ -66,8 +67,7 @@ expressionMatrix<-exprs(rmaEset)
 colnames(expressionMatrix)
 
 #this is for matched samples
-#tonsil<-factor(c("T101","T101","T102","T102","T103","T103"))
-Treat<-factor(rep(c("Control", "Patient"),c(3,7)), levels=c("Control", "Patient"))
+Treat<-factor(rep(c("Control", "Patient"),c(3,3)), levels=c("Control", "Patient"))
 design<-model.matrix(~Treat)
 rownames(design)<-colnames(expressionMatrix)
 design
@@ -90,7 +90,7 @@ result<-merge(result, expressionLinear, by.x="ProbeSetID", by.y="ProbeSetID") #m
 result<-merge(annotation, result, by.x="Probe.Set.ID", by.y="ProbeSetID")
 result<-merge(result, countPdf, by.x="Probe.Set.ID", by.y="ProbeSetID")
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/")
+# setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/")
 write.csv(result, file=paste(analysis.name, "result.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
 
 result<-subset(result, Gene.Symbol!="") #removes any probes for which there are no gene symbols
@@ -124,7 +124,7 @@ result<-subset(result, subset=(countP>2)) #only takes results that have at least
 
 
 ###Write results to CSV files for consensus analysis
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/non-TDP-43 Data Sets/J-Y_FUS/")
 #dir.create(paste("TopGenes", Sys.Date(), sep = "_")) #create directory using the day's date
 #Take results, remove duplicate rows for genes, order by adjusted p value and take top X number of genes
 uniqueresult <- result[!duplicated(result[,15]),]
@@ -135,42 +135,39 @@ write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""),
 
 
 # 
-# 
-# topgene <- genesort[1:500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_500.csv"))
-# topgene <- genesort[1:1000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_1000.csv"))
-# topgene <- genesort[1:1500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_1500.csv"))
-# topgene <- genesort[1:2000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_2000.csv"))
-# topgene <- genesort[1:2500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_2500.csv"))
-# topgene <- genesort[1:3000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_3000.csv"))
-# topgene <- genesort[1:3500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_3500.csv"))
-# topgene <- genesort[1:4000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_4000.csv"))
-# topgene <- genesort[1:4500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_4500.csv"))
-# topgene <- genesort[1:5000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_5000.csv"))
-# topgene <- genesort[1:5500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_5500.csv"))
-# topgene <- genesort[1:6000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_6000.csv"))
-# topgene <- genesort[1:6500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_6500.csv"))
-# topgene <- genesort[1:7000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_7000.csv"))
-# topgene <- genesort[1:7500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_7500.csv"))
-# # topgene <- genesort[1:8000,]
-# # write.csv(x = topgene, file = paste(analysis.name,"_ap_8000.csv"))
-# 
-# 
-# 
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/non-TDP-43 Data Sets//J-Y_FUS/")
+topgene <- genesort[1:500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_500.csv"), sep = "")
+topgene <- genesort[1:1000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_1000.csv"), sep = "")
+topgene <- genesort[1:1500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_1500.csv"), sep = "")
+topgene <- genesort[1:2000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_2000.csv"), sep = "")
+topgene <- genesort[1:2500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_2500.csv"), sep = "")
+topgene <- genesort[1:3000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_3000.csv"), sep = "")
+topgene <- genesort[1:3500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_3500.csv"), sep = "")
+topgene <- genesort[1:4000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_4000.csv"), sep = "")
+topgene <- genesort[1:4500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_4500.csv"), sep = "")
+topgene <- genesort[1:5000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_5000.csv"), sep = "")
+topgene <- genesort[1:5500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_5500.csv"), sep = "")
+topgene <- genesort[1:6000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_6000.csv"), sep = "")
+topgene <- genesort[1:6500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_6500.csv"), sep = "")
+topgene <- genesort[1:7000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_7000.csv"), sep = "")
+topgene <- genesort[1:7500,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_7500.csv"), sep = "")
+topgene <- genesort[1:8000,]
+write.csv(x = topgene, file = paste(analysis.name,"_ap_8000.csv"), sep = "")
 
 
 
