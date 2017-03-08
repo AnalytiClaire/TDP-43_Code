@@ -7,7 +7,7 @@ thres <-200
 
 ####C9_LCM ######
 setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM") #set working directory to location of data
-exp_C9.LCM <- read.csv ("eset_NineP_150612_exprs.csv", header=TRUE) #assign the .csv file to a variable, column headers are true
+exp_C9.LCM <- read.csv ("eset_NineP_150612_exprs1.csv", header=TRUE) #assign the .csv file to a variable, column headers are true
 row.names (exp_C9.LCM) <- exp_C9.LCM[,1] #specify that first column contains gene names
 exp_C9.LCM<- exp_C9.LCM[,2:12] #specify that all other columns are gene expression data
 

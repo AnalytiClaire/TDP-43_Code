@@ -1,15 +1,15 @@
 ###Random permutations for Differential Expression##
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/")
 
 #load the total number of unique genes for each data set
-Group1 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/C9rankeduniqueresult.csv")
-Group2 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/CHrankeduniqueresult.csv")
-Group3 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/sALSrankeduniqueresult.csv")
-Group4 <- read.csv("//Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/FTLDrankeduniqueresult.csv")
-Group5 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/VCPrankeduniqueresult.csv")
-Group6 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/PETrankeduniqueresult.csv")
-Group7 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/RAVrankeduniqueresult.csv")
+Group1 <- read.csv("C9rankeduniqueresult.csv")
+Group2 <- read.csv("CHrankeduniqueresult.csv")
+Group3 <- read.csv("sALSrankeduniqueresult.csv")
+Group4 <- read.csv("FTLDrankeduniqueresult.csv")
+Group5 <- read.csv("VCPrankeduniqueresult.csv")
+Group6 <- read.csv("PETNOrankeduniqueresult.csv")
+Group7 <- read.csv("RAVrankeduniqueresult.csv")
 
 # ## Save annotation file locations to variable
 # annotation.U133plus2<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133_Plus_2.na35.annot.csv/HG-U133_Plus_2.na35.annot.txt"
@@ -47,8 +47,8 @@ Group7 <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test
 
 
 #indicate the number of overlapping genes identified by DE analysis
-test <- 714
-samplenum <- 8000
+test <- 178
+samplenum <- 6500
 
 m=10000 #number of repetitions 
 r <- c(1:m) #store repetition numbers in vector "r"
@@ -60,7 +60,7 @@ for (j in 1:m)
   random3 <- sample (Group3$Gene.Symbol, size=samplenum, replace=FALSE)
   random4 <- sample (Group4$Gene.Symbol, size=samplenum, replace=FALSE)
   random5 <- sample (Group5$Gene.Symbol, size=samplenum, replace=FALSE)
-  random6 <- sample (Group6$hgnc_symbol, size=samplenum, replace=FALSE)
+  random6 <- sample (Group6$symbol, size=samplenum, replace=FALSE)
   random7 <- sample (Group7$hgnc_symbol, size=samplenum, replace=FALSE)
   random <- Reduce(intersect, list(random1, random2, random3, random4, random5, random6, random7))
   r[j] <- length(random)
