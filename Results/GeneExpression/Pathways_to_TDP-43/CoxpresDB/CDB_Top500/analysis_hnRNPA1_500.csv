@@ -1,0 +1,238 @@
+GO biological process complete,Homo sapiens - REFLIST (20972),upload_1 (482),upload_1 (expected),upload_1 (over/under),upload_1 (fold Enrichment),upload_1 (P-value)
+Unclassified (UNCLASSIFIED),3964,25,91.1,-,0.27,0.00E+00
+mRNA metabolic process (GO:0016071),627,159,14.41,+,11.03,4.31E-112
+RNA processing (GO:0006396),871,178,20.02,+,8.89,7.23E-112
+gene expression (GO:0010467),3785,289,86.99,+,3.32,7.90E-89
+ribonucleoprotein complex biogenesis (GO:0022613),463,124,10.64,+,11.65,1.25E-87
+translational initiation (GO:0006413),154,87,3.54,+,24.58,3.23E-86
+cellular nitrogen compound metabolic process (GO:0034641),5169,325,118.8,+,2.74,5.26E-83
+nucleic acid metabolic process (GO:0090304),3986,283,91.61,+,3.09,1.50E-78
+viral gene expression (GO:0019080),126,77,2.9,+,26.59,3.02E-78
+SRP-dependent cotranslational protein targeting to membrane (GO:0006614),95,71,2.18,+,32.52,8.16E-78
+translation (GO:0006412),455,114,10.46,+,10.9,8.55E-77
+RNA metabolic process (GO:0016070),3463,262,79.59,+,3.29,4.83E-76
+protein targeting to ER (GO:0045047),101,71,2.32,+,30.59,5.62E-76
+cotranslational protein targeting to membrane (GO:0006613),103,71,2.37,+,29.99,2.17E-75
+nucleobase-containing compound metabolic process (GO:0006139),4540,296,104.34,+,2.84,5.58E-75
+establishment of protein localization to endoplasmic reticulum (GO:0072599),105,71,2.41,+,29.42,8.19E-75
+peptide biosynthetic process (GO:0043043),479,114,11.01,+,10.36,1.96E-74
+"nuclear-transcribed mRNA catabolic process, nonsense-mediated decay (GO:0000184)",119,73,2.73,+,26.69,4.71E-74
+nitrogen compound metabolic process (GO:0006807),5651,327,129.88,+,2.52,4.96E-74
+multi-organism metabolic process (GO:0044033),145,77,3.33,+,23.11,1.04E-73
+viral transcription (GO:0019083),115,72,2.64,+,27.24,1.35E-73
+heterocycle metabolic process (GO:0046483),4677,297,107.49,+,2.76,1.41E-72
+cellular aromatic compound metabolic process (GO:0006725),4727,297,108.64,+,2.73,1.89E-71
+nuclear-transcribed mRNA catabolic process (GO:0000956),193,82,4.44,+,18.49,3.39E-71
+cellular macromolecule metabolic process (GO:0044260),6784,352,155.92,+,2.26,1.12E-70
+mRNA catabolic process (GO:0006402),205,83,4.71,+,17.62,1.80E-70
+RNA catabolic process (GO:0006401),233,86,5.36,+,16.06,6.34E-70
+protein localization to endoplasmic reticulum (GO:0070972),125,71,2.87,+,24.71,1.32E-69
+amide biosynthetic process (GO:0043604),539,114,12.39,+,9.2,4.68E-69
+organic cyclic compound metabolic process (GO:1901360),4918,297,113.03,+,2.63,2.75E-67
+peptide metabolic process (GO:0006518),625,117,14.36,+,8.15,1.96E-65
+ribosome biogenesis (GO:0042254),325,91,7.47,+,12.18,4.90E-64
+macromolecule metabolic process (GO:0043170),7488,359,172.1,+,2.09,2.27E-63
+protein targeting to membrane (GO:0006612),164,72,3.77,+,19.1,6.57E-63
+ncRNA processing (GO:0034470),408,97,9.38,+,10.34,2.95E-62
+rRNA processing (GO:0006364),262,83,6.02,+,13.78,4.26E-62
+rRNA metabolic process (GO:0016072),268,83,6.16,+,13.48,2.49E-61
+ncRNA metabolic process (GO:0034660),558,106,12.82,+,8.27,3.36E-59
+nucleobase-containing compound catabolic process (GO:0034655),351,89,8.07,+,11.03,6.09E-59
+viral life cycle (GO:0019058),300,83,6.89,+,12.04,1.57E-57
+cellular amide metabolic process (GO:0043603),753,117,17.31,+,6.76,5.89E-57
+heterocycle catabolic process (GO:0046700),382,89,8.78,+,10.14,6.35E-56
+cellular nitrogen compound catabolic process (GO:0044270),389,89,8.94,+,9.95,2.80E-55
+aromatic compound catabolic process (GO:0019439),394,89,9.06,+,9.83,7.94E-55
+cellular metabolic process (GO:0044237),8641,371,198.6,+,1.87,1.42E-53
+organic cyclic compound catabolic process (GO:1901361),416,89,9.56,+,9.31,6.60E-53
+establishment of protein localization to organelle (GO:0072594),376,85,8.64,+,9.84,3.76E-52
+primary metabolic process (GO:0044238),8722,368,200.46,+,1.84,2.14E-50
+protein targeting (GO:0006605),427,87,9.81,+,8.87,6.39E-50
+cellular nitrogen compound biosynthetic process (GO:0044271),3521,226,80.92,+,2.79,5.07E-49
+establishment of protein localization to membrane (GO:0090150),275,73,6.32,+,11.55,8.22E-49
+interspecies interaction between organisms (GO:0044419),872,115,20.04,+,5.74,1.07E-48
+"symbiosis, encompassing mutualism through parasitism (GO:0044403)",872,115,20.04,+,5.74,1.07E-48
+viral process (GO:0016032),831,112,19.1,+,5.86,3.73E-48
+organic substance metabolic process (GO:0071704),9173,374,210.82,+,1.77,5.50E-48
+multi-organism cellular process (GO:0044764),836,112,19.21,+,5.83,6.67E-48
+organonitrogen compound biosynthetic process (GO:1901566),1060,123,24.36,+,5.05,9.27E-47
+macromolecule biosynthetic process (GO:0009059),3729,227,85.7,+,2.65,2.51E-45
+cellular macromolecule biosynthetic process (GO:0034645),3648,224,83.84,+,2.67,4.13E-45
+single-organism intracellular transport (GO:1902582),508,88,11.68,+,7.54,5.57E-45
+metabolic process (GO:0008152),9573,377,220.02,+,1.71,1.57E-44
+protein localization to organelle (GO:0033365),583,92,13.4,+,6.87,5.75E-44
+mRNA processing (GO:0006397),445,80,10.23,+,7.82,1.36E-41
+RNA splicing (GO:0008380),377,74,8.66,+,8.54,1.14E-40
+cellular component biogenesis (GO:0044085),2375,172,54.58,+,3.15,1.31E-40
+protein localization to membrane (GO:0072657),389,74,8.94,+,8.28,9.15E-40
+intracellular transport (GO:0046907),1230,122,28.27,+,4.32,2.14E-39
+ribonucleoprotein complex assembly (GO:0022618),200,56,4.6,+,12.18,9.53E-38
+cellular macromolecule catabolic process (GO:0044265),829,99,19.05,+,5.2,2.13E-37
+ribonucleoprotein complex subunit organization (GO:0071826),210,56,4.83,+,11.6,1.20E-36
+"mRNA splicing, via spliceosome (GO:0000398)",271,61,6.23,+,9.79,4.08E-36
+"RNA splicing, via transesterification reactions with bulged adenosine as nucleophile (GO:0000377)",271,61,6.23,+,9.79,4.08E-36
+cellular biosynthetic process (GO:0044249),4599,238,105.7,+,2.25,4.33E-36
+nucleobase-containing compound biosynthetic process (GO:0034654),3027,188,69.57,+,2.7,4.72E-36
+RNA biosynthetic process (GO:0032774),2688,176,61.78,+,2.85,5.66E-36
+intracellular protein transport (GO:0006886),720,91,16.55,+,5.5,7.71E-36
+"RNA splicing, via transesterification reactions (GO:0000375)",275,61,6.32,+,9.65,9.20E-36
+heterocycle biosynthetic process (GO:0018130),3085,189,70.9,+,2.67,1.74E-35
+aromatic compound biosynthetic process (GO:0019438),3097,189,71.18,+,2.66,2.98E-35
+organic substance biosynthetic process (GO:1901576),4698,238,107.97,+,2.2,1.58E-34
+establishment of localization in cell (GO:0051649),1511,126,34.73,+,3.63,2.55E-33
+organic cyclic compound biosynthetic process (GO:1901362),3207,189,73.71,+,2.56,3.64E-33
+biosynthetic process (GO:0009058),4787,238,110.02,+,2.16,3.66E-33
+macromolecule catabolic process (GO:0009057),966,99,22.2,+,4.46,6.06E-32
+organonitrogen compound metabolic process (GO:1901564),1846,137,42.43,+,3.23,1.58E-31
+single-organism cellular localization (GO:1902580),841,89,19.33,+,4.6,3.22E-29
+cellular protein metabolic process (GO:0044267),3553,190,81.66,+,2.33,9.68E-28
+single-organism membrane organization (GO:0044802),767,83,17.63,+,4.71,1.35E-27
+cellular component organization or biogenesis (GO:0071840),5481,245,125.97,+,1.94,5.83E-27
+cellular localization (GO:0051641),1979,134,45.48,+,2.95,1.08E-26
+macromolecular complex subunit organization (GO:0043933),2059,137,47.32,+,2.9,1.08E-26
+cellular macromolecular complex assembly (GO:0034622),759,81,17.44,+,4.64,2.00E-26
+posttranscriptional regulation of gene expression (GO:0010608),473,65,10.87,+,5.98,2.15E-26
+cellular process (GO:0009987),14523,437,333.78,+,1.31,9.69E-26
+cellular protein localization (GO:0034613),1214,100,27.9,+,3.58,8.51E-25
+cellular macromolecule localization (GO:0070727),1225,100,28.15,+,3.55,1.70E-24
+cellular component organization (GO:0016043),5318,235,122.22,+,1.92,1.97E-24
+protein transport (GO:0015031),1252,100,28.77,+,3.48,8.99E-24
+membrane organization (GO:0061024),930,84,21.37,+,3.93,1.08E-22
+cellular catabolic process (GO:0044248),1395,104,32.06,+,3.24,1.39E-22
+macromolecule localization (GO:0033036),2157,133,49.57,+,2.68,1.46E-22
+regulation of gene expression (GO:0010468),4332,202,99.56,+,2.03,3.34E-22
+protein metabolic process (GO:0019538),4130,195,94.92,+,2.05,9.86E-22
+organic substance transport (GO:0071702),2011,126,46.22,+,2.73,1.18E-21
+multi-organism process (GO:0051704),2297,135,52.79,+,2.56,4.80E-21
+regulation of nitrogen compound metabolic process (GO:0051171),4390,201,100.9,+,1.99,5.08E-21
+establishment of protein localization (GO:0045184),1377,100,31.65,+,3.16,1.11E-20
+regulation of translation (GO:0006417),345,50,7.93,+,6.31,1.61E-20
+macromolecular complex assembly (GO:0065003),1393,98,32.02,+,3.06,3.49E-19
+regulation of cellular amide metabolic process (GO:0034248),374,50,8.6,+,5.82,5.04E-19
+organic substance catabolic process (GO:1901575),1605,104,36.89,+,2.82,5.38E-18
+regulation of RNA splicing (GO:0043484),105,29,2.41,+,12.02,5.51E-18
+cytoplasmic translation (GO:0002181),41,21,0.94,+,22.29,1.27E-17
+protein localization (GO:0008104),1790,108,41.14,+,2.63,1.48E-16
+ribosome assembly (GO:0042255),57,22,1.31,+,16.79,5.22E-16
+catabolic process (GO:0009056),1714,104,39.39,+,2.64,6.10E-16
+regulation of macromolecule metabolic process (GO:0060255),5815,227,133.65,+,1.7,1.10E-15
+regulation of cellular macromolecule biosynthetic process (GO:2000112),3979,174,91.45,+,1.9,7.56E-15
+biological_process (GO:0008150),17008,457,390.9,+,1.17,9.44E-15
+regulation of macromolecule biosynthetic process (GO:0010556),4096,177,94.14,+,1.88,1.06E-14
+RNA localization (GO:0006403),199,33,4.57,+,7.22,3.03E-14
+regulation of metabolic process (GO:0019222),6176,231,141.94,+,1.63,9.63E-14
+regulation of mRNA metabolic process (GO:1903311),130,27,2.99,+,9.04,1.63E-13
+regulation of cellular biosynthetic process (GO:0031326),4278,178,98.32,+,1.81,3.89E-13
+nuclear transport (GO:0051169),283,37,6.5,+,5.69,5.04E-13
+regulation of biosynthetic process (GO:0009889),4332,179,99.56,+,1.8,6.02E-13
+nucleocytoplasmic transport (GO:0006913),275,36,6.32,+,5.7,1.29E-12
+regulation of primary metabolic process (GO:0080090),5804,218,133.39,+,1.63,1.31E-12
+regulation of cellular metabolic process (GO:0031323),5856,218,134.59,+,1.62,3.73E-12
+regulation of mRNA processing (GO:0050684),100,23,2.3,+,10.01,4.74E-12
+regulation of nucleobase-containing compound metabolic process (GO:0019219),4091,169,94.02,+,1.8,8.10E-12
+ribosomal large subunit biogenesis (GO:0042273),65,19,1.49,+,12.72,2.50E-11
+"regulation of mRNA splicing, via spliceosome (GO:0048024)",67,19,1.54,+,12.34,4.26E-11
+ribosomal small subunit biogenesis (GO:0042274),67,19,1.54,+,12.34,4.26E-11
+regulation of RNA metabolic process (GO:0051252),3748,157,86.14,+,1.82,4.70E-11
+cellular component assembly (GO:0022607),2109,106,48.47,+,2.19,1.01E-10
+ribonucleoprotein complex localization (GO:0071166),119,23,2.73,+,8.41,1.74E-10
+regulation of translational initiation (GO:0006446),85,20,1.95,+,10.24,2.52E-10
+ribonucleoprotein complex export from nucleus (GO:0071426),116,22,2.67,+,8.25,9.31E-10
+RNA transport (GO:0050658),176,26,4.05,+,6.43,1.56E-09
+nucleic acid transport (GO:0050657),176,26,4.05,+,6.43,1.56E-09
+nucleobase-containing compound transport (GO:0015931),208,28,4.78,+,5.86,1.66E-09
+establishment of RNA localization (GO:0051236),178,26,4.09,+,6.36,2.00E-09
+transport (GO:0006810),3936,157,90.46,+,1.74,3.03E-09
+single-organism transport (GO:0044765),2132,103,49,+,2.1,3.06E-09
+spliceosomal complex assembly (GO:0000245),54,16,1.24,+,12.89,3.16E-09
+nuclear export (GO:0051168),153,24,3.52,+,6.83,3.85E-09
+RNA 3'-end processing (GO:0031123),100,20,2.3,+,8.7,4.75E-09
+negative regulation of nitrogen compound metabolic process (GO:0051172),1465,80,33.67,+,2.38,6.07E-09
+establishment of localization (GO:0051234),4065,158,93.43,+,1.69,2.06E-08
+mRNA 3'-end processing (GO:0031124),73,17,1.68,+,10.13,2.52E-08
+chromatin organization (GO:0006325),653,48,15.01,+,3.2,2.62E-08
+negative regulation of gene expression (GO:0010629),1441,77,33.12,+,2.32,5.02E-08
+RNA export from nucleus (GO:0006405),116,20,2.67,+,7.5,6.61E-08
+mRNA transport (GO:0051028),148,22,3.4,+,6.47,1.01E-07
+formation of translation preinitiation complex (GO:0001731),25,11,0.57,+,19.14,2.50E-07
+single-organism localization (GO:1902578),2361,104,54.26,+,1.92,5.43E-07
+negative regulation of RNA splicing (GO:0033119),27,11,0.62,+,17.73,5.59E-07
+mRNA splice site selection (GO:0006376),28,11,0.64,+,17.09,8.17E-07
+positive regulation of nitrogen compound metabolic process (GO:0051173),1760,84,40.45,+,2.08,1.35E-06
+ribosomal large subunit assembly (GO:0000027),23,10,0.53,+,18.92,2.22E-06
+regulation of mRNA stability (GO:0043488),144,20,3.31,+,6.04,2.77E-06
+mRNA export from nucleus (GO:0006406),101,17,2.32,+,7.32,3.50E-06
+mRNA-containing ribonucleoprotein complex export from nucleus (GO:0071427),101,17,2.32,+,7.32,3.50E-06
+termination of RNA polymerase II transcription (GO:0006369),63,14,1.45,+,9.67,3.78E-06
+negative regulation of translation (GO:0017148),134,19,3.08,+,6.17,5.49E-06
+regulation of RNA stability (GO:0043487),151,20,3.47,+,5.76,6.19E-06
+ribosomal small subunit assembly (GO:0000028),20,9,0.46,+,19.58,1.30E-05
+negative regulation of cellular amide metabolic process (GO:0034249),142,19,3.26,+,5.82,1.40E-05
+G-protein coupled receptor signaling pathway (GO:0007186),1202,3,27.63,-, < 0.2,1.69E-05
+localization (GO:0051179),4963,172,114.06,+,1.51,1.70E-05
+negative regulation of mRNA metabolic process (GO:1903312),38,11,0.87,+,12.6,1.91E-05
+"negative regulation of mRNA splicing, via spliceosome (GO:0048025)",21,9,0.48,+,18.65,1.97E-05
+negative regulation of macromolecule metabolic process (GO:0010605),2290,97,52.63,+,1.84,2.17E-05
+negative regulation of macromolecule biosynthetic process (GO:0010558),1373,68,31.56,+,2.15,2.32E-05
+"transcription, DNA-templated (GO:0006351)",2564,105,58.93,+,1.78,2.46E-05
+nucleic acid-templated transcription (GO:0097659),2565,105,58.95,+,1.78,2.51E-05
+neurological system process (GO:0050877),1271,4,29.21,-, < 0.2,2.99E-05
+"DNA-templated transcription, termination (GO:0006353)",102,16,2.34,+,6.83,3.05E-05
+system process (GO:0003008),1833,11,42.13,-,0.26,3.52E-05
+negative regulation of nucleobase-containing compound metabolic process (GO:0045934),1337,66,30.73,+,2.15,4.65E-05
+negative regulation of cellular macromolecule biosynthetic process (GO:2000113),1279,64,29.4,+,2.18,4.91E-05
+positive regulation of gene expression (GO:0010628),1663,76,38.22,+,1.99,7.52E-05
+regulation of RNA biosynthetic process (GO:2001141),3629,133,83.41,+,1.59,1.12E-04
+negative regulation of biosynthetic process (GO:0009890),1461,69,33.58,+,2.05,1.15E-04
+negative regulation of cellular biosynthetic process (GO:0031327),1434,68,32.96,+,2.06,1.27E-04
+"maturation of SSU-rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) (GO:0000462)",36,10,0.83,+,12.09,1.50E-04
+negative regulation of RNA metabolic process (GO:0051253),1198,60,27.53,+,2.18,1.51E-04
+regulation of nucleic acid-templated transcription (GO:1903506),3612,132,83.01,+,1.59,1.55E-04
+maturation of SSU-rRNA (GO:0030490),47,11,1.08,+,10.18,1.65E-04
+positive regulation of RNA splicing (GO:0033120),27,9,0.62,+,14.5,1.67E-04
+signaling (GO:0023052),5157,69,118.52,-,0.58,1.73E-04
+single organism signaling (GO:0044700),5153,69,118.43,-,0.58,1.82E-04
+positive regulation of translation (GO:0045727),102,15,2.34,+,6.4,2.16E-04
+positive regulation of cellular amide metabolic process (GO:0034250),118,16,2.71,+,5.9,2.25E-04
+tRNA metabolic process (GO:0006399),190,20,4.37,+,4.58,2.71E-04
+nitrogen compound transport (GO:0071705),502,34,11.54,+,2.95,3.09E-04
+"regulation of alternative mRNA splicing, via spliceosome (GO:0000381)",39,10,0.9,+,11.16,3.14E-04
+negative regulation of metabolic process (GO:0009892),2490,99,57.23,+,1.73,3.43E-04
+"regulation of transcription, DNA-templated (GO:0006355)",3588,130,82.46,+,1.58,3.48E-04
+sensory perception (GO:0007600),952,2,21.88,-, < 0.2,4.47E-04
+negative regulation of cellular metabolic process (GO:0031324),2308,93,53.04,+,1.75,5.35E-04
+negative regulation of mRNA processing (GO:0050686),31,9,0.71,+,12.63,5.36E-04
+signal transduction (GO:0007165),4805,64,110.43,-,0.58,5.48E-04
+chromosome organization (GO:0051276),541,35,12.43,+,2.81,5.80E-04
+positive regulation of macromolecule biosynthetic process (GO:0010557),1594,71,36.63,+,1.94,6.75E-04
+cell communication (GO:0007154),5244,73,120.52,-,0.61,7.98E-04
+regulation of chromosome organization (GO:0033044),134,16,3.08,+,5.2,1.23E-03
+positive regulation of cellular biosynthetic process (GO:0031328),1730,74,39.76,+,1.86,1.67E-03
+positive regulation of macromolecule metabolic process (GO:0010604),2822,106,64.86,+,1.63,1.73E-03
+mRNA stabilization (GO:0048255),36,9,0.83,+,10.88,1.86E-03
+DNA metabolic process (GO:0006259),788,43,18.11,+,2.37,1.99E-03
+DNA conformation change (GO:0071103),258,22,5.93,+,3.71,2.06E-03
+RNA stabilization (GO:0043489),37,9,0.85,+,10.58,2.33E-03
+positive regulation of nucleobase-containing compound metabolic process (GO:0045935),1650,71,37.92,+,1.87,2.46E-03
+regulation of protein metabolic process (GO:0051246),2530,97,58.15,+,1.67,2.64E-03
+regulation of cellular protein metabolic process (GO:0032268),2368,92,54.42,+,1.69,3.25E-03
+positive regulation of biosynthetic process (GO:0009891),1762,74,40.5,+,1.83,3.34E-03
+"positive regulation of protein localization to chromosome, telomeric region (GO:1904816)",12,6,0.28,+,21.76,3.89E-03
+organelle assembly (GO:0070925),537,33,12.34,+,2.67,4.29E-03
+chromatin modification (GO:0016569),465,30,10.69,+,2.81,5.38E-03
+positive regulation of metabolic process (GO:0009893),3021,109,69.43,+,1.57,7.91E-03
+cytoplasmic translational initiation (GO:0002183),14,6,0.32,+,18.65,9.45E-03
+"regulation of protein localization to chromosome, telomeric region (GO:1904814)",14,6,0.32,+,18.65,9.45E-03
+positive regulation of protein localization to Cajal body (GO:1904871),8,5,0.18,+,27.19,1.22E-02
+regulation of protein localization to Cajal body (GO:1904869),8,5,0.18,+,27.19,1.22E-02
+positive regulation of cellular metabolic process (GO:0031325),2835,103,65.16,+,1.58,1.27E-02
+chromatin organization (GO:0016568),289,22,6.64,+,3.31,1.30E-02
+tRNA processing (GO:0008033),125,14,2.87,+,4.87,1.53E-02
+maturation of LSU-rRNA (GO:0000470),25,7,0.57,+,12.18,1.99E-02
+positive regulation of establishment of protein localization to telomere (GO:1904851),9,5,0.21,+,24.17,2.16E-02
+positive regulation of RNA metabolic process (GO:0051254),1408,60,32.36,+,1.85,3.09E-02
+nuclear-transcribed mRNA poly(A) tail shortening (GO:0000289),27,7,0.62,+,11.28,3.28E-02
+regulation of telomere maintenance (GO:0032204),66,10,1.52,+,6.59,3.50E-02
+viral translation (GO:0019081),10,5,0.23,+,21.76,3.59E-02
+regulation of establishment of protein localization to telomere (GO:0070203),10,5,0.23,+,21.76,3.59E-02
+organelle organization (GO:0006996),2885,102,66.31,+,1.54,4.79E-02

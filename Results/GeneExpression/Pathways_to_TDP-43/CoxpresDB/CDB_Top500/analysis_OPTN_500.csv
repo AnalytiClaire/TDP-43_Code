@@ -1,0 +1,195 @@
+GO biological process complete,Homo sapiens - REFLIST (20972),upload_1 (500),upload_1 (expected),upload_1 (over/under),upload_1 (fold Enrichment),upload_1 (P-value)
+Unclassified (UNCLASSIFIED),3964,61,94.51,-,0.65,0.00E+00
+immune system process (GO:0002376),2055,157,48.99,+,3.2,9.88E-37
+immune response (GO:0006955),1130,110,26.94,+,4.08,1.39E-32
+defense response (GO:0006952),1259,110,30.02,+,3.66,1.64E-28
+response to type I interferon (GO:0034340),67,33,1.6,+,20.66,3.93E-28
+type I interferon signaling pathway (GO:0060337),63,32,1.5,+,21.3,1.32E-27
+cellular response to type I interferon (GO:0071357),63,32,1.5,+,21.3,1.32E-27
+response to cytokine (GO:0034097),750,80,17.88,+,4.47,6.34E-25
+innate immune response (GO:0045087),622,73,14.83,+,4.92,7.23E-25
+cytokine-mediated signaling pathway (GO:0019221),466,62,11.11,+,5.58,2.19E-23
+defense response to virus (GO:0051607),165,40,3.93,+,10.17,3.68E-23
+response to interferon-gamma (GO:0034341),145,37,3.46,+,10.7,5.78E-22
+response to virus (GO:0009615),250,45,5.96,+,7.55,3.36E-21
+cellular response to cytokine stimulus (GO:0071345),641,69,15.28,+,4.52,3.47E-21
+regulation of immune system process (GO:0002682),1439,105,34.31,+,3.06,8.57E-21
+interferon-gamma-mediated signaling pathway (GO:0060333),71,27,1.69,+,15.95,1.18E-19
+interspecies interaction between organisms (GO:0044419),872,78,20.79,+,3.75,1.71E-19
+"symbiosis, encompassing mutualism through parasitism (GO:0044403)",872,78,20.79,+,3.75,1.71E-19
+viral process (GO:0016032),831,76,19.81,+,3.84,1.85E-19
+multi-organism cellular process (GO:0044764),836,76,19.93,+,3.81,2.63E-19
+regulation of immune response (GO:0050776),892,78,21.27,+,3.67,6.63E-19
+cellular response to interferon-gamma (GO:0071346),124,32,2.96,+,10.82,9.03E-19
+positive regulation of immune system process (GO:0002684),909,77,21.67,+,3.55,8.33E-18
+response to other organism (GO:0051707),869,75,20.72,+,3.62,1.05E-17
+response to external biotic stimulus (GO:0043207),869,75,20.72,+,3.62,1.05E-17
+immune effector process (GO:0002252),500,56,11.92,+,4.7,2.44E-17
+cellular response to organic substance (GO:0071310),1940,117,46.25,+,2.53,5.68E-17
+response to biotic stimulus (GO:0009607),902,75,21.5,+,3.49,8.62E-17
+response to stress (GO:0006950),3364,164,80.2,+,2.04,1.80E-16
+cellular response to chemical stimulus (GO:0070887),2378,130,56.69,+,2.29,8.21E-16
+response to organic substance (GO:0010033),2658,138,63.37,+,2.18,3.55E-15
+multi-organism process (GO:0051704),2297,124,54.76,+,2.26,2.10E-14
+regulation of defense response (GO:0031347),774,65,18.45,+,3.52,2.68E-14
+regulation of innate immune response (GO:0045088),363,43,8.65,+,4.97,1.79E-13
+response to stimulus (GO:0050896),7675,275,182.98,+,1.5,3.94E-13
+positive regulation of biological process (GO:0048518),5214,208,124.31,+,1.67,1.59E-12
+defense response to other organism (GO:0098542),502,49,11.97,+,4.09,1.84E-12
+negative regulation of biological process (GO:0048519),4571,188,108.98,+,1.73,6.59E-12
+regulation of cytokine production (GO:0001817),584,52,13.92,+,3.73,8.28E-12
+regulation of response to stimulus (GO:0048583),3713,162,88.52,+,1.83,1.29E-11
+positive regulation of defense response (GO:0031349),370,40,8.82,+,4.53,4.72E-11
+positive regulation of immune response (GO:0050778),596,51,14.21,+,3.59,7.35E-11
+regulation of response to stress (GO:0080134),1384,82,33,+,2.49,3.13E-10
+response to external stimulus (GO:0009605),1889,100,45.04,+,2.22,3.20E-10
+negative regulation of cellular process (GO:0048523),4232,171,100.9,+,1.69,1.58E-09
+regulation of viral process (GO:0050792),355,36,8.46,+,4.25,6.99E-09
+"regulation of symbiosis, encompassing mutualism through parasitism (GO:0043903)",380,37,9.06,+,4.08,1.08E-08
+response to chemical (GO:0042221),3953,160,94.24,+,1.7,1.32E-08
+cellular response to stimulus (GO:0051716),6206,222,147.96,+,1.5,1.52E-08
+negative regulation of viral genome replication (GO:0045071),50,15,1.19,+,12.58,2.42E-08
+negative regulation of viral process (GO:0048525),106,20,2.53,+,7.91,2.60E-08
+signal transduction (GO:0007165),4805,182,114.56,+,1.59,5.92E-08
+cell surface receptor signaling pathway (GO:0007166),2186,104,52.12,+,2,6.00E-08
+negative regulation of viral life cycle (GO:1903901),87,18,2.07,+,8.68,7.23E-08
+regulation of cell activation (GO:0050865),513,42,12.23,+,3.43,7.62E-08
+antigen processing and presentation of endogenous peptide antigen (GO:0002483),16,10,0.38,+,26.21,9.70E-08
+regulation of leukocyte activation (GO:0002694),478,40,11.4,+,3.51,1.28E-07
+positive regulation of cellular process (GO:0048522),4713,178,112.36,+,1.58,1.53E-07
+regulation of lymphocyte activation (GO:0051249),419,37,9.99,+,3.7,1.72E-07
+inflammatory response (GO:0006954),483,40,11.52,+,3.47,1.74E-07
+positive regulation of innate immune response (GO:0045089),249,28,5.94,+,4.72,2.54E-07
+cell communication (GO:0007154),5244,191,125.02,+,1.53,4.28E-07
+antigen processing and presentation of endogenous antigen (GO:0019883),19,10,0.45,+,22.08,5.08E-07
+regulation of type I interferon production (GO:0032479),112,19,2.67,+,7.12,5.36E-07
+negative regulation of multi-organism process (GO:0043901),156,22,3.72,+,5.92,5.46E-07
+positive regulation of cytokine production (GO:0001819),379,34,9.04,+,3.76,7.64E-07
+regulation of leukocyte cell-cell adhesion (GO:1903037),320,31,7.63,+,4.06,8.46E-07
+biological regulation (GO:0065007),11561,345,275.63,+,1.25,1.29E-06
+positive regulation of response to stimulus (GO:0048584),1964,93,46.82,+,1.99,1.30E-06
+regulation of viral genome replication (GO:0045069),79,16,1.88,+,8.49,1.41E-06
+antigen processing and presentation of endogenous peptide antigen via MHC class I (GO:0019885),15,9,0.36,+,25.17,1.48E-06
+leukocyte activation (GO:0045321),433,36,10.32,+,3.49,1.63E-06
+cell activation (GO:0001775),595,43,14.19,+,3.03,2.01E-06
+single organism signaling (GO:0044700),5153,185,122.85,+,1.51,3.74E-06
+signaling (GO:0023052),5157,185,122.95,+,1.5,3.99E-06
+regulation of multi-organism process (GO:0043900),475,37,11.32,+,3.27,5.27E-06
+regulation of T cell activation (GO:0050863),306,29,7.3,+,3.98,5.60E-06
+negative regulation of response to stimulus (GO:0048585),1400,72,33.38,+,2.16,7.54E-06
+regulation of response to cytokine stimulus (GO:0060759),148,20,3.53,+,5.67,8.27E-06
+regulation of cell-cell adhesion (GO:0022407),395,33,9.42,+,3.5,8.43E-06
+immune system development (GO:0002520),615,42,14.66,+,2.86,1.69E-05
+regulation of biological process (GO:0050789),10933,326,260.66,+,1.25,1.93E-05
+regulation of viral life cycle (GO:1903900),174,21,4.15,+,5.06,2.26E-05
+response to lipopolysaccharide (GO:0032496),327,29,7.8,+,3.72,2.43E-05
+positive regulation of cell activation (GO:0050867),327,29,7.8,+,3.72,2.43E-05
+hemopoiesis (GO:0030097),527,38,12.56,+,3.02,2.46E-05
+regulation of cytokine-mediated signaling pathway (GO:0001959),142,19,3.39,+,5.61,2.53E-05
+"antigen processing and presentation of exogenous peptide antigen via MHC class I, TAP-independent (GO:0002480)",9,7,0.21,+,32.62,2.75E-05
+hematopoietic or lymphoid organ development (GO:0048534),578,40,13.78,+,2.9,2.90E-05
+regulation of leukocyte proliferation (GO:0070663),213,23,5.08,+,4.53,3.15E-05
+regulation of cell death (GO:0010941),1544,75,36.81,+,2.04,3.71E-05
+regulation of apoptotic process (GO:0042981),1431,71,34.12,+,2.08,4.37E-05
+negative regulation of type I interferon production (GO:0032480),40,11,0.95,+,11.53,4.70E-05
+response to bacterium (GO:0009617),544,38,12.97,+,2.93,5.68E-05
+regulation of immune effector process (GO:0002697),428,33,10.2,+,3.23,5.80E-05
+response to molecule of bacterial origin (GO:0002237),341,29,8.13,+,3.57,6.04E-05
+regulation of programmed cell death (GO:0043067),1445,71,34.45,+,2.06,6.46E-05
+leukocyte cell-cell adhesion (GO:0007159),265,25,6.32,+,3.96,9.30E-05
+negative regulation of immune system process (GO:0002683),371,30,8.85,+,3.39,1.01E-04
+response to lipid (GO:0033993),897,51,21.39,+,2.38,1.27E-04
+regulation of multicellular organismal process (GO:0051239),2679,109,63.87,+,1.71,1.30E-04
+positive regulation of lymphocyte activation (GO:0051251),292,26,6.96,+,3.73,1.49E-04
+lymphocyte activation (GO:0046649),357,29,8.51,+,3.41,1.61E-04
+pattern recognition receptor signaling pathway (GO:0002221),111,16,2.65,+,6.05,1.62E-04
+single-organism cellular process (GO:0044763),11106,326,264.78,+,1.23,1.64E-04
+positive regulation of leukocyte activation (GO:0002696),318,27,7.58,+,3.56,2.07E-04
+activation of immune response (GO:0002253),453,33,10.8,+,3.06,2.19E-04
+regulation of signal transduction (GO:0009966),2747,110,65.49,+,1.68,2.55E-04
+positive regulation of leukocyte cell-cell adhesion (GO:1903039),221,22,5.27,+,4.18,2.82E-04
+response to interferon-alpha (GO:0035455),20,8,0.48,+,16.78,3.43E-04
+regulation of cell adhesion (GO:0030155),661,41,15.76,+,2.6,3.67E-04
+positive regulation of cell adhesion (GO:0045785),394,30,9.39,+,3.19,3.71E-04
+activation of innate immune response (GO:0002218),206,21,4.91,+,4.28,3.90E-04
+positive regulation of multicellular organismal process (GO:0051240),1458,69,34.76,+,1.99,4.55E-04
+cell death (GO:0008219),965,52,23.01,+,2.26,4.94E-04
+positive regulation of metabolic process (GO:0009893),3021,117,72.02,+,1.62,4.96E-04
+cellular response to oxygen-containing compound (GO:1901701),855,48,20.38,+,2.35,5.02E-04
+positive regulation of macromolecule metabolic process (GO:0010604),2822,111,67.28,+,1.65,5.51E-04
+positive regulation of cell-cell adhesion (GO:0022409),251,23,5.98,+,3.84,6.00E-04
+cellular response to lipid (GO:0071396),474,33,11.3,+,2.92,6.18E-04
+positive regulation of T cell activation (GO:0050870),212,21,5.05,+,4.15,6.26E-04
+programmed cell death (GO:0012501),921,50,21.96,+,2.28,7.23E-04
+immune response-regulating signaling pathway (GO:0002764),433,31,10.32,+,3,8.48E-04
+regulation of cell killing (GO:0031341),66,12,1.57,+,7.63,8.50E-04
+innate immune response-activating signal transduction (GO:0002758),197,20,4.7,+,4.26,8.68E-04
+apoptotic process (GO:0006915),899,49,21.43,+,2.29,8.74E-04
+adaptive immune response (GO:0002250),299,25,7.13,+,3.51,9.06E-04
+antigen processing and presentation of peptide antigen via MHC class I (GO:0002474),95,14,2.26,+,6.18,9.54E-04
+regulation of response to external stimulus (GO:0032101),821,46,19.57,+,2.35,1.02E-03
+regulation of cellular process (GO:0050794),10404,306,248.05,+,1.23,1.03E-03
+regulation of leukocyte mediated cytotoxicity (GO:0001910),55,11,1.31,+,8.39,1.14E-03
+regulation of lymphocyte proliferation (GO:0050670),202,20,4.82,+,4.15,1.29E-03
+regulation of mononuclear cell proliferation (GO:0032944),204,20,4.86,+,4.11,1.50E-03
+regulation of molecular function (GO:0065009),2882,111,68.71,+,1.62,1.61E-03
+antigen processing and presentation of endogenous peptide antigen via MHC class I via ER pathway (GO:0002484),10,6,0.24,+,25.17,1.68E-03
+response to oxygen-containing compound (GO:1901700),1484,68,35.38,+,1.92,1.88E-03
+immune response-activating signal transduction (GO:0002757),402,29,9.58,+,3.03,1.89E-03
+single-organism process (GO:0044699),12433,351,296.42,+,1.18,2.24E-03
+intracellular receptor signaling pathway (GO:0030522),171,18,4.08,+,4.42,2.24E-03
+regulation of T cell proliferation (GO:0042129),154,17,3.67,+,4.63,2.51E-03
+positive regulation of lymphocyte mediated immunity (GO:0002708),75,12,1.79,+,6.71,3.25E-03
+antigen processing and presentation (GO:0019882),216,20,5.15,+,3.88,3.62E-03
+positive regulation of cellular metabolic process (GO:0031325),2835,108,67.59,+,1.6,4.24E-03
+leukocyte differentiation (GO:0002521),304,24,7.25,+,3.31,4.46E-03
+regulation of lymphocyte differentiation (GO:0045619),144,16,3.43,+,4.66,5.12E-03
+cellular process (GO:0009987),14523,395,346.25,+,1.14,5.47E-03
+positive regulation of cell killing (GO:0031343),40,9,0.95,+,9.44,5.99E-03
+negative regulation of innate immune response (GO:0045824),40,9,0.95,+,9.44,5.99E-03
+regulation of adaptive immune response (GO:0002819),129,15,3.08,+,4.88,6.58E-03
+T cell aggregation (GO:0070489),227,20,5.41,+,3.7,7.71E-03
+T cell activation (GO:0042110),227,20,5.41,+,3.7,7.71E-03
+regulation of protein metabolic process (GO:0051246),2530,98,60.32,+,1.62,8.01E-03
+regulation of leukocyte differentiation (GO:1902105),249,21,5.94,+,3.54,8.21E-03
+lymphocyte aggregation (GO:0071593),229,20,5.46,+,3.66,8.79E-03
+regulation of cellular protein metabolic process (GO:0032268),2368,93,56.46,+,1.65,9.09E-03
+regulation of inflammatory response (GO:0050727),317,24,7.56,+,3.18,9.18E-03
+regulation of signaling (GO:0023051),3096,114,73.81,+,1.54,9.99E-03
+regulation of hemopoiesis (GO:1903706),320,24,7.63,+,3.15,1.08E-02
+cellular response to external stimulus (GO:0071496),278,22,6.63,+,3.32,1.27E-02
+regulation of phosphorylation (GO:0042325),1411,63,33.64,+,1.87,1.29E-02
+leukocyte aggregation (GO:0070486),235,20,5.6,+,3.57,1.30E-02
+positive regulation of sequence-specific DNA binding transcription factor activity (GO:0051091),235,20,5.6,+,3.57,1.30E-02
+regulation of cell communication (GO:0010646),3048,112,72.67,+,1.54,1.41E-02
+cytoplasmic pattern recognition receptor signaling pathway (GO:0002753),33,8,0.79,+,10.17,1.44E-02
+positive regulation of natural killer cell differentiation (GO:0032825),8,5,0.19,+,26.21,1.46E-02
+positive regulation of inflammatory response (GO:0050729),120,14,2.86,+,4.89,1.47E-02
+toll-like receptor signaling pathway (GO:0002224),87,12,2.07,+,5.79,1.50E-02
+regulation of interferon-beta production (GO:0032648),45,9,1.07,+,8.39,1.56E-02
+regulation of lymphocyte mediated immunity (GO:0002706),121,14,2.88,+,4.85,1.61E-02
+negative regulation of signal transduction (GO:0009968),1118,53,26.65,+,1.99,1.75E-02
+response to interferon-beta (GO:0035456),24,7,0.57,+,12.23,1.94E-02
+negative regulation of cytokine production (GO:0001818),221,19,5.27,+,3.61,2.04E-02
+positive regulation of leukocyte mediated cytotoxicity (GO:0001912),35,8,0.83,+,9.59,2.21E-02
+negative regulation of cell death (GO:0060548),920,46,21.93,+,2.1,2.22E-02
+negative regulation of immune response (GO:0050777),125,14,2.98,+,4.7,2.34E-02
+positive regulation of leukocyte mediated immunity (GO:0002705),91,12,2.17,+,5.53,2.36E-02
+positive regulation of leukocyte proliferation (GO:0070665),144,15,3.43,+,4.37,2.48E-02
+regulation of protein phosphorylation (GO:0001932),1316,59,31.38,+,1.88,2.53E-02
+regulation of autophagy (GO:0010506),268,21,6.39,+,3.29,2.55E-02
+antigen processing and presentation of peptide antigen via MHC class Ib (GO:0002428),9,5,0.21,+,23.3,2.58E-02
+negative regulation of signaling (GO:0023057),1225,56,29.21,+,1.92,2.62E-02
+response to inorganic substance (GO:0010035),511,31,12.18,+,2.54,2.62E-02
+positive regulation of immune effector process (GO:0002699),165,16,3.93,+,4.07,2.88E-02
+positive regulation of response to external stimulus (GO:0032103),272,21,6.48,+,3.24,3.19E-02
+regulation of catalytic activity (GO:0050790),2375,91,56.62,+,1.61,3.34E-02
+positive regulation of intracellular signal transduction (GO:1902533),907,45,21.62,+,2.08,3.48E-02
+positive regulation of cellular protein metabolic process (GO:0032270),1426,62,34,+,1.82,3.64E-02
+positive regulation of adaptive immune response (GO:0002821),79,11,1.88,+,5.84,3.67E-02
+maternal process involved in female pregnancy (GO:0060135),65,10,1.55,+,6.45,4.22E-02
+negative regulation of cell proliferation (GO:0008285),661,36,15.76,+,2.28,4.65E-02
+negative regulation of cell communication (GO:0010648),1221,55,29.11,+,1.89,4.92E-02
+JAK-STAT cascade (GO:0007259),52,9,1.24,+,7.26,4.94E-02
+regulation of interleukin-12 production (GO:0032655),52,9,1.24,+,7.26,4.94E-02
+STAT cascade (GO:0097696),52,9,1.24,+,7.26,4.94E-02

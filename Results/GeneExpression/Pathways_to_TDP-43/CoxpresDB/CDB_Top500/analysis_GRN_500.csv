@@ -1,0 +1,266 @@
+GO biological process complete,Homo sapiens - REFLIST (20972),upload_1 (519),upload_1 (expected),upload_1 (over/under),upload_1 (fold Enrichment),upload_1 (P-value)
+Unclassified (UNCLASSIFIED),3964,28,98.1,-,0.29,0.00E+00
+immune system process (GO:0002376),2055,150,50.86,+,2.95,2.06E-30
+defense response (GO:0006952),1259,108,31.16,+,3.47,9.14E-26
+regulation of immune response (GO:0050776),892,88,22.07,+,3.99,3.03E-24
+immune response (GO:0006955),1130,99,27.96,+,3.54,6.83E-24
+regulation of immune system process (GO:0002682),1439,112,35.61,+,3.15,2.24E-23
+response to stimulus (GO:0050896),7675,306,189.94,+,1.61,3.54E-21
+single-organism process (GO:0044699),12433,412,307.68,+,1.34,1.39E-18
+response to stress (GO:0006950),3364,173,83.25,+,2.08,2.48E-18
+positive regulation of immune system process (GO:0002684),909,75,22.5,+,3.33,1.20E-15
+single-organism metabolic process (GO:0044710),3418,168,84.59,+,1.99,1.42E-15
+single-organism cellular process (GO:0044763),11106,375,274.84,+,1.36,1.48E-15
+biological_process (GO:0008150),17008,491,420.9,+,1.17,2.11E-15
+innate immune response (GO:0045087),622,60,15.39,+,3.9,6.42E-15
+positive regulation of immune response (GO:0050778),596,58,14.75,+,3.93,1.73E-14
+signal transduction (GO:0007165),4805,206,118.91,+,1.73,8.67E-14
+cell surface receptor signaling pathway (GO:0007166),2186,121,54.1,+,2.24,1.97E-13
+nucleic acid metabolic process (GO:0090304),3986,32,98.64,-,0.32,2.76E-13
+regulation of response to stimulus (GO:0048583),3713,171,91.89,+,1.86,3.71E-13
+regulation of defense response (GO:0031347),774,64,19.15,+,3.34,6.67E-13
+cellular response to chemical stimulus (GO:0070887),2378,126,58.85,+,2.14,1.02E-12
+single organism signaling (GO:0044700),5153,213,127.52,+,1.67,1.05E-12
+signaling (GO:0023052),5157,213,127.62,+,1.67,1.15E-12
+positive regulation of response to stimulus (GO:0048584),1964,111,48.6,+,2.28,1.44E-12
+regulation of innate immune response (GO:0045088),363,42,8.98,+,4.68,3.56E-12
+RNA metabolic process (GO:0016070),3463,26,85.7,-,0.3,6.11E-12
+cell communication (GO:0007154),5244,213,129.77,+,1.64,7.66E-12
+activation of immune response (GO:0002253),453,46,11.21,+,4.1,1.55E-11
+response to organic substance (GO:0010033),2658,131,65.78,+,1.99,5.64E-11
+immune response-regulating signaling pathway (GO:0002764),433,44,10.72,+,4.11,6.38E-11
+cellular response to stimulus (GO:0051716),6206,237,153.58,+,1.54,6.99E-11
+localization (GO:0051179),4963,201,122.82,+,1.64,1.32E-10
+vesicle-mediated transport (GO:0016192),1288,81,31.87,+,2.54,1.58E-10
+positive regulation of cytokine production (GO:0001819),379,40,9.38,+,4.26,3.42E-10
+gene expression (GO:0010467),3785,35,93.67,-,0.37,5.42E-10
+regulation of cytokine production (GO:0001817),584,50,14.45,+,3.46,5.66E-10
+regulation of response to stress (GO:0080134),1384,82,34.25,+,2.39,2.46E-09
+response to chemical (GO:0042221),3953,167,97.83,+,1.71,2.62E-09
+positive regulation of defense response (GO:0031349),370,38,9.16,+,4.15,3.41E-09
+response to external stimulus (GO:0009605),1889,100,46.75,+,2.14,3.47E-09
+regulation of immune effector process (GO:0002697),428,41,10.59,+,3.87,3.55E-09
+positive regulation of innate immune response (GO:0045089),249,31,6.16,+,5.03,4.41E-09
+RNA biosynthetic process (GO:0032774),2688,19,66.52,-,0.29,4.65E-09
+endocytosis (GO:0006897),539,46,13.34,+,3.45,6.69E-09
+cellular response to organic substance (GO:0071310),1940,101,48.01,+,2.1,6.95E-09
+establishment of localization (GO:0051234),4065,169,100.6,+,1.68,6.97E-09
+activation of innate immune response (GO:0002218),206,28,5.1,+,5.49,7.84E-09
+inflammatory response (GO:0006954),483,43,11.95,+,3.6,1.00E-08
+transport (GO:0006810),3936,164,97.41,+,1.68,1.55E-08
+antigen processing and presentation (GO:0019882),216,28,5.35,+,5.24,2.36E-08
+regulation of multicellular organismal process (GO:0051239),2679,124,66.3,+,1.87,2.95E-08
+immune response-activating signal transduction (GO:0002757),402,38,9.95,+,3.82,3.87E-08
+nucleic acid-templated transcription (GO:0097659),2565,19,63.48,-,0.3,5.56E-08
+"transcription, DNA-templated (GO:0006351)",2564,19,63.45,-,0.3,5.67E-08
+regulation of cell activation (GO:0050865),513,43,12.7,+,3.39,6.82E-08
+regulation of tumor necrosis factor superfamily cytokine production (GO:1903555),109,20,2.7,+,7.41,8.29E-08
+pattern recognition receptor signaling pathway (GO:0002221),111,20,2.75,+,7.28,1.14E-07
+regulation of biological quality (GO:0065008),3542,149,87.65,+,1.7,1.33E-07
+antigen processing and presentation of exogenous antigen (GO:0019884),170,24,4.21,+,5.7,1.56E-07
+regulation of leukocyte activation (GO:0002694),478,40,11.83,+,3.38,3.94E-07
+regulation of tumor necrosis factor production (GO:0032680),106,19,2.62,+,7.24,4.03E-07
+antigen processing and presentation of exogenous peptide antigen (GO:0002478),163,23,4.03,+,5.7,4.15E-07
+antigen processing and presentation of peptide antigen (GO:0048002),179,24,4.43,+,5.42,4.39E-07
+innate immune response-activating signal transduction (GO:0002758),197,25,4.88,+,5.13,5.42E-07
+macromolecule biosynthetic process (GO:0009059),3729,41,92.28,-,0.44,6.78E-07
+positive regulation of tumor necrosis factor superfamily cytokine production (GO:1903557),62,15,1.53,+,9.78,7.88E-07
+cellular macromolecule biosynthetic process (GO:0034645),3648,40,90.28,-,0.44,1.05E-06
+response to other organism (GO:0051707),869,56,21.51,+,2.6,1.07E-06
+response to external biotic stimulus (GO:0043207),869,56,21.51,+,2.6,1.07E-06
+toll-like receptor signaling pathway (GO:0002224),87,17,2.15,+,7.9,1.15E-06
+nucleobase-containing compound metabolic process (GO:0006139),4540,57,112.35,-,0.51,1.29E-06
+immune effector process (GO:0002252),500,40,12.37,+,3.23,1.45E-06
+carbohydrate derivative catabolic process (GO:1901136),174,23,4.31,+,5.34,1.45E-06
+positive regulation of biological process (GO:0048518),5214,194,129.03,+,1.5,1.53E-06
+defense response to other organism (GO:0098542),502,40,12.42,+,3.22,1.63E-06
+single-organism catabolic process (GO:0044712),758,51,18.76,+,2.72,1.79E-06
+regulation of leukocyte mediated immunity (GO:0002703),162,22,4.01,+,5.49,2.21E-06
+biological regulation (GO:0065007),11561,355,286.1,+,1.24,3.68E-06
+response to cytokine (GO:0034097),750,50,18.56,+,2.69,3.69E-06
+response to biotic stimulus (GO:0009607),902,56,22.32,+,2.51,4.11E-06
+carbohydrate derivative metabolic process (GO:1901135),1060,62,26.23,+,2.36,4.52E-06
+single-organism localization (GO:1902578),2361,107,58.43,+,1.83,4.61E-06
+response to bacterium (GO:0009617),544,41,13.46,+,3.05,4.82E-06
+cellular process (GO:0009987),14523,421,359.4,+,1.17,5.23E-06
+positive regulation of tumor necrosis factor production (GO:0032760),60,14,1.48,+,9.43,5.26E-06
+response to oxygen-containing compound (GO:1901700),1484,77,36.72,+,2.1,6.83E-06
+pH reduction (GO:0045851),41,12,1.01,+,11.83,7.28E-06
+positive regulation of multicellular organismal process (GO:0051240),1458,76,36.08,+,2.11,7.33E-06
+regulation of localization (GO:0032879),2512,111,62.17,+,1.79,8.46E-06
+cellular nitrogen compound biosynthetic process (GO:0044271),3521,40,87.14,-,0.46,8.66E-06
+receptor-mediated endocytosis (GO:0006898),244,26,6.04,+,4.31,8.69E-06
+response to wounding (GO:0009611),579,42,14.33,+,2.93,8.99E-06
+regulation of dendritic cell differentiation (GO:2001198),12,8,0.3,+,26.94,9.10E-06
+liposaccharide metabolic process (GO:1903509),117,18,2.9,+,6.22,1.40E-05
+cellular aromatic compound metabolic process (GO:0006725),4727,64,116.98,-,0.55,1.68E-05
+transferrin transport (GO:0033572),35,11,0.87,+,12.7,1.77E-05
+lipid metabolic process (GO:0006629),1182,65,29.25,+,2.22,1.87E-05
+cytokine-mediated signaling pathway (GO:0019221),466,36,11.53,+,3.12,2.98E-05
+adaptive immune response (GO:0002250),299,28,7.4,+,3.78,3.23E-05
+catabolic process (GO:0009056),1714,83,42.42,+,1.96,3.29E-05
+organic substance catabolic process (GO:1901575),1605,79,39.72,+,1.99,4.13E-05
+iron ion transport (GO:0006826),59,13,1.46,+,8.9,4.20E-05
+transition metal ion transport (GO:0000041),111,17,2.75,+,6.19,4.22E-05
+interferon-gamma-mediated signaling pathway (GO:0060333),71,14,1.76,+,7.97,4.34E-05
+macromolecule localization (GO:0033036),2157,97,53.38,+,1.82,5.35E-05
+positive regulation of cell activation (GO:0050867),327,29,8.09,+,3.58,5.55E-05
+homeostatic process (GO:0042592),1414,72,34.99,+,2.06,5.66E-05
+cell activation (GO:0001775),595,41,14.72,+,2.78,5.99E-05
+regulation of biological process (GO:0050789),10933,335,270.56,+,1.24,6.05E-05
+glycolipid metabolic process (GO:0006664),114,17,2.82,+,6.03,6.21E-05
+response to interferon-gamma (GO:0034341),145,19,3.59,+,5.29,6.42E-05
+intracellular pH reduction (GO:0051452),40,11,0.99,+,11.11,6.89E-05
+ferric iron transport (GO:0015682),40,11,0.99,+,11.11,6.89E-05
+trivalent inorganic cation transport (GO:0072512),40,11,0.99,+,11.11,6.89E-05
+leukocyte migration (GO:0050900),273,26,6.76,+,3.85,8.34E-05
+positive regulation of immune effector process (GO:0002699),165,20,4.08,+,4.9,9.33E-05
+positive regulation of leukocyte activation (GO:0002696),318,28,7.87,+,3.56,1.18E-04
+lysosome organization (GO:0007040),53,12,1.31,+,9.15,1.21E-04
+lytic vacuole organization (GO:0080171),53,12,1.31,+,9.15,1.21E-04
+single-organism transport (GO:0044765),2132,95,52.76,+,1.8,1.24E-04
+heterocycle metabolic process (GO:0046483),4677,66,115.74,-,0.57,1.43E-04
+antigen processing and presentation of exogenous peptide antigen via MHC class I (GO:0042590),66,13,1.63,+,7.96,1.54E-04
+cellular response to cytokine stimulus (GO:0071345),641,42,15.86,+,2.65,1.59E-04
+wound healing (GO:0042060),478,35,11.83,+,2.96,1.83E-04
+cellular homeostasis (GO:0019725),750,46,18.56,+,2.48,2.29E-04
+negative regulation of immune system process (GO:0002683),371,30,9.18,+,3.27,2.31E-04
+regulation of lymphocyte activation (GO:0051249),419,32,10.37,+,3.09,2.91E-04
+regulation of programmed cell death (GO:0043067),1445,71,35.76,+,1.99,2.97E-04
+glycosphingolipid metabolic process (GO:0006687),70,13,1.73,+,7.5,3.03E-04
+response to peptide (GO:1901652),443,33,10.96,+,3.01,3.15E-04
+regulation of developmental process (GO:0050793),2338,100,57.86,+,1.73,3.59E-04
+regulation of apoptotic process (GO:0042981),1431,70,35.41,+,1.98,4.45E-04
+protein localization (GO:0008104),1790,82,44.3,+,1.85,4.62E-04
+regulation of response to external stimulus (GO:0032101),821,48,20.32,+,2.36,4.70E-04
+phagosome maturation (GO:0090382),38,10,0.94,+,10.63,4.91E-04
+regulation of vesicle-mediated transport (GO:0060627),452,33,11.19,+,2.95,4.99E-04
+regulation of lymphocyte proliferation (GO:0050670),202,21,5,+,4.2,5.27E-04
+defense response to bacterium (GO:0042742),240,23,5.94,+,3.87,5.31E-04
+carbohydrate metabolic process (GO:0005975),479,34,11.85,+,2.87,6.04E-04
+regulation of mononuclear cell proliferation (GO:0032944),204,21,5.05,+,4.16,6.20E-04
+cell adhesion (GO:0007155),1301,65,32.2,+,2.02,6.67E-04
+nucleobase-containing compound biosynthetic process (GO:0034654),3027,36,74.91,-,0.48,6.92E-04
+biological adhesion (GO:0022610),1305,65,32.3,+,2.01,7.44E-04
+regulation of cell proliferation (GO:0042127),1570,74,38.85,+,1.9,7.63E-04
+regulation of catalytic activity (GO:0050790),2375,100,58.77,+,1.7,7.65E-04
+regulation of cell death (GO:0010941),1544,73,38.21,+,1.91,8.38E-04
+regulation of endocytosis (GO:0030100),208,21,5.15,+,4.08,8.52E-04
+platelet degranulation (GO:0002576),106,15,2.62,+,5.72,9.16E-04
+regulation of leukocyte differentiation (GO:1902105),249,23,6.16,+,3.73,1.01E-03
+organic substance transport (GO:0071702),2011,88,49.77,+,1.77,1.05E-03
+cell migration (GO:0016477),791,46,19.58,+,2.35,1.05E-03
+establishment of protein localization (GO:0045184),1377,67,34.08,+,1.97,1.08E-03
+"antigen processing and presentation of exogenous peptide antigen via MHC class I, TAP-independent (GO:0002480)",9,6,0.22,+,26.94,1.13E-03
+locomotion (GO:0040011),1093,57,27.05,+,2.11,1.16E-03
+organonitrogen compound catabolic process (GO:1901565),356,28,8.81,+,3.18,1.17E-03
+regulation of leukocyte proliferation (GO:0070663),213,21,5.27,+,3.98,1.25E-03
+negative regulation of immune response (GO:0050777),125,16,3.09,+,5.17,1.32E-03
+response to peptide hormone (GO:0043434),403,30,9.97,+,3.01,1.34E-03
+membrane lipid metabolic process (GO:0006643),195,20,4.83,+,4.14,1.34E-03
+positive regulation of chemokine production (GO:0032722),54,11,1.34,+,8.23,1.37E-03
+regulation of transport (GO:0051049),1838,82,45.49,+,1.8,1.39E-03
+regulation of interleukin-6 production (GO:0032675),110,15,2.72,+,5.51,1.46E-03
+antigen processing and presentation of peptide antigen via MHC class I (GO:0002474),95,14,2.35,+,5.95,1.50E-03
+cell chemotaxis (GO:0060326),178,19,4.41,+,4.31,1.50E-03
+regulation of leukocyte degranulation (GO:0043300),43,10,1.06,+,9.4,1.52E-03
+ATP hydrolysis coupled proton transport (GO:0015991),33,9,0.82,+,11.02,1.68E-03
+"energy coupled proton transmembrane transport, against electrochemical gradient (GO:0015988)",33,9,0.82,+,11.02,1.68E-03
+vacuolar acidification (GO:0007035),16,7,0.4,+,17.68,1.72E-03
+detection of other organism (GO:0098543),16,7,0.4,+,17.68,1.72E-03
+regulation of hemopoiesis (GO:1903706),320,26,7.92,+,3.28,1.79E-03
+cellular lipid metabolic process (GO:0044255),942,51,23.31,+,2.19,1.84E-03
+regulation of molecular function (GO:0065009),2882,114,71.32,+,1.6,1.98E-03
+antigen processing and presentation of peptide or polysaccharide antigen via MHC class II (GO:0002504),98,14,2.43,+,5.77,2.16E-03
+aromatic compound biosynthetic process (GO:0019438),3097,39,76.64,-,0.51,2.66E-03
+regulation of cell adhesion (GO:0030155),661,40,16.36,+,2.45,2.68E-03
+positive regulation of cell adhesion (GO:0045785),394,29,9.75,+,2.97,2.70E-03
+positive regulation of interleukin-6 production (GO:0032755),71,12,1.76,+,6.83,2.72E-03
+response to organonitrogen compound (GO:0010243),823,46,20.37,+,2.26,3.15E-03
+heterocycle biosynthetic process (GO:0018130),3085,39,76.35,-,0.51,3.16E-03
+positive regulation of cellular process (GO:0048522),4713,166,116.63,+,1.42,3.30E-03
+regulated exocytosis (GO:0045055),227,21,5.62,+,3.74,3.48E-03
+organic cyclic compound metabolic process (GO:1901360),4918,76,121.71,-,0.62,3.55E-03
+positive regulation of lymphocyte activation (GO:0051251),292,24,7.23,+,3.32,4.28E-03
+ATP hydrolysis coupled transmembrane transport (GO:0090662),37,9,0.92,+,9.83,4.30E-03
+phagosome acidification (GO:0090383),27,8,0.67,+,11.97,4.32E-03
+N-acetylneuraminate catabolic process (GO:0019262),6,5,0.15,+,33.67,4.33E-03
+glycosaminoglycan catabolic process (GO:0006027),61,11,1.51,+,7.29,4.50E-03
+RNA processing (GO:0006396),871,3,21.55,-, < 0.2,4.92E-03
+antigen processing and presentation of endogenous antigen (GO:0019883),19,7,0.47,+,14.89,5.36E-03
+positive regulation of signal transduction (GO:0009967),1414,66,34.99,+,1.89,5.79E-03
+positive regulation of transport (GO:0051050),952,50,23.56,+,2.12,5.85E-03
+oligosaccharide catabolic process (GO:0009313),12,6,0.3,+,20.2,5.97E-03
+"antigen processing and presentation of exogenous peptide antigen via MHC class I, TAP-dependent (GO:0002479)",63,11,1.56,+,7.06,6.13E-03
+regulation of leukocyte cell-cell adhesion (GO:1903037),320,25,7.92,+,3.16,6.17E-03
+regulation of secretion (GO:0051046),711,41,17.6,+,2.33,6.43E-03
+cellular response to interferon-gamma (GO:0071346),124,15,3.07,+,4.89,6.44E-03
+localization of cell (GO:0051674),873,47,21.6,+,2.18,6.58E-03
+cell motility (GO:0048870),873,47,21.6,+,2.18,6.58E-03
+oxidation-reduction process (GO:0055114),957,50,23.68,+,2.11,6.78E-03
+small molecule metabolic process (GO:0044281),1668,74,41.28,+,1.79,7.53E-03
+regulation of protein metabolic process (GO:0051246),2530,101,62.61,+,1.61,7.77E-03
+cellular response to oxygen-containing compound (GO:1901701),855,46,21.16,+,2.17,8.82E-03
+negative regulation of biological process (GO:0048519),4571,160,113.12,+,1.41,8.97E-03
+positive regulation of leukocyte cell-cell adhesion (GO:1903039),221,20,5.47,+,3.66,9.10E-03
+negative regulation of natural killer cell mediated cytotoxicity (GO:0045953),13,6,0.32,+,18.65,9.46E-03
+regulation of T cell activation (GO:0050863),306,24,7.57,+,3.17,9.59E-03
+detection of external biotic stimulus (GO:0098581),21,7,0.52,+,13.47,1.03E-02
+sphingolipid metabolic process (GO:0006665),148,16,3.66,+,4.37,1.18E-02
+regulation of myeloid leukocyte mediated immunity (GO:0002886),42,9,1.04,+,8.66,1.21E-02
+programmed cell death (GO:0012501),921,48,22.79,+,2.11,1.22E-02
+aminoglycan catabolic process (GO:0006026),68,11,1.68,+,6.54,1.27E-02
+positive regulation of cell proliferation (GO:0008284),869,46,21.51,+,2.14,1.36E-02
+negative regulation of natural killer cell mediated immunity (GO:0002716),14,6,0.35,+,17.32,1.44E-02
+oligosaccharide metabolic process (GO:0009311),69,11,1.71,+,6.44,1.46E-02
+cellular ion homeostasis (GO:0006873),528,33,13.07,+,2.53,1.50E-02
+cellular catabolic process (GO:0044248),1395,64,34.52,+,1.85,1.53E-02
+secretion by cell (GO:0032940),504,32,12.47,+,2.57,1.56E-02
+cellular nitrogen compound metabolic process (GO:0034641),5169,84,127.92,-,0.66,1.61E-02
+exocytosis (GO:0006887),316,24,7.82,+,3.07,1.65E-02
+transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169),506,32,12.52,+,2.56,1.69E-02
+carbohydrate catabolic process (GO:0016052),117,14,2.9,+,4.84,1.69E-02
+leukocyte activation (GO:0045321),433,29,10.72,+,2.71,1.72E-02
+protein transport (GO:0015031),1252,59,30.98,+,1.9,1.78E-02
+regulation of signal transduction (GO:0009966),2747,106,67.98,+,1.56,1.87E-02
+cell death (GO:0008219),965,49,23.88,+,2.05,1.93E-02
+regulation of cellular process (GO:0050794),10404,310,257.47,+,1.2,1.93E-02
+positive regulation of T cell activation (GO:0050870),212,19,5.25,+,3.62,1.93E-02
+organic cyclic compound biosynthetic process (GO:1901362),3207,44,79.36,-,0.55,2.13E-02
+detection of bacterium (GO:0016045),15,6,0.37,+,16.16,2.14E-02
+negative regulation of immune effector process (GO:0002698),103,13,2.55,+,5.1,2.21E-02
+cellular cation homeostasis (GO:0030003),514,32,12.72,+,2.52,2.33E-02
+detection of biotic stimulus (GO:0009595),24,7,0.59,+,11.79,2.47E-02
+regulation of chemokine production (GO:0032642),73,11,1.81,+,6.09,2.49E-02
+response to nutrient (GO:0007584),216,19,5.35,+,3.55,2.52E-02
+movement of cell or subcellular component (GO:0006928),1328,61,32.86,+,1.86,2.64E-02
+positive regulation of cell communication (GO:0010647),1541,68,38.14,+,1.78,2.64E-02
+regulation of cell-cell adhesion (GO:0022407),395,27,9.78,+,2.76,2.68E-02
+myeloid leukocyte activation (GO:0002274),105,13,2.6,+,5,2.71E-02
+inorganic ion homeostasis (GO:0098771),595,35,14.72,+,2.38,2.75E-02
+cellular defense response (GO:0006968),60,10,1.48,+,6.73,2.92E-02
+autophagy (GO:0006914),397,27,9.82,+,2.75,2.94E-02
+response to nitrogen compound (GO:1901698),924,47,22.87,+,2.06,2.99E-02
+positive regulation of signaling (GO:0023056),1547,68,38.28,+,1.78,3.01E-02
+negative regulation of leukocyte mediated cytotoxicity (GO:0001911),16,6,0.4,+,15.15,3.09E-02
+UDP-N-acetylglucosamine metabolic process (GO:0006047),16,6,0.4,+,15.15,3.09E-02
+ion homeostasis (GO:0050801),601,35,14.87,+,2.35,3.41E-02
+negative regulation of leukocyte mediated immunity (GO:0002704),48,9,1.19,+,7.58,3.53E-02
+regulation of macroautophagy (GO:0016241),125,14,3.09,+,4.53,3.57E-02
+regulation of production of molecular mediator of immune response (GO:0002700),108,13,2.67,+,4.86,3.66E-02
+antigen processing and presentation of exogenous peptide antigen via MHC class II (GO:0019886),92,12,2.28,+,5.27,3.83E-02
+single-organism carbohydrate catabolic process (GO:0044724),109,13,2.7,+,4.82,4.03E-02
+cation homeostasis (GO:0055080),580,34,14.35,+,2.37,4.08E-02
+defense response to Gram-positive bacterium (GO:0050830),77,11,1.91,+,5.77,4.10E-02
+positive regulation of intracellular signal transduction (GO:1902533),907,46,22.45,+,2.05,4.11E-02
+cellular chemical homeostasis (GO:0055082),633,36,15.67,+,2.3,4.16E-02
+cellular response to peptide (GO:1901653),289,22,7.15,+,3.08,4.24E-02
+negative regulation of lymphocyte mediated immunity (GO:0002707),37,8,0.92,+,8.74,4.34E-02
+type I interferon signaling pathway (GO:0060337),63,10,1.56,+,6.41,4.46E-02
+cellular response to type I interferon (GO:0071357),63,10,1.56,+,6.41,4.46E-02
+cellular response to peptide hormone stimulus (GO:0071375),268,21,6.63,+,3.17,4.50E-02
+chemotaxis (GO:0006935),481,30,11.9,+,2.52,4.60E-02
+regulation of pH (GO:0006885),94,12,2.33,+,5.16,4.74E-02
+antigen processing and presentation of peptide antigen via MHC class II (GO:0002495),94,12,2.33,+,5.16,4.74E-02
+chemical homeostasis (GO:0048878),941,47,23.29,+,2.02,4.79E-02
+taxis (GO:0042330),482,30,11.93,+,2.52,4.79E-02

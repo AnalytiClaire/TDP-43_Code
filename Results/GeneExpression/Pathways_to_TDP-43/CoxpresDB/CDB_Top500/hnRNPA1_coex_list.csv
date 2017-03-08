@@ -1,0 +1,503 @@
+,Gene,Function,Entrez Gene ID,Supportability,Hsa MR for HNRNPA1,Hsa2 MR for HNRNPA1,Hsa3 MR for HNRNPA1,Mcc MR for HNRNPA1,Rno MR for Hnrnpa1
+0,HNRNPA1,"heterogeneous nuclear ribonucleoprotein A1",3178,3,0.0,0.0 ,0.0 ,0.0 ,0.0 
+1,NPM1,"nucleophosmin (nucleolar phosphoprotein B23, numatrin)",4869,3,1.0,15442.7 ,6.6 ,5298.0 416.1 ,39.5 
+2,HNRNPR,"heterogeneous nuclear ribonucleoprotein R",10236,3,8.5,19.2 ,12.2 ,,314.9 
+3,SNHG1,"small nucleolar RNA host gene 1 (non-protein coding)",23642,3,9.4,,126.7 ,,
+4,KHDRBS1,"KH domain containing, RNA binding, signal transduction associated 1",10657,3,10.2,111.2 ,7.2 ,46.1 ,132.1 
+5,RPL5,"ribosomal protein L5",6125,3,10.9,44.0 ,27.7 ,,176.3 
+6,ANP32B,"acidic (leucine-rich) nuclear phosphoprotein 32 family, member B",10541,3,12.8,25.3 ,7.8 ,1228.7 ,
+7,RPS23,"ribosomal protein S23",6228,3,13.9,241.0 ,44.5 ,,377.9 
+8,PTMA,"prothymosin, alpha",5757,3,14.9,31.1 ,6.5 ,,
+9,EEF1A1,"eukaryotic translation elongation factor 1 alpha 1",1915,3,15.1,25.7 ,8.0 ,,1168.5 
+10,PPP1CC,"protein phosphatase 1, catalytic subunit, gamma isozyme",5501,3,16.1,116.7 ,141.9 ,,
+11,MATR3,"matrin 3",9782,3,16.2,57.7 ,198.1 ,492.5 ,53.3 
+12,NAP1L1,"nucleosome assembly protein 1-like 1",4673,3,17.3,2.8 ,5.7 ,,38.7 
+13,RPS4X,"ribosomal protein S4, X-linked",6191,3,17.5,31.8 ,76.9 ,,
+14,MRFAP1,"Morf4 family associated protein 1",93621,2,17.8,403.9 ,280.0 ,,68.2 
+15,RPL7,"ribosomal protein L7",6129,3,20.5,57.1 ,55.4 ,252.3 ,463.1 
+16,RBMX,"RNA binding motif protein, X-linked",27316,3,23.6,4.2 ,3.6 ,,48.8 
+17,HNRNPD,"heterogeneous nuclear ribonucleoprotein D (AU-rich element RNA binding protein 1, 37kDa)",3184,3,23.8,11.5 ,7.3 ,368.4 ,37.8 
+18,BTF3,"basic transcription factor 3",689,3,24.7,117.7 ,56.6 ,406.3 ,425.8 
+19,RPL6,"ribosomal protein L6",6128,3,25.0,16.3 ,50.8 ,,733.4 
+20,RPS3A,"ribosomal protein S3A",6189,3,25.3,33.7 ,63.4 ,,
+21,SET,"SET nuclear proto-oncogene",6418,3,27.5,13.4 ,67.8 ,11891.0 ,451.6 
+22,RPL3,"ribosomal protein L3",6122,3,28.1,137.9 ,27.1 ,15531.9 ,71.4 
+23,KANSL2,"KAT8 regulatory NSL complex subunit 2",54934,3,30.8,355.1 ,1081.7 ,,703.6 
+24,TRA2B,"transformer 2 beta homolog (Drosophila)",6434,3,32.5,90.9 ,32.2 ,,219.7 
+25,RPL15,"ribosomal protein L15",6138,3,33.4,74.9 ,77.3 ,793.2 ,618.1 
+26,RPL22,"ribosomal protein L22",6146,3,34.5,44.5 ,58.0 ,10.8 ,1257.9 
+27,RPL4,"ribosomal protein L4",6124,3,35.7,15734.1 ,41.5 ,13614.4 ,172.6 
+28,HMGB1,"high mobility group box 1",3146,3,36.3,14.0 ,21.4 ,6.0 ,
+29,RPS20,"ribosomal protein S20",6224,3,38.6,193.3 ,301.7 ,,595.6 
+30,RPL7A,"ribosomal protein L7a",6130,3,38.8,36.1 ,66.7 ,,241.8 
+31,HNRNPK,"heterogeneous nuclear ribonucleoprotein K",3190,3,39.2,112.0 ,19.4 ,146.2 ,106.1 
+32,144438,"&nbsp;",144438,0,39.5,,,,
+33,RPS6,"ribosomal protein S6",6194,3,40.2,60.7 ,42.2 ,212.6 ,357.6 
+34,EIF3L,"eukaryotic translation initiation factor 3, subunit L",51386,3,40.6,288.3 ,101.5 ,3247.4 ,
+35,RPS13,"ribosomal protein S13",6207,3,41.2,439.5 ,375.9 ,,
+36,NACA,"nascent polypeptide-associated complex alpha subunit",4666,3,43.8,13.9 ,97.9 ,,768.3 
+37,RPL23A,"ribosomal protein L23a",6147,3,45.0,163.2 ,104.2 ,,
+38,SRSF3,"serine/arginine-rich splicing factor 3",6428,3,46.7,25.7 ,21.0 ,,485.2 
+39,YWHAQ,"tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, theta",10971,3,48.8,2440.6 ,215.1 ,,601.0 
+40,RPL14,"ribosomal protein L14",9045,3,50.8,30.3 ,136.9 ,1509.9 ,572.4 
+41,SUPV3L1,"suppressor of var1, 3-like 1 (S. cerevisiae)",6832,3,51.0,2403.8 ,998.7 ,7425.7 ,4426.7 
+42,HNRNPDL,"heterogeneous nuclear ribonucleoprotein D-like",9987,3,51.2,8.5 ,46.0 ,538.8 ,
+43,RSRC2,"arginine/serine-rich coiled-coil 2",65117,3,52.4,32.5 ,431.1 ,,
+44,EPB41L4A-AS1,"EPB41L4A antisense RNA 1",114915,3,52.5,207.8 ,645.4 ,,
+45,RPL9,"ribosomal protein L9",6133,3,53.3,,136.2 ,,
+46,RPS16,"ribosomal protein S16",6217,3,53.6,151.2 ,284.0 ,15017.2 ,287.4 
+47,RPS7,"ribosomal protein S7",6201,3,54.4,169.0 ,153.2 ,405.9 ,668.9 
+48,TOMM20,"translocase of outer mitochondrial membrane 20 homolog (yeast)",9804,3,54.5,202.8 ,126.1 ,908.9 ,318.0 
+49,SFPQ,"splicing factor proline/glutamine-rich",6421,3,56.1,47.1 ,89.3 ,,3.3 
+50,RPL41,"ribosomal protein L41",6171,3,56.1,,166.9 ,,
+51,LETMD1,"LETM1 domain containing 1",25875,3,56.3,2335.4 ,1438.6 ,,9244.2 
+52,RPLP0,"ribosomal protein, large, P0",6175,3,56.4,614.8 ,95.5 ,,831.9 
+53,RPL37A,"ribosomal protein L37a",6168,3,56.9,75.3 ,432.4 ,,
+54,RPL17,"ribosomal protein L17",6139,3,58.9,34.6 ,84.3 ,,448.0 
+55,EIF4B,"eukaryotic translation initiation factor 4B",1975,3,59.0,25.1 ,41.1 ,,1960.8 
+56,EIF3E,"eukaryotic translation initiation factor 3, subunit E",3646,3,59.4,18.4 ,126.9 ,1549.9 ,952.9 
+57,RPL37,"ribosomal protein L37",6167,3,59.7,32.9 ,289.3 ,,991.8 
+58,RPS12,"ribosomal protein S12",6206,3,60.8,103.1 ,148.8 ,,318.6 
+59,SNHG12,"small nucleolar RNA host gene 12 (non-protein coding)",85028,3,61.0,110.8 ,982.4 ,,
+60,EIF2S3,"eukaryotic translation initiation factor 2, subunit 3 gamma, 52kDa",1968,3,61.4,36.7 ,206.6 ,1941.7 ,989.6 
+61,RPL10A,"ribosomal protein L10a",4736,3,63.8,95.9 ,65.0 ,1932.6 ,379.6 
+62,EEF1B2,"eukaryotic translation elongation factor 1 beta 2",1933,3,65.5,2699.1 ,118.3 ,,479.4 
+63,HMGN3,"high mobility group nucleosomal binding domain 3",9324,3,70.4,629.7 ,643.2 ,337.4 ,324.5 
+64,RPL3P7,"ribosomal protein L3 pseudogene 7",642741,0,70.7,,,,
+65,RPL12,"ribosomal protein L12",6136,3,71.0,87.6 ,216.5 ,2178.0 ,552.1 
+66,EEF1G,"eukaryotic translation elongation factor 1 gamma",1937,3,74.5,395.2 ,76.8 ,,218.4 
+67,EPB41L4A,"erythrocyte membrane protein band 4.1 like 4A",64097,3,75.0,10998.6 ,5783.9 ,9572.1 ,
+68,NACAP1,"nascent-polypeptide-associated complex alpha polypeptide pseudogene 1",83955,3,76.1,1441.3 ,2443.0 ,,
+69,RPL27,"ribosomal protein L27",6155,3,76.2,362.4 ,388.1 ,,707.9 
+70,HNRNPM,"heterogeneous nuclear ribonucleoprotein M",4670,3,78.7,19.0 ,13.8 ,375.6 ,17.5 
+71,ATP5A1,"ATP synthase, H+ transporting, mitochondrial F1 complex, alpha subunit 1, cardiac muscle",498,3,78.8,193.9 ,543.5 ,,4654.4 
+72,RPL31,"ribosomal protein L31",6160,3,79.2,125.5 ,196.9 ,467.0 ,417.3 
+73,HNRNPA0,"heterogeneous nuclear ribonucleoprotein A0",10949,2,81.2,213.0 ,37.4 ,,
+74,RPS25,"ribosomal protein S25",6230,3,81.3,118.8 ,297.1 ,1054.7 ,412.4 
+75,RPS8,"ribosomal protein S8",6202,3,82.7,54.8 ,121.7 ,,158.5 
+76,EEF2,"eukaryotic translation elongation factor 2",1938,3,84.1,755.6 ,389.1 ,10409.2 ,2993.1 
+77,IP6K2,"inositol hexakisphosphate kinase 2",51447,3,84.4,377.1 ,883.7 ,,285.7 
+78,RABGGTB,"Rab geranylgeranyltransferase, beta subunit",5876,3,85.0,28.5 ,877.9 ,152.7 ,30.0 
+79,RPL32,"ribosomal protein L32",6161,3,85.6,274.8 ,321.6 ,3684.8 ,
+80,ACTG1,"actin, gamma 1",71,3,86.8,617.5 ,100.7 ,4444.5 ,1459.8 
+81,RPS17,"ribosomal protein S17",6218,3,86.8,,292.3 ,,
+82,SUMO2,"small ubiquitin-like modifier 2",6613,3,87.9,146.7 ,69.2 ,,519.1 
+83,RPS28,"ribosomal protein S28",6234,3,88.5,2201.5 ,1343.0 ,2522.8 ,1204.1 
+84,SMARCE1,"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily e, member 1",6605,3,89.0,59.0 ,88.5 ,679.4 ,621.5 
+85,RPS15A,"ribosomal protein S15a",6210,3,89.7,129.4 ,164.7 ,3072.4 ,570.7 
+86,NCL,"nucleolin",4691,3,89.9,2.5 ,9.5 ,14137.6 ,42.0 
+87,NSA2,"NSA2 ribosome biogenesis homolog (S. cerevisiae)",10412,3,90.8,98.0 ,301.8 ,,384.2 
+88,RPL13A,"ribosomal protein L13a",23521,3,91.2,155.2 ,176.2 ,,175.1 
+89,RPS3,"ribosomal protein S3",6188,3,91.2,65.8 ,91.5 ,1577.3 ,213.3 
+90,EIF3F,"eukaryotic translation initiation factor 3, subunit F",8665,3,91.6,1131.8 ,714.4 ,5990.1 ,1559.7 
+91,RPL30,"ribosomal protein L30",6156,3,92.1,281.7 ,182.2 ,479.8 ,849.8 
+92,RPS2,"ribosomal protein S2",6187,3,92.6,182.8 ,244.6 ,5219.9 ,1170.5 
+93,TPT1,"tumor protein, translationally-controlled 1",7178,3,92.9,563.4 ,179.4 ,,582.2 
+94,CEP95,"centrosomal protein 95kDa",90799,3,93.3,494.5 ,1538.5 ,3645.6 ,34.3 
+95,RBM39,"RNA binding motif protein 39",9584,3,96.9,46.6 ,966.2 ,,
+96,SNORD104,"small nucleolar RNA, C/D box 104",692227,3,97.5,1869.9 ,14185.6 ,,
+97,RPL39,"ribosomal protein L39",6170,3,98.1,,278.6 ,,185.3 
+98,PNN,"pinin, desmosome associated protein",5411,3,100.2,45.9 ,55.8 ,4016.4 ,4.5 
+99,RPS29,"ribosomal protein S29",6235,3,101.7,450.4 ,1066.3 ,,1117.8 
+100,EIF4A2,"eukaryotic translation initiation factor 4A2",1974,2,102.8,68.9 ,420.2 ,803.8 ,56.4 
+101,TCERG1,"transcription elongation regulator 1",10915,3,103.5,242.7 ,494.2 ,1073.5 ,66.1 
+102,ZCCHC8,"zinc finger, CCHC domain containing 8",55596,3,103.7,1932.2 ,5038.6 ,877.0 ,
+103,MSL2,"male-specific lethal 2 homolog (Drosophila)",55167,3,105.1,3909.8 ,3360.0 ,,1048.3 
+104,HMGN1,"high mobility group nucleosome binding domain 1",3150,3,106.2,69.3 ,38.5 ,1465.4 ,29.5 
+105,RPS27,"ribosomal protein S27",6232,3,107.2,362.2 ,316.9 ,,1064.2 
+106,1195,"&nbsp;",1195,0,107.6,110.8 ,5180.7 ,502.9 ,10.7 
+107,CIRBP,"cold inducible RNA binding protein",1153,3,108.0,266.5 ,4318.0 ,6217.1 ,474.3 
+108,RPS21,"ribosomal protein S21",6227,3,108.6,322.2 ,482.9 ,1158.8 ,523.8 
+109,HNRNPA3,"heterogeneous nuclear ribonucleoprotein A3",220988,3,108.7,,4.5 ,,
+110,RPS24,"ribosomal protein S24",6229,3,110.0,182.7 ,131.9 ,,64.1 
+111,NONO,"non-POU domain containing, octamer-binding",4841,3,110.3,71.7 ,85.7 ,4044.7 ,252.7 
+112,PABPC3,"poly(A) binding protein, cytoplasmic 3",5042,3,110.8,164.8 ,500.7 ,1708.5 52.3 ,
+113,EIF3M,"eukaryotic translation initiation factor 3, subunit M",10480,3,113.1,86.5 ,223.8 ,126.4 ,433.8 
+114,EIF3A,"eukaryotic translation initiation factor 3, subunit A",8661,3,115.0,141.1 ,234.1 ,1370.4 ,650.2 
+115,FUBP1,"far upstream element (FUSE) binding protein 1",8880,3,116.6,67.5 ,59.7 ,1751.5 ,40.8 
+116,HUWE1,"HECT, UBA and WWE domain containing 1, E3 ubiquitin protein ligase",10075,3,118.4,4645.4 ,2754.3 ,5995.4 ,
+117,PRPF39,"pre-mRNA processing factor 39",55015,3,118.6,317.5 ,2095.2 ,2125.7 ,15.0 
+118,HNRNPH3,"heterogeneous nuclear ribonucleoprotein H3 (2H9)",3189,3,119.2,33.5 ,9.2 ,134.6 ,325.5 
+119,TAF1D,"TATA box binding protein (TBP)-associated factor, RNA polymerase I, D, 41kDa",79101,3,119.5,49.8 ,3012.9 ,1687.4 ,4.5 
+120,RPL34,"ribosomal protein L34",6164,3,120.0,199.0 ,239.7 ,,
+121,TOP2B,"topoisomerase (DNA) II beta 180kDa",7155,3,120.0,200.8 ,442.7 ,117.8 ,566.6 
+122,SRSF6,"serine/arginine-rich splicing factor 6",6431,3,120.5,178.7 ,239.4 ,,95.0 
+123,RPL10,"ribosomal protein L10",6134,3,122.5,606.7 ,408.0 ,,1036.9 
+124,SLC25A3,"solute carrier family 25 (mitochondrial carrier; phosphate carrier), member 3",5250,3,123.4,299.3 ,602.5 ,1848.1 ,2016.3 
+125,DHX15,"DEAH (Asp-Glu-Ala-His) box helicase 15",1665,3,124.0,65.7 ,71.6 ,1805.2 ,1156.2 
+126,RPL24,"ribosomal protein L24",6152,3,124.4,62.6 ,236.1 ,14367.9 ,519.9 
+127,CCT8,"chaperonin containing TCP1, subunit 8 (theta)",10694,3,124.9,76.8 ,108.2 ,440.1 ,79.6 
+128,RPS10,"ribosomal protein S10",6204,3,125.8,478.7 ,454.0 ,1824.8 ,659.9 
+129,UIMC1,"ubiquitin interaction motif containing 1",51720,2,126.1,,2750.8 ,6694.2 ,527.9 
+130,RPS14,"ribosomal protein S14",6208,3,126.1,1451.2 ,295.6 ,,1156.1 
+131,BCLAF1,"BCL2-associated transcription factor 1",9774,3,126.8,366.3 ,443.4 ,,225.9 
+132,SNHG8,"small nucleolar RNA host gene 8 (non-protein coding)",100093630,3,128.1,,1155.9 ,,
+133,RPL7AP36,"ribosomal protein L7a pseudogene 36",728179,0,129.2,,,,
+134,C6orf48,"chromosome 6 open reading frame 48",50854,3,131.5,,800.0 ,,
+135,FNBP4,"formin binding protein 4",23360,3,132.1,490.4 ,2456.8 ,,23.4 
+136,RPL13,"ribosomal protein L13",6137,3,132.4,3584.5 ,1582.0 ,4074.6 ,372.7 
+137,CCNG1,"cyclin G1",900,3,132.6,1626.1 ,511.4 ,2237.3 ,2271.1 
+138,EIF2A,"eukaryotic translation initiation factor 2A, 65kDa",83939,3,133.9,228.7 ,1895.1 ,,737.4 
+139,EIF4G2,"eukaryotic translation initiation factor 4 gamma, 2",1982,3,136.9,761.6 ,420.9 ,401.1 ,5384.4 
+140,SNHG6,"small nucleolar RNA host gene 6 (non-protein coding)",641638,3,137.7,,573.4 ,,
+141,RPL19,"ribosomal protein L19",6143,3,142.5,3611.5 ,249.2 ,600.8 ,359.0 
+142,GAS5,"growth arrest-specific 5 (non-protein coding)",60674,3,143.2,,206.6 ,,
+143,PABPC1,"poly(A) binding protein, cytoplasmic 1",26986,3,143.3,84.4 ,8.8 ,,3954.7 
+144,ATF4,"activating transcription factor 4",468,3,145.2,1679.3 ,732.2 ,8646.5 ,560.9 
+145,RBBP7,"retinoblastoma binding protein 7",5931,3,147.0,799.8 ,422.8 ,740.5 ,82.0 
+146,OLA1,"Obg-like ATPase 1",29789,3,147.1,1591.0 ,510.2 ,1645.0 ,449.9 
+147,HMGN2,"high mobility group nucleosomal binding domain 2",3151,3,148.4,118.8 ,14.8 ,,
+148,THOC1,"THO complex 1",9984,3,148.5,531.3 ,472.4 ,,
+149,RPL26P37,"ribosomal protein L26 pseudogene 37",441533,0,149.1,,,,
+150,C14orf166,"chromosome 14 open reading frame 166",51637,3,149.5,408.6 ,708.6 ,595.9 ,767.3 
+151,MORF4L1,"mortality factor 4 like 1",10933,3,151.7,264.3 ,293.1 ,,533.5 
+152,SLC25A38,"solute carrier family 25, member 38",54977,3,153.7,5645.0 ,1633.2 ,,9664.6 
+153,GNB2L1,"guanine nucleotide binding protein (G protein), beta polypeptide 2-like 1",10399,3,155.5,277.0 ,175.1 ,3414.6 ,208.8 
+154,RPS19,"ribosomal protein S19",6223,3,156.5,1232.7 ,542.0 ,,118.2 
+155,HNRNPH1,"heterogeneous nuclear ribonucleoprotein H1 (H)",3187,3,157.2,8.1 ,37.4 ,49.4 ,
+156,RSL24D1,"ribosomal L24 domain containing 1",51187,3,158.2,49.4 ,419.6 ,,4131.2 
+157,SAFB,"scaffold attachment factor B",6294,3,159.5,210.6 ,193.0 ,4792.3 ,946.0 
+158,RPS11,"ribosomal protein S11",6205,3,160.8,253.9 ,293.9 ,4446.1 ,778.0 
+159,CCNB1IP1,"cyclin B1 interacting protein 1, E3 ubiquitin protein ligase",57820,3,161.1,348.2 ,290.2 ,2087.9 ,
+160,PMPCB,"peptidase (mitochondrial processing) beta",9512,3,163.2,524.2 ,367.2 ,,1279.6 
+161,ANP32A,"acidic (leucine-rich) nuclear phosphoprotein 32 family, member A",8125,3,164.6,35.5 ,101.0 ,,
+162,RPL35A,"ribosomal protein L35a",6165,3,165.7,270.5 ,297.1 ,3818.0 ,402.9 
+163,HNRNPC,"heterogeneous nuclear ribonucleoprotein C (C1/C2)",3183,3,165.9,16.1 ,6.0 ,1360.7 ,1575.4 
+164,ZFAS1,"ZNFX1 antisense RNA 1",441951,3,166.1,77.5 ,506.0 ,,
+165,DDX47,"DEAD (Asp-Glu-Ala-Asp) box polypeptide 47",51202,3,167.5,924.6 ,574.1 ,219.8 ,1401.7 
+166,PTGES3,"prostaglandin E synthase 3 (cytosolic)",10728,3,168.7,114.1 ,72.4 ,10865.5 ,1742.3 
+167,STARD7,"StAR-related lipid transfer (START) domain containing 7",56910,3,175.2,682.7 ,1665.0 ,2078.8 ,2732.5 
+168,SRSF5,"serine/arginine-rich splicing factor 5",6430,3,176.2,50.2 ,452.7 ,,
+169,SNORA72,"small nucleolar RNA, H/ACA box 72",26775,2,176.8,,9376.0 ,,
+170,FBL,"fibrillarin",2091,3,178.5,126.9 ,121.4 ,1634.0 ,266.1 
+171,RPL11,"ribosomal protein L11",6135,3,178.5,109.3 ,95.3 ,,194.8 
+172,DDX5,"DEAD (Asp-Glu-Ala-Asp) box helicase 5",1655,3,179.2,86.6 ,143.1 ,,46.0 
+173,RBM25,"RNA binding motif protein 25",58517,3,180.4,163.2 ,758.2 ,3261.2 ,
+174,EIF3H,"eukaryotic translation initiation factor 3, subunit H",8667,3,182.0,76.0 ,226.2 ,437.1 ,1193.0 
+175,PAPD7,"PAP associated domain containing 7",11044,3,183.7,4966.3 ,6638.4 ,2450.1 ,3998.5 
+176,CCNL1,"cyclin L1",57018,3,184.6,177.2 ,4086.0 ,,14.0 
+177,LOC285074,"anaphase promoting complex subunit 1 pseudogene",285074,1,186.6,,8074.4 ,,
+178,THUMPD2,"THUMP domain containing 2",80745,3,187.3,1025.4 ,805.2 ,6987.4 ,342.8 
+179,DDX46,"DEAD (Asp-Glu-Ala-Asp) box polypeptide 46",9879,3,187.8,161.5 ,121.6 ,549.1 ,521.4 
+180,RPL38,"ribosomal protein L38",6169,3,190.3,404.9 ,580.0 ,2893.8 ,
+181,RPS15,"ribosomal protein S15",6209,3,193.5,1835.0 ,1209.6 ,829.9 ,1249.5 
+182,SNHG17,"small nucleolar RNA host gene 17 (non-protein coding)",388796,3,195.3,1342.6 ,1521.5 ,,
+183,SNRPE,"small nuclear ribonucleoprotein polypeptide E",6635,3,195.4,51.2 ,250.1 ,1774.9 ,243.4 
+184,HNRNPA2B1,"heterogeneous nuclear ribonucleoprotein A2/B1",3181,3,196.3,26.5 ,4.2 ,,
+185,HNRNPU,"heterogeneous nuclear ribonucleoprotein U (scaffold attachment factor A)",3192,3,197.6,16.2 ,25.8 ,879.9 ,54.5 
+186,TTC19,"tetratricopeptide repeat domain 19",54902,3,199.0,1459.3 ,2577.4 ,,5524.3 
+187,QARS,"glutaminyl-tRNA synthetase",5859,3,200.8,2527.1 ,950.3 ,,
+188,TARDBP,"TAR DNA binding protein",23435,3,202.4,70.8 ,13.4 ,581.0 ,
+189,CPSF6,"cleavage and polyadenylation specific factor 6, 68kDa",11052,3,203.8,165.3 ,68.1 ,,283.7 
+190,SPIN1,"spindlin 1",10927,3,206.1,4816.2 ,2510.3 ,,
+191,SRSF2,"serine/arginine-rich splicing factor 2",6427,3,213.9,84.6 ,432.9 ,,385.5 
+192,EIF1,"eukaryotic translation initiation factor 1",10209,3,217.2,833.7 ,681.8 ,4205.8 ,
+193,SF3B1,"splicing factor 3b, subunit 1, 155kDa",23451,3,219.4,679.3 ,304.7 ,,36.2 
+194,ADNP2,"ADNP homeobox 2",22850,3,219.5,2341.8 ,746.9 ,,3378.0 
+195,KARS,"lysyl-tRNA synthetase",3735,3,223.4,544.1 ,402.4 ,1413.0 ,166.7 
+196,HTATSF1,"HIV-1 Tat specific factor 1",27336,3,229.8,317.4 ,1116.4 ,217.5 ,136.7 
+197,MRPS27,"mitochondrial ribosomal protein S27",23107,3,232.2,563.9 ,598.4 ,2097.4 ,1869.0 
+198,YTHDC1,"YTH domain containing 1",91746,3,232.5,241.0 ,402.7 ,692.1 ,91.8 
+199,POLG2,"polymerase (DNA directed), gamma 2, accessory subunit",11232,3,234.3,270.9 ,670.7 ,,1931.7 
+200,RPL36A,"ribosomal protein L36a",6173,3,237.4,87.0 ,205.7 ,,
+201,HINT1,"histidine triad nucleotide binding protein 1",3094,3,238.6,1687.1 ,654.8 ,4972.5 ,3677.3 
+202,LDHB,"lactate dehydrogenase B",3945,3,238.8,146.8 ,350.4 ,,4164.2 
+203,OGT,"O-linked N-acetylglucosamine (GlcNAc) transferase",8473,3,240.6,1026.4 ,2475.1 ,,113.1 
+204,MDM4,"MDM4, p53 regulator",4194,3,241.5,473.9 ,12497.6 ,772.0 ,735.7 
+205,SEC31A,"SEC31 homolog A (S. cerevisiae)",22872,3,242.9,4083.0 ,8580.0 ,3872.6 ,6229.3 
+206,KRR1,"KRR1, small subunit (SSU) processome component, homolog (yeast)",11103,2,243.9,433.6 ,1947.0 ,,823.6 
+207,SRSF7,"serine/arginine-rich splicing factor 7",6432,3,249.6,41.8 ,12.2 ,,1001.2 
+208,SLC25A6,"solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 6",293,3,251.9,,1279.6 ,3390.6 ,
+209,RPUSD4,"RNA pseudouridylate synthase domain containing 4",84881,3,252.7,673.1 ,1642.3 ,3279.9 ,1203.5 
+210,UBA2,"ubiquitin-like modifier activating enzyme 2",10054,3,254.3,1233.5 ,241.9 ,28.0 ,450.2 
+211,PCNP,"PEST proteolytic signal containing nuclear protein",57092,3,255.2,302.1 ,650.4 ,7948.7 ,722.1 
+212,SNHG15,"small nucleolar RNA host gene 15 (non-protein coding)",285958,3,256.4,,2532.8 ,,
+213,NOP58,"NOP58 ribonucleoprotein",51602,3,260.6,59.6 ,151.7 ,,290.7 
+214,PTMAP7,"prothymosin, alpha pseudogene 7",326626,0,262.2,,,,
+215,HSP90AA1,"heat shock protein 90kDa alpha (cytosolic), class A member 1",3320,3,262.5,386.3 ,104.2 ,14647.4 ,3243.4 
+216,YTHDF2,"YTH N(6)-methyladenosine RNA binding protein 2",51441,3,264.4,2125.3 ,192.6 ,,2370.2 
+217,RPAIN,"RPA interacting protein",84268,2,265.0,1508.2 ,744.6 ,12080.8 ,2520.6 
+218,CNOT2,"CCR4-NOT transcription complex, subunit 2",4848,3,265.9,1423.6 ,861.2 ,1215.9 ,332.9 
+219,LUC7L,"LUC7-like (S. cerevisiae)",55692,3,266.3,161.0 ,1764.7 ,,154.6 
+220,WDR82,"WD repeat domain 82",80335,3,268.2,1290.7 ,662.6 ,880.6 ,
+221,SERBP1,"SERPINE1 mRNA binding protein 1",26135,3,270.8,60.5 ,27.3 ,,
+222,SYNCRIP,"synaptotagmin binding, cytoplasmic RNA interacting protein",10492,3,271.5,212.6 ,100.0 ,332.8 ,506.7 
+223,POLR2B,"polymerase (RNA) II (DNA directed) polypeptide B, 140kDa",5431,3,272.1,297.6 ,772.5 ,,1083.6 
+224,PSMG2,"proteasome (prosome, macropain) assembly chaperone 2",56984,3,275.0,2723.2 ,2277.5 ,1429.2 ,1150.3 
+225,RPL18P11,"ribosomal protein L18 pseudogene 11",390612,0,275.0,,,,
+226,RBM3,"RNA binding motif (RNP1, RRM) protein 3",5935,3,275.1,35.9 ,235.2 ,466.9 ,77.1 
+227,DHX9,"DEAH (Asp-Glu-Ala-His) box helicase 9",1660,3,275.2,98.6 ,52.8 ,128.5 ,419.3 
+228,RPL23,"ribosomal protein L23",9349,3,276.0,56.9 ,134.7 ,350.7 ,213.4 
+229,RPLP2,"ribosomal protein, large, P2",6181,3,277.9,455.9 ,723.7 ,3450.8 ,
+230,COX7C,"cytochrome c oxidase subunit VIIc",1350,3,278.4,956.8 ,741.0 ,,
+231,METAP2,"methionyl aminopeptidase 2",10988,3,279.6,22.6 ,179.8 ,,968.3 
+232,SEPT7,"septin 7",989,3,279.8,819.3 ,1461.0 ,1557.8 ,629.1 
+233,KIAA1143,"KIAA1143",57456,2,280.7,,2599.1 ,1314.7 ,3098.6 
+234,SRP72,"signal recognition particle 72kDa",6731,3,281.7,602.5 ,252.9 ,,2054.3 
+235,PAN3,"PAN3 poly(A) specific ribonuclease subunit",255967,3,281.9,2067.9 ,8111.5 ,1043.9 ,324.3 
+236,BRD1,"bromodomain containing 1",23774,3,283.2,6243.6 ,11344.1 ,2047.4 ,1745.3 
+237,UHRF2,"ubiquitin-like with PHD and ring finger domains 2, E3 ubiquitin protein ligase",115426,3,285.4,1031.9 ,4001.9 ,,1050.8 
+238,LSM14A,"LSM14A, SCD6 homolog A (S. cerevisiae)",26065,3,286.4,111.9 ,27.4 ,122.0 ,1041.4 
+239,PUM1,"pumilio RNA-binding family member 1",9698,3,286.7,1543.5 ,796.6 ,680.4 ,377.3 
+240,DUT,"deoxyuridine triphosphatase",1854,3,288.9,521.9 ,660.6 ,,48.9 
+241,BUB3,"BUB3 mitotic checkpoint protein",9184,3,290.0,178.1 ,181.4 ,10638.3 ,539.3 
+242,QRICH1,"glutamine-rich 1",54870,3,290.4,7054.2 ,1063.1 ,,9945.0 
+243,GLTSCR2,"glioma tumor suppressor candidate region gene 2",29997,1,292.9,651.3 ,2150.6 ,7061.3 ,943.5 
+244,SRP14,"signal recognition particle 14kDa (homologous Alu RNA binding protein)",6727,3,294.9,1122.4 ,737.7 ,,1956.8 
+245,IPO7,"importin 7",10527,3,295.2,373.7 ,734.7 ,,950.0 
+246,CNOT7,"CCR4-NOT transcription complex, subunit 7",29883,2,297.5,443.3 ,704.2 ,556.0 ,725.9 
+247,DAZAP1,"DAZ associated protein 1",26528,3,298.0,2277.9 ,1398.2 ,1422.5 ,
+248,PAN2,"PAN2 poly(A) specific ribonuclease subunit",9924,3,298.2,3230.2 ,8929.4 ,4398.6 ,7620.5 
+249,AFG3L2,"AFG3-like AAA ATPase 2",10939,3,298.4,751.1 ,1734.2 ,8909.0 ,2572.3 
+250,ZBTB5,"zinc finger and BTB domain containing 5",9925,3,299.6,2557.0 ,1901.4 ,8771.1 ,3124.5 
+251,SKP1,"S-phase kinase-associated protein 1",6500,3,299.8,722.7 ,706.6 ,,2536.5 
+252,RPLP1,"ribosomal protein, large, P1",6176,3,307.5,184.8 ,537.7 ,2576.3 ,747.9 
+253,TBCA,"tubulin folding cofactor A",6902,3,309.7,17705.3 ,781.8 ,,2593.6 
+254,SNHG3,"small nucleolar RNA host gene 3 (non-protein coding)",8420,3,310.2,,643.0 ,,
+255,APEX1,"APEX nuclease (multifunctional DNA repair enzyme) 1",328,3,311.4,248.3 ,31.0 ,,679.9 
+256,PPHLN1,"periphilin 1",51535,1,311.4,467.7 ,1399.8 ,2577.4 ,2212.3 
+257,CHD2,"chromodomain helicase DNA binding protein 2",1106,3,312.8,559.2 ,5160.4 ,4667.5 ,132.6 
+258,ILKAP,"integrin-linked kinase-associated serine/threonine phosphatase",80895,3,313.2,98.5 ,4417.0 ,1477.4 ,1250.4 
+259,NGDN,"neuroguidin, EIF4E binding protein",25983,3,316.4,406.9 ,786.1 ,5670.9 ,667.1 
+260,ATG14,"autophagy related 14",22863,3,317.5,2166.1 ,16665.9 ,,1995.8 
+261,ANKRD10,"ankyrin repeat domain 10",55608,3,320.6,803.4 ,5095.4 ,664.4 ,206.9 
+262,CCT2,"chaperonin containing TCP1, subunit 2 (beta)",10576,3,320.6,119.6 ,113.6 ,898.8 ,268.8 
+263,HSPA9,"heat shock 70kDa protein 9 (mortalin)",3313,3,322.8,330.4 ,526.9 ,1753.5 ,652.7 
+264,CCT4,"chaperonin containing TCP1, subunit 4 (delta)",10575,2,324.6,268.8 ,170.2 ,882.2 ,362.3 
+265,SMEK1,"SMEK homolog 1, suppressor of mek1 (Dictyostelium)",55671,3,327.9,866.4 ,1218.7 ,,1415.0 
+266,DCAF16,"DDB1 and CUL4 associated factor 16",54876,2,328.9,980.1 ,2225.7 ,9498.9 ,
+267,YY1,"YY1 transcription factor",7528,2,330.4,8194.9 ,1253.6 ,,3497.0 
+268,MAPKAPK5-AS1,"MAPKAPK5 antisense RNA 1",51275,3,330.6,24.3 ,2732.8 ,,
+269,NUP54,"nucleoporin 54kDa",53371,3,332.2,338.5 ,416.7 ,1428.4 ,681.9 
+270,NOLC1,"nucleolar and coiled-body phosphoprotein 1",9221,3,333.4,256.0 ,72.8 ,754.0 ,675.1 
+271,ARGLU1,"arginine and glutamate rich 1",55082,3,333.7,316.3 ,785.6 ,1041.2 ,233.8 
+272,ZNF326,"zinc finger protein 326",284695,3,338.0,359.1 ,153.9 ,1231.0 ,261.7 
+273,XPO1,"exportin 1",7514,3,339.5,273.2 ,208.2 ,,356.7 
+274,FOXJ3,"forkhead box J3",22887,3,339.5,5718.6 ,6162.2 ,2059.4 ,1598.6 
+275,SRRM1,"serine/arginine repetitive matrix 1",10250,3,341.2,3371.9 ,117.5 ,,
+276,ZBTB1,"zinc finger and BTB domain containing 1",22890,3,342.1,1858.0 ,3004.4 ,,1627.1 
+277,C3orf17,"chromosome 3 open reading frame 17",25871,3,342.5,696.3 ,3807.6 ,4429.1 ,
+278,CSDE1,"cold shock domain containing E1, RNA-binding",7812,3,342.9,240.2 ,559.7 ,,2996.8 
+279,SLTM,"SAFB-like, transcription modulator",79811,3,345.9,286.0 ,307.8 ,222.9 ,
+280,NOA1,"nitric oxide associated 1",84273,3,346.1,1970.3 ,2406.1 ,,944.6 
+281,TSPYL1,"TSPY-like 1",7259,3,347.2,3948.6 ,10268.0 ,,3783.6 
+282,NUDT21,"nudix (nucleoside diphosphate linked moiety X)-type motif 21",11051,3,347.4,172.9 ,139.5 ,25.5 ,79.0 
+283,KDM3B,"lysine (K)-specific demethylase 3B",51780,2,349.0,1682.6 ,1148.2 ,776.0 ,1102.2 
+284,RPL18,"ribosomal protein L18",6141,3,349.4,823.8 ,816.0 ,3131.9 ,483.4 
+285,SLC25A36,"solute carrier family 25 (pyrimidine nucleotide carrier), member 36",55186,3,350.5,1058.0 ,907.1 ,11131.5 ,1128.2 
+286,PSIP1,"PC4 and SFRS1 interacting protein 1",11168,3,351.2,247.2 ,145.4 ,6732.2 ,406.1 
+287,OTUD3,"OTU deubiquitinase 3",23252,3,352.4,1073.8 ,6704.7 ,9954.1 ,12949.4 
+288,RAN,"RAN, member RAS oncogene family",5901,3,354.1,42.2 ,99.0 ,517.4 ,371.8 
+289,NR2C1,"nuclear receptor subfamily 2, group C, member 1",7181,3,354.7,1815.0 ,6609.8 ,,5410.1 
+290,ATP5G2,"ATP synthase, H+ transporting, mitochondrial Fo complex, subunit C2 (subunit 9)",517,3,355.2,5430.4 ,1160.8 ,5300.7 ,3405.3 
+291,SNHG5,"small nucleolar RNA host gene 5 (non-protein coding)",387066,3,355.3,,612.7 ,,
+292,PPWD1,"peptidylprolyl isomerase domain and WD repeat containing 1",23398,3,356.8,396.7 ,989.9 ,2759.2 ,872.2 
+293,SEC11A,"SEC11 homolog A (S. cerevisiae)",23478,3,357.7,245.1 ,703.3 ,1126.5 ,452.7 
+294,ZRANB2,"zinc finger, RAN-binding domain containing 2",9406,3,357.8,323.6 ,276.0 ,250.3 ,
+295,RPL36AL,"ribosomal protein L36a-like",6166,3,358.0,103.4 ,917.6 ,7112.5 ,
+296,LUC7L3,"LUC7-like 3 (S. cerevisiae)",51747,3,359.5,98.4 ,396.0 ,850.3 ,21.9 
+297,AKAP8,"A kinase (PRKA) anchor protein 8",10270,3,359.6,1707.1 ,3196.2 ,1317.1 ,52.5 
+298,FAM98B,"family with sequence similarity 98, member B",283742,3,359.6,904.6 ,136.0 ,,499.8 
+299,NUCKS1,"nuclear casein kinase and cyclin-dependent kinase substrate 1",64710,3,360.8,25.9 ,290.9 ,10533.5 ,20.5 
+300,UBP1,"upstream binding protein 1 (LBP-1a)",7342,3,363.5,1906.3 ,362.7 ,438.9 ,1390.0 
+301,NAE1,"NEDD8 activating enzyme E1 subunit 1",8883,3,363.6,604.5 ,310.5 ,,1461.0 
+302,MORF4L2,"mortality factor 4 like 2",9643,3,365.9,525.7 ,1383.9 ,1437.8 ,105.0 
+303,CCDC59,"coiled-coil domain containing 59",29080,3,369.7,383.8 ,1223.8 ,677.4 ,486.3 
+304,KANSL3,"KAT8 regulatory NSL complex subunit 3",55683,2,370.5,7494.4 ,9935.4 ,4195.1 ,2419.7 
+305,NAA16,"N(alpha)-acetyltransferase 16, NatA auxiliary subunit",79612,3,371.7,1071.0 ,7051.2 ,585.8 ,234.4 
+306,WAC,"WW domain containing adaptor with coiled-coil",51322,3,372.1,2606.9 ,2107.7 ,,4899.8 
+307,QSOX2,"quiescin Q6 sulfhydryl oxidase 2",169714,3,372.8,3943.6 ,3104.4 ,,4540.0 
+308,SKIV2L2,"superkiller viralicidic activity 2-like 2 (S. cerevisiae)",23517,3,373.2,172.3 ,539.1 ,,1306.0 
+309,PSMA3-AS1,"PSMA3 antisense RNA 1",379025,3,373.9,,4027.4 ,,
+310,CAMLG,"calcium modulating ligand",819,3,375.2,868.6 ,6637.2 ,,1179.3 
+311,IMPDH2,"IMP (inosine 5'-monophosphate) dehydrogenase 2",3615,3,375.4,204.7 ,152.6 ,3305.6 ,199.6 
+312,TIAL1,"TIA1 cytotoxic granule-associated RNA binding protein-like 1",7073,2,375.6,278.5 ,656.8 ,,195.4 
+313,LANCL1,"LanC lantibiotic synthetase component C-like 1 (bacterial)",10314,3,377.6,2734.1 ,2101.1 ,1993.3 ,4058.3 
+314,SARAF,"store-operated calcium entry-associated regulatory factor",51669,3,377.6,1874.5 ,2604.6 ,1579.0 ,3474.1 
+315,SEH1L,"SEH1-like (S. cerevisiae)",81929,3,379.7,472.0 ,892.2 ,61.1 ,
+316,CTCF,"CCCTC-binding factor (zinc finger protein)",10664,3,386.5,1046.6 ,287.8 ,,966.9 
+317,PAXBP1,"PAX3 and PAX7 binding protein 1",94104,3,386.8,503.3 ,914.1 ,384.1 ,9.8 
+318,SREK1,"splicing regulatory glutamine/lysine-rich protein 1",140890,3,387.1,205.7 ,1845.6 ,2265.1 ,141.0 
+319,CFAP97,"cilia and flagella associated protein 97",57587,3,389.4,1483.4 ,2391.9 ,1645.8 ,
+320,SRSF11,"serine/arginine-rich splicing factor 11",9295,3,390.5,593.7 ,461.1 ,5127.8 ,8.9 
+321,H2AFV,"H2A histone family, member V",94239,3,390.7,558.0 ,173.8 ,,
+322,BTAF1,"BTAF1 RNA polymerase II, B-TFIID transcription factor-associated, 170kDa",9044,3,391.6,716.1 ,2616.0 ,1470.2 ,2352.2 
+323,ADAT2,"adenosine deaminase, tRNA-specific 2",134637,3,392.8,497.4 ,1707.5 ,3804.3 ,
+324,ST13,"suppression of tumorigenicity 13 (colon carcinoma) (Hsp70 interacting protein)",6767,3,394.1,327.9 ,217.2 ,8439.4 ,919.4 
+325,TRMT5,"tRNA methyltransferase 5",57570,3,395.6,1365.5 ,1134.1 ,5142.0 ,5250.1 
+326,KDM2B,"lysine (K)-specific demethylase 2B",84678,3,396.3,2312.2 ,646.0 ,2466.9 ,1039.1 
+327,ZNF207,"zinc finger protein 207",7756,2,396.7,898.8 ,113.3 ,,1202.9 
+328,SAFB2,"scaffold attachment factor B2",9667,3,400.2,582.0 ,1578.7 ,,2008.2 
+329,NDUFA5,"NADH dehydrogenase (ubiquinone) 1 alpha subcomplex, 5",4698,3,401.4,576.3 ,2274.1 ,,2137.4 
+330,ZNF266,"zinc finger protein 266",10781,3,402.7,2165.9 ,3412.5 ,,1349.5 
+331,DNM1L,"dynamin 1-like",10059,3,403.0,1182.6 ,2950.1 ,,3853.0 
+332,CCNL2,"cyclin L2",81669,3,403.4,971.9 ,5276.3 ,2470.7 ,29.2 
+333,C11orf58,"chromosome 11 open reading frame 58",10944,3,403.7,93.7 ,627.2 ,422.7 ,40.5 
+334,RNPS1,"RNA binding protein S1, serine-rich domain",10921,3,404.2,2402.6 ,306.4 ,1370.9 ,949.9 
+335,BTBD1,"BTB (POZ) domain containing 1",53339,3,411.3,2610.9 ,3303.0 ,3646.6 ,2461.3 
+336,DDX50,"DEAD (Asp-Glu-Ala-Asp) box polypeptide 50",79009,2,415.8,186.8 ,900.9 ,2793.0 ,1083.3 
+337,EIF3D,"eukaryotic translation initiation factor 3, subunit D",8664,3,417.6,420.2 ,331.1 ,5046.9 ,302.0 
+338,RBM27,"RNA binding motif protein 27",54439,3,418.5,1816.6 ,1251.0 ,108.8 ,2487.6 
+339,SNRNP200,"small nuclear ribonucleoprotein 200kDa (U5)",23020,3,419.7,900.1 ,107.7 ,517.8 ,1142.9 
+340,PARK7,"parkinson protein 7",11315,3,419.8,830.3 ,717.3 ,,1804.2 
+341,DCUN1D2,"DCN1, defective in cullin neddylation 1, domain containing 2",55208,3,419.9,2813.4 ,18210.4 ,,
+342,PFDN5,"prefoldin subunit 5",5204,3,421.1,430.5 ,2413.5 ,2676.9 ,1360.5 
+343,SUGP2,"SURP and G patch domain containing 2",10147,3,421.6,2539.5 ,6887.3 ,,2230.5 
+344,DENR,"density-regulated protein",8562,3,423.1,161.9 ,907.6 ,,
+345,FLJ44342,"uncharacterized LOC645460",645460,3,424.0,,10391.8 ,,
+346,NELFA,"negative elongation factor complex member A",7469,1,424.4,14743.8 ,3233.5 ,,1336.2 
+347,GNL3,"guanine nucleotide binding protein-like 3 (nucleolar)",26354,3,425.1,160.5 ,446.1 ,902.4 ,166.0 
+348,PARP6,"poly (ADP-ribose) polymerase family, member 6",56965,3,426.7,3275.3 ,8141.5 ,7916.5 ,9876.4 
+349,ELP2,"elongator acetyltransferase complex subunit 2",55250,1,427.3,506.1 ,1126.9 ,,685.0 
+350,RPL7L1,"ribosomal protein L7-like 1",285855,3,428.7,1909.0 ,2387.8 ,3763.2 ,1744.7 
+351,ESD,"esterase D",2098,3,429.8,384.0 ,1132.8 ,3221.0 ,3996.1 
+352,NKTR,"natural killer cell triggering receptor",4820,3,433.2,506.3 ,4369.2 ,,
+353,NUP107,"nucleoporin 107kDa",57122,3,433.4,187.6 ,323.7 ,,270.1 
+354,USP7,"ubiquitin specific peptidase 7 (herpes virus-associated)",7874,3,433.6,562.3 ,883.8 ,,2969.4 
+355,SRSF1,"serine/arginine-rich splicing factor 1",6426,3,434.7,53.4 ,102.4 ,,286.4 
+356,RPL35,"ribosomal protein L35",11224,3,436.4,348.1 ,1015.0 ,,722.9 
+357,PRPF4B,"pre-mRNA processing factor 4B",8899,3,437.3,376.3 ,507.1 ,,752.2 
+358,MTPAP,"mitochondrial poly(A) polymerase",55149,3,437.7,791.2 ,11828.6 ,6001.9 ,4004.3 
+359,FAM24B,"family with sequence similarity 24, member B",196792,3,438.1,217.3 ,4865.8 ,,
+360,643287,"&nbsp;",643287,0,439.6,,,,
+361,RPS5,"ribosomal protein S5",6193,3,442.3,1308.9 ,569.0 ,2911.5 ,612.8 
+362,EEF1D,"eukaryotic translation elongation factor 1 delta (guanine nucleotide exchange protein)",1936,3,444.4,1344.9 ,3112.9 ,4507.4 ,194.4 
+363,PRRC2C,"proline-rich coiled-coil 2C",23215,3,445.4,2350.3 ,744.0 ,64.6 ,2180.7 
+364,7574,"&nbsp;",7574,0,446.5,1190.1 ,2438.2 ,2621.8 ,
+365,729926,"&nbsp;",729926,0,446.8,,,,
+366,FAM118A,"family with sequence similarity 118, member A",55007,3,449.0,4988.4 ,11086.7 ,,713.7 
+367,ILF3,"interleukin enhancer binding factor 3, 90kDa",3609,3,449.3,133.1 ,56.3 ,1189.4 ,553.4 
+368,PRKRIR,"protein-kinase, interferon-inducible double stranded RNA dependent inhibitor, repressor of (P58 repressor)",5612,3,449.4,552.2 ,965.3 ,761.3 ,1288.0 
+369,LIN7C,"lin-7 homolog C (C. elegans)",55327,3,450.2,2523.0 ,8873.8 ,,3852.3 
+370,KIAA0141,"KIAA0141",9812,3,452.1,9490.2 ,9073.5 ,305.3 ,3975.4 
+371,HSPA8,"heat shock 70kDa protein 8",3312,3,453.1,765.5 ,627.9 ,1720.4 ,4373.7 
+372,LRPPRC,"leucine-rich pentatricopeptide repeat containing",10128,3,454.0,156.0 ,447.6 ,1853.8 ,4151.2 
+373,NET1,"neuroepithelial cell transforming 1",10276,3,454.1,1654.6 ,79.1 ,131.0 ,2986.2 
+374,LTA4H,"leukotriene A4 hydrolase",4048,3,457.0,645.6 ,1114.5 ,7099.1 ,672.6 
+375,ZNF330,"zinc finger protein 330",27309,3,460.8,507.8 ,1728.2 ,9050.2 ,95.6 
+376,CNBP,"CCHC-type zinc finger, nucleic acid binding protein",7555,3,463.3,100.2 ,322.1 ,315.9 ,433.2 
+377,TMA7,"translation machinery associated 7 homolog (S. cerevisiae)",51372,3,463.5,1266.7 ,1242.0 ,523.5 ,
+378,CDK11A,"cyclin-dependent kinase 11A",728642,3,463.5,3451.6 ,4931.0 ,,11931.7 
+379,SEPT2,"septin 2",4735,3,465.2,895.6 ,327.1 ,737.7 ,1881.7 
+380,PABPC4,"poly(A) binding protein, cytoplasmic 4 (inducible form)",8761,3,465.9,474.0 ,1655.2 ,4580.3 ,907.4 
+381,HSF2,"heat shock transcription factor 2",3298,3,467.1,1151.2 ,2459.1 ,3668.6 ,686.0 
+382,ADNP,"activity-dependent neuroprotector homeobox",23394,3,469.7,816.2 ,493.6 ,78.2 ,1957.1 
+383,ZNF740,"zinc finger protein 740",283337,2,471.2,1193.4 ,688.7 ,6497.6 ,13023.1 
+384,PPA1,"pyrophosphatase (inorganic) 1",5464,3,472.5,817.8 ,717.2 ,,4252.1 
+385,RBM15,"RNA binding motif protein 15",64783,3,474.1,1041.5 ,6127.1 ,,675.2 
+386,LUC7L2,"LUC7-like 2 (S. cerevisiae)",51631,3,476.1,384.3 ,370.8 ,141.7 ,103.5 
+387,HLA-F-AS1,"HLA-F antisense RNA 1",285830,0,477.2,,17454.0 ,,
+388,RBM5,"RNA binding motif protein 5",10181,3,478.6,1035.6 ,2073.9 ,736.2 ,66.9 
+389,DNAJC2,"DnaJ (Hsp40) homolog, subfamily C, member 2",27000,3,479.3,232.1 ,573.2 ,,1204.0 
+390,METAP1,"methionyl aminopeptidase 1",23173,3,479.5,684.4 ,459.6 ,7600.8 ,1193.0 
+391,RPS9,"ribosomal protein S9",6203,3,481.5,13723.0 ,706.4 ,332.8 ,259.9 
+392,HSPD1,"heat shock 60kDa protein 1 (chaperonin)",3329,3,481.5,77.5 ,64.9 ,,768.9 
+393,HAUS3,"HAUS augmin-like complex, subunit 3",79441,3,482.3,628.6 ,8622.6 ,,
+394,SLC25A5,"solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 5",292,3,483.1,3925.6 ,197.8 ,3093.6 ,2894.1 
+395,DDX6,"DEAD (Asp-Glu-Ala-Asp) box helicase 6",1656,2,488.3,731.9 ,2383.8 ,,3362.6 
+396,CCT6A,"chaperonin containing TCP1, subunit 6A (zeta 1)",908,3,488.6,82.0 ,229.3 ,584.9 ,3551.1 
+397,ACP1,"acid phosphatase 1, soluble",52,3,489.2,639.0 ,326.7 ,,
+398,KDM3A,"lysine (K)-specific demethylase 3A",55818,3,489.8,1484.2 ,3211.1 ,3935.4 ,787.8 
+399,TARBP1,"TAR (HIV-1) RNA binding protein 1",6894,3,490.0,825.6 ,2262.9 ,5850.8 ,
+400,IK,"IK cytokine, down-regulator of HLA II",3550,3,490.4,319.3 ,351.9 ,9388.1 ,
+401,PAIP2,"poly(A) binding protein interacting protein 2",51247,3,492.3,1319.0 ,657.8 ,941.9 ,1259.5 
+402,GAR1,"GAR1 ribonucleoprotein",54433,3,492.9,498.2 ,96.8 ,200.4 ,
+403,HNRNPU-AS1,"HNRNPU antisense RNA 1",284702,3,493.2,,3201.5 ,,
+404,SUMO1,"small ubiquitin-like modifier 1",7341,3,497.4,452.5 ,686.5 ,,1493.1 
+405,CDV3,"CDV3 homolog (mouse)",55573,3,497.4,975.5 ,2075.8 ,2272.3 ,5189.2 
+406,MRPL3,"mitochondrial ribosomal protein L3",11222,3,497.7,175.8 ,465.0 ,,3329.7 
+407,YLPM1,"YLP motif containing 1",56252,3,498.1,1241.9 ,1088.5 ,2233.6 ,4456.4 
+408,TMEM123,"transmembrane protein 123",114908,3,498.8,1623.7 ,1527.0 ,,5635.6 
+409,GDI2,"GDP dissociation inhibitor 2",2665,3,501.9,236.8 ,663.5 ,2442.2 ,1939.5 
+410,NAA25,"N(alpha)-acetyltransferase 25, NatB auxiliary subunit",80018,3,502.2,737.0 ,1580.0 ,5237.1 ,4152.7 
+411,PIGY,"phosphatidylinositol glycan anchor biosynthesis, class Y",84992,3,503.1,1768.4 ,2701.7 ,,
+412,COX7A2L,"cytochrome c oxidase subunit VIIa polypeptide 2 like",9167,3,503.5,2511.6 ,2450.9 ,,1621.7 
+413,IPO5,"importin 5",3843,3,504.0,217.9 ,219.4 ,1197.7 ,2036.3 
+414,CLNS1A,"chloride channel, nucleotide-sensitive, 1A",1207,3,505.2,913.9 ,301.7 ,2920.4 ,1700.9 
+415,ZNF146,"zinc finger protein 146",7705,3,509.1,341.4 ,465.3 ,1771.5 ,
+416,DIMT1,"DIM1 dimethyladenosine transferase 1 homolog (S. cerevisiae)",27292,3,510.4,982.6 ,730.1 ,4038.3 ,576.4 
+417,USP1,"ubiquitin specific peptidase 1",7398,3,511.8,392.0 ,439.8 ,658.7 ,792.5 
+418,STRAP,"serine/threonine kinase receptor associated protein",11171,3,512.1,479.7 ,549.2 ,,998.3 
+419,CAND1,"cullin-associated and neddylation-dissociated 1",55832,3,515.6,286.0 ,1168.8 ,,1073.1 
+420,ATP5F1,"ATP synthase, H+ transporting, mitochondrial Fo complex, subunit B1",515,3,516.2,1821.2 ,887.0 ,834.7 ,2379.1 
+421,SIN3A,"SIN3 transcription regulator family member A",25942,3,518.3,2845.6 ,470.4 ,2937.7 ,2724.2 
+422,SNX5,"sorting nexin 5",27131,3,519.2,188.8 ,152.3 ,,
+423,KIAA0907,"KIAA0907",22889,3,519.4,1094.4 ,2053.1 ,192.4 ,49.0 
+424,DDX1,"DEAD (Asp-Glu-Ala-Asp) box helicase 1",1653,3,519.4,222.0 ,259.9 ,,586.5 
+425,SCAF8,"SR-related CTD-associated factor 8",22828,3,519.8,3940.1 ,3105.1 ,,1326.8 
+426,CLK4,"CDC-like kinase 4",57396,3,521.0,709.6 ,3410.1 ,1694.4 ,
+427,PTPN11,"protein tyrosine phosphatase, non-receptor type 11",5781,3,524.9,1023.5 ,1551.5 ,861.5 ,1542.1 
+428,RWDD4,"RWD domain containing 4",201965,3,524.9,1830.8 ,2913.4 ,2113.7 ,4029.3 
+429,PCBP2,"poly(rC) binding protein 2",5094,1,527.4,232.4 ,47.5 ,,1285.9 
+430,ZSCAN25,"zinc finger and SCAN domain containing 25",221785,2,528.1,3458.7 ,5134.4 ,4226.4 ,
+431,TOMM70A,"translocase of outer mitochondrial membrane 70 homolog A (S. cerevisiae)",9868,3,528.8,622.7 ,2534.0 ,8335.3 ,1708.5 
+432,92379,"&nbsp;",92379,0,528.9,,,,
+433,RPL36,"ribosomal protein L36",25873,3,529.1,11513.3 ,1526.7 ,,
+434,DYRK1A,"dual-specificity tyrosine-(Y)-phosphorylation regulated kinase 1A",1859,3,530.5,3878.5 ,6430.6 ,330.1 ,4125.9 
+435,FAM60A,"family with sequence similarity 60, member A",58516,2,530.6,3636.9 ,28.3 ,,130.9 
+436,CHD1,"chromodomain helicase DNA binding protein 1",1105,3,532.9,402.6 ,1854.8 ,587.4 ,1956.0 
+437,LOC644656,"uncharacterized LOC644656",644656,3,535.3,,2587.4 ,,
+438,BMS1,"BMS1 ribosome biogenesis factor",9790,3,536.5,270.6 ,862.2 ,4949.0 ,719.1 
+439,ATP5L,"ATP synthase, H+ transporting, mitochondrial Fo complex, subunit G",10632,3,538.1,465.6 ,1296.5 ,5321.0 ,3429.4 
+440,ATXN10,"ataxin 10",25814,3,541.3,1892.9 ,683.9 ,,846.4 
+441,GOLGA8A,"golgin A8 family, member A",23015,3,543.2,,3995.2 ,,
+442,AKAP17A,"A kinase (PRKA) anchor protein 17A",8227,3,543.5,,5196.1 ,503.2 ,
+443,GRSF1,"G-rich RNA sequence binding factor 1",2926,3,544.1,311.7 ,2025.5 ,955.6 ,9167.7 
+444,ENOPH1,"enolase-phosphatase 1",58478,3,545.5,409.3 ,1423.4 ,4062.4 ,1260.9 
+445,PNISR,"PNN-interacting serine/arginine-rich protein",25957,3,546.2,330.9 ,816.3 ,722.8 ,29.4 
+446,TGIF2,"TGFB-induced factor homeobox 2",60436,3,548.6,1374.8 ,193.1 ,,844.1 
+447,BMI1,"BMI1 proto-oncogene, polycomb ring finger",648,3,549.4,2298.7 ,3777.0 ,,
+448,RNF138,"ring finger protein 138, E3 ubiquitin protein ligase",51444,3,550.1,530.6 ,197.9 ,,617.0 
+449,NXF1,"nuclear RNA export factor 1",10482,3,550.5,1194.9 ,3746.8 ,2991.9 ,36.4 
+450,IER3IP1,"immediate early response 3 interacting protein 1",51124,3,551.3,1440.5 ,2778.0 ,,
+451,ZNF664,"zinc finger protein 664",144348,0,552.2,2025.0 ,1131.7 ,8728.9 ,
+452,UBQLN1,"ubiquilin 1",29979,3,558.5,3023.4 ,2122.4 ,,2769.8 
+453,RBM22,"RNA binding motif protein 22",55696,3,558.6,2581.1 ,414.3 ,2295.0 ,970.2 
+454,EWSR1,"EWS RNA-binding protein 1",2130,3,558.6,55.5 ,111.1 ,,
+455,SNRPA1,"small nuclear ribonucleoprotein polypeptide A'",6627,2,562.7,138.6 ,104.9 ,,
+456,GPBP1,"GC-rich promoter binding protein 1",65056,3,563.7,625.3 ,1586.2 ,149.9 ,3057.5 
+457,TCP1,"t-complex 1",6950,3,565.2,318.4 ,225.1 ,1845.2 ,1103.9 
+458,RDH14,"retinol dehydrogenase 14 (all-trans/9-cis/11-cis)",57665,3,566.7,4137.9 ,5224.3 ,857.6 ,1242.5 
+459,CSNK2A2,"casein kinase 2, alpha prime polypeptide",1459,2,566.7,3412.3 ,1718.8 ,8756.0 ,3450.8 
+460,FXR1,"fragile X mental retardation, autosomal homolog 1",8087,3,566.7,195.2 ,652.0 ,,1220.9 
+461,TRA2A,"transformer 2 alpha homolog (Drosophila)",29896,2,567.1,297.4 ,105.3 ,161.0 ,23.7 
+462,CDK3,"cyclin-dependent kinase 3",1018,3,567.5,10883.0 ,4602.2 ,12807.2 ,
+463,BRAP,"BRCA1 associated protein",8315,3,569.9,2009.1 ,3986.3 ,412.4 ,7795.5 
+464,PSMA1,"proteasome (prosome, macropain) subunit, alpha type, 1",5682,3,570.0,836.5 ,824.2 ,2595.1 ,1330.1 
+465,SLC12A2,"solute carrier family 12 (sodium/potassium/chloride transporter), member 2",6558,3,572.2,2436.2 ,7796.9 ,,4350.9 
+466,GID8,"GID complex subunit 8",54994,3,572.9,1860.2 ,360.1 ,1676.0 ,4233.9 
+467,VMA21,"VMA21 vacuolar H+-ATPase homolog (S. cerevisiae)",203547,2,575.6,2554.1 ,3267.8 ,,
+468,RPS17P5,"ribosomal protein S17 pseudogene 5",442216,0,576.2,,,,
+469,FAU,"Finkel-Biskis-Reilly murine sarcoma virus (FBR-MuSV) ubiquitously expressed",2197,3,576.3,2501.1 ,1380.5 ,8032.9 ,
+470,IKBKAP,"inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase complex-associated protein",8518,3,576.4,1526.5 ,2084.8 ,2333.1 ,1812.1 
+471,NARS,"asparaginyl-tRNA synthetase",4677,3,577.2,489.7 ,1230.6 ,,1701.6 
+472,FAM35A,"family with sequence similarity 35, member A",54537,3,578.8,1493.2 ,1080.7 ,4597.7 ,1748.2 
+473,SRSF9,"serine/arginine-rich splicing factor 9",8683,3,579.0,250.8 ,446.6 ,,1520.2 
+474,MRPL9,"mitochondrial ribosomal protein L9",65005,3,579.8,1361.2 ,1081.7 ,2336.9 ,1676.4 
+475,TSPYL4,"TSPY-like 4",23270,3,581.2,14073.2 ,5183.5 ,,8042.5 
+476,UQCRC2,"ubiquinol-cytochrome c reductase core protein II",7385,3,581.7,1177.9 ,1083.8 ,3707.8 ,2802.5 
+477,QTRT1,"queuine tRNA-ribosyltransferase 1",81890,3,583.7,3043.5 ,4785.0 ,,1207.0 
+478,HMGN4,"high mobility group nucleosomal binding domain 4",10473,3,583.8,2201.3 ,929.3 ,2376.6 ,
+479,UPF3A,"UPF3 regulator of nonsense transcripts homolog A (yeast)",65110,2,584.0,4843.2 ,453.4 ,3531.6 ,2213.3 
+480,PRKRIP1,"PRKR interacting protein 1 (IL11 inducible)",79706,3,586.5,3243.2 ,4663.7 ,,644.7 
+481,ANP32E,"acidic (leucine-rich) nuclear phosphoprotein 32 family, member E",81611,3,589.6,81.7 ,116.7 ,49.2 ,
+482,GUSBP4,"glucuronidase, beta pseudogene 4",375513,2,591.1,3323.4 ,8439.8 ,,
+483,UBE2E1,"ubiquitin-conjugating enzyme E2E 1",7324,3,591.3,2568.0 ,694.8 ,,
+484,UBA52,"ubiquitin A-52 residue ribosomal protein fusion product 1",7311,3,592.0,814.2 ,1684.3 ,,
+485,R3HDM2,"R3H domain containing 2",22864,3,594.4,6984.1 ,15203.2 ,5830.6 ,1176.5 
+486,IARS,"isoleucyl-tRNA synthetase",3376,3,594.9,528.0 ,919.8 ,,1843.3 
+487,RPL8,"ribosomal protein L8",6132,3,595.6,1774.5 ,679.4 ,2595.7 ,
+488,H2AFZ,"H2A histone family, member Z",3015,3,595.7,446.6 ,293.3 ,46.7 ,207.2 
+489,ZNHIT6,"zinc finger, HIT-type containing 6",54680,3,595.8,530.8 ,1058.5 ,,696.9 
+490,SNW1,"SNW domain containing 1",22938,3,596.9,313.9 ,339.5 ,1893.1 ,
+491,WDR59,"WD repeat domain 59",79726,3,597.2,3785.8 ,1139.3 ,9463.1 ,
+492,VCPKMT,"valosin containing protein lysine (K) methyltransferase",79609,3,598.8,562.3 ,7002.6 ,,
+493,POLR1C,"polymerase (RNA) I polypeptide C, 30kDa",9533,3,599.3,664.0 ,1586.8 ,,812.0 
+494,ZC3H11A,"zinc finger CCCH-type containing 11A",9877,3,600.1,1800.8 ,1613.5 ,2269.8 ,144.1 
+495,PTBP2,"polypyrimidine tract binding protein 2",58155,3,600.2,1313.3 ,2095.5 ,272.8 ,161.7 
+496,DDX42,"DEAD (Asp-Glu-Ala-Asp) box helicase 42",11325,1,603.2,154.1 ,248.9 ,5083.6 ,486.8 
+497,ZC3H8,"zinc finger CCCH-type containing 8",84524,3,603.5,685.5 ,1927.6 ,,126.8 
+498,PHF6,"PHD finger protein 6",84295,3,604.5,550.4 ,1056.3 ,31.9 ,
+499,THG1L,"tRNA-histidine guanylyltransferase 1-like (S. cerevisiae)",54974,3,605.7,120.7 ,1235.4 ,2816.7 ,787.9 
+500,SMARCC1,"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1",6599,3,606.0,148.8 ,51.9 ,,467.6 
+

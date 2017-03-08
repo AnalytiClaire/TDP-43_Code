@@ -1,0 +1,11 @@
+GO biological process complete,Homo sapiens - REFLIST (20972),upload_1 (464),upload_1 (expected),upload_1 (over/under),upload_1 (fold Enrichment),upload_1 (P-value)
+Unclassified (UNCLASSIFIED),3964,69,87.7,-,0.79,0.00E+00
+cellular protein modification process (GO:0006464),2891,102,63.96,+,1.59,9.01E-03
+protein modification process (GO:0036211),2891,102,63.96,+,1.59,9.01E-03
+ubiquitin-dependent protein catabolic process (GO:0006511),490,29,10.84,+,2.67,2.07E-02
+cell differentiation (GO:0030154),3286,111,72.7,+,1.53,2.09E-02
+modification-dependent protein catabolic process (GO:0019941),498,29,11.02,+,2.63,2.82E-02
+positive regulation of biological process (GO:0048518),5214,159,115.36,+,1.38,3.09E-02
+cellular developmental process (GO:0048869),3516,116,77.79,+,1.49,3.56E-02
+modification-dependent macromolecule catabolic process (GO:0043632),506,29,11.2,+,2.59,3.81E-02
+positive regulation of cellular process (GO:0048522),4713,146,104.27,+,1.4,4.19E-02

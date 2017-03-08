@@ -1,0 +1,58 @@
+GO biological process complete,Homo sapiens - REFLIST (20972),upload_1 (443),upload_1 (expected),upload_1 (over/under),upload_1 (fold Enrichment),upload_1 (P-value)
+Unclassified (UNCLASSIFIED),3964,47,83.73,-,0.56,0.00E+00
+single-multicellular organism process (GO:0044707),5402,186,114.11,+,1.63,6.96E-10
+system development (GO:0048731),4030,149,85.13,+,1.75,4.67E-09
+multicellular organism development (GO:0007275),4626,163,97.72,+,1.67,1.15E-08
+animal organ development (GO:0048513),2879,117,60.81,+,1.92,1.16E-08
+multicellular organismal process (GO:0032501),6461,204,136.48,+,1.49,1.07E-07
+anatomical structure development (GO:0048856),5075,170,107.2,+,1.59,2.09E-07
+single-organism developmental process (GO:0044767),5326,176,112.5,+,1.56,2.24E-07
+developmental process (GO:0032502),5421,178,114.51,+,1.55,2.72E-07
+positive regulation of biological process (GO:0048518),5214,172,110.14,+,1.56,5.28E-07
+positive regulation of cellular process (GO:0048522),4713,158,99.55,+,1.59,1.68E-06
+nervous system development (GO:0007399),2202,91,46.51,+,1.96,3.28E-06
+cell differentiation (GO:0030154),3286,117,69.41,+,1.69,4.17E-05
+single-organism process (GO:0044699),12433,319,262.63,+,1.21,1.38E-04
+regulation of signaling (GO:0023051),3096,110,65.4,+,1.68,1.63E-04
+generation of neurons (GO:0048699),1411,63,29.81,+,2.11,1.72E-04
+regulation of cell communication (GO:0010646),3048,108,64.38,+,1.68,2.65E-04
+regulation of cell differentiation (GO:0045595),1563,67,33.02,+,2.03,2.69E-04
+cell development (GO:0048468),1463,64,30.9,+,2.07,2.76E-04
+regulation of ion transport (GO:0043269),573,35,12.1,+,2.89,2.90E-04
+neurogenesis (GO:0022008),1502,65,31.73,+,2.05,3.16E-04
+cellular developmental process (GO:0048869),3516,119,74.27,+,1.6,5.22E-04
+regulation of multicellular organismal process (GO:0051239),2679,97,56.59,+,1.71,6.12E-04
+regulation of biological process (GO:0050789),10933,286,230.94,+,1.24,6.91E-04
+biological regulation (GO:0065007),11561,298,244.21,+,1.22,1.03E-03
+positive regulation of RNA metabolic process (GO:0051254),1408,60,29.74,+,2.02,1.90E-03
+positive regulation of nucleobase-containing compound metabolic process (GO:0045935),1650,67,34.85,+,1.92,1.97E-03
+regulation of developmental process (GO:0050793),2338,86,49.39,+,1.74,2.13E-03
+positive regulation of nitrogen compound metabolic process (GO:0051173),1760,70,37.18,+,1.88,2.18E-03
+positive regulation of nucleic acid-templated transcription (GO:1903508),1342,57,28.35,+,2.01,4.38E-03
+"positive regulation of transcription, DNA-templated (GO:0045893)",1342,57,28.35,+,2.01,4.38E-03
+single-organism cellular process (GO:0044763),11106,285,234.6,+,1.21,6.89E-03
+positive regulation of RNA biosynthetic process (GO:1902680),1362,57,28.77,+,1.98,6.95E-03
+anatomical structure morphogenesis (GO:0009653),2116,78,44.7,+,1.75,8.04E-03
+positive regulation of cellular metabolic process (GO:0031325),2835,97,59.88,+,1.62,8.22E-03
+animal organ morphogenesis (GO:0009887),878,42,18.55,+,2.26,8.73E-03
+regulation of cellular process (GO:0050794),10404,270,219.77,+,1.23,8.76E-03
+biological_process (GO:0008150),17008,396,359.27,+,1.1,1.12E-02
+positive regulation of macromolecule metabolic process (GO:0010604),2822,96,59.61,+,1.61,1.22E-02
+cation transport (GO:0006812),766,38,16.18,+,2.35,1.26E-02
+positive regulation of metabolic process (GO:0009893),3021,101,63.81,+,1.58,1.31E-02
+response to endogenous stimulus (GO:0009719),1465,59,30.95,+,1.91,1.47E-02
+neuron differentiation (GO:0030182),933,43,19.71,+,2.18,1.66E-02
+metal ion transport (GO:0030001),597,32,12.61,+,2.54,1.83E-02
+positive regulation of cell differentiation (GO:0045597),874,41,18.46,+,2.22,1.90E-02
+positive regulation of biosynthetic process (GO:0009891),1762,67,37.22,+,1.8,1.92E-02
+positive regulation of cellular biosynthetic process (GO:0031328),1730,66,36.54,+,1.81,2.07E-02
+positive regulation of gene expression (GO:0010628),1663,64,35.13,+,1.82,2.27E-02
+regulation of biological quality (GO:0065008),3542,113,74.82,+,1.51,2.45E-02
+regulation of multicellular organismal development (GO:2000026),1739,66,36.73,+,1.8,2.46E-02
+tissue development (GO:0009888),1533,60,32.38,+,1.85,2.90E-02
+regulation of membrane potential (GO:0042391),359,23,7.58,+,3.03,3.13E-02
+regulation of transcription from RNA polymerase II promoter (GO:0006357),1834,68,38.74,+,1.76,3.73E-02
+neuron development (GO:0048666),742,36,15.67,+,2.3,3.91E-02
+regulation of localization (GO:0032879),2512,86,53.06,+,1.62,3.91E-02
+positive regulation of macromolecule biosynthetic process (GO:0010557),1594,61,33.67,+,1.81,4.77E-02
+regulation of ion transmembrane transport (GO:0034765),396,24,8.36,+,2.87,4.86E-02

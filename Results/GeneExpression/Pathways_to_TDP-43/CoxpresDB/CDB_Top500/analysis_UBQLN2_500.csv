@@ -1,0 +1,161 @@
+GO biological process complete,Homo sapiens - REFLIST (20972),upload_1 (497),upload_1 (expected),upload_1 (over/under),upload_1 (fold Enrichment),upload_1 (P-value)
+Unclassified (UNCLASSIFIED),3964,41,93.94,-,0.44,0.00E+00
+cellular macromolecule metabolic process (GO:0044260),6784,288,160.77,+,1.79,7.93E-28
+regulation of macromolecule metabolic process (GO:0060255),5815,251,137.81,+,1.82,5.67E-23
+macromolecule metabolic process (GO:0043170),7488,295,177.45,+,1.66,6.35E-23
+regulation of gene expression (GO:0010468),4332,203,102.66,+,1.98,1.17E-20
+regulation of metabolic process (GO:0019222),6176,255,146.36,+,1.74,1.50E-20
+regulation of primary metabolic process (GO:0080090),5804,243,137.54,+,1.77,8.66E-20
+regulation of nitrogen compound metabolic process (GO:0051171),4390,202,104.04,+,1.94,1.64E-19
+macromolecule modification (GO:0043412),3162,163,74.93,+,2.18,4.22E-19
+regulation of RNA metabolic process (GO:0051252),3748,180,88.82,+,2.03,1.92E-18
+regulation of cellular metabolic process (GO:0031323),5856,241,138.78,+,1.74,1.93E-18
+regulation of cellular macromolecule biosynthetic process (GO:2000112),3979,187,94.3,+,1.98,2.07E-18
+regulation of nucleobase-containing compound metabolic process (GO:0019219),4091,190,96.95,+,1.96,2.99E-18
+regulation of macromolecule biosynthetic process (GO:0010556),4096,190,97.07,+,1.96,3.45E-18
+protein modification by small protein conjugation or removal (GO:0070647),904,77,21.42,+,3.59,4.16E-18
+protein modification by small protein conjugation (GO:0032446),771,70,18.27,+,3.83,1.30E-17
+cellular protein modification process (GO:0006464),2891,150,68.51,+,2.19,2.80E-17
+protein modification process (GO:0036211),2891,150,68.51,+,2.19,2.80E-17
+regulation of cellular biosynthetic process (GO:0031326),4278,192,101.38,+,1.89,8.24E-17
+regulation of biosynthetic process (GO:0009889),4332,193,102.66,+,1.88,1.41E-16
+cellular protein metabolic process (GO:0044267),3553,169,84.2,+,2.01,2.15E-16
+cellular metabolic process (GO:0044237),8641,306,204.78,+,1.49,4.23E-16
+regulation of RNA biosynthetic process (GO:2001141),3629,169,86,+,1.97,1.86E-15
+regulation of nucleic acid-templated transcription (GO:1903506),3612,168,85.6,+,1.96,2.87E-15
+"regulation of transcription, DNA-templated (GO:0006355)",3588,166,85.03,+,1.95,8.97E-15
+peptidyl-lysine modification (GO:0018205),321,42,7.61,+,5.52,1.09E-14
+primary metabolic process (GO:0044238),8722,302,206.7,+,1.46,5.18E-14
+nucleic acid metabolic process (GO:0090304),3986,175,94.46,+,1.85,1.23E-13
+RNA metabolic process (GO:0016070),3463,158,82.07,+,1.93,3.52E-13
+gene expression (GO:0010467),3785,167,89.7,+,1.86,6.68E-13
+negative regulation of gene expression (GO:0010629),1441,89,34.15,+,2.61,1.23E-12
+organic substance metabolic process (GO:0071704),9173,308,217.38,+,1.42,2.01E-12
+ubiquitin-dependent protein catabolic process (GO:0006511),490,48,11.61,+,4.13,2.62E-12
+metabolic process (GO:0008152),9573,317,226.86,+,1.4,2.78E-12
+negative regulation of macromolecule metabolic process (GO:0010605),2290,118,54.27,+,2.17,3.41E-12
+modification-dependent protein catabolic process (GO:0019941),498,48,11.8,+,4.07,4.81E-12
+modification-dependent macromolecule catabolic process (GO:0043632),506,48,11.99,+,4,8.71E-12
+protein metabolic process (GO:0019538),4130,174,97.87,+,1.78,9.09E-12
+cellular protein catabolic process (GO:0044257),562,50,13.32,+,3.75,2.49E-11
+proteolysis involved in cellular protein catabolic process (GO:0051603),544,49,12.89,+,3.8,3.03E-11
+"transcription, DNA-templated (GO:0006351)",2564,124,60.76,+,2.04,5.27E-11
+nucleic acid-templated transcription (GO:0097659),2565,124,60.79,+,2.04,5.42E-11
+protein catabolic process (GO:0030163),599,51,14.2,+,3.59,7.01E-11
+negative regulation of nitrogen compound metabolic process (GO:0051172),1465,86,34.72,+,2.48,7.77E-11
+protein ubiquitination (GO:0016567),651,53,15.43,+,3.44,1.17E-10
+negative regulation of metabolic process (GO:0009892),2490,120,59.01,+,2.03,2.16E-10
+negative regulation of cellular macromolecule biosynthetic process (GO:2000113),1279,78,30.31,+,2.57,2.44E-10
+RNA biosynthetic process (GO:0032774),2688,126,63.7,+,1.98,2.89E-10
+nucleobase-containing compound metabolic process (GO:0006139),4540,180,107.59,+,1.67,7.36E-10
+regulation of cellular process (GO:0050794),10404,328,246.56,+,1.33,1.02E-09
+negative regulation of macromolecule biosynthetic process (GO:0010558),1373,80,32.54,+,2.46,1.16E-09
+negative regulation of cellular metabolic process (GO:0031324),2308,112,54.7,+,2.05,1.33E-09
+chromatin organization (GO:0006325),653,51,15.47,+,3.3,1.81E-09
+cellular aromatic compound metabolic process (GO:0006725),4727,184,112.02,+,1.64,1.82E-09
+heterocycle metabolic process (GO:0046483),4677,182,110.84,+,1.64,2.79E-09
+chromatin modification (GO:0016569),465,42,11.02,+,3.81,2.85E-09
+regulation of biological process (GO:0050789),10933,337,259.09,+,1.3,7.97E-09
+biological regulation (GO:0065007),11561,351,273.98,+,1.28,8.24E-09
+cellular component organization (GO:0016043),5318,198,126.03,+,1.57,8.87E-09
+negative regulation of cellular biosynthetic process (GO:0031327),1434,80,33.98,+,2.35,1.05E-08
+cellular macromolecule catabolic process (GO:0044265),829,57,19.65,+,2.9,1.07E-08
+cellular response to stress (GO:0033554),1619,86,38.37,+,2.24,1.72E-08
+organic cyclic compound metabolic process (GO:1901360),4918,186,116.55,+,1.6,1.81E-08
+positive regulation of macromolecule metabolic process (GO:0010604),2822,125,66.88,+,1.87,1.99E-08
+cellular component organization or biogenesis (GO:0071840),5481,201,129.89,+,1.55,2.28E-08
+negative regulation of biosynthetic process (GO:0009890),1461,80,34.62,+,2.31,2.65E-08
+cellular macromolecule biosynthetic process (GO:0034645),3648,149,86.45,+,1.72,3.58E-08
+macromolecular complex subunit organization (GO:0043933),2059,100,48.79,+,2.05,3.65E-08
+macromolecule biosynthetic process (GO:0009059),3729,151,88.37,+,1.71,4.64E-08
+cell cycle (GO:0007049),1344,75,31.85,+,2.35,5.87E-08
+cellular nitrogen compound metabolic process (GO:0034641),5169,191,122.5,+,1.56,6.33E-08
+peptidyl-amino acid modification (GO:0018193),873,57,20.69,+,2.76,8.02E-08
+nucleobase-containing compound biosynthetic process (GO:0034654),3027,129,71.73,+,1.8,1.11E-07
+aromatic compound biosynthetic process (GO:0019438),3097,131,73.39,+,1.78,1.20E-07
+negative regulation of nucleobase-containing compound metabolic process (GO:0045934),1337,74,31.68,+,2.34,1.21E-07
+positive regulation of cellular metabolic process (GO:0031325),2835,123,67.18,+,1.83,1.26E-07
+biological_process (GO:0008150),17008,456,403.06,+,1.13,1.83E-07
+heterocycle biosynthetic process (GO:0018130),3085,130,73.11,+,1.78,1.93E-07
+positive regulation of metabolic process (GO:0009893),3021,128,71.59,+,1.79,2.04E-07
+cellular process (GO:0009987),14523,409,344.17,+,1.19,2.05E-07
+cellular nitrogen compound biosynthetic process (GO:0044271),3521,142,83.44,+,1.7,3.67E-07
+macromolecule catabolic process (GO:0009057),966,59,22.89,+,2.58,4.55E-07
+organic cyclic compound biosynthetic process (GO:1901362),3207,132,76,+,1.74,6.27E-07
+G-protein coupled receptor signaling pathway (GO:0007186),1202,2,28.49,-, < 0.2,7.36E-07
+negative regulation of RNA metabolic process (GO:0051253),1198,67,28.39,+,2.36,8.27E-07
+histone modification (GO:0016570),345,32,8.18,+,3.91,1.05E-06
+regulation of transcription from RNA polymerase II promoter (GO:0006357),1834,88,43.46,+,2.02,1.73E-06
+cellular response to DNA damage stimulus (GO:0006974),739,48,17.51,+,2.74,4.65E-06
+"negative regulation of transcription, DNA-templated (GO:0045892)",1092,61,25.88,+,2.36,6.58E-06
+positive regulation of RNA metabolic process (GO:0051254),1408,72,33.37,+,2.16,7.36E-06
+positive regulation of cellular process (GO:0048522),4713,171,111.69,+,1.53,7.39E-06
+negative regulation of RNA biosynthetic process (GO:1902679),1153,63,27.32,+,2.31,7.90E-06
+proteasomal protein catabolic process (GO:0010498),295,28,6.99,+,4.01,9.39E-06
+negative regulation of cellular process (GO:0048523),4232,157,100.29,+,1.57,1.15E-05
+negative regulation of nucleic acid-templated transcription (GO:1903507),1137,62,26.94,+,2.3,1.18E-05
+regulation of protein metabolic process (GO:0051246),2530,107,59.96,+,1.78,1.67E-05
+regulation of cellular protein metabolic process (GO:0032268),2368,102,56.12,+,1.82,1.71E-05
+proteasome-mediated ubiquitin-dependent protein catabolic process (GO:0043161),285,27,6.75,+,4,1.94E-05
+positive regulation of macromolecule biosynthetic process (GO:0010557),1594,77,37.78,+,2.04,2.16E-05
+negative regulation of biological process (GO:0048519),4571,165,108.32,+,1.52,2.61E-05
+nitrogen compound metabolic process (GO:0006807),5651,194,133.92,+,1.45,2.66E-05
+positive regulation of gene expression (GO:0010628),1663,79,39.41,+,2,2.70E-05
+positive regulation of nitrogen compound metabolic process (GO:0051173),1760,82,41.71,+,1.97,3.09E-05
+positive regulation of biological process (GO:0048518),5214,182,123.56,+,1.47,3.31E-05
+mRNA processing (GO:0006397),445,34,10.55,+,3.22,3.66E-05
+protein sumoylation (GO:0016925),116,17,2.75,+,6.18,4.23E-05
+positive regulation of RNA biosynthetic process (GO:1902680),1362,68,32.28,+,2.11,5.93E-05
+cellular biosynthetic process (GO:0044249),4599,164,108.99,+,1.5,7.30E-05
+mRNA metabolic process (GO:0016071),627,41,14.86,+,2.76,7.45E-05
+chromatin organization (GO:0016568),289,26,6.85,+,3.8,1.08E-04
+positive regulation of cellular biosynthetic process (GO:0031328),1730,79,41,+,1.93,1.48E-04
+positive regulation of nucleic acid-templated transcription (GO:1903508),1342,66,31.8,+,2.08,1.79E-04
+"positive regulation of transcription, DNA-templated (GO:0045893)",1342,66,31.8,+,2.08,1.79E-04
+organic substance biosynthetic process (GO:1901576),4698,165,111.33,+,1.48,1.90E-04
+protein K48-linked ubiquitination (GO:0070936),47,11,1.11,+,9.88,2.25E-04
+biosynthetic process (GO:0009058),4787,167,113.44,+,1.47,2.38E-04
+positive regulation of biosynthetic process (GO:0009891),1762,79,41.76,+,1.89,3.20E-04
+protein polyubiquitination (GO:0000209),244,23,5.78,+,3.98,3.27E-04
+posttranscriptional regulation of gene expression (GO:0010608),473,33,11.21,+,2.94,5.12E-04
+regulation of protein modification by small protein conjugation or removal (GO:1903320),273,24,6.47,+,3.71,5.94E-04
+cellular macromolecular complex assembly (GO:0034622),759,44,17.99,+,2.45,6.47E-04
+positive regulation of nucleobase-containing compound metabolic process (GO:0045935),1650,74,39.1,+,1.89,9.17E-04
+organelle organization (GO:0006996),2885,111,68.37,+,1.62,1.23E-03
+regulation of mRNA metabolic process (GO:1903311),130,16,3.08,+,5.19,1.25E-03
+peptidyl-lysine acetylation (GO:0018394),114,15,2.7,+,5.55,1.32E-03
+histone ubiquitination (GO:0016574),34,9,0.81,+,11.17,1.50E-03
+RNA splicing (GO:0008380),377,28,8.93,+,3.13,1.52E-03
+mitotic cell cycle (GO:0000278),788,44,18.67,+,2.36,1.80E-03
+regulation of protein modification process (GO:0031399),1687,74,39.98,+,1.85,2.15E-03
+regulation of protein ubiquitination (GO:0031396),251,22,5.95,+,3.7,2.18E-03
+regulation of cell cycle (GO:0051726),967,50,22.92,+,2.18,2.55E-03
+protein-DNA complex subunit organization (GO:0071824),214,20,5.07,+,3.94,2.86E-03
+positive regulation of protein metabolic process (GO:0051247),1514,68,35.88,+,1.9,3.07E-03
+positive regulation of cellular protein metabolic process (GO:0032270),1426,65,33.79,+,1.92,3.47E-03
+small molecule metabolic process (GO:0044281),1668,13,39.53,-,0.33,3.55E-03
+histone acetylation (GO:0016573),107,14,2.54,+,5.52,3.63E-03
+cellular localization (GO:0051641),1979,82,46.9,+,1.75,4.48E-03
+cell cycle process (GO:0022402),1108,54,26.26,+,2.06,5.11E-03
+protein acylation (GO:0043543),165,17,3.91,+,4.35,5.89E-03
+internal peptidyl-lysine acetylation (GO:0018393),112,14,2.65,+,5.27,6.19E-03
+protein-DNA complex assembly (GO:0065004),187,18,4.43,+,4.06,7.28E-03
+protein acetylation (GO:0006473),134,15,3.18,+,4.72,9.71E-03
+mitotic cell cycle process (GO:1903047),760,41,18.01,+,2.28,1.12E-02
+internal protein amino acid acetylation (GO:0006475),118,14,2.8,+,5.01,1.13E-02
+histone monoubiquitination (GO:0010390),23,7,0.55,+,12.84,1.41E-02
+oxoacid metabolic process (GO:0043436),765,2,18.13,-, < 0.2,1.55E-02
+carboxylic acid metabolic process (GO:0019752),760,2,18.01,-, < 0.2,1.74E-02
+proteolysis (GO:0006508),1217,56,28.84,+,1.94,1.79E-02
+protein localization (GO:0008104),1790,74,42.42,+,1.74,1.91E-02
+organic acid metabolic process (GO:0006082),844,3,20,-, < 0.2,1.96E-02
+regulation of proteasomal protein catabolic process (GO:0061136),144,15,3.41,+,4.4,2.31E-02
+gene silencing (GO:0016458),186,17,4.41,+,3.86,2.88E-02
+regulation of proteolysis involved in cellular protein catabolic process (GO:1903050),228,19,5.4,+,3.52,2.91E-02
+macromolecular complex assembly (GO:0065003),1393,61,33.01,+,1.85,2.91E-02
+regulation of cellular protein catabolic process (GO:1903362),250,20,5.92,+,3.38,2.95E-02
+regulation of translation (GO:0006417),345,24,8.18,+,2.94,3.44E-02
+protein monoubiquitination (GO:0006513),51,9,1.21,+,7.45,4.04E-02
+protein transport (GO:0015031),1252,56,29.67,+,1.89,4.12E-02
+regulation of cellular amide metabolic process (GO:0034248),374,25,8.86,+,2.82,4.29E-02
+protein ubiquitination involved in ubiquitin-dependent protein catabolic process (GO:0042787),152,15,3.6,+,4.16,4.38E-02
