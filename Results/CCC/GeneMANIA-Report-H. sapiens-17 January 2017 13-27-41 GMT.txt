@@ -1,0 +1,1826 @@
+GeneMANIA Results
+Plugin Version	3.4.1 (20160523-2245)
+Data Version	2014-08-12
+Report Generated	Tue Jan 17 13:28:01 GMT 2017
+
+Gene	Score	Description
+SLC18A3		solute carrier family 18 (vesicular acetylcholine transporter), member 3 [Source:HGNC Symbol;Acc:10936]
+UBQLN3		ubiquilin 3 [Source:HGNC Symbol;Acc:12510]
+PON3		paraoxonase 3 [Source:HGNC Symbol;Acc:9206]
+CHCHD10		coiled-coil-helix-coiled-coil-helix domain containing 10 [Source:HGNC Symbol;Acc:15559]
+PVALB		parvalbumin [Source:HGNC Symbol;Acc:9704]
+PGA4		pepsinogen 4, group I (pepsinogen A) [Source:HGNC Symbol;Acc:8886]
+C4orf36		chromosome 4 open reading frame 36 [Source:HGNC Symbol;Acc:28386]
+ZNF470		zinc finger protein 470 [Source:HGNC Symbol;Acc:22220]
+CDR1		cerebellar degeneration-related protein 1, 34kDa [Source:HGNC Symbol;Acc:1798]
+PGA5		pepsinogen 5, group I (pepsinogen A) [Source:HGNC Symbol;Acc:8887]
+PGA3		pepsinogen 3, group I (pepsinogen A) [Source:HGNC Symbol;Acc:8885]
+SPG11		spastic paraplegia 11 (autosomal recessive) [Source:HGNC Symbol;Acc:11226]
+PIGW		phosphatidylinositol glycan anchor biosynthesis, class W [Source:HGNC Symbol;Acc:23213]
+TMEM106B		transmembrane protein 106B [Source:HGNC Symbol;Acc:22407]
+C4BPB		complement component 4 binding protein, beta [Source:HGNC Symbol;Acc:1328]
+C9orf72		chromosome 9 open reading frame 72 [Source:HGNC Symbol;Acc:28337]
+C8A		complement component 8, alpha polypeptide [Source:HGNC Symbol;Acc:1352]
+CFD		complement factor D (adipsin) [Source:HGNC Symbol;Acc:2771]
+F13B		coagulation factor XIII, B polypeptide [Source:HGNC Symbol;Acc:3534]
+C8G		complement component 8, gamma polypeptide [Source:HGNC Symbol;Acc:1354]
+CHAT		choline O-acetyltransferase [Source:HGNC Symbol;Acc:1912]
+SETX		senataxin [Source:HGNC Symbol;Acc:445]
+SMN2		survival of motor neuron 2, centromeric [Source:HGNC Symbol;Acc:11118]
+RNPEP		arginyl aminopeptidase (aminopeptidase B) [Source:HGNC Symbol;Acc:10078]
+C3AR1		complement component 3a receptor 1 [Source:HGNC Symbol;Acc:1319]
+C8B		complement component 8, beta polypeptide [Source:HGNC Symbol;Acc:1353]
+C1S		complement component 1, s subcomponent [Source:HGNC Symbol;Acc:1247]
+C6		complement component 6 [Source:HGNC Symbol;Acc:1339]
+F3		coagulation factor III (thromboplastin, tissue factor) [Source:HGNC Symbol;Acc:3541]
+C7		complement component 7 [Source:HGNC Symbol;Acc:1346]
+C9		complement component 9 [Source:HGNC Symbol;Acc:1358]
+C1R		complement component 1, r subcomponent [Source:HGNC Symbol;Acc:1246]
+CAMK1G		calcium/calmodulin-dependent protein kinase IG [Source:HGNC Symbol;Acc:14585]
+MAOB		monoamine oxidase B [Source:HGNC Symbol;Acc:6834]
+CFI		complement factor I [Source:HGNC Symbol;Acc:5394]
+ALS2		amyotrophic lateral sclerosis 2 (juvenile) [Source:HGNC Symbol;Acc:443]
+SERPIND1		serpin peptidase inhibitor, clade D (heparin cofactor), member 1 [Source:HGNC Symbol;Acc:4838]
+TPK1		thiamin pyrophosphokinase 1 [Source:HGNC Symbol;Acc:17358]
+SLC33A1		solute carrier family 33 (acetyl-CoA transporter), member 1 [Source:HGNC Symbol;Acc:95]
+PON2		paraoxonase 2 [Source:HGNC Symbol;Acc:9205]
+TREM2		triggering receptor expressed on myeloid cells 2 [Source:HGNC Symbol;Acc:17761]
+HNRNPA1L2		heterogeneous nuclear ribonucleoprotein A1-like 2 [Source:HGNC Symbol;Acc:27067]
+C5		complement component 5 [Source:HGNC Symbol;Acc:1331]
+F7		coagulation factor VII (serum prothrombin conversion accelerator) [Source:HGNC Symbol;Acc:3544]
+F9		coagulation factor IX [Source:HGNC Symbol;Acc:3551]
+CALB2		calbindin 2 [Source:HGNC Symbol;Acc:1435]
+C4A		complement component 4A (Rodgers blood group) [Source:HGNC Symbol;Acc:1323]
+SLC1A3		solute carrier family 1 (glial high affinity glutamate transporter), member 3 [Source:HGNC Symbol;Acc:10941]
+BDKRB1		bradykinin receptor B1 [Source:HGNC Symbol;Acc:1029]
+F5		coagulation factor V (proaccelerin, labile factor) [Source:HGNC Symbol;Acc:3542]
+MT3		metallothionein 3 [Source:HGNC Symbol;Acc:7408]
+DPP6		dipeptidyl-peptidase 6 [Source:HGNC Symbol;Acc:3010]
+SLC1A2		solute carrier family 1 (glial high affinity glutamate transporter), member 2 [Source:HGNC Symbol;Acc:10940]
+F13A1		coagulation factor XIII, A1 polypeptide [Source:HGNC Symbol;Acc:3531]
+C2		complement component 2 [Source:HGNC Symbol;Acc:1248]
+TMOD2		tropomodulin 2 (neuronal) [Source:HGNC Symbol;Acc:11872]
+FGGY		FGGY carbohydrate kinase domain containing [Source:HGNC Symbol;Acc:25610]
+C5AR1		complement component 5a receptor 1 [Source:HGNC Symbol;Acc:1338]
+F11		coagulation factor XI [Source:HGNC Symbol;Acc:3529]
+NEFM		neurofilament, medium polypeptide [Source:HGNC Symbol;Acc:7734]
+FIG4		FIG4 homolog, SAC1 lipid phosphatase domain containing (S. cerevisiae) [Source:HGNC Symbol;Acc:16873]
+DAO		D-amino-acid oxidase [Source:HGNC Symbol;Acc:2671]
+FOLH1		folate hydrolase (prostate-specific membrane antigen) 1 [Source:HGNC Symbol;Acc:3788]
+SERPINC1		serpin peptidase inhibitor, clade C (antithrombin), member 1 [Source:HGNC Symbol;Acc:775]
+PON1		paraoxonase 1 [Source:HGNC Symbol;Acc:9204]
+KLKB1		kallikrein B, plasma (Fletcher factor) 1 [Source:HGNC Symbol;Acc:6371]
+NES		nestin [Source:HGNC Symbol;Acc:7756]
+NEFH		neurofilament, heavy polypeptide [Source:HGNC Symbol;Acc:7737]
+CR1		complement component (3b/4b) receptor 1 (Knops blood group) [Source:HGNC Symbol;Acc:2334]
+THBD		thrombomodulin [Source:HGNC Symbol;Acc:11784]
+CPB2		carboxypeptidase B2 (plasma) [Source:HGNC Symbol;Acc:2300]
+C1QC		complement component 1, q subcomponent, C chain [Source:HGNC Symbol;Acc:1245]
+PRPH		peripherin [Source:HGNC Symbol;Acc:9461]
+SLC1A1		solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system Xag), member 1 [Source:HGNC Symbol;Acc:10939]
+CTSC		cathepsin C [Source:HGNC Symbol;Acc:2528]
+ECE1		endothelin converting enzyme 1 [Source:HGNC Symbol;Acc:3146]
+CST3		cystatin C [Source:HGNC Symbol;Acc:2475]
+C4BPA		complement component 4 binding protein, alpha [Source:HGNC Symbol;Acc:1325]
+HNRNPDL		heterogeneous nuclear ribonucleoprotein D-like [Source:HGNC Symbol;Acc:5037]
+AIF1		allograft inflammatory factor 1 [Source:HGNC Symbol;Acc:352]
+CTSH		cathepsin H [Source:HGNC Symbol;Acc:2535]
+GFM1		G elongation factor, mitochondrial 1 [Source:HGNC Symbol;Acc:13780]
+SERTAD3		SERTA domain containing 3 [Source:HGNC Symbol;Acc:17931]
+FGA		fibrinogen alpha chain [Source:HGNC Symbol;Acc:3661]
+F10		coagulation factor X [Source:HGNC Symbol;Acc:3528]
+PLEKHB1		pleckstrin homology domain containing, family B (evectins) member 1 [Source:HGNC Symbol;Acc:19079]
+GRIK1		glutamate receptor, ionotropic, kainate 1 [Source:HGNC Symbol;Acc:4579]
+TSPO		translocator protein (18kDa) [Source:HGNC Symbol;Acc:1158]
+TRPM7		transient receptor potential cation channel, subfamily M, member 7 [Source:HGNC Symbol;Acc:17994]
+MASP2		mannan-binding lectin serine peptidase 2 [Source:HGNC Symbol;Acc:6902]
+F2		coagulation factor II (thrombin) [Source:HGNC Symbol;Acc:3535]
+ARHGEF2		Rho/Rac guanine nucleotide exchange factor (GEF) 2 [Source:HGNC Symbol;Acc:682]
+CCS		copper chaperone for superoxide dismutase [Source:HGNC Symbol;Acc:1613]
+DUSP11		dual specificity phosphatase 11 (RNA/RNP complex 1-interacting) [Source:HGNC Symbol;Acc:3066]
+SSR1		signal sequence receptor, alpha [Source:HGNC Symbol;Acc:11323]
+SYP		synaptophysin [Source:HGNC Symbol;Acc:11506]
+MBL2		mannose-binding lectin (protein C) 2, soluble [Source:HGNC Symbol;Acc:6922]
+F12		coagulation factor XII (Hageman factor) [Source:HGNC Symbol;Acc:3530]
+GRIA4		glutamate receptor, ionotropic, AMPA 4 [Source:HGNC Symbol;Acc:4574]
+SERPINE1		serpin peptidase inhibitor, clade E (nexin, plasminogen activator inhibitor type 1), member 1 [Source:HGNC Symbol;Acc:8583]
+GLG1		golgi glycoprotein 1 [Source:HGNC Symbol;Acc:4316]
+SERPINA5		serpin peptidase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 5 [Source:HGNC Symbol;Acc:8723]
+C1QB		complement component 1, q subcomponent, B chain [Source:HGNC Symbol;Acc:1242]
+MATR3		matrin 3 [Source:HGNC Symbol;Acc:6912]
+SERPING1		serpin peptidase inhibitor, clade G (C1 inhibitor), member 1 [Source:HGNC Symbol;Acc:1228]
+SPAST		spastin [Source:HGNC Symbol;Acc:11233]
+GAP43		growth associated protein 43 [Source:HGNC Symbol;Acc:4140]
+CNR1		cannabinoid receptor 1 (brain) [Source:HGNC Symbol;Acc:2159]
+KNG1		kininogen 1 [Source:HGNC Symbol;Acc:6383]
+PROS1		protein S (alpha) [Source:HGNC Symbol;Acc:9456]
+NAIP		NLR family, apoptosis inhibitory protein [Source:HGNC Symbol;Acc:7634]
+ALAD		aminolevulinate dehydratase [Source:HGNC Symbol;Acc:395]
+SERPINE2		serpin peptidase inhibitor, clade E (nexin, plasminogen activator inhibitor type 1), member 2 [Source:HGNC Symbol;Acc:8951]
+TFPI		tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor) [Source:HGNC Symbol;Acc:11760]
+RNF19A		ring finger protein 19A, RBR E3 ubiquitin protein ligase [Source:HGNC Symbol;Acc:13432]
+MASP1		mannan-binding lectin serine peptidase 1 (C4/C2 activating component of Ra-reactive factor) [Source:HGNC Symbol;Acc:6901]
+CFB		complement factor B [Source:HGNC Symbol;Acc:1037]
+UNC13A		unc-13 homolog A (C. elegans) [Source:HGNC Symbol;Acc:23150]
+PLAU		plasminogen activator, urokinase [Source:HGNC Symbol;Acc:9052]
+BDKRB2		bradykinin receptor B2 [Source:HGNC Symbol;Acc:1030]
+CNTFR		ciliary neurotrophic factor receptor [Source:HGNC Symbol;Acc:2170]
+SIGMAR1		sigma non-opioid intracellular receptor 1 [Source:HGNC Symbol;Acc:8157]
+SERPINF2		serpin peptidase inhibitor, clade F (alpha-2 antiplasmin, pigment epithelium derived factor), member 2 [Source:HGNC Symbol;Acc:9075]
+RPS27A		ribosomal protein S27a [Source:HGNC Symbol;Acc:10417]
+F2R		coagulation factor II (thrombin) receptor [Source:HGNC Symbol;Acc:3537]
+TH		tyrosine hydroxylase [Source:HGNC Symbol;Acc:11782]
+ATXN2		ataxin 2 [Source:HGNC Symbol;Acc:10555]
+PROC		protein C (inactivator of coagulation factors Va and VIIIa) [Source:HGNC Symbol;Acc:9451]
+VWF		von Willebrand factor [Source:HGNC Symbol;Acc:12726]
+VPS54		vacuolar protein sorting 54 homolog (S. cerevisiae) [Source:HGNC Symbol;Acc:18652]
+FGB		fibrinogen beta chain [Source:HGNC Symbol;Acc:3662]
+CD59		CD59 molecule, complement regulatory protein [Source:HGNC Symbol;Acc:1689]
+CNTF		ciliary neurotrophic factor [Source:HGNC Symbol;Acc:2169]
+GSR		glutathione reductase [Source:HGNC Symbol;Acc:4623]
+GFAP		glial fibrillary acidic protein [Source:HGNC Symbol;Acc:4235]
+KIFAP3		kinesin-associated protein 3 [Source:HGNC Symbol;Acc:17060]
+FGG		fibrinogen gamma chain [Source:HGNC Symbol;Acc:3694]
+VAPB		VAMP (vesicle-associated membrane protein)-associated protein B and C [Source:HGNC Symbol;Acc:12649]
+GDNF		glial cell derived neurotrophic factor [Source:HGNC Symbol;Acc:4232]
+HEXA		hexosaminidase A (alpha polypeptide) [Source:HGNC Symbol;Acc:4878]
+CD55		CD55 molecule, decay accelerating factor for complement (Cromer blood group) [Source:HGNC Symbol;Acc:2665]
+PLAT		plasminogen activator, tissue [Source:HGNC Symbol;Acc:9051]
+CYFIP2		cytoplasmic FMR1 interacting protein 2 [Source:HGNC Symbol;Acc:13760]
+SOD2		superoxide dismutase 2, mitochondrial [Source:HGNC Symbol;Acc:11180]
+GRIK2		glutamate receptor, ionotropic, kainate 2 [Source:HGNC Symbol;Acc:4580]
+F8		coagulation factor VIII, procoagulant component [Source:HGNC Symbol;Acc:3546]
+CALB1		calbindin 1, 28kDa [Source:HGNC Symbol;Acc:1434]
+C1QA		complement component 1, q subcomponent, A chain [Source:HGNC Symbol;Acc:1241]
+UTS2R		urotensin 2 receptor [Source:HGNC Symbol;Acc:4468]
+GRIA2		glutamate receptor, ionotropic, AMPA 2 [Source:HGNC Symbol;Acc:4572]
+XBP1		X-box binding protein 1 [Source:HGNC Symbol;Acc:12801]
+CHMP2B		charged multivesicular body protein 2B [Source:HGNC Symbol;Acc:24537]
+NGF		nerve growth factor (beta polypeptide) [Source:HGNC Symbol;Acc:7808]
+TUBA4A		tubulin, alpha 4a [Source:HGNC Symbol;Acc:12407]
+PLG		plasminogen [Source:HGNC Symbol;Acc:9071]
+PFN1		profilin 1 [Source:HGNC Symbol;Acc:8881]
+CASP14 (MICE)		caspase 14, apoptosis-related cysteine peptidase [Source:HGNC Symbol;Acc:1502]
+UBQLN2		ubiquilin 2 [Source:HGNC Symbol;Acc:12509]
+CD46		CD46 molecule, complement regulatory protein [Source:HGNC Symbol;Acc:6953]
+BDNF		brain-derived neurotrophic factor [Source:HGNC Symbol;Acc:1033]
+MAP2		microtubule-associated protein 2 [Source:HGNC Symbol;Acc:6839]
+NTRK2		neurotrophic tyrosine kinase, receptor, type 2 [Source:HGNC Symbol;Acc:8032]
+ANG		angiogenin, ribonuclease, RNase A family, 5 [Source:HGNC Symbol;Acc:483]
+CFH		complement factor H [Source:HGNC Symbol;Acc:4883]
+GRIA1		glutamate receptor, ionotropic, AMPA 1 [Source:HGNC Symbol;Acc:4571]
+BTBD10		BTB (POZ) domain containing 10 [Source:HGNC Symbol;Acc:21445]
+GRN		granulin [Source:HGNC Symbol;Acc:4601]
+FUS		fused in sarcoma [Source:HGNC Symbol;Acc:4010]
+TIAM1		T-cell lymphoma invasion and metastasis 1 [Source:HGNC Symbol;Acc:11805]
+DYNC1H1		dynein, cytoplasmic 1, heavy chain 1 [Source:HGNC Symbol;Acc:2961]
+NOS1		nitric oxide synthase 1 (neuronal) [Source:HGNC Symbol;Acc:7872]
+GLUL		glutamate-ammonia ligase [Source:HGNC Symbol;Acc:4341]
+CR2		complement component (3d/Epstein Barr virus) receptor 2 [Source:HGNC Symbol;Acc:2336]
+FGF1		fibroblast growth factor 1 (acidic) [Source:HGNC Symbol;Acc:3665]
+IL10RB		interleukin 10 receptor, beta [Source:HGNC Symbol;Acc:5965]
+MAPT		microtubule-associated protein tau [Source:HGNC Symbol;Acc:6893]
+LMNB1		lamin B1 [Source:HGNC Symbol;Acc:6637]
+ADA		adenosine deaminase [Source:HGNC Symbol;Acc:186]
+NGFR		nerve growth factor receptor [Source:HGNC Symbol;Acc:7809]
+PPARGC1A		peroxisome proliferator-activated receptor gamma, coactivator 1 alpha [Source:HGNC Symbol;Acc:9237]
+PLAUR		plasminogen activator, urokinase receptor [Source:HGNC Symbol;Acc:9053]
+HNRNPC		heterogeneous nuclear ribonucleoprotein C (C1/C2) [Source:HGNC Symbol;Acc:5035]
+SOD1		superoxide dismutase 1, soluble [Source:HGNC Symbol;Acc:11179]
+C3		complement component 3 [Source:HGNC Symbol;Acc:1318]
+MAG		myelin associated glycoprotein [Source:HGNC Symbol;Acc:6783]
+HSF1		heat shock transcription factor 1 [Source:HGNC Symbol;Acc:5224]
+RTN4		reticulon 4 [Source:HGNC Symbol;Acc:14085]
+BCR		breakpoint cluster region [Source:HGNC Symbol;Acc:1014]
+SERPINA1		serpin peptidase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 1 [Source:HGNC Symbol;Acc:8941]
+HSPB1		heat shock 27kDa protein 1 [Source:HGNC Symbol;Acc:5246]
+PAWR		PRKC, apoptosis, WT1, regulator [Source:HGNC Symbol;Acc:8614]
+TFRC		transferrin receptor [Source:HGNC Symbol;Acc:11763]
+CYCS		cytochrome c, somatic [Source:HGNC Symbol;Acc:19986]
+APEX1		APEX nuclease (multifunctional DNA repair enzyme) 1 [Source:HGNC Symbol;Acc:587]
+CDK5		cyclin-dependent kinase 5 [Source:HGNC Symbol;Acc:1774]
+IGF1		insulin-like growth factor 1 (somatomedin C) [Source:HGNC Symbol;Acc:5464]
+HSPA5		heat shock 70kDa protein 5 (glucose-regulated protein, 78kDa) [Source:HGNC Symbol;Acc:5238]
+DCTN1		dynactin 1 [Source:HGNC Symbol;Acc:2711]
+CASP1		caspase 1, apoptosis-related cysteine peptidase [Source:HGNC Symbol;Acc:1499]
+TBK1		TANK-binding kinase 1 [Source:HGNC Symbol;Acc:11584]
+A2M		alpha-2-macroglobulin [Source:HGNC Symbol;Acc:7]
+ZNF512B		zinc finger protein 512B [Source:HGNC Symbol;Acc:29212]
+SMN1		survival of motor neuron 1, telomeric [Source:HGNC Symbol;Acc:11117]
+PRNP		prion protein [Source:HGNC Symbol;Acc:9449]
+HNRNPA1		heterogeneous nuclear ribonucleoprotein A1 [Source:HGNC Symbol;Acc:5031]
+ERBB4		v-erb-b2 avian erythroblastic leukemia viral oncogene homolog 4 [Source:HGNC Symbol;Acc:3432]
+PSEN1		presenilin 1 [Source:HGNC Symbol;Acc:9508]
+OPTN		optineurin [Source:HGNC Symbol;Acc:17142]
+SQSTM1		sequestosome 1 [Source:HGNC Symbol;Acc:11280]
+CASP3		caspase 3, apoptosis-related cysteine peptidase [Source:HGNC Symbol;Acc:1504]
+HTT		huntingtin [Source:HGNC Symbol;Acc:4851]
+CREBBP		CREB binding protein [Source:HGNC Symbol;Acc:2348]
+TARDBP		TAR DNA binding protein [Source:HGNC Symbol;Acc:11571]
+EP300		E1A binding protein p300 [Source:HGNC Symbol;Acc:3373]
+VCP		valosin containing protein [Source:HGNC Symbol;Acc:12666]
+SNCA		synuclein, alpha (non A4 component of amyloid precursor) [Source:HGNC Symbol;Acc:11138]
+APP		amyloid beta (A4) precursor protein [Source:HGNC Symbol;Acc:620]
+
+Network Group	Network	Weight	Title	Authors	Year	Publication	PMID	URL	Processing Method	Interactions	Source	Source URL	Tags
+Physical interactions		100.00
+	Blandin-Richard-2013	12.27	A human skeletal muscle interactome centered on proteins involved in muscular dystrophies: LGMD interactome.	Blandin, Marchand, Charton, Danièle, Gicquel, Boucheteil, Bentaib, Barrault, Stockholm, Bartoli, Richard	2013	Skelet Muscle	23414517	http://www.ncbi.nlm.nih.gov/pubmed/23414517	Direct interaction	658	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	McFarland-Nussbaum-2008	11.67	Proteomics analysis identifies phosphorylation-dependent alpha-synuclein protein interactions.	McFarland, Ellis, Markey, Nussbaum	2008	Mol Cell Proteomics	18614564	http://www.ncbi.nlm.nih.gov/pubmed/18614564	Direct interaction	157	IREF	http://irefindex.uio.no/wiki/iRefIndex	Brain,Nervous System
+	IREF-INNATEDB	11.02							Direct interaction	3870	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	IREF-OPHID	8.54							Direct interaction	44492	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	IREF-BIOGRID	7.23							Direct interaction	127207	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	IREF-DIP	7.02							Direct interaction	3719	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	Freibaum-Taylor-2010	6.14	Global analysis of TDP-43 interacting proteins reveals strong association with RNA splicing and translation machinery.	Freibaum, Chitta, High, Taylor	2010	J Proteome Res	20020773	http://www.ncbi.nlm.nih.gov/pubmed/20020773	Direct interaction	222	BIOGRID	http://thebiogrid.org/	Transcription Factors,Cultured Cells,Cell Line,Immune System
+	Behrends-Harper-2010	5.91	Network organization of the human autophagy system.	Behrends, Sowa, Gygi, Harper	2010	Nature	20562859	http://www.ncbi.nlm.nih.gov/pubmed/20562859	Direct interaction	766	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	Yu-Chow-2013	5.83	VCP phosphorylation-dependent interaction partners prevent apoptosis in Helicobacter pylori-infected gastric epithelial cells.	Yu, Yang, Chang, Chuang, Lin, Wu, Chow	2013	PLoS One	23383273	http://www.ncbi.nlm.nih.gov/pubmed/23383273	Direct interaction	272	IREF	http://irefindex.uio.no/wiki/iRefIndex	Cultured Cells,Signal Transduction,Cancer,Cell Proliferation,Apoptosis,Cell Line,Epithelial Cells
+	Dyer-Sobral-2010	4.04	The human-bacterial pathogen protein interaction networks of Bacillus anthracis, Francisella tularensis, and Yersinia pestis.	Dyer, Neff, Dufford, Rivera, Shattuck, Bassaganya-Riera, Murali, Sobral	2010	PLoS One	20711500	http://www.ncbi.nlm.nih.gov/pubmed/20711500	Direct interaction	583	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	Jeronimo-Coulombe-2007	3.81	Systematic analysis of the protein interaction network for the human transcription machinery reveals the identity of the 7SK capping enzyme.	Jeronimo, Forget, Bouchard, Li, Chua, Poitras, Thérien, Bergeron, Bourassa, Greenblatt, Chabot, Poirier, Hughes, Blanchette, Price, Coulombe	2007	Mol Cell	17643375	http://www.ncbi.nlm.nih.gov/pubmed/17643375	Direct interaction	699	BIOGRID	http://thebiogrid.org/	Cultured Cells,Cell Line
+	IREF-BIND	3.76							Direct interaction	7078	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	IREF-SMALL-SCALE-STUDIES	3.34							Direct interaction	69119	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	BIOGRID-SMALL-SCALE-STUDIES	2.32							Direct interaction	51715	BIOGRID	http://thebiogrid.org/	
+	Nakayasu-Adkins-2013	1.74	Evaluation of selected binding domains for the analysis of ubiquitinated proteomes.	Nakayasu, Ansong, Brown, Yang, Lopez-Ferrer, Qian, Smith, Adkins	2013	J Am Soc Mass Spectrom	23649778	http://www.ncbi.nlm.nih.gov/pubmed/23649778	Direct interaction	881	IREF	http://irefindex.uio.no/wiki/iRefIndex	Cultured Cells,Signal Transduction,Cell Line,Immune System
+	Li-Dorf-2011 B	1.26	Mapping a dynamic innate immunity protein interaction network regulating type I interferon production.	Li, Wang, Berman, Kong, Dorf	2011	Immunity	21903422	http://www.ncbi.nlm.nih.gov/pubmed/21903422	Direct interaction	125	BIOGRID	http://thebiogrid.org/	Cell Signalling,Cultured Cells,Cell Line,Immune System
+	Kristensen-Foster-2012	1.14	A high-throughput approach for measuring temporal changes in the interactome.	Kristensen, Gsponer, Foster	2012	Nat Methods	22863883	http://www.ncbi.nlm.nih.gov/pubmed/22863883	Direct interaction	7104	BIOGRID	http://thebiogrid.org/	Time Series
+	IREF-MPPI	1.05							Direct interaction	384	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	Oláh-Ovádi-2011	0.89	Interactions of pathological hallmark proteins: tubulin polymerization promoting protein/p25, beta-amyloid, and alpha-synuclein.	Oláh, Vincze, Virók, Simon, Bozsó, Tõkési, Horváth, Hlavanda, Kovács, Magyar, Szũcs, Orosz, Penke, Ovádi	2011	J Biol Chem	21832049	http://www.ncbi.nlm.nih.gov/pubmed/21832049	Direct interaction	1851	IREF	http://irefindex.uio.no/wiki/iRefIndex	Epithelial Cells,Cultured Cells,Nervous System,Cell Line
+	IREF-HPRD	0.87							Direct interaction	34112	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+	IREF-INTACT	0.16							Direct interaction	42475	IREF	http://irefindex.uio.no/wiki/iRefIndex	
+
+Gene 1	Gene 2	Weight	Type	Source
+SQSTM1	GLG1	1.336222988195677	Physical interactions	Behrends-Harper-2010
+SQSTM1	NEFM	1.336222988195677	Physical interactions	Behrends-Harper-2010
+A2M	CPB2	0.23926543392001265	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+A2M	HSPA5	0.02811118824653591	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+A2M	NGF	0.25239694343070784	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+APP	PSEN1	0.02440552779258243	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+APP	SNCA	0.009693939740072998	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C1QA	C1R	0.7151158977107185	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C1QA	C1S	0.5505970339667458	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C1R	C1S	0.8737906247291347	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C3	C5	0.16210158187950485	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C3	CFB	0.34444596376344555	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C3	CFH	0.27979298294536453	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C3	CFI	0.5641552668265649	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C5	C6	0.9598027500161446	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C5	C7	0.7183648576685859	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C5	C8B	0.9311537468944339	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C5AR1	C5	0.5516485214539071	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+C8G	C8A	1.9915338040826267	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CASP1	MICE	0.2233981925419656	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CASP3	HSPB1	0.02690910508493381	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CD59	C8A	0.5426661149324873	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CD59	C9	0.7212867879276063	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CDK5	MAPT	0.0357788038347604	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CDK5	NES	0.42469836824695134	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CNTF	CNTFR	0.9275388810298536	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CPB2	C5	0.4973650785651571	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CR2	CR1	1.178394344840161	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CREBBP	HTT	0.002592547131875819	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CREBBP	PPARGC1A	0.009905677616543353	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CST3	C4A	1.350799209371116	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+CYCS	HSPB1	0.076943645598442	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+DCTN1	DYNC1H1	0.1037359645351804	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+EP300	APEX1	0.01172894069208953	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+EP300	CREBBP	0.002182269458772884	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+EP300	MAPT	0.007580098265763741	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+EP300	PPARGC1A	0.008533164707199201	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F10	F5	0.48215488307857035	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F10	F7	0.6945406474349355	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F13A1	F13B	1.3770077119340518	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F2	CPB2	0.3123255155297952	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F2	F5	0.31099443698464563	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F2	FGA	0.14187979090924846	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F2	SERPIND1	0.9887359706717351	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F2	THBD	0.528812996023486	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F7	F3	1.4769561636442334	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F8	F10	0.3208155476281512	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F8	PROS1	0.579954026003634	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+F8	VWF	0.4082493820514712	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+FGA	F13A1	0.4516369218003987	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+FGB	FGA	0.259825233837874	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+FGG	F13B	1.0119960961060015	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+FGG	FGA	0.3319188135605493	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+FGG	FGB	0.5013438823578991	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+GRIA1	GRIA2	0.1287093188758391	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+GRIA1	GRIA4	0.24483206840692004	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+GRIA1	GRIK2	0.17092473750502798	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+GRIA2	GRIK2	0.23582128156323967	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HNRNPA1	HNRNPC	0.02386017547324279	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HNRNPA1	LMNB1	0.02457725549986217	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HNRNPA1	SMN1	0.008780473472296709	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HSPA5	PAWR	0.04140413241880041	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HSPA5	SOD1	0.02940816379495446	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HSPA5	SSR1	0.15242363304409365	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HSPA5	VWF	0.0723953709597555	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HSPB1	HSF1	0.04016207900862523	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HSPB1	PLG	0.05001694738946692	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HTT	CD59	0.02540684045818023	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HTT	DYNC1H1	0.016501575674936722	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HTT	GFAP	0.03950616815742565	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HTT	HNRNPC	0.01540220934118794	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HTT	OPTN	0.013720099095632085	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HTT	PRNP	0.005123940193430361	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HTT	SQSTM1	0.004321225586988032	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+HTT	SYP	0.03510029575616476	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+KNG1	ECE1	0.37900687802993116	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+KNG1	F11	0.46866729029094734	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+KNG1	KLKB1	0.6435891993885259	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+MASP1	MASP2	0.5183569188268239	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+MASP1	MBL2	0.6283953001453784	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+MASP1	SERPING1	0.3394998121980788	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+MBL2	MASP2	0.6994601795009556	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+NGFR	NGF	0.23340311928731478	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+NOS1	BDKRB2	0.4030332721652339	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+NTRK2	BDNF	1.0538317984526817	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+OPTN	SOD1	0.07302386389925776	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+OPTN	TBK1	0.048763975150928104	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+OPTN	TFRC	0.06747393565132101	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAT	F10	0.16565887573998583	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAT	F2	0.10685153352582913	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAT	FGA	0.12955007729132453	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAT	PLAU	0.14635987681744264	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAT	SERPINA5	0.1397498511761843	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAT	SERPINE1	0.15248533089796187	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAU	SERPINA5	0.20964062417050228	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAU	SERPINE1	0.22874531110559695	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAU	SERPINE2	1.2353680834598944	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAUR	KNG1	0.18638982073989802	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLAUR	PLAU	0.21460982180047844	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLG	C7	0.33629839445888876	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLG	CPB2	0.23283860291368708	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLG	F10	0.13525243324636624	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLG	F3	0.2876172686155088	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLG	KNG1	0.10378269539427981	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLG	SERPINE1	0.1244968780505697	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PLG	SERPINF2	0.13208410862017714	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PRNP	HSPA5	0.010670714173114043	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PROC	SERPINA5	0.46066925283032073	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PROS1	C4BPA	1.0695839821373792	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PROS1	F5	0.8716150762300044	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PSEN1	GFAP	0.14387076373586627	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+PSEN1	MAPT	0.032794483045210855	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SERPINA1	SSR1	0.5519617062510189	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SERPINA5	F11	0.5152540381189376	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SERPINA5	KLKB1	0.7075635556029655	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SERPINE1	F2	0.16699786072527859	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SERPINF2	CFD	1.3258868105766266	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SERPING1	C1R	0.5299868434401991	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SERPING1	C1S	0.40805862623579015	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SERPING1	F2	0.17018526093303582	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SERPING1	MASP2	0.3778936581629621	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SMN1	HSPB1	0.021581403046523038	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SMN1	SMN2	0.07185708135291274	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SNCA	DYNC1H1	0.023869601054723497	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SNCA	HSPB1	0.014613124388827009	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SNCA	MAPT	0.013026055423201649	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SNCA	SQSTM1	0.006250672110499427	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SOD1	CCS	0.22015052730682896	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SOD1	RNF19A	0.22022729573328453	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SQSTM1	CHMP2B	0.04091036832667216	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SQSTM1	FUS	0.02179473235301675	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SQSTM1	GRIA1	0.025623441097440598	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SQSTM1	MAPT	0.014666591042933764	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SQSTM1	NGFR	0.02033051531158091	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SQSTM1	NTRK2	0.028603413776485648	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+SQSTM1	PAWR	0.032381004709623656	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+TARDBP	FUS	0.11848826838076877	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+TARDBP	HNRNPA1	0.03639329219005712	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+TARDBP	SQSTM1	0.03826192235009287	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+TARDBP	UBQLN2	0.15901220081395911	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+TFPI	F10	0.4889164430682494	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+VCP	HTT	0.0040845883042657915	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+VCP	RNF19A	0.06370022457063317	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+VCP	SERPINA1	0.030803095907319184	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+VCP	TARDBP	0.03616663802879157	Physical interactions	BIOGRID-SMALL-SCALE-STUDIES
+OPTN	TBK1	2.9468557630013126	Physical interactions	Blandin-Richard-2013
+OPTN	VWF	2.9468557630013126	Physical interactions	Blandin-Richard-2013
+VCP	OPTN	2.9468557630013126	Physical interactions	Blandin-Richard-2013
+A2M	PROS1	0.4054637805134496	Physical interactions	Dyer-Sobral-2010
+PROC	HNRNPDL	1.1983980237664662	Physical interactions	Dyer-Sobral-2010
+PROS1	CST3	1.0781881327178402	Physical interactions	Dyer-Sobral-2010
+SQSTM1	PROC	1.8620396482009391	Physical interactions	Dyer-Sobral-2010
+TARDBP	HNRNPA1	0.4117766524621835	Physical interactions	Freibaum-Taylor-2010
+TARDBP	HNRNPC	0.4117766524621835	Physical interactions	Freibaum-Taylor-2010
+TARDBP	HNRNPDL	0.4117766524621835	Physical interactions	Freibaum-Taylor-2010
+TARDBP	HSPA5	0.4117766524621835	Physical interactions	Freibaum-Taylor-2010
+TARDBP	MATR3	0.4117766524621835	Physical interactions	Freibaum-Taylor-2010
+VCP	TARDBP	0.4117766524621835	Physical interactions	Freibaum-Taylor-2010
+APP	PSEN1	0.13589835054765312	Physical interactions	IREF-BIND
+C1QA	C1QB	3.3507183320192486	Physical interactions	IREF-BIND
+C3	CR2	2.4236460540000797	Physical interactions	IREF-BIND
+C5AR1	C5	3.7584828168010573	Physical interactions	IREF-BIND
+CASP3	FUS	0.48821339623061083	Physical interactions	IREF-BIND
+CASP3	PSEN1	0.08912257924208801	Physical interactions	IREF-BIND
+CREBBP	HSF1	0.48151964400465685	Physical interactions	IREF-BIND
+CREBBP	HTT	0.04125903959635038	Physical interactions	IREF-BIND
+F2	SERPIND1	2.2843353146036813	Physical interactions	IREF-BIND
+F2	THBD	2.2843353146036813	Physical interactions	IREF-BIND
+F2R	F2	1.287841098886897	Physical interactions	IREF-BIND
+F7	F3	3.7584828168010573	Physical interactions	IREF-BIND
+FGB	FGA	1.2925277727527449	Physical interactions	IREF-BIND
+FGG	FGA	1.8163326043583579	Physical interactions	IREF-BIND
+FGG	FGB	1.637844604906204	Physical interactions	IREF-BIND
+HTT	CASP1	0.089965885947652	Physical interactions	IREF-BIND
+HTT	CASP3	0.03613471923336659	Physical interactions	IREF-BIND
+HTT	OPTN	0.22461148569226796	Physical interactions	IREF-BIND
+NGFR	NGF	0.9973396786440427	Physical interactions	IREF-BIND
+PRNP	HSPA5	0.8767166046417906	Physical interactions	IREF-BIND
+PRNP	PLG	1.1526386058846503	Physical interactions	IREF-BIND
+PSEN1	CASP1	0.2218916080448706	Physical interactions	IREF-BIND
+SMN1	PFN1	1.361519810249669	Physical interactions	IREF-BIND
+SOD1	CCS	2.992598695530507	Physical interactions	IREF-BIND
+TARDBP	CASP3	0.3273446403215628	Physical interactions	IREF-BIND
+ZNF512B	DCTN1	0.07273329915911211	Physical interactions	IREF-BIND
+ZNF512B	RPS27A	0.066750617042662	Physical interactions	IREF-BIND
+ZNF512B	VWF	0.6817205718969109	Physical interactions	IREF-BIND
+A2M	CPB2	0.2517038278068839	Physical interactions	IREF-BIOGRID
+A2M	HSPA5	0.023504491037077333	Physical interactions	IREF-BIOGRID
+A2M	NGF	0.37304781880157184	Physical interactions	IREF-BIOGRID
+APP	A2M	0.002832597586918069	Physical interactions	IREF-BIOGRID
+APP	APEX1	0.00465306598572418	Physical interactions	IREF-BIOGRID
+APP	BDNF	0.022314030862253142	Physical interactions	IREF-BIOGRID
+APP	C9orf72	0.08741734734552922	Physical interactions	IREF-BIOGRID
+APP	CDK5	0.0021805900677811857	Physical interactions	IREF-BIOGRID
+APP	GFAP	0.005784476284796395	Physical interactions	IREF-BIOGRID
+APP	HNRNPA1	0.0017906219224104877	Physical interactions	IREF-BIOGRID
+APP	MAG	0.012332655373711957	Physical interactions	IREF-BIOGRID
+APP	MAP2	0.007857718781832333	Physical interactions	IREF-BIOGRID
+APP	PSEN1	0.0033404335888656002	Physical interactions	IREF-BIOGRID
+APP	RPS27A	0.0040231951731645905	Physical interactions	IREF-BIOGRID
+APP	SERPIND1	0.04930977704484716	Physical interactions	IREF-BIOGRID
+APP	SLC1A1	0.03908011153158067	Physical interactions	IREF-BIOGRID
+APP	SNCA	0.0011333858250030648	Physical interactions	IREF-BIOGRID
+APP	SOD2	0.01060585548055364	Physical interactions	IREF-BIOGRID
+APP	TARDBP	0.006963268062425695	Physical interactions	IREF-BIOGRID
+APP	TBK1	0.003466174930554138	Physical interactions	IREF-BIOGRID
+APP	TFPI	0.01602201696662233	Physical interactions	IREF-BIOGRID
+APP	TMOD2	0.028886007168517226	Physical interactions	IREF-BIOGRID
+C1QA	C1R	1.1763239004697394	Physical interactions	IREF-BIOGRID
+C1QA	C1S	1.0600395184117992	Physical interactions	IREF-BIOGRID
+C1R	C1S	2.6050919147923244	Physical interactions	IREF-BIOGRID
+C2	C4A	5.568381861538772	Physical interactions	IREF-BIOGRID
+C3	C5	0.5198806093110822	Physical interactions	IREF-BIOGRID
+C3	CFB	0.7945085241919373	Physical interactions	IREF-BIOGRID
+C3	CFH	0.6075226767294339	Physical interactions	IREF-BIOGRID
+C3	CFI	1.8732788094838724	Physical interactions	IREF-BIOGRID
+C5	C6	2.5136901294493805	Physical interactions	IREF-BIOGRID
+C5	C7	2.4000767459892325	Physical interactions	IREF-BIOGRID
+C5	C8B	3.0900851839616954	Physical interactions	IREF-BIOGRID
+C5AR1	C5	1.8969199106221535	Physical interactions	IREF-BIOGRID
+C8G	C8A	6.302225878208943	Physical interactions	IREF-BIOGRID
+CASP1	MICE	0.5721380057205773	Physical interactions	IREF-BIOGRID
+CASP3	HSPB1	0.06967543767185362	Physical interactions	IREF-BIOGRID
+CD59	C8A	1.6126953200484047	Physical interactions	IREF-BIOGRID
+CD59	C9	2.262076265090085	Physical interactions	IREF-BIOGRID
+CDK5	MAPT	0.057796000100530626	Physical interactions	IREF-BIOGRID
+CDK5	NEFH	0.1328609014606367	Physical interactions	IREF-BIOGRID
+CDK5	NES	0.4279130777845638	Physical interactions	IREF-BIOGRID
+CNTF	CNTFR	1.0314953555096393	Physical interactions	IREF-BIOGRID
+CPB2	C5	1.2084254443449098	Physical interactions	IREF-BIOGRID
+CR2	CR1	3.6131210322480367	Physical interactions	IREF-BIOGRID
+CREBBP	HTT	0.009862372567321085	Physical interactions	IREF-BIOGRID
+CREBBP	PPARGC1A	0.03899488867284752	Physical interactions	IREF-BIOGRID
+CST3	C4A	2.1484734402142047	Physical interactions	IREF-BIOGRID
+CYCS	HSPB1	0.1720703118798568	Physical interactions	IREF-BIOGRID
+DCTN1	DYNC1H1	0.06974491692725886	Physical interactions	IREF-BIOGRID
+DYNC1H1	FUS	0.05911708235292321	Physical interactions	IREF-BIOGRID
+EP300	APEX1	0.024388582239912204	Physical interactions	IREF-BIOGRID
+EP300	C1R	0.12539634600799845	Physical interactions	IREF-BIOGRID
+EP300	CFH	0.08329542553753067	Physical interactions	IREF-BIOGRID
+EP300	CREBBP	0.0072639878046387475	Physical interactions	IREF-BIOGRID
+EP300	DAO	0.2599003598074054	Physical interactions	IREF-BIOGRID
+EP300	MAPT	0.027505416721723606	Physical interactions	IREF-BIOGRID
+EP300	PLG	0.03151192976944145	Physical interactions	IREF-BIOGRID
+EP300	PPARGC1A	0.02919943147001332	Physical interactions	IREF-BIOGRID
+F10	F5	1.6269052351410913	Physical interactions	IREF-BIOGRID
+F10	F7	1.3281587125354755	Physical interactions	IREF-BIOGRID
+F13A1	F13B	3.004048452314676	Physical interactions	IREF-BIOGRID
+F2	CPB2	0.8054566986711127	Physical interactions	IREF-BIOGRID
+F2	F5	1.0625459970281936	Physical interactions	IREF-BIOGRID
+F2	FGA	0.46310473140856523	Physical interactions	IREF-BIOGRID
+F2	SERPIND1	2.2574763855316107	Physical interactions	IREF-BIOGRID
+F2	THBD	1.2696102853638338	Physical interactions	IREF-BIOGRID
+F7	F3	3.142733301859428	Physical interactions	IREF-BIOGRID
+F8	F10	1.0785263065768895	Physical interactions	IREF-BIOGRID
+F8	PROS1	1.5956697106571942	Physical interactions	IREF-BIOGRID
+F8	VWF	1.0045441382033953	Physical interactions	IREF-BIOGRID
+FGA	F13A1	0.8129469906729038	Physical interactions	IREF-BIOGRID
+FGB	FGA	0.54673130458547	Physical interactions	IREF-BIOGRID
+FGG	F13B	3.6620527439648063	Physical interactions	IREF-BIOGRID
+FGG	FGA	0.9910141743894254	Physical interactions	IREF-BIOGRID
+FGG	FGB	1.0483896290414365	Physical interactions	IREF-BIOGRID
+GRIA1	GRIA2	0.45023853083977877	Physical interactions	IREF-BIOGRID
+GRIA1	GRIA4	0.8846876685729289	Physical interactions	IREF-BIOGRID
+GRIA1	GRIK2	0.5412106195122514	Physical interactions	IREF-BIOGRID
+GRIA2	GRIK2	0.6875794787579121	Physical interactions	IREF-BIOGRID
+HNRNPA1	HNRNPC	0.027439602332063117	Physical interactions	IREF-BIOGRID
+HNRNPA1	HNRNPDL	0.04827276649903774	Physical interactions	IREF-BIOGRID
+HNRNPA1	LMNB1	0.04425002333159316	Physical interactions	IREF-BIOGRID
+HNRNPA1	SMN1	0.016762089214719906	Physical interactions	IREF-BIOGRID
+HNRNPC	VAPB	0.09688811461454586	Physical interactions	IREF-BIOGRID
+HSPA5	CDK5	0.018094224985017872	Physical interactions	IREF-BIOGRID
+HSPA5	PAWR	0.0517942833012506	Physical interactions	IREF-BIOGRID
+HSPA5	SOD1	0.0506024123972146	Physical interactions	IREF-BIOGRID
+HSPA5	SSR1	0.05842423586446615	Physical interactions	IREF-BIOGRID
+HSPA5	TUBA4A	0.045866018694058215	Physical interactions	IREF-BIOGRID
+HSPA5	VWF	0.10726450269963098	Physical interactions	IREF-BIOGRID
+HSPB1	HSF1	0.06590502648717436	Physical interactions	IREF-BIOGRID
+HSPB1	PLG	0.10948674799845858	Physical interactions	IREF-BIOGRID
+HTT	CD59	0.08193563072075304	Physical interactions	IREF-BIOGRID
+HTT	DYNC1H1	0.022304776949989075	Physical interactions	IREF-BIOGRID
+HTT	GFAP	0.04116401109457762	Physical interactions	IREF-BIOGRID
+HTT	HNRNPC	0.021591094428770077	Physical interactions	IREF-BIOGRID
+HTT	OPTN	0.036701157448900526	Physical interactions	IREF-BIOGRID
+HTT	PRNP	0.022095201173096546	Physical interactions	IREF-BIOGRID
+HTT	SQSTM1	0.008204459355961133	Physical interactions	IREF-BIOGRID
+HTT	SYP	0.12374390063492008	Physical interactions	IREF-BIOGRID
+KNG1	ECE1	0.6105803565408712	Physical interactions	IREF-BIOGRID
+KNG1	F11	1.6982229770967965	Physical interactions	IREF-BIOGRID
+KNG1	KLKB1	2.360378192992707	Physical interactions	IREF-BIOGRID
+MASP1	MASP2	0.9228757514455488	Physical interactions	IREF-BIOGRID
+MASP1	MBL2	1.3507910379135564	Physical interactions	IREF-BIOGRID
+MASP1	SERPING1	0.5477745573555246	Physical interactions	IREF-BIOGRID
+MBL2	MASP2	2.661243327853858	Physical interactions	IREF-BIOGRID
+NGFR	NGF	0.8114582841614685	Physical interactions	IREF-BIOGRID
+NOS1	BDKRB2	1.2875882144116084	Physical interactions	IREF-BIOGRID
+NTRK2	BDNF	0.9467602387252687	Physical interactions	IREF-BIOGRID
+OPTN	SOD1	0.1588489173040811	Physical interactions	IREF-BIOGRID
+OPTN	TBK1	0.090287888371643	Physical interactions	IREF-BIOGRID
+OPTN	TFRC	0.16775016746657	Physical interactions	IREF-BIOGRID
+PLAT	F10	0.5747327239340672	Physical interactions	IREF-BIOGRID
+PLAT	F2	0.37536295001327596	Physical interactions	IREF-BIOGRID
+PLAT	FGA	0.4188931108869717	Physical interactions	IREF-BIOGRID
+PLAT	PLAU	0.4275920106302972	Physical interactions	IREF-BIOGRID
+PLAT	SERPINA5	0.40646929345087596	Physical interactions	IREF-BIOGRID
+PLAT	SERPINE1	0.5514496988653179	Physical interactions	IREF-BIOGRID
+PLAU	SERPINA5	0.5118961647914914	Physical interactions	IREF-BIOGRID
+PLAU	SERPINE1	0.6944804832428373	Physical interactions	IREF-BIOGRID
+PLAU	SERPINE2	0.8076486284429162	Physical interactions	IREF-BIOGRID
+PLAUR	KNG1	0.39750559411077235	Physical interactions	IREF-BIOGRID
+PLAUR	PLAU	0.36775287733740575	Physical interactions	IREF-BIOGRID
+PLAUR	UBQLN2	0.16256465010594484	Physical interactions	IREF-BIOGRID
+PLG	C7	1.0610549740926587	Physical interactions	IREF-BIOGRID
+PLG	CPB2	0.5342353278451563	Physical interactions	IREF-BIOGRID
+PLG	CYFIP2	0.3117731490108795	Physical interactions	IREF-BIOGRID
+PLG	F10	0.42143667922412326	Physical interactions	IREF-BIOGRID
+PLG	F3	0.9972174503874278	Physical interactions	IREF-BIOGRID
+PLG	KNG1	0.3389090338011545	Physical interactions	IREF-BIOGRID
+PLG	SERPINE1	0.4043638255553472	Physical interactions	IREF-BIOGRID
+PLG	SERPINF2	0.41314897169363596	Physical interactions	IREF-BIOGRID
+PRNP	HSPA5	0.025763821006318806	Physical interactions	IREF-BIOGRID
+PROC	SERPINA5	1.1627383424773796	Physical interactions	IREF-BIOGRID
+PROS1	C4BPA	1.7827084587816924	Physical interactions	IREF-BIOGRID
+PROS1	F5	2.4069911103154764	Physical interactions	IREF-BIOGRID
+PSEN1	CDK5	0.03678999635339377	Physical interactions	IREF-BIOGRID
+PSEN1	GFAP	0.09759325027155444	Physical interactions	IREF-BIOGRID
+PSEN1	MAPT	0.08853737206662801	Physical interactions	IREF-BIOGRID
+SERPINA1	SSR1	0.2796800627771891	Physical interactions	IREF-BIOGRID
+SERPINA5	F11	1.4935017248027114	Physical interactions	IREF-BIOGRID
+SERPINA5	KLKB1	2.0758340436338725	Physical interactions	IREF-BIOGRID
+SERPINE1	F2	0.6096518475692374	Physical interactions	IREF-BIOGRID
+SERPINF2	CFD	3.0949244632573443	Physical interactions	IREF-BIOGRID
+SERPINF2	SSR1	0.4838448615192616	Physical interactions	IREF-BIOGRID
+SERPING1	C1R	1.3607941113601059	Physical interactions	IREF-BIOGRID
+SERPING1	C1S	1.2262739768650757	Physical interactions	IREF-BIOGRID
+SERPING1	F2	0.5155753465758769	Physical interactions	IREF-BIOGRID
+SERPING1	MASP2	1.0791908509418275	Physical interactions	IREF-BIOGRID
+SMN1	A2M	0.026516069631968862	Physical interactions	IREF-BIOGRID
+SMN1	FGB	0.10017427195417647	Physical interactions	IREF-BIOGRID
+SMN1	HSPB1	0.03375244384321712	Physical interactions	IREF-BIOGRID
+SMN1	NGFR	0.05767808468655495	Physical interactions	IREF-BIOGRID
+SNCA	DYNC1H1	0.017942167567289682	Physical interactions	IREF-BIOGRID
+SNCA	GLUL	0.05424978038608148	Physical interactions	IREF-BIOGRID
+SNCA	HSPA5	0.009404673427030186	Physical interactions	IREF-BIOGRID
+SNCA	HSPB1	0.02064009291179156	Physical interactions	IREF-BIOGRID
+SNCA	MAP2	0.04498078779709877	Physical interactions	IREF-BIOGRID
+SNCA	MAPT	0.030040111605801893	Physical interactions	IREF-BIOGRID
+SNCA	SLC1A2	0.19505322535189157	Physical interactions	IREF-BIOGRID
+SNCA	SLC1A3	0.2610900590638481	Physical interactions	IREF-BIOGRID
+SNCA	SQSTM1	0.0065997422516756565	Physical interactions	IREF-BIOGRID
+SNCA	SYP	0.09954072322915208	Physical interactions	IREF-BIOGRID
+SNCA	TMOD2	0.16535532163716027	Physical interactions	IREF-BIOGRID
+SNCA	TUBA4A	0.03164140373564654	Physical interactions	IREF-BIOGRID
+SNCA	VAPB	0.03619322086095013	Physical interactions	IREF-BIOGRID
+SOD1	CCS	1.1127635934718665	Physical interactions	IREF-BIOGRID
+SOD1	RNF19A	0.43712942896250456	Physical interactions	IREF-BIOGRID
+SOD1	SOD2	0.3266659243799894	Physical interactions	IREF-BIOGRID
+SQSTM1	ARHGEF2	0.06106800974529726	Physical interactions	IREF-BIOGRID
+SQSTM1	CHMP2B	0.07879232402312349	Physical interactions	IREF-BIOGRID
+SQSTM1	FUS	0.021745283091345692	Physical interactions	IREF-BIOGRID
+SQSTM1	GLG1	0.1571335783231829	Physical interactions	IREF-BIOGRID
+SQSTM1	GRIA1	0.04877708030743707	Physical interactions	IREF-BIOGRID
+SQSTM1	HSPA5	0.009566703589210317	Physical interactions	IREF-BIOGRID
+SQSTM1	MAPT	0.030557660680386428	Physical interactions	IREF-BIOGRID
+SQSTM1	NEFM	0.14759502871408978	Physical interactions	IREF-BIOGRID
+SQSTM1	NGFR	0.03587862487982228	Physical interactions	IREF-BIOGRID
+SQSTM1	NTRK2	0.048916830038688526	Physical interactions	IREF-BIOGRID
+SQSTM1	PAWR	0.03634670415891984	Physical interactions	IREF-BIOGRID
+TARDBP	FUS	0.1313354149828297	Physical interactions	IREF-BIOGRID
+TARDBP	HNRNPA1	0.06297524830174678	Physical interactions	IREF-BIOGRID
+TARDBP	SQSTM1	0.040547337249766995	Physical interactions	IREF-BIOGRID
+TARDBP	UBQLN2	0.16052823050319817	Physical interactions	IREF-BIOGRID
+TBK1	PROS1	0.35947392373520176	Physical interactions	IREF-BIOGRID
+TFPI	F10	1.1231087435005624	Physical interactions	IREF-BIOGRID
+TUBA4A	RPS27A	0.11231793675004355	Physical interactions	IREF-BIOGRID
+UBQLN2	C1QA	0.2244268700954285	Physical interactions	IREF-BIOGRID
+VCP	ALS2	0.35567366838886755	Physical interactions	IREF-BIOGRID
+VCP	ARHGEF2	0.04746631758973226	Physical interactions	IREF-BIOGRID
+VCP	HNRNPA1	0.008104476027384188	Physical interactions	IREF-BIOGRID
+VCP	HSPA5	0.007435909064055104	Physical interactions	IREF-BIOGRID
+VCP	HSPB1	0.01631931888904748	Physical interactions	IREF-BIOGRID
+VCP	HTT	0.006377078510275762	Physical interactions	IREF-BIOGRID
+VCP	RNF19A	0.06423518099818522	Physical interactions	IREF-BIOGRID
+VCP	SERPINA1	0.03559610867895713	Physical interactions	IREF-BIOGRID
+VCP	SPAST	0.15343834318108399	Physical interactions	IREF-BIOGRID
+VCP	SQSTM1	0.005218159833297237	Physical interactions	IREF-BIOGRID
+VCP	TARDBP	0.03151622256119574	Physical interactions	IREF-BIOGRID
+ZNF512B	DCTN1	0.08403308540500709	Physical interactions	IREF-BIOGRID
+ZNF512B	RPS27A	0.07673721141659652	Physical interactions	IREF-BIOGRID
+ZNF512B	VWF	0.24656131243550253	Physical interactions	IREF-BIOGRID
+APP	A2M	2.698872306143952	Physical interactions	IREF-DIP
+APP	NGFR	0.7814385844201875	Physical interactions	IREF-DIP
+APP	PSEN1	0.27363840715653803	Physical interactions	IREF-DIP
+C3	CFB	4.961385235271857	Physical interactions	IREF-DIP
+C3	CFH	4.961385235271857	Physical interactions	IREF-DIP
+C9	C8A	7.01645840796066	Physical interactions	IREF-DIP
+CDK5	NTRK2	2.076404571030247	Physical interactions	IREF-DIP
+CNTF	CNTFR	5.586680930146862	Physical interactions	IREF-DIP
+F2R	F2	4.3705009845079505	Physical interactions	IREF-DIP
+F7	F3	7.01645840796066	Physical interactions	IREF-DIP
+F8	F2	1.7880246081015887	Physical interactions	IREF-DIP
+F8	VWF	2.803000988070494	Physical interactions	IREF-DIP
+HSPA5	SOD1	1.7780640169103923	Physical interactions	IREF-DIP
+HSPB1	F13A1	5.586680930146862	Physical interactions	IREF-DIP
+NGFR	NGF	1.6462074655452266	Physical interactions	IREF-DIP
+NTRK2	BDNF	1.719943630647885	Physical interactions	IREF-DIP
+PLAUR	PLAU	3.3016789876790993	Physical interactions	IREF-DIP
+SERPINA5	F2	4.3705009845079505	Physical interactions	IREF-DIP
+SERPINC1	F9	7.01645840796066	Physical interactions	IREF-DIP
+SOD1	CCS	2.709257802262312	Physical interactions	IREF-DIP
+TARDBP	ATXN2	6.741195293590624	Physical interactions	IREF-DIP
+A2M	HSPA5	0.013333527659881985	Physical interactions	IREF-HPRD
+A2M	NGF	0.04833309771011556	Physical interactions	IREF-HPRD
+APP	CASP3	0.0028207963572633777	Physical interactions	IREF-HPRD
+APP	CDK5	0.006002943020846692	Physical interactions	IREF-HPRD
+APP	F12	0.02064702105511857	Physical interactions	IREF-HPRD
+APP	KNG1	0.008612339467084427	Physical interactions	IREF-HPRD
+APP	PSEN1	0.005487668050165099	Physical interactions	IREF-HPRD
+APP	SNCA	0.007627111896209609	Physical interactions	IREF-HPRD
+C1QA	C1QB	0.06914712855174437	Physical interactions	IREF-HPRD
+C1QA	C1QC	0.10836069142444812	Physical interactions	IREF-HPRD
+C1QA	C1R	0.09815800322110903	Physical interactions	IREF-HPRD
+C1QA	C1S	0.13970294467669692	Physical interactions	IREF-HPRD
+C1QA	CR1	0.07099887946458565	Physical interactions	IREF-HPRD
+C1QB	C1QC	0.18741798055176123	Physical interactions	IREF-HPRD
+C1QB	C1R	0.16977166593643184	Physical interactions	IREF-HPRD
+C1R	C1S	0.3430019851266226	Physical interactions	IREF-HPRD
+C2	C5	0.1496654262641215	Physical interactions	IREF-HPRD
+C3	C2	0.05408988275413999	Physical interactions	IREF-HPRD
+C3	C3AR1	0.11035526526070633	Physical interactions	IREF-HPRD
+C3	C5	0.03518320242152238	Physical interactions	IREF-HPRD
+C3	CD46	0.04057023456962588	Physical interactions	IREF-HPRD
+C3	CFB	0.07066115931125024	Physical interactions	IREF-HPRD
+C3	CFH	0.028986067796762445	Physical interactions	IREF-HPRD
+C3	CFI	0.12365995517464748	Physical interactions	IREF-HPRD
+C3	CR1	0.04004047052856219	Physical interactions	IREF-HPRD
+C3	CR2	0.03196990088876486	Physical interactions	IREF-HPRD
+C3	MASP1	0.04327580025256266	Physical interactions	IREF-HPRD
+C4A	C3AR1	0.3904146251597435	Physical interactions	IREF-HPRD
+C5	C6	0.23511817515208894	Physical interactions	IREF-HPRD
+C5	C7	0.24947525816962046	Physical interactions	IREF-HPRD
+C5	C8B	0.20762140914918412	Physical interactions	IREF-HPRD
+C5AR1	C5	0.1202704573270541	Physical interactions	IREF-HPRD
+C8B	C8A	0.2794210292714541	Physical interactions	IREF-HPRD
+C8G	C8A	0.5543382055943114	Physical interactions	IREF-HPRD
+C9	C8A	0.28733668742547247	Physical interactions	IREF-HPRD
+CASP1	MAPT	0.015850494403212578	Physical interactions	IREF-HPRD
+CASP1	MICE	0.07163809303764736	Physical interactions	IREF-HPRD
+CASP3	DCTN1	0.007087943836573737	Physical interactions	IREF-HPRD
+CASP3	LMNB1	0.010133863901727979	Physical interactions	IREF-HPRD
+CASP3	MAPT	0.005752769589770448	Physical interactions	IREF-HPRD
+CASP3	PSEN1	0.004440269512703677	Physical interactions	IREF-HPRD
+CD55	CR1	0.1467916464830106	Physical interactions	IREF-HPRD
+CD59	C8A	0.10255707131657853	Physical interactions	IREF-HPRD
+CD59	C9	0.1671252056625949	Physical interactions	IREF-HPRD
+CDK5	MAPT	0.012242481345677767	Physical interactions	IREF-HPRD
+CDK5	NES	0.10559940279266423	Physical interactions	IREF-HPRD
+CFH	CFI	0.2818957436652023	Physical interactions	IREF-HPRD
+CNTF	CNTFR	0.18120360252118306	Physical interactions	IREF-HPRD
+CR1	C4A	0.14165508519201084	Physical interactions	IREF-HPRD
+CR2	CR1	0.10067242419241158	Physical interactions	IREF-HPRD
+CREBBP	HSF1	0.004729616345617838	Physical interactions	IREF-HPRD
+CREBBP	HTT	0.0027561522506527212	Physical interactions	IREF-HPRD
+CREBBP	SERTAD3	0.035762122504435764	Physical interactions	IREF-HPRD
+CST3	C4A	0.1589321727833588	Physical interactions	IREF-HPRD
+CYCS	HSPB1	0.029392878433801787	Physical interactions	IREF-HPRD
+DCTN1	APEX1	0.028961877687546052	Physical interactions	IREF-HPRD
+EP300	APEX1	0.0061219394008325545	Physical interactions	IREF-HPRD
+EP300	CREBBP	0.0010255070891533537	Physical interactions	IREF-HPRD
+F10	F3	0.07712349569966573	Physical interactions	IREF-HPRD
+F10	F5	0.050730466729159124	Physical interactions	IREF-HPRD
+F10	F7	0.058543992112609106	Physical interactions	IREF-HPRD
+F12	KLKB1	0.1324258768401083	Physical interactions	IREF-HPRD
+F13A1	F13B	0.4562943295685633	Physical interactions	IREF-HPRD
+F7	F3	0.18113297986738383	Physical interactions	IREF-HPRD
+F8	F10	0.03553748104870545	Physical interactions	IREF-HPRD
+F8	F9	0.1318941488945792	Physical interactions	IREF-HPRD
+F8	PROC	0.05787956914768287	Physical interactions	IREF-HPRD
+F8	PROS1	0.0738802292047267	Physical interactions	IREF-HPRD
+F8	VWF	0.07113399609180293	Physical interactions	IREF-HPRD
+F9	F7	0.21728072880961763	Physical interactions	IREF-HPRD
+FGB	SERPINA5	0.09504670461399656	Physical interactions	IREF-HPRD
+FGG	F13A1	0.19766440701752408	Physical interactions	IREF-HPRD
+FGG	F13B	0.30401591705183934	Physical interactions	IREF-HPRD
+FGG	FGB	0.17015121563181804	Physical interactions	IREF-HPRD
+FGG	SERPINA5	0.07356677706756169	Physical interactions	IREF-HPRD
+GRIA1	GRIA4	0.07111494784155041	Physical interactions	IREF-HPRD
+GRIA1	GRIK2	0.047918859943461733	Physical interactions	IREF-HPRD
+HSPA5	F8	0.023059398524237548	Physical interactions	IREF-HPRD
+HSPA5	GRIA1	0.020572501430557888	Physical interactions	IREF-HPRD
+HSPA5	PAWR	0.028605067084358043	Physical interactions	IREF-HPRD
+HSPA5	VWF	0.03237601685546439	Physical interactions	IREF-HPRD
+HTT	CASP1	0.011094632746701262	Physical interactions	IREF-HPRD
+HTT	CASP3	0.004026680159135734	Physical interactions	IREF-HPRD
+HTT	OPTN	0.029354178154403252	Physical interactions	IREF-HPRD
+KNG1	F11	0.09560607654370258	Physical interactions	IREF-HPRD
+KNG1	KLKB1	0.05523782873680899	Physical interactions	IREF-HPRD
+LMNB1	PRPH	0.12541091396575374	Physical interactions	IREF-HPRD
+MAG	NGFR	0.03161566121505879	Physical interactions	IREF-HPRD
+MAPT	TUBA4A	0.011484861375500581	Physical interactions	IREF-HPRD
+MASP1	C2	0.18409045768607332	Physical interactions	IREF-HPRD
+MASP1	MBL2	0.13289860325247616	Physical interactions	IREF-HPRD
+MASP1	SERPING1	0.1152659613075734	Physical interactions	IREF-HPRD
+MBL2	MASP2	0.20803288771121717	Physical interactions	IREF-HPRD
+NEFH	NEFM	0.38041280056054994	Physical interactions	IREF-HPRD
+NGFR	NGF	0.04596078226902854	Physical interactions	IREF-HPRD
+NGFR	NTRK2	0.022280802918227156	Physical interactions	IREF-HPRD
+NOS1	BDKRB2	0.037181022380863835	Physical interactions	IREF-HPRD
+NTRK2	BDNF	0.054123674895436645	Physical interactions	IREF-HPRD
+PLAT	F10	0.027963431903476228	Physical interactions	IREF-HPRD
+PLAT	PLAU	0.04430080581569965	Physical interactions	IREF-HPRD
+PLAT	SERPINA5	0.03590431243385146	Physical interactions	IREF-HPRD
+PLAT	SERPINE1	0.04448292305903936	Physical interactions	IREF-HPRD
+PLAT	SERPING1	0.05319558558307323	Physical interactions	IREF-HPRD
+PLAU	SERPINA5	0.050704763926585926	Physical interactions	IREF-HPRD
+PLAU	SERPINE1	0.06281964910069952	Physical interactions	IREF-HPRD
+PLAUR	KNG1	0.029751104346654095	Physical interactions	IREF-HPRD
+PLAUR	PLAU	0.05101689164553297	Physical interactions	IREF-HPRD
+PLG	C7	0.07232566086015718	Physical interactions	IREF-HPRD
+PLG	CPB2	0.09496701878454887	Physical interactions	IREF-HPRD
+PLG	F10	0.014281409396214756	Physical interactions	IREF-HPRD
+PLG	F2R	0.02552694872434102	Physical interactions	IREF-HPRD
+PLG	F3	0.04418615924064535	Physical interactions	IREF-HPRD
+PLG	KNG1	0.01319414724999484	Physical interactions	IREF-HPRD
+PLG	NGF	0.03359169968851162	Physical interactions	IREF-HPRD
+PLG	PLAT	0.016021014871837366	Physical interactions	IREF-HPRD
+PLG	PLAU	0.022625190608375555	Physical interactions	IREF-HPRD
+PLG	SERPINC1	0.054085649809639424	Physical interactions	IREF-HPRD
+PLG	SERPINE1	0.022718200150018443	Physical interactions	IREF-HPRD
+PLG	SERPINF2	0.016854172937692605	Physical interactions	IREF-HPRD
+PLG	SERPING1	0.027167906142525133	Physical interactions	IREF-HPRD
+PRNP	DPP6	0.24211029830442965	Physical interactions	IREF-HPRD
+PRNP	HSPA5	0.011171729792990045	Physical interactions	IREF-HPRD
+PRNP	MAG	0.027857030481053386	Physical interactions	IREF-HPRD
+PRNP	PLG	0.00986412730412513	Physical interactions	IREF-HPRD
+PROC	F5	0.08262423953937555	Physical interactions	IREF-HPRD
+PROC	PROS1	0.08440179706302599	Physical interactions	IREF-HPRD
+PROC	SERPINA5	0.052127426059667484	Physical interactions	IREF-HPRD
+PROC	THBD	0.19143043538801538	Physical interactions	IREF-HPRD
+PROS1	C4BPA	0.17695090860778356	Physical interactions	IREF-HPRD
+PROS1	C4BPB	0.49837270643042203	Physical interactions	IREF-HPRD
+PROS1	F10	0.05182187173996403	Physical interactions	IREF-HPRD
+PROS1	F5	0.10546549372323392	Physical interactions	IREF-HPRD
+PSEN1	CASP1	0.01223418750120006	Physical interactions	IREF-HPRD
+PSEN1	CDK5	0.009449346623385632	Physical interactions	IREF-HPRD
+PSEN1	GFAP	0.01897441231381121	Physical interactions	IREF-HPRD
+PSEN1	MAPT	0.011191623658305757	Physical interactions	IREF-HPRD
+RTN4	TUBA4A	0.017010048522027293	Physical interactions	IREF-HPRD
+SERPINA5	F10	0.03200572185698855	Physical interactions	IREF-HPRD
+SERPINA5	F11	0.13287134880306914	Physical interactions	IREF-HPRD
+SERPINA5	KLKB1	0.07676838931109642	Physical interactions	IREF-HPRD
+SERPINA5	THBD	0.150913638496586	Physical interactions	IREF-HPRD
+SERPINF2	CFD	0.19146998615166172	Physical interactions	IREF-HPRD
+SERPINF2	F11	0.12212698004082775	Physical interactions	IREF-HPRD
+SERPINF2	F13A1	0.10148707124138458	Physical interactions	IREF-HPRD
+SERPINF2	PLAU	0.04660462805973004	Physical interactions	IREF-HPRD
+SERPING1	C1R	0.14744474047837627	Physical interactions	IREF-HPRD
+SERPING1	C1S	0.2098500674132218	Physical interactions	IREF-HPRD
+SERPING1	MASP2	0.180431609529524	Physical interactions	IREF-HPRD
+SNCA	CYCS	0.02090133694501443	Physical interactions	IREF-HPRD
+SNCA	MAPT	0.015554834266666878	Physical interactions	IREF-HPRD
+SNCA	SQSTM1	0.0171050511832433	Physical interactions	IREF-HPRD
+SNCA	TH	0.055046294490404775	Physical interactions	IREF-HPRD
+SOD1	CCS	0.5160736338205041	Physical interactions	IREF-HPRD
+SOD1	RNF19A	0.09674644607509528	Physical interactions	IREF-HPRD
+SQSTM1	GRIA1	0.026590675666676587	Physical interactions	IREF-HPRD
+SQSTM1	GRIA2	0.06460624383101375	Physical interactions	IREF-HPRD
+SQSTM1	NTRK2	0.023838526494433594	Physical interactions	IREF-HPRD
+TFPI	F10	0.05093282679604598	Physical interactions	IREF-HPRD
+TUBA4A	CALB2	0.10760381887411086	Physical interactions	IREF-HPRD
+VCP	RNF19A	0.04234606190967296	Physical interactions	IREF-HPRD
+A2M	NGF	5.148318483209844	Physical interactions	IREF-INNATEDB
+APP	CASP3	0.1911550846428203	Physical interactions	IREF-INNATEDB
+APP	GFAP	3.668388619982915	Physical interactions	IREF-INNATEDB
+C1R	C1S	6.605862621921417	Physical interactions	IREF-INNATEDB
+C2	C1S	2.825986898134722	Physical interactions	IREF-INNATEDB
+C3	CD46	1.5332286363277197	Physical interactions	IREF-INNATEDB
+C3	CFB	4.079565132247225	Physical interactions	IREF-INNATEDB
+C3	CFH	1.147773877700663	Physical interactions	IREF-INNATEDB
+C3	CFI	4.079565132247225	Physical interactions	IREF-INNATEDB
+C3	CR1	4.079565132247225	Physical interactions	IREF-INNATEDB
+C3	CR2	1.9019022322153067	Physical interactions	IREF-INNATEDB
+C3	MASP1	1.3515687102007434	Physical interactions	IREF-INNATEDB
+C3	MASP2	1.0460237575665785	Physical interactions	IREF-INNATEDB
+C4A	C1S	3.9278692685780734	Physical interactions	IREF-INNATEDB
+CASP3	CASP1	0.1864326980715832	Physical interactions	IREF-INNATEDB
+CASP3	PSEN1	0.4320308827913134	Physical interactions	IREF-INNATEDB
+EP300	CASP1	0.1207976083443172	Physical interactions	IREF-INNATEDB
+EP300	CREBBP	0.1222992834177532	Physical interactions	IREF-INNATEDB
+MASP1	C2	4.023720891726343	Physical interactions	IREF-INNATEDB
+MASP2	C2	3.1140907094468573	Physical interactions	IREF-INNATEDB
+MASP2	C4A	4.3283080705638675	Physical interactions	IREF-INNATEDB
+PSEN1	CASP1	0.6017291488120129	Physical interactions	IREF-INNATEDB
+SERPING1	C1S	2.5165776707038185	Physical interactions	IREF-INNATEDB
+A2M	PROS1	0.003228382054469383	Physical interactions	IREF-INTACT
+APP	A2M	0.0011516584177541536	Physical interactions	IREF-INTACT
+APP	MAPT	0.0019496539086229143	Physical interactions	IREF-INTACT
+APP	NGFR	0.00214127293731666	Physical interactions	IREF-INTACT
+APP	PRNP	7.601605033334696E-4	Physical interactions	IREF-INTACT
+APP	PSEN1	0.0013077869127174	Physical interactions	IREF-INTACT
+BDKRB2	KNG1	0.10985279248672217	Physical interactions	IREF-INTACT
+C1QA	C1QB	0.028846855943256637	Physical interactions	IREF-INTACT
+C1R	C1S	0.09689139737532046	Physical interactions	IREF-INTACT
+C3	CD46	0.046552436575139515	Physical interactions	IREF-INTACT
+C3	CFH	0.039696805018483695	Physical interactions	IREF-INTACT
+CASP3	CALB1	0.015353172142020286	Physical interactions	IREF-INTACT
+CDK5	MAPT	0.007341351276624645	Physical interactions	IREF-INTACT
+CREBBP	HTT	0.0013941277994273561	Physical interactions	IREF-INTACT
+CYCS	HSPB1	0.005412216750580179	Physical interactions	IREF-INTACT
+DCTN1	MAPT	0.004095858774819917	Physical interactions	IREF-INTACT
+EP300	APEX1	0.0030740492166734202	Physical interactions	IREF-INTACT
+EP300	C1R	0.0044363516383634635	Physical interactions	IREF-INTACT
+EP300	CFH	0.004354837989806409	Physical interactions	IREF-INTACT
+EP300	DAO	0.005105249056008536	Physical interactions	IREF-INTACT
+EP300	PLG	0.0026200559160597693	Physical interactions	IREF-INTACT
+EP300	SERPINA5	0.005796665841339281	Physical interactions	IREF-INTACT
+F2	THBD	0.10506605486192315	Physical interactions	IREF-INTACT
+HSPA5	PAWR	0.010786668810280668	Physical interactions	IREF-INTACT
+HSPB1	F13A1	0.011318742688017507	Physical interactions	IREF-INTACT
+HTT	OPTN	8.153248232841013E-4	Physical interactions	IREF-INTACT
+KNG1	BDKRB1	0.10985279248672217	Physical interactions	IREF-INTACT
+MAPT	SLC1A2	0.048824979616571874	Physical interactions	IREF-INTACT
+NGFR	NGF	0.019645437660674475	Physical interactions	IREF-INTACT
+OPTN	TBK1	0.001357136522610477	Physical interactions	IREF-INTACT
+OPTN	VWF	0.005109443322558639	Physical interactions	IREF-INTACT
+PLAT	SERPINE1	0.06784351592642437	Physical interactions	IREF-INTACT
+PLAU	SERPINE1	0.05577901683659367	Physical interactions	IREF-INTACT
+PLG	CYFIP2	0.014268029521010103	Physical interactions	IREF-INTACT
+PROC	HNRNPDL	0.03254215743530361	Physical interactions	IREF-INTACT
+PROS1	CST3	0.04796559123544892	Physical interactions	IREF-INTACT
+PSEN1	CDK5	0.004924424033527063	Physical interactions	IREF-INTACT
+SERPINA1	SSR1	0.009179285395651108	Physical interactions	IREF-INTACT
+SERPINF2	SSR1	0.044527250871138145	Physical interactions	IREF-INTACT
+SMN1	A2M	8.88871039844195E-4	Physical interactions	IREF-INTACT
+SMN1	FGB	0.004430151956063215	Physical interactions	IREF-INTACT
+SMN1	NGFR	0.001652673618938433	Physical interactions	IREF-INTACT
+SNCA	HTT	0.0020029838780754434	Physical interactions	IREF-INTACT
+SNCA	MAPT	0.006398078167904401	Physical interactions	IREF-INTACT
+SQSTM1	PROC	0.006720477336041333	Physical interactions	IREF-INTACT
+SQSTM1	SOD1	0.007139139477209126	Physical interactions	IREF-INTACT
+TBK1	HSPA5	0.001587017447713661	Physical interactions	IREF-INTACT
+TBK1	PROS1	0.0028479971965326405	Physical interactions	IREF-INTACT
+UBQLN2	C1QA	0.01419782699655245	Physical interactions	IREF-INTACT
+VCP	OPTN	0.001967125795414958	Physical interactions	IREF-INTACT
+ZNF512B	DCTN1	0.0019906240364873226	Physical interactions	IREF-INTACT
+ZNF512B	VWF	0.004711441458982881	Physical interactions	IREF-INTACT
+APP	PSEN1	0.1381030230499802	Physical interactions	IREF-MPPI
+SMN1	PFN1	0.7429804290450241	Physical interactions	IREF-MPPI
+A2M	HSPA5	0.13844720718172462	Physical interactions	IREF-OPHID
+A2M	NGF	0.5138809600308516	Physical interactions	IREF-OPHID
+APP	A2M	0.14189812795945134	Physical interactions	IREF-OPHID
+APP	F12	0.475195649845936	Physical interactions	IREF-OPHID
+APP	F2	0.11853210680206593	Physical interactions	IREF-OPHID
+APP	KNG1	0.16552100978251394	Physical interactions	IREF-OPHID
+APP	PSEN1	0.11806489878676113	Physical interactions	IREF-OPHID
+C1QA	C1QB	0.7831212429526055	Physical interactions	IREF-OPHID
+C1QA	C1QC	1.437939061044308	Physical interactions	IREF-OPHID
+C1QA	C1R	0.9517485886218046	Physical interactions	IREF-OPHID
+C1QA	C1S	1.522255563949069	Physical interactions	IREF-OPHID
+C1QA	CR1	0.7677350100463446	Physical interactions	IREF-OPHID
+C1QB	C1QC	2.2637963985388527	Physical interactions	IREF-OPHID
+C1QB	C1R	1.4983701533703713	Physical interactions	IREF-OPHID
+C1R	C1S	2.9125789807167344	Physical interactions	IREF-OPHID
+C2	C5	1.7341041863008906	Physical interactions	IREF-OPHID
+C3	C2	0.7698243013932732	Physical interactions	IREF-OPHID
+C3	C3AR1	1.1443844688209877	Physical interactions	IREF-OPHID
+C3	C5	0.35103598827634397	Physical interactions	IREF-OPHID
+C3	CD46	0.4394541532039493	Physical interactions	IREF-OPHID
+C3	CFB	0.7588725658399478	Physical interactions	IREF-OPHID
+C3	CFH	0.3981169718822923	Physical interactions	IREF-OPHID
+C3	CFI	1.2560603093266862	Physical interactions	IREF-OPHID
+C3	CR1	0.42971381487381577	Physical interactions	IREF-OPHID
+C3	CR2	0.3555087392742685	Physical interactions	IREF-OPHID
+C4A	C3AR1	4.201014402329296	Physical interactions	IREF-OPHID
+C5	C6	2.8736445925590854	Physical interactions	IREF-OPHID
+C5	C7	2.152584943927933	Physical interactions	IREF-OPHID
+C5	C8B	1.3461305674591144	Physical interactions	IREF-OPHID
+C5AR1	C5	2.298974743017286	Physical interactions	IREF-OPHID
+C8B	C8A	2.1490011211475206	Physical interactions	IREF-OPHID
+C8B	C8G	3.7190808006089315	Physical interactions	IREF-OPHID
+C8G	C8A	3.4876515269835053	Physical interactions	IREF-OPHID
+C9	C8A	2.990302501296115	Physical interactions	IREF-OPHID
+CASP1	MICE	1.0833624324064164	Physical interactions	IREF-OPHID
+CASP3	DCTN1	0.19245257750879313	Physical interactions	IREF-OPHID
+CASP3	LMNB1	0.18129030381459332	Physical interactions	IREF-OPHID
+CASP3	PSEN1	0.12246110274653133	Physical interactions	IREF-OPHID
+CD55	CR1	1.292706347269883	Physical interactions	IREF-OPHID
+CD59	C8A	1.276514275734104	Physical interactions	IREF-OPHID
+CD59	C9	1.8941166076079108	Physical interactions	IREF-OPHID
+CDK5	NES	1.3954521398707256	Physical interactions	IREF-OPHID
+CFH	CFI	3.2088775326519317	Physical interactions	IREF-OPHID
+CNTF	CNTFR	1.663996416324052	Physical interactions	IREF-OPHID
+CPB2	THBD	2.7497381427725753	Physical interactions	IREF-OPHID
+CR1	C4A	1.5774715683343419	Physical interactions	IREF-OPHID
+CR2	CR1	0.980305713670327	Physical interactions	IREF-OPHID
+CREBBP	HSF1	0.14707445347859444	Physical interactions	IREF-OPHID
+CREBBP	HTT	0.04974749797088374	Physical interactions	IREF-OPHID
+CST3	C4A	2.6272425306592737	Physical interactions	IREF-OPHID
+DCTN1	TUBA4A	0.38726756403434887	Physical interactions	IREF-OPHID
+F10	F3	1.3798371482595182	Physical interactions	IREF-OPHID
+F10	F5	1.102753055598181	Physical interactions	IREF-OPHID
+F10	F7	0.9756754644981461	Physical interactions	IREF-OPHID
+F13A1	F13B	4.56542441182869	Physical interactions	IREF-OPHID
+F2	C6	1.2668074530663298	Physical interactions	IREF-OPHID
+F2	F11	0.5516124729743341	Physical interactions	IREF-OPHID
+F2	F5	0.6314197519544852	Physical interactions	IREF-OPHID
+F2	F9	0.7723424278659884	Physical interactions	IREF-OPHID
+F2	FGA	0.36126122256029036	Physical interactions	IREF-OPHID
+F2	SERPINC1	1.0687268358622584	Physical interactions	IREF-OPHID
+F2	SERPIND1	1.4227682314557155	Physical interactions	IREF-OPHID
+F2	THBD	0.5078561540385244	Physical interactions	IREF-OPHID
+F2R	F2	0.6982656275813917	Physical interactions	IREF-OPHID
+F7	F3	2.8722530883988884	Physical interactions	IREF-OPHID
+F8	F10	0.5890917598895103	Physical interactions	IREF-OPHID
+F8	F9	1.695283891308844	Physical interactions	IREF-OPHID
+F8	PROC	0.7108255425542284	Physical interactions	IREF-OPHID
+F8	PROS1	1.058936828210867	Physical interactions	IREF-OPHID
+F8	VWF	1.2156793419355887	Physical interactions	IREF-OPHID
+F9	F7	2.8077915945806704	Physical interactions	IREF-OPHID
+FGB	FGA	1.1468614479814703	Physical interactions	IREF-OPHID
+FGB	SERPINA5	0.7639181039593905	Physical interactions	IREF-OPHID
+FGG	F13A1	1.7209263620766606	Physical interactions	IREF-OPHID
+FGG	F13B	2.6655233951994557	Physical interactions	IREF-OPHID
+FGG	FGA	0.9237576047997026	Physical interactions	IREF-OPHID
+FGG	FGB	1.2474309484268304	Physical interactions	IREF-OPHID
+FGG	SERPINA5	0.6153098478490066	Physical interactions	IREF-OPHID
+GRIA1	GRIA4	1.2133940443810856	Physical interactions	IREF-OPHID
+GRIA1	GRIK2	0.6324872925775689	Physical interactions	IREF-OPHID
+HSPA5	F8	0.25384939152921626	Physical interactions	IREF-OPHID
+HSPA5	GRIA1	0.23150393660001847	Physical interactions	IREF-OPHID
+HSPA5	VWF	0.416811588605629	Physical interactions	IREF-OPHID
+HSPB1	F13A1	1.1682943006792792	Physical interactions	IREF-OPHID
+HTT	CASP1	0.177788648464481	Physical interactions	IREF-OPHID
+HTT	CASP3	0.08194101673795527	Physical interactions	IREF-OPHID
+HTT	DCTN1	0.1603203106815886	Physical interactions	IREF-OPHID
+HTT	OPTN	0.2975424472674321	Physical interactions	IREF-OPHID
+KNG1	F11	0.7702844262835395	Physical interactions	IREF-OPHID
+KNG1	F2	0.21458895703000885	Physical interactions	IREF-OPHID
+KNG1	KLKB1	1.2715557384232148	Physical interactions	IREF-OPHID
+LMNB1	PRPH	1.379879758304643	Physical interactions	IREF-OPHID
+MASP1	MASP2	1.8922201426144425	Physical interactions	IREF-OPHID
+MASP1	MBL2	1.3446577862277684	Physical interactions	IREF-OPHID
+MASP1	SERPING1	1.1394082515212256	Physical interactions	IREF-OPHID
+MBL2	MASP2	1.6472310806886374	Physical interactions	IREF-OPHID
+NEFH	NEFM	5.270578684570964	Physical interactions	IREF-OPHID
+NGFR	NGF	0.7569278942581147	Physical interactions	IREF-OPHID
+NGFR	NTRK2	0.5691623422167043	Physical interactions	IREF-OPHID
+NOS1	BDKRB2	1.2141044237901075	Physical interactions	IREF-OPHID
+NTRK2	BDNF	0.9926878747982025	Physical interactions	IREF-OPHID
+PLAT	F10	0.44341345315811925	Physical interactions	IREF-OPHID
+PLAT	FGA	0.5968700646343494	Physical interactions	IREF-OPHID
+PLAT	PLAU	0.6148677209330243	Physical interactions	IREF-OPHID
+PLAT	SERPINE1	0.6107117788004572	Physical interactions	IREF-OPHID
+PLAT	SERPING1	0.5937703428442209	Physical interactions	IREF-OPHID
+PLAU	SERPINA5	0.5827605431547777	Physical interactions	IREF-OPHID
+PLAU	SERPINE1	0.8951808282527569	Physical interactions	IREF-OPHID
+PLAUR	KNG1	0.4000926470417349	Physical interactions	IREF-OPHID
+PLAUR	PLAU	0.6938673169682712	Physical interactions	IREF-OPHID
+PLG	C7	0.8758218764079659	Physical interactions	IREF-OPHID
+PLG	CPB2	0.7679251017252673	Physical interactions	IREF-OPHID
+PLG	F10	0.2477013502907088	Physical interactions	IREF-OPHID
+PLG	F3	0.7291983580412489	Physical interactions	IREF-OPHID
+PLG	KNG1	0.1980547967886675	Physical interactions	IREF-OPHID
+PLG	NGF	0.39618673683813566	Physical interactions	IREF-OPHID
+PLG	PLAU	0.34347979634135356	Physical interactions	IREF-OPHID
+PLG	SERPINC1	0.9863810157459815	Physical interactions	IREF-OPHID
+PLG	SERPINE1	0.3411582166514121	Physical interactions	IREF-OPHID
+PLG	SERPINF2	0.3201444687258016	Physical interactions	IREF-OPHID
+PRNP	GFAP	1.035462254783672	Physical interactions	IREF-OPHID
+PRNP	PLG	0.5812235288703331	Physical interactions	IREF-OPHID
+PROC	F2	0.32383996798269093	Physical interactions	IREF-OPHID
+PROC	F5	1.330633357644282	Physical interactions	IREF-OPHID
+PROC	PROS1	1.0166646743841306	Physical interactions	IREF-OPHID
+PROC	SERPINA5	0.507104468324564	Physical interactions	IREF-OPHID
+PROC	THBD	1.0702394288671087	Physical interactions	IREF-OPHID
+PROS1	C4BPA	2.1920718635363956	Physical interactions	IREF-OPHID
+PROS1	F10	0.8425537974898546	Physical interactions	IREF-OPHID
+PROS1	F5	1.982281878737846	Physical interactions	IREF-OPHID
+PSEN1	CASP1	0.26570568428302266	Physical interactions	IREF-OPHID
+PSEN1	GFAP	0.2516773444789761	Physical interactions	IREF-OPHID
+PSEN1	MAPT	0.2841546890746098	Physical interactions	IREF-OPHID
+SERPINA5	F11	0.8637757622628365	Physical interactions	IREF-OPHID
+SERPINA5	F2	0.24063410862352627	Physical interactions	IREF-OPHID
+SERPINA5	FGA	0.5657027245379763	Physical interactions	IREF-OPHID
+SERPINA5	THBD	0.7952572833720731	Physical interactions	IREF-OPHID
+SERPINE1	THBD	1.221597940800515	Physical interactions	IREF-OPHID
+SERPINE2	F2	0.5096046604200775	Physical interactions	IREF-OPHID
+SERPINF2	F11	1.2451216111752272	Physical interactions	IREF-OPHID
+SERPING1	C1R	1.237146409863662	Physical interactions	IREF-OPHID
+SERPING1	C1S	1.9787294729160774	Physical interactions	IREF-OPHID
+SERPING1	F2	0.35938507683460946	Physical interactions	IREF-OPHID
+SERPING1	MASP2	1.395796581668332	Physical interactions	IREF-OPHID
+SNCA	CYCS	0.2149723361412387	Physical interactions	IREF-OPHID
+SNCA	MAPT	0.3298832807259605	Physical interactions	IREF-OPHID
+SNCA	SQSTM1	0.25334617961570804	Physical interactions	IREF-OPHID
+SNCA	TH	0.5654771456871436	Physical interactions	IREF-OPHID
+SOD1	CCS	0.9388301132990964	Physical interactions	IREF-OPHID
+SQSTM1	NTRK2	0.4601902044698021	Physical interactions	IREF-OPHID
+TBK1	HSPA5	0.11431742481438179	Physical interactions	IREF-OPHID
+TFPI	F10	1.1575947275571778	Physical interactions	IREF-OPHID
+TFPI	F7	2.409635955672355	Physical interactions	IREF-OPHID
+TUBA4A	CALB2	1.9957854472174925	Physical interactions	IREF-OPHID
+ZNF512B	DCTN1	0.12803589578467423	Physical interactions	IREF-OPHID
+ZNF512B	VWF	0.29479330439334966	Physical interactions	IREF-OPHID
+A2M	CPB2	0.1971007349494408	Physical interactions	IREF-SMALL-SCALE-STUDIES
+A2M	HSPA5	0.023894494779352085	Physical interactions	IREF-SMALL-SCALE-STUDIES
+A2M	NGF	0.1301039170765091	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	A2M	0.01678373225581153	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	CASP3	0.006325629795091759	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	CDK5	0.012327941275199351	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	F12	0.040752395531563915	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	GFAP	0.04133879653121126	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	KNG1	0.021804357797258825	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	MAPT	0.012993893039437427	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	NGFR	0.016250658837899414	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	PRNP	0.007980933766017231	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	PSEN1	0.011665345449371598	Physical interactions	IREF-SMALL-SCALE-STUDIES
+APP	SNCA	0.0076672161906328066	Physical interactions	IREF-SMALL-SCALE-STUDIES
+BDKRB2	KNG1	0.15301900874934848	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C1QA	C1QB	0.21383977896577594	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C1QA	C1QC	0.29032312710510183	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C1QA	C1R	0.33095751130768153	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C1QA	C1S	0.25549365849013356	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C1QA	CR1	0.2261685329525736	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C1QB	C1QC	0.6591664257621566	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C1QB	C1R	0.7514250478326817	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C1R	C1S	0.8977952910206801	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C2	C1S	0.5764573206638144	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C2	C4A	0.39946034293522076	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C2	C5	0.39532755810737924	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	C2	0.14943804575525627	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	C3AR1	0.3791480582418963	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	C5	0.12321658173808173	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	CD46	0.09942520013199667	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	CFB	0.2522550930721015	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	CFH	0.09880296820375961	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	CFI	0.384641091861354	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	CR1	0.1590491170679591	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	CR2	0.12365239444038598	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	MASP1	0.13106027622829616	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C3	MASP2	0.14010920022196216	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C4A	C1S	0.4802769572186582	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C4A	C3AR1	1.0134943340679914	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C5	C6	1.3199876195259517	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C5	C7	0.9947818145499729	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C5	C8B	0.7928373932066225	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C5AR1	C5	0.4532353457591108	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C8B	C8A	1.2504330581304053	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C8G	C8A	1.7013657583936488	Physical interactions	IREF-SMALL-SCALE-STUDIES
+C9	C8A	1.1564423950658123	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP1	MAPT	0.029304670738750024	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP1	MICE	0.14121258232710732	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP3	CALB1	0.06017496653800146	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP3	CASP1	0.01426597196414807	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP3	DCTN1	0.01579404725773689	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP3	FUS	0.020265668988409903	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP3	HSPB1	0.01780326027288363	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP3	LMNB1	0.023192486333302547	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP3	MAPT	0.012246447475982745	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CASP3	PSEN1	0.010994321243778466	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CD55	CR1	0.609228144092665	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CD59	C8A	0.41733917604523585	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CD59	C9	0.5952444726400267	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CDK5	MAPT	0.023866949772460233	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CDK5	NES	0.3454993070012531	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CDK5	NTRK2	0.05034169800601433	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CFH	CFI	0.8159289647359624	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CNTF	CNTFR	0.7976999120899828	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CPB2	C5	0.5492862233839423	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CR1	C4A	0.42515152041908283	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CR2	CR1	0.42224115347792174	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CREBBP	HSF1	0.010626554454808573	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CREBBP	HTT	0.0036288643246817575	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CREBBP	PPARGC1A	0.011140497233325277	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CREBBP	SERTAD3	0.17442106185008682	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CST3	C4A	0.3977992476156978	Physical interactions	IREF-SMALL-SCALE-STUDIES
+CYCS	HSPB1	0.06480647604183515	Physical interactions	IREF-SMALL-SCALE-STUDIES
+DCTN1	APEX1	0.05330864960297899	Physical interactions	IREF-SMALL-SCALE-STUDIES
+DCTN1	MAPT	0.0324435902416175	Physical interactions	IREF-SMALL-SCALE-STUDIES
+DCTN1	TUBA4A	0.04252155346912603	Physical interactions	IREF-SMALL-SCALE-STUDIES
+EP300	APEX1	0.011189359572026039	Physical interactions	IREF-SMALL-SCALE-STUDIES
+EP300	CASP1	0.00793282108370458	Physical interactions	IREF-SMALL-SCALE-STUDIES
+EP300	CREBBP	0.002157470799704873	Physical interactions	IREF-SMALL-SCALE-STUDIES
+EP300	MAPT	0.006809833478938951	Physical interactions	IREF-SMALL-SCALE-STUDIES
+EP300	PPARGC1A	0.00951890405685346	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F10	F3	0.4280659228936976	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F10	F5	0.25376151785326445	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F10	F7	0.32780204798595625	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F12	KLKB1	0.4092997457271646	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F13A1	F13B	1.6213567739256676	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F2	CPB2	0.30435634594070005	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F2	F11	0.3185753986007732	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F2	F5	0.20294925671798303	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F2	FGA	0.15938410371067055	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F2	SERPINC1	0.2726434301335388	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F2	SERPIND1	0.609449351111611	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F2	THBD	0.34620923705000817	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F2R	F2	0.11648973358654173	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F7	F3	0.8968369265575165	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F8	F10	0.1725585884290819	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F8	F2	0.13800610189110254	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F8	F9	0.41558269765414263	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F8	PROC	0.20762551829496273	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F8	PROS1	0.28611762794299184	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F8	VWF	0.22406512323795985	Physical interactions	IREF-SMALL-SCALE-STUDIES
+F9	F7	0.7894644843817012	Physical interactions	IREF-SMALL-SCALE-STUDIES
+FGA	F13A1	0.42100239417182356	Physical interactions	IREF-SMALL-SCALE-STUDIES
+FGB	FGA	0.3443541122856011	Physical interactions	IREF-SMALL-SCALE-STUDIES
+FGB	SERPINA5	0.2758395228075053	Physical interactions	IREF-SMALL-SCALE-STUDIES
+FGG	F13A1	0.37927687147331185	Physical interactions	IREF-SMALL-SCALE-STUDIES
+FGG	F13B	0.8806909066732794	Physical interactions	IREF-SMALL-SCALE-STUDIES
+FGG	FGA	0.228680677438231	Physical interactions	IREF-SMALL-SCALE-STUDIES
+FGG	FGB	0.3102251823853628	Physical interactions	IREF-SMALL-SCALE-STUDIES
+FGG	SERPINA5	0.18318112136270567	Physical interactions	IREF-SMALL-SCALE-STUDIES
+GRIA1	GRIA2	0.12991898003724606	Physical interactions	IREF-SMALL-SCALE-STUDIES
+GRIA1	GRIA4	0.21063725933112393	Physical interactions	IREF-SMALL-SCALE-STUDIES
+GRIA1	GRIK2	0.134340043944677	Physical interactions	IREF-SMALL-SCALE-STUDIES
+GRIA2	GRIK2	0.17474236006296595	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HNRNPA1	HNRNPC	0.034388826350637176	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HNRNPA1	LMNB1	0.0291110554342589	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HNRNPA1	SMN1	0.011652923572959283	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HSPA5	F8	0.050881266889037956	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HSPA5	GRIA1	0.036860883291785704	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HSPA5	PAWR	0.04876882393171637	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HSPA5	SOD1	0.027536506115363627	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HSPA5	SSR1	0.09613112744595033	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HSPA5	VWF	0.059905675639739975	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HSPB1	F13A1	0.19267169961790376	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HSPB1	HSF1	0.04876109538693844	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HSPB1	PLG	0.03920742766931261	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	CASP1	0.013342999378480672	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	CASP3	0.0055760512529211695	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	CD59	0.033471078784364366	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	DYNC1H1	0.029115928590011303	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	GFAP	0.03644020695377052	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	HNRNPC	0.02562470483694549	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	OPTN	0.022098450411538132	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	PRNP	0.007035204477137379	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	SQSTM1	0.007550285363275491	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HTT	SYP	0.058566077818698846	Physical interactions	IREF-SMALL-SCALE-STUDIES
+KNG1	BDKRB1	0.49707329584575644	Physical interactions	IREF-SMALL-SCALE-STUDIES
+KNG1	ECE1	0.2919999410765341	Physical interactions	IREF-SMALL-SCALE-STUDIES
+KNG1	F11	0.26802351656070955	Physical interactions	IREF-SMALL-SCALE-STUDIES
+KNG1	F2	0.08419629881884905	Physical interactions	IREF-SMALL-SCALE-STUDIES
+KNG1	KLKB1	0.21899367831091696	Physical interactions	IREF-SMALL-SCALE-STUDIES
+LMNB1	PRPH	0.38809246939232034	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MAG	NGFR	0.08367164210381153	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MAPT	SLC1A2	0.26964913904296006	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MAPT	TUBA4A	0.03297052317189783	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MASP1	C2	0.42049321945704227	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MASP1	MASP2	0.3942434195182404	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MASP1	MBL2	0.40749887646808014	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MASP1	SERPING1	0.34256637096559145	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MASP2	C2	0.4495257439085053	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MASP2	C4A	0.37452356110020596	Physical interactions	IREF-SMALL-SCALE-STUDIES
+MBL2	MASP2	0.4356341922256939	Physical interactions	IREF-SMALL-SCALE-STUDIES
+NEFH	NEFM	1.4902676012849865	Physical interactions	IREF-SMALL-SCALE-STUDIES
+NGFR	NGF	0.12597165537337454	Physical interactions	IREF-SMALL-SCALE-STUDIES
+NGFR	NTRK2	0.06636028720270423	Physical interactions	IREF-SMALL-SCALE-STUDIES
+NOS1	BDKRB2	0.13589929186589347	Physical interactions	IREF-SMALL-SCALE-STUDIES
+NTRK2	BDNF	0.1797507684628193	Physical interactions	IREF-SMALL-SCALE-STUDIES
+OPTN	SOD1	0.07224461187529825	Physical interactions	IREF-SMALL-SCALE-STUDIES
+OPTN	TBK1	0.06832717382414977	Physical interactions	IREF-SMALL-SCALE-STUDIES
+OPTN	TFRC	0.07817939317141427	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAT	F10	0.11747196250062332	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAT	F2	0.09394982197139912	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAT	FGA	0.1496265325693166	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAT	PLAU	0.13215975980883937	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAT	SERPINA5	0.1198560161651748	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAT	SERPINE1	0.10529816552523942	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAT	SERPING1	0.1675290308446469	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAU	SERPINA5	0.1795971815399238	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAU	SERPINE1	0.15778309300034787	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAU	SERPINE2	0.35489676905861106	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAUR	KNG1	0.11004636920477727	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLAUR	PLAU	0.1840002101003145	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	C7	0.2962793502865284	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	CPB2	0.16359585545856378	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	F10	0.06726056614036939	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	F2R	0.06261488244804693	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	F3	0.18401885575951282	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	KNG1	0.04525670477182852	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	NGF	0.10798773647400985	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	PLAT	0.050499360942251624	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	PLAU	0.07567031270189767	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	SERPINC1	0.14654971232853864	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	SERPINE1	0.06029025948681196	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	SERPINF2	0.06460895287122949	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PLG	SERPING1	0.09592159731778474	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PRNP	DPP6	0.24094947136933015	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PRNP	HSPA5	0.011362216478546943	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PRNP	MAG	0.04109235808666662	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PRNP	PLG	0.01656507391289313	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PROC	F2	0.15056179235792264	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PROC	F5	0.30533030450227144	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PROC	PROS1	0.31214838809377654	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PROC	SERPINA5	0.19207846374485288	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PROC	THBD	0.5208600751999551	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PROS1	C4BPA	0.6518800957365153	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PROS1	C4BPB	1.9506748373124143	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PROS1	F10	0.2594280545005329	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PROS1	F5	0.42075936537938685	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PSEN1	CASP1	0.02630844284122045	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PSEN1	CDK5	0.021426696011041524	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PSEN1	GFAP	0.07184929774405836	Physical interactions	IREF-SMALL-SCALE-STUDIES
+PSEN1	MAPT	0.022584159246606932	Physical interactions	IREF-SMALL-SCALE-STUDIES
+RTN4	TUBA4A	0.08794232634101466	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINA1	SSR1	0.19901071307597842	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINA5	F10	0.15963734589024328	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINA5	F11	0.40642101537542485	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINA5	F2	0.12767217187617247	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINA5	FGA	0.20333349181525037	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINA5	KLKB1	0.3320739590751507	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINA5	THBD	0.44167473812774344	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINC1	F9	0.8210208613479776	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINE1	F2	0.11216496199124325	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINE1	THBD	0.388028399071067	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINE2	F2	0.2522892456422563	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINF2	CFD	1.4107391940478058	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINF2	F11	0.3826332146825125	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINF2	F13A1	0.31749895741803685	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPINF2	PLAU	0.16908537666927473	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPING1	C1R	0.608338084769811	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPING1	C1S	0.46962683568441704	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPING1	F2	0.17845406686774948	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SERPING1	MASP2	0.36621853289519735	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SMN1	HSPB1	0.027723573019505034	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SMN1	PFN1	0.05123300597772251	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SNCA	CYCS	0.026304341917178328	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SNCA	DYNC1H1	0.03773222845101551	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SNCA	HSPB1	0.02157910746026513	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SNCA	HTT	0.006758661451241804	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SNCA	MAPT	0.014843764759912018	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SNCA	SQSTM1	0.009784646737236443	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SNCA	TH	0.050724466485799646	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SOD1	CCS	0.3615671820185494	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SOD1	RNF19A	0.15183667217950184	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SQSTM1	CHMP2B	0.04989517058872986	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SQSTM1	FUS	0.02744084902608964	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SQSTM1	GRIA1	0.03304181136857227	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SQSTM1	GRIA2	0.04297902602536878	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SQSTM1	MAPT	0.01658237439427354	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SQSTM1	NGFR	0.020738550369726615	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SQSTM1	NTRK2	0.034976606780315396	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SQSTM1	PAWR	0.043715999753171496	Physical interactions	IREF-SMALL-SCALE-STUDIES
+SQSTM1	SOD1	0.024683514744741716	Physical interactions	IREF-SMALL-SCALE-STUDIES
+TARDBP	ATXN2	0.2082846927917918	Physical interactions	IREF-SMALL-SCALE-STUDIES
+TARDBP	CASP3	0.0366676447616371	Physical interactions	IREF-SMALL-SCALE-STUDIES
+TARDBP	FUS	0.1246434168316847	Physical interactions	IREF-SMALL-SCALE-STUDIES
+TARDBP	HNRNPA1	0.04602498502227318	Physical interactions	IREF-SMALL-SCALE-STUDIES
+TARDBP	SQSTM1	0.04965004306979018	Physical interactions	IREF-SMALL-SCALE-STUDIES
+TARDBP	UBQLN2	0.17916716057544665	Physical interactions	IREF-SMALL-SCALE-STUDIES
+TFPI	F10	0.2713914930669652	Physical interactions	IREF-SMALL-SCALE-STUDIES
+TUBA4A	CALB2	0.5290299379449636	Physical interactions	IREF-SMALL-SCALE-STUDIES
+VCP	RNF19A	0.0687214167952754	Physical interactions	IREF-SMALL-SCALE-STUDIES
+VCP	SERPINA1	0.025801011875462347	Physical interactions	IREF-SMALL-SCALE-STUDIES
+VCP	TARDBP	0.050745114342537145	Physical interactions	IREF-SMALL-SCALE-STUDIES
+HNRNPA1	HNRNPC	0.2935064337190441	Physical interactions	Jeronimo-Coulombe-2007
+HNRNPA1	HNRNPDL	0.3680972338792486	Physical interactions	Jeronimo-Coulombe-2007
+TARDBP	HNRNPA1	0.3680972338792486	Physical interactions	Jeronimo-Coulombe-2007
+HSPA5	TUBA4A	0.07784573658949012	Physical interactions	Kristensen-Foster-2012
+TUBA4A	RPS27A	0.5106996208171134	Physical interactions	Kristensen-Foster-2012
+OPTN	TBK1	0.21304667749081815	Physical interactions	Li-Dorf-2011 B
+SNCA	GLUL	0.931158269237785	Physical interactions	McFarland-Nussbaum-2008
+SNCA	HSPA5	0.931158269237785	Physical interactions	McFarland-Nussbaum-2008
+SNCA	MAP2	0.931158269237785	Physical interactions	McFarland-Nussbaum-2008
+SNCA	SLC1A2	0.931158269237785	Physical interactions	McFarland-Nussbaum-2008
+SNCA	SLC1A3	0.931158269237785	Physical interactions	McFarland-Nussbaum-2008
+SNCA	SYP	0.931158269237785	Physical interactions	McFarland-Nussbaum-2008
+SNCA	TMOD2	0.931158269237785	Physical interactions	McFarland-Nussbaum-2008
+SNCA	TUBA4A	0.931158269237785	Physical interactions	McFarland-Nussbaum-2008
+SNCA	VAPB	0.931158269237785	Physical interactions	McFarland-Nussbaum-2008
+SQSTM1	ARHGEF2	0.047691037732355154	Physical interactions	Nakayasu-Adkins-2013
+SQSTM1	HSPA5	0.047691037732355154	Physical interactions	Nakayasu-Adkins-2013
+VCP	SQSTM1	0.06573577891753742	Physical interactions	Nakayasu-Adkins-2013
+APP	APEX1	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	BDNF	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	C9orf72	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	CDK5	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	GFAP	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	HNRNPA1	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	MAG	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	MAP2	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	RPS27A	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	SERPIND1	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	SLC1A1	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	SOD2	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	TARDBP	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	TBK1	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	TFPI	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+APP	TMOD2	0.020749075862050034	Physical interactions	Oláh-Ovádi-2011
+VCP	ALS2	0.3532073115971401	Physical interactions	Yu-Chow-2013
+VCP	ARHGEF2	0.3532073115971401	Physical interactions	Yu-Chow-2013
+VCP	HNRNPA1	0.3532073115971401	Physical interactions	Yu-Chow-2013
+VCP	HSPA5	0.3532073115971401	Physical interactions	Yu-Chow-2013
+VCP	HSPB1	0.3532073115971401	Physical interactions	Yu-Chow-2013
+VCP	HTT	0.3532073115971401	Physical interactions	Yu-Chow-2013
+VCP	SPAST	0.3532073115971401	Physical interactions	Yu-Chow-2013
+
+Gene	GO ids
+A2M	GO:0002020	GO:0002526	GO:0002576	GO:0002673	GO:0002683	GO:0002697	GO:0002698	GO:0002920	GO:0004857	GO:0004866	GO:0004867	GO:0006887	GO:0006954	GO:0006956	GO:0006959	GO:0007597	GO:0010466	GO:0010951	GO:0010955	GO:0022617	GO:0030141	GO:0030168	GO:0030198	GO:0030414	GO:0030449	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0043062	GO:0045824	GO:0050727	GO:0050777	GO:0051346	GO:0052547	GO:0052548	GO:0060205	GO:0061134	GO:0061135	GO:0070613	GO:0072376	GO:0072378	GO:0072562	GO:2000257
+ADA
+AIF1
+ALAD
+ALS2	GO:0030425	GO:0030426	GO:0030427	GO:0032314	GO:0035020	GO:0043005	GO:0090066	GO:0097458
+ANG
+APEX1	GO:0000737	GO:0048471
+APP	GO:0002576	GO:0004857	GO:0004866	GO:0004867	GO:0006873	GO:0006875	GO:0006887	GO:0007215	GO:0007610	GO:0007626	GO:0010466	GO:0010951	GO:0030003	GO:0030141	GO:0030168	GO:0030198	GO:0030414	GO:0030424	GO:0030425	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0035235	GO:0043005	GO:0043062	GO:0045202	GO:0048471	GO:0048588	GO:0051346	GO:0051402	GO:0052547	GO:0052548	GO:0055065	GO:0060205	GO:0061134	GO:0061135	GO:0070997	GO:0097285	GO:0097458
+ARHGEF2	GO:0001819	GO:0008017	GO:0010942	GO:0015631	GO:0032314	GO:0035020	GO:0038179	GO:0043065	GO:0043068	GO:0048011	GO:0097193	GO:2001234
+ATXN2	GO:0048471
+BCR
+BDKRB1	GO:0006873	GO:0006874	GO:0006875	GO:0007204	GO:0030003	GO:0051480	GO:0055065	GO:0055074	GO:0072503	GO:0072507
+BDKRB2	GO:0002020	GO:0003013	GO:0003018	GO:0006873	GO:0006874	GO:0006875	GO:0006939	GO:0006954	GO:0007204	GO:0008015	GO:0019229	GO:0030003	GO:0035150	GO:0042310	GO:0050880	GO:0051480	GO:0055065	GO:0055074	GO:0072503	GO:0072507	GO:0090066
+BDNF	GO:0048471	GO:0051960
+BTBD10
+C1QA	GO:0002250	GO:0002443	GO:0002449	GO:0002455	GO:0002460	GO:0006956	GO:0006959	GO:0016064	GO:0019724	GO:0072376
+C1QB	GO:0002250	GO:0002443	GO:0002449	GO:0002455	GO:0002460	GO:0006956	GO:0006959	GO:0016064	GO:0019724	GO:0072376	GO:0072562
+C1QC	GO:0002250	GO:0002443	GO:0002449	GO:0002455	GO:0002460	GO:0006956	GO:0006959	GO:0016064	GO:0019724	GO:0072376	GO:0072562
+C1R	GO:0002250	GO:0002443	GO:0002449	GO:0002455	GO:0002460	GO:0004175	GO:0004252	GO:0006956	GO:0006959	GO:0008236	GO:0016064	GO:0017171	GO:0019724	GO:0072376	GO:0072562
+C1S	GO:0002250	GO:0002443	GO:0002449	GO:0002455	GO:0002460	GO:0004175	GO:0004252	GO:0006956	GO:0006959	GO:0008236	GO:0016064	GO:0017171	GO:0019724	GO:0072376	GO:0072562
+C2	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:2000257
+C3	GO:0001819	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:0072562	GO:2000257
+C3AR1	GO:0003013	GO:0006873	GO:0006874	GO:0006875	GO:0006954	GO:0007204	GO:0008015	GO:0030003	GO:0051480	GO:0055065	GO:0055074	GO:0072503	GO:0072507
+C4A	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:0072562	GO:2000257
+C4BPA	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:0072562	GO:2000257
+C4BPB	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:2000257
+C4orf36
+C5	GO:0001819	GO:0002526	GO:0002673	GO:0002683	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0007610	GO:0030449	GO:0050727	GO:0050900	GO:0050920	GO:0070613	GO:0072376	GO:2000257
+C5AR1
+C6	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:2000257
+C7	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:2000257
+C8A	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:0072562	GO:2000257
+C8B	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:2000257
+C8G	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:0072562	GO:2000257
+C9	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0035821	GO:0050727	GO:0051817	GO:0070613	GO:0072376	GO:0072562	GO:2000257
+C9orf72
+CALB1	GO:0030424	GO:0043005	GO:0097458
+CALB2
+CAMK1G
+CASP1	GO:0004175	GO:0006919	GO:0010950	GO:0010952	GO:0031638	GO:0043280	GO:0043281	GO:0052547	GO:0052548	GO:0061134	GO:0097202	GO:2000116	GO:2001056
+CASP3	GO:0000737	GO:0004175	GO:0006309	GO:0006919	GO:0006921	GO:0010942	GO:0010950	GO:0010952	GO:0022617	GO:0030198	GO:0031638	GO:0038179	GO:0043062	GO:0043065	GO:0043068	GO:0043280	GO:0043281	GO:0048011	GO:0052547	GO:0052548	GO:0097193	GO:0097202	GO:2000116	GO:2001056
+CCS	GO:0000303	GO:0005507	GO:0006979	GO:0010035	GO:0019430	GO:0034599	GO:0071451
+CD46	GO:0001819	GO:0002250	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:2000257
+CD55	GO:0002250	GO:0002443	GO:0002449	GO:0002460	GO:0002526	GO:0002673	GO:0002683	GO:0002697	GO:0002698	GO:0002920	GO:0006873	GO:0006874	GO:0006875	GO:0006954	GO:0006956	GO:0006959	GO:0007204	GO:0010955	GO:0030003	GO:0030449	GO:0050727	GO:0050777	GO:0051480	GO:0055065	GO:0055074	GO:0070613	GO:0072376	GO:0072503	GO:0072507	GO:2000257
+CD59	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0009897	GO:0030449	GO:0031233	GO:0050727	GO:0070613	GO:0072376	GO:0098552	GO:2000257
+CDK5	GO:0001505	GO:0006887	GO:0010001	GO:0010769	GO:0010942	GO:0010975	GO:0030424	GO:0030425	GO:0030426	GO:0030427	GO:0031344	GO:0031594	GO:0043005	GO:0043025	GO:0043065	GO:0043068	GO:0043523	GO:0044297	GO:0045202	GO:0045664	GO:0048488	GO:0048588	GO:0050767	GO:0051402	GO:0051495	GO:0051960	GO:0070997	GO:0097285	GO:0097458	GO:1901214
+CDR1
+CFB	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0004175	GO:0004252	GO:0006954	GO:0006956	GO:0006959	GO:0008236	GO:0017171	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:0072562	GO:2000257
+CFD	GO:0002576	GO:0006887	GO:0006956	GO:0006959	GO:0008236	GO:0017171	GO:0030141	GO:0030168	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0060205	GO:0072376
+CFH	GO:0001948	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:0072562	GO:2000257
+CFI	GO:0002526	GO:0002673	GO:0002697	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0030449	GO:0050727	GO:0070613	GO:0072376	GO:2000257
+CHAT
+CHCHD10
+CHMP2B
+CNR1
+CNTF	GO:0043523	GO:0043524	GO:0051402	GO:0070997	GO:0097285	GO:1901214	GO:1901215
+CNTFR	GO:0019898
+CPB2
+CR1	GO:0002250	GO:0002443	GO:0002449	GO:0002455	GO:0002460	GO:0002526	GO:0002673	GO:0002683	GO:0002697	GO:0002698	GO:0002920	GO:0006954	GO:0006956	GO:0006959	GO:0010466	GO:0010950	GO:0010951	GO:0010952	GO:0010955	GO:0016064	GO:0019724	GO:0030449	GO:0045824	GO:0050727	GO:0050777	GO:0051346	GO:0052547	GO:0052548	GO:0070613	GO:0072376	GO:2000257
+CR2
+CREBBP	GO:0001819
+CST3	GO:0002020	GO:0004857	GO:0004866	GO:0010466	GO:0010712	GO:0010951	GO:0022617	GO:0030198	GO:0030414	GO:0043062	GO:0044246	GO:0051241	GO:0051346	GO:0052547	GO:0052548	GO:0061134	GO:0061135
+CTSC
+CTSH
+CYCS	GO:0000737	GO:0006309	GO:0006919	GO:0006921	GO:0010950	GO:0010952	GO:0031638	GO:0043280	GO:0043281	GO:0052547	GO:0052548	GO:0097193	GO:0097202	GO:2000116	GO:2001056
+CYFIP2	GO:0010950	GO:0010952	GO:0030162	GO:0031638	GO:0045202	GO:0048471	GO:0052547	GO:0052548	GO:0070613	GO:0097202	GO:2000116	GO:2001056
+DAO	GO:0006584	GO:0009065	GO:0009712	GO:0009713	GO:0042417	GO:0042423	GO:0046189
+DCTN1	GO:0000086	GO:0006984	GO:0006986	GO:0030968	GO:0034620	GO:0035966	GO:0035967	GO:0044839
+DPP6
+DUSP11
+DYNC1H1	GO:0000086	GO:0044839
+ECE1	GO:0003013	GO:0003018	GO:0003073	GO:0004175	GO:0008015	GO:0008217	GO:0009897	GO:0019229	GO:0030141	GO:0035150	GO:0042310	GO:0048471	GO:0050880	GO:0090066	GO:0098552
+EP300	GO:0000086	GO:0001819	GO:0035821	GO:0044839	GO:0051817	GO:0097193
+ERBB4
+F10	GO:0004175	GO:0004252	GO:0005788	GO:0005796	GO:0007597	GO:0008236	GO:0009897	GO:0017171	GO:0017187	GO:0018200	GO:0018214	GO:0030335	GO:0031233	GO:0040017	GO:0051272	GO:0072376	GO:0072378	GO:0098552	GO:2000147
+F11	GO:0004175	GO:0004252	GO:0007597	GO:0008236	GO:0017171	GO:0030193	GO:0030195	GO:0031638	GO:0031639	GO:0042730	GO:0050818	GO:0050819	GO:0051241	GO:0051917	GO:0061041	GO:0072376	GO:0072378	GO:1900046	GO:1900047
+F12	GO:0002526	GO:0002673	GO:0004175	GO:0004252	GO:0006954	GO:0007597	GO:0008236	GO:0017171	GO:0030193	GO:0030194	GO:0030195	GO:0031638	GO:0031639	GO:0035966	GO:0042730	GO:0050727	GO:0050818	GO:0050819	GO:0050820	GO:0051241	GO:0051917	GO:0061041	GO:0070613	GO:0072376	GO:0072378	GO:1900046	GO:1900047	GO:1900048
+F13A1	GO:0002576	GO:0006887	GO:0030141	GO:0030168	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0060205	GO:0072562
+F13B
+F2	GO:0004175	GO:0004252	GO:0005788	GO:0005796	GO:0006873	GO:0006874	GO:0006875	GO:0007204	GO:0007597	GO:0008236	GO:0010001	GO:0010522	GO:0010524	GO:0010543	GO:0010712	GO:0010714	GO:0010955	GO:0017171	GO:0017187	GO:0018200	GO:0018214	GO:0030003	GO:0030162	GO:0030168	GO:0030193	GO:0030194	GO:0030195	GO:0032846	GO:0032964	GO:0032965	GO:0032967	GO:0042730	GO:0044246	GO:0044253	GO:0050767	GO:0050768	GO:0050818	GO:0050819	GO:0050820	GO:0050900	GO:0051241	GO:0051281	GO:0051480	GO:0051917	GO:0051960	GO:0055065	GO:0055074	GO:0061041	GO:0070613	GO:0072376	GO:0072378	GO:0072503	GO:0072507	GO:0072562	GO:1900046	GO:1900047	GO:1900048
+F2R	GO:0003013	GO:0003018	GO:0003073	GO:0006873	GO:0006874	GO:0006875	GO:0006919	GO:0006939	GO:0006954	GO:0007204	GO:0008015	GO:0008217	GO:0010522	GO:0010524	GO:0010712	GO:0010714	GO:0010950	GO:0010952	GO:0019229	GO:0030003	GO:0030168	GO:0030193	GO:0030194	GO:0030335	GO:0031594	GO:0031638	GO:0032846	GO:0032964	GO:0032965	GO:0032967	GO:0035150	GO:0040017	GO:0042310	GO:0043280	GO:0043281	GO:0043523	GO:0043524	GO:0044246	GO:0044253	GO:0045202	GO:0050818	GO:0050820	GO:0050880	GO:0051241	GO:0051272	GO:0051281	GO:0051402	GO:0051480	GO:0052547	GO:0052548	GO:0055065	GO:0055074	GO:0061041	GO:0070997	GO:0072503	GO:0072507	GO:0090066	GO:0097202	GO:0097285	GO:1900046	GO:1900048	GO:1901214	GO:1901215	GO:2000116	GO:2000147	GO:2001056
+F3	GO:0002020	GO:0002526	GO:0006919	GO:0006954	GO:0007610	GO:0009897	GO:0010640	GO:0010950	GO:0010952	GO:0030193	GO:0030194	GO:0030335	GO:0031233	GO:0031638	GO:0040017	GO:0043280	GO:0043281	GO:0048008	GO:0050818	GO:0050820	GO:0050920	GO:0051272	GO:0052547	GO:0052548	GO:0061041	GO:0072376	GO:0072378	GO:0097202	GO:0098552	GO:1900046	GO:1900048	GO:2000116	GO:2000147	GO:2001056
+F5	GO:0002576	GO:0006887	GO:0030141	GO:0030168	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0060205
+F7	GO:0001948	GO:0005788	GO:0005796	GO:0007610	GO:0008236	GO:0010640	GO:0017171	GO:0017187	GO:0018200	GO:0018214	GO:0030335	GO:0040017	GO:0048008	GO:0050900	GO:0050920	GO:0051272	GO:0072376	GO:0072378	GO:2000147
+F8	GO:0002576	GO:0006887	GO:0007597	GO:0030141	GO:0030168	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0060205	GO:0072376	GO:0072378
+F9	GO:0005788	GO:0005796	GO:0007597	GO:0017187	GO:0018200	GO:0018214	GO:0072376	GO:0072378
+FGA	GO:0002576	GO:0006887	GO:0009897	GO:0010035	GO:0030141	GO:0030168	GO:0030198	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0043062	GO:0060205	GO:0072562	GO:0098552
+FGB	GO:0002576	GO:0006887	GO:0009897	GO:0010035	GO:0030141	GO:0030168	GO:0030198	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0043062	GO:0051087	GO:0060205	GO:0072562	GO:0098552
+FGF1
+FGG	GO:0002576	GO:0006887	GO:0009897	GO:0010035	GO:0030141	GO:0030168	GO:0030198	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0043062	GO:0060205	GO:0072562	GO:0098552
+FGGY
+FIG4
+FOLH1
+FUS
+GAP43
+GDNF
+GFAP
+GFM1
+GLG1	GO:0050900
+GLUL	GO:0001504	GO:0001505	GO:0009065
+GRIA1	GO:0004970	GO:0005230	GO:0007215	GO:0008066	GO:0008328	GO:0012506	GO:0030425	GO:0030659	GO:0032281	GO:0035235	GO:0043005	GO:0043025	GO:0044297	GO:0045202	GO:0097458
+GRIA2	GO:0004970	GO:0005230	GO:0007215	GO:0008066	GO:0008328	GO:0012506	GO:0030659	GO:0032281	GO:0035235
+GRIA4	GO:0004970	GO:0005230	GO:0007215	GO:0008066	GO:0008328	GO:0012506	GO:0030659	GO:0032281	GO:0035235
+GRIK1
+GRIK2	GO:0004970	GO:0005230	GO:0007215	GO:0008066
+GRN
+GSR
+HEXA
+HNRNPA1
+HNRNPA1L2
+HNRNPC
+HNRNPDL
+HSF1
+HSPA5	GO:0002576	GO:0005788	GO:0006887	GO:0006984	GO:0006986	GO:0030168	GO:0030335	GO:0030968	GO:0034620	GO:0035966	GO:0035967	GO:0040017	GO:0051087	GO:0051272	GO:2000147
+HSPB1	GO:0001819	GO:0004857	GO:0006979	GO:0006986	GO:0007610	GO:0008631	GO:0030335	GO:0034599	GO:0035966	GO:0040017	GO:0050920	GO:0051272	GO:0097193	GO:1900407	GO:1902175	GO:2000147	GO:2001234
+HTT	GO:0012506	GO:0015631	GO:0030424	GO:0030425	GO:0030659	GO:0043005	GO:0045502	GO:0048487	GO:0097458	GO:2001234
+IGF1
+IL10RB
+KIFAP3
+KLKB1	GO:0002526	GO:0002673	GO:0006954	GO:0007597	GO:0022617	GO:0030193	GO:0030195	GO:0030198	GO:0031638	GO:0031639	GO:0042730	GO:0043062	GO:0050727	GO:0050818	GO:0050819	GO:0051241	GO:0051917	GO:0061041	GO:0070613	GO:0072376	GO:0072378	GO:1900046	GO:1900047
+KNG1	GO:0002576	GO:0006873	GO:0006874	GO:0006875	GO:0006887	GO:0006939	GO:0006954	GO:0007204	GO:0007597	GO:0010942	GO:0030003	GO:0030141	GO:0030168	GO:0030193	GO:0030195	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0043065	GO:0043068	GO:0050818	GO:0050819	GO:0051241	GO:0051480	GO:0055065	GO:0055074	GO:0060205	GO:0061041	GO:0072376	GO:0072378	GO:0072503	GO:0072507	GO:0072562	GO:1900046	GO:1900047
+LMNB1	GO:0006921
+MAG	GO:0010769	GO:0010975	GO:0031344	GO:0038179	GO:0045664	GO:0048011	GO:0050767	GO:0050768	GO:0050770	GO:0050771	GO:0050900	GO:0051960
+MAOB
+MAP2	GO:0001948
+MAPT	GO:0006921	GO:0008017	GO:0010769	GO:0010975	GO:0015631	GO:0030424	GO:0030426	GO:0030427	GO:0031344	GO:0043005	GO:0045664	GO:0048588	GO:0050767	GO:0050769	GO:0050770	GO:0050772	GO:0051495	GO:0051960	GO:0090066	GO:0097458
+MASP1	GO:0002526	GO:0002673	GO:0002683	GO:0002697	GO:0002698	GO:0002920	GO:0004175	GO:0004252	GO:0006954	GO:0006956	GO:0006959	GO:0008236	GO:0010955	GO:0017171	GO:0030449	GO:0050727	GO:0050777	GO:0070613	GO:0072376	GO:2000257
+MASP2	GO:0004175	GO:0004252	GO:0006956	GO:0006959	GO:0008236	GO:0017171	GO:0072376
+MATR3
+MBL2	GO:0002526	GO:0006954	GO:0006956	GO:0006959	GO:0006979	GO:0072376
+CASP14 (MICE)
+MT3
+NAIP
+NEFH	GO:0008017	GO:0015631	GO:0030424	GO:0043005	GO:0045502	GO:0097458
+NEFM	GO:0008017	GO:0015631	GO:0030424	GO:0043005	GO:0097458
+NES	GO:0000086	GO:0044839	GO:0051495
+NGF	GO:0005796	GO:0010769	GO:0010942	GO:0010975	GO:0031344	GO:0038179	GO:0043065	GO:0043068	GO:0043281	GO:0045664	GO:0048011	GO:0050767	GO:0050769	GO:0050770	GO:0050772	GO:0051960	GO:0052547	GO:0052548	GO:2000116
+NGFR	GO:0010769	GO:0010942	GO:0010975	GO:0031344	GO:0038179	GO:0043065	GO:0043068	GO:0043281	GO:0045664	GO:0048011	GO:0050767	GO:0050768	GO:0050769	GO:0050770	GO:0050771	GO:0050772	GO:0051960	GO:0052547	GO:0052548	GO:2000116
+NOS1	GO:0001505	GO:0003013	GO:0003018	GO:0006873	GO:0006874	GO:0006875	GO:0007204	GO:0008015	GO:0008217	GO:0009065	GO:0010522	GO:0030003	GO:0035150	GO:0042311	GO:0048471	GO:0050880	GO:0051480	GO:0055065	GO:0055074	GO:0072503	GO:0072507	GO:0090066	GO:0097458
+NTRK2	GO:0007610	GO:0010769	GO:0010975	GO:0031344	GO:0032314	GO:0035020	GO:0038179	GO:0043523	GO:0043524	GO:0045664	GO:0048011	GO:0050767	GO:0050769	GO:0050770	GO:0050772	GO:0051402	GO:0051960	GO:0070997	GO:0097285	GO:1901214	GO:1901215
+OPTN	GO:0000086	GO:0044839
+PAWR	GO:0010942	GO:0043065	GO:0043068
+PFN1	GO:0002576	GO:0006887	GO:0030168	GO:0030335	GO:0031344	GO:0040017	GO:0051272	GO:0051495	GO:0072562	GO:0090066	GO:2000147
+PGA3
+PGA4
+PGA5
+PIGW
+PLAT	GO:0004175	GO:0004252	GO:0008236	GO:0010955	GO:0017171	GO:0030162	GO:0030193	GO:0030195	GO:0031638	GO:0031639	GO:0042730	GO:0050818	GO:0050819	GO:0051241	GO:0061041	GO:0070613	GO:1900046	GO:1900047
+PLAU	GO:0004175	GO:0004252	GO:0008236	GO:0017171	GO:0030193	GO:0030195	GO:0042730	GO:0050818	GO:0050819	GO:0051241	GO:0061041	GO:1900046	GO:1900047
+PLAUR	GO:0005788	GO:0019898	GO:0030162	GO:0030193	GO:0030195	GO:0042730	GO:0050818	GO:0050819	GO:0051241	GO:0061041	GO:0070613	GO:1900046	GO:1900047
+PLEKHB1
+PLG	GO:0002576	GO:0004175	GO:0004252	GO:0006887	GO:0008236	GO:0009897	GO:0017171	GO:0019898	GO:0022617	GO:0030141	GO:0030168	GO:0030193	GO:0030194	GO:0030195	GO:0030198	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0042730	GO:0043062	GO:0050818	GO:0050819	GO:0050820	GO:0051241	GO:0051917	GO:0060205	GO:0061041	GO:0072562	GO:0098552	GO:1900046	GO:1900047	GO:1900048
+PON1
+PON2
+PON3
+PPARGC1A	GO:0006979	GO:0032846	GO:0034599	GO:0043523	GO:0043524	GO:0051402	GO:0070997	GO:0097285	GO:1901214	GO:1901215
+PRNP	GO:0002683	GO:0005507	GO:0006873	GO:0006875	GO:0006979	GO:0008017	GO:0015631	GO:0019898	GO:0030003	GO:0051241	GO:0055065
+PROC	GO:0004175	GO:0004252	GO:0005788	GO:0005796	GO:0008236	GO:0017171	GO:0017187	GO:0018200	GO:0018214	GO:0030193	GO:0030195	GO:0050818	GO:0050819	GO:0050900	GO:0051241	GO:0061041	GO:1900046	GO:1900047
+PROS1	GO:0002526	GO:0002576	GO:0002673	GO:0002697	GO:0002920	GO:0004857	GO:0004866	GO:0005796	GO:0006887	GO:0006954	GO:0006956	GO:0006959	GO:0010466	GO:0010951	GO:0017187	GO:0018200	GO:0018214	GO:0030141	GO:0030168	GO:0030414	GO:0030449	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0050727	GO:0050900	GO:0051346	GO:0052547	GO:0052548	GO:0060205	GO:0061134	GO:0061135	GO:0070613	GO:0072376	GO:0072562	GO:2000257
+PRPH
+PSEN1	GO:0004175	GO:0006873	GO:0006874	GO:0006875	GO:0022617	GO:0030003	GO:0030198	GO:0030424	GO:0030425	GO:0030426	GO:0030427	GO:0031594	GO:0043005	GO:0043025	GO:0043062	GO:0044297	GO:0045202	GO:0048471	GO:0055065	GO:0055074	GO:0072503	GO:0072507	GO:0097458
+PVALB
+RNF19A
+RNPEP
+RPS27A	GO:0000086	GO:0001819	GO:0010942	GO:0012506	GO:0030659	GO:0038179	GO:0043065	GO:0043068	GO:0044839	GO:0048011	GO:0051241
+RTN4	GO:0010769	GO:0010975	GO:0031344	GO:0038179	GO:0045664	GO:0048011	GO:0048588	GO:0050767	GO:0050768	GO:0050770	GO:0050771	GO:0051960	GO:0090066
+SERPINA1	GO:0002020	GO:0002576	GO:0004857	GO:0004866	GO:0004867	GO:0006887	GO:0010466	GO:0010951	GO:0030141	GO:0030162	GO:0030168	GO:0030414	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0051346	GO:0052547	GO:0052548	GO:0060205	GO:0061134	GO:0061135	GO:0070613
+SERPINA5	GO:0002020	GO:0004857	GO:0004866	GO:0004867	GO:0009897	GO:0010466	GO:0010951	GO:0012506	GO:0030141	GO:0030162	GO:0030414	GO:0030659	GO:0031091	GO:0051346	GO:0052547	GO:0052548	GO:0061134	GO:0061135	GO:0070613	GO:0098552
+SERPINC1	GO:0002020	GO:0004857	GO:0004866	GO:0004867	GO:0010466	GO:0010951	GO:0030162	GO:0030414	GO:0051346	GO:0052547	GO:0052548	GO:0061134	GO:0061135	GO:0070613	GO:0072562
+SERPIND1	GO:0004857	GO:0004866	GO:0004867	GO:0010466	GO:0010951	GO:0030162	GO:0030414	GO:0051346	GO:0052547	GO:0052548	GO:0061134	GO:0061135	GO:0070613
+SERPINE1	GO:0001819	GO:0002020	GO:0002576	GO:0004857	GO:0004866	GO:0004867	GO:0006887	GO:0006954	GO:0007610	GO:0010466	GO:0010951	GO:0010955	GO:0030141	GO:0030168	GO:0030193	GO:0030194	GO:0030195	GO:0030198	GO:0030335	GO:0030414	GO:0031091	GO:0031093	GO:0031638	GO:0031639	GO:0031983	GO:0034774	GO:0040017	GO:0042730	GO:0043062	GO:0050727	GO:0050818	GO:0050819	GO:0050820	GO:0050900	GO:0050920	GO:0051241	GO:0051272	GO:0051346	GO:0051917	GO:0052547	GO:0052548	GO:0060205	GO:0061041	GO:0061134	GO:0061135	GO:0070613	GO:0097285	GO:1900046	GO:1900047	GO:1900048	GO:2000147	GO:2001234
+SERPINE2	GO:0004857	GO:0004866	GO:0004867	GO:0009897	GO:0010001	GO:0010466	GO:0010543	GO:0010951	GO:0010955	GO:0019898	GO:0030141	GO:0030162	GO:0030168	GO:0030193	GO:0030195	GO:0030414	GO:0031091	GO:0031594	GO:0031638	GO:0031639	GO:0045202	GO:0050767	GO:0050769	GO:0050818	GO:0050819	GO:0051241	GO:0051346	GO:0051960	GO:0052547	GO:0052548	GO:0061041	GO:0061134	GO:0061135	GO:0070613	GO:0098552	GO:1900046	GO:1900047
+SERPINF2	GO:0001819	GO:0002020	GO:0002576	GO:0003013	GO:0003018	GO:0003073	GO:0004857	GO:0004866	GO:0004867	GO:0006887	GO:0008015	GO:0008217	GO:0010466	GO:0010712	GO:0010714	GO:0010951	GO:0010955	GO:0030141	GO:0030162	GO:0030168	GO:0030193	GO:0030194	GO:0030195	GO:0030198	GO:0030414	GO:0031091	GO:0031093	GO:0031638	GO:0031639	GO:0031983	GO:0032964	GO:0032965	GO:0032967	GO:0034774	GO:0035150	GO:0042730	GO:0043062	GO:0044246	GO:0044253	GO:0050818	GO:0050819	GO:0050820	GO:0050880	GO:0051241	GO:0051346	GO:0051495	GO:0051917	GO:0052547	GO:0052548	GO:0060205	GO:0061041	GO:0061134	GO:0061135	GO:0070613	GO:0072562	GO:0090066	GO:1900046	GO:1900047	GO:1900048
+SERPING1	GO:0002526	GO:0002576	GO:0002673	GO:0002683	GO:0002697	GO:0002698	GO:0002920	GO:0003013	GO:0004857	GO:0004866	GO:0004867	GO:0006887	GO:0006954	GO:0006956	GO:0006959	GO:0007597	GO:0008015	GO:0010466	GO:0010951	GO:0010955	GO:0030141	GO:0030168	GO:0030414	GO:0030449	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0045824	GO:0050727	GO:0050777	GO:0051346	GO:0052547	GO:0052548	GO:0060205	GO:0061134	GO:0061135	GO:0070613	GO:0072376	GO:0072378	GO:0072562	GO:2000257
+SERTAD3
+SETX
+SIGMAR1
+SLC18A3
+SLC1A1	GO:0005310	GO:0015172	GO:0015179	GO:0015800	GO:0015807	GO:0015813
+SLC1A2	GO:0005310	GO:0015172	GO:0015179	GO:0015800	GO:0015807	GO:0015813
+SLC1A3	GO:0001504	GO:0001505	GO:0005310	GO:0015172	GO:0015179	GO:0015800	GO:0015807	GO:0015813
+SLC33A1
+SMN1
+SMN2
+SNCA	GO:0001504	GO:0001505	GO:0004857	GO:0004866	GO:0005507	GO:0006584	GO:0006873	GO:0006874	GO:0006875	GO:0006887	GO:0006919	GO:0007204	GO:0009712	GO:0009713	GO:0010035	GO:0010466	GO:0010522	GO:0010524	GO:0010640	GO:0010950	GO:0010951	GO:0010952	GO:0012506	GO:0015631	GO:0030003	GO:0030141	GO:0030198	GO:0030414	GO:0030424	GO:0030426	GO:0030427	GO:0030659	GO:0031091	GO:0031638	GO:0032846	GO:0042417	GO:0042423	GO:0043005	GO:0043062	GO:0043280	GO:0043281	GO:0045502	GO:0046189	GO:0048008	GO:0048471	GO:0048488	GO:0051281	GO:0051346	GO:0051480	GO:0052547	GO:0052548	GO:0055065	GO:0055074	GO:0061134	GO:0061135	GO:0072503	GO:0072507	GO:0097202	GO:0097458	GO:2000116	GO:2001056
+SOD1	GO:0000303	GO:0000737	GO:0001819	GO:0002576	GO:0003013	GO:0003018	GO:0005507	GO:0006309	GO:0006873	GO:0006875	GO:0006887	GO:0006921	GO:0006939	GO:0006979	GO:0007610	GO:0007626	GO:0008015	GO:0008217	GO:0008631	GO:0010001	GO:0010035	GO:0010942	GO:0019430	GO:0030003	GO:0030168	GO:0030425	GO:0032314	GO:0034599	GO:0035020	GO:0035150	GO:0042311	GO:0043005	GO:0043025	GO:0043065	GO:0043068	GO:0043523	GO:0043524	GO:0044297	GO:0050880	GO:0051087	GO:0051241	GO:0051402	GO:0055065	GO:0070997	GO:0071451	GO:0090066	GO:0097193	GO:0097285	GO:0097458	GO:1900407	GO:1901214	GO:1901215	GO:1902175
+SOD2	GO:0000303	GO:0003013	GO:0003018	GO:0003073	GO:0006979	GO:0008015	GO:0008217	GO:0008631	GO:0010035	GO:0019430	GO:0034599	GO:0035150	GO:0042311	GO:0043523	GO:0043524	GO:0050880	GO:0051402	GO:0070997	GO:0071451	GO:0090066	GO:0097193	GO:0097285	GO:1900407	GO:1901214	GO:1901215	GO:1902175	GO:2001234
+SPAST	GO:0008017	GO:0015631	GO:0048487
+SPG11
+SQSTM1	GO:0010942	GO:0038179	GO:0043065	GO:0043068	GO:0048011
+SSR1	GO:0006984	GO:0006986	GO:0030968	GO:0034620	GO:0035966	GO:0035967
+SYP	GO:0012506	GO:0030659	GO:0045202	GO:0048488
+TARDBP	GO:0035821	GO:0051817
+TBK1	GO:0001819	GO:0006954	GO:0051241
+TFPI	GO:0004857	GO:0004866	GO:0010466	GO:0010951	GO:0030414	GO:0051346	GO:0052547	GO:0052548	GO:0061134	GO:0061135	GO:0072376	GO:0072378
+TFRC	GO:0006873	GO:0006875	GO:0030003	GO:0055065	GO:0072562
+TH	GO:0003013	GO:0006584	GO:0007610	GO:0007626	GO:0009712	GO:0009713	GO:0012506	GO:0030659	GO:0042417	GO:0042423	GO:0043005	GO:0043025	GO:0044297	GO:0046189	GO:0097458	GO:0098552
+THBD	GO:0010543	GO:0030168	GO:0030193	GO:0030194	GO:0030195	GO:0042730	GO:0050818	GO:0050819	GO:0050820	GO:0050900	GO:0051241	GO:0051917	GO:0061041	GO:1900046	GO:1900047	GO:1900048
+TIAM1
+TMEM106B
+TMOD2
+TPK1
+TREM2
+TRPM7
+TSPO
+TUBA4A	GO:0000086	GO:0002576	GO:0006887	GO:0030168	GO:0044839
+UBQLN2
+UBQLN3
+UNC13A
+UTS2R
+VAPB	GO:0006873	GO:0006874	GO:0006875	GO:0006984	GO:0006986	GO:0015631	GO:0030003	GO:0030968	GO:0034620	GO:0035821	GO:0035966	GO:0035967	GO:0048487	GO:0051817	GO:0055065	GO:0055074	GO:0072503	GO:0072507
+VCP	GO:0006919	GO:0006984	GO:0006986	GO:0010950	GO:0010952	GO:0030162	GO:0030968	GO:0031638	GO:0034620	GO:0035966	GO:0035967	GO:0043280	GO:0043281	GO:0048471	GO:0052547	GO:0052548	GO:0070613	GO:0097202	GO:2000116	GO:2001056
+VPS54
+VWF	GO:0001948	GO:0002020	GO:0002576	GO:0006887	GO:0007597	GO:0030141	GO:0030168	GO:0030198	GO:0031091	GO:0031093	GO:0031983	GO:0034774	GO:0043062	GO:0051087	GO:0060205	GO:0072376	GO:0072378
+XBP1
+ZNF470
+ZNF512B
+
+GO id	Description	q-value	Occurrences in Sample	Occurrences in Genome
+GO:0072376	protein activation cascade	4.027206728711754E-74	43	61
+GO:0006956	complement activation	7.587652834805645E-53	31	43
+GO:2000257	regulation of protein activation cascade	1.1084983721472831E-41	23	27
+GO:0030449	regulation of complement activation	1.1084983721472831E-41	23	27
+GO:0002920	regulation of humoral immune response	4.49473763735637E-38	23	33
+GO:0002673	regulation of acute inflammatory response	1.2334686036869247E-37	25	46
+GO:0006959	humoral immune response	3.79998578627697E-37	31	105
+GO:0070613	regulation of protein processing	6.266387537034302E-37	37	198
+GO:0002526	acute inflammatory response	1.1835308166489563E-36	27	66
+GO:0072562	blood microparticle	3.3614131201650003E-28	26	108
+GO:0006954	inflammatory response	1.010458173427455E-25	33	282
+GO:0050727	regulation of inflammatory response	4.316334370070102E-25	26	140
+GO:0031091	platelet alpha granule	2.759028858265625E-24	20	61
+GO:0002576	platelet degranulation	4.64587488705809E-23	21	82
+GO:0072378	blood coagulation, fibrin clot formation	3.934578639958121E-22	14	21
+GO:0031093	platelet alpha granule lumen	4.4542593191425344E-21	17	48
+GO:0030168	platelet activation	3.9768935553429537E-19	25	211
+GO:0034774	secretory granule lumen	6.270295440954208E-19	17	62
+GO:1900046	regulation of hemostasis	2.3259211601891232E-18	16	54
+GO:0030193	regulation of blood coagulation	2.3259211601891232E-18	16	54
+GO:1900047	negative regulation of hemostasis	2.936263286135863E-18	14	34
+GO:0030195	negative regulation of blood coagulation	2.936263286135863E-18	14	34
+GO:0002697	regulation of immune effector process	3.774725525543386E-18	23	183
+GO:0050818	regulation of coagulation	3.774725525543386E-18	16	56
+GO:0050819	negative regulation of coagulation	6.950580640286753E-18	14	36
+GO:0006887	exocytosis	9.24725124774739E-18	23	191
+GO:0060205	cytoplasmic membrane-bounded vesicle lumen	1.893090476362621E-17	17	76
+GO:0031983	vesicle lumen	1.893090476362621E-17	17	76
+GO:0030141	secretory granule	2.3156594356494432E-17	21	152
+GO:0007597	blood coagulation, intrinsic pathway	1.2979992737717901E-16	11	18
+GO:0052548	regulation of endopeptidase activity	1.9590566720286886E-16	24	248
+GO:0052547	regulation of peptidase activity	3.65033990501715E-16	24	255
+GO:0061041	regulation of wound healing	3.9186323331789654E-16	16	74
+GO:0042730	fibrinolysis	5.961677647662639E-16	11	20
+GO:0031638	zymogen activation	8.388713172316598E-13	15	96
+GO:0008236	serine-type peptidase activity	9.581420603987187E-13	15	97
+GO:0051241	negative regulation of multicellular organismal process	1.373360481810851E-12	20	229
+GO:0017171	serine hydrolase activity	1.4556830445105104E-12	15	100
+GO:0004252	serine-type endopeptidase activity	2.615394983327802E-12	13	66
+GO:0051917	regulation of fibrinolysis	3.5063958902183232E-12	8	12
+GO:0004175	endopeptidase activity	8.944406550724616E-12	17	163
+GO:0004866	endopeptidase inhibitor activity	2.0014209064419595E-11	14	97
+GO:0030414	peptidase inhibitor activity	2.619938133152334E-11	14	99
+GO:0061135	endopeptidase regulator activity	2.9567366900198307E-11	14	100
+GO:0061134	peptidase regulator activity	3.702970668277049E-11	15	125
+GO:1900048	positive regulation of hemostasis	3.72151281232292E-11	8	15
+GO:0030194	positive regulation of blood coagulation	3.72151281232292E-11	8	15
+GO:0050820	positive regulation of coagulation	3.72151281232292E-11	8	15
+GO:0010951	negative regulation of endopeptidase activity	1.4939973696277022E-10	15	138
+GO:0010466	negative regulation of peptidase activity	1.8130275607752406E-10	15	140
+GO:0004867	serine-type endopeptidase inhibitor activity	3.930353206691148E-10	10	42
+GO:0031639	plasminogen activation	5.55764295340853E-10	7	12
+GO:0010955	negative regulation of protein processing	8.031860834656655E-10	10	45
+GO:0002020	protease binding	1.9754351746085856E-9	10	49
+GO:0002455	humoral immune response mediated by circulating immunoglobulin	1.8069001358193625E-8	6	10
+GO:0017187	peptidyl-glutamic acid carboxylation	3.8101773919899046E-8	6	11
+GO:0018214	protein carboxylation	3.8101773919899046E-8	6	11
+GO:0004857	enzyme inhibitor activity	5.889507257316553E-8	15	211
+GO:0051346	negative regulation of hydrolase activity	3.288290150527595E-7	15	239
+GO:0009897	external side of plasma membrane	7.463554200616027E-7	10	88
+GO:0006875	cellular metal ion homeostasis	1.2429415503633957E-6	15	264
+GO:0018200	peptidyl-glutamic acid modification	1.9502148555259966E-6	6	19
+GO:0030003	cellular cation homeostasis	3.2270448355805457E-6	15	284
+GO:0055065	metal ion homeostasis	3.831700457587699E-6	15	288
+GO:0006873	cellular ion homeostasis	4.536932865248177E-6	15	292
+GO:0090066	regulation of anatomical structure size	1.1091283209397106E-5	11	150
+GO:0043005	neuron projection	1.5102829054257163E-5	13	232
+GO:0030162	regulation of proteolysis	1.5102829054257163E-5	11	155
+GO:0035150	regulation of tube size	1.6087788713299912E-5	7	44
+GO:0050880	regulation of blood vessel size	1.6087788713299912E-5	7	44
+GO:0030424	axon	2.242215330413556E-5	9	96
+GO:0098552	side of membrane	2.245103589982737E-5	11	162
+GO:0030198	extracellular matrix organization	2.6944081277953353E-5	14	290
+GO:0043062	extracellular structure organization	2.773097168367127E-5	14	291
+GO:0001819	positive regulation of cytokine production	2.9593676936254294E-5	12	206
+GO:0097458	neuron part	3.4696513874940736E-5	14	297
+GO:0010950	positive regulation of endopeptidase activity	4.1472994026633045E-5	9	104
+GO:0010952	positive regulation of peptidase activity	5.670864595337879E-5	9	108
+GO:0051402	neuron apoptotic process	6.455076477225332E-5	8	80
+GO:0097202	activation of cysteine-type endopeptidase activity	6.455076477225332E-5	8	80
+GO:0006874	cellular calcium ion homeostasis	9.004929322930167E-5	11	188
+GO:0016064	immunoglobulin mediated immune response	9.451737118579878E-5	6	36
+GO:0003018	vascular process in circulatory system	1.0915226268512093E-4	7	59
+GO:0055074	calcium ion homeostasis	1.18814321268357E-4	11	194
+GO:0019724	B cell mediated immunity	1.2752530037548146E-4	6	38
+GO:0072503	cellular divalent inorganic cation homeostasis	1.3518068809780737E-4	11	197
+GO:2000116	regulation of cysteine-type endopeptidase activity	1.4910729253912112E-4	10	159
+GO:0015631	tubulin binding	1.6340487210010233E-4	9	124
+GO:0072507	divalent inorganic cation homeostasis	1.9369580626806172E-4	11	205
+GO:0070997	neuron death	2.0029785931728825E-4	8	94
+GO:0007204	positive regulation of cytosolic calcium ion concentration	2.509438316571307E-4	9	131
+GO:0004970	ionotropic glutamate receptor activity	2.7117886725559987E-4	4	11
+GO:2001056	positive regulation of cysteine-type endopeptidase activity	3.110709247049213E-4	8	100
+GO:0051480	cytosolic calcium ion homeostasis	3.5329953900663865E-4	9	137
+GO:0043524	negative regulation of neuron apoptotic process	3.6706581583192076E-4	6	46
+GO:0043523	regulation of neuron apoptotic process	3.732822221755106E-4	7	72
+GO:0006919	activation of cysteine-type endopeptidase activity involved in apoptotic process	4.452617440540192E-4	7	74
+GO:1901215	negative regulation of neuron death	4.600123379088938E-4	6	48
+GO:0043281	regulation of cysteine-type endopeptidase activity involved in apoptotic process	6.016636708961066E-4	9	147
+GO:1901214	regulation of neuron death	6.171929259688697E-4	7	78
+GO:0050770	regulation of axonogenesis	9.026642293045731E-4	6	54
+GO:0031594	neuromuscular junction	9.86536061690849E-4	4	15
+GO:0005796	Golgi lumen	9.866040377042792E-4	7	84
+GO:0035235	ionotropic glutamate receptor signaling pathway	0.00128198448075963	4	16
+GO:0008015	blood circulation	0.0016075365007459648	9	167
+GO:0010712	regulation of collagen metabolic process	0.0016344839669102714	4	17
+GO:0043280	positive regulation of cysteine-type endopeptidase activity involved in apoptotic process	0.0017405535989182374	7	92
+GO:0050777	negative regulation of immune response	0.0017730783839858156	5	36
+GO:0002449	lymphocyte mediated immunity	0.0019696506701368547	7	94
+GO:0002250	adaptive immune response	0.0024672428474862675	8	135
+GO:0044246	regulation of multicellular organismal metabolic process	0.0025101630692055516	4	19
+GO:0002460	adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains	0.0025219663332391256	7	98
+GO:0002698	negative regulation of immune effector process	0.0025380800495395824	5	39
+GO:0008066	glutamate receptor activity	0.003035965259711357	4	20
+GO:0003013	circulatory system process	0.0030401790841171248	10	230
+GO:0032314	regulation of Rac GTPase activity	0.0036625315911820843	4	21
+GO:0097285	cell-type specific apoptotic process	0.00476653117106418	9	194
+GO:0030426	growth cone	0.004960320993952505	5	45
+GO:0030425	dendrite	0.005657056799952817	7	112
+GO:0035966	response to topologically incorrect protein	0.005892072148575866	7	113
+GO:0043065	positive regulation of apoptotic process	0.005892072148575866	10	250
+GO:0035020	regulation of Rac protein signal transduction	0.005921623777875627	4	24
+GO:0050772	positive regulation of axonogenesis	0.005921623777875627	4	24
+GO:0030427	site of polarized growth	0.005921623777875627	5	47
+GO:0045202	synapse	0.005921623777875627	8	155
+GO:0051960	regulation of nervous system development	0.006589443260466004	10	255
+GO:0043068	positive regulation of programmed cell death	0.006589443260466004	10	255
+GO:0002683	negative regulation of immune system process	0.006589443260466004	7	116
+GO:0008017	microtubule binding	0.006919454523355597	6	80
+GO:0008217	regulation of blood pressure	0.007366536926697822	6	81
+GO:0010640	regulation of platelet-derived growth factor receptor signaling pathway	0.008443745256248884	3	10
+GO:0071451	cellular response to superoxide	0.008443745256248884	3	10
+GO:0000303	response to superoxide	0.008443745256248884	3	10
+GO:0045502	dynein binding	0.008443745256248884	3	10
+GO:0019430	removal of superoxide radicals	0.008443745256248884	3	10
+GO:0015172	acidic amino acid transmembrane transporter activity	0.008443745256248884	3	10
+GO:0007215	glutamate receptor signaling pathway	0.008684482690063155	5	52
+GO:0002443	leukocyte mediated immunity	0.009350701378788481	7	124
+GO:0010942	positive regulation of cell death	0.009488292722850816	10	269
+GO:1902175	regulation of intrinsic apoptotic signaling pathway in response to oxidative stress	0.011053695013210936	3	11
+GO:0015800	acidic amino acid transport	0.011053695013210936	3	11
+GO:0015813	L-glutamate transport	0.011053695013210936	3	11
+GO:0048471	perinuclear region of cytoplasm	0.011414707036923225	10	276
+GO:0005507	copper ion binding	0.012678604116258404	4	30
+GO:0051087	chaperone binding	0.012678604116258404	4	30
+GO:0050767	regulation of neurogenesis	0.012888791065607025	9	227
+GO:0007610	behavior	0.013236539414137449	9	228
+GO:0048488	synaptic vesicle endocytosis	0.013777729122865515	3	12
+GO:0050900	leukocyte migration	0.013777729122865515	9	230
+GO:0009713	catechol-containing compound biosynthetic process	0.013777729122865515	3	12
+GO:0042423	catecholamine biosynthetic process	0.013777729122865515	3	12
+GO:0030659	cytoplasmic vesicle membrane	0.014137233536059236	9	231
+GO:0005230	extracellular ligand-gated ion channel activity	0.015569900702802274	4	32
+GO:0001504	neurotransmitter uptake	0.017042548665581192	3	13
+GO:0012506	vesicle membrane	0.017042548665581192	9	238
+GO:0032967	positive regulation of collagen biosynthetic process	0.017042548665581192	3	13
+GO:0032281	alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid selective glutamate receptor complex	0.017042548665581192	3	13
+GO:0010714	positive regulation of collagen metabolic process	0.017042548665581192	3	13
+GO:0005788	endoplasmic reticulum lumen	0.017352120667135075	7	140
+GO:0050769	positive regulation of neurogenesis	0.017352120667135075	5	62
+GO:0043025	neuronal cell body	0.020056716025450512	5	64
+GO:0010975	regulation of neuron projection development	0.020326335513578046	7	144
+GO:0019229	regulation of vasoconstriction	0.02074112575128755	3	14
+GO:0042417	dopamine metabolic process	0.02074112575128755	3	14
+GO:0010769	regulation of cell morphogenesis involved in differentiation	0.023632074366208285	7	148
+GO:0030335	positive regulation of cell migration	0.024443701748046633	8	198
+GO:0045824	negative regulation of innate immune response	0.025159369699057653	3	15
+GO:0044253	positive regulation of multicellular organismal metabolic process	0.025159369699057653	3	15
+GO:0006986	response to unfolded protein	0.025243356789559135	6	106
+GO:0000086	G2/M transition of mitotic cell cycle	0.02679129192978702	7	152
+GO:0044839	cell cycle G2/M phase transition	0.02679129192978702	7	152
+GO:0044297	cell body	0.02679129192978702	5	69
+GO:2000147	positive regulation of cell motility	0.027620225510668103	8	203
+GO:0010035	response to inorganic substance	0.027620225510668103	7	153
+GO:0006921	cellular component disassembly involved in execution phase of apoptosis	0.028174618019944347	5	70
+GO:0031344	regulation of cell projection organization	0.028229233717559254	8	204
+GO:0046189	phenol-containing compound biosynthetic process	0.02889059157366437	3	16
+GO:0032965	regulation of collagen biosynthetic process	0.02889059157366437	3	16
+GO:0009065	glutamine family amino acid catabolic process	0.02889059157366437	3	16
+GO:0001948	glycoprotein binding	0.02897105360725829	4	39
+GO:0006979	response to oxidative stress	0.029738451595650313	7	156
+GO:0051272	positive regulation of cellular component movement	0.031119121463102827	8	208
+GO:0006939	smooth muscle contraction	0.0314646303147993	4	40
+GO:0005310	dicarboxylic acid transmembrane transporter activity	0.03356156077479241	3	17
+GO:1900407	regulation of cellular response to oxidative stress	0.03356156077479241	3	17
+GO:0051281	positive regulation of release of sequestered calcium ion into cytosol	0.03356156077479241	3	17
+GO:0040017	positive regulation of locomotion	0.03442049750130861	8	212
+GO:0050768	negative regulation of neurogenesis	0.03704456687919928	4	42
+GO:0008631	intrinsic apoptotic signaling pathway in response to oxidative stress	0.03940036315893341	3	18
+GO:0048011	neurotrophin TRK receptor signaling pathway	0.03999329883957754	9	274
+GO:0003073	regulation of systemic arterial blood pressure	0.03999329883957754	4	43
+GO:0022617	extracellular matrix disassembly	0.04147980208250856	6	119
+GO:0030968	endoplasmic reticulum unfolded protein response	0.04231428151569583	5	78
+GO:0038179	neurotrophin signaling pathway	0.042612900104572415	9	277
+GO:0034620	cellular response to unfolded protein	0.04442204250517088	5	79
+GO:0032964	collagen biosynthetic process	0.044622722019156916	3	19
+GO:0042311	vasodilation	0.044622722019156916	3	19
+GO:0032846	positive regulation of homeostatic process	0.050012707821519405	4	46
+GO:0050771	negative regulation of axonogenesis	0.051662791794863536	3	20
+GO:0035967	cellular response to topologically incorrect protein	0.05744292876093943	5	84
+GO:0048588	developmental cell growth	0.0580144420109768	4	48
+GO:0048487	beta-tubulin binding	0.0587367941739382	3	21
+GO:0031233	intrinsic component of external side of plasma membrane	0.0587367941739382	3	21
+GO:0001505	regulation of neurotransmitter levels	0.05945134087318507	5	85
+GO:0010522	regulation of calcium ion transport into cytosol	0.06155271233141814	4	49
+GO:0097193	intrinsic apoptotic signaling pathway	0.061719187171587794	7	180
+GO:0006984	ER-nucleus signaling pathway	0.06180615062379345	5	86
+GO:0000737	DNA catabolic process, endonucleolytic	0.06413440603444509	4	50
+GO:0010543	regulation of platelet activation	0.06413440603444509	3	22
+GO:0008328	ionotropic glutamate receptor complex	0.06413440603444509	3	22
+GO:0009712	catechol-containing compound metabolic process	0.06413440603444509	3	22
+GO:0051817	modification of morphology or physiology of other organism involved in symbiotic interaction	0.06413440603444509	4	50
+GO:0006309	apoptotic DNA fragmentation	0.06413440603444509	3	22
+GO:0006584	catecholamine metabolic process	0.06413440603444509	3	22
+GO:0050920	regulation of chemotaxis	0.06956287160383336	5	89
+GO:0048008	platelet-derived growth factor receptor signaling pathway	0.07197416667708485	3	23
+GO:0042310	vasoconstriction	0.07197416667708485	3	23
+GO:0015807	L-amino acid transport	0.07197416667708485	3	23
+GO:0045664	regulation of neuron differentiation	0.07268674762150262	7	187
+GO:0015179	L-amino acid transmembrane transporter activity	0.08102775565504343	3	24
+GO:0051495	positive regulation of cytoskeleton organization	0.08257654804285926	5	93
+GO:2001234	negative regulation of apoptotic signaling pathway	0.08626497242981931	5	94
+GO:0035821	modification of morphology or physiology of other organism	0.08773332709332324	4	55
+GO:0007626	locomotory behavior	0.08950012939979077	3	25
+GO:0034599	cellular response to oxidative stress	0.08950012939979077	5	95
+GO:0010001	glial cell differentiation	0.09264791606229579	4	56
+GO:0019898	extrinsic component of membrane	0.09274173714079714	5	96
+GO:0010524	positive regulation of calcium ion transport into cytosol	0.0992544915289782	3	26
+
+Query Parameters
+Organism	H. sapiens
+Network Weighting	query gene-based
+Related Genes Limit	0
+Related Attributes Limit	0
+Input Genes	F2R	C5AR1	PLAT	TUBA4A	HTT	SETX	GRIK1	C1QA	C1QB	MATR3	APEX1	CALB1	VPS54	RPS27A	ERBB4	CHCHD10	GLG1	IGF1	NGFR	SMN2	VAPB	MAP2	SPAST	NEFM	PROC	C9orf72	UTS2R	C8B	HEXA	DUSP11	GSR	THBD	PLEKHB1	VCP	CASP1	NTRK2	SIGMAR1	ALAD	SLC18A3	C8A	SOD2	GRIA4	SQSTM1	HNRNPC	RNPEP	SLC1A3	SLC33A1	MBL2	TBK1	HNRNPDL	FGB	FGA	FGG	TRPM7	C4orf36	F13A1	GRIA2	CCS	CFB	PRPH	PGA4	BDNF	TMOD2	PSEN1	CST3	CFD	SERTAD3	GRN	CPB2	FIG4	SSR1	CD55	HNRNPA1	MICE	PFN1	ARHGEF2	C3AR1	PRNP	AIF1	TREM2	RNF19A	CFH	PGA3	ALS2	BTBD10	SERPINF2	UBQLN2	SERPING1	GLUL	TFPI	TARDBP	NES	C8G	F9	IL10RB	SYP	MAOB	C7	SMN1	SNCA	GAP43	C6	CDR1	TPK1	CYCS	SERPINE2	CALB2	CHMP2B	SOD1	PON1	APP	C1S	CREBBP	C3	CHAT	HSPA5	C4A	SERPIND1	CR2	CD46	LMNB1	CD59	ECE1	MAG	FGF1	ZNF512B	SERPINA5	DPP6	FGGY	PON2	F3	PPARGC1A	CTSC	PAWR	C9	PROS1	PON3	CNTF	TFRC	TH	CASP3	C2	PLG	FOLH1	SERPINC1	F2	KLKB1	XBP1	ATXN2	NAIP	ADA	KNG1	UNC13A	C1QC	DCTN1	BDKRB2	MT3	PGA5	CAMK1G	ANG	C1R	HSPB1	TSPO	F10	GRIK2	NEFH	CR1	MASP2	PIGW	F13B	CYFIP2	PLAU	ZNF470	CNR1	SLC1A2	BCR	CNTFR	PVALB	GRIA1	SERPINE1	F7	DAO	NGF	DYNC1H1	TMEM106B	MAPT	VWF	GDNF	UBQLN3	HNRNPA1L2	EP300	OPTN	F8	F11	SLC1A1	GFM1	PLAUR	KIFAP3	C5	HSF1	SERPINA1	GFAP	CTSH	MASP1	NOS1	FUS	SPG11	A2M	F5	CDK5	F12	C4BPA	TIAM1	BDKRB1	RTN4	C4BPB	CFI
+Networks
+	Behrends-Harper-2010	Physical interactions
+	BIOGRID-SMALL-SCALE-STUDIES	Physical interactions
+	Blandin-Richard-2013	Physical interactions
+	Dyer-Sobral-2010	Physical interactions
+	Freibaum-Taylor-2010	Physical interactions
+	IREF-BIND	Physical interactions
+	IREF-BIOGRID	Physical interactions
+	IREF-DIP	Physical interactions
+	IREF-HPRD	Physical interactions
+	IREF-INNATEDB	Physical interactions
+	IREF-INTACT	Physical interactions
+	IREF-MPPI	Physical interactions
+	IREF-OPHID	Physical interactions
+	IREF-SMALL-SCALE-STUDIES	Physical interactions
+	Jeronimo-Coulombe-2007	Physical interactions
+	Kristensen-Foster-2012	Physical interactions
+	Li-Dorf-2011 B	Physical interactions
+	McFarland-Nussbaum-2008	Physical interactions
+	Nakayasu-Adkins-2013	Physical interactions
+	Oláh-Ovádi-2011	Physical interactions
+	Yu-Chow-2013	Physical interactions
+
