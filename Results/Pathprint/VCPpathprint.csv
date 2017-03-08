@@ -1,0 +1,634 @@
+"","GSM764196.CEL","GSM764198.CEL","GSM764197.CEL","GSM764192.CEL","GSM764193.CEL","GSM764191.CEL","GSM764190.CEL","GSM764189.CEL","GSM764195.CEL","GSM764194.CEL"
+"Glycolysis / Gluconeogenesis (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Citrate cycle (TCA cycle) (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Pentose phosphate pathway (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Pentose and glucuronate interconversions (KEGG)",0,0,0,0,0,1,0,1,1,0
+"Fructose and mannose metabolism (KEGG)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"Galactose metabolism (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Ascorbate and aldarate metabolism (KEGG)",0,1,1,1,1,1,0,1,1,1
+"Fatty acid biosynthesis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Fatty acid elongation in mitochondria (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Fatty acid metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Synthesis and degradation of ketone bodies (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Steroid biosynthesis (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Primary bile acid biosynthesis (KEGG)",1,0,1,0,1,0,-1,0,0,0
+"Ubiquinone and other terpenoid-quinone biosynthesis (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Steroid hormone biosynthesis (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Oxidative phosphorylation (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Purine metabolism (KEGG)",-1,-1,0,0,0,0,0,0,0,0
+"Caffeine metabolism (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Pyrimidine metabolism (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Alanine, aspartate and glutamate metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Glycine, serine and threonine metabolism (KEGG)",1,1,0,1,1,0,0,1,0,0
+"Cysteine and methionine metabolism (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Valine, leucine and isoleucine degradation (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Valine, leucine and isoleucine biosynthesis (KEGG)",-1,-1,0,0,-1,-1,-1,-1,0,0
+"Lysine degradation (KEGG)",0,0,0,1,0,0,1,0,1,0
+"Arginine and proline metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Histidine metabolism (KEGG)",1,1,1,1,1,1,0,1,1,0
+"Tyrosine metabolism (KEGG)",1,1,1,1,1,1,1,1,1,0
+"Phenylalanine metabolism (KEGG)",1,1,1,1,1,1,0,1,1,0
+"Tryptophan metabolism (KEGG)",0,1,0,1,0,0,0,0,1,0
+"beta-Alanine metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Taurine and hypotaurine metabolism (KEGG)",0,1,0,0,0,-1,0,0,-1,-1
+"Selenocompound metabolism (KEGG)",0,0,0,0,1,1,0,0,0,0
+"Cyanoamino acid metabolism (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Glutathione metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Starch and sucrose metabolism (KEGG)",1,1,1,1,1,1,0,1,1,1
+"N-Glycan biosynthesis (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Other glycan degradation (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Mucin type O-Glycan biosynthesis (KEGG)",0,-1,-1,0,-1,0,-1,0,-1,0
+"Other types of O-glycan biosynthesis (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Amino sugar and nucleotide sugar metabolism (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Glycosaminoglycan degradation (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Glycosaminoglycan biosynthesis - chondroitin sulfate (KEGG)",0,0,0,0,0,0,-1,0,-1,0
+"Glycosaminoglycan biosynthesis - keratan sulfate (KEGG)",0,0,0,0,0,0,0,-1,0,0
+"Glycosaminoglycan biosynthesis - heparan sulfate (KEGG)",-1,-1,-1,-1,0,0,0,0,0,0
+"Glycerolipid metabolism (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Inositol phosphate metabolism (KEGG)",0,0,0,0,-1,0,0,0,0,0
+"Glycosylphosphatidylinositol(GPI)-anchor biosynthesis (KEGG)",0,-1,0,0,0,0,0,0,0,0
+"Glycerophospholipid metabolism (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Ether lipid metabolism (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Arachidonic acid metabolism (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Linoleic acid metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"alpha-Linolenic acid metabolism (KEGG)",0,0,0,0,0,0,-1,0,0,0
+"Sphingolipid metabolism (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Glycosphingolipid biosynthesis - lacto and neolacto series (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Glycosphingolipid biosynthesis - globo series (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Glycosphingolipid biosynthesis - ganglio series (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Pyruvate metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Glyoxylate and dicarboxylate metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Propanoate metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Butanoate metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"One carbon pool by folate (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Riboflavin metabolism (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Vitamin B6 metabolism (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Nicotinate and nicotinamide metabolism (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Pantothenate and CoA biosynthesis (KEGG)",-1,-1,-1,-1,-1,0,-1,-1,-1,-1
+"Folate biosynthesis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Retinol metabolism (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Porphyrin and chlorophyll metabolism (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Terpenoid backbone biosynthesis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Nitrogen metabolism (KEGG)",0,1,0,0,1,0,0,0,0,0
+"Sulfur metabolism (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Aminoacyl-tRNA biosynthesis (KEGG)",-1,0,0,0,0,0,0,-1,0,0
+"Metabolism of xenobiotics by cytochrome P450 (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Drug metabolism - cytochrome P450 (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Drug metabolism - other enzymes (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Biosynthesis of unsaturated fatty acids (KEGG)",0,0,-1,0,0,0,-1,0,-1,0
+"Metabolic pathways (KEGG)",0,-1,0,0,0,0,-1,0,0,0
+"ABC transporters (KEGG)",-1,0,0,0,0,0,0,0,0,0
+"Ribosome biogenesis in eukaryotes (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Ribosome (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"RNA transport (KEGG)",-1,-1,-1,-1,-1,0,0,-1,-1,-1
+"mRNA surveillance pathway (KEGG)",-1,-1,-1,0,-1,0,0,0,-1,-1
+"RNA degradation (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"RNA polymerase (KEGG)",0,-1,0,0,0,-1,0,-1,0,0
+"Basal transcription factors (KEGG)",0,0,0,0,0,1,1,0,0,0
+"DNA replication (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Spliceosome (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Proteasome (KEGG)",0,0,0,0,0,0,0,-1,0,0
+"Protein export (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"PPAR signaling pathway (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Base excision repair (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Nucleotide excision repair (KEGG)",-1,-1,-1,0,-1,0,0,-1,-1,-1
+"Mismatch repair (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Homologous recombination (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Non-homologous end-joining (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"MAPK signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"ErbB signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Calcium signaling pathway (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Cytokine-cytokine receptor interaction (KEGG)",0,-1,-1,-1,-1,-1,-1,0,-1,-1
+"Chemokine signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Phosphatidylinositol signaling system (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Neuroactive ligand-receptor interaction (KEGG)",0,0,0,0,0,0,-1,0,0,0
+"Cell cycle (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Oocyte meiosis (KEGG)",-1,-1,0,-1,-1,0,0,-1,-1,-1
+"p53 signaling pathway (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Ubiquitin mediated proteolysis (KEGG)",-1,-1,0,-1,0,0,0,-1,-1,0
+"Sulfur relay system (KEGG)",1,1,1,1,1,1,1,1,1,1
+"SNARE interactions in vesicular transport (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Regulation of autophagy (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Protein processing in endoplasmic reticulum (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Lysosome (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Endocytosis (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Phagosome (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Peroxisome (KEGG)",1,1,1,1,1,1,1,1,1,1
+"mTOR signaling pathway (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Apoptosis (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Cardiac muscle contraction (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Vascular smooth muscle contraction (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Wnt signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Dorso-ventral axis formation (KEGG)",0,-1,-1,-1,-1,0,0,0,-1,-1
+"Notch signaling pathway (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Hedgehog signaling pathway (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"TGF-beta signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Axon guidance (KEGG)",0,0,0,0,0,0,0,0,0,0
+"VEGF signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,-1
+"Osteoclast differentiation (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Focal adhesion (KEGG)",0,0,0,0,0,0,0,0,0,0
+"ECM-receptor interaction (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Cell adhesion molecules (CAMs) (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Adherens junction (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Tight junction (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Gap junction (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Complement and coagulation cascades (KEGG)",0,0,0,0,0,0,0,1,0,0
+"Antigen processing and presentation (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Renin-angiotensin system (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Toll-like receptor signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"NOD-like receptor signaling pathway (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"RIG-I-like receptor signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Cytosolic DNA-sensing pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Jak-STAT signaling pathway (KEGG)",0,0,0,0,-1,0,0,0,0,0
+"Hematopoietic cell lineage (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Natural killer cell mediated cytotoxicity (KEGG)",0,0,0,0,0,0,0,0,0,0
+"T cell receptor signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"B cell receptor signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Fc epsilon RI signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Fc gamma R-mediated phagocytosis (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Leukocyte transendothelial migration (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Intestinal immune network for IgA production (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Circadian rhythm - mammal (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Long-term potentiation (KEGG)",1,1,1,1,0,0,1,0,0,0
+"Neurotrophin signaling pathway (KEGG)",-1,0,0,0,-1,-1,-1,-1,-1,-1
+"Glutamatergic synapse (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Long-term depression (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Olfactory transduction (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Taste transduction (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Phototransduction (KEGG)",0,0,0,0,-1,0,0,-1,-1,0
+"Regulation of actin cytoskeleton (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Insulin signaling pathway (KEGG)",1,1,1,1,1,1,1,1,1,1
+"GnRH signaling pathway (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Progesterone-mediated oocyte maturation (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Melanogenesis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Adipocytokine signaling pathway (KEGG)",1,1,1,1,1,1,1,1,0,1
+"Type II diabetes mellitus (KEGG)",0,0,0,0,-1,0,0,0,-1,0
+"Type I diabetes mellitus (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Maturity onset diabetes of the young (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Aldosterone-regulated sodium reabsorption (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Endocrine and other factor-regulated calcium reabsorption (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Vasopressin-regulated water reabsorption (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Proximal tubule bicarbonate reclamation (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Collecting duct acid secretion (KEGG)",-1,-1,-1,-1,0,-1,-1,-1,-1,0
+"Salivary secretion (KEGG)",1,1,0,1,0,1,1,1,0,0
+"Gastric acid secretion (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Pancreatic secretion (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Carbohydrate digestion and absorption (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Protein digestion and absorption (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Fat digestion and absorption (KEGG)",1,1,0,1,1,1,0,1,0,0
+"Bile secretion (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Vitamin digestion and absorption (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Mineral absorption (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Alzheimer's disease (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Parkinson's disease (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Amyotrophic lateral sclerosis (ALS) (KEGG)",-1,0,0,0,0,0,0,-1,0,0
+"Huntington's disease (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Prion diseases (KEGG)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"Bacterial invasion of epithelial cells (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Vibrio cholerae infection (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Epithelial cell signaling in Helicobacter pylori infection (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Pathogenic Escherichia coli infection (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shigellosis (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Leishmaniasis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Chagas disease (American trypanosomiasis) (KEGG)",-1,0,-1,-1,0,0,-1,0,-1,-1
+"African trypanosomiasis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Malaria (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Toxoplasmosis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Amoebiasis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Staphylococcus aureus infection (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Tuberculosis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Hepatitis C (KEGG)",-1,0,-1,-1,-1,-1,-1,-1,-1,-1
+"Measles (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Influenza A (KEGG)",-1,0,0,-1,-1,0,-1,-1,-1,-1
+"Pathways in cancer (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Colorectal cancer (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Renal cell carcinoma (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Pancreatic cancer (KEGG)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"Endometrial cancer (KEGG)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"Glioma (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Prostate cancer (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Thyroid cancer (KEGG)",-1,-1,-1,0,-1,-1,0,0,-1,-1
+"Basal cell carcinoma (KEGG)",0,0,0,0,0,0,-1,0,0,0
+"Melanoma (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Bladder cancer (KEGG)",-1,-1,-1,0,-1,-1,-1,0,0,0
+"Chronic myeloid leukemia (KEGG)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Acute myeloid leukemia (KEGG)",0,-1,-1,-1,-1,-1,0,0,0,-1
+"Small cell lung cancer (KEGG)",0,0,0,0,-1,0,0,0,0,0
+"Non-small cell lung cancer (KEGG)",-1,-1,-1,0,-1,-1,0,0,0,-1
+"Asthma (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Autoimmune thyroid disease (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Systemic lupus erythematosus (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Rheumatoid arthritis (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Allograft rejection (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Graft-versus-host disease (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Primary immunodeficiency (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Hypertrophic cardiomyopathy (HCM) (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Arrhythmogenic right ventricular cardiomyopathy (ARVC) (KEGG)",0,0,0,0,0,0,0,0,0,0
+"Dilated cardiomyopathy (KEGG)",1,1,1,1,1,1,1,1,1,1
+"Viral myocarditis (KEGG)",1,1,0,1,1,1,1,1,1,1
+"Glutathione metabolism (Wikipathways)",0,1,0,0,0,0,0,0,1,0
+"Alanine and aspartate metabolism (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Translation Factors (Wikipathways)",0,0,1,0,1,0,1,0,0,0
+"Electron Transport Chain (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"GPCRs, Other (Wikipathways)",0,0,0,0,0,0,0,-1,0,-1
+"Osteoclast Signaling (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"IL-5 Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Matrix Metalloproteinases (Wikipathways)",-1,0,-1,-1,-1,-1,-1,0,-1,-1
+"Pentose Phosphate Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Phase I, non P450 (Wikipathways)",-1,-1,0,-1,0,0,-1,-1,0,0
+"Androgen Receptor Signaling Pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,-1
+"AMPK signaling (Wikipathways)",1,1,1,1,1,1,0,1,0,1
+"Sphingolipid Metabolism (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Ganglio Sphingolipid Metabolism (Wikipathways)",1,1,1,1,1,0,1,0,1,1
+"Globo Sphingolipid Metabolism (Wikipathways)",0,0,0,0,-1,0,-1,0,0,0
+"BMP signalling and regulation (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Fatty Acid Beta Oxidation (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"NOD pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Osteopontin Signaling (Wikipathways)",0,0,0,0,-1,0,0,0,0,0
+"Regulation of toll-like receptor signaling pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Serotonin Transporter Activity (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"TOR signaling (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Selenium Pathway (Wikipathways)",-1,-1,-1,-1,0,-1,-1,0,-1,-1
+"Physiological and Pathological Hypertrophy  of the Heart (Wikipathways)",0,0,0,1,0,1,0,0,1,0
+"miRNA regulation of DNA Damage Response (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Vitamin D synthesis (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Vitamin B12 Metabolism (Wikipathways)",-1,-1,-1,0,0,0,-1,0,-1,-1
+"Angiogenesis (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Energy Metabolism (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"MicroRNAs in cardiomyocyte hypertrophy (Wikipathways)",0,1,1,1,0,1,0,0,1,0
+"miRNAs involved in DDR (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Proteins and DNA Sequences in Cardicac Structures (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"TFs Regulate miRNAs related to cardiac hypertrophy (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,0,-1
+"Type II diabetes mellitus (Wikipathways)",0,0,0,0,0,0,0,1,0,0
+"Heart Development (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Nicotine metabolism (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Fluoropyrimidine Activity (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Nicotine Activity on Dopaminergic Neurons (Wikipathways)",-1,-1,-1,-1,0,0,0,0,0,-1
+"Codeine and morphine metabolism (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Eicosanoid Synthesis (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Nuclear Receptors (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Th1/Th2 (Wikipathways)",0,0,-1,-1,-1,-1,0,-1,-1,-1
+"TP53 network (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Folate Metabolism (Wikipathways)",-1,-1,-1,-1,0,-1,-1,-1,-1,-1
+"Apoptosis Modulation and Signaling (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Cell cycle (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Proteasome Degradation (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Integrin-mediated cell adhesion (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Homologous recombination (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"IL-1 Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Cholesterol Biosynthesis (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"GP-VI signaling (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Integrated Cancer pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"SREBP signalling (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Integrated Breast Cancer Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"IL-7 Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Fatty Acid Omega Oxidation (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"IL-9 Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Irinotecan Pathway (Wikipathways)",0,0,0,0,1,1,1,1,0,1
+"B Cell Receptor Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"TNF-alpha/NF-kB Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Adipogenesis (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Glucocorticoid &amp; Mineralcorticoid Metabolism (Wikipathways)",0,0,0,0,0,0,-1,0,0,0
+"Peptide GPCRs (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"One Carbon Metabolism (Wikipathways)",-1,-1,-1,0,-1,-1,-1,-1,-1,-1
+"Alpha6-Beta4 Integrin Signaling Pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Small Ligand GPCRs (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Apoptosis (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Signal Transduction of S1P Receptor (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"EBV LMP1 signaling (Wikipathways)",-1,0,-1,-1,-1,-1,-1,-1,-1,0
+"Notch Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Blood Clotting Cascade (Wikipathways)",0,1,0,0,1,0,0,1,0,1
+"Selenium Metabolism and Selenoproteins (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"IL-3 Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"NLR proteins (Wikipathways)",0,0,1,0,0,0,0,0,-1,1
+"Myometrial Relaxation and Contraction Pathways (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Nuclear receptors in lipid metabolism and toxicity (Wikipathways)",-1,0,0,0,0,0,0,0,0,0
+"Keap1-Nrf2 Pathway (Wikipathways)",0,0,1,0,1,0,0,1,0,0
+"Kit Receptor Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Focal Adhesion (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Signaling of Hepatocyte Growth Factor Receptor (Wikipathways)",-1,-1,-1,-1,-1,-1,0,-1,-1,-1
+"FAS pathway and Stress induction of HSP regulation (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Osteoblast Signaling (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Triacylglyceride Synthesis (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"GPCRs, Class B Secretin-like (Wikipathways)",1,1,0,0,0,0,0,0,1,0
+"Ovarian Infertility Genes (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"G Protein Signaling Pathways (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Fatty Acid Biosynthesis (Wikipathways)",1,1,1,1,1,1,0,1,1,1
+"Wnt Signaling Pathway NetPath (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"IL-6 Signaling Pathway (Wikipathways)",-1,0,0,0,0,0,0,0,0,0
+"TGF-beta Receptor Signaling Pathway (Wikipathways)",0,0,0,0,-1,0,0,0,0,-1
+"Mitochondrial LC-Fatty Acid Beta-Oxidation (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"MAPK signaling pathway (Wikipathways)",-1,-1,-1,-1,-1,0,-1,-1,-1,-1
+"Striated Muscle Contraction (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Apoptosis Modulation by HSP70 (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Mitochondrial Gene Expression (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"IL-4 signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Wnt Signaling Pathway and Pluripotency (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Sandbox Pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"p38 MAPK Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,0,-1,-1,-1,-1
+"Nucleotide Metabolism (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Eukaryotic Transcription Initiation (Wikipathways)",0,0,0,0,0,1,1,0,0,0
+"Oxidative Stress (Wikipathways)",-1,0,0,0,0,0,-1,0,0,-1
+"Diurnally regulated genes with circadian orthologs (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"mRNA processing (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"MAPK Cascade (Wikipathways)",0,1,1,1,0,0,0,0,0,0
+"Wnt Signaling Pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"cytochrome P450 (Wikipathways)",0,0,1,-1,0,0,0,0,0,1
+"Statin Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"EGFR1 Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Non-homologous end joining (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"G1 to S cell cycle control (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Inflammatory Response Pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"GPCRs, Class A Rhodopsin-like (Wikipathways)",0,0,-1,-1,-1,-1,-1,0,-1,-1
+"Tryptophan metabolism (Wikipathways)",0,1,1,0,0,0,1,0,1,1
+"DNA Replication (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Hedgehog Signaling Pathway (Wikipathways)",0,-1,-1,0,-1,-1,0,-1,0,-1
+"Endochondral Ossification (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Cytoplasmic Ribosomal Proteins (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Insulin Signaling (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"IL-2 Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Steroid Biosynthesis (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Urea cycle and metabolism of amino groups (Wikipathways)",0,0,0,0,1,0,0,0,1,1
+"Glycogen Metabolism (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"GPCRs, Class C Metabotropic glutamate, pheromone (Wikipathways)",-1,0,0,0,0,-1,-1,-1,-1,0
+"Regulation of Actin Cytoskeleton (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Hypertrophy Model (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"G13 Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"Acetylcholine Synthesis (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Id Signaling Pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Cytokines and Inflammatory Response (Wikipathways)",-1,0,-1,-1,-1,-1,-1,-1,-1,-1
+"Mismatch repair (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Glycolysis and Gluconeogenesis (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Calcium Regulation in the Cardiac Cell (Wikipathways)",1,1,0,0,0,1,0,1,1,1
+"Complement Activation, Classical Pathway (Wikipathways)",0,0,0,0,0,1,0,1,0,0
+"Biogenic Amine Synthesis (Wikipathways)",1,1,0,1,0,0,0,0,1,1
+"ACE Inhibitor Pathway (Wikipathways)",1,1,1,1,1,1,0,1,1,1
+"Complement and Coagulation Cascades (Wikipathways)",0,0,0,0,0,0,0,1,0,0
+"TGF Beta Signaling Pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Heme Biosynthesis (Wikipathways)",1,1,1,1,1,1,1,0,1,1
+"Monoamine GPCRs (Wikipathways)",1,1,1,1,0,1,1,1,1,1
+"EPO Receptor Signaling (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Interferon type I (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Delta-Notch Signaling Pathway (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"Senescence and Autophagy (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"Type II interferon signaling (IFNG) (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Oxidative phosphorylation (Wikipathways)",1,1,1,1,1,1,1,0,1,1
+"Hypothetical Network for Drug Addiction (Wikipathways)",1,1,1,1,1,1,1,0,1,1
+"ErbB signaling pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Arachidonate Epoxygenase / Epoxide Hydrolase (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"T Cell Receptor Signaling Pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Tamoxifen metabolism (Wikipathways)",-1,-1,-1,-1,-1,-1,0,-1,-1,0
+"Sulfation Biotransformation Reaction (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Arylamine metabolism (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Benzo(a)pyrene metabolism (Wikipathways)",0,0,1,0,0,0,0,1,1,1
+"Estrogen metabolism (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Glucuronidation (Wikipathways)",-1,-1,-1,-1,-1,0,-1,-1,0,-1
+"Aflatoxin B1 metabolism (Wikipathways)",1,1,0,0,1,1,0,1,1,1
+"metapathway biotransformation (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Methylation Pathways (Wikipathways)",-1,-1,-1,-1,0,0,-1,0,-1,-1
+"SIDS Susceptibility Pathways (Wikipathways)",-1,0,0,0,-1,-1,0,-1,0,-1
+"DNA damage response (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"DNA damage response (only ATM dependent) (Wikipathways)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Estrogen signaling pathway (Wikipathways)",-1,-1,-1,0,-1,0,0,-1,0,-1
+"Vitamin A and carotenoid metabolism (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Serotonin HTR1 Group and FOS Pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Monoamine Transport (Wikipathways)",1,1,1,1,1,1,1,0,1,0
+"Serotonin Receptor 2 and ELK-SRF/GATA4 signaling (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Serotonin Receptor 4/6/7 and NR3C Signaling (Wikipathways)",0,0,0,1,0,0,1,0,1,0
+"Toll-like receptor signaling pathway (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"TCA Cycle (Wikipathways)",1,1,1,1,1,1,1,1,1,1
+"Nucleotide GPCRs (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Prostaglandin Synthesis and Regulation (Wikipathways)",0,0,0,0,0,0,0,0,0,0
+"Cell Cycle Checkpoints (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Signaling by Insulin receptor (Reactome)",0,1,1,1,0,1,1,1,1,1
+"Integrin cell surface interactions (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Signaling by TGF beta (Reactome)",0,0,0,0,0,0,0,0,0,0
+"DNA Repair (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Metabolism of proteins (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Signaling in Immune system (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Metabolism of vitamins and cofactors (Reactome)",0,0,0,0,0,0,0,0,0,0
+"DNA Replication (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Signaling by EGFR (Reactome)",-1,-1,-1,-1,-1,-1,0,-1,-1,-1
+"Signalling by NGF (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Opioid Signalling (Reactome)",0,0,-1,0,-1,0,-1,0,-1,-1
+"Metabolism of nucleotides (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Circadian Clock (Reactome)",1,1,1,1,1,1,1,0,1,1
+"Hemostasis (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Metabolism of carbohydrates (Reactome)",0,0,0,0,0,1,0,0,-1,0
+"Muscle contraction (Reactome)",1,1,1,1,1,1,1,1,1,1
+"Myogenesis (Reactome)",1,1,1,1,1,1,1,1,1,1
+"Regulatory RNA pathways (Reactome)",0,-1,-1,-1,-1,-1,0,-1,0,-1
+"Metabolism of lipids and lipoproteins (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Transmembrane transport of small molecules (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Signaling by BMP (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Metabolism of porphyrins (Reactome)",0,0,1,0,1,0,0,0,1,1
+"Synaptic Transmission (Reactome)",1,1,1,1,1,1,1,1,1,1
+"Signaling by VEGF (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Membrane Trafficking (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Regulation of beta-cell development (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Signaling by GPCR (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Biological oxidations (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Transcription (Reactome)",-1,-1,-1,-1,-1,0,0,-1,-1,-1
+"Cell Cycle, Mitotic (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Respiratory electron transport, ATP synthesis by chemiosmotic coupling, and heat production by uncoupling proteins. (Reactome)",1,1,1,1,1,1,1,1,1,1
+"Gene Expression (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Signaling by PDGF (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Pyruvate metabolism and Citric Acid (TCA) cycle (Reactome)",1,1,1,1,1,1,1,1,1,1
+"Metabolism of nitric oxide (Reactome)",1,1,1,1,1,1,0,0,0,1
+"Diabetes pathways (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Metabolism of RNA (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Signaling by Wnt (Reactome)",-1,-1,-1,-1,-1,0,-1,-1,-1,-1
+"Botulinum neurotoxicity (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Apoptosis (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Signaling by Notch (Reactome)",-1,0,-1,0,0,0,0,0,-1,-1
+"Influenza Infection (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"HIV Infection (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Cell junction organization (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Signaling by Rho GTPases (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Integration of energy metabolism (Reactome)",0,-1,-1,0,-1,0,-1,0,-1,0
+"mRNA Processing (Reactome)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Metabolism of amino acids and derivatives (Reactome)",1,1,1,1,1,0,1,0,1,1
+"Chromosome Maintenance (Reactome)",-1,-1,-1,-1,-1,0,0,-1,-1,-1
+"Signaling by FGFR (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Axon guidance (Reactome)",0,0,0,0,0,0,0,0,0,0
+"Interactions of the immunoglobulin superfamily (IgSF) member proteins (Reactome)",0,0,0,0,0,0,0,0,0,0
+"EGFR1 up reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"EGFR1 down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"TGF beta receptor up reg. targets (Netpath)",0,0,-1,0,0,0,-1,0,0,0
+"TGF beta receptor down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"TNF alpha/NF-kB up reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"TNF alpha/NF-kB down reg. targets (Netpath)",-1,-1,-1,-1,-1,0,-1,0,-1,-1
+"Alpha6 Beta4 Integrin up reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"ID up reg. targets (Netpath)",-1,-1,0,0,-1,-1,-1,-1,-1,-1
+"ID down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"Hedgehog up reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"Notch up reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"Notch down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"Wnt up reg. targets (Netpath)",0,0,-1,0,0,0,0,0,-1,0
+"Wnt down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"AR up reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"AR down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"Kit Receptor up reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"B Cell Receptor up reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"B Cell Receptor down reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"T Cell Receptor up reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"T Cell Receptor down reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"IL-1 up reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"IL-1 down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"IL-2 up reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"IL-2 down reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"IL-3 up reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"IL-3 down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"IL-4 up reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"IL-4 down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"IL-5 up reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"IL-5 down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"IL-6 up reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"IL-6 down reg. targets (Netpath)",-1,-1,-1,-1,-1,-1,-1,-1,0,-1
+"IL-7 up reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"IL-7 down reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"IL-9 up reg. targets (Netpath)",0,0,0,0,0,0,0,0,0,0
+"{ABL1,15} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{ACTB,297} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{ACY1,11} (Static Module)",0,0,0,-1,-1,-1,0,-1,-1,-1
+"{AKT1,48} (Static Module)",1,1,1,1,1,0,1,0,1,1
+"{AP1G1,16} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{APP,28} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{AR,28} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{ARF1,36} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{ARF6,34} (Static Module)",0,0,0,0,0,1,1,0,0,0
+"{ARRB2,743} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{ASH2L,391} (Static Module)",1,1,1,1,1,1,1,1,1,0
+"{ATP5D,19} (Static Module)",-1,-1,-1,-1,-1,0,-1,-1,-1,-1
+"{BCL2,27} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{BCLAF1,25} (Static Module)",0,0,0,0,0,0,1,0,-1,0
+"{BRCA1,28} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{BSG,21} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{C5,29} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{CALM1,30} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{CASP3,41} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{CBX4,10} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{CD4,14} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{CDC2,351} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{CDK5,14} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,0
+"{CEBPA,13} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{CHRNA1,13} (Static Module)",-1,1,0,1,1,0,1,1,1,1
+"{CNGB1,17} (Static Module)",-1,-1,0,0,-1,-1,-1,-1,-1,-1
+"{CNOT2,13} (Static Module)",0,1,1,1,0,0,0,-1,-1,-1
+"{CREB1,40} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{CTNNB1,130} (Static Module)",0,1,0,0,0,0,1,1,1,0
+"{CTSB,26} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{CYCS,35} (Static Module)",0,1,1,1,1,1,0,1,1,1
+"{DHX15,14} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{DLD,16} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{DLG4,28} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{DNM1,22} (Static Module)",1,1,0,0,1,0,0,1,1,0
+"{DVL1L1,17} (Static Module)",1,0,0,0,0,0,0,0,1,1
+"{EGFR,24} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{EP300,115} (Static Module)",-1,0,0,0,0,0,0,-1,0,0
+"{EPRS,15} (Static Module)",-1,0,-1,0,0,0,0,0,0,0
+"{ESR1,24} (Static Module)",1,1,1,1,1,1,0,1,1,1
+"{ETS1,13} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{EXOSC10,15} (Static Module)",-1,-1,-1,-1,0,0,-1,-1,0,-1
+"{F2,46} (Static Module)",0,1,1,0,1,0,0,0,0,1
+"{FCGR2B,50} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{FLI1,10} (Static Module)",-1,-1,0,-1,-1,0,-1,-1,0,0
+"{FYN,30} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{GAPDH,13} (Static Module)",1,1,1,1,1,1,1,1,0,1
+"{GLI1,45} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{GNAT3,28} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{GRB2,414} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{HCLS1,17} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{HDAC1,108} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{HIF1A,58} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{HIST3H3,14} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{HLA-A,53} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{HMGB1,14} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{HRAS,27} (Static Module)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"{HSP90AA1,18} (Static Module)",-1,-1,0,0,-1,0,0,-1,0,-1
+"{HSP90B1,11} (Static Module)",-1,-1,-1,-1,-1,0,-1,-1,-1,-1
+"{HSPA8,34} (Static Module)",0,1,1,1,0,1,1,1,1,1
+"{HTATIP,20} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{HTT,61} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{IGF1,13} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{INS,35} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{JUN,88} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{KCNAB1,18} (Static Module)",0,1,0,0,0,0,0,0,0,0
+"{KCNB1,10} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{LDB1,15} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{LRP1,11} (Static Module)",0,-1,0,0,0,0,-1,0,-1,0
+"{MAPK14,123} (Static Module)",-1,-1,-1,-1,-1,-1,0,-1,0,-1
+"{MED1,34} (Static Module)",0,0,0,0,0,0,0,-1,0,0
+"{MEIS1,22} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{MLH1,20} (Static Module)",-1,-1,-1,-1,-1,0,0,-1,-1,-1
+"{MLLT4,12} (Static Module)",0,-1,-1,-1,-1,-1,-1,0,-1,-1
+"{MMP9,11} (Static Module)",0,0,-1,-1,-1,0,-1,0,-1,-1
+"{NAP1L1,23} (Static Module)",0,0,0,-1,-1,0,0,0,-1,0
+"{NCOR2,24} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{NDUFS8,49} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{NFIC,21} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{NFKB1,33} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{NGF,31} (Static Module)",1,1,1,1,1,1,0,1,1,1
+"{NME2,10} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{NOS3,11} (Static Module)",0,1,0,0,0,1,0,0,0,0
+"{NOTCH1,44} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{NRP1,11} (Static Module)",0,0,0,0,0,0,0,1,0,0
+"{OTX2,18} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{PAK2,10} (Static Module)",0,-1,-1,-1,0,-1,-1,-1,-1,-1
+"{PAX6,19} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{PCNA,34} (Static Module)",-1,-1,0,0,-1,0,0,-1,0,-1
+"{PLCG2,30} (Static Module)",0,0,0,0,0,0,1,1,1,0
+"{PLG,10} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{PLXNB1,15} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{POLR2A,195} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{POLR2H,109} (Static Module)",-1,-1,-1,0,-1,0,0,-1,0,-1
+"{POR,15} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,0
+"{POU2F1,21} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{PPP2CA,20} (Static Module)",0,1,1,1,0,1,1,0,1,0
+"{PRKAA2,24} (Static Module)",1,0,1,1,1,1,1,1,0,1
+"{PRKACA,33} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{PRKCA,14} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{PRKG1,21} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{PTPRF,10} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{RAB5A,41} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{RAC1,133} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{RAD21,11} (Static Module)",-1,-1,-1,-1,-1,0,0,-1,-1,-1
+"{RAD51,13} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{RAN,17} (Static Module)",-1,0,0,0,0,0,0,0,0,0
+"{RAP1A,22} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{RARA,17} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{RASGRF1,26} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{RB1,11} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{ROCK1,10} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{RPS27A,138} (Static Module)",-1,-1,-1,-1,-1,-1,0,-1,-1,-1
+"{RXRA,51} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{RYR2,15} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{SDC1,30} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{SEC24B,18} (Static Module)",0,0,0,-1,0,0,0,0,-1,-1
+"{SEPT2,21} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{SFPQ,10} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{SHH,13} (Static Module)",0,-1,-1,-1,-1,-1,0,0,-1,-1
+"{SIX3,11} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{SMAD4,27} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{SNX1,11} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{SP1,88} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{SPI1,10} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{SPTAN1,10} (Static Module)",0,0,0,0,0,0,0,0,0,1
+"{SREBF1,11} (Static Module)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"{SRF,11} (Static Module)",-1,-1,-1,-1,0,-1,-1,-1,-1,0
+"{STX5,12} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{SUMO1,12} (Static Module)",0,0,0,0,0,0,1,0,-1,0
+"{TCF3,20} (Static Module)",1,1,1,1,1,1,1,1,1,1
+"{TFAP2A,25} (Static Module)",-1,-1,-1,-1,-1,-1,-1,0,-1,-1
+"{TGFBR1,98} (Static Module)",1,0,0,0,0,0,0,1,0,0
+"{TIA1,10} (Static Module)",-1,-1,-1,-1,-1,0,0,-1,-1,-1
+"{TJP1,26} (Static Module)",-1,0,-1,0,0,-1,-1,-1,-1,-1
+"{TLE1,10} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{TP53,109} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{TRAF2,90} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{TRAF6,55} (Static Module)",0,0,0,0,0,0,0,0,0,-1
+"{UBE2D1,58} (Static Module)",0,0,1,1,0,1,1,0,0,0
+"{USF1,13} (Static Module)",0,0,0,0,0,0,0,0,0,0
+"{VAMP2,63} (Static Module)",-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"{VCP,17} (Static Module)",0,0,1,1,1,1,1,1,1,1
+"{VHL,12} (Static Module)",-1,-1,-1,-1,-1,0,-1,-1,-1,-1
