@@ -6,7 +6,7 @@ options(stringsAsFactors = FALSE)
 
 ####C9_LCM ######
 setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM") #set working directory to location of data
-exp_C9.LCM <- read.csv ("eset_NineP_150612_exprs.csv", header=TRUE) #assign the .csv file to a variable, column headers are true
+exp_C9.LCM <- read.csv ("eset_NineP_150612_exprs1.csv", header=TRUE) #assign the .csv file to a variable, column headers are true
 row.names (exp_C9.LCM) <- exp_C9.LCM[,1] #specify that first column contains gene names
 exp_C9.LCM<- exp_C9.LCM[,2:12] #specify that all other columns are gene expression data
 
@@ -60,7 +60,8 @@ vec.vcp <- c(0,0,0,1,1,1,1,1,1,1)
 
 ##DiffPathways##
 
-thres <- 0.7
+thres <- 0.16
+
 
 c9.lcm <- diffPathways(C9.LCM_pathprint, vec.c9, thres)
 CHMP2B.lcm <- diffPathways(CHMP2B.LCM_pathprint, vec.ch, thres)
@@ -69,15 +70,23 @@ FTLD_FCx <- diffPathways(FTLD_pathprint, vec.FTLD, thres)
 VCP.m <- diffPathways(VCP_pathprint, vec.vcp, thres)
 
 
+### LRRK2/PARKIN Analysis ###
+
+
+
+
 ###INTERSECT###
 
 overlap <- Reduce(intersect, list(c9.lcm, CHMP2B.lcm, SALS.lcm, FTLD_FCx, VCP.m)) #selects pathways that are present in all data sets listed
 print(overlap)
 
-setwd ("/Users/clairegreen/Desktop/")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/")
 
-write.csv(overlap, file = "overlap.csv")
+write.csv(VCP_pathprint, file = "VCPpathprint.csv")
 
 C9 <- as.numeric(C9.LCM_pathprint['TGF beta receptor down reg. targets (Netpath)',])
 C9
 CH <- CHMP2B.lcm
+
+
+

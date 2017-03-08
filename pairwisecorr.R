@@ -1,54 +1,78 @@
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15")
-
-#load dataset
-exprsC9 <- read.csv("C9rankeduniqueresult.csv")
+#Selecting DEGS from expression matrix
 
 #Load list of interesting genes
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/")
 Genelist <- read.csv("MADEGs.csv")
 
+#load dataset
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15")
+exprs <- read.csv("C9rankeduniqueresult.csv")
+
 #Make gene symbol row names
-rownames(exprsC9) <- exprsC9$Gene.Symbol
-exprsC9pat <- exprsC9[,52:59]
+rownames(exprs) <- exprs$Gene.Symbol
+exprspat <- exprs[,52:59]
 
 #Make gene symbol a column
-exprsC9pat <- cbind(exprsC9pat, exprsC9$Gene.Symbol)
-colnames(exprsC9pat)[9] <- "Gene.Symbol"
+exprspat <- cbind(exprspat, exprs$Gene.Symbol)
+colnames(exprspat)[length(exprspat)] <- "Gene.Symbol"
 
 #Merge by interesting gene names with expression to form matrix
-C9patgene <- merge(Genelist, exprsC9pat, by.x = "Gene", by.y = "Gene.Symbol")
-rownames(C9patgene) <- C9patgene$Gene
-C9patgene[,1] <- NULL
+patgene <- merge(Genelist, exprspat, by.x = "Gene", by.y = "Gene.Symbol")
+rownames(patgene) <- patgene$Gene
+patgene[,1] <- NULL
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Pathways_to_TDP-43/Co-expression/")
+write.csv(patgene, file = "C9_DEG_Exprs.csv")
+
+
+
+#### Cor.test Method ####
+
+library(tictoc)
+library(gdata)
+
+# #load dataset
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/WGCNA/C9orf72")
+uniqueresult <- read.csv("C9result.csv")
+rownames(uniqueresult) <- uniqueresult[,1]
+uniqueresult[,1] <- NULL
 
 
 ##For loop for generating regression values and p values
-C9patgene <- t(C9patgene)
+CorExprMat <- t(uniqueresult)
 
-reg <- matrix(0, ncol(C9patgene), ncol(C9patgene))
-p.value <- matrix(0, ncol(C9patgene), ncol(C9patgene))
+test <- CorExprMat[,1:100]
 
-for (i in 1:ncol(C9patgene)){
-  for (j in 1:ncol(C9patgene)){
-    reg[i,j] <- cor.test(C9patgene[,i], C9patgene[,j], method = "kendall")$estimate
-    rownames(reg) <- colnames(reg) <- colnames(C9patgene)
+reg <- matrix(0, ncol(test), ncol(test))
+p.value <- matrix(0, ncol(test), ncol(test))
+
+tic()
+for (i in 1:ncol(test)){
+  for (j in 1:ncol(test)){
+    reg[i,j] <- cor.test(test[,i], test[,j], method = "spearman")$estimate
   }}
 
-for (i in 1:ncol(C9patgene)){
-  for (j in 1:ncol(C9patgene)){
-    p.value[i,j] <- cor.test(C9patgene[,i], C9patgene[,j], method = "kendall")$p.value
-  rownames(p.value) <- colnames(p.value) <- colnames(C9patgene)
-}}
+rownames(reg) <- colnames(reg2) <- colnames(test)
+toc()
+
+tic()
+for (i in 1:ncol(test)){
+  for (j in 1:ncol(test)){
+    p.value[i,j] <- cor.test(test[,i], test[,j], method = "spearman")$p.value
+  }}
+
+rownames(p.value) <- colnames(p.value) <- colnames(test)
+toc()
 
 ##Only take upper triangle without diagonal (all comparisons are currently doubled)
 ptri <- p.value
 ptri[lower.tri(ptri, diag = TRUE)] <- NA
 
 #Turn into vector
-library(gdata)
 p.vec <- unmatrix(ptri)
 #Remove NA values
 p.vec <- na.omit(p.vec)
-#Multiple hypothesis testing correction 
+#Multiple hypothesis testing correction
 p.adj <- p.adjust(p.vec, method = "fdr", n = length(p.vec))
 
 #Create results table
@@ -67,27 +91,53 @@ results <- results[order(results$p.vec),]
 
 ##PSYCH METHOD### 
 library(psych)
+library(tictoc)
+library(gdata)
+
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/WGCNA/C9orf72")
 
 #Generate matrix of correlation and p values
-cortest <- corr.test(t(C9patgene), use = "pairwise", method = "spearman", adjust = "fdr") #if genes are rownames, the t is important
+genenames <- read.csv(file = "/Users/clairegreen/Desktop/Allconsensus.txt")
+genenames <- genenames[,1]
 
-#Extract results table
-# cortestoutput <- cortest$ci
-cortestpadjust <- cortest$p
+Cor8000 <- uniqueresult[row.names(uniqueresult) %in% genenames,]
+tCor8000 <- t(Cor8000)
 
-coradj <- cortestpadjust
-coradj[lower.tri(coradj, diag = TRUE)] <- NA
+tic()
+cortest <- corr.test(tCor8000, use = "pairwise", method = "spearman", adjust = "fdr") #must use transposed matrix (genes are colnames)
+toc()
+
+#Extract R values
+cortestoutput <- cortest$r
+corRadj <- cortestoutput
+corRadj[lower.tri(corRadj, diag = TRUE)] <- NA
 
 #Turn into vector
-library(gdata)
-coradj <- as.matrix(coradj)
-corvec <- unmatrix(coradj)
+corRadj <- as.matrix(corRadj)
+corRvec <- unmatrix(corRadj)
 #Remove NA values
-corvec <- na.omit(corvec)
-corvec <- as.data.frame(corvec)
+corRvec <- na.omit(corRvec)
+corRvec <- as.data.frame(corRvec)
+
+
+#Extract P values
+cortestpadjust <- cortest$p
+corPadj <- cortestpadjust
+corPadj[lower.tri(corPadj, diag = TRUE)] <- NA
+
+#Turn into vector
+corPadj <- as.matrix(corPadj)
+corPvec <- unmatrix(corPadj)
+#Remove NA values
+corPvec <- na.omit(corPvec)
+corPvec <- as.data.frame(corPvec)
+
+
+CorData <- merge(corRvec, corPvec, by.x = "row.names", by.y = "row.names")
 
 #Select significant results
-sigoutput <- subset(cortestoutput, cortestoutput$p < 0.05)
-write.csv(sigoutput, file = "C9allsigcoexpr1.csv")
+pointone.output <- subset(CorData, CorData$corPvec < 0.1)
+write.csv(CorData, file = "allcor.csv")
+write.csv(pointone.output, file = "pointone_cor.csv")
 
 

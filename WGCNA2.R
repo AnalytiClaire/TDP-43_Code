@@ -2,29 +2,25 @@ library(WGCNA)
 options(stringsAsFactors = FALSE);
 ### orf72 ###
 # Display the current working directory
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/")
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/WGCNA/C9orf72/")
 
 Analysis.name <- "C9"
 
 #Read in desired genes
-Results <- read.csv ("C9rankeduniqueresult.csv", header=TRUE) #Taking only the genes we deemed acceptable through criteria. See details on
-Results <- Results[1:8000,]
-#gene expression analysis to find criteria
+Results <- read.csv ("C9result.csv", header=TRUE, row.names = 1) 
+# #Results <- Results[1:8000,]
+# #gene expression analysis to find criteria
+# 
+# ID <- as.data.frame(Results$Probe.Set.ID)
+# colnames(ID)[1] <- "ProbeID"
 
-ID <- as.data.frame(Results$Probe.Set.ID)
-colnames(ID)[1] <- "ProbeID"
-
-
-#Read in raw expression values
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/C9orf72_LCM/")
-RawExp <- read.csv("HerGlaucrankeduniqueresult.csv") 
 
 Exp <- Results
   #merge(ID, RawExp, by.x="ProbeID", by.y="Probe.Set.ID") #merge raw expression data with accepted genes
-rownames(Exp) <- Exp[,1] #make probeset IDs row names
+# rownames(Exp) <- Exp[,15] #make probeset IDs row names
 #colnames(Exp) <- colnames(RawExp) #make file names column names
-Exp[,1] <- NULL  #remove ID column
-Exp <- Exp[,51:58] #Take only patients
+# Exp[,1] <- NULL  #remove ID column
+# Exp <- Exp[,51:58] #Take only patients
 
 # Pat <- Exp[,1:8]
 # Con <- Exp[,9:11]
@@ -41,7 +37,7 @@ powers = c(c(1:10), seq(from = 12, to=20, by=2))
 # Call the network topology analysis function
 sft = pickSoftThreshold(Exp, powerVector = powers, verbose = 5)
 # Plot the results:
-sizeGrWindow(9, 5)
+# sizeGrWindow(9, 5)
 par(mfrow = c(1,2));
 cex1 = 0.9;
 # Scale-free topology fit index as a function of the soft-thresholding power
@@ -63,14 +59,22 @@ text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
 # Exp <- data.matrix(Exp) #csv files contain character matrices, the following code requires numeric
 
 ##One-step network construction and module detection
-setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/DEG Test2/")
-net = blockwiseModules(Exp, power = 5,
+setwd ("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/WGCNA/C9orf72")
+net = blockwiseModules(Exp, power = 4,
                        TOMType = "unsigned", minModuleSize = 30,
                        reassignThreshold = 0, mergeCutHeight = 0.25,
                        numericLabels = TRUE, pamRespectsDendro = FALSE,
                        saveTOMs = TRUE,
                        saveTOMFileBase = "TOM",
                        verbose = 3)
+
+
+
+dyntree <- dynamicTreeCut::cutreeDynamicTree(net$dendrograms[[1]], maxTreeHeight = 1, deepSplit = TRUE, minModuleSize = 50)
+
+
+
+
 table(net$colors)
 
 # open a graphics window
@@ -79,7 +83,7 @@ sizeGrWindow(12, 9)
 # Convert labels to colors for plotting
 mergedColors = labels2colors(net$colors)
 # Plot the dendrogram and the module colors underneath
-plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],
+plotDendroAndColors(net$dendrograms[[2]], mergedColors[net$blockGenes[[2]]],
                     "Module colors",
                     dendroLabels = FALSE, hang = 0.03,
                     addGuide = TRUE, guideHang = 0.05)
