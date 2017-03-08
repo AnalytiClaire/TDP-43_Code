@@ -1,0 +1,117 @@
+---
+title: "LabBook_24_02_2017"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60))
+```
+
+#Monday
+
+Wenbin and I worked out that the reasons for the differences between mine and Sandeep's results is probably due to the fact that he used the transcript matrix rather than the gene IDs. This meant that I was looking at expression across a gene rather than each individual transcript. The thing is, I still can't generate a list that has anywhere near as many ALS genes as Sandeep's list. I think I'm going to have to ask for his script so I can see what his methods were.
+
+I have done the translatome analysis in Limma, DESeq2 and EnrichR and the overlap is a little disconcerting.
+
+|     | DESeq2 | EdgeR | Overlap |
+|-----|--------|-------|---------|
+| TRL | 510    | 159   | 137     |
+
+|     | DESeq2 | Limma | Overlap |
+|-----|--------|-------|---------|
+| TRL | 510    | 2391   | 476    |
+
+|     | EdgeR | Limma | Overlap |
+|-----|--------|-------|--------|
+| TRL | 159    | 2391   | 111   |
+
+
+
+Enrichment with DEGs
+
+|        | DESeq2 | Limma | EdgeR   | SA_DESeq2| LC_Bitseq_EdgeR|
+|--------|--------|-------|---------|----------|----------------|
+| overlap| 4      | 20    | 2       | 19       |40              |
+| pval   | 0.17   | 0.17  | 0.15    | 0.015    |3e-24           |
+
+
+Enrichment in pathways
+
+DESeq2:
+SIDS susceptibility pathways - 0.03
+
+Limma:
+Nothing
+
+EdgeR:
+SIDS susceptibility pathways - 0.004
+
+SA_DESeq2:
+Nothing
+
+LC_Bitseq_EnrichR
+Nothing
+
+
+
+# THINGS HAVE CHANGED #
+
+Sandeep realised he sent me the transcripts instead of the gene output and sent me the genes instead. The transcript analysis was done using Sailfish. 
+
+These are the numbers for significance (adj p val < .05)
+
+| .   | CG(deseq2)   | SA (deseq2)  | LC (bitseq)   |
+|-----|------|-----|------|
+| TRL | 510  | 1308 | 3400 |
+| CYT | 2741 | 323  | 3116 |
+| WCT | 1604 | 4085   | 2652 |
+
+|     | CG(deseq2)   | SA (deseq2)  | Overlap   |
+|-----|------|-----|------|
+| TRL | 510  | 1308 | 101 |
+| CYT | 2741 | 323  | 163 |
+| WCT | 1604 | 4085 | 621 |
+
+|     | LC(bitseq)   | SA (deseq2)  | Overlap   |
+|-----|------|-----|------|
+| TRL | 3400  | 1308 | 293 |
+| CYT | 3116 | 323  | 125 |
+| WCT | 2652 | 4085 | 496 |
+
+
+
+#Wednesday
+
+All overlapped
+
+|     | CG(deseq2)   | SA (deseq2)  | LC(bitseq)   |overlap |
+|-----|------|-----|------|-----|
+| TRL | 510  | 1308 | 3400 | 61|
+| CYT | 2741 | 323  | 3116 | 70|
+| WCT | 1604 | 4085 | 2652 | 87|
+
+
+As a note, LC's original numbers are much lower than first thought due to duplications (as in this instance transcripts were used)
+
+They are now 
+
+|     | LC   | 
+|-----|------|
+| TRL | 2529 |
+| CYT | 6884 |
+| WCT | 1787 |
+
+
+Sandeep's results are still different. I'm looking at the results I get out for some genes, and they are completely different to his results. We are supposedly using the same program with the same count matrix, but we only have ~100 common genes. I just don't understand what is different.
+
+Looking at Sandeep's most DE gene - COX1 - this is a short comparison:
+
+|     | Basemean   | log 2Fold Change | p value | adjusted P value|
+|-----|------|------|------|-----|
+| SA | 432871| 5.0| 0| 0|
+| CG | 916350| -0.1| 0.84|0.94|
+
+There is a start difference in basemean (which may be due to differing normalisation), but one is nearly half the other. The fold change is in opposite directions too. 
+

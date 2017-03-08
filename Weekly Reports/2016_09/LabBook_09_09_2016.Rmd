@@ -1,0 +1,124 @@
+---
+title: "LabBook_09_09_2016"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60))
+```
+
+#Thursday
+
+I'm beginning to conduct the first part of my analysis. This involves generating coexpression values for the commonly DEGs for each dataset. For full explanation, refer to the document "Pathways to TDP"
+
+First, I needed to extract the DEG expression values for each dataset. That requires running the following script, adjusted for each dataset:
+
+```{r, eval=FALSE}
+
+#Selecting DEGS from expression matrix
+
+#Load list of interesting genes
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/")
+Genelist <- read.csv("MADEGs.csv")
+
+#load dataset
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15")
+exprs <- read.csv("C9rankeduniqueresult.csv")
+
+#Make gene symbol row names
+rownames(exprs) <- exprs$Gene.Symbol
+exprspat <- exprs[,52:59]
+
+#Make gene symbol a column
+exprspat <- cbind(exprspat, exprs$Gene.Symbol)
+colnames(exprspat)[length(exprspat)] <- "Gene.Symbol"
+
+#Merge by interesting gene names with expression to form matrix
+patgene <- merge(Genelist, exprspat, by.x = "Gene", by.y = "Gene.Symbol")
+rownames(patgene) <- patgene$Gene
+patgene[,1] <- NULL
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Pathways_to_TDP-43/Co-expression/")
+write.csv(patgene, file = "C9_DEG_Exprs.csv")
+```
+
+This produced a .csv file for each of the 5 microarray datasets containing the expression values for each of the DEGs for only patients. 
+
+For the PET dataset I had to adjust the code as the gene names were different. I used the list generated from the consensus analysis and ran the code with this instead.
+
+```{r, eval=FALSE}
+#Selecting DEGS from expression matrix
+
+#Load list of interesting genes
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/")
+setwd(dir = "/Users/clairegreen/Desktop/")
+Genelist <- read.table("My TDP-43 Genes.txt")
+
+#load dataset
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/")
+exprs <- read.csv("PETNOrankeduniqueresult.csv")
+
+#Make gene symbol row names
+rownames(exprs) <- exprs$X
+exprspat <- exprs[,9:15]
+
+#Make gene symbol a column
+exprspat <- cbind(exprspat, exprs$X)
+colnames(exprspat)[length(exprspat)] <- "Gene.Symbol"
+
+#Merge by interesting gene names with expression to form matrix
+patgene <- merge(Genelist, exprspat, by.x = "V1", by.y = "Gene.Symbol")
+rownames(patgene) <- patgene$V1
+patgene[,1] <- NULL
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Pathways_to_TDP-43/Co-expression/")
+write.csv(patgene, file = "C9_DEG_Exprs.csv")
+```
+
+
+Next, I needed to run correlation analysis to find coexpression values for each gene pair
+
+Example code
+
+```{r, eval=FALSE}
+#### Cor.test Method ####
+
+library(tictoc)
+library(gdata)
+
+##load dataset
+Exprs_val <- read.csv("CHMP2B_DEG_Exprs.csv")
+rownames(Exprs_val) <- Exprs_val[,1]
+Exprs_val[,1] <- NULL
+
+CorExprMat <- t(Exprs_val)
+
+reg <- matrix(0, ncol(CorExprMat), ncol(CorExprMat))
+
+tic()
+for (i in 1:ncol(CorExprMat)){
+  for (j in 1:ncol(CorExprMat)){
+    reg[i,j] <- cor.test(CorExprMat[,i], CorExprMat[,j], method = "spearman")$estimate
+  }}
+
+rownames(reg) <- colnames(reg) <- colnames(CorExprMat)
+toc()
+
+
+#Extract R values
+corRadj <- reg
+corRadj[lower.tri(corRadj, diag = TRUE)] <- NA
+
+#Turn into vector
+corRadj <- as.matrix(corRadj)
+corRvec <- unmatrix(corRadj)
+#Remove NA values
+corRvec <- na.omit(corRvec)
+corRvec <- as.data.frame(corRvec)
+
+write.csv(corRvec, file = "CHMP2B_CorResults.csv")
+
+```
+

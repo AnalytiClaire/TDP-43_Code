@@ -1,0 +1,76 @@
+---
+title: "LabBook_03_03_2017"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60))
+```
+
+#Tuesday
+
+After looking more at the Sandeep/Guillaume data, I just resolved myself with the fact the answers are not the same and there is a reason but it's not worth the politics of working that reason out. I know that I'm not as experienced but I feel like there's not a lot of places where you can get DESeq2 wrong, and I know that my results are supported by the raw data. 
+
+#Wednesday and Thursday
+
+Since I left the Guillaume stuff alone for the moment, I decided to look at my old DEG analysis to see if I could make it better. I changed the microarray analysis so that I removed rows which summed to 0 and then I was faced with the problem of multiple rows for one gene name. My initial response was to take some kind of median, but I didn't know which value to average. At first I decided that taking the median of the adjusted p value would make sense as it's always a positive number and it's the value I am ranking the genes by. Then I thought that might screw up scenarios in which a genes fold change is opposite. Also, ranking by adjusted p value doesn't always work as the adjustment can often mean a large number of genes have the same p value and then it's not clear how they are ranked numerically. 
+
+So the new parameters are:
+- remove rows that sum to 0
+- rank by raw p value
+- take highest ranking duplicate
+
+So I redid the analysis with the new parameters and the results are less good than they were before. The genes I get are:
+
+ [1] TUG1     TCF7L2   NAV2     ATP2C1   ZBTB20   RBPJ     YBX3     FXR1     SERBP1   PTPRB    MED13L   CST3     MCL1     ZFYVE26  SYT11    JAG1    
+ [17] ROBO1    CREB3L2  ZDHHC3   RBMS1    CYCS     TIA1     GPNMB    TCF4     NPTX2    BGN      KCTD12   NKTR     ROCK1    COL4A1   PHC3     RPL22   
+ [33] PNISR    DDX17    LPP      PPIC     CDH11    PNN      ZNF207   PFDN1    HSPA4    SPATS2   TMED10   UBE2W    TBCB     HCFC2    RPL15    PLEKHB1 
+ [49] RAB31    SCAF11   GNAI3    KPNB1    GLG1     SRSF11   MEST     RANBP2   PSMB2    ALPK1    NR2F2    YLPM1    LTBP1    ADAMTS1  ANKRD40  RBM5    
+ [65] SUN1     MGAT4A   ALMS1    C1orf61  ARIH1    SNX27    LPAR1    SKIV2L2  TNFAIP3  KPNA6    DCN      SCN1B    SF3B1    KCNMB4   RPS29    TAOK3   
+ [81] MMRN2    GAPVD1   RPL35A   SREK1    ARPC5L   MAP2K5   PTPN13   POGZ     ABHD2    PTPRO    ANXA1    PHTF2    NACA     ANKRD17  MTDH     ARHGAP29
+ [97] PAXBP1   CEP170B  HSP90AB1 ZNF24
+ 
+ 
+ This means I lost TARDBP. This is because in the Ravits dataset, I end up with more genes because I have relaxed the parameters. This changes the results as there is now a different distribution, so the p value is higher. My enrichment for benchmarks is lowered, and there is lowered enrichment in RAN pathway only.  
+#### New enrichment
+| ID             | P-value | BHadjP-value | nGenes      | nPathway |      |
+|----------------|---------|--------------|-------------|----------|------|
+| Exac           | 6       | 1.30E-16     | 1.56E-15    | 46       | 2680 |
+| Taylor         | 11      | 5.24E-06     | 3.14E-05    | 8        | 261  |
+| GeneCards.ALS  | 9       | 0.000864428  | 0.00345771  | 4        | 151  |
+| Pasterkamp     | 10      | 0.00317853   | 0.009535589 | 3        | 124  |
+| GWAS.ALS       | 1       | 0.006527518  | 0.013055037 | 16       | 1817 |
+| Subnetwork.28  | 5       | 0.006316668  | 0.013055037 | 2        | 77   |
+| ALSOD          | 12      | 0.023705003  | 0.040637148 | 2        | 126  |
+| GeneCards.AD   | 8       | 0.066611259  | 0.099916888 | 2        | 191  |
+| NeuroX.FDR..05 | 2       | 1            | 1           | 0        | 114  |
+| NeuroX.GWS     | 3       | 1            | 1           | 0        | 53   |
+| GWAS.AD        | 4       | 1            | 1           | 0        | 61   |
+| Carulli        | 7       | 1            | 1           | 0        | 36   |
+
+#### Old enrichment
+| ID             | P-value | BHadjP-value | nGenes      | nPathway |      |
+|----------------|---------|--------------|-------------|----------|------|
+| Exac           | 6       | 1.41E-15     | 1.69E-14    | 64       | 2680 |
+| Taylor         | 11      | 6.91E-08     | 4.15E-07    | 13       | 261  |
+| Pasterkamp     | 10      | 1.28E-05     | 5.10E-05    | 7        | 124  |
+| Subnetwork.28  | 5       | 0.029357797  | 0.070458713 | 2        | 77   |
+| GeneCards.AD   | 8       | 0.025628602  | 0.070458713 | 4        | 191  |
+| Carulli        | 7       | 0.038828625  | 0.07306972  | 1        | 36   |
+| GeneCards.ALS  | 9       | 0.042624003  | 0.07306972  | 3        | 151  |
+| NeuroX.FDR..05 | 2       | 0.076828031  | 0.115242046 | 2        | 114  |
+| GWAS.AD        | 4       | 0.098187602  | 0.117825123 | 1        | 61   |
+| ALSOD          | 12      | 0.096666997  | 0.117825123 | 2        | 126  |
+| GWAS.ALS       | 1       | 0.227886796  | 0.248603777 | 18       | 1817 |
+| NeuroX.GWS     | 3       | 1            | 1           | 0        | 53   |
+ 
+ I have two options to consider:
+ 
+ 1) What is the correct rowSum threshold to get the most DEGs? I read in a paper (Effect of low-expression gene filtering on detection of differentially expressed genes in RNA-seq data Ying Sha, John H. Phan, IEEE Member, and May D. Wang, IEEE Member PMC4983442) that there is no "best way" of filtering, and that the best measure is to see what threshold give you the most differentially expressed genes. So, I have set up an experiment where I have generated a for-loop to run increments of thresholds 1 at a time to see which produces the most DEGs. This is just one dataset though, I may need to expand up.
+ 
+ 2) Try the RNA-seq analysis using DEseq2 instead. My results from the Guillaume experiments suggest it works better at producing meaningful results so perhaps it is worth considering.
+ 
+ 
+ 
