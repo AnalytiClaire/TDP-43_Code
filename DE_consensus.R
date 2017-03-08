@@ -1,38 +1,39 @@
 #####DIFFERENTIAL GENE EXPRESSION INTERSECT
 #takes csv files of top X DE genes and identifies any consensus genes 
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/")
-A <- read.csv(file = "DGE_RNA_seq1.csv")
+# setwd("/Users/clairegreen/Documents/PhD/TDP-43/non-TDP-43 Data Sets/JK2011_SOD1/")
+
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/Thresholds/")
+A <- read.csv(file =  "C9 _ap_6500.csv")
+
+B <- read.csv(file =  "CH _ap_6500.csv")
  
-B <- read.csv(file = "DGE_RNA_seq2.csv")
+C <- read.csv(file ="sALS _ap_6500.csv")
 
-C <- read.csv(file = "MA.csv")
-# 
-# D <- read.csv(file = "FTLD_ap_5000")
-# 
-# E <- read.csv(file = "VCP_ap_5000")
+D <- read.csv(file ="FTLD _ap_6500.csv")
 
+E <- read.csv(file = "VCP _ap_6500.csv")
 
-#A_DE <- A$Top.5000
-B_DE <- B$Top.5000
-C_DE <- C$Top.5000
-# D_DE <- D$Gene.Symbol
-# E_DE <- E$Gene.Symbol
-overlap <- Reduce(intersect, list(B_DE, C_DE))
+F <- read.csv(file = "PETb_ap_6500.csv")
+
+G <- read.csv(file = "RAV _ap_6500.csv")
+
+# H <- read.csv(file =   "FSHD _ap_6500.csv")
+
+A_DE <- A$Ensembl
+B_DE <- B$Ensembl
+C_DE <- C$Ensembl
+D_DE <- D$Ensembl
+E_DE <- E$Ensembl
+F_DE <- F$Row.names
+G_DE <- G$Row.names
+# H_DE <- H$Gene.Symbol
+
+overlap <- Reduce(intersect, list(B_DE, C_DE, D_DE, E_DE, F_DE, G_DE))
 print(overlap)
 
-write.csv(overlap, file = paste(Sys.Date(),"overlap.csv", sep = ""))
 
-# c9setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/Pathprint/")
-# PP_gene_list <- read.csv(file = "GeneList_2.csv")
-# PP_gene_list <- PP_gene_list$GENE
-# setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/DE Genes")
-# DE_gene_list <- read.csv(file = "DE_genelist_5000.csv")
-# DE_gene_list <- DE_gene_list$GENE
-# overlap <- Reduce(intersect, list(PP_gene_list, DE_gene_list))
-# print(overlap)
 
-RNA <- overlap
-Micro <- overlap
+setwd("/Users/clairegreen/Desktop/")
+write.csv(overlap, file = "overlap_ens.csv")
 
-overlap <- Reduce(intersect, list(RNA, Micro))

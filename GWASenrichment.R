@@ -64,6 +64,10 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExp
 R <- read.table(file = "Taylor_TDP43.txt")
 r <- R$V1
 
+setwd(dir = "/Users/clairegreen/Desktop/")
+S <- read.table(file = "ProteintargetingtoER.txt")
+s <- S$V1
+
 
 setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/Pathprint 25.04.16/FishersExact/FE.All.Pathways/FE.PathprintPathways(29)/")
 x <- read.table(file = "FE.pathprintgenes.csv")
@@ -104,10 +108,9 @@ allgenes <- sym.genes[!duplicated(sym.genes),]
 # 
 # for (i in x[,1:4]) {
 
-x <- read.table("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HoffmanMuscle/SigGenes.01.txt")
-ur.list <- x$V1
-y <- read.table("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HoffmanMuscle/CongenitalMDGenes.txt")
-int.list <- y$V1
+x <- read.table("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/highly2014/highly5500.txt")
+ur.list <- Y$X6500
+int.list <- s
 
 #How many test geneset genes contain snps
 x.in <- length (which(ur.list %in% int.list)) 

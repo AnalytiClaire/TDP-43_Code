@@ -64,6 +64,10 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExp
 R <- read.table(file = "Taylor_TDP43.txt")
 r <- R$V1
 
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/")
+S <- read.table(file = "ParkinsonsGeneCards.txt")
+s <- S$V1
+
 # ####Load full gwas datasets ####
 # setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/")
 # 
