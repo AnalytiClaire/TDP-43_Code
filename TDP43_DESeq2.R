@@ -1,4 +1,7 @@
-#### Analysis of Pet & Rav TDP-43 data ####
+
+library(DESeq2)
+library(biomaRt)
+#### Analysis of Rav TDP-43 data ####
 
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/RNA-seq/Ravits/")
 Counts <- read.csv("ravitscombined.counts.csv")
@@ -12,9 +15,10 @@ rownames(Counts)<-Counts[,1]
 Counts[,1] <- NULL
 
 #Remove rows with all zeros
-Counts[rowSums(Counts) == 0,] <- NA
-Counts <- na.omit(Counts)
-
+# Counts[rowSums(Counts) == 0,] <- NA
+# Counts <- na.omit(Counts)
+keep <- rowSums(Counts>=10) >= 3
+Counts<-Counts[keep,]
 
 #Create a coldata frame
 coldata <- data.frame(row.names=colnames(Counts), condition)
@@ -31,7 +35,7 @@ res <- results(dds)
 table(res$padj<0.05)
 ## Order by adjusted p-value
 res <- res[order(res$pvalue), ]
-## Merge with normalized count data
+## Merge with raw and normalized count data
 resdata_raw <- merge(as.data.frame(res), as.data.frame(counts(dds, normalized=TRUE)), by="row.names", sort=FALSE)
 resdata_norm <- merge(as.data.frame(res), as.data.frame(counts(dds, normalized=TRUE)), by="row.names", sort=FALSE)
 
@@ -47,12 +51,12 @@ genesort<-subset(genesort, hgnc_symbol!="")
 
 
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2")
-write.csv(genesort, "RAV_results_gensym.csv")
+write.csv(genesort, "RAV_results_keepfiltering.csv")
 
-Sig.padj <- subset(genesort, subset=(padj < 0.05))
-Sig.padj <- Sig.padj$hgnc_symbol
-
-write.table(Sig.padj, "sig.padj.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
+# Sig.padj <- subset(genesort, subset=(padj < 0.05))
+# Sig.padj <- Sig.padj$hgnc_symbol
+# 
+# write.table(Sig.padj, "sig.padj.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
 
 
 ######
@@ -72,8 +76,10 @@ Counts[,1] <- NULL
 Counts[,27] <- NULL
 
 #Remove rows with all zeros
-Counts[rowSums(Counts) == 0,] <- NA
-Counts <- na.omit(Counts)
+# Counts[rowSums(Counts) == 0,] <- NA
+# Counts <- na.omit(Counts)
+keep <- rowSums(Counts>=10) >= 3
+Counts<-Counts[keep,]
 
 
 #Create a coldata frame
@@ -107,7 +113,7 @@ genesort<-subset(genesort, hgnc_symbol!="")
 
 
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2")
-write.csv(genesort, "PET_results_gensym.csv")
+write.csv(genesort, "PET_results_keepfiltering.csv")
 
 Sig.padj <- subset(genesort, subset=(padj < 0.05))
 Sig.padj <- Sig.padj$hgnc_symbol

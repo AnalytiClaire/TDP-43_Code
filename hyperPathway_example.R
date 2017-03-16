@@ -78,7 +78,10 @@ setwd(dir = "/Users/clairegreen/Desktop/Desktop Folder/")
 V <- read.table("MicrogliaGenes_doi:10.1038:nn.3599.txt")
 v <- V$V1
 
-# 
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/")
+x <- read.table("6500_list_keepfiltering.txt")
+x <- x$V1
+
 # ####Load full gwas datasets ####
 # setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
 # 
@@ -145,16 +148,16 @@ W<- lapply(W, function(x) x[!is.na(x)])
 
 
 # run script
-pathwayEnrichment2 <- hyperPathway(
-                genelist = x,
+pathwayEnrichment <- hyperPathway(
+                genelist = W$Taylor,
 								geneset = Z,
 								Nchip = length(allgenes)
 							 )
 setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/")
-write.csv(pathwayEnrichment2, file = "pathprint_enrich.csv")
+write.csv(pathwayEnrichment2, file = "pathprint_enrich_keepfiltering.csv")
 
 
-o2 <- Reduce(intersect, list(x, W$ALSOD))
+o2 <- Reduce(intersect, list(x, W$ALSMalacards))
 print(o2)
 write.csv(o2, file = "intersect.csv")
 

@@ -1,0 +1,86 @@
+---
+title: "LabBook_10_03_2017"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60))
+```
+
+#Wednesday
+
+After reading the paper mentioned in the previous lab book, I set up a script that looped the row sum value from ==1 all the way up to ==500. What it showed is that essentially the relationship between number of genes filtered and number of DEGs is completely linear. Therefore their suggestion that "The right threshold is the one that produces the most DEGs" essentially meant don't filter at all. And that didn't solve my problem.
+
+So yesterday I ran DEseq2 on the two RNA seq datasets and these are the results for the threshold of top 6500 genes. 
+
+###Previous results using Limma (175 genes)
+| GeneLists      | ID | P-value     | BHadjP-value | nGenes | nPathway |
+|----------------|----|-------------|--------------|--------|----------|
+| ALSOD          | 12 | 0.096666997 | 0.117825123  | 2      | 126      |
+| Cirulli        | 7  | 0.038828625 | 0.07306972   | 1      | 36       |
+| Exac           | 6  | 1.41E-15    | 1.69E-14     | 64     | 2680     |
+| GeneCards.AD   | 8  | 0.025628602 | 0.070458713  | 4      | 191      |
+| GeneCards.ALS  | 9  | 0.042624003 | 0.07306972   | 3      | 151      |
+| GWASCentralAD  | 4  | 0.098187602 | 0.117825123  | 1      | 61       |
+| GWASCentralALS | 1  | 0.227886796 | 0.248603777  | 18     | 1817     |
+| NeuroX.FDR..05 | 2  | 0.076828031 | 0.115242046  | 2      | 114      |
+| NeuroX.GWS     | 3  | 1           | 1            | 0      | 53       |
+| Pasterkamp     | 10 | 1.28E-05    | 5.10E-05     | 7      | 124      |
+| Subnetwork.28  | 5  | 0.029357797 | 0.070458713  | 2      | 77       |
+| Taylor         | 11 | 6.91E-08    | 4.15E-07     | 13     | 261      |
+
+###Previous results using Limma with only Zero rows removed and top duplicate selected
+| GeneLists      | ID | P-value     | BHadjP-value | nGenes | nPathway |
+|----------------|----|-------------|--------------|--------|----------|
+| ALSOD          | 12 | 0.013469417 | 0.020204126  | 3      | 126      |
+| Cirulli        | 7  | 0.02804667  | 0.03739556   | 1      | 36       |
+| Exac           | 6  | 4.89E-24    | 5.87E-23     | 69     | 2680     |
+| GeneCards.AD   | 8  | 0.012883435 | 0.020204126  | 4      | 191      |
+| GeneCards.ALS  | 9  | 0.000828927 | 0.001989426  | 5      | 151      |
+| GWAS.AD        | 4  | 0.009911713 | 0.019823426  | 2      | 61       |
+| GWAS.ALS       | 1  | 0.000606086 | 0.001818259  | 25     | 1817     |
+| NeuroX.FDR..05 | 2  | 0.050286223 | 0.060343468  | 2      | 114      |
+| NeuroX.GWS     | 3  | 1           | 1            | 0      | 53       |
+| Pasterkamp     | 10 | 0.000291668 | 0.001166673  | 5      | 124      |
+| Subnetwork.28  | 5  | 0.107721576 | 0.117514447  | 1      | 77       |
+| Taylor         | 11 | 0.000125248 | 0.00075149   | 8      | 261      |
+
+
+###New results using DESeq2 with only zero rows removed
+| GeneLists      | ID | P-value     | BHadjP-value | nGenes | nPathway |
+|----------------|----|-------------|--------------|--------|----------|
+| ALSOD          | 12 | 0.002018665 | 0.004844797  | 4      | 126      |
+| Cirulli        | 7  | 0.026671868 | 0.035562491  | 1      | 36       |
+| Exac           | 6  | 3.69E-18    | 4.42E-17     | 60     | 2680     |
+| GeneCards.AD   | 8  | 0.011558579 | 0.019814706  | 4      | 191      |
+| GeneCards.ALS  | 9  | 0.000719077 | 0.002157232  | 5      | 151      |
+| GWAS.AD        | 4  | 1           | 1            | 0      | 61       |
+| GWAS.ALS       | 1  | 0.008711264 | 0.017422527  | 21     | 1817     |
+| NeuroX.FDR..05 | 2  | 0.192553214 | 0.231063857  | 1      | 114      |
+| NeuroX.GWS     | 3  | 1           | 1            | 0      | 53       |
+| Pasterkamp     | 10 | 2.81E-06    | 1.12E-05     | 7      | 124      |
+| Subnetwork.28  | 5  | 0.017248018 | 0.025872027  | 2      | 77       |
+| Taylor         | 11 | 2.56E-06    | 1.12E-05     | 10     | 261      |
+
+###New results using DESeq2 with at least 3 samples with at least 10 
+| GeneLists      | ID | P-value     | BHadjP-value | nGenes | nPathway |
+|----------------|----|-------------|--------------|--------|----------|
+| ALSOD          | 12 | 0.00497589  | 0.011942136  | 4      | 126      |
+| Cirulli        | 7  | 0.039224827 | 0.052299769  | 1      | 36       |
+| Exac           | 6  | 1.65E-20    | 1.98E-19     | 72     | 2680     |
+| GeneCards.AD   | 8  | 0.026173243 | 0.044669518  | 4      | 191      |
+| GeneCards.ALS  | 9  | 0.002118958 | 0.006356875  | 5      | 151      |
+| GWASCentralAD  | 4  | 1           | 1            | 0      | 61       |
+| GWASCentralALS | 1  | 0.026441688 | 0.044669518  | 23     | 1817     |
+| NeuroX.FDR..05 | 2  | 0.261919166 | 0.314302999  | 1      | 114      |
+| NeuroX.GWS     | 3  | 1           | 1            | 0      | 53       |
+| Pasterkamp     | 10 | 1.17E-08    | 4.68E-08     | 10     | 124      |
+| Subnetwork.28  | 5  | 0.029779679 | 0.044669518  | 2      | 77       |
+| Taylor         | 11 | 9.91E-09    | 4.68E-08     | 14     | 261      |
+
+
+
+
+So in conclusion, the latest methodology, although producing lower p vlaues in some cases, actually increases the number of gene overlaps in the pathways. It probably just has a few more false positives. 

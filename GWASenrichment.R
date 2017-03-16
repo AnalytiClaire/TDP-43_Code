@@ -73,6 +73,13 @@ setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathpr
 x <- read.table(file = "FE.pathprintgenes.csv")
 x <- x$V1
 
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Guillaume_HEK48h/")
+LC_TRL <- read.table(file = "LC/Q331K GRASPS_BitSeq_EdgeR_DE transcripts.txt")
+LC_TRL <- LC_TRL$V3
+
+
+
 Z <- read.csv(file = "FE.pathprintgenes.csv", na.strings = c("", "NA)"))
 Z <- as.list(Z)
 
@@ -109,8 +116,8 @@ allgenes <- sym.genes[!duplicated(sym.genes),]
 # for (i in x[,1:4]) {
 
 x <- read.table("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/highly2014/highly5500.txt")
-ur.list <- Y$X6500
-int.list <- s
+ur.list <- x
+int.list <- Sig.padj
 
 #How many test geneset genes contain snps
 x.in <- length (which(ur.list %in% int.list)) 
