@@ -1,4 +1,4 @@
-##### Finding perfect cutoff
+##### Finding perfect cutoff with separate benchmarks
 
 library(pathprint)
 library(hgu133plus2.db)
@@ -198,3 +198,110 @@ Taylor_pval <- lapply(Taylor,function(x)as.numeric(x[[3]]))
 Taylor_pval.df <- as.data.frame(Taylor_pval)
 Taylor_pval.df <- t(Taylor_pval.df)
 rownames(Taylor_pval.df) <- (1:nrow(Taylor_pval.df))+2913
+
+
+
+####################################################################################################################################################
+####################################################################################################################################################
+library(hgu133plus2.db)
+
+setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/noMedian/")
+
+C9 <- read.csv("C9_unique.csv")
+C9 <- C9[order(C9$P.Value),]
+CH <- read.csv("CH_unique.csv")
+CH <- CH[order(CH$P.Value),]
+sals <- read.csv("sals_unique.csv")
+sals <- sals[order(sals$P.Value),]
+ftld <- read.csv("ftld_unique.csv")
+ftld <- ftld[order(ftld$P.Value),]
+vcp <- read.csv("vcp_unique.csv")
+vcp <- vcp[order(vcp$P.Value),]
+
+setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/")
+
+pet <- read.csv("PET_results_keepfiltering.csv")
+pet <- pet[!duplicated(pet$hgnc_symbol),]
+rav <- read.csv("RAV_results_keepfiltering.csv")
+rav <- rav[!duplicated(rav$hgnc_symbol),]
+
+## extract gene lists
+c9_gene <- C9$Gene.Symbol
+ch_gene <- CH$Gene.Symbol
+sals_gene <- sals$Gene.Symbol
+ftld_gene <- ftld$Gene.Symbol
+vcp_gene <- vcp$Gene.Symbol
+pet_gene <- pet$hgnc_symbol
+rav_gene <- rav$hgnc_symbol
+
+# num_overlap <- matrix(data=NA)
+List <- list()
+
+for (i in 1:8000){
+  C9_int <- c9_gene[1:i]
+  CH_int <- ch_gene[1:i]
+  sals_int <- sals_gene[1:i]
+  ftld_int <- ftld_gene[1:i]
+  vcp_int <- vcp_gene[1:i]
+  pet_int <- pet_gene[1:i]
+  rav_int <- rav_gene[1:i]
+  List[[i]] <- Reduce(intersect, list(C9_int, CH_int, sals_int, ftld_int, vcp_int, pet_int, rav_int))
+}
+
+#Load file with all genes
+sym <- hgu133plus2SYMBOL
+sym1 <- mappedkeys(sym)
+sym2 <- as.list (sym[c(sym1)]) 
+sym3 <- data.frame (sym2)
+sym.probes <- names (sym2)
+sym.genes <- sym3[1,]
+sym.genes <- t(sym.genes)
+allgenes <- sym.genes[!duplicated(sym.genes),]
+
+#Remove list elements with less than 5 genes (to aid calculations)
+List_5 <- List[lengths(List) > 4]
+#Leaves final 5087 elements (elements 1:2913 removed)
+
+#Create new empty list
+enrich_result <- list()
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/")
+S <- read.table(file = "OneBenchmarkList.txt")
+s <- S$V1
+
+
+for (i in 1:length(List_5)){
+  write.table(List_5[i], "benchmark_genelist.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
+  bgene <- read.table("benchmark_genelist.txt")
+  bgene <- bgene$V1
+  
+  ur.list <- bgene
+  int.list <- s
+
+  #How many test geneset genes contain snps
+  x.in <- length (which(ur.list %in% int.list)) 
+
+  #how many do not
+  x.out <- length(ur.list) - x.in
+
+  #total number of snp genes
+  tot.in <- length(int.list)
+
+  #total number of all genes
+  tot.out <- length(allgenes)-length(tot.in)
+
+
+  #create count matrix
+  counts <- matrix (nrow=2, ncol=2)
+  counts [1,] <- c(x.in, tot.in)
+  counts [2,] <- c(x.out, tot.out)
+
+
+  #Conduct fisher's exact test for count data
+  a5 <-fisher.test (counts)
+
+  enrich_result[[i]] <- a5$p.value
+}
+
+enrich_result_df <- t(as.data.frame(enrich_result))
+rownames(enrich_result_df) <- (1:nrow(enrich_result_df))+2913

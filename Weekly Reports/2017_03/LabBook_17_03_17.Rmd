@@ -1,0 +1,256 @@
+---
+title: "LabBook_17_03_2017"
+author: "Claire Green"
+output: pdf_document
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=100))
+```
+
+#Monday
+
+Today I spent time doing a little reading and writing from home. I identified a paper that has also done a similar analysis to my own that was submitted to the journal Bioinformatics. 
+
+https://academic.oup.com/bioinformatics/article/25/7/875/210443/Meta-analysis-of-age-related-gene-expression
+
+#Tuesday
+Today I worked on the threshold problem for my common DEGs. I set up a script that is able to take every threshold from 1-8000 top DEGs from each dataset, run hypergeometric testing of my benchmark lists and extract the adjusted p value for each. I hoped to find a threshold which best identified the highest enrichments for each dataset, but Win suggested why don't I just make one list with all the genes I think are important and do a single enrichment analysis on that. I will have to consider which genes are important to include.
+
+#Wednesday
+Spent all day on this sodding med school research day abstract.
+
+#Thursday
+On Thursday I got back to work (after the sofa fiasco) and I decided to start with writing out my idea of using the variance of a gene across datasets as a measure of proximity to phenotype. This can be found in my google drive. What I realised as I wrote it out was that my methodology had one giant assumption - that you know which DEGs are upstream and which are downstream of the phenotype. Since I don't yet have a way of discriminating that, I decided to put it aside for a later date. It's worth discussing theoretically though, this is what I wrote so far:
+
+*Methodologies such as differential expression analysis of genes are proficient at providing lists of genes we suspect are related to a particular phenotype. What it cannot do, however, is provide a metric of the degree to which each gene is related to the phenotype. This concept has led to increased research in target prioritisation for drug development, in which a list of potential targets must be assessed for the likelihood that they contribute a real effect on the phenotype in questions. This process is laborious and expensive if you have to consider every DEG, so in silico prioritisation is key. Current methods, such as Varelect (http://varelect.genecards.org) and Endeavour (https://endeavour.esat.kuleuven.be/), draw upon existing literature and experimental data to generate an in-house scoring system. However, these systems are based upon information that is globally generated, rather than locally identified from the experimenter’s own data.
+
+When biological samples are all deemed to have a shared phenotype, we make an assumption that there is common biochemistry leading to that phenotype. However, in diseases where different mutations can cause the same phenotype, it is much harder to determine the point of convergence - where disparate mutations meet to cause common phenotype. This convergence can be identified through identifying which DEGs are common to all samples. For example, 
+
+
+In a scenario where we have a list of genes we suspect to be upstream, it would be useful to be able to position each DEG along an axis starting at mutation, and ending in phenotype. In other words, which genes are *
+
+It's obviously unfinished but you get the gist.
+
+Then I looked into identifying which genes were commonly upregulated and which commonly downregulated across all the datasets. This script is called updownregulatedgenes.R
+
+```{r, eval=FALSE}
+setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/noMedian/")
+
+thresh <- 5996
+
+C9 <- read.csv("C9_unique.csv")
+C9 <- C9[order(C9$P.Value),]
+C96500 <- C9[1:thresh,]
+CH <- read.csv("CH_unique.csv")
+CH <- CH[order(CH$P.Value),]
+CH6500 <- CH[1:thresh,]
+sals <- read.csv("sals_unique.csv")
+sals <- sals[order(sals$P.Value),]
+sals6500 <- sals[1:thresh,]
+ftld <- read.csv("ftld_unique.csv")
+ftld <- ftld[order(ftld$P.Value),]
+ftld6500 <- ftld[1:thresh,]
+vcp <- read.csv("vcp_unique.csv")
+vcp <- vcp[order(vcp$P.Value),]
+vcp6500 <- vcp[1:thresh,]
+
+setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/")
+pet <- read.csv("PET_results_keepfiltering.csv")
+pet <- pet[!duplicated(pet$hgnc_symbol),]
+pet6500 <- pet[1:thresh,]
+rav <- read.csv("RAV_results_keepfiltering.csv")
+rav <- rav[!duplicated(rav$hgnc_symbol),]
+rav6500 <- rav[1:thresh,]
+
+
+
+C9up <-subset(C96500, subset=(logFC > 0))
+C9upgene <- C9up$Gene.Symbol
+C9down <-subset(C96500, subset=(logFC < 0))
+C9downgene <- C9down$Gene.Symbol
+
+CHup <-subset(CH6500, subset=(logFC > 0))
+CHupgene <- CHup$Gene.Symbol
+CHdown <-subset(CH6500, subset=(logFC < 0))
+CHdowngene <- CHdown$Gene.Symbol
+
+salsup <-subset(sals6500, subset=(logFC > 0))
+salsupgene <- salsup$Gene.Symbol
+salsdown <-subset(sals6500, subset=(logFC < 0))
+salsdowngene <- salsdown$Gene.Symbol
+
+ftldup <-subset(ftld6500, subset=(logFC > 0))
+ftldupgene <- ftldup$Gene.Symbol
+ftlddown <-subset(ftld6500, subset=(logFC < 0))
+ftlddowngene <- ftlddown$Gene.Symbol
+
+vcpup <-subset(vcp6500, subset=(logFC > 0))
+vcpupgene <- vcpup$Gene.Symbol
+vcpdown <-subset(vcp6500, subset=(logFC < 0))
+vcpdowngene <- vcpdown$Gene.Symbol
+
+petup <-subset(pet6500, subset=(log2FoldChange > 0))
+petupgene <- petup$hgnc_symbol
+petdown <-subset(pet6500, subset=(log2FoldChange < 0))
+petdowngene <- petdown$hgnc_symbol
+
+ravup <-subset(rav6500, subset=(log2FoldChange > 0))
+ravupgene <- ravup$hgnc_symbol
+ravdown <-subset(rav6500, subset=(log2FoldChange < 0))
+ravdowngene <- ravdown$hgnc_symbol
+
+intersect_up <- Reduce(intersect, list(C9upgene, CHupgene, salsupgene, ftldupgene, vcpupgene, petupgene, ravupgene ))
+intersect_up
+intersect_down <- Reduce(intersect, list(C9downgene, CHdowngene, salsdowngene, ftlddowngene, vcpdowngene, petdowngene, ravdowngene ))
+intersect_down
+
+write.table(intersect_up, "intersect_up.txt", quote = F, col.names = F, row.names = F)
+write.table(intersect_down, "intersect_down.txt", quote = F, col.names = F, row.names = F)
+```
+I will report the results in a moment as I need to explain how I got round to picking my final threshold, as this changes the results of a bunch of things. 
+
+# Friday
+
+I looked into making my ULTIMATE LIST. I decided to include the gene lists from Malacards ALS, AD and parkinsons, ALSOD, the two TDP-43 PPI lists and John's TDP-43 pathology tracking module. This provided a total list of 
+820 unique genes.
+
+I used the following for loop to conduct fisher's exact test on each threshold up to 8000 genes:
+```{r, eval=FALSE}
+library(hgu133plus2.db)
+
+setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/noMedian/")
+
+C9 <- read.csv("C9_unique.csv")
+C9 <- C9[order(C9$P.Value),]
+CH <- read.csv("CH_unique.csv")
+CH <- CH[order(CH$P.Value),]
+sals <- read.csv("sals_unique.csv")
+sals <- sals[order(sals$P.Value),]
+ftld <- read.csv("ftld_unique.csv")
+ftld <- ftld[order(ftld$P.Value),]
+vcp <- read.csv("vcp_unique.csv")
+vcp <- vcp[order(vcp$P.Value),]
+
+setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/")
+
+pet <- read.csv("PET_results_keepfiltering.csv")
+pet <- pet[!duplicated(pet$hgnc_symbol),]
+rav <- read.csv("RAV_results_keepfiltering.csv")
+rav <- rav[!duplicated(rav$hgnc_symbol),]
+
+## extract gene lists
+c9_gene <- C9$Gene.Symbol
+ch_gene <- CH$Gene.Symbol
+sals_gene <- sals$Gene.Symbol
+ftld_gene <- ftld$Gene.Symbol
+vcp_gene <- vcp$Gene.Symbol
+pet_gene <- pet$hgnc_symbol
+rav_gene <- rav$hgnc_symbol
+
+# num_overlap <- matrix(data=NA)
+List <- list()
+
+for (i in 1:8000){
+  C9_int <- c9_gene[1:i]
+  CH_int <- ch_gene[1:i]
+  sals_int <- sals_gene[1:i]
+  ftld_int <- ftld_gene[1:i]
+  vcp_int <- vcp_gene[1:i]
+  pet_int <- pet_gene[1:i]
+  rav_int <- rav_gene[1:i]
+  List[[i]] <- Reduce(intersect, list(C9_int, CH_int, sals_int, ftld_int, vcp_int, pet_int, rav_int))
+}
+
+#Load file with all genes
+sym <- hgu133plus2SYMBOL
+sym1 <- mappedkeys(sym)
+sym2 <- as.list (sym[c(sym1)]) 
+sym3 <- data.frame (sym2)
+sym.probes <- names (sym2)
+sym.genes <- sym3[1,]
+sym.genes <- t(sym.genes)
+allgenes <- sym.genes[!duplicated(sym.genes),]
+
+#Remove list elements with less than 5 genes (to aid calculations)
+List_5 <- List[lengths(List) > 4]
+#Leaves final 5087 elements (elements 1:2913 removed)
+
+#Create new empty list
+enrich_result <- list()
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/")
+S <- read.table(file = "OneBenchmarkList.txt")
+s <- S$V1
+
+
+for (i in 1:length(List_5)){
+  write.table(List_5[i], "benchmark_genelist.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
+  bgene <- read.table("benchmark_genelist.txt")
+  bgene <- bgene$V1
+  
+  ur.list <- bgene
+  int.list <- s
+
+  #How many test geneset genes contain snps
+  x.in <- length (which(ur.list %in% int.list)) 
+
+  #how many do not
+  x.out <- length(ur.list) - x.in
+
+  #total number of snp genes
+  tot.in <- length(int.list)
+
+  #total number of all genes
+  tot.out <- length(allgenes)-length(tot.in)
+
+
+  #create count matrix
+  counts <- matrix (nrow=2, ncol=2)
+  counts [1,] <- c(x.in, tot.in)
+  counts [2,] <- c(x.out, tot.out)
+
+
+  #Conduct fisher's exact test for count data
+  a5 <-fisher.test (counts)
+
+  enrich_result[[i]] <- a5$p.value
+}
+
+enrich_result_df <- t(as.data.frame(enrich_result))
+rownames(enrich_result_df) <- (1:nrow(enrich_result_df))+2913
+```
+You have to add 2913 at the end so that you get the correct rowname for the value, as 2913 rows were removed before the analysis.
+
+I removed the rows with less than 5 genes because it wouldn't affect the results and having zero or one genes was messing with the calculations.
+
+
+In the end, results showed that the threshold with the highest enrichment value was 5996 (113 genes), with an enrichment of the ULTIMATE LIST of 1.979756e-10. After random permutation tests, this threshold with this number of genes was significant way beyond chance (p <.0001). The p value was was actually zero because the simulation never even got near 113, as the range was 27-79, with a mean value of 52.2726. 
+
+\newpage
+
+Enrichment results from EnrichR are as follows:
+
+###GO Biological Process
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/5996/GOBP)
+
+###GO Cellular Component
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/5996/GOCP)
+
+###GO Molecular Function
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/5996/GOMF)
+
+###KEGG 2016
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/5996/KEGG2016)
+
+###Reactome 2016
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/5996/Reactome2016)
+
+\newpage
+
+###Wikipathways 2016   
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/5996/Wikipathways2016)
+
+###Virus MINT
+![](/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/5996/VirusMINT)

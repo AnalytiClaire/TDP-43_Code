@@ -1,6 +1,6 @@
 setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/noMedian/")
 
-thresh <- 7000
+thresh <- 5996
 
 C9 <- read.csv("C9_unique.csv")
 C9 <- C9[order(C9$P.Value),]
@@ -64,6 +64,9 @@ ravdown <-subset(rav6500, subset=(log2FoldChange < 0))
 ravdowngene <- ravdown$hgnc_symbol
 
 intersect_up <- Reduce(intersect, list(C9upgene, CHupgene, salsupgene, ftldupgene, vcpupgene, petupgene, ravupgene ))
-intersect_up
+cat(intersect_up, sep = "\n")
 intersect_down <- Reduce(intersect, list(C9downgene, CHdowngene, salsdowngene, ftlddowngene, vcpdowngene, petdowngene, ravdowngene ))
-intersect_down
+cat(intersect_down, sep = "\n")
+
+write.table(intersect_up, "intersect_up.txt", quote = F, col.names = F, row.names = F)
+write.table(intersect_down, "intersect_down.txt", quote = F, col.names = F, row.names = F)

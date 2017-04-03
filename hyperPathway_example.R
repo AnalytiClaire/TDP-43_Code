@@ -74,12 +74,12 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExp
 U <- read.table("6500 + 200.txt")
 u <- U$V1
 
-setwd(dir = "/Users/clairegreen/Desktop/Desktop Folder/")
-V <- read.table("MicrogliaGenes_doi:10.1038:nn.3599.txt")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+V <- read.table("OneBenchmarkList.txt")
 v <- V$V1
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/")
-x <- read.table("6500_list_keepfiltering.txt")
+setwd(dir = "/Users/clairegreen/Desktop/")
+x <- read.table("List5996.txt")
 x <- x$V1
 
 # ####Load full gwas datasets ####
@@ -109,13 +109,13 @@ Z <- read.csv(file = "pathprintgenes.csv", na.strings = c("", "NA)"))
 Z <- as.list(Z)
 Z <- lapply(Z, function(x) x[!is.na(x)])
 
-z <- read.csv(file = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/PP+20.csv", na.strings = c("", "NA)"))
+z <- read.csv(file = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/PathprintThreshold/GeneList_200.csv", na.strings = c("", "NA)"))
 z <- as.list(z)
 z <- lapply(z, function(x) x[!is.na(x)])
 
 #Load file with all genes
 library(hgu133plus2.db)
-sym <- hgu133plus2SYMBOL
+installsym <- hgu133plus2SYMBOL
 sym1 <- mappedkeys(sym)
 sym2 <- as.list (sym[c(sym1)]) 
 sym3 <- data.frame (sym2)
@@ -149,15 +149,15 @@ W<- lapply(W, function(x) x[!is.na(x)])
 
 # run script
 pathwayEnrichment <- hyperPathway(
-                genelist = W$Taylor,
-								geneset = Z,
+                genelist = x,
+								geneset = W,
 								Nchip = length(allgenes)
 							 )
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/")
-write.csv(pathwayEnrichment2, file = "pathprint_enrich_keepfiltering.csv")
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/5996/")
+write.csv(pathwayEnrichment, file = "pathprint_enrich_5996.csv")
 
 
-o2 <- Reduce(intersect, list(x, W$ALSMalacards))
+o2 <- Reduce(intersect, list(W$ALSMalacards, W$ALSOD))
 print(o2)
 write.csv(o2, file = "intersect.csv")
 

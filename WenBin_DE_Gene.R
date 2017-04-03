@@ -9,17 +9,18 @@ library(Biobase)
 library(tkWidgets)
 library(plyr)
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/FTLD")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/VCP")
 
 #run program to choose .CEL files from directory
 celfiles <- fileBrowser(textToShow = "Choose CEL files", testFun = hasSuffix("[cC][eE][lL]"))
 #celfiles<-basename(celfiles)
 Data<-ReadAffy(filenames=celfiles) #read in files
 rmaEset<-rma(Data) #normalise using RMA
-analysis.name<-"FTLD" #Label analysis
+analysis.name<-"VCP" #Label analysis
 dataMatrixAll<-exprs(rmaEset) #takes expression from normalised expression set
 
-#write.csv(dataMatrixAll, file = "eset.GRN.csv")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/NormalisedExpressionMatrices/")
+write.csv(dataMatrixAll, file = paste(analysis.name,"eset.csv", sep = ""))
 
 #mas5call generates presence/absence calls for each probeset
 mas5call<-mas5calls(Data)

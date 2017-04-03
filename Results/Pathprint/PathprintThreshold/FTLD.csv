@@ -1,0 +1,634 @@
+"","meandiff"
+"Glycolysis / Gluconeogenesis (KEGG)",0.0625
+"Citrate cycle (TCA cycle) (KEGG)",0.375
+"Pentose phosphate pathway (KEGG)",0.125
+"Pentose and glucuronate interconversions (KEGG)",0.25
+"Fructose and mannose metabolism (KEGG)",0.25
+"Galactose metabolism (KEGG)",0.1875
+"Ascorbate and aldarate metabolism (KEGG)",0.3125
+"Fatty acid biosynthesis (KEGG)",0
+"Fatty acid elongation in mitochondria (KEGG)",0.1875
+"Fatty acid metabolism (KEGG)",0.4375
+"Synthesis and degradation of ketone bodies (KEGG)",0.0625
+"Steroid biosynthesis (KEGG)",0
+"Primary bile acid biosynthesis (KEGG)",0
+"Ubiquinone and other terpenoid-quinone biosynthesis (KEGG)",0.0625
+"Steroid hormone biosynthesis (KEGG)",0.125
+"Oxidative phosphorylation (KEGG)",0.625
+"Purine metabolism (KEGG)",0
+"Caffeine metabolism (KEGG)",0
+"Pyrimidine metabolism (KEGG)",0
+"Alanine, aspartate and glutamate metabolism (KEGG)",0.125
+"Glycine, serine and threonine metabolism (KEGG)",0.125
+"Cysteine and methionine metabolism (KEGG)",0.0625
+"Valine, leucine and isoleucine degradation (KEGG)",0.4375
+"Valine, leucine and isoleucine biosynthesis (KEGG)",0.125
+"Lysine degradation (KEGG)",0.1875
+"Arginine and proline metabolism (KEGG)",0
+"Histidine metabolism (KEGG)",0.25
+"Tyrosine metabolism (KEGG)",0.0625
+"Phenylalanine metabolism (KEGG)",0
+"Tryptophan metabolism (KEGG)",0
+"beta-Alanine metabolism (KEGG)",0.25
+"Taurine and hypotaurine metabolism (KEGG)",0
+"Selenocompound metabolism (KEGG)",0.0625
+"Cyanoamino acid metabolism (KEGG)",0
+"Glutathione metabolism (KEGG)",0.0625
+"Starch and sucrose metabolism (KEGG)",0.1875
+"N-Glycan biosynthesis (KEGG)",0
+"Other glycan degradation (KEGG)",0.0625
+"Mucin type O-Glycan biosynthesis (KEGG)",0
+"Other types of O-glycan biosynthesis (KEGG)",0
+"Amino sugar and nucleotide sugar metabolism (KEGG)",0.0625
+"Glycosaminoglycan degradation (KEGG)",0.25
+"Glycosaminoglycan biosynthesis - chondroitin sulfate (KEGG)",0
+"Glycosaminoglycan biosynthesis - keratan sulfate (KEGG)",0.1875
+"Glycosaminoglycan biosynthesis - heparan sulfate (KEGG)",0.25
+"Glycerolipid metabolism (KEGG)",0.0625
+"Inositol phosphate metabolism (KEGG)",0.0625
+"Glycosylphosphatidylinositol(GPI)-anchor biosynthesis (KEGG)",0.125
+"Glycerophospholipid metabolism (KEGG)",0
+"Ether lipid metabolism (KEGG)",0
+"Arachidonic acid metabolism (KEGG)",0.125
+"Linoleic acid metabolism (KEGG)",0.0625
+"alpha-Linolenic acid metabolism (KEGG)",0.125
+"Sphingolipid metabolism (KEGG)",0
+"Glycosphingolipid biosynthesis - lacto and neolacto series (KEGG)",0.375
+"Glycosphingolipid biosynthesis - globo series (KEGG)",0.25
+"Glycosphingolipid biosynthesis - ganglio series (KEGG)",0.3125
+"Pyruvate metabolism (KEGG)",0.0625
+"Glyoxylate and dicarboxylate metabolism (KEGG)",0.3125
+"Propanoate metabolism (KEGG)",0.25
+"Butanoate metabolism (KEGG)",0.3125
+"One carbon pool by folate (KEGG)",0
+"Riboflavin metabolism (KEGG)",0.25
+"Vitamin B6 metabolism (KEGG)",0.25
+"Nicotinate and nicotinamide metabolism (KEGG)",0.25
+"Pantothenate and CoA biosynthesis (KEGG)",0.125
+"Folate biosynthesis (KEGG)",0
+"Retinol metabolism (KEGG)",0.0625
+"Porphyrin and chlorophyll metabolism (KEGG)",0.125
+"Terpenoid backbone biosynthesis (KEGG)",0.0625
+"Nitrogen metabolism (KEGG)",0.4375
+"Sulfur metabolism (KEGG)",0
+"Aminoacyl-tRNA biosynthesis (KEGG)",0.0625
+"Metabolism of xenobiotics by cytochrome P450 (KEGG)",0.375
+"Drug metabolism - cytochrome P450 (KEGG)",0.25
+"Drug metabolism - other enzymes (KEGG)",0
+"Biosynthesis of unsaturated fatty acids (KEGG)",0.0625
+"Metabolic pathways (KEGG)",0.0625
+"ABC transporters (KEGG)",0.6875
+"Ribosome biogenesis in eukaryotes (KEGG)",0
+"Ribosome (KEGG)",0
+"RNA transport (KEGG)",0
+"mRNA surveillance pathway (KEGG)",0.0625
+"RNA degradation (KEGG)",0
+"RNA polymerase (KEGG)",0.125
+"Basal transcription factors (KEGG)",0
+"DNA replication (KEGG)",0
+"Spliceosome (KEGG)",0
+"Proteasome (KEGG)",0
+"Protein export (KEGG)",0
+"PPAR signaling pathway (KEGG)",0.1875
+"Base excision repair (KEGG)",0.0625
+"Nucleotide excision repair (KEGG)",0
+"Mismatch repair (KEGG)",0
+"Homologous recombination (KEGG)",0.125
+"Non-homologous end-joining (KEGG)",0.0625
+"MAPK signaling pathway (KEGG)",0
+"ErbB signaling pathway (KEGG)",0
+"Calcium signaling pathway (KEGG)",0.125
+"Cytokine-cytokine receptor interaction (KEGG)",0.1875
+"Chemokine signaling pathway (KEGG)",0
+"Phosphatidylinositol signaling system (KEGG)",0
+"Neuroactive ligand-receptor interaction (KEGG)",0.5
+"Cell cycle (KEGG)",0
+"Oocyte meiosis (KEGG)",0
+"p53 signaling pathway (KEGG)",0
+"Ubiquitin mediated proteolysis (KEGG)",0.3125
+"Sulfur relay system (KEGG)",0.1875
+"SNARE interactions in vesicular transport (KEGG)",0.375
+"Regulation of autophagy (KEGG)",0.1875
+"Protein processing in endoplasmic reticulum (KEGG)",0.25
+"Lysosome (KEGG)",0.0625
+"Endocytosis (KEGG)",0
+"Phagosome (KEGG)",0.5625
+"Peroxisome (KEGG)",0.0625
+"mTOR signaling pathway (KEGG)",0.0625
+"Apoptosis (KEGG)",0
+"Cardiac muscle contraction (KEGG)",0
+"Vascular smooth muscle contraction (KEGG)",0
+"Wnt signaling pathway (KEGG)",0
+"Dorso-ventral axis formation (KEGG)",0.375
+"Notch signaling pathway (KEGG)",0.4375
+"Hedgehog signaling pathway (KEGG)",0.125
+"TGF-beta signaling pathway (KEGG)",0.0625
+"Axon guidance (KEGG)",0
+"VEGF signaling pathway (KEGG)",0
+"Osteoclast differentiation (KEGG)",0.125
+"Focal adhesion (KEGG)",0
+"ECM-receptor interaction (KEGG)",0
+"Cell adhesion molecules (CAMs) (KEGG)",0
+"Adherens junction (KEGG)",0
+"Tight junction (KEGG)",0
+"Gap junction (KEGG)",0
+"Complement and coagulation cascades (KEGG)",0.5
+"Antigen processing and presentation (KEGG)",0.4375
+"Renin-angiotensin system (KEGG)",0.0625
+"Toll-like receptor signaling pathway (KEGG)",0
+"NOD-like receptor signaling pathway (KEGG)",0.3125
+"RIG-I-like receptor signaling pathway (KEGG)",0.1875
+"Cytosolic DNA-sensing pathway (KEGG)",0
+"Jak-STAT signaling pathway (KEGG)",0.1875
+"Hematopoietic cell lineage (KEGG)",0
+"Natural killer cell mediated cytotoxicity (KEGG)",0.0625
+"T cell receptor signaling pathway (KEGG)",0.25
+"B cell receptor signaling pathway (KEGG)",0.125
+"Fc epsilon RI signaling pathway (KEGG)",0
+"Fc gamma R-mediated phagocytosis (KEGG)",0
+"Leukocyte transendothelial migration (KEGG)",0
+"Intestinal immune network for IgA production (KEGG)",0
+"Circadian rhythm - mammal (KEGG)",0.125
+"Long-term potentiation (KEGG)",0
+"Neurotrophin signaling pathway (KEGG)",0.375
+"Glutamatergic synapse (KEGG)",0
+"Long-term depression (KEGG)",0
+"Olfactory transduction (KEGG)",0.0625
+"Taste transduction (KEGG)",0.5
+"Phototransduction (KEGG)",0.4375
+"Regulation of actin cytoskeleton (KEGG)",0
+"Insulin signaling pathway (KEGG)",0
+"GnRH signaling pathway (KEGG)",0
+"Progesterone-mediated oocyte maturation (KEGG)",0
+"Melanogenesis (KEGG)",0.25
+"Adipocytokine signaling pathway (KEGG)",0
+"Type II diabetes mellitus (KEGG)",0.3125
+"Type I diabetes mellitus (KEGG)",0
+"Maturity onset diabetes of the young (KEGG)",0.125
+"Aldosterone-regulated sodium reabsorption (KEGG)",0
+"Endocrine and other factor-regulated calcium reabsorption (KEGG)",0
+"Vasopressin-regulated water reabsorption (KEGG)",0.0625
+"Proximal tubule bicarbonate reclamation (KEGG)",0
+"Collecting duct acid secretion (KEGG)",0.4375
+"Salivary secretion (KEGG)",0
+"Gastric acid secretion (KEGG)",0
+"Pancreatic secretion (KEGG)",0
+"Carbohydrate digestion and absorption (KEGG)",0.5
+"Protein digestion and absorption (KEGG)",0
+"Fat digestion and absorption (KEGG)",0.25
+"Bile secretion (KEGG)",0
+"Vitamin digestion and absorption (KEGG)",0.0625
+"Mineral absorption (KEGG)",0
+"Alzheimer's disease (KEGG)",0.625
+"Parkinson's disease (KEGG)",0.375
+"Amyotrophic lateral sclerosis (ALS) (KEGG)",0
+"Huntington's disease (KEGG)",0.5
+"Prion diseases (KEGG)",0.3125
+"Bacterial invasion of epithelial cells (KEGG)",0
+"Vibrio cholerae infection (KEGG)",0.25
+"Epithelial cell signaling in Helicobacter pylori infection (KEGG)",0.4375
+"Pathogenic Escherichia coli infection (KEGG)",0.5625
+"Shigellosis (KEGG)",0.0625
+"Leishmaniasis (KEGG)",0
+"Chagas disease (American trypanosomiasis) (KEGG)",0
+"African trypanosomiasis (KEGG)",0
+"Malaria (KEGG)",0
+"Toxoplasmosis (KEGG)",0
+"Amoebiasis (KEGG)",0
+"Staphylococcus aureus infection (KEGG)",0
+"Tuberculosis (KEGG)",0
+"Hepatitis C (KEGG)",0.0625
+"Measles (KEGG)",0
+"Influenza A (KEGG)",0
+"Pathways in cancer (KEGG)",0
+"Colorectal cancer (KEGG)",0.25
+"Renal cell carcinoma (KEGG)",0.3125
+"Pancreatic cancer (KEGG)",0.25
+"Endometrial cancer (KEGG)",0.0625
+"Glioma (KEGG)",0
+"Prostate cancer (KEGG)",0.25
+"Thyroid cancer (KEGG)",0.125
+"Basal cell carcinoma (KEGG)",0.3125
+"Melanoma (KEGG)",0
+"Bladder cancer (KEGG)",0.125
+"Chronic myeloid leukemia (KEGG)",0.125
+"Acute myeloid leukemia (KEGG)",0
+"Small cell lung cancer (KEGG)",0
+"Non-small cell lung cancer (KEGG)",0
+"Asthma (KEGG)",0
+"Autoimmune thyroid disease (KEGG)",0
+"Systemic lupus erythematosus (KEGG)",0
+"Rheumatoid arthritis (KEGG)",0
+"Allograft rejection (KEGG)",0
+"Graft-versus-host disease (KEGG)",0
+"Primary immunodeficiency (KEGG)",0
+"Hypertrophic cardiomyopathy (HCM) (KEGG)",0.4375
+"Arrhythmogenic right ventricular cardiomyopathy (ARVC) (KEGG)",0
+"Dilated cardiomyopathy (KEGG)",0.0625
+"Viral myocarditis (KEGG)",0
+"Glutathione metabolism (Wikipathways)",0.125
+"Alanine and aspartate metabolism (Wikipathways)",0
+"Translation Factors (Wikipathways)",0
+"Electron Transport Chain (Wikipathways)",0.4375
+"GPCRs, Other (Wikipathways)",0.0625
+"Osteoclast Signaling (Wikipathways)",0
+"IL-5 Signaling Pathway (Wikipathways)",0
+"Matrix Metalloproteinases (Wikipathways)",0
+"Pentose Phosphate Pathway (Wikipathways)",0
+"Phase I, non P450 (Wikipathways)",0.5
+"Androgen Receptor Signaling Pathway (Wikipathways)",0
+"AMPK signaling (Wikipathways)",0
+"Sphingolipid Metabolism (Wikipathways)",0
+"Ganglio Sphingolipid Metabolism (Wikipathways)",0.25
+"Globo Sphingolipid Metabolism (Wikipathways)",0.375
+"BMP signalling and regulation (Wikipathways)",0.5
+"Fatty Acid Beta Oxidation (Wikipathways)",0.1875
+"NOD pathway (Wikipathways)",0
+"Osteopontin Signaling (Wikipathways)",0.125
+"Regulation of toll-like receptor signaling pathway (Wikipathways)",0
+"Serotonin Transporter Activity (Wikipathways)",0
+"TOR signaling (Wikipathways)",0.25
+"Selenium Pathway (Wikipathways)",0
+"Physiological and Pathological Hypertrophy  of the Heart (Wikipathways)",0.0625
+"miRNA regulation of DNA Damage Response (Wikipathways)",0
+"Vitamin D synthesis (Wikipathways)",0.1875
+"Vitamin B12 Metabolism (Wikipathways)",0.0625
+"Angiogenesis (Wikipathways)",0
+"Energy Metabolism (Wikipathways)",0
+"MicroRNAs in cardiomyocyte hypertrophy (Wikipathways)",0
+"miRNAs involved in DDR (Wikipathways)",0.125
+"Proteins and DNA Sequences in Cardicac Structures (Wikipathways)",0
+"TFs Regulate miRNAs related to cardiac hypertrophy (Wikipathways)",0.0625
+"Type II diabetes mellitus (Wikipathways)",0.625
+"Heart Development (Wikipathways)",0.6875
+"Nicotine metabolism (Wikipathways)",0.125
+"Fluoropyrimidine Activity (Wikipathways)",0.3125
+"Nicotine Activity on Dopaminergic Neurons (Wikipathways)",0.625
+"Codeine and morphine metabolism (Wikipathways)",0.6875
+"Eicosanoid Synthesis (Wikipathways)",0
+"Nuclear Receptors (Wikipathways)",0.125
+"Th1/Th2 (Wikipathways)",0
+"TP53 network (Wikipathways)",0
+"Folate Metabolism (Wikipathways)",0
+"Apoptosis Modulation and Signaling (Wikipathways)",0.0625
+"Cell cycle (Wikipathways)",0
+"Proteasome Degradation (Wikipathways)",0
+"Integrin-mediated cell adhesion (Wikipathways)",0
+"Homologous recombination (Wikipathways)",0
+"IL-1 Signaling Pathway (Wikipathways)",0.0625
+"Cholesterol Biosynthesis (Wikipathways)",0
+"GP-VI signaling (Wikipathways)",0
+"Integrated Cancer pathway (Wikipathways)",0
+"SREBP signalling (Wikipathways)",0
+"Integrated Breast Cancer Pathway (Wikipathways)",0.4375
+"IL-7 Signaling Pathway (Wikipathways)",0.25
+"Fatty Acid Omega Oxidation (Wikipathways)",0.125
+"IL-9 Signaling Pathway (Wikipathways)",0
+"Irinotecan Pathway (Wikipathways)",0.5625
+"B Cell Receptor Signaling Pathway (Wikipathways)",0.1875
+"TNF-alpha/NF-kB Signaling Pathway (Wikipathways)",0
+"Adipogenesis (Wikipathways)",0
+"Glucocorticoid &amp; Mineralcorticoid Metabolism (Wikipathways)",0.125
+"Peptide GPCRs (Wikipathways)",0.125
+"One Carbon Metabolism (Wikipathways)",0.1875
+"Alpha6-Beta4 Integrin Signaling Pathway (Wikipathways)",0.25
+"Small Ligand GPCRs (Wikipathways)",0.25
+"Apoptosis (Wikipathways)",0
+"Signal Transduction of S1P Receptor (Wikipathways)",0
+"EBV LMP1 signaling (Wikipathways)",0
+"Notch Signaling Pathway (Wikipathways)",0.375
+"Blood Clotting Cascade (Wikipathways)",0
+"Selenium Metabolism and Selenoproteins (Wikipathways)",0.0625
+"IL-3 Signaling Pathway (Wikipathways)",0
+"NLR proteins (Wikipathways)",0.625
+"Myometrial Relaxation and Contraction Pathways (Wikipathways)",0
+"Nuclear receptors in lipid metabolism and toxicity (Wikipathways)",0
+"Keap1-Nrf2 Pathway (Wikipathways)",0.125
+"Kit Receptor Signaling Pathway (Wikipathways)",0
+"Focal Adhesion (Wikipathways)",0
+"Signaling of Hepatocyte Growth Factor Receptor (Wikipathways)",0.25
+"FAS pathway and Stress induction of HSP regulation (Wikipathways)",0
+"Osteoblast Signaling (Wikipathways)",0.625
+"Triacylglyceride Synthesis (Wikipathways)",0
+"GPCRs, Class B Secretin-like (Wikipathways)",0.3125
+"Ovarian Infertility Genes (Wikipathways)",0.25
+"G Protein Signaling Pathways (Wikipathways)",0.125
+"Fatty Acid Biosynthesis (Wikipathways)",0.625
+"Wnt Signaling Pathway NetPath (Wikipathways)",0
+"IL-6 Signaling Pathway (Wikipathways)",0.0625
+"TGF-beta Receptor Signaling Pathway (Wikipathways)",0.1875
+"Mitochondrial LC-Fatty Acid Beta-Oxidation (Wikipathways)",0.6875
+"MAPK signaling pathway (Wikipathways)",0
+"Striated Muscle Contraction (Wikipathways)",0.4375
+"Apoptosis Modulation by HSP70 (Wikipathways)",0.125
+"Mitochondrial Gene Expression (Wikipathways)",0
+"IL-4 signaling Pathway (Wikipathways)",0
+"Wnt Signaling Pathway and Pluripotency (Wikipathways)",0
+"Sandbox Pathway (Wikipathways)",0.0625
+"p38 MAPK Signaling Pathway (Wikipathways)",0.0625
+"Nucleotide Metabolism (Wikipathways)",0
+"Eukaryotic Transcription Initiation (Wikipathways)",0.3125
+"Oxidative Stress (Wikipathways)",0.125
+"Diurnally regulated genes with circadian orthologs (Wikipathways)",0
+"mRNA processing (Wikipathways)",0
+"MAPK Cascade (Wikipathways)",0
+"Wnt Signaling Pathway (Wikipathways)",0
+"cytochrome P450 (Wikipathways)",0.3125
+"Statin Pathway (Wikipathways)",0.25
+"EGFR1 Signaling Pathway (Wikipathways)",0
+"Non-homologous end joining (Wikipathways)",0
+"G1 to S cell cycle control (Wikipathways)",0
+"Inflammatory Response Pathway (Wikipathways)",0.125
+"GPCRs, Class A Rhodopsin-like (Wikipathways)",0.125
+"Tryptophan metabolism (Wikipathways)",0.25
+"DNA Replication (Wikipathways)",0
+"Hedgehog Signaling Pathway (Wikipathways)",0.25
+"Endochondral Ossification (Wikipathways)",0
+"Cytoplasmic Ribosomal Proteins (Wikipathways)",0
+"Insulin Signaling (Wikipathways)",0
+"IL-2 Signaling Pathway (Wikipathways)",0
+"Steroid Biosynthesis (Wikipathways)",0.3125
+"Urea cycle and metabolism of amino groups (Wikipathways)",0.1875
+"Glycogen Metabolism (Wikipathways)",0.0625
+"GPCRs, Class C Metabotropic glutamate, pheromone (Wikipathways)",0
+"Regulation of Actin Cytoskeleton (Wikipathways)",0.0625
+"Hypertrophy Model (Wikipathways)",0.0625
+"G13 Signaling Pathway (Wikipathways)",0.0625
+"Acetylcholine Synthesis (Wikipathways)",0.125
+"Id Signaling Pathway (Wikipathways)",0.5625
+"Cytokines and Inflammatory Response (Wikipathways)",0.1875
+"Mismatch repair (Wikipathways)",0
+"Glycolysis and Gluconeogenesis (Wikipathways)",0.375
+"Calcium Regulation in the Cardiac Cell (Wikipathways)",0
+"Complement Activation, Classical Pathway (Wikipathways)",0.5
+"Biogenic Amine Synthesis (Wikipathways)",0.5
+"ACE Inhibitor Pathway (Wikipathways)",0.0625
+"Complement and Coagulation Cascades (Wikipathways)",0.375
+"TGF Beta Signaling Pathway (Wikipathways)",0
+"Heme Biosynthesis (Wikipathways)",0.0625
+"Monoamine GPCRs (Wikipathways)",0.6875
+"EPO Receptor Signaling (Wikipathways)",0
+"Interferon type I (Wikipathways)",0
+"Delta-Notch Signaling Pathway (Wikipathways)",0.25
+"Senescence and Autophagy (Wikipathways)",0.3125
+"Type II interferon signaling (IFNG) (Wikipathways)",0
+"Oxidative phosphorylation (Wikipathways)",0.4375
+"Hypothetical Network for Drug Addiction (Wikipathways)",0
+"ErbB signaling pathway (Wikipathways)",0
+"Arachidonate Epoxygenase / Epoxide Hydrolase (Wikipathways)",0.1875
+"T Cell Receptor Signaling Pathway (Wikipathways)",0
+"Tamoxifen metabolism (Wikipathways)",0.0625
+"Sulfation Biotransformation Reaction (Wikipathways)",0
+"Arylamine metabolism (Wikipathways)",0
+"Benzo(a)pyrene metabolism (Wikipathways)",0.8125
+"Estrogen metabolism (Wikipathways)",0.1875
+"Glucuronidation (Wikipathways)",0.125
+"Aflatoxin B1 metabolism (Wikipathways)",0.0625
+"metapathway biotransformation (Wikipathways)",0.125
+"Methylation Pathways (Wikipathways)",0
+"SIDS Susceptibility Pathways (Wikipathways)",0.125
+"DNA damage response (Wikipathways)",0
+"DNA damage response (only ATM dependent) (Wikipathways)",0.0625
+"Estrogen signaling pathway (Wikipathways)",0.0625
+"Vitamin A and carotenoid metabolism (Wikipathways)",0.1875
+"Serotonin HTR1 Group and FOS Pathway (Wikipathways)",0
+"Monoamine Transport (Wikipathways)",0.0625
+"Serotonin Receptor 2 and ELK-SRF/GATA4 signaling (Wikipathways)",0.25
+"Serotonin Receptor 4/6/7 and NR3C Signaling (Wikipathways)",0.1875
+"Toll-like receptor signaling pathway (Wikipathways)",0.3125
+"TCA Cycle (Wikipathways)",0.625
+"Nucleotide GPCRs (Wikipathways)",0.5625
+"Prostaglandin Synthesis and Regulation (Wikipathways)",0
+"Cell Cycle Checkpoints (Reactome)",0
+"Signaling by Insulin receptor (Reactome)",0.25
+"Integrin cell surface interactions (Reactome)",0
+"Signaling by TGF beta (Reactome)",0
+"DNA Repair (Reactome)",0.0625
+"Metabolism of proteins (Reactome)",0
+"Signaling in Immune system (Reactome)",0
+"Metabolism of vitamins and cofactors (Reactome)",0
+"DNA Replication (Reactome)",0
+"Signaling by EGFR (Reactome)",0.125
+"Signalling by NGF (Reactome)",0.4375
+"Opioid Signalling (Reactome)",0.125
+"Metabolism of nucleotides (Reactome)",0
+"Circadian Clock (Reactome)",0.3125
+"Hemostasis (Reactome)",0
+"Metabolism of carbohydrates (Reactome)",0.1875
+"Muscle contraction (Reactome)",0.8125
+"Myogenesis (Reactome)",0.375
+"Regulatory RNA pathways (Reactome)",0
+"Metabolism of lipids and lipoproteins (Reactome)",0.4375
+"Transmembrane transport of small molecules (Reactome)",0
+"Signaling by BMP (Reactome)",0.125
+"Metabolism of porphyrins (Reactome)",0.125
+"Synaptic Transmission (Reactome)",0
+"Signaling by VEGF (Reactome)",0.25
+"Membrane Trafficking (Reactome)",0.1875
+"Regulation of beta-cell development (Reactome)",0.25
+"Signaling by GPCR (Reactome)",0.125
+"Biological oxidations (Reactome)",0.125
+"Transcription (Reactome)",0.0625
+"Cell Cycle, Mitotic (Reactome)",0.125
+"Respiratory electron transport, ATP synthesis by chemiosmotic coupling, and heat production by uncoupling proteins. (Reactome)",0.25
+"Gene Expression (Reactome)",0
+"Signaling by PDGF (Reactome)",0
+"Pyruvate metabolism and Citric Acid (TCA) cycle (Reactome)",0.3125
+"Metabolism of nitric oxide (Reactome)",0.4375
+"Diabetes pathways (Reactome)",0.0625
+"Metabolism of RNA (Reactome)",0
+"Signaling by Wnt (Reactome)",0.125
+"Botulinum neurotoxicity (Reactome)",0.125
+"Apoptosis (Reactome)",0
+"Signaling by Notch (Reactome)",0.25
+"Influenza Infection (Reactome)",0
+"HIV Infection (Reactome)",0
+"Cell junction organization (Reactome)",0
+"Signaling by Rho GTPases (Reactome)",0
+"Integration of energy metabolism (Reactome)",0
+"mRNA Processing (Reactome)",0
+"Metabolism of amino acids and derivatives (Reactome)",0.125
+"Chromosome Maintenance (Reactome)",0
+"Signaling by FGFR (Reactome)",0
+"Axon guidance (Reactome)",0.125
+"Interactions of the immunoglobulin superfamily (IgSF) member proteins (Reactome)",0
+"EGFR1 up reg. targets (Netpath)",0
+"EGFR1 down reg. targets (Netpath)",0
+"TGF beta receptor up reg. targets (Netpath)",0
+"TGF beta receptor down reg. targets (Netpath)",0
+"TNF alpha/NF-kB up reg. targets (Netpath)",0
+"TNF alpha/NF-kB down reg. targets (Netpath)",0.1875
+"Alpha6 Beta4 Integrin up reg. targets (Netpath)",0.0625
+"ID up reg. targets (Netpath)",0
+"ID down reg. targets (Netpath)",0
+"Hedgehog up reg. targets (Netpath)",0
+"Notch up reg. targets (Netpath)",0
+"Notch down reg. targets (Netpath)",0
+"Wnt up reg. targets (Netpath)",0.25
+"Wnt down reg. targets (Netpath)",0
+"AR up reg. targets (Netpath)",0.375
+"AR down reg. targets (Netpath)",0
+"Kit Receptor up reg. targets (Netpath)",0.375
+"B Cell Receptor up reg. targets (Netpath)",0.25
+"B Cell Receptor down reg. targets (Netpath)",0.375
+"T Cell Receptor up reg. targets (Netpath)",0
+"T Cell Receptor down reg. targets (Netpath)",0.5625
+"IL-1 up reg. targets (Netpath)",0.3125
+"IL-1 down reg. targets (Netpath)",0
+"IL-2 up reg. targets (Netpath)",0.3125
+"IL-2 down reg. targets (Netpath)",0.625
+"IL-3 up reg. targets (Netpath)",0.125
+"IL-3 down reg. targets (Netpath)",0
+"IL-4 up reg. targets (Netpath)",0
+"IL-4 down reg. targets (Netpath)",0
+"IL-5 up reg. targets (Netpath)",0.0625
+"IL-5 down reg. targets (Netpath)",0.125
+"IL-6 up reg. targets (Netpath)",0
+"IL-6 down reg. targets (Netpath)",0
+"IL-7 up reg. targets (Netpath)",0.0625
+"IL-7 down reg. targets (Netpath)",0.125
+"IL-9 up reg. targets (Netpath)",0
+"{ABL1,15} (Static Module)",0.1875
+"{ACTB,297} (Static Module)",0
+"{ACY1,11} (Static Module)",0.0625
+"{AKT1,48} (Static Module)",0.25
+"{AP1G1,16} (Static Module)",0.4375
+"{APP,28} (Static Module)",0
+"{AR,28} (Static Module)",0
+"{ARF1,36} (Static Module)",0.0625
+"{ARF6,34} (Static Module)",0.1875
+"{ARRB2,743} (Static Module)",0.0625
+"{ASH2L,391} (Static Module)",0.1875
+"{ATP5D,19} (Static Module)",0.4375
+"{BCL2,27} (Static Module)",0.125
+"{BCLAF1,25} (Static Module)",0.875
+"{BRCA1,28} (Static Module)",0
+"{BSG,21} (Static Module)",0
+"{C5,29} (Static Module)",0.75
+"{CALM1,30} (Static Module)",0
+"{CASP3,41} (Static Module)",0.375
+"{CBX4,10} (Static Module)",0.25
+"{CD4,14} (Static Module)",0.4375
+"{CDC2,351} (Static Module)",0.1875
+"{CDK5,14} (Static Module)",0.0625
+"{CEBPA,13} (Static Module)",0
+"{CHRNA1,13} (Static Module)",0
+"{CNGB1,17} (Static Module)",0.125
+"{CNOT2,13} (Static Module)",0.8125
+"{CREB1,40} (Static Module)",0.0625
+"{CTNNB1,130} (Static Module)",0
+"{CTSB,26} (Static Module)",0
+"{CYCS,35} (Static Module)",0.4375
+"{DHX15,14} (Static Module)",0.0625
+"{DLD,16} (Static Module)",0.375
+"{DLG4,28} (Static Module)",0
+"{DNM1,22} (Static Module)",0
+"{DVL1L1,17} (Static Module)",0.125
+"{EGFR,24} (Static Module)",0
+"{EP300,115} (Static Module)",0.1875
+"{EPRS,15} (Static Module)",0
+"{ESR1,24} (Static Module)",0.375
+"{ETS1,13} (Static Module)",0.125
+"{EXOSC10,15} (Static Module)",0.0625
+"{F2,46} (Static Module)",0.4375
+"{FCGR2B,50} (Static Module)",0.5
+"{FLI1,10} (Static Module)",0
+"{FYN,30} (Static Module)",0
+"{GAPDH,13} (Static Module)",0.1875
+"{GLI1,45} (Static Module)",0.3125
+"{GNAT3,28} (Static Module)",0
+"{GRB2,414} (Static Module)",0
+"{HCLS1,17} (Static Module)",0.5
+"{HDAC1,108} (Static Module)",0
+"{HIF1A,58} (Static Module)",0.1875
+"{HIST3H3,14} (Static Module)",0
+"{HLA-A,53} (Static Module)",0
+"{HMGB1,14} (Static Module)",0.4375
+"{HRAS,27} (Static Module)",0.1875
+"{HSP90AA1,18} (Static Module)",0.8125
+"{HSP90B1,11} (Static Module)",0.0625
+"{HSPA8,34} (Static Module)",0.25
+"{HTATIP,20} (Static Module)",0.0625
+"{HTT,61} (Static Module)",0
+"{IGF1,13} (Static Module)",0.3125
+"{INS,35} (Static Module)",0
+"{JUN,88} (Static Module)",0
+"{KCNAB1,18} (Static Module)",0.5625
+"{KCNB1,10} (Static Module)",0
+"{LDB1,15} (Static Module)",0.0625
+"{LRP1,11} (Static Module)",0.25
+"{MAPK14,123} (Static Module)",0
+"{MED1,34} (Static Module)",0
+"{MEIS1,22} (Static Module)",0.125
+"{MLH1,20} (Static Module)",0
+"{MLLT4,12} (Static Module)",0
+"{MMP9,11} (Static Module)",0
+"{NAP1L1,23} (Static Module)",0
+"{NCOR2,24} (Static Module)",0
+"{NDUFS8,49} (Static Module)",0.3125
+"{NFIC,21} (Static Module)",0
+"{NFKB1,33} (Static Module)",0.0625
+"{NGF,31} (Static Module)",0
+"{NME2,10} (Static Module)",0
+"{NOS3,11} (Static Module)",0
+"{NOTCH1,44} (Static Module)",0
+"{NRP1,11} (Static Module)",0.4375
+"{OTX2,18} (Static Module)",0.375
+"{PAK2,10} (Static Module)",0.1875
+"{PAX6,19} (Static Module)",0
+"{PCNA,34} (Static Module)",0
+"{PLCG2,30} (Static Module)",0.0625
+"{PLG,10} (Static Module)",0.125
+"{PLXNB1,15} (Static Module)",0
+"{POLR2A,195} (Static Module)",0
+"{POLR2H,109} (Static Module)",0
+"{POR,15} (Static Module)",0.125
+"{POU2F1,21} (Static Module)",0.125
+"{PPP2CA,20} (Static Module)",0.3125
+"{PRKAA2,24} (Static Module)",0.125
+"{PRKACA,33} (Static Module)",0
+"{PRKCA,14} (Static Module)",0
+"{PRKG1,21} (Static Module)",0.5
+"{PTPRF,10} (Static Module)",0
+"{RAB5A,41} (Static Module)",0.5
+"{RAC1,133} (Static Module)",0.125
+"{RAD21,11} (Static Module)",0.5
+"{RAD51,13} (Static Module)",0.0625
+"{RAN,17} (Static Module)",0.25
+"{RAP1A,22} (Static Module)",0.25
+"{RARA,17} (Static Module)",0
+"{RASGRF1,26} (Static Module)",0.375
+"{RB1,11} (Static Module)",0.4375
+"{ROCK1,10} (Static Module)",0.125
+"{RPS27A,138} (Static Module)",0
+"{RXRA,51} (Static Module)",0.3125
+"{RYR2,15} (Static Module)",0.125
+"{SDC1,30} (Static Module)",0.25
+"{SEC24B,18} (Static Module)",0.25
+"{SEPT2,21} (Static Module)",0.5
+"{SFPQ,10} (Static Module)",0.125
+"{SHH,13} (Static Module)",0.0625
+"{SIX3,11} (Static Module)",0.6875
+"{SMAD4,27} (Static Module)",0
+"{SNX1,11} (Static Module)",0.3125
+"{SP1,88} (Static Module)",0.1875
+"{SPI1,10} (Static Module)",0.1875
+"{SPTAN1,10} (Static Module)",0.375
+"{SREBF1,11} (Static Module)",0.375
+"{SRF,11} (Static Module)",0
+"{STX5,12} (Static Module)",0
+"{SUMO1,12} (Static Module)",0.25
+"{TCF3,20} (Static Module)",0
+"{TFAP2A,25} (Static Module)",0
+"{TGFBR1,98} (Static Module)",0.3125
+"{TIA1,10} (Static Module)",0.0625
+"{TJP1,26} (Static Module)",0.0625
+"{TLE1,10} (Static Module)",0.0625
+"{TP53,109} (Static Module)",0
+"{TRAF2,90} (Static Module)",0
+"{TRAF6,55} (Static Module)",0.3125
+"{UBE2D1,58} (Static Module)",0.1875
+"{USF1,13} (Static Module)",0.125
+"{VAMP2,63} (Static Module)",0
+"{VCP,17} (Static Module)",0
+"{VHL,12} (Static Module)",0.4375

@@ -64,8 +64,8 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExp
 R <- read.table(file = "Taylor_TDP43.txt")
 r <- R$V1
 
-setwd(dir = "/Users/clairegreen/Desktop/")
-S <- read.table(file = "ProteintargetingtoER.txt")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/")
+S <- read.table(file = "OneBenchmarkList.txt")
 s <- S$V1
 
 
