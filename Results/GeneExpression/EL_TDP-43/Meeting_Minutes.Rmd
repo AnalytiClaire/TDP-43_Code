@@ -1,0 +1,29 @@
+---
+title: "Lee and Hide Lab Meeting"
+author: "Claire Green"
+date: "05/06/2017"
+output: pdf_document
+---
+
+#Minutes
+
+1) Eddie and Elaine provided an overview of the cell sorting method used to extract the nuclei. 7 patients carrying the C9orf72 mutation were aged matched, and represented 4 females and 3 males. Nuclei were specifically extracted rather than whole cell because of the technological difficulties of separating whole cells after freezing. Immunofluorescence was used to identify a) the nuclei, b) neuronal cells and c) TDP-43. TDP- nuclei represented only 2-5% of cell population. Amplification was used to increase signal
+
+2) Claire provided an overview of her results, including the context of her project. She explained the process by which she identified the ~4800 DEGs and what those DEGs enriched for. She explained that she has in her own research generated a list of 285 DEGs isolated from an intersection analysis of 6 TDP-43+ datasets. These 285 genes enriched significantly in the ~4800 DEGs from the Lee dataset, with an overlap of ~100 genes. Claire continued to explain that she has generated a PPI network using her 285 DEGs as a seed. This aims to represent the interpretation of her common TDP-43 signature in the context of protein-protein interactions. The 4800 DEGs enriched significantly in this network with an overlap of ~900 genes. This was suggested to perhaps represent  possible downstream effects of the nuclear dysregulation as represented by the Lee data. 
+
+3) Elaine and Eddie gave an account of their results. They discovered approximately 5500 genes, with the 700-gene discrepancy potentially afforded to the gene symbol exclusion used in Claire's method. Enrichment had been investigated using WebGestalt, which provided slightly different functions, however when Elaine used EnrichR the results were largely similar suggesting a platform effect. Next, WGCNA had been used on the internal dataset correlation to identify closely correlated gene set modules. Two modules were found to enrich with mRNA processing and ubiquitin-proteasome degradation (Post-meeting note: protein degradation by the proteasome has also been identified in Claire's TDP-43 PPI network)
+
+
+#Future Actions
+
+1) Eddie/Elaine to provide control samples to Claire via Basecamp
+
+2) Claire to look into new control samples and potentially investigate mutation specfic effects on line element activity
+
+3) Claire to discuss with Wenbin the possibility of running Lee data through Pathprint to identify pathways which are over or under-activated between conditions (For interest, see Pathprint paper here https://www.ncbi.nlm.nih.gov/pubmed/23890051)
+
+4) Claire, John and Sandeep to meet to discuss possibility of running differentially coexpressed network (DCN) analysis on Lee data. Run method by Wenbin, and report back to Win.
+
+5) Claire to upload all results to Basecamp as they are generated
+
+
