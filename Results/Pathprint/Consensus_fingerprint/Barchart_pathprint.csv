@@ -1,0 +1,95 @@
+Pathway,Direction,Condition,Value
+IL-2 down reg. targets (Netpath),Up,Patient,0
+IL-2 down reg. targets (Netpath),Up,Control,-1
+Mitochondrial LC-Fatty Acid Beta-Oxidation (Wikipathways),Up,Patient,0
+Mitochondrial LC-Fatty Acid Beta-Oxidation (Wikipathways),Up,Control,-1
+ABC transporters (KEGG),Up,Patient,1
+ABC transporters (KEGG),Up,Control,0
+Vitamin B12 Metabolism (Wikipathways),Up,Patient,0
+Vitamin B12 Metabolism (Wikipathways),Up,Control,-1
+Vitamin D synthesis (Wikipathways),Up,Patient,0
+Vitamin D synthesis (Wikipathways),Up,Control,-1
+Phagosome (KEGG),Up,Patient,0
+Phagosome (KEGG),Up,Control,-1
+"{BRCA1,28} (Static Module)",Up,Patient,0
+"{BRCA1,28} (Static Module)",Up,Control,-1
+Fatty Acid Biosynthesis (Wikipathways),Up,Patient,1
+Fatty Acid Biosynthesis (Wikipathways),Up,Control,0
+"{FCGR2B,50} (Static Module)",Up,Patient,0
+"{FCGR2B,50} (Static Module)",Up,Control,-1
+"{RB1,11} (Static Module)",Up,Patient,0
+"{RB1,11} (Static Module)",Up,Control,-1
+Muscle contraction (Reactome),Up,Patient,1
+Muscle contraction (Reactome),Up,Control,0
+Id Signaling Pathway (Wikipathways),Up,Patient,0
+Id Signaling Pathway (Wikipathways),Up,Control,-1
+"{F2,46} (Static Module)",Up,Patient,1
+"{F2,46} (Static Module)",Up,Control,0
+Glutathione metabolism (KEGG),Up,Patient,0
+Glutathione metabolism (KEGG),Up,Control,-1
+Fat digestion and absorption (KEGG),Up,Patient,1
+Fat digestion and absorption (KEGG),Up,Control,0
+"Glycine, serine and threonine metabolism (KEGG)",Up,Patient,1
+"Glycine, serine and threonine metabolism (KEGG)",Up,Control,0
+"{VCP,17} (Static Module)",Up,Patient,0
+"{VCP,17} (Static Module)",Up,Control,-1
+Aminoacyl-tRNA biosynthesis (KEGG),Up,Patient,0
+Aminoacyl-tRNA biosynthesis (KEGG),Up,Control,-1
+Codeine and morphine metabolism (Wikipathways),Up,Patient,1
+Codeine and morphine metabolism (Wikipathways),Up,Control,0
+"Alanine, aspartate and glutamate metabolism (KEGG)",Up,Patient,1
+"Alanine, aspartate and glutamate metabolism (KEGG)",Up,Control,0
+Basal transcription factors (KEGG),Up,Patient,0
+Basal transcription factors (KEGG),Up,Control,-1
+Endometrial cancer (KEGG),Up,Patient,0
+Endometrial cancer (KEGG),Up,Control,-1
+Metabolic pathways (KEGG),Up,Patient,0
+Metabolic pathways (KEGG),Up,Control,-1
+"{CHRNA1,13} (Static Module)",Down,Patient,0
+"{CHRNA1,13} (Static Module)",Down,Control,1
+Statin Pathway (Wikipathways),Down,Patient,0
+Statin Pathway (Wikipathways),Down,Control,1
+Striated Muscle Contraction (Wikipathways),Down,Patient,0
+Striated Muscle Contraction (Wikipathways),Down,Control,1
+"{ACY1,11} (Static Module)",Down,Patient,-1
+"{ACY1,11} (Static Module)",Down,Control,0
+"{DVL1L1,17} (Static Module)",Down,Patient,0
+"{DVL1L1,17} (Static Module)",Down,Control,1
+Diabetes pathways (Reactome),Down,Patient,-1
+Diabetes pathways (Reactome),Down,Control,0
+Serotonin Receptor 4/6/7 and NR3C Signaling (Wikipathways),Down,Patient,-1
+Serotonin Receptor 4/6/7 and NR3C Signaling (Wikipathways),Down,Control,0
+SNARE interactions in vesicular transport (KEGG),Down,Patient,-1
+SNARE interactions in vesicular transport (KEGG),Down,Control,0
+Aflatoxin B1 metabolism (Wikipathways),Down,Patient,0
+Aflatoxin B1 metabolism (Wikipathways),Down,Control,1
+Estrogen signaling pathway (Wikipathways),Down,Patient,-1
+Estrogen signaling pathway (Wikipathways),Down,Control,0
+Influenza A (KEGG),Down,Patient,-1
+Influenza A (KEGG),Down,Control,0
+Urea cycle and metabolism of amino groups (Wikipathways),Down,Patient,0
+Urea cycle and metabolism of amino groups (Wikipathways),Down,Control,1
+"{HRAS,27} (Static Module)",Down,Patient,-1
+"{HRAS,27} (Static Module)",Down,Control,0
+Tyrosine metabolism (KEGG),Down,Patient,0
+Tyrosine metabolism (KEGG),Down,Control,1
+Phototransduction (KEGG),Down,Patient,0
+Phototransduction (KEGG),Down,Control,1
+"{ARRB2,743} (Static Module)",Down,Patient,0
+"{ARRB2,743} (Static Module)",Down,Control,1
+"{TCF3,20} (Static Module)",Down,Patient,0
+"{TCF3,20} (Static Module)",Down,Control,1
+"{ABL1,15} (Static Module)",Down,Patient,0
+"{ABL1,15} (Static Module)",Down,Control,1
+Collecting duct acid secretion (KEGG),Down,Patient,0
+Collecting duct acid secretion (KEGG),Down,Control,1
+Glucocorticoid &amp; Mineralcorticoid Metabolism (Wikipathways),Down,Patient,0
+Glucocorticoid &amp; Mineralcorticoid Metabolism (Wikipathways),Down,Control,1
+Alzheimer's disease (KEGG),Down,Patient,0
+Alzheimer's disease (KEGG),Down,Control,1
+Blood Clotting Cascade (Wikipathways),Down,Patient,0
+Blood Clotting Cascade (Wikipathways),Down,Control,1
+Signaling by Insulin receptor (Reactome),Down,Patient,0
+Signaling by Insulin receptor (Reactome),Down,Control,1
+Signaling by GPCR (Reactome),Down,Patient,0
+Signaling by GPCR (Reactome),Down,Control,1

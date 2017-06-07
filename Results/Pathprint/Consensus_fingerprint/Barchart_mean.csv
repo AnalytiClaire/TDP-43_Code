@@ -1,0 +1,95 @@
+Pathway,Direction,Condition,Value
+IL-2 down reg. targets (Netpath),Up,Patient,0
+IL-2 down reg. targets (Netpath),Up,Control,-1
+Mitochondrial LC-Fatty Acid Beta-Oxidation (Wikipathways),Up,Patient,0
+Mitochondrial LC-Fatty Acid Beta-Oxidation (Wikipathways),Up,Control,-1
+ABC transporters (KEGG),Up,Patient,1
+ABC transporters (KEGG),Up,Control,0
+Complement and Coagulation Cascades (Wikipathways),Up,Patient,0
+Complement and Coagulation Cascades (Wikipathways),Up,Control,0
+Vitamin B12 Metabolism (Wikipathways),Up,Patient,0
+Vitamin B12 Metabolism (Wikipathways),Up,Control,-1
+Vitamin D synthesis (Wikipathways),Up,Patient,0
+Vitamin D synthesis (Wikipathways),Up,Control,-1
+"{BCLAF1,25} (Static Module)",Up,Patient,-1
+"{BCLAF1,25} (Static Module)",Up,Control,-1
+"Complement Activation, Classical Pathway (Wikipathways)",Up,Patient,0
+"Complement Activation, Classical Pathway (Wikipathways)",Up,Control,0
+Phagosome (KEGG),Up,Patient,0
+Phagosome (KEGG),Up,Control,-1
+Benzo(a)pyrene metabolism (Wikipathways),Up,Patient,0
+Benzo(a)pyrene metabolism (Wikipathways),Up,Control,0
+PPAR signaling pathway (KEGG),Up,Patient,1
+PPAR signaling pathway (KEGG),Up,Control,1
+Complement and coagulation cascades (KEGG),Up,Patient,0
+Complement and coagulation cascades (KEGG),Up,Control,0
+Ascorbate and aldarate metabolism (KEGG),Up,Patient,0
+Ascorbate and aldarate metabolism (KEGG),Up,Control,0
+"{BRCA1,28} (Static Module)",Up,Patient,0
+"{BRCA1,28} (Static Module)",Up,Control,-1
+Irinotecan Pathway (Wikipathways),Up,Patient,0
+Irinotecan Pathway (Wikipathways),Up,Control,0
+"{CD4,14} (Static Module)",Up,Patient,0
+"{CD4,14} (Static Module)",Up,Control,0
+"{SEPT2,21} (Static Module)",Up,Patient,0
+"{SEPT2,21} (Static Module)",Up,Control,0
+Fatty Acid Biosynthesis (Wikipathways),Up,Patient,1
+Fatty Acid Biosynthesis (Wikipathways),Up,Control,0
+"{FCGR2B,50} (Static Module)",Up,Patient,0
+"{FCGR2B,50} (Static Module)",Up,Control,-1
+"{RB1,11} (Static Module)",Up,Patient,0
+"{RB1,11} (Static Module)",Up,Control,-1
+Osteoblast Signaling (Wikipathways),Up,Patient,0
+Osteoblast Signaling (Wikipathways),Up,Control,0
+Muscle contraction (Reactome),Up,Patient,1
+Muscle contraction (Reactome),Up,Control,0
+Id Signaling Pathway (Wikipathways),Up,Patient,0
+Id Signaling Pathway (Wikipathways),Up,Control,-1
+"{TCF3,20} (Static Module)",Down,Patient,0
+"{TCF3,20} (Static Module)",Down,Control,1
+Parkinson's disease (KEGG),Down,Patient,0
+Parkinson's disease (KEGG),Down,Control,0
+Glycolysis and Gluconeogenesis (Wikipathways),Down,Patient,1
+Glycolysis and Gluconeogenesis (Wikipathways),Down,Control,1
+"{PPP2CA,20} (Static Module)",Down,Patient,0
+"{PPP2CA,20} (Static Module)",Down,Control,0
+Glycosaminoglycan biosynthesis - keratan sulfate (KEGG),Down,Patient,0
+Glycosaminoglycan biosynthesis - keratan sulfate (KEGG),Down,Control,0
+"{ABL1,15} (Static Module)",Down,Patient,0
+"{ABL1,15} (Static Module)",Down,Control,1
+Collecting duct acid secretion (KEGG),Down,Patient,0
+Collecting duct acid secretion (KEGG),Down,Control,1
+Type II diabetes mellitus (KEGG),Down,Patient,0
+Type II diabetes mellitus (KEGG),Down,Control,0
+TOR signaling (Wikipathways),Down,Patient,0
+TOR signaling (Wikipathways),Down,Control,0
+Signaling by EGFR (Reactome),Down,Patient,0
+Signaling by EGFR (Reactome),Down,Control,0
+Glucocorticoid &amp; Mineralcorticoid Metabolism (Wikipathways),Down,Patient,0
+Glucocorticoid &amp; Mineralcorticoid Metabolism (Wikipathways),Down,Control,1
+Huntington's disease (KEGG),Down,Patient,0
+Huntington's disease (KEGG),Down,Control,0
+Alzheimer's disease (KEGG),Down,Patient,0
+Alzheimer's disease (KEGG),Down,Control,1
+Blood Clotting Cascade (Wikipathways),Down,Patient,0
+Blood Clotting Cascade (Wikipathways),Down,Control,1
+"{CYCS,35} (Static Module)",Down,Patient,0
+"{CYCS,35} (Static Module)",Down,Control,0
+"{ATP5D,19} (Static Module)",Down,Patient,0
+"{ATP5D,19} (Static Module)",Down,Control,0
+Signaling by Insulin receptor (Reactome),Down,Patient,0
+Signaling by Insulin receptor (Reactome),Down,Control,1
+"{UBE2D1,58} (Static Module)",Down,Patient,0
+"{UBE2D1,58} (Static Module)",Down,Control,0
+Serotonin Receptor 2 and ELK-SRF/GATA4 signaling (Wikipathways),Down,Patient,0
+Serotonin Receptor 2 and ELK-SRF/GATA4 signaling (Wikipathways),Down,Control,0
+Terpenoid backbone biosynthesis (KEGG),Down,Patient,0
+Terpenoid backbone biosynthesis (KEGG),Down,Control,0
+Glycosphingolipid biosynthesis - lacto and neolacto series (KEGG),Down,Patient,0
+Glycosphingolipid biosynthesis - lacto and neolacto series (KEGG),Down,Control,0
+TCA Cycle (Wikipathways),Down,Patient,0
+TCA Cycle (Wikipathways),Down,Control,0
+Signaling by GPCR (Reactome),Down,Patient,0
+Signaling by GPCR (Reactome),Down,Control,1
+Monoamine GPCRs (Wikipathways),Down,Patient,1
+Monoamine GPCRs (Wikipathways),Down,Control,1
