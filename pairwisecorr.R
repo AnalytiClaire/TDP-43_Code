@@ -1,28 +1,50 @@
 #Selecting DEGS from expression matrix
 
 #Load list of interesting genes
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/")
-Genelist <- read.csv("MADEGs.csv")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/")
+Genelist <- read.csv("DEG_PPI_Genes.txt", header = F)
+Genelist <- Genelist$V1
 
-#load dataset
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/TopGenes_2016-02-15")
-exprs <- read.csv("C9rankeduniqueresult.csv")
+#load normalised Microarray datasets
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/noMedian/")
+C9 <- read.csv("C9_unique.csv", row.names = 1)
+C9gene <- subset(C9,rownames(C9) %in% Genelist )
+sals <- read.csv("sals_unique.csv", row.names = 1)
+salsgene <- subset(sals,rownames(sals) %in% Genelist)
+FTLD <- read.csv("ftld_unique.csv", row.names = 1)
+FTLDgene <- subset(FTLD,rownames(FTLD) %in% Genelist)
+VCP <- read.csv("vcp_unique.csv", row.names = 1)
+VCPgene <- subset(VCP,rownames(VCP) %in% Genelist)
 
-#Make gene symbol row names
-rownames(exprs) <- exprs$Gene.Symbol
-exprspat <- exprs[,52:59]
+#Load RNA-seq datasets
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/")
+PET <- read.csv("PET_results_keepfiltering.csv", row.names = 36)
+PETgene <- subset(PET,rownames(PET) %in% Genelist)
+RAV <- read.csv("RAV_results_keepfiltering.csv", row.names = 31)
+RAVgene <- subset(RAV, rownames(RAV) %in% Genelist)
 
-#Make gene symbol a column
-exprspat <- cbind(exprspat, exprs$Gene.Symbol)
-colnames(exprspat)[length(exprspat)] <- "Gene.Symbol"
+C9pat <- C9gene[,11:18]
+salspat <- salsgene[,11:18]
+FTLDpat <- FTLDgene[,16:31]
+VCPpat <- VCPgene[,11:18]
+PETpat <- PETgene[,19:35]
+RAVpat <- RAVgene[,18:30]
 
-#Merge by interesting gene names with expression to form matrix
-patgene <- merge(Genelist, exprspat, by.x = "Gene", by.y = "Gene.Symbol")
-rownames(patgene) <- patgene$Gene
-patgene[,1] <- NULL
+# #Make gene symbol row names
+# rownames(exprs) <- exprs$Gene.Symbol
+# exprspat <- exprs[,52:59]
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Pathways_to_TDP-43/Co-expression/")
-write.csv(patgene, file = "C9_DEG_Exprs.csv")
+# #Make gene symbol a column
+# exprspat <- cbind(exprspat, exprs$Gene.Symbol)
+# colnames(exprspat)[length(exprspat)] <- "Gene.Symbol"
+# 
+# #Merge by interesting gene names with expression to form matrix
+# patgene <- merge(Genelist, exprspat, by.x = "Gene", by.y = "Gene.Symbol")
+# rownames(patgene) <- patgene$Gene
+# patgene[,1] <- NULL
+# 
+# setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Pathways_to_TDP-43/Co-expression/")
+# write.csv(patgene, file = "C9_DEG_Exprs.csv")
 
 
 
@@ -31,17 +53,17 @@ write.csv(patgene, file = "C9_DEG_Exprs.csv")
 library(tictoc)
 library(gdata)
 
-# #load dataset
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/WGCNA/C9orf72")
-uniqueresult <- read.csv("C9result.csv")
-rownames(uniqueresult) <- uniqueresult[,1]
-uniqueresult[,1] <- NULL
+# # #load dataset
+# setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/WGCNA/C9orf72")
+# uniqueresult <- read.csv("C9result.csv")
+# rownames(uniqueresult) <- uniqueresult[,1]
+# uniqueresult[,1] <- NULL
 
 
 ##For loop for generating regression values and p values
-CorExprMat <- t(uniqueresult)
+CorExprMat <- t(C9pat)
 
-test <- CorExprMat[,1:100]
+test <- CorExprMat
 
 reg <- matrix(0, ncol(test), ncol(test))
 p.value <- matrix(0, ncol(test), ncol(test))
@@ -52,7 +74,7 @@ for (i in 1:ncol(test)){
     reg[i,j] <- cor.test(test[,i], test[,j], method = "spearman")$estimate
   }}
 
-rownames(reg) <- colnames(reg2) <- colnames(test)
+rownames(reg) <- colnames(reg) <- colnames(test)
 toc()
 
 tic()
@@ -63,6 +85,10 @@ for (i in 1:ncol(test)){
 
 rownames(p.value) <- colnames(p.value) <- colnames(test)
 toc()
+
+
+
+
 
 ##Only take upper triangle without diagonal (all comparisons are currently doubled)
 ptri <- p.value
@@ -89,7 +115,13 @@ rownames(results)<- results$Row.names
 results[,1] <- NULL
 results <- results[order(results$p.vec),]
 
-##PSYCH METHOD### 
+setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/")
+write.csv(results, "C9_PPI_coexpression.csv")
+
+
+
+#####
+###PSYCH METHOD### 
 library(psych)
 library(tictoc)
 library(gdata)

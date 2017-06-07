@@ -266,8 +266,14 @@ List_5 <- List[lengths(List) > 4]
 enrich_result <- list()
 
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/")
-S <- read.table(file = "OneBenchmarkList.txt")
+S <- read.table(file = "TDP-43_PPIgenes.txt")
 s <- S$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/")
+o <- read.table(file = "OneBenchmarkList.txt")
+o <- o$V1
+
+
 
 
 for (i in 1:length(List_5)){
@@ -305,3 +311,20 @@ for (i in 1:length(List_5)){
 
 enrich_result_df <- t(as.data.frame(enrich_result))
 rownames(enrich_result_df) <- (1:nrow(enrich_result_df))+2913
+ERpadj <- p.adjust(enrich_result_df, method = "BH")
+ERpadj <- as.data.frame(ERpadj)
+rownames(ERpadj) <- (1:nrow(ERpadj))+2913
+
+cat(List[[6732]], sep = "\n")
+length(List[[6732]])
+
+write.table(List[[6732]], "LIST_6732.txt", row.names = F, col.names = F, quote = F)
+
+logdf<- log(ERpadj)
+logdf<- as.data.frame(logdf)
+logdf[,2] <- rownames(logdf)
+logdf[,3] <- logdf$ERpadj
+logdf[,1] <- NULL
+plot(logdf, xlab = "Threshold", ylab = "log P-Value", main = "Log P Value with increasing threshold")
+
+int <- intersect(x = List[[6732]], y = s)

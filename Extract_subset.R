@@ -23,6 +23,9 @@ pet <- pet[!duplicated(pet$hgnc_symbol),]
 rav <- read.csv("RAV_results_keepfiltering.csv")
 rav <- rav[!duplicated(rav$hgnc_symbol),]
 
+setwd("/users/clairegreen/Documents/PhD/TDP-43/non-TDP-43 Data Sets/")
+sod1 <- read.csv("JKSOD1_exprsgen.csv")
+
 #Read in genes of interest
 setwd("/Users/clairegreen/Desktop/")
 names <- read.table("List5996.txt")
@@ -30,7 +33,7 @@ names <- names$V1
 
 
 ##### MICROARRAY #####
-mat <- vcp
+mat <- sod1
 
 #Take the subset of genes from the tables
 subset <- subset(mat, mat$Gene.Symbol %in% names, drop = TRUE)
@@ -39,12 +42,18 @@ subset[,1] = NULL
 
 #Take one condition (patients or controls)
 setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Expression_DEGonly/5996/")
-write.csv(subset, file = "vcp_5996_all.csv")
+# write.csv(subset, file = "vcp_5996_all.csv")
 subset[,1:7] <- NULL
 subset[,length(subset)] <- NULL
-write.csv(subset, file = "vcp_5996_expr.csv")
+# write.csv(subset, file = "vcp_5996_expr.csv")
 
+subset <- t(subset)
+vector <- c(0,0,0,0,0,0,0,1,1,1)
+subset <- as.data.frame(subset)
+subset$status <- vector
 
+subsetc9 <- subset
+subsetsod1 <- subset
 #### RNA-SEQ ######
 mat <- rav
 

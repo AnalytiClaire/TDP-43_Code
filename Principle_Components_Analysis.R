@@ -100,6 +100,23 @@ text(pca_VCPc$x[,1:2], labels = rownames(pca_VCPc$x),adj = 1.1, cex = 0.5)
 
 
 
+### EL ###
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/EL_TDP-43/")
+EL <- read.csv("EL_results_15052017_normalised2.csv")
+dev.off() #removes previous plot
+ELd <- EL[,c(9:15)] #take expression data from disease columns
+ELc <- EL[,c(16:22)] #take expression data from control columns
+pcaC9d <- prcomp(t(C9d)) #run pca
+pcaC9c <- prcomp(t(C9c))
+
+p_C9d <- plot(pcaC9d$x[,1:2], pch=18, cex=1.25 , col="red", xlim=c(-300, 400), 
+              ylim=c(-200, 350),main = "C9orf72") #plot disease
+p_C9c <- points(pcaC9c$x[,1:2], pch=18, cex=1.25,col="green", xlim=c(-300, 400), 
+                ylim=c(-200, 350)) #plot control
+legend(260, 340,pch=18, legend=c("Disease", "Control"), col=c("red","green"), cex=0.7) #add legend
+
+text(pcaC9d$x[,1:2], labels = rownames(pcaC9d$x),adj = 1.1, cex = 0.5) #label data points
+text(pcaC9c$x[,1:2], labels = rownames(pcaC9c$x),adj = 1.1, cex = 0.5)
 
 #### COMBINE IN DIFFERENT PANES ####
 dev.off()

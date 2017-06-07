@@ -9,18 +9,18 @@ library(Biobase)
 library(tkWidgets)
 library(plyr)
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/VCP")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/FTD-U.brain/")
 
 #run program to choose .CEL files from directory
 celfiles <- fileBrowser(textToShow = "Choose CEL files", testFun = hasSuffix("[cC][eE][lL]"))
 #celfiles<-basename(celfiles)
 Data<-ReadAffy(filenames=celfiles) #read in files
 rmaEset<-rma(Data) #normalise using RMA
-analysis.name<-"VCP" #Label analysis
+analysis.name<-"GRN_FTLD" #Label analysis
 dataMatrixAll<-exprs(rmaEset) #takes expression from normalised expression set
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/NormalisedExpressionMatrices/")
-write.csv(dataMatrixAll, file = paste(analysis.name,"eset.csv", sep = ""))
+# setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/NormalisedExpressionMatrices/")
+# write.csv(dataMatrixAll, file = paste(analysis.name,"eset.csv", sep = ""))
 
 #mas5call generates presence/absence calls for each probeset
 mas5call<-mas5calls(Data)
@@ -70,7 +70,7 @@ expressionMatrix<-exprs(rmaEset)
 colnames(expressionMatrix)
 
 #this is for matched samples
-Treat<-factor(rep(c("Control", "Patient"),c(8,16)), levels=c("Control", "Patient"))
+Treat<-factor(rep(c("Control", "Patient"),c(8,6)), levels=c("Control", "Patient"))
 design<-model.matrix(~Treat)
 rownames(design)<-colnames(expressionMatrix)
 design
@@ -105,14 +105,17 @@ result<-subset(result, subset=(countP>2)) #only takes results that have at least
 
 genesort <- result[order(result$P.Value),]
 
-setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/noMedian/")
-write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+# setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/noMedian/")
+# write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
 
-# nrow(result)
-# foldchange<-1.5
+
+# genesort <- result[order(result$adj.P.Val),]
+uniqueresult <- genesort[!duplicated(genesort[,15]),]
+# nrow(uniqueresult)
+# foldchange<-1.1
 # pvalue<-0.05
 # #adj_P_Val<-0.05
-# siggenes<-subset(result, subset=(P.Value < pvalue) & abs(logFC) > log2(foldchange))
+# siggenes<-subset(uniqueresult, subset=(P.Value < pvalue) & abs(logFC) > log2(foldchange))
 # #siggenes<-subset(result, subset=(adj.P.Val < 0.05))
 # nrow(siggenes)
 # siggenesup<-subset(siggenes, subset= logFC > 0)
@@ -137,11 +140,12 @@ write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""),
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/noMedian/")
 #dir.create(paste("TopGenes", Sys.Date(), sep = "_")) #create directory using the day's date
 #Take results, remove duplicate rows for genes, order by adjusted p value and take top X number of genes
-# uniqueresult <- result[!duplicated(result[,15]),]
+
 
 #For ordering by adjusted p value
 genesort <- uniqueresult[order(uniqueresult$adj.P.Val),]
-write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+# uniqueresult <- result[!duplicated(result[,15]),]
+write.csv(uniqueresult, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
 
 
 # # 

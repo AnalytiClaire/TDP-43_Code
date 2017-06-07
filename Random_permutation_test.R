@@ -16,8 +16,8 @@ setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpressio
 
 C9 <- read.csv("C9_unique.csv")
 C9 <- C9[order(C9$P.Value),]
-CH <- read.csv("CH_unique.csv")
-CH <- CH[order(CH$P.Value),]
+# CH <- read.csv("CH_unique.csv")
+# CH <- CH[order(CH$P.Value),]
 sals <- read.csv("sals_unique.csv")
 sals <- sals[order(sals$P.Value),]
 ftld <- read.csv("ftld_unique.csv")
@@ -34,7 +34,7 @@ rav <- rav[!duplicated(rav$hgnc_symbol),]
 
 ## extract gene lists
 c9_gene <- C9$Gene.Symbol
-ch_gene <- CH$Gene.Symbol
+# ch_gene <- CH$Gene.Symbol
 sals_gene <- sals$Gene.Symbol
 ftld_gene <- ftld$Gene.Symbol
 vcp_gene <- vcp$Gene.Symbol
@@ -42,25 +42,25 @@ pet_gene <- pet$hgnc_symbol
 rav_gene <- rav$hgnc_symbol
 
 #indicate the number of overlapping genes identified by DE analysis
-test <- 113
+test <- 328
 samplenum <- 6000
 
 m=10000 #number of repetitions 
 r <- c(1:m) #store repetition numbers in vector "r"
 
-for (j in 1:m)
-{
-  random1 <- sample (c9_gene, size=samplenum, replace=FALSE)
-  random2 <- sample (ch_gene, size=samplenum, replace=FALSE)
-  random3 <- sample (sals_gene, size=samplenum, replace=FALSE)
-  random4 <- sample (ftld_gene, size=samplenum, replace=FALSE)
-  random5 <- sample (vcp_gene, size=samplenum, replace=FALSE)
-  random6 <- sample (pet_gene, size=samplenum, replace=FALSE)
-  random7 <- sample (rav_gene, size=samplenum, replace=FALSE)
-  random <- Reduce(intersect, list(random1, random2, random3, random4, random5, random6, random7))
+for (j in 1:m){
+  random1 <- sample (c9_gene, size=4242, replace=FALSE)
+  # random2 <- sample (ch_gene, size=samplenum, replace=FALSE)
+  random3 <- sample (sals_gene, size=4468, replace=FALSE)
+  random4 <- sample (ftld_gene, size=4534, replace=FALSE)
+  random5 <- sample (vcp_gene, size=3870, replace=FALSE)
+  random6 <- sample (pet_gene, size=7597, replace=FALSE)
+  random7 <- sample (rav_gene, size=6506, replace=FALSE)
+  random <- Reduce(intersect, list(random1, random3, random4, random5, random6, random7))
   r[j] <- length(random)
 }
 
 test1 <- which(r > test)  # count number of times r is larger than test value
 result <- (length(test1)/m) # calculate P value
+result
 mean(r)

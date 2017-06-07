@@ -79,8 +79,29 @@ V <- read.table("OneBenchmarkList.txt")
 v <- V$V1
 
 setwd(dir = "/Users/clairegreen/Desktop/")
-x <- read.table("List5996.txt")
-x <- x$V1
+List5996 <- read.table("List5996.txt")
+List5996 <- List5996$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
+List6732 <- read.table("LIST_6732.txt")
+List6732 <- List6732$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/")
+up <- read.table("intersect_up_1.txt")
+up <- up$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/")
+down <- read.table("intersect_down_1.txt")
+down <- down$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/")
+up_filter <- read.table("Filtered_up_genes.txt")
+up_filter <- up_filter$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/")
+down_filter <-read.table("Filtered_down_genes.txt")
+down_filter <- down_filter$V1
+
 
 # ####Load full gwas datasets ####
 # setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
@@ -115,7 +136,7 @@ z <- lapply(z, function(x) x[!is.na(x)])
 
 #Load file with all genes
 library(hgu133plus2.db)
-installsym <- hgu133plus2SYMBOL
+sym <- hgu133plus2SYMBOL
 sym1 <- mappedkeys(sym)
 sym2 <- as.list (sym[c(sym1)]) 
 sym3 <- data.frame (sym2)
@@ -142,22 +163,22 @@ y <- read.table(file = "GM+58.txt")
 y <- y$V1
 
 setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/")
-W <- read.csv(file = "BenchmarkGenes.csv", na.strings = c("", "NA)"))
+W <- read.csv(file = "BenchmarkGenes2.csv", na.strings = c("", "NA)"))
 W <- as.list(W)
 W<- lapply(W, function(x) x[!is.na(x)])
 
 
 # run script
 pathwayEnrichment <- hyperPathway(
-                genelist = x,
+                genelist = up_filter,
 								geneset = W,
 								Nchip = length(allgenes)
 							 )
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/5996/")
-write.csv(pathwayEnrichment, file = "pathprint_enrich_5996.csv")
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/")
+write.csv(pathwayEnrichment, file = "pathprint_enrich_up.csv")
 
 
-o2 <- Reduce(intersect, list(W$ALSMalacards, W$ALSOD))
+o2 <- Reduce(intersect, list(down, W$ALSOD))
 print(o2)
 write.csv(o2, file = "intersect.csv")
 
