@@ -116,8 +116,8 @@ allgenes <- sym.genes[!duplicated(sym.genes),]
 # for (i in x[,1:4]) {
 
 x <- read.table("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/highly2014/highly5500.txt")
-ur.list <- x
-int.list <- Sig.padj
+ur.list <- X
+int.list <- Sig.padj.both
 
 #How many test geneset genes contain snps
 x.in <- length (which(ur.list %in% int.list)) 
