@@ -134,6 +134,60 @@ z <- read.csv(file = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Result
 z <- as.list(z)
 z <- lapply(z, function(x) x[!is.na(x)])
 
+
+#Pathprint gene lists
+load("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/Pathprint_biomart.RData")
+
+# #pathprint result dataframe
+# 
+# IL2_down_reg._targets <- pathprint_list$`IL-3 down reg. targets (Netpath)`
+# Mitochondrial_LCFatty_Acid_BetaOxidation <- pathprint_list$`Mitochondrial LC-Fatty Acid Beta-Oxidation (Wikipathways)`
+# Vitamin_B12_Metabolism <- pathprint_list$`Vitamin B12 Metabolism (Wikipathways)`
+# Vitamin_D_synthesis <- pathprint_list$`Vitamin D synthesis (Wikipathways)`
+# BRCA1_28 <- pathprint_list$`{BRCA1,28} (Static Module)`
+# CD4_14 <- pathprint_list$`{CD4,14} (Static Module)`
+# SEPT2_21 <- pathprint_list$`{SEPT2,21} (Static Module)`
+# Fatty_Acid_Biosynthesis <- pathprint_list$`Fatty Acid Biosynthesis (Wikipathways)`
+# FCGR2B_50 <- pathprint_list$`{FCGR2B,50} (Static Module)`
+# RB1_11 <- pathprint_list$`{RB1,11} (Static Module)`
+# Muscle_contraction <- pathprint_list$`Muscle contraction (Reactome)`
+# Steroid_Biosynthesis <- pathprint_list$`Steroid Biosynthesis (Wikipathways)`
+# Glutathione_metabolism <- pathprint_list$`Glutathione metabolism (KEGG)`
+# Fat_digestion_and_absorption <- pathprint_list$`Fat digestion and absorption (KEGG)`
+# AminoacyltRNA_biosynthesis <- pathprint_list$`Aminoacyl-tRNA biosynthesis (KEGG)`
+# VCP_17 <- pathprint_list$`{VCP,17} (Static Module)`
+# Osteoclast_differentiation <- pathprint_list$`Osteoclast differentiation (KEGG)`
+# Fluoropyrimidine_Activity <- pathprint_list$`Fluoropyrimidine Activity (Wikipathways)`
+# IL7_down_reg._targets <- pathprint_list$`IL-7 down reg. targets (Netpath)`
+# Heme_Biosynthesis <- pathprint_list$`Heme Biosynthesis (Wikipathways)`
+# SP1_88 <- pathprint_list$`{SP1,88} (Static Module)`
+# Signaling_by_Notch <- pathprint_list$`Signaling by Notch (Reactome)`
+# Ubiquinone_and_other_terpenoidquinone_biosynthesis <- pathprint_list$`Ubiquinone and other terpenoid-quinone biosynthesis (KEGG)`
+# Sulfur_metabolism <- pathprint_list$`Sulfur metabolism (KEGG)`
+# Caffeine_metabolism <- pathprint_list$`Caffeine metabolism (KEGG)`
+# Phototransduction <- pathprint_list$`Phototransduction (KEGG)`
+# Parkinsons_disease <- pathprint_list$`Parkinson's disease (KEGG)`
+# PPP2CA_20 <- pathprint_list$`{PPP2CA,20} (Static Module)`
+# ABL1_15 <- pathprint_list$`{ABL1,15} (Static Module)`
+# Type_II_diabetes_mellitus <- pathprint_list$`Type II diabetes mellitus (KEGG)`
+# Signaling_by_EGFR <- pathprint_list$`Signaling by EGFR (Reactome)`
+# Glucocorticoid_Mineralcorticoid_Metabolism <- pathprint_list$`Glucocorticoid &amp; Mineralcorticoid Metabolism (Wikipathways)`
+# Alzheimers_disease <- pathprint_list$`Alzheimer's disease (KEGG)`
+# Blood_Clotting_Cascade <- pathprint_list$`Blood Clotting Cascade (Wikipathways)`
+# Terpenoid_backbone_biosynthesis <- pathprint_list$`Terpenoid backbone biosynthesis (KEGG)`
+# Signaling_by_GPCR <- pathprint_list$`Signaling by GPCR (Reactome)`
+# 
+# PP_up <- list(IL2_down_reg._targets,Mitochondrial_LCFatty_Acid_BetaOxidation,Vitamin_B12_Metabolism,Vitamin_D_synthesis,BRCA1_28,CD4_14,
+#       SEPT2_21,Fatty_Acid_Biosynthesis,FCGR2B_50,RB1_11,Muscle_contraction,Steroid_Biosynthesis,Glutathione_metabolism,Fat_digestion_and_absorption,
+#       AminoacyltRNA_biosynthesis,VCP_17,Osteoclast_differentiation,Fluoropyrimidine_Activity,IL7_down_reg._targets,Heme_Biosynthesis,SP1_88,
+#       Signaling_by_Notch)
+# PP_down <- list(Ubiquinone_and_other_terpenoidquinone_biosynthesis,Sulfur_metabolism,Caffeine_metabolism,Phototransduction,Parkinsons_disease,
+#       PPP2CA_20,ABL1_15,Type_II_diabetes_mellitus,Signaling_by_EGFR,Glucocorticoid_Mineralcorticoid_Metabolism,Alzheimers_disease,
+#       Blood_Clotting_Cascade,Terpenoid_backbone_biosynthesis,Signaling_by_GPCR)
+# 
+# names(PP_up) <- names
+
+
 #Load file with all genes
 library(hgu133plus2.db)
 sym <- hgu133plus2SYMBOL
@@ -153,8 +207,8 @@ Y <- read.csv(file = "AllgenesNO.csv", na.strings = c("", "NA)"))
 Y <- as.list(Y)
 Y<- lapply(Y, function(x) x[!is.na(x)])
 
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/")
-X <- read.csv(file = "Allgenes+GM.csv", na.strings = c("", "NA)"))
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/LF_miRNA/")
+X <- read.csv(file = "miRNAtargetGenes.csv", na.strings = c("", "NA)"))
 X <- as.list(X)
 X<- lapply(X, function(x) x[!is.na(x)])
 
@@ -171,14 +225,14 @@ W<- lapply(W, function(x) x[!is.na(x)])
 # run script
 pathwayEnrichment <- hyperPathway(
                 genelist = up_filter,
-								geneset = W,
+								geneset = X,
 								Nchip = length(allgenes)
 							 )
 setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/")
 write.csv(pathwayEnrichment, file = "pathprint_enrich_up.csv")
 
 
-o2 <- Reduce(intersect, list(down, W$ALSOD))
+o2 <- Reduce(intersect, list(up_filter, Pathprint_results$VCP_17))
 print(o2)
 write.csv(o2, file = "intersect.csv")
 

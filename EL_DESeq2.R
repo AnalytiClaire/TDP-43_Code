@@ -48,7 +48,7 @@ exp_info <- data.frame(condition = factor(c(rep("1", 7), rep("2", 7))),
                        Sex = factor(c("F","M","F","F","M","M","M")), 
                        Disease = factor(c("FTLD","FTLD-ALS","FTLD","FTLD","FTLD","FTLD-ALS","FTLD-ALS")))
 
-# Counts <- counts.g
+  §
 #Rows must have at least 3 samples with scores of 10 or higher 
 keep <- rowSums(counts_all>=10) >= 3
 counts_all<-counts_all[keep,]
@@ -62,7 +62,7 @@ coldata <- data.frame(row.names=colnames(counts_all_data), exp_info)
 coldata
 
 #Create a DESeqDataSet object 
-dds <- DESeqDataSetFromMatrix(countData=counts_all_data, colData=coldata, design=~patientID + conditionsva)
+dds <- DESeqDataSetFromMatrix(countData=counts_all_data, colData=coldata, design=~patientID + conditions)
 dds
 
 #Run DEseq2 pipleline
@@ -72,10 +72,13 @@ res <- results(dds)
 table(res$padj<0.05)
 ## Order by p-value
 res <- res[order(res$pvalue), ]
-## Merge with normalized count data
-resdata_raw <- merge(as.data.frame(res), as.data.frame(counts(dds, normalized=FALSE)), by="row.names", sort=FALSE)
+
+# ## Merge with raw count data
+# resdata_raw <- merge(as.data.frame(res), as.data.frame(counts(dds, normalized=FALSE)), by="row.names", sort=FALSE)
+
+## Merge with normalised count data
 resdata_norm <- merge(as.data.frame(res), as.data.frame(counts(dds, normalized=TRUE)), by="row.names", sort=FALSE)
-resdata_norm_data <- resdata_norm[,8:21]
+# resdata_norm_data <- resdata_norm[,8:21]
 genenames <- counts_all[,1:2]
 result <- merge(resdata_norm, genenames, by.x = "Row.names", by.y = "Ensembl_ID")
 result <- result[,c(1,22,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21)]
@@ -85,7 +88,7 @@ genesort <- result[order(result$pvalue),]
 genesort <- genesort[!duplicated(genesort$hgnc_symbol),]
 
 setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/EL_TDP-43/2017_05_31/")
-write.csv(genesort, "EL_results_31052017_expdesign.csv", row.names = F)
+write.csv(genesort, "EL_results_31052017", row.names = F)
 
 Sig.padj <- subset(genesort, subset=(padj < 0.05))
 Sig.padj.gene <- Sig.padj$hgnc_symbol
@@ -101,9 +104,9 @@ Sig.padj.down.gene <- Sig.padj.down.gene[!duplicated(Sig.padj.down.gene)]
 
 Sig.padj.both <- c(Sig.padj.down.gene, Sig.padj.up.gene)
 
-write.table(Sig.padj.both, "sig_padj_genenames_noFC.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
-write.table(Sig.padj.up.gene, "sig_padj_up_genenames_noFC.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
-write.table(Sig.padj.down.gene, "sig_padj_down_genenames_noFC.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
+write.table(Sig.padj.both, "sig_padj_genenames.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
+write.table(Sig.padj.up.gene, "sig_padj_up_genenames.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
+write.table(Sig.padj.down.gene, "sig_padj_down_genenames.txt", quote = FALSE, row.names = FALSE, col.names = FALSE)
 
 
 
