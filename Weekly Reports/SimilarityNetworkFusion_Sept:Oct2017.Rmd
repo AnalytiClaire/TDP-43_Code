@@ -1,0 +1,203 @@
+---
+title: "LabBook_06_10_2017"
+author: "Claire Green"
+output: pdf_document
+---
+
+#Similarity Network Fusion
+
+I wanted a way of generating a network that was comprised of all the datasets I had collected - a sort of average network. The reason I was hesitant to use correlation is because at least one of the datasets only has 3 control samples, which makes calculating correlation very difficult. 
+
+I searched for tools that would allow me to merge networks, and came across Similarity Network Fusion. http://mghassem.mit.edu/wp-content/uploads/2015/06/nmeth.2810.pdf 
+
+Similarity Network Fusion is a method developed to combine many different data-types to aid in the clustering of patients. I adapted their code so that instead of calculating the similarities between patients, I calculate the similarities between genes.
+
+SNFcode
+```{r, eval=F}
+##### SIMILARITY NETWORK FUSION #####
+
+library(SNFtool)
+library(gdata)
+
+## First, set all the parameters:
+K = 20;		# number of neighbors, usually (10~30)
+alpha = 0.5;  	# hyperparameter, usually (0.3~0.8)
+T = 10; 	# Number of Iterations, usually (10~20)
+
+#Read in network nodes
+DEG_PPI <- read.table("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/DEG_PPI_Genes.txt")
+DEG_PPI <- DEG_PPI$V1
+
+#Extract PPI network genes from each dataset
+C9 <- read.csv("~/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Microarray_AllGenesExpression/C9uniquegene_samples.csv", row.names = 1)
+C9 <- C9[,4:11]
+C9 <- subset(C9, rownames(C9) %in% DEG_PPI)
+
+VCP <- read.csv("~/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Microarray_AllGenesExpression/VCPuniquegene_samples.csv", row.names = 1)
+VCP <- VCP[,4:1]
+VCP <- subset(VCP, rownames(VCP) %in% DEG_PPI)
+
+FTLD <- read.csv("~/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Microarray_AllGenesExpression/FTLDuniquegene_samples.csv", row.names = 1)
+FTLD <- FTLD[,9:24]
+FTLD <- subset(FTLD, rownames(FTLD) %in% DEG_PPI)
+
+sALS <- read.csv("~/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Microarray_AllGenesExpression/sALSuniquegene_samples.csv", row.names = 1)
+sALS <- sALS[,4:10]
+sALS <- subset(sALS, rownames(sALS) %in% DEG_PPI)
+
+# PET <- read.csv("~/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/PET_results_keepfiltering.csv")
+# rownames(PET) <- PET$hgnc_symbol
+# PET <- PET[,19:35]
+# PET <- subset(PET, rownames(PET) %in% DEG_PPI)
+# 
+# RAV <- read.csv("~/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/TDP-43_DEseq2/RAV_results_keepfiltering.csv")
+# rownames(RAV) <- RAV$hgnc_symbol
+# RAV <- RAV[,18:30]
+# RAV <- subset(RAV, rownames(RAV) %in% DEG_PPI)
+
+#Find the gene names that all datasets have in common
+DEG_com <- Reduce(intersect, list(rownames(C9), rownames(VCP), rownames(FTLD),
+                                  rownames(sALS)))
+
+#Subset each dataset with these common names so they are all the same size
+C9 <- subset(C9, rownames(C9) %in% DEG_com)
+VCP <- subset(VCP, rownames(VCP) %in% DEG_com)
+FTLD <- subset(FTLD, rownames(FTLD) %in% DEG_com)
+sALS <- subset(sALS, rownames(sALS) %in% DEG_com)
+# PET <- subset(PET, rownames(PET) %in% DEG_com)
+# RAV <- subset(RAV, rownames(RAV) %in% DEG_com)
+
+#Order by genename alphabetically
+Data1 <- C9
+Data1 <- Data1[order(rownames(Data1)),]
+Data2 <- VCP
+Data2 <- Data2[order(rownames(Data2)),]
+Data3 <- FTLD
+Data3 <- Data3[order(rownames(Data3)),]
+Data4 <- sALS
+Data4 <- Data4[order(rownames(Data4)),]
+# Data5 <- PET
+# Data5 <- Data5[order(rownames(Data5)),]
+# Data6 <- RAV
+# Data6 <- Data6[order(rownames(Data6)),]
+
+
+## Calculate the pair-wise distance; If the data is continuous, we recommend to use the function "dist2" as follows; if the data is discrete, we recommend the users to use "chiDist2"
+Dist1 = dist2(as.matrix(Data1),as.matrix(Data1));
+Dist2 = dist2(as.matrix(Data2),as.matrix(Data2));
+Dist3 = dist2(as.matrix(Data3),as.matrix(Data3));
+Dist4 = dist2(as.matrix(Data4),as.matrix(Data4));
+# Dist5 = dist2(as.matrix(Data5),as.matrix(Data5));
+# Dist6 = dist2(as.matrix(Data6),as.matrix(Data6));
+
+#Returns an affinity matrix that represents the neighborhood graph of the data points.
+W1 = affinityMatrix(Dist1, K, alpha)
+W2 = affinityMatrix(Dist2, K, alpha)
+W3 = affinityMatrix(Dist3, K, alpha)
+W4 = affinityMatrix(Dist4, K, alpha)
+# W5 = affinityMatrix(Dist5, K, alpha)
+# W6 = affinityMatrix(Dist6, K, alpha)
+
+#Combine affinity matrices into fused network
+W = SNF(list(W1,W2,W3,W4), K, T)
+
+#name rows and columns
+rownames(W) <- colnames(W) <- rownames(Data1)
+```
+
+You'll notice that the RNA-seq datasets aren't included in the calculation. I will come on to this in a moment. Before that I need to explain clustering. SNF include a spectral clustering algorithm, however I was hesitant to use this method as it requires pre-defined numbers of modules. Instead, I used WGCNA, treating the matrix like it was coexpression rather than similarity. 
+
+```{r, eval=F}
+#WGCNA clustering
+library(WGCNA)
+library(dynamicTreeCut)
+dissTOM = TOMdist(as.matrix(W))
+gsTree = hclust(as.dist(dissTOM), method = "average");
+
+minClusterSize = 8
+dynamicMods = cutreeDynamic(dendro = gsTree, distM = dissTOM, minClusterSize = minClusterSize,
+                            cutHeight = "tree", deepSplit = 0)
+sizeGrWindow(8,6)
+plot(dynamicMods)
+dynmods <- as.data.frame(dynamicMods)
+# Convert numeric lables into colors
+dynamicColors = labels2colors(dynamicMods)
+table(dynamicColors)
+colors <- table(dynamicColors)
+
+geneInfo = data.frame(Gene = rownames(W),
+                       module = dynamicColors)
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/SimilarityNetworkFusion/microarray/WGCNA_DSO_Min8")
+write.csv(W, "SNFoutput.csv")
+write.csv(geneInfo, "geneInfo.csv", row.names = F)
+
+## Generate file for Cytoscape
+#Remove doubled values
+df <- W
+df[lower.tri(df, diag = TRUE)] <- NA
+
+#Turn into vector
+df <- as.matrix(df)
+dfvec <- unmatrix(df)
+#Remove any NA values
+dfvec <- na.omit(dfvec)
+dfvec <- as.data.frame(dfvec)
+
+#Split row names into two and assign to columns
+library(stringr)
+genenames <- as.data.frame(str_split_fixed(rownames(dfvec), ":", 2))
+dfvec$gene1 <- genenames$V1
+dfvec$gene2 <- genenames$V2
+
+#reorder columns?me
+dfvec <- dfvec[,c(2,3,1)]
+
+#Take subset of edges if required
+cyt <- subset(dfvec, dfvec > 0.003)
+
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/SimilarityNetworkFusion/microarray/WGCNA_DSO_Min8")
+for (i in 1:length(colors)){
+  ref = names(colors[i])
+  module = subset(geneInfo, module == ref)
+  genelist <- module$Gene
+  write.table(genelist, file = paste(names(colors[i]), "genelist.txt", sep = ""), row.names = F, quote = F, col.names = F)
+  write.csv(module, file = paste(names(colors[i]), ".csv", sep = ""), row.names = F, quote = F)
+}
+
+ColList <- list()
+for (i in 1:length(colors)){
+  ref = colors[i]
+  module = subset(geneInfo, module == ref)
+  ColList[[i]] <- module$Gene
+  names(ColList)[i] <- colors[i]
+}
+```
+
+I am unsure whether to include the RNA-seq datasets in the calculation. This is because when I analyse the density of the modules (number of actual connections/number of potential connections), it's much lower when the RNA-seq datasets are included. 
+
+| Datasets     | Min Cluster Size | deepSplit | Number of modules | Whole network density | Average module density |
+|--------------|------------------|-----------|-------------------|-----------------------|------------------------|
+| MA & RNA-seq | 8                | 0         | 7                 | 0.000550942           | 0.003219565            |
+| MA only      | 8                | 0         | 11                | 0.001557254           | 0.01353935             |
+
+
+I also used a pathway I knew was well enriched in the gene list as a measurement. I have a large number of ribosomal genes/proteins in my list, which should generate a module significantly enriched with that function. When I use the microarray data, the KEGG pathway "Ribosome" is enriched after p value adjustment at p = 2.969e-24. When I include the RNA-seq data this module gets split in two, one enriched at p = 1.125e-8 and the other p = 1.488e-9.
+
+
+To see the difference the minimum cluster size makes, I compared the network and average module density, and the ribosome module enrichment over increasing values. This with the microarray data only.
+
+| Min Cluster Size |  deep Split | Number of modules | Average module density | Number of modules with RPL/S genes | Size of module containing most genes | Number of ribosomal genes /47 | KEGG Ribosome enrichment adjusted p value |
+|------------------|-------------|-------------------|------------------------|------------------------------------|--------------------------------------|-------------------------------|-------------------------------------------|
+| 5                | 0           | 86                | 0.1275594              | 18                                 | 10                                   | 7                             | 2.15E-13                                  |
+| 6                | 0           | 38                | 0.04097614             | 14                                 | 39                                   | 15                            | 2.15E-21                                  |
+| 7                | 0           | 16                | 0.01648491             | 9                                  | 79                                   | 22                            | 5.27E-28                                  |
+| 8                | 0           | 11                | 0.01353935             | 8                                  | 95                                   | 21                            | 2.97E-24                                  |
+| 9                | 0           | 9                 | 0.01503928             | 8                                  | 95                                   | 21                            | 2.97E-24                                  |
+| 10               | 0           | 6                 | 0.00901839             | 5                                  | 221                                  | 33                            | 2.73E-34                                  |
+
+From these results it suggests a minimum of 7 provides a good balance between module density and functional enrichment. 
+
+
+
+
+

@@ -1,0 +1,144 @@
+---
+title: "Using bcbio for RNA-seq pre-processing on HPC"
+author: "Claire Green"
+date: "06/10/2017"
+output: pdf_document
+---
+
+### bcbio is a python toolkit containing standardised pipelines for the analysis of biological data. One of the applications of bcbio is the processing of RNA-seq data. Raw RNA-seq datafiles must go through a series of processes to provide analysable count matrices. Bcbio includes steps for quality control, adapter trimming, alignment, variant calling, transcriptome reconstruction, and post-alignment quantitation of genes and gene isoforms. 
+
+###There are a number of ways of tailoring bcbio to your own preferences. This is just one example.
+
+
+#Step One - Creating sample metadata file
+
+For bcbio to run, it requires metadata information on the samples. This is accepted in the form of a csv file containing four columns: Sample Name, Description, Phenotype, and Batch. Sample names and description must be unique, phenotype denotes the experimental groups samples may fall into, and batch indicates if the samples are replicates.
+See an example below:
+
+| samplename | description | phenotype     | batch |
+|------------|-------------|---------------|-------|
+| Mouse_1    | Mutation_1  | Brown         | 1     |
+| Mouse_2    | Mutation_1  | Brown         | 1     |
+| Mouse_3    | Mutation_1  | Brown         | 1     |
+| Mouse_4    | Mutation_1  | Brown         | 1     |
+| Mouse_5    | Mutation_1  | Brown         | 1     |
+| Mouse_6    | Mutation_1  | Brown         | 1     |
+| Mouse_7    | Mutation_2  | White         | 1     |
+| Mouse_8    | Mutation_2  | White         | 1     |
+| Mouse_9    | Mutation_2  | White         | 1     |
+| Mouse_10   | Mutation_2  | White         | 1     |
+| Mouse_11   | Mutation_2  | White         | 1     |
+| Mouse_12   | Mutation_2  | White         | 1     |
+| Mouse_13   | Control     | BrownandWhite | 1     |
+| Mouse_14   | Control     | BrownandWhite | 1     |
+| Mouse_15   | Control     | BrownandWhite | 1     |
+| Mouse_16   | Control     | BrownandWhite | 1     |
+| Mouse_17   | Control     | BrownandWhite | 1     |
+| Mouse_18   | Control     | BrownandWhite | 1     |
+
+Here you can seen that the sample names are unique (these correspond to the file names), the descriptions are unique, the phenotype gives information on the grouping of the samples, and the batch shows how many batches of data there were: 1. If there had been replicates, the batch number would denote the replicate number.
+
+### Important: this .csv file must be saved in an MS-DOS readable format. If you are using macOS, make sure you select "Save As..." >> Format: "MS-DOS Comma Separated". If you have already created and uploaded the file, another method is to open the file in nano, press ctrl + O, press the Esc key, and then press the D key. Then save.
+
+#Step Two - File Management
+At this point you have on your local machine the fastq files for your RNA-seq experiment, and your csv file with the sample metadata. These both have to make their way to your Iceberg storage. 
+
+Log in to iceberg using ssh -X md17abc@iceberg.sheffield.ac.uk, replaced with your login details of course, and use the password you normally use to login to MUSE. Navigate to your project folder.
+
+What you want to end up with is a file system as follows:
+
+Project_Folder >> input >> Read1
+                        >> Read2
+               >> metadata.csv
+
+The two Read folders are to contain the fastq files for paired RNA-seq analyses. Read 1s from every sample in one folder, Read 2s in another. If it is not paired you do not need sub-folders, you only need to place the fastq files inside the input folder.
+
+Transferring the files can be done in a number of different ways. These generally include FTP software, such as [FileZilla](https://filezilla-project.org/), [Cyberduck](https://cyberduck.io/?l=en), or if you are using Mac there is an option to directly connect to servers through the Finder menu: Go >> Connect to Server... . In the section "Server Address" insert the iceberg address replaced with your own details e.g. smb://md17abc@uosfstore.shef.ac.uk/Project/File/Location 
+
+#Step Three - Creating the script to run bcbio
+
+Navigate so your working directory is the Project Folder. You can use any text editor, I use nano. Copy and paste the following into your editor:
+
+```{r, eval=F}
+#!/bin/bash
+#$ -pe openmp 8
+#memory requests are per-core
+#$ -l rmem=8G -l mem=8G
+#Prefer the hidelab queue but spill over to over queues if it is full
+#$ -P hidelab
+#$ -j y
+
+module load apps/gcc/5.2/bcbio/0.9.6a
+work_dir='Project/File/Location'
+
+#Seq.Reads file directories
+r1_files=$work_dir/input/Read1
+r2_files=$work_dir/input/Read2
+
+#Read in seq reads
+r1=($(find $r1_files -type f -name "*.gz"|sort -n))
+r2=($(find $r2_files -type f -name "*.gz"|sort -n))
+
+#Download the best-practice template file for RNAseq experiment.
+echo "DOWNLOADING TEMPLATE"
+bcbio_nextgen.py -w template illumina-rnaseq nameofcsv
+
+#Edit the template
+echo "EDITTING TEMPLATE"
+#Switch to using star
+sed -i 's/tophat2/star/g' $work_dir/nameofcsv/config/nameofcsv-template.yaml
+
+#Initialise the main analysis
+echo "INITIALISING ANALYSIS"
+bcbio_nextgen.py -w template $work_dir/nameofcsv/config/nameofcsv-template.yaml $work_dir/nameofcsv/config/nameofcsv.csv ${r1[@]} ${r2[@]}
+
+#Perform the analysis
+echo "PERFOMING ANALYSIS"
+cd $work_dir/nameofcsv/work
+bcbio_nextgen.py -n 8 ../config/nameofcsv.yaml
+
+```
+
+I will copy this below to add comments
+
+```{r, eval=F}
+#!/bin/bash
+#$ -pe openmp 8
+#memory requests are per-core
+#$ -l rmem=8G -l mem=8G
+#Prefer the hidelab queue but spill over to over queues if it is full
+#$ -P hidelab
+#$ -j y
+
+module load apps/gcc/5.2/bcbio/0.9.6a
+work_dir='Project/File/Location'
+
+#Seq.Reads file directories
+r1_files=$work_dir/input/Read1
+r2_files=$work_dir/input/Read2
+
+#Read in seq reads
+r1=($(find $r1_files -type f -name "*.gz"|sort -n))
+r2=($(find $r2_files -type f -name "*.gz"|sort -n))
+
+#Download the best-practice template file for RNAseq experiment.
+echo "DOWNLOADING TEMPLATE"
+bcbio_nextgen.py -w template illumina-rnaseq nameofcsv 
+#nameofcsv refers to the filename before the .csv of the metadata file you created.
+#
+
+#Edit the template
+echo "EDITTING TEMPLATE"
+#Switch to using star
+sed -i 's/tophat2/star/g' $work_dir/nameofcsv/config/nameofcsv-template.yaml
+
+#Initialise the main analysis
+echo "INITIALISING ANALYSIS"
+bcbio_nextgen.py -w template $work_dir/nameofcsv/config/nameofcsv-template.yaml $work_dir/nameofcsv/config/nameofcsv.csv ${r1[@]} ${r2[@]}
+
+#Perform the analysis
+echo "PERFOMING ANALYSIS"
+cd $work_dir/nameofcsv/work
+bcbio_nextgen.py -n 8 ../config/nameofcsv.yaml
+
+```
