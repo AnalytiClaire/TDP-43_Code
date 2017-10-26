@@ -20,7 +20,14 @@ Grail_CO_TM.R ---> The R script which does the actual analysis.
 
 
 
-I also ran the read 2 downloads for the petrucelli data. Once this was done, I needed to run bcbio. The first thing to do was to create a .csv file with all the experimental information. For the Petrucelli data, this was constructed as follows:
+I also ran the read 2 downloads for the petrucelli data. Once this was done, I needed to run bcbio. The first thing to do was to create a .csv file with all the experimental information. 
+
+**IMPORTANT**
+#################################################
+# SAVE THE CSV AS AN MS-DOS COMPATIBLE CSV FILE #
+#################################################
+
+For the Petrucelli data, this was constructed as follows:
 
 | samplename | description      | phenotype      | batch |
 |------------|------------------|----------------|-------|
@@ -56,9 +63,7 @@ The descriptions have to be unique, but the phenotypes are what group samples. B
 
 This file I made in excel and transferred over. To link to my folder on the server, I went to the Mac "Go" menu and selected "Connect to server". Here I inputted the server address "smb://mdp15cmg@uosfstore.shef.ac.uk/shared/hidelab2/user/mdp15cmg" And connected to the TDP-43 folder I had created there. This is now a finder window and I can just drag and drop files into iceberg storage. 
 
-**IMPORTANT**
 
-View this .csv file in the terminal. It may look like a long line of information separated by "^M"s. run "vim filename.csv" and separate the rows out and delete the ^Ms.
 
 The next thing to do is run the script that Sandeep sent to me in terminal:
 
