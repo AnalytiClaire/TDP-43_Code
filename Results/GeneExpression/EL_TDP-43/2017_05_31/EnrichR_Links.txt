@@ -1,7 +1,0 @@
-These links will show you the enrichment tables on the website EnrichR for a variety of databases. These are static links so will be available whenever you wish to check.
-
-Upregulated
-http://amp.pharm.mssm.edu/Enrichr/enrich?dataset=1hnmt
-
-Downregulated
-http://amp.pharm.mssm.edu/Enrichr/enrich?dataset=1hnn0
