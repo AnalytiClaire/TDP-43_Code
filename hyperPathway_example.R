@@ -66,8 +66,8 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExp
 R <- read.table(file = "Taylor_TDP43.txt")
 r <- R$V1
 
-setwd(dir = "/Users/clairegreen/Desktop/")
-S <- read.table(file = "ProteintargetingtoER.txt")
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/")
+S <- read.table(file = "C9_genenames.txt")
 s <- S$V1
 
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/6500")
@@ -76,7 +76,7 @@ u <- U$V1
 
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression")
 V <- read.table("OneBenchmarkList.txt")
-v <- V$V1
+V <- V$V1
 
 setwd(dir = "/Users/clairegreen/Desktop/")
 List5996 <- read.table("List5996.txt")
@@ -101,6 +101,10 @@ up_filter <- up_filter$V1
 setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/")
 down_filter <-read.table("Filtered_down_genes.txt")
 down_filter <- down_filter$V1
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/")
+degppi <- read.table("DEG_PPI_Genes.txt")
+degppi <- degppi$V1
 
 
 # ####Load full gwas datasets ####
@@ -134,59 +138,13 @@ z <- read.csv(file = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Result
 z <- as.list(z)
 z <- lapply(z, function(x) x[!is.na(x)])
 
+SNF <- read.csv(file = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/SimilarityNetworkFusion/microarray/Colourlist.csv", na.strings = c("", "NA)"))
+SNF <- as.list(SNF)
+SNF <- lapply(SNF, function(x) x[!is.na(x)])
+
 
 #Pathprint gene lists
 load("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/Pathprint_biomart.RData")
-
-# #pathprint result dataframe
-# 
-# IL2_down_reg._targets <- pathprint_list$`IL-3 down reg. targets (Netpath)`
-# Mitochondrial_LCFatty_Acid_BetaOxidation <- pathprint_list$`Mitochondrial LC-Fatty Acid Beta-Oxidation (Wikipathways)`
-# Vitamin_B12_Metabolism <- pathprint_list$`Vitamin B12 Metabolism (Wikipathways)`
-# Vitamin_D_synthesis <- pathprint_list$`Vitamin D synthesis (Wikipathways)`
-# BRCA1_28 <- pathprint_list$`{BRCA1,28} (Static Module)`
-# CD4_14 <- pathprint_list$`{CD4,14} (Static Module)`
-# SEPT2_21 <- pathprint_list$`{SEPT2,21} (Static Module)`
-# Fatty_Acid_Biosynthesis <- pathprint_list$`Fatty Acid Biosynthesis (Wikipathways)`
-# FCGR2B_50 <- pathprint_list$`{FCGR2B,50} (Static Module)`
-# RB1_11 <- pathprint_list$`{RB1,11} (Static Module)`
-# Muscle_contraction <- pathprint_list$`Muscle contraction (Reactome)`
-# Steroid_Biosynthesis <- pathprint_list$`Steroid Biosynthesis (Wikipathways)`
-# Glutathione_metabolism <- pathprint_list$`Glutathione metabolism (KEGG)`
-# Fat_digestion_and_absorption <- pathprint_list$`Fat digestion and absorption (KEGG)`
-# AminoacyltRNA_biosynthesis <- pathprint_list$`Aminoacyl-tRNA biosynthesis (KEGG)`
-# VCP_17 <- pathprint_list$`{VCP,17} (Static Module)`
-# Osteoclast_differentiation <- pathprint_list$`Osteoclast differentiation (KEGG)`
-# Fluoropyrimidine_Activity <- pathprint_list$`Fluoropyrimidine Activity (Wikipathways)`
-# IL7_down_reg._targets <- pathprint_list$`IL-7 down reg. targets (Netpath)`
-# Heme_Biosynthesis <- pathprint_list$`Heme Biosynthesis (Wikipathways)`
-# SP1_88 <- pathprint_list$`{SP1,88} (Static Module)`
-# Signaling_by_Notch <- pathprint_list$`Signaling by Notch (Reactome)`
-# Ubiquinone_and_other_terpenoidquinone_biosynthesis <- pathprint_list$`Ubiquinone and other terpenoid-quinone biosynthesis (KEGG)`
-# Sulfur_metabolism <- pathprint_list$`Sulfur metabolism (KEGG)`
-# Caffeine_metabolism <- pathprint_list$`Caffeine metabolism (KEGG)`
-# Phototransduction <- pathprint_list$`Phototransduction (KEGG)`
-# Parkinsons_disease <- pathprint_list$`Parkinson's disease (KEGG)`
-# PPP2CA_20 <- pathprint_list$`{PPP2CA,20} (Static Module)`
-# ABL1_15 <- pathprint_list$`{ABL1,15} (Static Module)`
-# Type_II_diabetes_mellitus <- pathprint_list$`Type II diabetes mellitus (KEGG)`
-# Signaling_by_EGFR <- pathprint_list$`Signaling by EGFR (Reactome)`
-# Glucocorticoid_Mineralcorticoid_Metabolism <- pathprint_list$`Glucocorticoid &amp; Mineralcorticoid Metabolism (Wikipathways)`
-# Alzheimers_disease <- pathprint_list$`Alzheimer's disease (KEGG)`
-# Blood_Clotting_Cascade <- pathprint_list$`Blood Clotting Cascade (Wikipathways)`
-# Terpenoid_backbone_biosynthesis <- pathprint_list$`Terpenoid backbone biosynthesis (KEGG)`
-# Signaling_by_GPCR <- pathprint_list$`Signaling by GPCR (Reactome)`
-# 
-# PP_up <- list(IL2_down_reg._targets,Mitochondrial_LCFatty_Acid_BetaOxidation,Vitamin_B12_Metabolism,Vitamin_D_synthesis,BRCA1_28,CD4_14,
-#       SEPT2_21,Fatty_Acid_Biosynthesis,FCGR2B_50,RB1_11,Muscle_contraction,Steroid_Biosynthesis,Glutathione_metabolism,Fat_digestion_and_absorption,
-#       AminoacyltRNA_biosynthesis,VCP_17,Osteoclast_differentiation,Fluoropyrimidine_Activity,IL7_down_reg._targets,Heme_Biosynthesis,SP1_88,
-#       Signaling_by_Notch)
-# PP_down <- list(Ubiquinone_and_other_terpenoidquinone_biosynthesis,Sulfur_metabolism,Caffeine_metabolism,Phototransduction,Parkinsons_disease,
-#       PPP2CA_20,ABL1_15,Type_II_diabetes_mellitus,Signaling_by_EGFR,Glucocorticoid_Mineralcorticoid_Metabolism,Alzheimers_disease,
-#       Blood_Clotting_Cascade,Terpenoid_backbone_biosynthesis,Signaling_by_GPCR)
-# 
-# names(PP_up) <- names
-
 
 #Load file with all genes
 library(hgu133plus2.db)
@@ -217,23 +175,90 @@ y <- read.table(file = "GM+58.txt")
 y <- y$V1
 
 setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/")
-W <- read.csv(file = "BenchmarkGenes2.csv", na.strings = c("", "NA)"))
-W <- as.list(W)
-W<- lapply(W, function(x) x[!is.na(x)])
+B <- read.csv(file = "BenchmarkGenes2.csv", na.strings = c("", "NA)"))
+B <- as.list(B)
+B <- lapply(B, function(x) x[!is.na(x)])
+
+#####
+hyperPathway <-
+  function(genelist, geneset, Nchip) # produces a list of pathways enrichments calculated using the hypergeometric distribution
+  {
+    # Calculate p-values
+    
+    Nsig <- length(genelist)
+    hyper<-as.data.frame(matrix(nrow = length(geneset), ncol = 1))
+    rownames(hyper) <- names(geneset)
+    colnames(hyper) <- c("p-value")	
+    # determine p-value using the hypergeometric distribution, setting p = 1 if overlap = 0
+    
+    for (i in 1:length(geneset)){
+      if (length(intersect(genelist, unlist(geneset[i]))) < 1){
+        hyper[i,1]<-1}
+      
+      else if (length(intersect(genelist, unlist(geneset[i]))) > 0){
+        hyper[i,1]<-phyper(length(intersect(genelist, unlist(geneset[i]))), Nsig, Nchip-Nsig, length(unlist(geneset[i])), lower.tail = FALSE)
+      }
+    }
+    
+    # adjust for multiple testing using Benjamini & Hochberg (fdr) correction
+    hyper[,2]<-p.adjust(hyper[,1], method = "BH")		
+    # Obtain list genes for each pathway
+    
+    overlap <- vector("list", 0)
+    for (i in 1:length(geneset)){
+      temp.overlap <- list(intersect(genelist, unlist(geneset[[i]])))
+      overlap <- append(overlap, temp.overlap)			}
+    
+    names(overlap)<-rownames(hyper)
+    
+    # Count number of list genes and total genes in each pathway
+    
+    for (i in 1:length(geneset)){	
+      hyper[i,3] <- length(overlap[[i]])
+      hyper[i,4] <- length(geneset[[i]])
+    }
+    
+    hyper[,5]<-rownames(hyper)
+    hyper<-cbind((1:length(hyper[,1])), hyper)
+    colnames(hyper)<-c("ID", "P-value", "BHadjP-value", "nGenes", "nPathway", "Name")						
+    return(hyper)
+  } # end of hyperPathway
+#####
+
+
+
+
+
 
 
 # run script
 pathwayEnrichment <- hyperPathway(
-                genelist = up_filter,
-								geneset = X,
+                genelist = down_filter,
+								geneset = B,
 								Nchip = length(allgenes)
 							 )
-setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/")
-write.csv(pathwayEnrichment, file = "pathprint_enrich_up.csv")
+setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/SimilarityNetworkFusion/Microarray_RNAseq/")
+write.csv(pathwayEnrichment, file = "DEG_enrich_down.csv")
 
 
-o2 <- Reduce(intersect, list(up_filter, Pathprint_results$VCP_17))
+o2 <- Reduce(intersect, list(down_filter, X$hsa.miR.4767))
 print(o2)
 write.csv(o2, file = "intersect.csv")
 
 
+
+#As for loop
+df <- data.frame(matrix(ncol=length(B), nrow=length(SNF)))
+for (i in 1:length(B)){
+  pathwayEnrichment <- hyperPathway(
+    genelist = B[[i]],
+    geneset = SNF,
+    Nchip = length(allgenes)
+  )
+  df[,i] <- pathwayEnrichment$`BHadjP-value`
+  colnames(df)[i] <- names(B[i])
+  rownames(df) <- names(SNF)
+}
+
+write.csv(t(df), "BenchmarkEnrichmentTable(t).csv")
+t(df)

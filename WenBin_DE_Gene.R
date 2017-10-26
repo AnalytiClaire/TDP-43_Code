@@ -9,14 +9,14 @@ library(Biobase)
 library(tkWidgets)
 library(plyr)
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/FTD-U.brain/")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GeneExpressionAnalysis/Microarray/FTLD/")
 
 #run program to choose .CEL files from directory
 celfiles <- fileBrowser(textToShow = "Choose CEL files", testFun = hasSuffix("[cC][eE][lL]"))
 #celfiles<-basename(celfiles)
 Data<-ReadAffy(filenames=celfiles) #read in files
 rmaEset<-rma(Data) #normalise using RMA
-analysis.name<-"GRN_FTLD" #Label analysis
+analysis.name<-"FTLD_SP" #Label analysis
 dataMatrixAll<-exprs(rmaEset) #takes expression from normalised expression set
 
 # setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/NormalisedExpressionMatrices/")
@@ -50,8 +50,8 @@ countPdf<-data.frame(ProbeSetID=names(countPl), countP=countPl)
 # annotation<-subset(annotation, subset=(hgnc_symbol !="")) #if no gene symbol, discount
 
 # USING ANNOTATION FILE (if .csv, convert to .txt using excel)
-# annotation.file<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133_Plus_2.na35.annot.csv/HG-U133_Plus_2.na35.annot.txt"
-annotation.file<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133A_2.na35.annot.csv/HG-U133A_2.na35.annot.txt"
+# annotation.file<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133_Plus_2.na35.annot.csv/HG-U133_Plus_2.na35_SHORT.annot.txt"
+annotation.file<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133A_2.na35.annot.csv/HG-U133A_2.na35.annot_SHORT.txt"
 #annotation.file<-"/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/HG-U133A.na35.annot.csv/HG-U133A.na35.annot.txt"
 annotation<-read.table(annotation.file, header = TRUE, row.names=NULL, sep="\t", skip=0, stringsAsFactors=F, quote = "", comment.char="!", fill = TRUE, as.is = TRUE)
 dim(annotation)
@@ -70,7 +70,7 @@ expressionMatrix<-exprs(rmaEset)
 colnames(expressionMatrix)
 
 #this is for matched samples
-Treat<-factor(rep(c("Control", "Patient"),c(8,6)), levels=c("Control", "Patient"))
+Treat<-factor(rep(c("Control", "Patient"),c(8,10)), levels=c("Control", "Patient"))
 design<-model.matrix(~Treat)
 rownames(design)<-colnames(expressionMatrix)
 design
@@ -93,25 +93,31 @@ result<-merge(result, expressionLinear, by.x="ProbeSetID", by.y="ProbeSetID") #m
 result<-merge(annotation, result, by.x="Probe.Set.ID", by.y="ProbeSetID")
 result<-merge(result, countPdf, by.x="Probe.Set.ID", by.y="ProbeSetID")
 
-# setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/DEG_Test2/")
-#write.csv(result, file=paste(analysis.name, "result.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+# setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/SimilarityNetworkFusion/Microarray_RNAseq/")
+# write.csv(result, file=paste(analysis.name, "result.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
 
-result<-subset(result, Gene.Symbol!="") #removes any probes for which there are no gene symbols
-result<-subset(result, subset=(countP>2)) #only takes results that have at least 2 samples with a presence call for a probe
+# result<-subset(result, Gene.Symbol!="") #removes any probes for which there are no gene symbols
+# result<-subset(result, subset=(countP>2)) #only takes results that have at least 2 samples with a presence call for a probe
 
-#### Take median value for gene duplicates ###########
-# result2 <- ddply(result,"Gene.Symbol", numcolwise(median, (result$adj.P.Val)))
-#result3 <- aggregate(result, by=list("Gene.Symbol"), FUN=median)
 
 genesort <- result[order(result$P.Value),]
 
-# setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/noMedian/")
-# write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+genesort$Gene.Symbol <- sapply(strsplit(genesort$Gene.Symbol,"///"), `[`, 1)
 
+genesort$Ensembl <- sapply(strsplit(genesort$Ensembl,"///"), `[`, 1)
 
 # genesort <- result[order(result$adj.P.Val),]
-uniqueresult <- genesort[!duplicated(genesort[,15]),]
-# nrow(uniqueresult)
+uniqueresult <- genesort[!duplicated(genesort[,5]),]
+
+unique_patient <- uniqueresult[,c(5,20:37)]
+
+setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Microarray_AllGenesExpression/")
+write.csv(genesort, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+write.csv(unique_patient, file=paste(analysis.name, "uniquegene_samples.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
+
+
+
+
 # foldchange<-1.1
 # pvalue<-0.05
 # #adj_P_Val<-0.05
@@ -146,115 +152,4 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExp
 genesort <- uniqueresult[order(uniqueresult$adj.P.Val),]
 # uniqueresult <- result[!duplicated(result[,15]),]
 write.csv(uniqueresult, file=paste(analysis.name, "rankeduniqueresult.csv", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
-
-
-# # 
-# setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/non-TDP-43 Data Sets//J-Y_FUS/")
-# topgene <- genesort[1:500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_500.csv"), sep = "")
-# topgene <- genesort[1:1000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_1000.csv"), sep = "")
-# topgene <- genesort[1:1500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_1500.csv"), sep = "")
-# topgene <- genesort[1:2000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_2000.csv"), sep = "")
-# topgene <- genesort[1:2500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_2500.csv"), sep = "")
-# topgene <- genesort[1:3000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_3000.csv"), sep = "")
-# topgene <- genesort[1:3500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_3500.csv"), sep = "")
-# topgene <- genesort[1:4000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_4000.csv"), sep = "")
-# topgene <- genesort[1:4500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_4500.csv"), sep = "")
-# topgene <- genesort[1:5000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_5000.csv"), sep = "")
-# topgene <- genesort[1:5500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_5500.csv"), sep = "")
-# topgene <- genesort[1:6000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_6000.csv"), sep = "")
-# topgene <- genesort[1:6500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_6500.csv"), sep = "")
-# topgene <- genesort[1:7000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_7000.csv"), sep = "")
-# topgene <- genesort[1:7500,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_7500.csv"), sep = "")
-# topgene <- genesort[1:8000,]
-# write.csv(x = topgene, file = paste(analysis.name,"_ap_8000.csv"), sep = "")
-# 
-# 
-# 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# #For ordering by fold change
-# genesort <- uniqueresult[order(uniqueresult$`Fold Change`),]
-# topgene <- genesort[1:500,]
-# 
-# genesort <- uniqueresult[order(-uniqueresult$`Fold Change`),]
-# botgene <- genesort[1:500,]
-# 
-# topFC <- rbind(topgene,botgene)
-# 
-# write.csv(x = topFC, file = "VCP_fc_1000")
-# 
-# genesort <- uniqueresult[order(uniqueresult$`Fold Change`),]
-# topgene <- genesort[1:1000,]
-# 
-# genesort <- uniqueresult[order(-uniqueresult$`Fold Change`),]
-# botgene <- genesort[1:1000,]
-# 
-# topFC <- rbind(topgene,botgene)
-# 
-# write.csv(x = topFC, file = "VCP_fc_2000")
-# 
-# genesort <- uniqueresult[order(uniqueresult$`Fold Change`),]
-# topgene <- genesort[1:1500,]
-# 
-# genesort <- uniqueresult[order(-uniqueresult$`Fold Change`),]
-# botgene <- genesort[1:1500,]
-# 
-# topFC <- rbind(topgene,botgene)
-# 
-# write.csv(x = topFC, file = "VCP_fc_3000")
-# 
-# genesort <- uniqueresult[order(uniqueresult$`Fold Change`),]
-# topgene <- genesort[1:2000,]
-# 
-# genesort <- uniqueresult[order(-uniqueresult$`Fold Change`),]
-# botgene <- genesort[1:2000,]
-# 
-# topFC <- rbind(topgene,botgene)
-# 
-# write.csv(x = topFC, file = "VCP_fc_4000")
-
-
-
-
-
-
-# dir.create(paste("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/DE Genes/CHMP2B/unique"))
-# setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43 Data Sets/DE Genes/CHMP2B/unique")
-# 
-# write.table(siggenes, file=paste(analysis.name," RMA limma siggenes biomart p_", pvalue, "_fold change_", foldchange, ".txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
-# write.table(upsiggenes, file=paste(analysis.name," RMA limma upsiggenes biomart p_", pvalue, "_fold change_", foldchange, ".txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
-# write.table(downsiggenes, file=paste(analysis.name," RMA limma downsiggenes biomart p_", pvalue, "_fold change_", foldchange, ".txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
-# write.table(uniquesiggenes, file=paste(analysis.name,"unique RMA limma siggenes biomart p_", pvalue, "_fold change_", foldchange, ".txt", sep=""), sep="\t", row.names=FALSE, quote = FALSE)
 

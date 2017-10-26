@@ -18,19 +18,19 @@ c9.lcm <- (names(t1))[1:100]
 
 
 
-####CHMP2B_LCM ######
-setwd ("/Users/clairegreen/Documents/PhD/Data Sets/CHMP2B")
-exp_CHMP2B.LCM <- read.csv ("eset_CHMP2B_250615_exprs.csv", header=TRUE)
-row.names (exp_CHMP2B.LCM) <- exp_CHMP2B.LCM[,1]
-exp_CHMP2B.LCM<- exp_CHMP2B.LCM[,2:11]
-
-CHMP2B.LCM_pathprint <- exprs2fingerprint (exp_CHMP2B.LCM, platform = "GPL570", species="human", progressBar=T)
-
-c <- apply (CHMP2B.LCM_pathprint[,1:7], 1,mean )
-d <-  apply (CHMP2B.LCM_pathprint[,8:10], 1,mean )
-t <- d-c
-t1 <- t[order(abs(t), decreasing=T)]
-CHMP2B.lcm <- (names(t1))[1:100]
+# ####CHMP2B_LCM ######
+# setwd ("/Users/clairegreen/Documents/PhD/Data Sets/CHMP2B")
+# exp_CHMP2B.LCM <- read.csv ("eset_CHMP2B_250615_exprs.csv", header=TRUE)
+# row.names (exp_CHMP2B.LCM) <- exp_CHMP2B.LCM[,1]
+# exp_CHMP2B.LCM<- exp_CHMP2B.LCM[,2:11]
+# 
+# CHMP2B.LCM_pathprint <- exprs2fingerprint (exp_CHMP2B.LCM, platform = "GPL570", species="human", progressBar=T)
+# 
+# c <- apply (CHMP2B.LCM_pathprint[,1:7], 1,mean )
+# d <-  apply (CHMP2B.LCM_pathprint[,8:10], 1,mean )
+# t <- d-c
+# t1 <- t[order(abs(t), decreasing=T)]
+# CHMP2B.lcm <- (names(t1))[1:100]
 
 
 

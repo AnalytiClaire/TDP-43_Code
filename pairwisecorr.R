@@ -87,9 +87,6 @@ rownames(p.value) <- colnames(p.value) <- colnames(test)
 toc()
 
 
-
-
-
 ##Only take upper triangle without diagonal (all comparisons are currently doubled)
 ptri <- p.value
 ptri[lower.tri(ptri, diag = TRUE)] <- NA
@@ -115,7 +112,7 @@ rownames(results)<- results$Row.names
 results[,1] <- NULL
 results <- results[order(results$p.vec),]
 
-setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/")
+setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/")
 write.csv(results, "C9_PPI_coexpression.csv")
 
 
