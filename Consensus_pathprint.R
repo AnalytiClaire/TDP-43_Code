@@ -1,32 +1,38 @@
 # ##### Using pathprint to identify common pathways across multiple TDP-43 pathology-containing data sets ####
 # 
 library (pathprint)
+data(list = c("chipframe", "genesets","pathprint.Hs.gs","platform.thresholds", "pluripotents.frame"))
+
 options(stringsAsFactors = FALSE)
 # 
 setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/NormalisedExpressionMatrices/") #set working directory to location of data
  
-# ####C9_LCM ######
-# exp_C9.LCM <- read.csv ("C9eset.csv", header=TRUE, row.names = 1) 
-# pathprint_C9 <- exprs2fingerprint(exp_C9.LCM, platform = "GPL570", species="human", progressBar=T) 
+####C9_LCM ######
+exp_C9.LCM <- read.csv ("C9eset.csv", header=TRUE, row.names = 1)
+pathprint_C9 <- exprs2fingerprint(exp_C9.LCM, platform = "GPL570", species="human", progressBar=TRUE)
 # 
-####CHMP2B ######
+# ####CHMP2B ######
 # pathprint_chmp2b <- read.csv ("CHeset.csv", header=TRUE, row.names = 1)
-# pathprint_chmp2b <- exprs2fingerprint(pathprint_chmp2b, platform = "GPL570", species="human", progressBar=T)
+# pathprint_chmp2b <- exprs2fingerprint(pathprint_chmp2b, platform = "GPL570", species="human", progressBar=TRUE)
 
 # ####sals_lcm###
-# exp_SALS.LCM <- read.csv ("sALSeset.csv", header=TRUE, row.names = 1)
-# pathprint_sals <- exprs2fingerprint (exp_SALS.LCM, platform = "GPL570", species="human", progressBar=T)
-# 
-# 
+exp_SALS.LCM <- read.csv ("sALSeset.csv", header=TRUE, row.names = 1)
+pathprint_sals <- exprs2fingerprint (exp_SALS.LCM, platform = "GPL570", species="human", progressBar=TRUE)
+
 # ####FTLD###
-# exp_FTLD <- read.csv ("FTLDeset.csv", header=TRUE, row.names = 1)
-# pathprint_ftld <- exprs2fingerprint (exp_FTLD, platform = "GPL571", species="human", progressBar=T)
-# 
-# 
-# ####VCP###
-# exp_VCP <- read.csv ("VCPeset.csv", header=TRUE, row.names = 1)
-# pathprint_vcp <- exprs2fingerprint (exp_VCP, platform = "GPL570", species="human", progressBar=T)
-# 
+exp_FTLD <- read.csv ("FTLDeset.csv", header=TRUE, row.names = 1)
+exp_GRN <- exp_FTLD[,9:14]
+exp_sFTLD <- exp_FTLD[,15:24]
+pathprint_ftld <- exprs2fingerprint(exp_FTLD, platform = "GPL571", species="human", progressBar=TRUE)
+pathprint_GRN <- exprs2fingerprint(exp_GRN, platform = "GPL571", species="human", progressBar=TRUE)
+pathprint_sftld <- exprs2fingerprint(exp_sFTLD, platform = "GPL571", species="human", progressBar=TRUE)
+
+
+#
+####VCP###
+exp_VCP <- read.csv ("VCPeset.csv", header=TRUE, row.names = 1)
+pathprint_vcp <- exprs2fingerprint (exp_VCP, platform = "GPL570", species="human", progressBar=T)
+#
 
 library(pathprint)
 
@@ -51,7 +57,7 @@ pat_all_pp <- cbind(pat_C9, pat_sals,pat_ftld, pat_vcp)
 
 
 #Run consensus
-pat_consensus <- data.frame(consensusFingerprint(pat_all_pp, thresh))
+pat_consensus <- data.frame(consensusFingerprint(pathprint_C9, thresh))
 
 #Select control columns
 con_C9 <- pathprint_C9[,1:3]

@@ -110,11 +110,4 @@ write.table(Sig.padj.down.gene, "sig_padj_down_genenames.txt", quote = FALSE, ro
 
 
 
-################################
-####### HEATMAP ################
-################################
-
-
-######
-#### SVA Correcting #####
 

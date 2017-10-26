@@ -2,8 +2,8 @@ setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpressio
 
 C9 <- read.csv("C9_unique.csv")
 C9 <- C9[order(C9$P.Value),]
-CH <- read.csv("CH_unique.csv")
-CH <- CH[order(CH$P.Value),]
+# CH <- read.csv("CH_unique.csv")
+# CH <- CH[order(CH$P.Value),]
 sals <- read.csv("sals_unique.csv")
 sals <- sals[order(sals$P.Value),]
 ftld <- read.csv("ftld_unique.csv")
@@ -81,22 +81,22 @@ INTDOWN_TDP <- Reduce(intersect, list(downC9gene, downSALSgene, downFTLDgene, do
 # write.table(INTDOWN, "intersect_down_1.txt", col.names = F, row.names = F, quote = F)
 
 # cat(INTDOWN, sep = "\n")
-
-upC9FC <- data.frame(row.names = upC9$Gene.Symbol, 
-                     logFC = upC9$logFC)
-upC9FC <- order(upC9FC[row.names(upC9FC),])
-upsalsFC <- data.frame(row.names = upSALS$Gene.Symbol, 
-                     logFC = upSALS$logFC)
-upftldFC <- data.frame(row.names = upFTLD$Gene.Symbol, 
-                     logFC = upFTLD$logFC)
-upvcpFC <- data.frame(row.names = upVCP$Gene.Symbol, 
-                     logFC = upVCP$logFC)
-uppetFC <- data.frame(row.names = upPET$hgnc_symbol, 
-                     logFC = upPET$log2FoldChange)
-upravFC <- data.frame(row.names = upRAV$hgnc_symbol, 
-                     logFC = upRAV$log2FoldChange)
-
-
+# 
+# upC9FC <- data.frame(row.names = upC9$Gene.Symbol, 
+#                      logFC = upC9$logFC)
+# upC9FC <- order(upC9FC[row.names(upC9FC),])
+# upsalsFC <- data.frame(row.names = upSALS$Gene.Symbol, 
+#                      logFC = upSALS$logFC)
+# upftldFC <- data.frame(row.names = upFTLD$Gene.Symbol, 
+#                      logFC = upFTLD$logFC)
+# upvcpFC <- data.frame(row.names = upVCP$Gene.Symbol, 
+#                      logFC = upVCP$logFC)
+# uppetFC <- data.frame(row.names = upPET$hgnc_symbol, 
+#                      logFC = upPET$log2FoldChange)
+# upravFC <- data.frame(row.names = upRAV$hgnc_symbol, 
+#                      logFC = upRAV$log2FoldChange)
+# 
+# 
 
 
 ############################################################################
@@ -109,8 +109,8 @@ FUS <- read.csv("FUSrankeduniqueresult.csv")
 FUS <- FUS[order(FUS$P.Value),]
 SOD1 <- read.csv("SOD1rankeduniqueresult.csv")
 SOD1 <- SOD1[order(SOD1$P.Value),]
-CBFTLD <- read.csv("CBFTLDrankeduniqueresult.csv")
-CBFTLD <- CBFTLD[order(CBFTLD$P.Value),]
+# CBFTLD <- read.csv("CBFTLDrankeduniqueresult.csv")
+# CBFTLD <- CBFTLD[order(CBFTLD$P.Value),]
 
 #### UP ####
 thresh <- 1
@@ -118,8 +118,8 @@ thresh <- 1
 upFUS <- subset(FUS, FUS$Fold.Change >= thresh)
 upFUSgene <- upFUS$Gene.Symbol
 
-upCBFTLD <- subset(CBFTLD, CBFTLD$Fold.Change >= thresh)
-upCBFTLDgene <- upCBFTLD$Gene.Symbol
+# upCBFTLD <- subset(CBFTLD, CBFTLD$Fold.Change >= thresh)
+# upCBFTLDgene <- upCBFTLD$Gene.Symbol
 
 upSOD1 <- subset(SOD1, SOD1$Fold.Change >= thresh)
 upSOD1gene <- upSOD1$Gene.Symbol
@@ -135,8 +135,8 @@ downFUSgene <- downFUS$Gene.Symbol
 downSOD1 <- subset(SOD1, SOD1$Fold.Change <= thresh)
 downSOD1gene <- downSOD1$Gene.Symbol
 
-downCBFTLD <- subset(CBFTLD, CBFTLD$Fold.Change <= thresh)
-downCBFTLDgene <- downCBFTLD$Gene.Symbol
+# downCBFTLD <- subset(CBFTLD, CBFTLD$Fold.Change <= thresh)
+# downCBFTLDgene <- downCBFTLD$Gene.Symbol
 
 INTDOWN_non <- Reduce(intersect, list(downSOD1gene, downFUSgene))
 
@@ -151,6 +151,7 @@ downremove <- Reduce(intersect, list(INTDOWN_TDP, INTDOWN_non))
 ################ REMOVE COMMON GENES ######################
 resultsup <- subset(INTUP_TDP, !(INTUP_TDP %in% upremove))
 resultsdown <- subset(INTDOWN_TDP, !(INTDOWN_TDP %in% downremove))
+results <- c(resultsup, resultsdown)
 
 # setwd("/users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/")
 # write.table(resultsup, "Filtered_up_genes_cbftld.txt", quote = F, row.names = F, col.names = F)
