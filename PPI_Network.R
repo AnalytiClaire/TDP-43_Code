@@ -17,7 +17,6 @@ setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/GRN")
 write.csv(genelist_Uniprot, "martback.csv", row.names = F)
 ###### IDENTIFY MISSING GENES AND FIND UNIPROT CODES FOR THEM. NB SOME GENES MAY NOT BE PROTEIN CODING#####
 
-
 mart_table <- read.csv("martback.csv", header = T) #A table with the uniprot codes for the 285 DEGs
 uniprot_gene <- mart_table$uniprotswissprot
 
@@ -38,8 +37,8 @@ write.csv(DEG_PPI, "DEG_PPI.csv", row.names = F)
 # mart_back_V2 <- getBM(attributes =c("hgnc_symbol", "uniprotswissprot"), filters="uniprotswissprot", values=V2,  mart=mart)
 
 
-### Biomart reordered the genes when converting so I used the online tool bioDBnet (https://biodbnet-abcc.ncifcrf.gov/db/db2db.php)
-# using the UniProt accessions as input to get the gene symbols.
+### Biomart reorders the genes when converting so I used the online tool bioDBnet (https://biodbnet-abcc.ncifcrf.gov/db/db2db.php)
+# using the UniProt accessions as input and selecting "Gene Symbol". MAKE SURE YOU DO NOT REMOVE DUPLICATE INPUT VALUES
 
 V1_table <- read.table("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/GRN/V1_bioDBnet_db2db_170526051436_1018514005.txt", header = T)
 V2_table <- read.table("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/GRN/V2_bioDBnet_db2db_170526051450_1047900660.txt", header = T)

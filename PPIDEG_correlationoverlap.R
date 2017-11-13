@@ -256,8 +256,9 @@ write.csv(Group1SD_cytoscape, "Group1SD_mean_cytoscape.csv", quote = F)
 #### Overlap with DEGs ####
 DEGs <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/Filtered_upanddown.txt")
 ALSOD <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/ALSoDgenes.txt")
+Disgenes <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/TDP-43genes.txt")
 
-overlap <- Reduce(intersect, list(ALSOD, Group1Genes))
+overlap <- Reduce(intersect, list(Disgenes, Group1Genes))
 
 
 #### Repeat for controls ####

@@ -296,7 +296,7 @@ ravoverlap <- Reduce(intersect, list(rav1000,test))
 ravoverlap
 
 
-setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/PH_Fibroblasts/Cyt.v.Nuc")
+setwd("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Collaborations/PH_Fibroblasts/Cyt.v.Nuc/")
 down1 <- readLines("cyt_nuc_con_sig_padj_down_genenames.txt")
 down2 <- readLines("nuc_cyt_pat_sig_padj_down_genenames.txt")
 

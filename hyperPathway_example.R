@@ -106,27 +106,7 @@ setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Net
 degppi <- read.table("DEG_PPI_Genes.txt")
 degppi <- degppi$V1
 
-
-# ####Load full gwas datasets ####
-# setwd(dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Data/GWAS/")
-# 
-# GCEN <- read.csv("ALS.gwascentral.martquery_0301121419_683.csv")
-# 
-# three <- GCEN[(GCEN$p.value <= 0.001),]
-# 
-# four <- GCEN[(GCEN$p.value <= 0.0001),]
-# 
-# five <- GCEN[(GCEN$p.value <= 0.00001),]
-# 
-# six <- GCEN[(GCEN$p.value <= 0.00001),]
-
-# load script and geneset file
-# The geneset is a list of pathways including
-## Reactome high level processes
-## Pathways from KEGG and Wikipathways
-## Netpath transcriptionally regulated gene sets
-## Lincoln Stein's static modules
-# format is Entrez Gene
+group1.1 <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/ControlGroup1.1/Group1.1Genes.txt")
 
 setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/Pathprint/Pathprint 25.04.16/hyperPathway/All.Pathways/PathprintPathways(29)/")
 
@@ -233,7 +213,7 @@ hyperPathway <-
 
 # run script
 pathwayEnrichment <- hyperPathway(
-                genelist = down_filter,
+                genelist = group1.1,
 								geneset = B,
 								Nchip = length(allgenes)
 							 )
@@ -241,7 +221,7 @@ setwd (dir = "/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Ne
 write.csv(pathwayEnrichment, file = "DEG_enrich_down.csv")
 
 
-o2 <- Reduce(intersect, list(down_filter, X$hsa.miR.4767))
+o2 <- Reduce(intersect, list(group1.1, B$Taylor))
 print(o2)
 write.csv(o2, file = "intersect.csv")
 
