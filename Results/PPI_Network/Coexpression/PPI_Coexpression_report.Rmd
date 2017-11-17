@@ -482,3 +482,282 @@ I then visualised the results in cytoscape. Yellow nodes are canonical disease g
 ```{r, out.width = "900px", out.height = "700px", echo=F}
 knitr::include_graphics("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/PPI_mutgenes/ALL_PPI.pdf")
 ```
+
+
+#CORRECTION AFTER BUG ##
+
+There was a bug in the code that meant that some of the genes that came out with common positive or negative correlations actually weren't. I have corrected this using the following code. 
+
+Instead of:
+
+```{r, eval=F}
+C9merge <- merge(Group1, C9_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
+sALSmerge <- merge(Group1, sALS_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
+FTLDmerge <- merge(Group1, FTLD_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
+VCPmerge <- merge(Group1, VCP_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
+PETmerge <- merge(Group1, PET_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
+RAVmerge <- merge(Group1, RAV_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
+```
+
+I used:
+
+```{r, eval=F}
+#Merge into one table. First data is read in, but because the genes have been separated into two columns
+#we want them back in one column so that they can be cross referenced correctly. It just so happens that to match
+#the cytoscape format, we have to put the gene in the second column first and first column second.
+
+setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/")
+C9_cor.5 <- read.csv("C9_cor.5_cytoscape.csv")
+C9_cor.5$combo <- paste(C9_cor.5$Gene2,":",C9_cor.5$Gene1, sep = "")
+
+sALS_cor.5 <-read.csv("sALS_cor.5_cytoscape.csv")
+sALS_cor.5$combo <- paste(sALS_cor.5$Gene2,":",sALS_cor.5$Gene1, sep = "")
+
+FTLD_cor.5 <-read.csv("FTLD_cor.5_cytoscape.csv")
+FTLD_cor.5$combo <- paste(FTLD_cor.5$Gene2,":",FTLD_cor.5$Gene1, sep = "")
+
+VCP_cor.5 <-read.csv("VCP_cor.5_cytoscape.csv")
+VCP_cor.5$combo <- paste(VCP_cor.5$Gene2,":",VCP_cor.5$Gene1, sep = "")
+
+PET_cor.5 <-read.csv("PET_cor.5_cytoscape.csv")
+PET_cor.5$combo <- paste(PET_cor.5$Gene2,":",PET_cor.5$Gene1, sep = "")
+
+RAV_cor.5 <-read.csv("RAV_cor.5_cytoscape.csv")
+RAV_cor.5$combo <- paste(RAV_cor.5$Gene2,":",RAV_cor.5$Gene1, sep = "")
+
+
+
+Group1 <- read.csv("MergedNetworkdefaultedgeNEW.csv")
+Group2 <- read.csv("SubnetworkEdgeInfo.csv")
+
+C9merge <- merge(Group2, C9_cor.5, by.x = "X", by.y = "combo")
+sALSmerge <- merge(Group2, sALS_cor.5, by.x = "X", by.y = "combo")
+FTLDmerge <- merge(Group2, FTLD_cor.5, by.x = "X", by.y = "combo")
+VCPmerge <- merge(Group2, VCP_cor.5, by.x = "X", by.y = "combo")
+PETmerge <- merge(Group2, PET_cor.5, by.x = "X", by.y = "combo")
+RAVmerge <- merge(Group2, RAV_cor.5, by.x = "X", by.y = "combo")
+
+#Original module
+# Group1 <- read.csv("MergedNetworkdefaultedgeNEW.csv")
+#Recalculated module (CORRECT VERSION)
+Group2 <- read.csv("SubnetworkEdgeInfo.csv")
+
+C9merge <- merge(Group2, C9_cor.5, by.x = "X", by.y = "combo")
+sALSmerge <- merge(Group2, sALS_cor.5, by.x = "X", by.y = "combo")
+FTLDmerge <- merge(Group2, FTLD_cor.5, by.x = "X", by.y = "combo")
+VCPmerge <- merge(Group2, VCP_cor.5, by.x = "X", by.y = "combo")
+PETmerge <- merge(Group2, PET_cor.5, by.x = "X", by.y = "combo")
+RAVmerge <- merge(Group2, RAV_cor.5, by.x = "X", by.y = "combo")
+
+Group1Expr <- data.frame(row.names = C9merge$name,
+                         C9 = C9merge$reg.mat.y,
+                         sALS = sALSmerge$reg.mat.y,
+                         FTLD = FTLDmerge$reg.mat.y,
+                         VCP = VCPmerge$reg.mat.y,
+                         PET = PETmerge$reg.mat.y,
+                         RAV = RAVmerge$reg.mat.y)
+
+Group1up <- subset(Group1Expr, (Group1Expr$C9 > 0.5 &
+                                  Group1Expr$sALS > 0.5 &
+                                  Group1Expr$FTLD > 0.5 &
+                                  Group1Expr$VCP > 0.5 &
+                                  Group1Expr$PET > 0.5 &
+                                  Group1Expr$RAV > 0.5))
+
+Group1down <- subset(Group1Expr, (Group1Expr$C9 < -0.5 &
+                                    Group1Expr$sALS < -0.5 &
+                                    Group1Expr$FTLD < -0.5 &
+                                    Group1Expr$VCP < -0.5 &
+                                    Group1Expr$PET < -0.5 &
+                                    Group1Expr$RAV < -0.5))
+
+Group1samedir <- rbind(Group1up, Group1down)
+Group1samedir$corMean <- rowMeans(Group1samedir, na.rm = FALSE, dims = 1)
+write.csv(Group1samedir, "CORRECTEDG1_samedir_mean.csv", quote = F)
+```
+
+This correction left a module of 72 genes with 95 edges
+
+```{r, out.width = "900px", out.height = "700px", echo=F}
+knitr::include_graphics("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/RMETHOD.pdf")
+```
+
+## Running the method in R
+
+Now that I had fixed the issue in the Cytoscape method, I needed to generate the same experiment but purely run in R code. This was relatively straightforward, I had to read in the correlation information with the combined "Gene1:Gene2" column (hence "combo"), and then find which rows within this column were present in all 6 datasets (Commonedge). I had double checked that the Gene ordering was correct in each dataset, as intersect requires an exact string match. 
+
+I then subsetted the original table by the common rows, leaving 6 tables with identical rows. I ordered them alphabetically so that when I combined them, they would be identical. I did try to use merge to do this but it turned out to be way more complicated and messed with the formatting of the columns when they came out the other end. 
+
+Once this Table was created (rownames are the gene relationships, columns are each of the Rho values corresponding to that relationship in each dataset) I could index out the rows that were either all positively correlated or all negatively correlated. This left 120 positively correlated gene-gene relationships, and 16 negatively correlated relationships.
+
+```{r, eval=F}
+setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/")
+C9_cor.5 <- read.csv("C9_cor.5_cytoscape_combo.csv")
+sALS_cor.5 <-read.csv("sALS_cor.5_cytoscape_combo.csv")
+FTLD_cor.5 <-read.csv("FTLD_cor.5_cytoscape_combo.csv")
+VCP_cor.5 <-read.csv("VCP_cor.5_cytoscape_combo.csv")
+PET_cor.5 <-read.csv("PET_cor.5_cytoscape_combo.csv")
+RAV_cor.5 <-read.csv("RAV_cor.5_cytoscape_combo.csv")
+
+Commonedge <- Reduce(intersect, list(C9_cor.5$combo, sALS_cor.5$combo, FTLD_cor.5$combo,
+                                     VCP_cor.5$combo, PET_cor.5$combo, RAV_cor.5$combo))
+
+
+#Subset each dataset with these common names so they are all the same size
+C9_CE <- subset(C9_cor.5, C9_cor.5$combo %in% Commonedge)
+C9_CE <- C9_CE[order(C9_CE$combo),]
+sALS_CE <- subset(sALS_cor.5, sALS_cor.5$combo %in% Commonedge)
+sALS_CE <- sALS_CE[order(sALS_CE$combo),]
+FTLD_CE <- subset(FTLD_cor.5, FTLD_cor.5$combo %in% Commonedge)
+FTLD_CE <- FTLD_CE[order(FTLD_CE$combo),]
+VCP_CE <- subset(VCP_cor.5, VCP_cor.5$combo %in% Commonedge)
+VCP_CE <- VCP_CE[order(VCP_CE$combo),]
+PET_CE <- subset(PET_cor.5, PET_cor.5$combo %in% Commonedge)
+PET_CE <- PET_CE[order(PET_CE$combo),]
+RAV_CE <- subset(RAV_cor.5, RAV_cor.5$combo %in% Commonedge)
+RAV_CE <- RAV_CE[order(RAV_CE$combo),]
+
+
+
+CommonGroup <- data.frame(row.names = C9_CE$combo,
+                         C9 = C9_CE$reg.mat,
+                         sALS = sALS_CE$reg.mat,
+                         FTLD = FTLD_CE$reg.mat,
+                         VCP = VCP_CE$reg.mat,
+                         PET = PET_CE$reg.mat,
+                         RAV = RAV_CE$reg.mat)
+
+
+CG_conserved_up <- CommonGroup[apply(CommonGroup, MARGIN = 1, function(x) all(x > 0)), ]
+CG_conserved_down <- CommonGroup[apply(CommonGroup, MARGIN = 1, function(x) all(x < 0)), ]
+
+CG_samedir <- rbind(CG_conserved_up, CG_conserved_down)
+CG_samedir$corMean <- rowMeans(CG_samedir, na.rm = FALSE, dims = 1)
+write.csv(CG_samedir, "RMETHOD_samedir_mean.csv", quote = F)
+```
+
+At first I was confused that there were more relationships than were reported using the cytoscape method, until I realised that there was the further step of taking just the larger module of the 72 genes and 95 relationships within that result. The networks are identical, which is good support for the method.
+
+```{r, out.width = "900px", out.height = "700px", echo=F}
+knitr::include_graphics("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/RMETHOD_wholegroup.csv.pdf")
+```
+## Control calculations
+The control results are the same as above
+
+##Relationship with known disease genes
+As the network is now slightly smaller, I had to re-run the previous analyses. First of all, we no longer have ELP3 as one of the diseased genes in the module. Secondly I re-ran the analysis for PPI interaction between the nugget and known disease genes that can cause TDP-43 pathology.
+
+```{r, out.width = "900px", out.height = "700px", echo=F}
+knitr::include_graphics("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/disgene_cor_PPI.pdf")
+```
+
+Blue genes: Common Coexpression Module   
+Yellow genes: Disease genes   
+Pink genes: Both in Coexpression Module and Disease Gene   
+Edges: PPI relationships   
+Red Edges: Relationships between coexpression genes and disease genes   
+
+## Merging with coexpression module network
+
+This helps to see how the PPI module relates to the coexpression module.
+```{r, out.width = "900px", out.height = "700px", echo=F}
+knitr::include_graphics("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/Union_Nugget+PPI.pdf")
+```
+
+Blue genes: Common Coexpression Module   
+Yellow genes: Disease genes   
+Pink genes: Both in Coexpression Module and Disease Gene   
+Coloured Edges: Coexpression (red positive, blue negative)   
+Black Edges: Protein-Protein interaction   
+
+## Enrichment
+
+Enrichment of certain gene lists will help support the role of this module as important in TDP-43 pathology and neurodegeneration in general. Enrichment is calculated as follows:
+
+1) Select a random set of genes of the same length as the PPI network (2550)
+2) Of that set, select a random set of genes the same length as the module (72)
+3) Find the intersect of the random module and the list of interest
+4) Store overlap
+5) Repeat 100,000 times
+6) Calculate number of times random set has higher overlap than your experiment and divide by 100,000 to get p value
+
+```{r, eval=F}
+###Random permutations for Differential Expression##
+options(scipen=999)
+
+DEGPPI <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/DEG_PPI_Genes_nofib.txt")
+DEGs <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/Filtered_upanddown.txt")
+ALSOD <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/ALSoDgenes.txt")
+Disgenes <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/TDP-43genes.txt")
+Taylor <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/Taylor_TDP43.txt")
+nugget <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/NuggetGenes.txt")
+
+#Load file with all genes
+library(hgu133plus2.db)
+sym <- hgu133plus2SYMBOL
+sym1 <- mappedkeys(sym)
+sym2 <- as.list (sym[c(sym1)]) 
+sym3 <- data.frame (sym2)
+sym.probes <- names (sym2)
+sym.genes <- sym3[1,]
+
+sym.genes <- t(sym.genes)
+
+allgenes <- sym.genes[!duplicated(sym.genes),]
+
+
+setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/")
+C9_cor.5 <- read.csv("C9_cor.5_cytoscape.csv")
+sALS_cor.5 <-read.csv("sALS_cor.5_cytoscape.csv")
+FTLD_cor.5 <-read.csv("FTLD_cor.5_cytoscape.csv")
+VCP_cor.5 <-read.csv("VCP_cor.5_cytoscape.csv")
+PET_cor.5 <-read.csv("PET_cor.5_cytoscape.csv")
+RAV_cor.5 <-read.csv("RAV_cor.5_cytoscape.csv")
+
+#Find length of overlap
+length(intersect(nugget, Taylor))
+
+#indicate the number of overlapping genes identified by DE analysis
+test <- 4
+samplenum <- 72
+samplelist <- Taylor
+
+m=100000 #number of repetitions 
+r <- c(1:m) #store repetition numbers in vector "r"
+
+
+for (j in 1:m){
+  PPIsample <- sample(allgenes, size=2550, replace=FALSE)
+  modulesample <- sample(PPIsample, size = samplenum, replace = FALSE)
+  random <- Reduce(intersect, list(modulesample, samplelist))
+  r[j] <- length(random)
+}
+
+test1 <- which(r > test)  # count number of times r is larger than test value
+result <- sum((length(test1)+1))/(m+1) # calculate P value
+result
+mean(r)
+range(r)
+```
+
+###TDP-43 PPI genes (Taylor)
+Number of genes in module = 4
+
+p = 0.001169988   
+mean of random overlap = 0.78322   
+range of random overlap = 0-7   
+
+```{r, out.width = "900px", out.height = "700px", echo=F}
+knitr::include_graphics("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/TaylorOverlap.png")
+```
+
+### Disease genes
+Number of genes in module = 2
+
+p = 0.009109909   
+mean of random overlap = 0.42512   
+range of random overlap = 0-6   
+
+```{r, out.width = "900px", out.height = "700px", echo=F}
+knitr::include_graphics("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/DisgeneOverlap.png")
+```
