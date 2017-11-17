@@ -6,6 +6,7 @@ DEGs <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/G
 ALSOD <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/ALSoDgenes.txt")
 Disgenes <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/TDP-43genes.txt")
 Taylor <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/Taylor_TDP43.txt")
+nugget <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/NuggetGenes.txt")
 
 #Load file with all genes
 library(hgu133plus2.db)
@@ -29,10 +30,13 @@ VCP_cor.5 <-read.csv("VCP_cor.5_cytoscape.csv")
 PET_cor.5 <-read.csv("PET_cor.5_cytoscape.csv")
 RAV_cor.5 <-read.csv("RAV_cor.5_cytoscape.csv")
 
+#Find length of overlap
+length(intersect(nugget, Taylor))
+
 #indicate the number of overlapping genes identified by DE analysis
 test <- 4
-samplenum <- 104
-samplelist <- DEGPPI
+samplenum <- 72
+samplelist <- Taylor
 
 m=100000 #number of repetitions 
 r <- c(1:m) #store repetition numbers in vector "r"
@@ -40,13 +44,13 @@ r <- c(1:m) #store repetition numbers in vector "r"
 
 for (j in 1:m){
   PPIsample <- sample(allgenes, size=2550, replace=FALSE)
-  modulesample <- sample(PPIsample, size = 104, replace = FALSE)
-  random <- Reduce(intersect, list(modulesample, Taylor))
+  modulesample <- sample(PPIsample, size = samplenum, replace = FALSE)
+  random <- Reduce(intersect, list(modulesample, samplelist))
   r[j] <- length(random)
 }
 
 test1 <- which(r > test)  # count number of times r is larger than test value
-result <- (length(test1)/m) # calculate P value
+result <- sum((length(test1)+1))/(m+1) # calculate P value
 result
 mean(r)
 range(r)

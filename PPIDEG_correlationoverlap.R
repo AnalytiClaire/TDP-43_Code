@@ -144,85 +144,79 @@ PET_cor.5 <- PET_cor[PET_cor$reg.mat > 0.5 | PET_cor$reg.mat < -0.5,]
 RAV_cor.5 <- RAV_cor[RAV_cor$reg.mat > 0.5 | RAV_cor$reg.mat < -0.5,]
 
 setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/")
-write.csv(C9_cor.5, "C9_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(sALS_cor.5, "sALS_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(FTLD_cor.5, "FTLD_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(VCP_cor.5, "VCP_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(PET_cor.5, "PET_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(RAV_cor.5, "RAV_cor.5_cytoscape.csv", row.names = F, quote = F)
-
-
-
-# ### By significance
-# C9_sig <- C9_cor[C9_cor$p.adj < 0.05,]
-# 
-# sALS_sig <- sALS_cor[sALS_cor$p.adj < 0.05,]
-# 
-# FTLD_sig <- FTLD_cor[FTLD_cor$p.adj < 0.05,]
-# 
-# VCP_sig <- VCP_cor[VCP_cor$p.adj < 0.05,]
-# 
-# PET_sig <- PET_cor[PET_cor$p.adj < 0.05,]
-# 
-# RAV_sig <- RAV_cor[RAV_cor$p.adj < 0.05,]
-# 
-# ### By a specific number of rows
-# C9_top <- C9_cor[1:100000,]
-# write.csv(C9_top, "C9_100000_cytoscape.csv", row.names = F, quote = F)
-# 
-# sALS_top <- sALS_cor[1:100000,]
-# sALS_top$Gene1 <- as.character(lapply(strsplit(as.character(sALS_top$X), "\\:"), "[", 2))
-# sALS_top$Gene2 <- as.character(lapply(strsplit(as.character(sALS_top$X), "\\:"), "[", 1))
-# sALS_top <- sALS_top[,c(5,6,2,3,4)]
-# write.csv(sALS_top, "sALS_100000_cytoscape.csv", row.names = F, quote = F)
+write.csv(C9_cor.5, "C9_cor.5_cytoscape_combo.csv", row.names = F, quote = F)
+write.csv(sALS_cor.5, "sALS_cor.5_cytoscape_combo.csv", row.names = F, quote = F)
+write.csv(FTLD_cor.5, "FTLD_cor.5_cytoscape_combo.csv", row.names = F, quote = F)
+write.csv(VCP_cor.5, "VCP_cor.5_cytoscape_combo.csv", row.names = F, quote = F)
+write.csv(PET_cor.5, "PET_cor.5_cytoscape_combo.csv", row.names = F, quote = F)
+write.csv(RAV_cor.5, "RAV_cor.5_cytoscape_combo.csv", row.names = F, quote = F)
 
 
 #Investigating how cytoscape merges edges
+# 
+# setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/")
+# C9_cor.5 <- read.csv("C9_cor.5_cytoscape.csv")
+# sALS_cor.5 <-read.csv("sALS_cor.5_cytoscape.csv")
+# FTLD_cor.5 <-read.csv("FTLD_cor.5_cytoscape.csv")
+# VCP_cor.5 <-read.csv("VCP_cor.5_cytoscape.csv")
+# PET_cor.5 <-read.csv("PET_cor.5_cytoscape.csv")
+# RAV_cor.5 <-read.csv("RAV_cor.5_cytoscape.csv")
+
+Group2 <- read.csv("SubnetworkEdgeInfo.csv")
+
+C9merge <- merge(Group2, C9_cor.5, by.x = "X", by.y = "combo")
+sALSmerge <- merge(Group2, sALS_cor.5, by.x = "X", by.y = "combo")
+FTLDmerge <- merge(Group2, FTLD_cor.5, by.x = "X", by.y = "combo")
+VCPmerge <- merge(Group2, VCP_cor.5, by.x = "X", by.y = "combo")
+PETmerge <- merge(Group2, PET_cor.5, by.x = "X", by.y = "combo")
+RAVmerge <- merge(Group2, RAV_cor.5, by.x = "X", by.y = "combo")
+
+#Save common module as edge file and split gene names into two columns
+
+#Merge into one table. First data is read in, but because the genes have been separated into two columns
+#we want them back in one column so that they can be cross referenced correctly. It just so happens that to match
+#the cytoscape format, we have to put the gene in the second column first and first column second.
 
 setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/")
 C9_cor.5 <- read.csv("C9_cor.5_cytoscape.csv")
+C9_cor.5$combo <- paste(C9_cor.5$Gene2,":",C9_cor.5$Gene1, sep = "")
+
 sALS_cor.5 <-read.csv("sALS_cor.5_cytoscape.csv")
+sALS_cor.5$combo <- paste(sALS_cor.5$Gene2,":",sALS_cor.5$Gene1, sep = "")
+
 FTLD_cor.5 <-read.csv("FTLD_cor.5_cytoscape.csv")
+FTLD_cor.5$combo <- paste(FTLD_cor.5$Gene2,":",FTLD_cor.5$Gene1, sep = "")
+
 VCP_cor.5 <-read.csv("VCP_cor.5_cytoscape.csv")
+VCP_cor.5$combo <- paste(VCP_cor.5$Gene2,":",VCP_cor.5$Gene1, sep = "")
+
 PET_cor.5 <-read.csv("PET_cor.5_cytoscape.csv")
+PET_cor.5$combo <- paste(PET_cor.5$Gene2,":",PET_cor.5$Gene1, sep = "")
+
 RAV_cor.5 <-read.csv("RAV_cor.5_cytoscape.csv")
+RAV_cor.5$combo <- paste(RAV_cor.5$Gene2,":",RAV_cor.5$Gene1, sep = "")
 
-# Group1 <- read.csv("Mod1defaultedge.csv")
-# # Group2 <- read.csv("Group1defaultedge.csv")
-# 
-# 
-# subset(C9_cor.5, c("G1", "G2") %in% Group1[c("G1", "G2")])
-# 
-# # test <- merge(Group1, C9_cor.5, by.x = c("G1", "G2"), by.y = c("G1", "G2"))
-# C9merge <- merge(Group1, C9_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-# sALSmerge <- merge(Group1, sALS_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-# FTLDmerge <- merge(Group1, FTLD_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-# VCPmerge <- merge(Group1, VCP_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-# PETmerge <- merge(Group1, PET_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-# RAVmerge <- merge(Group1, RAV_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
 
-C9merge <- read.csv("C9_Mod1defaultedge.csv")
-sALSmerge <- read.csv("sALS_Mod1defaultedge.csv")
-FTLDmerge <- read.csv("FTLD_Mod1defaultedge.csv")
-VCPmerge <- read.csv("VCP_Mod1defaultedge.csv")
-PETmerge <- read.csv("PET_Mod1defaultedge.csv")
-RAVmerge <- read.csv("RAV_Mod1defaultedge.csv")
+#Original module
+# Group1 <- read.csv("MergedNetworkdefaultedgeNEW.csv")
+#Recalculated module (CORRECT VERSION)
+Group2 <- read.csv("SubnetworkEdgeInfo.csv")
+
+C9merge <- merge(Group2, C9_cor.5, by.x = "X", by.y = "combo")
+sALSmerge <- merge(Group2, sALS_cor.5, by.x = "X", by.y = "combo")
+FTLDmerge <- merge(Group2, FTLD_cor.5, by.x = "X", by.y = "combo")
+VCPmerge <- merge(Group2, VCP_cor.5, by.x = "X", by.y = "combo")
+PETmerge <- merge(Group2, PET_cor.5, by.x = "X", by.y = "combo")
+RAVmerge <- merge(Group2, RAV_cor.5, by.x = "X", by.y = "combo")
+
 
 Group1Expr <- data.frame(row.names = C9merge$name,
-                         C9 = C9merge$reg.mat,
-                         sALS = sALSmerge$reg.mat,
-                         FTLD = FTLDmerge$reg.mat,
-                         VCP = VCPmerge$reg.mat,
-                         PET = PETmerge$reg.mat,
-                         RAV = RAVmerge$reg.mat)
-Group1Expr <- merge(Group1Expr, Group1, by.x = 0, by.y = "name")
-Group1Expr <- Group1Expr[,c(1,12,2,3,4,5,6,7)]
-
-# write.csv(Group1Expr, "Commonexpression.csv",quote = F, row.names = F)
-
-### Taking edges with consistent correlation ###
-
-Group1Expr <- read.csv("Commonexpression.csv")
+                         C9 = C9merge$reg.mat.y,
+                         sALS = sALSmerge$reg.mat.y,
+                         FTLD = FTLDmerge$reg.mat.y,
+                         VCP = VCPmerge$reg.mat.y,
+                         PET = PETmerge$reg.mat.y,
+                         RAV = RAVmerge$reg.mat.y)
 
 Group1up <- subset(Group1Expr, (Group1Expr$C9 > 0.5 &
                                   Group1Expr$sALS > 0.5 &
@@ -232,26 +226,15 @@ Group1up <- subset(Group1Expr, (Group1Expr$C9 > 0.5 &
                                   Group1Expr$RAV > 0.5))
 
 Group1down <- subset(Group1Expr, (Group1Expr$C9 < -0.5 &
-                                  Group1Expr$sALS < -0.5 &
-                                  Group1Expr$FTLD < -0.5 &
-                                  Group1Expr$VCP < -0.5 &
-                                  Group1Expr$PET < -0.5 &
-                                  Group1Expr$RAV < -0.5))
-
+                                    Group1Expr$sALS < -0.5 &
+                                    Group1Expr$FTLD < -0.5 &
+                                    Group1Expr$VCP < -0.5 &
+                                    Group1Expr$PET < -0.5 &
+                                    Group1Expr$RAV < -0.5))
 
 Group1samedir <- rbind(Group1up, Group1down)
-# rownames(Group1samedir) <-Group1samedir$Row.names
-# Group1samedir[,1:2] <- NULL
-
 Group1samedir$corMean <- rowMeans(Group1samedir, na.rm = FALSE, dims = 1)
-write.csv(Group1samedir, "G1_samedir_mean.csv", quote = F)
-
-Network <- data.frame(Genes = C9merge$X,
-                     Group1samedir$corMean)
-
-
-Group1SD_cytoscape <- merge(Group1samedir, Group1, by.x = 0, by.y = "name")
-write.csv(Group1SD_cytoscape, "Group1SD_mean_cytoscape.csv", quote = F)
+write.csv(Group1samedir, "CORRECTEDG1_samedir_mean.csv", quote = F)
 
 #### Overlap with DEGs ####
 DEGs <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/Filtered_upanddown.txt")
@@ -264,7 +247,7 @@ overlap <- Reduce(intersect, list(Disgenes, Group1Genes))
 #### Repeat for controls ####
 
 #Read in network nodes
-Group1Genes <- readLines("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/Group1.1Genes.txt")
+Group1Genes <- readLines("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/NuggetGenes.txt")
 
 #Extract PPI network genes from each dataset
 C9 <- read.csv("~/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/Microarray_AllGenesExpression/C9uniquegene_samples.csv", row.names = 1)
@@ -299,95 +282,72 @@ RAV <- subset(RAV, rownames(RAV) %in% Group1Genes)
 library(tictoc)
 library(gdata)
 
-##For loop for generating regression values and p values
-CorExprMat <- t(RAV)
-
-test <- CorExprMat
-
-reg <- matrix(0, ncol(test), ncol(test))
-p.value <- matrix(0, ncol(test), ncol(test))
-
-tic()
-for (i in 1:ncol(test)){
-  for (j in 1:ncol(test)){
-    reg[i,j] <- cor.test(test[,i], test[,j], method = "spearman")$estimate
-  }}
-
-rownames(reg) <- colnames(reg) <- colnames(test)
-toc()
-
-tic()
-for (i in 1:ncol(test)){
-  for (j in 1:ncol(test)){
-    p.value[i,j] <- cor.test(test[,i], test[,j], method = "spearman")$p.value
-  }}
-
-rownames(p.value) <- colnames(p.value) <- colnames(test)
-toc()
-
-
-##Only take upper triangle without diagonal (all comparisons are currently doubled)
-ptri <- p.value
-ptri[lower.tri(ptri, diag = TRUE)] <- NA
-
-#Turn into vector
-p.vec <- unmatrix(ptri)
-#Remove NA values
-p.vec <- na.omit(p.vec)
-#Multiple hypothesis testing correction
-p.adj <- p.adjust(p.vec, method = "fdr", n = length(p.vec))
-
-#Create results table
-reg.mat <- unmatrix(reg)
-reg.mat <- as.data.frame(reg.mat)
-p.adj <- as.data.frame(p.adj)
-p.mat <- as.data.frame(p.vec)
-
-pvals <- merge(p.adj, p.mat, by.x = "row.names", by.y = "row.names")
-rownames(pvals)<- pvals$Row.names
-pvals[,1] <- NULL
-results <- merge(pvals, reg.mat, by.x = "row.names", by.y = "row.names")
-rownames(results)<- results$Row.names
-results[,1] <- NULL
-results <- results[order(results$p.vec),]
-
-setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/ControlGroup1.1/")
-write.csv(results, "RAVcon_PPI_coexpression.csv")
+# ##For loop for generating regression values and p values
+# CorExprMat <- t(RAV)
+# 
+# test <- CorExprMat
+# 
+# reg <- matrix(0, ncol(test), ncol(test))
+# p.value <- matrix(0, ncol(test), ncol(test))
+# 
+# tic()
+# for (i in 1:ncol(test)){
+#   for (j in 1:ncol(test)){
+#     reg[i,j] <- cor.test(test[,i], test[,j], method = "spearman")$estimate
+#   }}
+# 
+# rownames(reg) <- colnames(reg) <- colnames(test)
+# toc()
+# 
+# tic()
+# for (i in 1:ncol(test)){
+#   for (j in 1:ncol(test)){
+#     p.value[i,j] <- cor.test(test[,i], test[,j], method = "spearman")$p.value
+#   }}
+# 
+# rownames(p.value) <- colnames(p.value) <- colnames(test)
+# toc()
+# 
+# 
+# ##Only take upper triangle without diagonal (all comparisons are currently doubled)
+# ptri <- p.value
+# ptri[lower.tri(ptri, diag = TRUE)] <- NA
+# 
+# #Turn into vector
+# p.vec <- unmatrix(ptri)
+# #Remove NA values
+# p.vec <- na.omit(p.vec)
+# #Multiple hypothesis testing correction
+# p.adj <- p.adjust(p.vec, method = "fdr", n = length(p.vec))
+# 
+# #Create results table
+# reg.mat <- unmatrix(reg)
+# reg.mat <- as.data.frame(reg.mat)
+# p.adj <- as.data.frame(p.adj)
+# p.mat <- as.data.frame(p.vec)
+# 
+# pvals <- merge(p.adj, p.mat, by.x = "row.names", by.y = "row.names")
+# rownames(pvals)<- pvals$Row.names
+# pvals[,1] <- NULL
+# results <- merge(pvals, reg.mat, by.x = "row.names", by.y = "row.names")
+# rownames(results)<- results$Row.names
+# results[,1] <- NULL
+# results <- results[order(results$p.vec),]
+# 
+# setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/")
+# write.csv(results, "RAVcon_PPI_coexpression.csv")
 
 
 #### Split Names ####
 
+setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/RMETHOD/")
 C9_cor <- read.csv("C9con_PPI_coexpression.csv")
-C9_cor$Gene1 <- as.character(lapply(strsplit(as.character(C9_cor$X), "\\:"), "[", 2))
-C9_cor$Gene2 <- as.character(lapply(strsplit(as.character(C9_cor$X), "\\:"), "[", 1))
-C9_cor <- C9_cor[,c(5,6,2,3,4)]
+sALS_cor <-read.csv("sALScon_PPI_coexpression.csv")
+FTLD_cor <-read.csv("FTLDcon_PPI_coexpression.csv")
+VCP_cor <-read.csv("VCPcon_PPI_coexpression.csv")
+PET_cor <-read.csv("PETcon_PPI_coexpression.csv")
+RAV_cor <-read.csv("RAVcon_PPI_coexpression.csv")
 
-sALS_cor <- read.csv("sALScon_PPI_coexpression.csv")
-sALS_cor$Gene1 <- as.character(lapply(strsplit(as.character(sALS_cor$X), "\\:"), "[", 2))
-sALS_cor$Gene2 <- as.character(lapply(strsplit(as.character(sALS_cor$X), "\\:"), "[", 1))
-sALS_cor <- sALS_cor[,c(5,6,2,3,4)]
-
-FTLD_cor <- read.csv("FTLDcon_PPI_coexpression.csv")
-FTLD_cor$Gene1 <- as.character(lapply(strsplit(as.character(FTLD_cor$X), "\\:"), "[", 2))
-FTLD_cor$Gene2 <- as.character(lapply(strsplit(as.character(FTLD_cor$X), "\\:"), "[", 1))
-FTLD_cor <- FTLD_cor[,c(5,6,2,3,4)]
-
-VCP_cor <- read.csv("VCPcon_PPI_coexpression.csv")
-VCP_cor$Gene1 <- as.character(lapply(strsplit(as.character(VCP_cor$X), "\\:"), "[", 2))
-VCP_cor$Gene2 <- as.character(lapply(strsplit(as.character(VCP_cor$X), "\\:"), "[", 1))
-VCP_cor <- VCP_cor[,c(5,6,2,3,4)]
-
-PET_cor <- read.csv("PETcon_PPI_coexpression.csv")
-PET_cor$Gene1 <- as.character(lapply(strsplit(as.character(PET_cor$X), "\\:"), "[", 2))
-PET_cor$Gene2 <- as.character(lapply(strsplit(as.character(PET_cor$X), "\\:"), "[", 1))
-PET_cor <- PET_cor[,c(5,6,2,3,4)]
-
-RAV_cor <- read.csv("RAVcon_PPI_coexpression.csv")
-RAV_cor$Gene1 <- as.character(lapply(strsplit(as.character(RAV_cor$X), "\\:"), "[", 2))
-RAV_cor$Gene2 <- as.character(lapply(strsplit(as.character(RAV_cor$X), "\\:"), "[", 1))
-RAV_cor <- RAV_cor[,c(5,6,2,3,4)]
-
-### Filter by r value
 C9_cor.5 <- C9_cor[C9_cor$reg.mat > 0.5 | C9_cor$reg.mat < -0.5,]
 sALS_cor.5 <- sALS_cor[sALS_cor$reg.mat > 0.5 | sALS_cor$reg.mat < -0.5,]
 FTLD_cor.5 <- FTLD_cor[FTLD_cor$reg.mat > 0.5 | FTLD_cor$reg.mat < -0.5,]
@@ -395,46 +355,50 @@ VCP_cor.5 <- VCP_cor[VCP_cor$reg.mat > 0.5 | VCP_cor$reg.mat < -0.5,]
 PET_cor.5 <- PET_cor[PET_cor$reg.mat > 0.5 | PET_cor$reg.mat < -0.5,]
 RAV_cor.5 <- RAV_cor[RAV_cor$reg.mat > 0.5 | RAV_cor$reg.mat < -0.5,]
 
-setwd("~/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/ControlGroup1.1/")
-write.csv(C9_cor.5, "C9_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(sALS_cor.5, "sALS_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(FTLD_cor.5, "FTLD_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(VCP_cor.5, "VCP_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(PET_cor.5, "PET_cor.5_cytoscape.csv", row.names = F, quote = F)
-write.csv(RAV_cor.5, "RAV_cor.5_cytoscape.csv", row.names = F, quote = F)
+Commonedge <- Reduce(intersect, list(C9_cor.5$X, sALS_cor.5$X, FTLD_cor.5$X,
+                                     VCP_cor.5$X, PET_cor.5$X, RAV_cor.5$X))
 
-#Save common module as edge file and split gene names into two columns
-Group1 <- read.csv("MergedNetworkdefaultedge.csv")
 
-C9merge <- merge(Group1, C9_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-sALSmerge <- merge(Group1, sALS_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-FTLDmerge <- merge(Group1, FTLD_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-VCPmerge <- merge(Group1, VCP_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-PETmerge <- merge(Group1, PET_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
-RAVmerge <- merge(Group1, RAV_cor.5, by.x = c("Gene1", "Gene2"), by.y = c("Gene1", "Gene2"))
+#Subset each dataset with these common names so they are all the same size
+C9_CE <- subset(C9_cor.5, C9_cor.5$X %in% Commonedge)
+C9_CE <- C9_CE[order(C9_CE$X),]
+sALS_CE <- subset(sALS_cor.5, sALS_cor.5$X %in% Commonedge)
+sALS_CE <- sALS_CE[order(sALS_CE$X),]
+FTLD_CE <- subset(FTLD_cor.5, FTLD_cor.5$X %in% Commonedge)
+FTLD_CE <- FTLD_CE[order(FTLD_CE$X),]
+VCP_CE <- subset(VCP_cor.5, VCP_cor.5$X %in% Commonedge)
+VCP_CE <- VCP_CE[order(VCP_CE$X),]
+PET_CE <- subset(PET_cor.5, PET_cor.5$X %in% Commonedge)
+PET_CE <- PET_CE[order(PET_CE$X),]
+RAV_CE <- subset(RAV_cor.5, RAV_cor.5$X %in% Commonedge)
+RAV_CE <- RAV_CE[order(RAV_CE$X),]
 
-Group1Expr <- data.frame(row.names = C9merge$name,
-                         C9 = C9merge$reg.mat.y,
-                         sALS = sALSmerge$reg.mat.y,
-                         FTLD = FTLDmerge$reg.mat.y,
-                         VCP = VCPmerge$reg.mat.y,
-                         PET = PETmerge$reg.mat.y,
-                         RAV = RAVmerge$reg.mat.y)
 
-Group1up <- subset(Group1Expr, (Group1Expr$C9 > 0.5 &
-                                  Group1Expr$sALS > 0.5 &
-                                  Group1Expr$FTLD > 0.5 &
-                                  Group1Expr$VCP > 0.5 &
-                                  Group1Expr$PET > 0.5 &
-                                  Group1Expr$RAV > 0.5))
 
-Group1down <- subset(Group1Expr, (Group1Expr$C9 < -0.5 &
-                                    Group1Expr$sALS < -0.5 &
-                                    Group1Expr$FTLD < -0.5 &
-                                    Group1Expr$VCP < -0.5 &
-                                    Group1Expr$PET < -0.5 &
-                                    Group1Expr$RAV < -0.5))
+CommonGroup <- data.frame(row.names = C9_CE$X,
+                          C9 = C9_CE$reg.mat,
+                          sALS = sALS_CE$reg.mat,
+                          FTLD = FTLD_CE$reg.mat,
+                          VCP = VCP_CE$reg.mat,
+                          PET = PET_CE$reg.mat,
+                          RAV = RAV_CE$reg.mat)
 
-Group1samedir <- rbind(Group1up, Group1down)
-Group1samedir$corMean <- rowMeans(Group1samedir, na.rm = FALSE, dims = 1)
-write.csv(Group1samedir, "G1_samedir_mean.csv", quote = F)
+
+CG_conserved_up <- CommonGroup[apply(CommonGroup, MARGIN = 1, function(x) all(x > 0)), ]
+CG_conserved_down <- CommonGroup[apply(CommonGroup, MARGIN = 1, function(x) all(x < 0)), ]
+
+CG_samedir <- rbind(CG_conserved_up, CG_conserved_down)
+CG_samedir$corMean <- rowMeans(CG_samedir, na.rm = FALSE, dims = 1)
+write.csv(CG_samedir, "RMETHOD_samedir_mean.csv", quote = F)
+
+
+#### ENRICHMENTS ####
+Nodes <- read.csv("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/Coexpression/PPI_Coexpression/CorrelationValue/CORRECTEDG1/CORRECTEDG1node.csv")
+Nodes <- Nodes$name
+DEGPPI <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/PPI_Network/DEG_PPI_Genes_nofib.txt")
+DEGs <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/FoldChangeResults/Filtered_upanddown.txt")
+ALSOD <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/ALSoDgenes.txt")
+Disgenes <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/TDP-43genes.txt")
+Taylor <- readLines("/Users/clairegreen/Documents/PhD/TDP-43/TDP-43_Code/Results/GeneExpression/M&R/Taylor_TDP43.txt")
+
+intersect(Taylor,Nodes)
