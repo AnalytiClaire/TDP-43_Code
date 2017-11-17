@@ -1,0 +1,209 @@
+"SUID","C9","corMean","FTLD","Int","interaction","name","PET","RAV","sALS","selected","shared interaction","shared name","SrNo","V1","V2","VCP"
+"1609","0.512347538","0.674206526","0.620588235","WASF1 (interacts with) USP14","interacts with","WASF1 (interacts with) USP14","0.725490196","0.686813187","0.892857143","false","interacts with","WASF1 (interacts with) USP14",,,,"0.607142857"
+"1610","0.761904762","0.73071267","0.814705882","WASF1 (interacts with) VPS35","interacts with","WASF1 (interacts with) VPS35","0.659313725","0.648351648","0.928571429","false","interacts with","WASF1 (interacts with) VPS35",,,,"0.571428571"
+"1611","0.69047619","0.717875099","0.847058824","VDAC2 (interacts with) VDAC3","interacts with","VDAC2 (interacts with) VDAC3","0.632352941","0.637362637","0.964285714","false","interacts with","VDAC2 (interacts with) VDAC3",,,,"0.535714286"
+"1612","0.538931818","0.728208093","0.764705882","STK39 (interacts with) EPS15","interacts with","STK39 (interacts with) EPS15","0.911764706","0.653846154","0.892857143","false","interacts with","STK39 (interacts with) EPS15",,,,"0.607142857"
+"1613","0.547619048","0.756800797","0.75","ARL6IP5 (interacts with) VPS35","interacts with","ARL6IP5 (interacts with) VPS35","0.556372549","0.82967033","1.0","false","interacts with","ARL6IP5 (interacts with) VPS35",,,,"0.857142857"
+"1614","0.874267171","0.771444694","0.770588235","TBK1 (interacts with) EPS15","interacts with","TBK1 (interacts with) EPS15","0.74754902","0.593406593","0.857142857","false","interacts with","TBK1 (interacts with) EPS15",,,,"0.785714286"
+"1615","0.619047619","0.74361578","0.908823529","CLCN6 (interacts with) VPS35","interacts with","CLCN6 (interacts with) VPS35","0.683823529","0.714285714","1.0","false","interacts with","CLCN6 (interacts with) VPS35",,,,"0.535714286"
+"1616","0.874267171","0.765864915","0.932352941","CHCHD2 (interacts with) HINT1","interacts with","CHCHD2 (interacts with) HINT1","0.700980392","0.653846154","0.576599976","false","interacts with","CHCHD2 (interacts with) HINT1",,,,"0.857142857"
+"1617","0.754504545","0.810632787","0.864705882","GOT1 (interacts with) VDAC3","interacts with","GOT1 (interacts with) VDAC3","0.772058824","0.901098901","0.928571429","false","interacts with","GOT1 (interacts with) VDAC3",,,,"0.642857143"
+"1618","0.813253012","0.709829337","0.952941176","GOT1 (interacts with) HINT1","interacts with","GOT1 (interacts with) HINT1","0.534313725","0.846153846","0.576599976","false","interacts with","GOT1 (interacts with) HINT1",,,,"0.535714286"
+"1619","0.761904762","0.728136896","0.817647059","RPA3 (interacts with) VDAC3","interacts with","RPA3 (interacts with) VDAC3","0.720588235","0.675824176","0.785714286","false","interacts with","RPA3 (interacts with) VDAC3",,,,"0.607142857"
+"1620","0.718575757","0.682607398","0.894117647","RPA3 (interacts with) HINT1","interacts with","RPA3 (interacts with) HINT1","0.595588235","0.703296703","0.612637475","false","interacts with","RPA3 (interacts with) HINT1",,,,"0.571428571"
+"1621","-0.547619048","-0.712380593","-0.567647059","ATP6V1E1 (interacts with) BCL2","interacts with","ATP6V1E1 (interacts with) BCL2","-0.661764706","-0.89010989","-0.892857143","false","interacts with","ATP6V1E1 (interacts with) BCL2",,,,"-0.714285714"
+"1622","-0.598813131","-0.676265594","-0.861764706","KIF3A (interacts with) NOTCH3","interacts with","KIF3A (interacts with) NOTCH3","-0.651960784","-0.730769231","-0.571428571","false","interacts with","KIF3A (interacts with) NOTCH3",,,,"-0.642857143"
+"1623","-0.562884343","-0.636530246","-0.541176471","AAAS (interacts with) PCMT1","interacts with","AAAS (interacts with) PCMT1","-0.81127451","-0.582417582","-0.642857143","false","interacts with","AAAS (interacts with) PCMT1",,,,"-0.678571429"
+"1624","0.761904762","0.732853911","0.829411765","MORF4L1 (interacts with) PCMT1","interacts with","MORF4L1 (interacts with) PCMT1","0.651960784","0.725274725","0.821428571","false","interacts with","MORF4L1 (interacts with) PCMT1",,,,"0.607142857"
+"1625","-0.785714286","-0.623192739","-0.55","MORF4L1 (interacts with) EFEMP2","interacts with","MORF4L1 (interacts with) EFEMP2","-0.639705882","-0.549450549","-0.642857143","false","interacts with","MORF4L1 (interacts with) EFEMP2",,,,"-0.571428571"
+"1626","0.850314646","0.762163696","0.664705882","RAN (interacts with) STAU1","interacts with","RAN (interacts with) STAU1","0.656862745","0.615384615","0.964285714","false","interacts with","RAN (interacts with) STAU1",,,,"0.821428571"
+"1627","0.682646969","0.777962349","0.835294118","RAN (interacts with) PFN2","interacts with","RAN (interacts with) PFN2","0.737745098","0.840659341","0.928571429","false","interacts with","RAN (interacts with) PFN2",,,,"0.642857143"
+"1628","0.694623232","0.791174546","0.932352941","RAN (interacts with) PCMT1","interacts with","RAN (interacts with) PCMT1","0.779411765","0.912087912","0.821428571","false","interacts with","RAN (interacts with) PCMT1",,,,"0.607142857"
+"1629","0.850314646","0.800625234","0.914705882","RAN (interacts with) VPS35","interacts with","RAN (interacts with) VPS35","0.656862745","0.917582418","0.928571429","false","interacts with","RAN (interacts with) VPS35",,,,"0.535714286"
+"1630","0.634741919","0.665603219","0.579411765","DDB1 (interacts with) PFN2","interacts with","DDB1 (interacts with) PFN2","0.710784314","0.604395604","0.821428571","false","interacts with","DDB1 (interacts with) PFN2",,,,"0.642857143"
+"1631","0.829515062","0.807363873","0.861764706","OAT (interacts with) UBE2V2","interacts with","OAT (interacts with) UBE2V2","0.825980392","0.71978022","0.964285714","false","interacts with","OAT (interacts with) UBE2V2",,,,"0.642857143"
+"1632","0.571428571","0.685190871","0.567647059","OAT (interacts with) PPP3CA","interacts with","OAT (interacts with) PPP3CA","0.708333333","0.692307692","0.892857143","false","interacts with","OAT (interacts with) PPP3CA",,,,"0.678571429"
+"1633","0.761904762","0.761219744","0.902941176","GARS (interacts with) PSMD1","interacts with","GARS (interacts with) PSMD1","0.875","0.741758242","0.678571429","false","interacts with","GARS (interacts with) PSMD1",,,,"0.607142857"
+"1634","0.512347538","0.725943759","0.832352941","DDX1 (interacts with) UBE2V2","interacts with","DDX1 (interacts with) UBE2V2","0.909313725","0.637362637","0.821428571","false","interacts with","DDX1 (interacts with) UBE2V2",,,,"0.642857143"
+"1635","0.80952381","0.83546021","0.85","DDX1 (interacts with) RANBP6","interacts with","DDX1 (interacts with) RANBP6","0.850490196","0.895604396","0.857142857","false","interacts with","DDX1 (interacts with) RANBP6",,,,"0.75"
+"1636","0.50300303","0.705871115","0.867647059","PSMC6 (interacts with) EPS15","interacts with","PSMC6 (interacts with) EPS15","0.779411765","0.620879121","0.892857143","false","interacts with","PSMC6 (interacts with) EPS15",,,,"0.571428571"
+"1637","0.761904762","0.728223982","0.720588235","PSMC6 (interacts with) SUMO1","interacts with","PSMC6 (interacts with) SUMO1","0.526960784","0.681318681","0.821428571","false","interacts with","PSMC6 (interacts with) SUMO1",,,,"0.857142857"
+"1638","0.77337007","0.718791227","0.720588235","PSMC6 (interacts with) ARL1","interacts with","PSMC6 (interacts with) ARL1","0.862745098","0.527472527","0.714285714","false","interacts with","PSMC6 (interacts with) ARL1",,,,"0.714285714"
+"1639","0.666666667","0.793603211","0.755882353","PSMC6 (interacts with) SNAP25","interacts with","PSMC6 (interacts with) SNAP25","0.899509804","0.796703297","0.892857143","false","interacts with","PSMC6 (interacts with) SNAP25",,,,"0.75"
+"1640","0.666666667","0.721354952","0.85","PSMC6 (interacts with) AGTPBP1","interacts with","PSMC6 (interacts with) AGTPBP1","0.696078431","0.686813187","0.892857143","false","interacts with","PSMC6 (interacts with) AGTPBP1",,,,"0.535714286"
+"1641","0.523809524","0.692608454","0.852941176","PSMC6 (interacts with) RNF14","interacts with","PSMC6 (interacts with) RNF14","0.806372549","0.686813187","0.571428571","false","interacts with","PSMC6 (interacts with) RNF14",,,,"0.714285714"
+"1642","0.619047619","0.720778568","0.8","PSMC6 (interacts with) RANBP6","interacts with","PSMC6 (interacts with) RANBP6","0.735294118","0.741758242","0.892857143","false","interacts with","PSMC6 (interacts with) RANBP6",,,,"0.535714286"
+"1643","0.595238095","0.692023989","0.717647059","PSMC6 (interacts with) PDHB","interacts with","PSMC6 (interacts with) PDHB","0.784313725","0.626373626","0.892857143","false","interacts with","PSMC6 (interacts with) PDHB",,,,"0.535714286"
+"1644","0.904761905","0.890412447","0.844117647","PSMC6 (interacts with) PCMT1","interacts with","PSMC6 (interacts with) PCMT1","0.884803922","0.78021978","0.964285714","false","interacts with","PSMC6 (interacts with) PCMT1",,,,"0.964285714"
+"1645","-0.547619048","-0.62371346","-0.858823529","PSMC6 (interacts with) YBX1","interacts with","PSMC6 (interacts with) YBX1","-0.517156863","-0.532967033","-0.678571429","false","interacts with","PSMC6 (interacts with) YBX1",,,,"-0.607142857"
+"1646","-0.586836868","-0.632884769","-0.705882353","PSMC6 (interacts with) CASP10","interacts with","PSMC6 (interacts with) CASP10","-0.558823529","-0.517194437","-0.714285714","false","interacts with","PSMC6 (interacts with) CASP10",,,,"-0.714285714"
+"1647","-0.571428571","-0.647384723","-0.685294118","PSMC6 (interacts with) BCL2","interacts with","PSMC6 (interacts with) BCL2","-0.580882353","-0.582417582","-0.821428571","false","interacts with","PSMC6 (interacts with) BCL2",,,,"-0.642857143"
+"1648","0.666666667","0.802859477","0.873529412","PSMC6 (interacts with) KIF3A","interacts with","PSMC6 (interacts with) KIF3A","0.776960784","0.642857143","0.892857143","false","interacts with","PSMC6 (interacts with) KIF3A",,,,"0.964285714"
+"1649","0.785714286","0.858694247","0.935294118","PSMC6 (interacts with) ZC3H15","interacts with","PSMC6 (interacts with) ZC3H15","0.705882353","0.868131868","0.892857143","false","interacts with","PSMC6 (interacts with) ZC3H15",,,,"0.964285714"
+"1650","0.738095238","0.804971091","0.791176471","PSMC6 (interacts with) VPS35","interacts with","PSMC6 (interacts with) VPS35","0.718137255","0.796703297","0.892857143","false","interacts with","PSMC6 (interacts with) VPS35",,,,"0.892857143"
+"1651","0.523809524","0.763573763","0.776470588","PAFAH1B1 (interacts with) ANK2","interacts with","PAFAH1B1 (interacts with) ANK2","0.924019608","0.928571429","0.785714286","false","interacts with","PAFAH1B1 (interacts with) ANK2",,,,"0.642857143"
+"1652","0.571428571","0.769977735","0.917647059","NDFIP1 (interacts with) VPS35","interacts with","NDFIP1 (interacts with) VPS35","0.87254902","0.686813187","1.0","false","interacts with","NDFIP1 (interacts with) VPS35",,,,"0.571428571"
+"1653","0.797921501","0.790935994","0.926470588","NDFIP1 (interacts with) ARL1","interacts with","NDFIP1 (interacts with) ARL1","0.960784314","0.631868132","0.75","false","interacts with","NDFIP1 (interacts with) ARL1",,,,"0.678571429"
+"1654","0.547619048","0.738560296","0.95","NDFIP1 (interacts with) RNF14","interacts with","NDFIP1 (interacts with) RNF14","0.911764706","0.807692308","0.607142857","false","interacts with","NDFIP1 (interacts with) RNF14",,,,"0.607142857"
+"1655","0.53674504","0.781875628","0.670588235","PJA2 (interacts with) USP14","interacts with","PJA2 (interacts with) USP14","0.860294118","0.802197802","0.928571429","false","interacts with","PJA2 (interacts with) USP14",,,,"0.892857143"
+"1656","0.540131478","0.800958852","0.882352941","PJA2 (interacts with) ARL1","interacts with","PJA2 (interacts with) ARL1","0.965686275","0.774725275","0.75","false","interacts with","PJA2 (interacts with) ARL1",,,,"0.892857143"
+"1657","-0.738095238","-0.632451699","-0.602941176","PJA2 (interacts with) YBX1","interacts with","PJA2 (interacts with) YBX1","-0.519607843","-0.576923077","-0.785714286","false","interacts with","PJA2 (interacts with) YBX1",,,,"-0.571428571"
+"1658","0.595238095","0.821203225","0.717647059","PJA2 (interacts with) VPS35","interacts with","PJA2 (interacts with) VPS35","0.963235294","0.82967033","1.0","false","interacts with","PJA2 (interacts with) VPS35",,,,"0.821428571"
+"1659","0.970077272","0.791894837","0.835294118","SNAP91 (interacts with) VDAC3","interacts with","SNAP91 (interacts with) VDAC3","0.674019608","0.736263736","0.964285714","false","interacts with","SNAP91 (interacts with) VDAC3",,,,"0.571428571"
+"1660","0.838338383","0.884681047","0.923529412","SNAP91 (interacts with) SNAP25","interacts with","SNAP91 (interacts with) SNAP25","0.867647059","0.857142857","0.964285714","false","interacts with","SNAP91 (interacts with) SNAP25",,,,"0.857142857"
+"1661","0.77337007","0.716967805","0.776470588","TAX1BP1 (interacts with) ARL1","interacts with","TAX1BP1 (interacts with) ARL1","0.870098039","0.631868132","0.642857143","false","interacts with","TAX1BP1 (interacts with) ARL1",,,,"0.607142857"
+"1662","0.619047619","0.772397292","0.652941176","TAX1BP1 (interacts with) VPS35","interacts with","TAX1BP1 (interacts with) VPS35","0.933823529","0.857142857","0.964285714","false","interacts with","TAX1BP1 (interacts with) VPS35",,,,"0.607142857"
+"1663","0.895334696","0.71412046","0.576470588","YWHAQ (interacts with) ARL1","interacts with","YWHAQ (interacts with) ARL1","0.843137255","0.576923077","0.75","false","interacts with","YWHAQ (interacts with) ARL1",,,,"0.642857143"
+"1664","0.880952381","0.781395892","0.720588235","ARMC1 (interacts with) VPS35","interacts with","ARMC1 (interacts with) VPS35","0.87254902","0.571428571","0.928571429","false","interacts with","ARMC1 (interacts with) VPS35",,,,"0.714285714"
+"1665","0.867532847","0.773905406","0.876470588","ARMC1 (interacts with) CUL1","interacts with","ARMC1 (interacts with) CUL1","0.87745098","0.664835165","0.75","false","interacts with","ARMC1 (interacts with) CUL1",,,,"0.607142857"
+"1666","0.595238095","0.706282769","0.797058824","ARMC1 (interacts with) CDC42","interacts with","ARMC1 (interacts with) CDC42","0.710784314","0.67032967","0.535714286","false","interacts with","ARMC1 (interacts with) CDC42",,,,"0.928571429"
+"1667","0.642857143","0.792524959","0.826470588","ARMC1 (interacts with) ATP6V1A","interacts with","ARMC1 (interacts with) ATP6V1A","0.862745098","0.78021978","0.928571429","false","interacts with","ARMC1 (interacts with) ATP6V1A",,,,"0.714285714"
+"1668","0.666666667","0.754988149","0.841176471","ARMC1 (interacts with) TMEM30A","interacts with","ARMC1 (interacts with) TMEM30A","0.862745098","0.587912088","0.892857143","false","interacts with","ARMC1 (interacts with) TMEM30A",,,,"0.678571429"
+"1669","0.646718181","0.779149396","0.929411765","ARMC1 (interacts with) RASA1","interacts with","ARMC1 (interacts with) RASA1","0.796568627","0.516483516","0.892857143","false","interacts with","ARMC1 (interacts with) RASA1",,,,"0.892857143"
+"1670","0.904761905","0.720235402","0.697058824","ARMC1 (interacts with) PSMD6","interacts with","ARMC1 (interacts with) PSMD6","0.615196078","0.818681319","0.571428571","false","interacts with","ARMC1 (interacts with) PSMD6",,,,"0.714285714"
+"1671","0.904761905","0.777893593","0.6","ARMC1 (interacts with) PDHB","interacts with","ARMC1 (interacts with) PDHB","0.723039216","0.725274725","0.928571429","false","interacts with","ARMC1 (interacts with) PDHB",,,,"0.785714286"
+"1672","0.666666667","0.760882173","0.767647059","ARMC1 (interacts with) PCMT1","interacts with","ARMC1 (interacts with) PCMT1","0.757352941","0.587912088","0.857142857","false","interacts with","ARMC1 (interacts with) PCMT1",,,,"0.928571429"
+"1673","-0.766480808","-0.73843954","-0.761764706","ARMC1 (interacts with) U2AF2","interacts with","ARMC1 (interacts with) U2AF2","-0.852941176","-0.549450549","-0.928571429","false","interacts with","ARMC1 (interacts with) U2AF2",,,,"-0.571428571"
+"1674","0.738095238","0.767275372","0.858823529","ARMC1 (interacts with) PAFAH1B1","interacts with","ARMC1 (interacts with) PAFAH1B1","0.921568627","0.549450549","0.75","false","interacts with","ARMC1 (interacts with) PAFAH1B1",,,,"0.785714286"
+"1675","0.785714286","0.825435431","0.920588235","ARMC1 (interacts with) ZC3H15","interacts with","ARMC1 (interacts with) ZC3H15","0.825980392","0.741758242","0.785714286","false","interacts with","ARMC1 (interacts with) ZC3H15",,,,"0.892857143"
+"1676","0.80952381","0.876717482","0.905882353","ATP6V1A (interacts with) VPS35","interacts with","ATP6V1A (interacts with) VPS35","0.924019608","0.906593407","1.0","false","interacts with","ATP6V1A (interacts with) VPS35",,,,"0.714285714"
+"1677","0.571428571","0.706664332","0.797058824","CDC123 (interacts with) ATP6V1A","interacts with","CDC123 (interacts with) ATP6V1A","0.835784314","0.571428571","0.857142857","false","interacts with","CDC123 (interacts with) ATP6V1A",,,,"0.607142857"
+"1678","0.571428571","0.720076492","0.911764706","CDC123 (interacts with) PSMD1","interacts with","CDC123 (interacts with) PSMD1","0.823529412","0.549450549","0.714285714","false","interacts with","CDC123 (interacts with) PSMD1",,,,"0.75"
+"1679","0.585540044","0.674527449","0.620588235","CDC123 (interacts with) MAPRE2","interacts with","CDC123 (interacts with) MAPRE2","0.769607843","0.642857143","0.785714286","false","interacts with","CDC123 (interacts with) MAPRE2",,,,"0.642857143"
+"1680","0.880952381","0.675527006","0.614705882","PSMC2 (interacts with) TXNL1","interacts with","PSMC2 (interacts with) TXNL1","0.615196078","0.549450549","0.857142857","false","interacts with","PSMC2 (interacts with) TXNL1",,,,"0.535714286"
+"1681","0.928571429","0.857849422","0.873529412","SARAF (interacts with) ATP6V1A","interacts with","SARAF (interacts with) ATP6V1A","0.850490196","0.851648352","0.964285714","false","interacts with","SARAF (interacts with) ATP6V1A",,,,"0.678571429"
+"1682","0.666666667","0.788537851","0.867647059","SARAF (interacts with) SKIV2L2","interacts with","SARAF (interacts with) SKIV2L2","0.757352941","0.725274725","1.0","false","interacts with","SARAF (interacts with) SKIV2L2",,,,"0.714285714"
+"1683","0.761904762","0.837743302","0.770588235","SARAF (interacts with) PCMT1","interacts with","SARAF (interacts with) PCMT1","0.93627451","0.664835165","1.0","false","interacts with","SARAF (interacts with) PCMT1",,,,"0.892857143"
+"1684","0.785714286","0.806684982","0.876470588","SARAF (interacts with) KIF3A","interacts with","SARAF (interacts with) KIF3A","0.823529412","0.604395604","0.857142857","false","interacts with","SARAF (interacts with) KIF3A",,,,"0.892857143"
+"1685","0.952380952","0.87635567","0.897058824","SARAF (interacts with) ZC3H15","interacts with","SARAF (interacts with) ZC3H15","0.823529412","0.906593407","0.857142857","false","interacts with","SARAF (interacts with) ZC3H15",,,,"0.821428571"
+"1686","0.833333333","0.783328844","0.714705882","SARAF (interacts with) VPS35","interacts with","SARAF (interacts with) VPS35","0.81127451","0.626373626","0.964285714","false","interacts with","SARAF (interacts with) VPS35",,,,"0.75"
+"1687","0.538931818","0.730165286","0.779411765","ADAM15 (interacts with) U2AF2","interacts with","ADAM15 (interacts with) U2AF2","0.68627451","0.769230769","0.892857143","false","interacts with","ADAM15 (interacts with) U2AF2",,,,"0.714285714"
+"1688","0.55090808","0.772548639","0.720588235","RNF11 (interacts with) BCAS2","interacts with","RNF11 (interacts with) BCAS2","0.899509804","0.785714286","0.964285714","false","interacts with","RNF11 (interacts with) BCAS2",,,,"0.714285714"
+"1689","0.619047619","0.694146376","0.802941176","RNF11 (interacts with) UBE2D2","interacts with","RNF11 (interacts with) UBE2D2","0.558823529","0.576923077","1.0","false","interacts with","RNF11 (interacts with) UBE2D2",,,,"0.607142857"
+"1690","0.547619048","0.684644114","0.614705882","RNF11 (interacts with) SKIV2L2","interacts with","RNF11 (interacts with) SKIV2L2","0.632352941","0.527472527","0.964285714","false","interacts with","RNF11 (interacts with) SKIV2L2",,,,"0.821428571"
+"1691","0.598813131","0.757208997","0.826470588","BCAS2 (interacts with) SNAP25","interacts with","BCAS2 (interacts with) SNAP25","0.705882353","0.697802198","0.964285714","false","interacts with","BCAS2 (interacts with) SNAP25",,,,"0.75"
+"1692","0.862290909","0.806928001","0.817647059","BCAS2 (interacts with) SKIV2L2","interacts with","BCAS2 (interacts with) SKIV2L2","0.708333333","0.774725275","0.892857143","false","interacts with","BCAS2 (interacts with) SKIV2L2",,,,"0.785714286"
+"1693","0.771084337","0.767787201","0.876470588","BCAS2 (interacts with) RASA1","interacts with","BCAS2 (interacts with) RASA1","0.519607843","0.653846154","0.928571429","false","interacts with","BCAS2 (interacts with) RASA1",,,,"0.857142857"
+"1694","0.658694444","0.77837664","0.829411765","BCAS2 (interacts with) PCMT1","interacts with","BCAS2 (interacts with) PCMT1","0.81127451","0.620879121","0.892857143","false","interacts with","BCAS2 (interacts with) PCMT1",,,,"0.857142857"
+"1695","-0.753012048","-0.753295946","-0.682352941","BCAS2 (interacts with) U2AF2","interacts with","BCAS2 (interacts with) U2AF2","-0.710784314","-0.587912088","-0.964285714","false","interacts with","BCAS2 (interacts with) U2AF2",,,,"-0.821428571"
+"1696","0.670670707","0.794697901","0.920588235","BCAS2 (interacts with) ZC3H15","interacts with","BCAS2 (interacts with) ZC3H15","0.718137255","0.78021978","0.821428571","false","interacts with","BCAS2 (interacts with) ZC3H15",,,,"0.857142857"
+"1697","0.880952381","0.751566652","0.617647059","COPS5 (interacts with) VDAC3","interacts with","COPS5 (interacts with) VDAC3","0.615196078","0.752747253","1.0","false","interacts with","COPS5 (interacts with) VDAC3",,,,"0.642857143"
+"1698","0.609937546","0.74362997","0.738235294","COPS5 (interacts with) UBE2V2","interacts with","COPS5 (interacts with) UBE2V2","0.514705882","0.67032967","0.964285714","false","interacts with","COPS5 (interacts with) UBE2V2",,,,"0.964285714"
+"1699","0.802409595","0.72479469","0.679411765","ANKMY2 (interacts with) COPS2","interacts with","ANKMY2 (interacts with) COPS2","0.509803922","0.571428571","0.857142857","false","interacts with","ANKMY2 (interacts with) COPS2",,,,"0.928571429"
+"1700","0.850314646","0.752278075","0.882352941","ANKMY2 (interacts with) TXNL1","interacts with","ANKMY2 (interacts with) TXNL1","0.629901961","0.686813187","0.892857143","false","interacts with","ANKMY2 (interacts with) TXNL1",,,,"0.571428571"
+"1701","0.682646969","0.718252696","0.741176471","ANKMY2 (interacts with) SKIV2L2","interacts with","ANKMY2 (interacts with) SKIV2L2","0.87745098","0.543956044","0.857142857","false","interacts with","ANKMY2 (interacts with) SKIV2L2",,,,"0.607142857"
+"1702","0.586836868","0.742752457","0.8","ANKMY2 (interacts with) PAFAH1B1","interacts with","ANKMY2 (interacts with) PAFAH1B1","0.855392157","0.785714286","0.857142857","false","interacts with","ANKMY2 (interacts with) PAFAH1B1",,,,"0.571428571"
+"1703","0.634335047","0.779327334","0.935294118","DNM1L (interacts with) UBE2V2","interacts with","DNM1L (interacts with) UBE2V2","0.779411765","0.862637363","0.821428571","false","interacts with","DNM1L (interacts with) UBE2V2",,,,"0.642857143"
+"1705",,,,,"interacts with","MATR3 (interacts with) DISC1",,,,"false","interacts with","MATR3 (interacts with) DISC1","160102","P43243","Q9NRI5",
+"1706",,,,,"interacts with","UBQLN2 (interacts with) RNF11",,,,"false","interacts with","UBQLN2 (interacts with) RNF11","140285","Q9UHD9","Q9Y3C5",
+"1707",,,,,"interacts with","OPTN (interacts with) TBK1",,,,"false","interacts with","OPTN (interacts with) TBK1","166228","Q96CV9","Q9UHD2",
+"1708",,,,,"interacts with","OPTN (interacts with) RNF11",,,,"false","interacts with","OPTN (interacts with) RNF11","136672","Q96CV9","Q9Y3C5",
+"1710",,,,,"interacts with","SNAP25 (interacts with) SYT9",,,,"false","interacts with","SNAP25 (interacts with) SYT9","128516","P60880","Q86SS6",
+"1711",,,,,"interacts with","EPS15 (interacts with) RNF11",,,,"false","interacts with","EPS15 (interacts with) RNF11","162025","P42566","Q9Y3C5",
+"1712",,,,,"interacts with","SNAP91 (interacts with) EPS15",,,,"false","interacts with","SNAP91 (interacts with) EPS15","119995","O60641","P42566",
+"1713",,,,,"interacts with","TAX1BP1 (interacts with) RNF11",,,,"false","interacts with","TAX1BP1 (interacts with) RNF11","136894","Q86VP1","Q9Y3C5",
+"1714",,,,,"interacts with","AR (interacts with) RNF14",,,,"false","interacts with","AR (interacts with) RNF14","145809","P10275","Q9UBS8",
+"1715",,,,,"interacts with","AR (interacts with) PARK7",,,,"false","interacts with","AR (interacts with) PARK7","145798","P10275","Q99497",
+"1716",,,,,"interacts with","AR (interacts with) RAN",,,,"false","interacts with","AR (interacts with) RAN","106734","P10275","P62826",
+"1717",,,,,"interacts with","UBE2D2 (interacts with) RNF14",,,,"false","interacts with","UBE2D2 (interacts with) RNF14","146722","P62837","Q9UBS8",
+"1718",,,,,"interacts with","UBE2D2 (interacts with) RNF11",,,,"false","interacts with","UBE2D2 (interacts with) RNF11","140345","P62837","Q9Y3C5",
+"1719",,,,,"interacts with","PJA2 (interacts with) UBE2D2",,,,"false","interacts with","PJA2 (interacts with) UBE2D2","135042","O43164","P62837",
+"1720",,,,,"interacts with","APEX1 (interacts with) DCTN1",,,,"false","interacts with","APEX1 (interacts with) DCTN1","116486","P27695","Q14203",
+"1721",,,,,"interacts with","APEX1 (interacts with) YBX1",,,,"false","interacts with","APEX1 (interacts with) YBX1","82800","P27695","P67809",
+"1722",,,,,"interacts with","ATP6V1E1 (interacts with) YBX1",,,,"false","interacts with","ATP6V1E1 (interacts with) YBX1","82793","P36543","P67809",
+"1723",,,,,"interacts with","VDR (interacts with) RNF14",,,,"false","interacts with","VDR (interacts with) RNF14","89144","P11473","Q9UBS8",
+"1724",,,,,"interacts with","VDR (interacts with) COPS2",,,,"false","interacts with","VDR (interacts with) COPS2","80695","P11473","P61201",
+"1725",,,,,"interacts with","CDC123 (interacts with) ZNF512B",,,,"false","interacts with","CDC123 (interacts with) ZNF512B","80201","O75794","Q96KM6",
+"1726",,,,,"interacts with","COPS2 (interacts with) DDB1",,,,"false","interacts with","COPS2 (interacts with) DDB1","72116","P61201","Q16531",
+"1727",,,,,"interacts with","KIFAP3 (interacts with) KIF3A",,,,"false","interacts with","KIFAP3 (interacts with) KIF3A","171521","Q92845","Q9Y496",
+"1728",,,,,"interacts with","RNASE2 (interacts with) YWHAQ",,,,"false","interacts with","RNASE2 (interacts with) YWHAQ","65796","P10153","P27348",
+"1729",,,,,"interacts with","PFN1 (interacts with) WASF1",,,,"false","interacts with","PFN1 (interacts with) WASF1","155560","P07737","Q92558",
+"1730",,,,,"interacts with","PFN1 (interacts with) YWHAQ",,,,"false","interacts with","PFN1 (interacts with) YWHAQ","65778","P07737","P27348",
+"1731",,,,,"interacts with","YWHAQ (interacts with) DISC1",,,,"false","interacts with","YWHAQ (interacts with) DISC1","169054","P27348","Q9NRI5",
+"1732",,,,,"interacts with","YWHAQ (interacts with) DYNC1H1",,,,"false","interacts with","YWHAQ (interacts with) DYNC1H1","65789","P27348","Q14204",
+"1733",,,,,"interacts with","YWHAQ (interacts with) VCP",,,,"false","interacts with","YWHAQ (interacts with) VCP","65717","P27348","P55072",
+"1734",,,,,"interacts with","YWHAQ (interacts with) RNF11",,,,"false","interacts with","YWHAQ (interacts with) RNF11","58164","P27348","Q9Y3C5",
+"1735",,,,,"interacts with","TBK1 (interacts with) RNF11",,,,"false","interacts with","TBK1 (interacts with) RNF11","54679","Q9UHD2","Q9Y3C5",
+"1736",,,,,"interacts with","RASA1 (interacts with) HTT",,,,"false","interacts with","RASA1 (interacts with) HTT","52504","P20936","P42858",
+"1737",,,,,"interacts with","SQSTM1 (interacts with) OPTN",,,,"false","interacts with","SQSTM1 (interacts with) OPTN","136685","Q13501","Q96CV9",
+"1738",,,,,"interacts with","SQSTM1 (interacts with) GRB14",,,,"false","interacts with","SQSTM1 (interacts with) GRB14","126435","Q13501","Q14449",
+"1739",,,,,"interacts with","SQSTM1 (interacts with) ARHGEF28",,,,"false","interacts with","SQSTM1 (interacts with) ARHGEF28","60576","Q13501","Q8N1W1",
+"1740",,,,,"interacts with","PFN2 (interacts with) WASF1",,,,"false","interacts with","PFN2 (interacts with) WASF1","146171","P35080","Q92558",
+"1741",,,,,"interacts with","PFN2 (interacts with) HTT",,,,"false","interacts with","PFN2 (interacts with) HTT","143926","P35080","P42858",
+"1742",,,,,"interacts with","PAFAH1B1 (interacts with) DISC1",,,,"false","interacts with","PAFAH1B1 (interacts with) DISC1","160310","P43034","Q9NRI5",
+"1743",,,,,"interacts with","PAFAH1B1 (interacts with) DCTN1",,,,"false","interacts with","PAFAH1B1 (interacts with) DCTN1","116489","P43034","Q14203",
+"1744",,,,,"interacts with","PAFAH1B1 (interacts with) DYNC1H1",,,,"false","interacts with","PAFAH1B1 (interacts with) DYNC1H1","66649","P43034","Q14204",
+"1745",,,,,"interacts with","ZNF512B (interacts with) VPS35",,,,"false","interacts with","ZNF512B (interacts with) VPS35","154475","Q96KM6","Q96QK1",
+"1746",,,,,"interacts with","DCTN1 (interacts with) KIF3A",,,,"false","interacts with","DCTN1 (interacts with) KIF3A","151690","Q14203","Q9Y496",
+"1747",,,,,"interacts with","DCTN1 (interacts with) ZNF512B",,,,"false","interacts with","DCTN1 (interacts with) ZNF512B","151659","Q14203","Q96KM6",
+"1748",,,,,"interacts with","DCTN1 (interacts with) DISC1",,,,"false","interacts with","DCTN1 (interacts with) DISC1","151601","Q14203","Q9NRI5",
+"1749",,,,,"interacts with","DCTN1 (interacts with) DYNC1H1",,,,"false","interacts with","DCTN1 (interacts with) DYNC1H1","70722","Q14203","Q14204",
+"1750",,,,,"interacts with","TUBA4A (interacts with) PSMD1",,,,"false","interacts with","TUBA4A (interacts with) PSMD1","60266","P68366","Q99460",
+"1751",,,,,"interacts with","YBX1 (interacts with) DYNC1H1",,,,"false","interacts with","YBX1 (interacts with) DYNC1H1","82822","P67809","Q14204",
+"1752",,,,,"interacts with","YBX1 (interacts with) EWSR1",,,,"false","interacts with","YBX1 (interacts with) EWSR1","82781","P67809","Q01844",
+"1753",,,,,"interacts with","YBX1 (interacts with) TUBA4A",,,,"false","interacts with","YBX1 (interacts with) TUBA4A","37182","P67809","P68366",
+"1754",,,,,"interacts with","PSMD1 (interacts with) RNF11",,,,"false","interacts with","PSMD1 (interacts with) RNF11","27016","Q99460","Q9Y3C5",
+"1755",,,,,"interacts with","PSMC6 (interacts with) PSMD6",,,,"false","interacts with","PSMC6 (interacts with) PSMD6","148194","P62333","Q15008",
+"1756",,,,,"interacts with","PSMC6 (interacts with) PSMD1",,,,"false","interacts with","PSMC6 (interacts with) PSMD1","24991","P62333","Q99460",
+"1757",,,,,"interacts with","PSMC2 (interacts with) PSMD6",,,,"false","interacts with","PSMC2 (interacts with) PSMD6","153984","P35998","Q15008",
+"1758",,,,,"interacts with","PSMC2 (interacts with) SQSTM1",,,,"false","interacts with","PSMC2 (interacts with) SQSTM1","56444","P35998","Q13501",
+"1759",,,,,"interacts with","PSMC2 (interacts with) PSMD1",,,,"false","interacts with","PSMC2 (interacts with) PSMD1","39956","P35998","Q99460",
+"1760",,,,,"interacts with","PSMC2 (interacts with) USP14",,,,"false","interacts with","PSMC2 (interacts with) USP14","39943","P35998","P54578",
+"1761",,,,,"interacts with","PSMC2 (interacts with) YBX1",,,,"false","interacts with","PSMC2 (interacts with) YBX1","36847","P35998","P67809",
+"1762",,,,,"interacts with","PSMC2 (interacts with) PSMC6",,,,"false","interacts with","PSMC2 (interacts with) PSMC6","24985","P35998","P62333",
+"1763",,,,,"interacts with","GFAP (interacts with) PSEN1",,,,"false","interacts with","GFAP (interacts with) PSEN1","114274","P14136","P49768",
+"1764",,,,,"interacts with","ATP6V1A (interacts with) SMN1",,,,"false","interacts with","ATP6V1A (interacts with) SMN1","146588","P38606","Q16637",
+"1765",,,,,"interacts with","TXNL1 (interacts with) PSMD6",,,,"false","interacts with","TXNL1 (interacts with) PSMD6","153991","O43396","Q15008",
+"1766",,,,,"interacts with","TXNL1 (interacts with) PSMD1",,,,"false","interacts with","TXNL1 (interacts with) PSMD1","80832","O43396","Q99460",
+"1767",,,,,"interacts with","TXNL1 (interacts with) SQSTM1",,,,"false","interacts with","TXNL1 (interacts with) SQSTM1","66820","O43396","Q13501",
+"1768",,,,,"interacts with","TXNL1 (interacts with) PSMC2",,,,"false","interacts with","TXNL1 (interacts with) PSMC2","56986","O43396","P35998",
+"1769",,,,,"interacts with","TXNL1 (interacts with) USP14",,,,"false","interacts with","TXNL1 (interacts with) USP14","35327","O43396","P54578",
+"1770",,,,,"interacts with","TXNL1 (interacts with) PSMC6",,,,"false","interacts with","TXNL1 (interacts with) PSMC6","24994","O43396","P62333",
+"1771",,,,,"interacts with","TXNL1 (interacts with) ATP6V1A",,,,"false","interacts with","TXNL1 (interacts with) ATP6V1A","22070","O43396","P38606",
+"1772",,,,,"interacts with","DYNC1H1 (interacts with) DISC1",,,,"false","interacts with","DYNC1H1 (interacts with) DISC1","137163","Q14204","Q9NRI5",
+"1773",,,,,"interacts with","U2AF2 (interacts with) DYNC1H1",,,,"false","interacts with","U2AF2 (interacts with) DYNC1H1","21722","P26368","Q14204",
+"1774",,,,,"interacts with","APOE (interacts with) CNTF",,,,"false","interacts with","APOE (interacts with) CNTF","121745","P02649","P26441",
+"1775",,,,,"interacts with","APOE (interacts with) PCMT1",,,,"false","interacts with","APOE (interacts with) PCMT1","21270","P02649","P22061",
+"1776",,,,,"interacts with","APOE (interacts with) PSEN1",,,,"false","interacts with","APOE (interacts with) PSEN1","21268","P02649","P49768",
+"1777",,,,,"interacts with","VAPB (interacts with) VCP",,,,"false","interacts with","VAPB (interacts with) VCP","20277","O95292","P55072",
+"1778",,,,,"interacts with","ZC3H15 (interacts with) WASF1",,,,"false","interacts with","ZC3H15 (interacts with) WASF1","92679","Q8WU90","Q92558",
+"1779",,,,,"interacts with","USP14 (interacts with) PPP3CA",,,,"false","interacts with","USP14 (interacts with) PPP3CA","138932","P54578","Q08209",
+"1780",,,,,"interacts with","USP14 (interacts with) PSMC6",,,,"false","interacts with","USP14 (interacts with) PSMC6","104175","P54578","P62333",
+"1781",,,,,"interacts with","USP14 (interacts with) PSMD1",,,,"false","interacts with","USP14 (interacts with) PSMD1","80837","P54578","Q99460",
+"1782",,,,,"interacts with","USP14 (interacts with) RNF11",,,,"false","interacts with","USP14 (interacts with) RNF11","26753","P54578","Q9Y3C5",
+"1783",,,,,"interacts with","USP14 (interacts with) PSMD6",,,,"false","interacts with","USP14 (interacts with) PSMD6","16103","P54578","Q15008",
+"1784",,,,,"interacts with","PSMD6 (interacts with) PSMD1",,,,"false","interacts with","PSMD6 (interacts with) PSMD1","153981","Q15008","Q99460",
+"1785",,,,,"interacts with","PSMD6 (interacts with) RNF11",,,,"false","interacts with","PSMD6 (interacts with) RNF11","14464","Q15008","Q9Y3C5",
+"1786",,,,,"interacts with","HTT (interacts with) OPTN",,,,"false","interacts with","HTT (interacts with) OPTN","172189","P42858","Q96CV9",
+"1787",,,,,"interacts with","HTT (interacts with) DYNC1H1",,,,"false","interacts with","HTT (interacts with) DYNC1H1","165168","P42858","Q14204",
+"1788",,,,,"interacts with","HTT (interacts with) SQSTM1",,,,"false","interacts with","HTT (interacts with) SQSTM1","52471","P42858","Q13501",
+"1789",,,,,"interacts with","HTT (interacts with) USP14",,,,"false","interacts with","HTT (interacts with) USP14","52468","P42858","P54578",
+"1790",,,,,"interacts with","HTT (interacts with) VCP",,,,"false","interacts with","HTT (interacts with) VCP","12865","P42858","P55072",
+"1791",,,,,"interacts with","VCP (interacts with) OPTN",,,,"false","interacts with","VCP (interacts with) OPTN","136676","P55072","Q96CV9",
+"1792",,,,,"interacts with","VCP (interacts with) ALS2",,,,"false","interacts with","VCP (interacts with) ALS2","20156","P55072","Q96Q42",
+"1793",,,,,"interacts with","VCP (interacts with) RNF19A",,,,"false","interacts with","VCP (interacts with) RNF19A","12851","P55072","Q9NV58",
+"1794",,,,,"interacts with","VCP (interacts with) PPP3CA",,,,"false","interacts with","VCP (interacts with) PPP3CA","12772","P55072","Q08209",
+"1795",,,,,"interacts with","VCP (interacts with) SPAST",,,,"false","interacts with","VCP (interacts with) SPAST","12733","P55072","Q9UBP0",
+"1796",,,,,"interacts with","VCP (interacts with) DIAPH3",,,,"false","interacts with","VCP (interacts with) DIAPH3","12719","P55072","Q9NSV4",
+"1797",,,,,"interacts with","EWSR1 (interacts with) SMN1",,,,"false","interacts with","EWSR1 (interacts with) SMN1","34912","Q01844","Q16637",
+"1798",,,,,"interacts with","HNRNPA1 (interacts with) YWHAQ",,,,"false","interacts with","HNRNPA1 (interacts with) YWHAQ","65800","P09651","P27348",
+"1799",,,,,"interacts with","HNRNPA1 (interacts with) RNF14",,,,"false","interacts with","HNRNPA1 (interacts with) RNF14","36457","P09651","Q9UBS8",
+"1800",,,,,"interacts with","HNRNPA1 (interacts with) SMN1",,,,"false","interacts with","HNRNPA1 (interacts with) SMN1","34919","P09651","Q16637",
+"1801",,,,,"interacts with","HNRNPA1 (interacts with) VCP",,,,"false","interacts with","HNRNPA1 (interacts with) VCP","12708","P09651","P55072",
+"1802",,,,,"interacts with","HNRNPA1 (interacts with) EWSR1",,,,"false","interacts with","HNRNPA1 (interacts with) EWSR1","10246","P09651","Q01844",
+"1803",,,,,"interacts with","STAU1 (interacts with) RASA1",,,,"false","interacts with","STAU1 (interacts with) RASA1","124096","O95793","P20936",
+"1804",,,,,"interacts with","STAU1 (interacts with) PSMC6",,,,"false","interacts with","STAU1 (interacts with) PSMC6","104017","O95793","P62333",
+"1805",,,,,"interacts with","STAU1 (interacts with) GARS",,,,"false","interacts with","STAU1 (interacts with) GARS","73706","O95793","P41250",
+"1806",,,,,"interacts with","STAU1 (interacts with) TUBA4A",,,,"false","interacts with","STAU1 (interacts with) TUBA4A","70955","O95793","P68366",
+"1807",,,,,"interacts with","STAU1 (interacts with) YWHAQ",,,,"false","interacts with","STAU1 (interacts with) YWHAQ","65568","O95793","P27348",
+"1808",,,,,"interacts with","STAU1 (interacts with) ARL1",,,,"false","interacts with","STAU1 (interacts with) ARL1","52804","O95793","P40616",
+"1809",,,,,"interacts with","STAU1 (interacts with) PDHB",,,,"false","interacts with","STAU1 (interacts with) PDHB","46357","O95793","P11177",
+"1810",,,,,"interacts with","STAU1 (interacts with) YBX1",,,,"false","interacts with","STAU1 (interacts with) YBX1","37196","O95793","P67809",
+"1811",,,,,"interacts with","STAU1 (interacts with) HNRNPA1",,,,"false","interacts with","STAU1 (interacts with) HNRNPA1","36475","O95793","P09651",
+"1812",,,,,"interacts with","STAU1 (interacts with) OAT",,,,"false","interacts with","STAU1 (interacts with) OAT","35824","O95793","P04181",
+"1813",,,,,"interacts with","STAU1 (interacts with) ZC3H15",,,,"false","interacts with","STAU1 (interacts with) ZC3H15","17880","O95793","Q8WU90",
+"1814",,,,,"interacts with","STAU1 (interacts with) RAN",,,,"false","interacts with","STAU1 (interacts with) RAN","9928","O95793","P62826",
+"1815",,,,,"interacts with","ANK2 (interacts with) SIGMAR1",,,,"false","interacts with","ANK2 (interacts with) SIGMAR1","134130","Q01484","Q99720",
+"1816",,,,,"interacts with","DDB1 (interacts with) TAF15",,,,"false","interacts with","DDB1 (interacts with) TAF15","3435","Q16531","Q92804",
+"1817",,,,,"interacts with","PSEN1 (interacts with) NOTCH3",,,,"false","interacts with","PSEN1 (interacts with) NOTCH3","117511","P49768","Q9UM47",
+"1818",,,,,"interacts with","SCN1A (interacts with) PSEN1",,,,"false","interacts with","SCN1A (interacts with) PSEN1","2745","P35498","P49768",
